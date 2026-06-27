@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 
 /**
  * Value-first onboarding (journey.html §3 A→B→C). One input → watch RO reason
@@ -77,10 +78,10 @@ export default function Onboarding() {
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
-      <a href="/" className="inline-flex items-center gap-2 text-sm font-semibold">
+      <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold">
         <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">RO</span>
         RoleOS
-      </a>
+      </Link>
 
       <h1 className="mt-8 text-3xl font-bold tracking-tight">
         Tell RO about your work. Watch what she sees.
@@ -204,12 +205,18 @@ export default function Onboarding() {
                 tailor your résumé to these, draft the applications, and learn your
                 taste as you react. You press send on anything that leaves the building.
               </p>
-              <a
-                href="/login"
+              <button
+                onClick={() => {
+                  sessionStorage.setItem(
+                    "roleos.pending",
+                    JSON.stringify({ profile, mirror, matches }),
+                  );
+                  window.location.href = "/login?next=/feed";
+                }}
                 className="mt-4 inline-block rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
               >
                 Save what RO found
-              </a>
+              </button>
             </div>
           </section>
         )}
