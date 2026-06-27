@@ -19,3 +19,7 @@ coverage/
 .vitest/
 # sandbox spike installs (kept out of the app build)
 sandbox/spike/**/node_modules/
+
+# tsc incremental cache
+tsconfig.tsbuildinfo
+*.tsbuildinfo
