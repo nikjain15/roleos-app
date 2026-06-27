@@ -12,6 +12,10 @@
   "observability": {
     "enabled": true
   },
+  // Custom domain — READY, enable once roleos.fyi is an ACTIVE zone on this
+  // Cloudflare account (see docs/setup-deploy.md §0). Until then leave it
+  // commented so the worker stays deployable to *.workers.dev.
+  // "routes": [{ "pattern": "roleos.fyi", "custom_domain": true }],
   // ---- Bindings -----------------------------------------------------------
   // Workers AI: embeddings (bge) in prod AND dev (dev calls the remote binding).
   "ai": {
