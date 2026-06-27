@@ -35,10 +35,27 @@ describe("authenticityGate", () => {
     expect(g1.checks.some((x) => x.name === "Prototype built")).toBe(true);
     expect(g1.ok).toBe(false);
 
-    const built: BuildContent = {
+    // harness files alone don't count as "built" — needs real app source
+    const harnessOnly: BuildContent = {
       ...base,
       prototype: {
         files: [{ path: "package.json", content: "{}" }],
+        preview_url: null,
+        sandbox_status: "error",
+        sandbox_note: "",
+      },
+    };
+    expect(authenticityGate(harnessOnly).checks.find((x) => x.name === "Prototype built")!.pass).toBe(
+      false,
+    );
+
+    const built: BuildContent = {
+      ...base,
+      prototype: {
+        files: [
+          { path: "package.json", content: "{}" },
+          { path: "src/main.jsx", content: "createRoot(...)" },
+        ],
         preview_url: null, // offline is fine — code is real
         sandbox_status: "offline",
         sandbox_note: "",

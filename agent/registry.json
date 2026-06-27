@@ -15,6 +15,13 @@
       "params": { "max_tokens": 4096, "effort": "medium", "thinking": "adaptive" },
       "cost_per_mtok": { "input": 3.0, "output": 15.0 }
     },
+    "code": {
+      "description": "Code generation: the gate-3 prototype canvas (a runnable Vite/React app, delimited @@FILE output). Sonnet 4.6 with a large output budget; no adaptive thinking so the whole budget goes to code, not reasoning tokens.",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "params": { "max_tokens": 16000, "effort": "medium" },
+      "cost_per_mtok": { "input": 3.0, "output": 15.0 }
+    },
     "quick_tag": {
       "description": "Cheap, fast classification: recruiter-message labels, light tags. Haiku 4.5 — no effort param (it 400s on Haiku); plain call.",
       "provider": "anthropic",

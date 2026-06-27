@@ -13,7 +13,7 @@ import { env } from "@/lib/env";
  * `output_config.effort` + adaptive thinking. Haiku takes neither — plain call.
  */
 
-export type AnthropicJob = "reason" | "draft" | "quick_tag" | "critic";
+export type AnthropicJob = "reason" | "draft" | "code" | "quick_tag" | "critic";
 export type Job = AnthropicJob | "embed";
 
 interface JobSpec {
