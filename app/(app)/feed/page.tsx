@@ -54,12 +54,20 @@ export default async function Feed() {
         <span className="flex items-center gap-2 text-sm text-suc">
           <span className="inline-block h-2 w-2 rounded-full bg-suc" /> RO is working · in the background
         </span>
-        <Link
-          href="/studio/build"
-          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
-        >
-          Open the build studio →
-        </Link>
+        <div className="flex gap-2">
+          <Link
+            href="/studio/negotiate"
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
+          >
+            Negotiate an offer →
+          </Link>
+          <Link
+            href="/studio/build"
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
+          >
+            Build studio →
+          </Link>
+        </div>
       </div>
 
       {!matches || matches.length === 0 ? (
@@ -137,6 +145,12 @@ function Card({ m, send }: { m: MatchRow; send?: boolean }) {
         <div className="mt-3 flex gap-2">
           {/* RO drafts; the you-send dispatch stays human-gated (Phase 3+). */}
           <TailorButton roleId={m.role_id} />
+          <Link
+            href={`/studio/coach?role=${m.role_id}`}
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
+          >
+            Practice the interview →
+          </Link>
           {m.roles?.url && (
             <a
               href={m.roles.url}
