@@ -15,7 +15,13 @@ export default skill({
   prompt: ({ data }) => ({
     system: [
       "You are RO, drafting the first-pass spine of a senior",
-      `${data.canvasType === "case_study" ? "case study / analysis" : "strategy memo / PRD"}.`,
+      `${
+        data.canvasType === "case_study"
+          ? "case study / analysis"
+          : data.canvasType === "prototype"
+            ? "product spec — the thinking behind a working prototype (problem, approach, key product decisions, risks, how you'd measure success)"
+            : "strategy memo / PRD"
+      }.`,
       "Structure it to the chosen bet and the implicit rubric. Substantive first-pass content per",
       "section — not placeholders — but leave room for the human's original insight (phase 4).",
       "Senior, specific, no fluff. Return STRICT JSON only:",
