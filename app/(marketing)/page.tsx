@@ -25,13 +25,13 @@ export default function Landing() {
 
       <div className="mt-8 flex gap-3">
         <a
-          href="/feed"
+          href="/onboarding"
           className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
         >
           Hand RO your hunt
         </a>
         <a
-          href="/feed"
+          href="/onboarding"
           className="rounded-md border border-bd px-4 py-2 text-sm text-tx2"
         >
           Ask RO about a real posting

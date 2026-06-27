@@ -28,5 +28,19 @@ export interface DurableObjectNamespace {
 }
 
 export function env(): RoleOSEnv {
-  return getCloudflareContext().env as unknown as RoleOSEnv;
+  // In the Worker / OpenNext dev runtime, bindings + secrets come from the
+  // Cloudflare context. Outside it (plain Node: seed + test scripts), fall back
+  // to process.env so secrets resolve there too. The AI/DO *bindings* are only
+  // present in the Worker context; the embeddings provider has a REST fallback.
+  try {
+    const cf = getCloudflareContext().env as unknown as Partial<RoleOSEnv>;
+    return new Proxy({} as RoleOSEnv, {
+      get(_t, key: string) {
+        const v = (cf as Record<string, unknown>)[key];
+        return v !== undefined ? v : process.env[key];
+      },
+    });
+  } catch {
+    return process.env as unknown as RoleOSEnv;
+  }
 }

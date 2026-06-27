@@ -17,6 +17,12 @@ export interface Skill {
   prompt: (ctx: SkillInput) => { system: string; user: string };
   /** 'full' = run the whole quality gate before the user sees output. */
   gate: "full" | "shape_only";
+  /**
+   * Output is structured JSON (not user-facing prose). The gate still judges it
+   * (shape + guardrails + critic, all logged) but skips the prose auto-revise,
+   * which would corrupt the JSON. Prose inside fields is still voice-judged.
+   */
+  structured?: boolean;
   /** Shape check: does the raw output look structurally right? */
   expects?: (text: string) => boolean;
 }

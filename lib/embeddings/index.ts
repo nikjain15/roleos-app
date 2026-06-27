@@ -25,14 +25,40 @@ class WorkersAIEmbeddings implements EmbeddingProvider {
     this.dimensions = spec.dimensions ?? 768;
   }
   async embed(texts: string[]): Promise<number[][]> {
-    // Workers AI bge accepts { text: string | string[] } → { data: number[][] }.
-    const res = (await env().AI.run(this.model, { text: texts })) as {
-      data: number[][];
-    };
-    if (!res?.data || res.data.length !== texts.length) {
+    // Prefer the Workers AI binding (correct in the deployed Worker). In the
+    // Node dev runtime the binding may be absent — fall back to the same model
+    // over the Workers AI REST API (identical vector space).
+    let data: number[][] | undefined;
+    try {
+      const res = (await env().AI.run(this.model, { text: texts })) as {
+        data: number[][];
+      };
+      data = res?.data;
+    } catch {
+      data = await this.embedViaRest(texts);
+    }
+    if (!data || data.length !== texts.length) {
       throw new Error(`Embedding count mismatch for model ${this.model}`);
     }
-    return res.data;
+    return data;
+  }
+
+  private async embedViaRest(texts: string[]): Promise<number[][]> {
+    const account = process.env.CLOUDFLARE_ACCOUNT_ID;
+    const token = process.env.CLOUDFLARE_API_TOKEN;
+    if (!account || !token) {
+      throw new Error("No AI binding and no CLOUDFLARE_ACCOUNT_ID/API_TOKEN for REST fallback");
+    }
+    const res = await fetch(
+      `https://api.cloudflare.com/client/v4/accounts/${account}/ai/run/${this.model}`,
+      {
+        method: "POST",
+        headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ text: texts }),
+      },
+    );
+    if (!res.ok) throw new Error(`Workers AI REST ${res.status}: ${await res.text()}`);
+    return ((await res.json()) as { result: { data: number[][] } }).result.data;
   }
 }
 
