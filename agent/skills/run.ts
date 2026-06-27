@@ -28,6 +28,7 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
     skillId: skill.id,
     output: text,
     expects: skill.expects,
+    structured: skill.structured,
     groundTruth: typeof input.data.groundTruth === "string" ? input.data.groundTruth : undefined,
   });
 

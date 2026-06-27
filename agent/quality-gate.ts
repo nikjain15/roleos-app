@@ -20,6 +20,8 @@ export interface GateInput {
   /** Claims must trace to this (master_profile slice) — truth-gate. */
   groundTruth?: string;
   expects?: (text: string) => boolean;
+  /** JSON output — judge it, but never run the prose revise (it corrupts JSON). */
+  structured?: boolean;
 }
 
 export type GateStatus = "passed" | "needs_your_eyes";
@@ -137,7 +139,22 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   let finalOutput = input.output;
   let revised = false;
 
-  // 4 · revise once, then re-judge
+  // 4 · revise once, then re-judge — PROSE ONLY. For structured (JSON) output,
+  // the prose revise would corrupt the structure, so we skip it: the output
+  // already passed shape + guardrails, and the critic verdict is still logged.
+  if (input.structured) {
+    return {
+      status: verdict.pass && guardrails.ok ? "passed" : "needs_your_eyes",
+      finalOutput,
+      shapeOk,
+      guardrails,
+      critic: verdict,
+      revised: false,
+      confidence: "strong",
+      runs,
+    };
+  }
+
   if (!verdict.pass || !guardrails.ok) {
     const reviseReasons = [...verdict.reasons, ...guardrails.failures].join("; ");
     const fix = await callModel(
