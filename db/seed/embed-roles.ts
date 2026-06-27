@@ -43,6 +43,19 @@ async function embedBatch(account: string, token: string, texts: string[]): Prom
   return json.result.data;
 }
 
+async function withRetry<T>(fn: () => Promise<T>, tries = 4): Promise<T> {
+  for (let attempt = 1; ; attempt++) {
+    try {
+      return await fn();
+    } catch (e) {
+      if (attempt >= tries) throw e;
+      const backoff = 500 * attempt;
+      console.log(`  …transient error, retry ${attempt}/${tries - 1} in ${backoff}ms`);
+      await new Promise((r) => setTimeout(r, backoff));
+    }
+  }
+}
+
 async function main() {
   const account = process.env.CLOUDFLARE_ACCOUNT_ID;
   const token = process.env.CLOUDFLARE_API_TOKEN;
@@ -52,27 +65,43 @@ async function main() {
   if (!url || !key) throw new Error("Set NEXT_PUBLIC_SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY");
 
   const db = createClient(url, key, { auth: { persistSession: false } });
-  const { data: roles, error } = await db.from("roles").select("id, doc");
+  const { data: allRoles, error } = await db.from("roles").select("id, doc");
   if (error) throw error;
-  console.log(`Embedding ${roles!.length} roles with ${MODEL}…`);
+
+  // Resumable: skip roles already embedded with this model.
+  const done = new Set<string>();
+  for (let from = 0; ; from += 1000) {
+    const { data, error: e } = await db
+      .from("role_embeddings")
+      .select("role_id")
+      .eq("model", MODEL)
+      .range(from, from + 999);
+    if (e) throw e;
+    data!.forEach((r) => done.add(r.role_id));
+    if (!data!.length || data!.length < 1000) break;
+  }
+  const roles = allRoles!.filter((r) => !done.has(r.id));
+  console.log(`${done.size} already embedded; embedding ${roles.length} remaining with ${MODEL}…`);
 
   const BATCH = 25;
   let n = 0;
-  for (let i = 0; i < roles!.length; i += BATCH) {
-    const slice = roles!.slice(i, i + BATCH);
-    const vectors = await embedBatch(account, token, slice.map((r) => embedText(r.doc)));
-    const rows = slice.map((r, j) => ({
-      role_id: r.id,
-      chunk: "full",
-      model: MODEL,
-      embedding: JSON.stringify(vectors[j]), // pgvector accepts the array literal
-    }));
-    const { error: upErr } = await db
-      .from("role_embeddings")
-      .upsert(rows, { onConflict: "role_id,chunk" });
-    if (upErr) throw upErr;
-    n += rows.length;
-    console.log(`  ${n}/${roles!.length}`);
+  for (let i = 0; i < roles.length; i += BATCH) {
+    const slice = roles.slice(i, i + BATCH);
+    await withRetry(async () => {
+      const vectors = await embedBatch(account, token, slice.map((r) => embedText(r.doc)));
+      const rows = slice.map((r, j) => ({
+        role_id: r.id,
+        chunk: "full",
+        model: MODEL,
+        embedding: JSON.stringify(vectors[j]),
+      }));
+      const { error: upErr } = await db
+        .from("role_embeddings")
+        .upsert(rows, { onConflict: "role_id,chunk" });
+      if (upErr) throw new Error(upErr.message);
+    });
+    n += slice.length;
+    console.log(`  ${n}/${roles.length}`);
   }
   console.log("Embeddings done.");
 }
