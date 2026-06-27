@@ -29,6 +29,7 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
     output: text,
     expects: skill.expects,
     structured: skill.structured,
+    skipCritic: skill.gate === "shape_only",
     groundTruth: typeof input.data.groundTruth === "string" ? input.data.groundTruth : undefined,
   });
 

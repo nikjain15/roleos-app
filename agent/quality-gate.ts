@@ -23,6 +23,12 @@ export interface GateInput {
   expects?: (text: string) => boolean;
   /** JSON output — judge it, but never run the prose revise (it corrupts JSON). */
   structured?: boolean;
+  /**
+   * Skip the LLM voice-critic + revise (shape + deterministic guardrails only).
+   * For deliberate ROLE-PLAY personas (the mock interviewer) whose voice is NOT
+   * RO's own companion voice — still guardrailed, just not voice-judged.
+   */
+  skipCritic?: boolean;
 }
 
 export type GateStatus = "passed" | "needs_your_eyes";
@@ -159,6 +165,21 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
       truth: null,
       revised: false,
       confidence: "unknown",
+      runs,
+    };
+  }
+
+  // Role-play personas (mock interviewer): shape + guardrails only, no voice critic.
+  if (input.skipCritic) {
+    return {
+      status: guardrails.ok ? "passed" : "needs_your_eyes",
+      finalOutput: input.output,
+      shapeOk,
+      guardrails,
+      critic: null,
+      truth: null,
+      revised: false,
+      confidence: "strong",
       runs,
     };
   }
