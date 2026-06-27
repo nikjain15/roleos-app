@@ -22,6 +22,16 @@ type Content = {
   sections: Section[];
   edge?: { question?: string; why?: string; answer?: string; weaved?: boolean };
   pressure?: { attacks?: { weakness: string; severity: string; vs_criterion: string; fix: string }[]; verdict?: string; note?: string };
+  prototype?: {
+    name?: string;
+    summary?: string;
+    entry?: string;
+    files: { path: string; content: string }[];
+    walkthrough?: string[];
+    preview_url: string | null;
+    sandbox_status: "live" | "offline" | "error";
+    sandbox_note: string;
+  };
 };
 type Gate = { ok: boolean; checks: { name: string; pass: boolean; detail: string }[] };
 
@@ -32,7 +42,7 @@ export default function BuildStudio() {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [content, setContent] = useState<Content | null>(null);
   const [brief, setBrief] = useState("");
-  const [canvasType, setCanvasType] = useState<"prd" | "case_study">("prd");
+  const [canvasType, setCanvasType] = useState<"prd" | "case_study" | "prototype">("prd");
   const [answer, setAnswer] = useState("");
   const [busy, setBusy] = useState<string | null>(null);
   const [gate, setGate] = useState<Gate | null>(null);
@@ -75,6 +85,10 @@ export default function BuildStudio() {
     const j = await call("pressure_test", { sessionId }, "RO is attacking it as a skeptical grader…");
     if (j.content) setContent(j.content as Content);
   }
+  async function buildProto() {
+    const j = await call("build_prototype", { sessionId }, "RO is building the prototype + spinning up a preview…");
+    if (j.content) setContent(j.content as Content);
+  }
   async function submit() {
     const j = await call("submit", { sessionId }, "Checking submit-readiness…");
     setGate(j.gate as Gate);
@@ -91,8 +105,8 @@ export default function BuildStudio() {
           The make-or-break gate. We build it together — I scaffold, you bring the judgment and the
           edge only you have. You own what we ship.
         </p>
-        <div className="mt-6 flex gap-2 text-sm">
-          {(["prd", "case_study"] as const).map((t) => (
+        <div className="mt-6 flex flex-wrap gap-2 text-sm">
+          {(["prd", "case_study", "prototype"] as const).map((t) => (
             <button
               key={t}
               onClick={() => setCanvasType(t)}
@@ -100,10 +114,20 @@ export default function BuildStudio() {
                 canvasType === t ? "border-info bg-info-bg text-info-tx" : "border-bd text-tx2"
               }`}
             >
-              {t === "prd" ? "Strategy memo / PRD" : "Case study / analysis"}
+              {t === "prd"
+                ? "Strategy memo / PRD"
+                : t === "case_study"
+                  ? "Case study / analysis"
+                  : "Prototype / MVP"}
             </button>
           ))}
         </div>
+        {canvasType === "prototype" && (
+          <p className="mt-2 text-xs text-tx3">
+            I&apos;ll build a runnable prototype you can click through — same flow, your bet and your
+            edge anchor it. Live preview needs the sandbox on; without it you still get the real code.
+          </p>
+        )}
         <textarea
           value={brief}
           onChange={(e) => setBrief(e.target.value)}
@@ -161,7 +185,11 @@ export default function BuildStudio() {
         {/* CANVAS */}
         <div>
           <h2 className="text-lg font-semibold">
-            {content.canvas_type === "prd" ? "Strategy memo / PRD" : "Case study"}
+            {content.canvas_type === "prd"
+              ? "Strategy memo / PRD"
+              : content.canvas_type === "prototype"
+                ? "Prototype / MVP"
+                : "Case study"}
             {content.bet?.name && <span className="ml-2 font-normal text-tx3">· {content.bet.name}</span>}
           </h2>
           {content.sections.length === 0 ? (
@@ -188,6 +216,82 @@ export default function BuildStudio() {
                   <p className="mt-2 whitespace-pre-wrap text-[15px] leading-relaxed text-tx2">{s.body}</p>
                 </article>
               ))}
+            </div>
+          )}
+
+          {/* prototype canvas — the runnable artifact + live preview */}
+          {content.canvas_type === "prototype" && content.prototype && (
+            <div className="mt-6">
+              <div className="flex items-center justify-between">
+                <h3 className="text-sm font-semibold text-tx">The prototype</h3>
+                <button
+                  onClick={buildProto}
+                  disabled={!!busy}
+                  className="text-xs text-tx3 underline disabled:opacity-40"
+                >
+                  rebuild
+                </button>
+              </div>
+              {content.prototype.summary && (
+                <p className="mt-1 text-sm text-tx2">{content.prototype.summary}</p>
+              )}
+
+              {/* live preview, or a graceful offline state */}
+              {content.prototype.preview_url ? (
+                <div className="mt-3 overflow-hidden rounded-xl border border-bd">
+                  <div className="flex items-center gap-2 border-b border-bd bg-surf2 px-3 py-1.5">
+                    <span className="h-2 w-2 rounded-full bg-suc" />
+                    <span className="font-mono text-[11px] text-tx3">live preview</span>
+                    <a
+                      href={content.prototype.preview_url}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="ml-auto text-[11px] text-info underline"
+                    >
+                      open ↗
+                    </a>
+                  </div>
+                  <iframe
+                    src={content.prototype.preview_url}
+                    title="prototype preview"
+                    className="h-[420px] w-full bg-white"
+                    sandbox="allow-scripts allow-same-origin"
+                  />
+                </div>
+              ) : (
+                <div className="mt-3 rounded-xl border border-dashed border-bd bg-surf2 p-4 text-sm text-tx2">
+                  {content.prototype.sandbox_note}
+                </div>
+              )}
+
+              {/* what to click / notice */}
+              {content.prototype.walkthrough && content.prototype.walkthrough.length > 0 && (
+                <ul className="mt-3 space-y-1 text-sm text-tx2">
+                  {content.prototype.walkthrough.map((w, i) => (
+                    <li key={i} className="flex gap-2">
+                      <span className="text-info">→</span>
+                      <span>{w}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* the code, collapsed */}
+              <details className="mt-3 rounded-xl border border-bd bg-surf">
+                <summary className="cursor-pointer px-4 py-2 text-xs text-tx3">
+                  {content.prototype.files.length} files · view code
+                </summary>
+                <div className="space-y-3 border-t border-bd p-4">
+                  {content.prototype.files.map((f) => (
+                    <div key={f.path}>
+                      <p className="font-mono text-[11px] text-tx3">{f.path}</p>
+                      <pre className="mt-1 overflow-x-auto rounded-lg bg-surf2 p-3 text-[11px] leading-relaxed text-tx2">
+                        {f.content}
+                      </pre>
+                    </div>
+                  ))}
+                </div>
+              </details>
             </div>
           )}
         </div>
@@ -243,6 +347,24 @@ export default function BuildStudio() {
                 className="mt-2 rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
               >
                 Weave it in
+              </button>
+            </div>
+          )}
+
+          {/* prototype canvas: build the runnable artifact (after the edge anchors it) */}
+          {content.canvas_type === "prototype" && content.edge?.weaved && !content.prototype && (
+            <div className="rounded-xl border border-bd bg-surf p-4">
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Build it</p>
+              <p className="mt-1 text-sm text-tx2">
+                Your edge is in — now I&apos;ll turn the bet into a runnable prototype and spin up a
+                preview.
+              </p>
+              <button
+                onClick={buildProto}
+                disabled={!!busy}
+                className="mt-3 rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
+              >
+                Build the prototype
               </button>
             </div>
           )}
