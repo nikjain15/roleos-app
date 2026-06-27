@@ -1,0 +1,38 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "roleos",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-03-01",
+  // nodejs_compat is required by OpenNext (Node APIs in the Next server).
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": ".open-next/assets"
+  },
+  "observability": {
+    "enabled": true
+  },
+  // ---- Bindings -----------------------------------------------------------
+  // Workers AI: embeddings (bge) in prod AND dev (dev calls the remote binding).
+  "ai": {
+    "binding": "AI"
+  },
+  // Durable Objects — EXACTLY TWO per architecture.md §1.2:
+  //  (1) build-studio session (gate 3 — owns the live sandbox + canvas/provenance)
+  //  (2) per-user ambient scheduler alarm (personalized cadence)
+  "durable_objects": {
+    "bindings": [
+      { "name": "BUILD_STUDIO", "class_name": "BuildStudioSession" },
+      { "name": "AMBIENT", "class_name": "AmbientScheduler" }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": ["BuildStudioSession", "AmbientScheduler"]
+    }
+  ]
+  // Secrets (NOT here — set via `wrangler secret` / .dev.vars):
+  //   ANTHROPIC_API_KEY, SUPABASE_SERVICE_ROLE_KEY
+  // Public vars (safe): SUPABASE_URL, SUPABASE_ANON_KEY — see .dev.vars.example
+}

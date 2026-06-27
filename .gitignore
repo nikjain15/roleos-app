@@ -1,0 +1,21 @@
+# deps
+node_modules/
+# next
+.next/
+next-env.d.ts
+# opennext / cloudflare
+.open-next/
+.wrangler/
+cloudflare-env.d.ts
+# secrets
+.dev.vars
+.env
+.env.*
+!.dev.vars.example
+# misc
+.DS_Store
+*.log
+coverage/
+.vitest/
+# sandbox spike installs (kept out of the app build)
+sandbox/spike/**/node_modules/

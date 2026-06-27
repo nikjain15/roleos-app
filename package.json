@@ -1,0 +1,51 @@
+{
+  "name": "roleos",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "invariant:imports": "depcruise agent --config .dependency-cruiser.cjs",
+    "seed:roles": "tsx db/seed/seed-roles.ts",
+    "seed:embeddings": "tsx db/seed/embed-roles.ts",
+    "check": "npm run typecheck && npm run lint && npm run invariant:imports && npm run test"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.68.0",
+    "@supabase/ssr": "^0.7.0",
+    "@supabase/supabase-js": "^2.58.0",
+    "next": "15.5.18",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@opennextjs/cloudflare": "^1.10.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "autoprefixer": "^10.4.20",
+    "dependency-cruiser": "^16.10.0",
+    "eslint": "^9.18.0",
+    "eslint-config-next": "15.5.18",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "tsx": "^4.20.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0",
+    "wrangler": "^4.42.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
