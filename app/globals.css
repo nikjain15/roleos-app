@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design tokens — copied from journey.html / ro-voice.html so the app and the
+   design docs stay one visual system. Light = warm paper, dark = warm charcoal. */
+:root {
+  --bg: #fbfaf7;
+  --surf: #ffffff;
+  --surf2: #f4f2ec;
+  --tx: #1c1b19;
+  --tx2: #5f5e5a;
+  --tx3: #8d8c85;
+  --bd: #e6e3da;
+  --info-bg: #e6f1fb;
+  --info: #185fa5;
+  --info-tx: #0c447c;
+  --suc-bg: #e1f5ee;
+  --suc: #0f6e56;
+  --warn-bg: #faeeda;
+  --warn: #854f0b;
+  --dng: #a32d2d;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161512;
+    --surf: #1f1e1a;
+    --surf2: #26241f;
+    --tx: #eceae3;
+    --tx2: #a8a69d;
+    --tx3: #7a786f;
+    --bd: #33312b;
+    --info-bg: #0c447c;
+    --info: #85b7eb;
+    --info-tx: #b5d4f4;
+    --suc-bg: #085041;
+    --suc: #9fe1cb;
+    --warn-bg: #633806;
+    --warn: #fac775;
+    --dng: #f09595;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--tx);
+}

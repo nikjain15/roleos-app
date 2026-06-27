@@ -1,0 +1,25 @@
+# Copy to `.dev.vars` (gitignored) for local dev. NEVER commit real secrets.
+# Server-side only — none of these reach the client bundle.
+
+# --- Anthropic (raw SDK) — server secret ---
+ANTHROPIC_API_KEY="sk-ant-..."
+
+# --- Supabase ---
+# URL + anon key are safe to expose to the client (RLS-protected).
+NEXT_PUBLIC_SUPABASE_URL="https://YOUR-PROJECT.supabase.co"
+NEXT_PUBLIC_SUPABASE_ANON_KEY="eyJ...anon..."
+# Service-role key: seed/ingestion + admin server routes ONLY. NEVER client.
+SUPABASE_SERVICE_ROLE_KEY="eyJ...service_role..."
+
+# --- Google OAuth (gate 2: Gmail + Calendar; configured in Supabase Auth) ---
+# Client id/secret live in Supabase Auth provider config, not here. These are
+# only needed if/when we call Google APIs directly outside Supabase Auth.
+GOOGLE_OAUTH_CLIENT_ID=""
+GOOGLE_OAUTH_CLIENT_SECRET=""
+
+# --- Cloudflare (seed-time embeddings via Workers AI REST; runtime uses the AI binding) ---
+CLOUDFLARE_ACCOUNT_ID=""
+CLOUDFLARE_API_TOKEN=""   # scope: Workers AI Read
+
+# --- Sandbox provider (gate 3) — decided post-spike, left blank for now ---
+# E2B_API_KEY=""

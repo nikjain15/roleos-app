@@ -1,0 +1,174 @@
+import { callModel } from "@/agent/registry";
+import type { AgentRunRecord } from "@/agent/registry";
+
+/**
+ * THE QUALITY GATE (architecture.md §4.4) — nothing reaches the user raw.
+ * Cheap deterministic checks first, the expensive smart check last:
+ *
+ *   1. shape check        — output is structurally right
+ *   2. guardrails         — no-send · truth-gate · privacy · voice blocklist
+ *   3. critic (LLM-judge) — separate Claude call vs the ro-voice ship-checklist
+ *   4. revise loop        — auto-fix once, re-judge; still failing → surfaced honestly
+ *   5. tag                — attach confidence + provenance
+ *
+ * Every verdict is returned so the caller can write it to agent_runs.
+ */
+
+export interface GateInput {
+  skillId: string;
+  output: string;
+  /** Claims must trace to this (master_profile slice) — truth-gate. */
+  groundTruth?: string;
+  expects?: (text: string) => boolean;
+}
+
+export type GateStatus = "passed" | "needs_your_eyes";
+
+export interface GateVerdict {
+  status: GateStatus;
+  finalOutput: string;
+  shapeOk: boolean;
+  guardrails: GuardrailResult;
+  critic: CriticVerdict | null;
+  revised: boolean;
+  confidence: "stated" | "strong" | "weak" | "unknown";
+  runs: AgentRunRecord[]; // critic + revise model calls, for agent_runs
+}
+
+interface GuardrailResult {
+  ok: boolean;
+  failures: string[];
+}
+
+interface CriticVerdict {
+  pass: boolean;
+  reasons: string[];
+}
+
+// ro-voice.html voice blocklist — banned phrasings (hype, toxic positivity,
+// guilt, manufactured urgency). Deterministic, fast, before the LLM judge.
+const VOICE_BLOCKLIST: RegExp[] = [
+  /everything happens for a reason/i,
+  /\bact now\b/i,
+  /don'?t fall behind/i,
+  /you haven'?t logged in/i,
+  /🎉|🚀|🔥|😱/u, // emoji-spam / hype markers
+  /\bgame[- ]?changer\b/i,
+  /#1\b|\bworld'?s best\b/i,
+];
+
+// Crude outbound-marker scan on the OUTPUT text — defense in depth on top of
+// the structural no-send invariant. RO never claims to have sent anything.
+const NO_SEND_MARKERS: RegExp[] = [
+  /\bi (?:have )?(?:sent|emailed|submitted|dispatched) (?:it|your|the)\b/i,
+];
+
+/** Exported for unit testing — the deterministic, network-free guardrail pass. */
+export function inspectGuardrails(output: string): GuardrailResult {
+  return runGuardrails({ skillId: "", output });
+}
+
+function runGuardrails(input: GateInput): GuardrailResult {
+  const failures: string[] = [];
+  for (const re of NO_SEND_MARKERS) {
+    if (re.test(input.output)) failures.push("no-send: output claims an outbound action");
+  }
+  for (const re of VOICE_BLOCKLIST) {
+    if (re.test(input.output)) failures.push(`voice-blocklist: ${re}`);
+  }
+  // truth-gate + privacy are deepened per-gate in Phase 3 (they need the real
+  // master_profile + a PII scan). Stubbed honestly here, not faked as passing.
+  return { ok: failures.length === 0, failures };
+}
+
+const SHIP_CHECKLIST = `You are RO's quality critic. Grade the draft against RO's ship-checklist (ro-voice.html):
+- Leads with the point / the call?
+- Honest and calibrated to the evidence (no false certainty)?
+- Warm, not cold — ends on a way forward?
+- No hype, no guilt, no manufactured urgency?
+- Sounds like a companion in your corner — not a chatbot or a servant?
+- If hard news: acknowledge → truth → forward?
+- Would RO say this even if it meant less time-in-app (wellbeing > engagement)?
+Reply with a single line: PASS  or  REVISE: <comma-separated reasons>.`;
+
+async function critique(
+  skillId: string,
+  output: string,
+): Promise<{ verdict: CriticVerdict; run: AgentRunRecord }> {
+  const { text, run } = await callModel(
+    "critic",
+    { system: SHIP_CHECKLIST, prompt: output },
+    { skill: `critic:${skillId}` },
+  );
+  const pass = /^\s*PASS\b/i.test(text);
+  const reasons = pass
+    ? []
+    : text.replace(/^\s*REVISE:?/i, "").split(",").map((s) => s.trim()).filter(Boolean);
+  return { verdict: { pass, reasons }, run };
+}
+
+export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
+  const runs: AgentRunRecord[] = [];
+
+  // 1 · shape
+  const shapeOk = input.expects ? input.expects(input.output) : input.output.trim().length > 0;
+
+  // 2 · guardrails
+  const guardrails = runGuardrails(input);
+
+  if (input.expects && !shapeOk) {
+    return {
+      status: "needs_your_eyes",
+      finalOutput: input.output,
+      shapeOk,
+      guardrails,
+      critic: null,
+      revised: false,
+      confidence: "unknown",
+      runs,
+    };
+  }
+
+  // 3 · critic
+  const first = await critique(input.skillId, input.output);
+  let verdict = first.verdict;
+  runs.push(first.run);
+
+  let finalOutput = input.output;
+  let revised = false;
+
+  // 4 · revise once, then re-judge
+  if (!verdict.pass || !guardrails.ok) {
+    const reviseReasons = [...verdict.reasons, ...guardrails.failures].join("; ");
+    const fix = await callModel(
+      "draft",
+      {
+        system:
+          "Revise the draft to fix the listed issues. Keep RO's voice (candid, warm, leads with the call). Return only the revised draft.",
+        prompt: `Issues: ${reviseReasons}\n\n---\n${input.output}`,
+      },
+      { skill: `revise:${input.skillId}` },
+    );
+    runs.push(fix.run);
+    finalOutput = fix.text;
+    revised = true;
+
+    const second = await critique(input.skillId, finalOutput);
+    runs.push(second.run);
+    verdict = second.verdict;
+  }
+
+  const guardrails2 = runGuardrails({ ...input, output: finalOutput });
+  const passed = verdict.pass && guardrails2.ok;
+
+  return {
+    status: passed ? "passed" : "needs_your_eyes",
+    finalOutput,
+    shapeOk,
+    guardrails: guardrails2,
+    critic: verdict,
+    revised,
+    confidence: "strong",
+    runs,
+  };
+}

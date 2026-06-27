@@ -1,0 +1,40 @@
+{
+  "_comment": "The model registry — generalized from roleos-admin/config/models.json. Each JOB names a provider + model + params, so swapping a model is config, not code. callModel(job, input) resolves here and writes an agent_runs row. NOTE: Opus 4.8 / Sonnet 4.6 REMOVED temperature/top_p/top_k (they 400) and budget_tokens — steer with `effort` + adaptive thinking instead. Costs are USD per 1M tokens (quality-first budget, but every call is metered).",
+  "jobs": {
+    "reason": {
+      "description": "High-stakes reasoning: matching, the mirror, negotiation, adversarial grading.",
+      "provider": "anthropic",
+      "model": "claude-opus-4-8",
+      "params": { "max_tokens": 4096, "effort": "high", "thinking": "adaptive" },
+      "cost_per_mtok": { "input": 5.0, "output": 25.0 }
+    },
+    "draft": {
+      "description": "Drafting: resume, cover, screening answers, recruiter replies.",
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-6",
+      "params": { "max_tokens": 4096, "effort": "medium", "thinking": "adaptive" },
+      "cost_per_mtok": { "input": 3.0, "output": 15.0 }
+    },
+    "quick_tag": {
+      "description": "Cheap, fast classification: recruiter-message labels, light tags. Haiku 4.5 — no effort param (it 400s on Haiku); plain call.",
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5",
+      "params": { "max_tokens": 1024 },
+      "cost_per_mtok": { "input": 1.0, "output": 5.0 }
+    },
+    "critic": {
+      "description": "The quality-gate LLM-judge — a SEPARATE call grading drafts vs the ro-voice ship-checklist. Uses the reasoning tier so the judge is at least as strong as the drafter.",
+      "provider": "anthropic",
+      "model": "claude-opus-4-8",
+      "params": { "max_tokens": 1536, "effort": "high", "thinking": "adaptive" },
+      "cost_per_mtok": { "input": 5.0, "output": 25.0 }
+    },
+    "embed": {
+      "description": "Embeddings for semantic role matching. Cloudflare Workers AI bge — EVERYWHERE (dev + prod), no Ollama. One model, one vector space.",
+      "provider": "workers-ai",
+      "model": "@cf/baai/bge-base-en-v1.5",
+      "dimensions": 768,
+      "cost_per_mtok": { "input": 0.012, "output": 0.0 }
+    }
+  }
+}
