@@ -13,8 +13,24 @@ export interface BuildSection {
   provenance: Provenance;
 }
 
+export type CanvasType = "prd" | "case_study" | "prototype";
+
+/** A runnable prototype (the prototype canvas) — generated code + a live preview. */
+export interface PrototypeArtifact {
+  name?: string;
+  summary?: string;
+  entry?: string;
+  files: { path: string; content: string }[];
+  walkthrough?: string[];
+  /** Live preview URL when the sandbox is up; null in graceful offline mode. */
+  preview_url: string | null;
+  sandbox_status: "live" | "offline" | "error";
+  sandbox_note: string;
+  built_at?: string;
+}
+
 export interface BuildContent {
-  canvas_type: "prd" | "case_study";
+  canvas_type: CanvasType;
   brief: string;
   phase: number; // 1..8
   decode?: unknown;
@@ -23,6 +39,8 @@ export interface BuildContent {
   sections: BuildSection[];
   edge?: { question?: string; why?: string; answer?: string; weaved?: boolean };
   pressure?: { attacks?: unknown[]; verdict?: string; note?: string };
+  /** Prototype canvas only — the runnable artifact built in the sandbox. */
+  prototype?: PrototypeArtifact;
 }
 
 /** Char-length-weighted: what share of the artifact is the human's own thinking. */
@@ -54,7 +72,23 @@ export function authenticityGate(content: BuildContent): { ok: boolean; checks: 
   const pressured = !!content.pressure?.verdict;
   const qualityOk = pressured && content.pressure!.verdict !== "would_fail";
 
-  const checks: GateCheck[] = [
+  const checks: GateCheck[] = [];
+
+  // Prototype canvas only: there has to BE a built prototype to ship.
+  if (content.canvas_type === "prototype") {
+    const built = (content.prototype?.files?.length ?? 0) > 0;
+    checks.push({
+      name: "Prototype built",
+      pass: built,
+      detail: built
+        ? content.prototype!.preview_url
+          ? "It's built and running in the sandbox."
+          : "It's built — the code's all here (live preview's off, that's fine)."
+        : "Build the prototype first — there's nothing to ship yet.",
+    });
+  }
+
+  checks.push(
     {
       name: "Quality vs rubric",
       pass: qualityOk,
@@ -79,6 +113,6 @@ export function authenticityGate(content: BuildContent): { ok: boolean; checks: 
           ? `${your_pct}% of this is your thinking.`
           : `Only ${your_pct}% is yours — the studio won't ship a 100%-RO artifact. Make more of it yours.`,
     },
-  ];
+  );
   return { ok: checks.every((c) => c.pass), checks };
 }

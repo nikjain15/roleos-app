@@ -8,10 +8,13 @@ import {
   provenanceSplit,
   type BuildContent,
   type BuildSection,
+  type CanvasType,
 } from "@/lib/build";
+import { cfSandboxRuntime, normalizeProject, type ProjectFile } from "@/lib/sandbox";
 import decodeBrief from "@/agent/skills/build/decode_brief";
 import setBet from "@/agent/skills/build/set_bet";
 import buildSpine from "@/agent/skills/build/build_spine";
+import buildCode from "@/agent/skills/build/build_code";
 import injectEdge from "@/agent/skills/build/inject_edge";
 import weaveEdge from "@/agent/skills/build/weave_edge";
 import pressureTest from "@/agent/skills/build/pressure_test";
@@ -59,7 +62,7 @@ export async function POST(req: Request): Promise<Response> {
     switch (action) {
       case "start": {
         const brief = String(body.brief ?? "");
-        const canvasType = (body.canvasType as "prd" | "case_study") ?? "prd";
+        const canvasType = (body.canvasType as CanvasType) ?? "prd";
         if (brief.trim().length < 30) {
           return NextResponse.json({ error: "give RO the brief to work from" }, { status: 400 });
         }
@@ -150,6 +153,48 @@ export async function POST(req: Request): Promise<Response> {
         });
         const prov = await save(s.id, c);
         return NextResponse.json({ content: c, provenance: prov });
+      }
+
+      case "build_prototype": {
+        // Prototype canvas: RO generates a runnable project from the bet (+ the
+        // human's woven edge) and runs it in the sandbox for a live preview. The
+        // sandbox is optional — offline still yields real, shown code.
+        const s = await load(String(body.sessionId));
+        if (!s) return NextResponse.json({ error: "not found" }, { status: 404 });
+        const c = s.content;
+        if (c.canvas_type !== "prototype") {
+          return NextResponse.json({ error: "not a prototype canvas" }, { status: 400 });
+        }
+        const gen = await run(
+          buildCode,
+          {
+            userId: uid,
+            data: { brief: c.brief, bet: c.bet, rubric: c.decode, edge: c.edge },
+          },
+          uid,
+        );
+        const files = normalizeProject((gen?.files as ProjectFile[]) ?? []);
+        const sb = await cfSandboxRuntime.build(s.id, files);
+        c.prototype = {
+          name: gen?.name as string | undefined,
+          summary: gen?.summary as string | undefined,
+          entry: gen?.entry as string | undefined,
+          files,
+          walkthrough: (gen?.walkthrough as string[]) ?? [],
+          preview_url: sb.previewUrl,
+          sandbox_status: sb.status,
+          sandbox_note: sb.note,
+        };
+        await supabase.from("decision_events").insert({
+          user_id: uid,
+          kind: "build",
+          subject_ref: s.id,
+          action: "edit",
+          payload: { phase: "build_prototype", sandbox_status: sb.status },
+          weight: 1,
+        });
+        await save(s.id, c);
+        return NextResponse.json({ content: c });
       }
 
       case "pressure_test": {
