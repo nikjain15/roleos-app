@@ -1,0 +1,16 @@
+{
+  "name": "roleos-build-sandbox",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8788",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "@cloudflare/sandbox": "^0.7.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.42.0"
+  }
+}
