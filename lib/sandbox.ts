@@ -21,6 +21,53 @@ export interface ProjectFile {
   content: string;
 }
 
+export interface PrototypeGen {
+  name?: string;
+  summary?: string;
+  entry?: string;
+  walkthrough?: string[];
+  files: ProjectFile[];
+}
+
+/**
+ * Parse the delimited build_code output (@@META + @@FILE blocks). Raw code lives
+ * between markers — no JSON escaping — so this is both token-cheap upstream and
+ * robust to parse. Tolerant of a missing @@END or stray ``` fences. Returns null
+ * if no files were produced.
+ */
+export function parsePrototypeOutput(text: string): PrototypeGen | null {
+  let meta: { name?: string; summary?: string; entry?: string; walkthrough?: unknown } = {};
+  const metaLine = text.match(/@@META[ \t]+(\{[\s\S]*?\})\s*(?:\r?\n|$)/);
+  if (metaLine) {
+    try {
+      meta = JSON.parse(metaLine[1]);
+    } catch {
+      /* keep going — metadata is optional, files are what matter */
+    }
+  }
+
+  const files: ProjectFile[] = [];
+  const chunks = text.split(/^@@FILE[ \t]+/m).slice(1);
+  for (const chunk of chunks) {
+    const body = chunk.replace(/\r?\n?@@END[\s\S]*$/, ""); // drop trailing @@END
+    const nl = body.indexOf("\n");
+    if (nl === -1) continue;
+    const path = body.slice(0, nl).trim();
+    let content = body.slice(nl + 1);
+    // strip an accidental ``` fence the model may wrap a file in
+    content = content.replace(/^```[a-zA-Z0-9]*\r?\n/, "").replace(/\r?\n```\s*$/, "");
+    if (path && content.trim().length > 0) files.push({ path, content });
+  }
+  if (files.length === 0) return null;
+  return {
+    name: meta.name,
+    summary: meta.summary,
+    entry: meta.entry,
+    walkthrough: Array.isArray(meta.walkthrough) ? (meta.walkthrough as string[]) : [],
+    files,
+  };
+}
+
 export interface SandboxLimits {
   /** Hard wall-clock cap for the whole build session (ms). */
   timeoutMs: number;

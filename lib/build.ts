@@ -52,6 +52,12 @@ export function provenanceSplit(sections: BuildSection[]): { your_pct: number; r
   return { your_pct, ro_pct: 100 - your_pct };
 }
 
+/** A prototype is genuinely built only if it has real app source (a src/ file),
+ *  not merely the generated harness (package.json / vite config / index.html). */
+export function hasPrototypeSource(p?: PrototypeArtifact): boolean {
+  return !!p?.files?.some((f) => f.path.startsWith("src/") && f.content.trim().length > 0);
+}
+
 export interface GateCheck {
   name: string;
   pass: boolean;
@@ -74,9 +80,10 @@ export function authenticityGate(content: BuildContent): { ok: boolean; checks: 
 
   const checks: GateCheck[] = [];
 
-  // Prototype canvas only: there has to BE a built prototype to ship.
+  // Prototype canvas only: there has to BE a real, built prototype to ship —
+  // an actual source file, not just the generated harness (package.json etc.).
   if (content.canvas_type === "prototype") {
-    const built = (content.prototype?.files?.length ?? 0) > 0;
+    const built = hasPrototypeSource(content.prototype);
     checks.push({
       name: "Prototype built",
       pass: built,

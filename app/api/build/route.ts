@@ -10,7 +10,7 @@ import {
   type BuildSection,
   type CanvasType,
 } from "@/lib/build";
-import { cfSandboxRuntime, normalizeProject, type ProjectFile } from "@/lib/sandbox";
+import { cfSandboxRuntime, normalizeProject, parsePrototypeOutput } from "@/lib/sandbox";
 import decodeBrief from "@/agent/skills/build/decode_brief";
 import setBet from "@/agent/skills/build/set_bet";
 import buildSpine from "@/agent/skills/build/build_spine";
@@ -165,15 +165,30 @@ export async function POST(req: Request): Promise<Response> {
         if (c.canvas_type !== "prototype") {
           return NextResponse.json({ error: "not a prototype canvas" }, { status: 400 });
         }
-        const gen = await run(
-          buildCode,
-          {
-            userId: uid,
-            data: { brief: c.brief, bet: c.bet, rubric: c.decode, edge: c.edge },
-          },
-          uid,
-        );
-        const files = normalizeProject((gen?.files as ProjectFile[]) ?? []);
+        // build_code emits a DELIMITED format (not JSON) — parse it accordingly.
+        const { verdict } = await runSkill(buildCode, {
+          userId: uid,
+          data: { brief: c.brief, bet: c.bet, rubric: c.decode, edge: c.edge },
+        });
+        await logAgentRuns(uid, verdict.runs, { skill: buildCode.id, judge: verdict });
+        const gen = parsePrototypeOutput(verdict.finalOutput);
+        const rawFiles = gen?.files ?? [];
+        const hasSource = rawFiles.some((f) => f.path.startsWith("src/") && !!f.content.trim());
+        if (!hasSource) {
+          // Generation didn't yield real app code (e.g. a truncated/unparseable
+          // response). Don't fake a build — surface it honestly so they can retry.
+          c.prototype = {
+            files: [],
+            walkthrough: [],
+            preview_url: null,
+            sandbox_status: "error",
+            sandbox_note:
+              "I couldn't get a clean build out that time — the generator came back short. Give it another go.",
+          };
+          await save(s.id, c);
+          return NextResponse.json({ content: c });
+        }
+        const files = normalizeProject(rawFiles);
         const sb = await cfSandboxRuntime.build(s.id, files);
         c.prototype = {
           name: gen?.name as string | undefined,

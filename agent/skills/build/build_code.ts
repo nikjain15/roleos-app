@@ -1,25 +1,27 @@
 import { skill } from "../skill";
-import { parseModelJson } from "@/lib/json";
+import { parsePrototypeOutput } from "@/lib/sandbox";
 
 /**
  * Build studio · prototype canvas — generate a RUNNABLE prototype (journey.html §7,
  * RO leads the scaffold). RO produces a self-contained, single-page Vite + React
- * app that demonstrates the chosen bet — real, working code, not a mock. The human
- * still owns the bet and injects their edge; this is the "build the spine" phase
- * for the prototype/MVP canvas type.
+ * app that demonstrates the chosen bet — real, working code, not a mock.
+ *
+ * Output format is DELIMITED, not JSON: code is emitted raw between @@FILE markers
+ * instead of escaped into JSON strings. JSON-encoding code is token-hostile (every
+ * newline/quote is escaped, ~2x the tokens) and fragile to parse — a delimited
+ * format halves the token cost and parses code robustly. See parsePrototypeOutput.
  *
  * Hard contract (so the sandbox can always serve it — see lib/sandbox.ts):
- *  - a Vite React app; `npm run dev` must serve on 0.0.0.0:8080
+ *  - a Vite React app; `npm run dev` serves on 0.0.0.0:8080 (the normalizer enforces it)
  *  - ONLY react/react-dom + vite/@vitejs/plugin-react as deps (egress is locked
  *    to the npm registry; no other network calls at runtime)
  *  - no backend, no external API/fetch — everything runs client-side, in-memory
  *
- * Structured + judged (mirrors build_spine): the critic logs to agent_runs; the
- * generated code is returned regardless (status doesn't gate the route).
+ * Structured + judged (mirrors build_spine): the critic logs to agent_runs.
  */
 export default skill({
   id: "build_code",
-  model: "draft",
+  model: "code",
   tools: [],
   gate: "full",
   structured: true,
@@ -31,34 +33,35 @@ export default skill({
       "realistic in-memory sample data, interactive state — not a static mock, not lorem ipsum.",
       "",
       "HARD CONSTRAINTS (the sandbox enforces these — violating them means it won't run):",
-      "- Vite + React only. package.json deps: react, react-dom; devDeps: vite, @vitejs/plugin-react.",
-      '- "dev" script MUST be exactly: "vite --host 0.0.0.0 --port 8080".',
-      "- index.html loads /src/main.jsx; entry renders into #root.",
-      "- NO backend, NO fetch/XHR/websocket, NO external APIs or CDNs — all data is in-memory mock data.",
-      "- Inline styles or a single CSS file; no UI libraries, no Tailwind, no extra npm deps.",
-      "- Keep it to a handful of files; every file must be complete and runnable (no TODOs, no ...).",
+      "- Vite + React only. Deps: react, react-dom (+ vite, @vitejs/plugin-react). NO other npm deps.",
+      "- NO backend, NO fetch/XHR/websocket, NO external APIs, CDNs, fonts, or images. All data in-memory.",
+      "- No UI libraries, no Tailwind. Plain inline styles or one small CSS file.",
       "",
-      "Return STRICT JSON only, no prose around it:",
-      '{"name": "kebab-case-app-name",',
-      ' "summary": "one line, RO\'s voice, what this prototype proves",',
-      ' "entry": "src/main.jsx",',
-      ' "files": [{"path": "package.json", "content": "..."}, {"path": "index.html", "content": "..."}, {"path": "vite.config.js", "content": "..."}, {"path": "src/main.jsx", "content": "..."}],',
-      ' "walkthrough": ["what to click / notice, one bullet each"]}',
+      "KEEP IT MINIMAL — this is the #1 rule. ONE focused screen demonstrating the core flow, not a full",
+      "app. Aim for ~120–200 lines of app code total in a single src/main.jsx. Restraint reads as senior.",
+      "",
+      "OUTPUT FORMAT — emit EXACTLY this, raw code between markers, NOTHING else (no prose, no ``` fences):",
+      '@@META {"name":"kebab-name","summary":"one line, RO\'s voice, what this proves","entry":"src/main.jsx","walkthrough":["what to click / notice","..."]}',
+      "@@FILE package.json",
+      "<raw file content>",
+      "@@FILE index.html",
+      "<raw file content>",
+      "@@FILE src/main.jsx",
+      "<raw file content>",
+      "@@END",
+      "",
+      "Rules for the format: one @@META line of strict JSON first; then each file as `@@FILE <path>` on its",
+      "own line followed by its raw content; finish with @@END. index.html must load /src/main.jsx into #root.",
     ].join("\n"),
     user: `BRIEF:\n${data.brief}\n\nCHOSEN BET:\n${JSON.stringify(data.bet)}\n\nRUBRIC:\n${JSON.stringify(
       data.rubric,
     )}${
       data.edge ? `\n\nTHE CANDIDATE'S EDGE (anchor the demo on this):\n${JSON.stringify(data.edge)}` : ""
-    }\n\nBuild the runnable prototype. JSON only.`,
+    }\n\nBuild the minimal runnable prototype in the delimited format. No prose.`,
   }),
   expects: (text) => {
-    const o = parseModelJson<{ files?: unknown; entry?: unknown }>(text);
-    if (!o || !Array.isArray(o.files) || o.files.length === 0) return false;
-    const files = o.files as { path?: unknown; content?: unknown }[];
-    const ok = files.every(
-      (f) => typeof f.path === "string" && typeof f.content === "string" && f.content.length > 0,
-    );
-    // Must include a package.json (the sandbox needs it to install + run).
-    return ok && files.some((f) => f.path === "package.json");
+    const g = parsePrototypeOutput(text);
+    // a real prototype has app source, not just the harness
+    return !!g && g.files.some((f) => f.path.startsWith("src/") && f.content.trim().length > 0);
   },
 });
