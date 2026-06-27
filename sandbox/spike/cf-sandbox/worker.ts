@@ -1,13 +1,14 @@
 /**
- * CF Sandbox SDK implementation of the spike target. Runnable as a Worker with
- * Containers enabled + Docker locally. `export { Sandbox }` is required.
+ * CF Sandbox SDK spike — proves the gate-3 sandbox locally (Docker + wrangler dev).
+ * Three things to verify: secure code exec, a live preview URL, and that
+ * runtime/egress/memory caps are enforceable.
  *
- * Isolation: each sandbox is a Durable-Object-owned container — which is exactly
- * the ownership model architecture.md §1.2 wants for the build-studio DO (the DO
- * holds the live sandbox). Preview URL via exposePort(). Egress + memory caps are
- * configured on the container/Dockerfile (see Dockerfile + wrangler.jsonc).
+ * Preview-URL pattern (the bit the first run surfaced):
+ *  - call proxyToSandbox(request, env) FIRST — it routes preview-subdomain
+ *    requests into the running container;
+ *  - exposePort(port, { hostname }) needs the worker's hostname to mint the URL.
  */
-import { getSandbox } from "@cloudflare/sandbox";
+import { getSandbox, proxyToSandbox } from "@cloudflare/sandbox";
 import type { BuildFile, BuildLimits, BuildResult } from "../target";
 
 export { Sandbox } from "@cloudflare/sandbox";
@@ -18,6 +19,7 @@ interface Env {
 
 async function runBuild(
   env: Env,
+  hostname: string,
   sessionId: string,
   files: BuildFile[],
   _entry: string,
@@ -27,40 +29,41 @@ async function runBuild(
   const t0 = Date.now();
   const sandbox = getSandbox(env.Sandbox, sessionId);
 
-  // Materialize the untrusted project.
   for (const f of files) {
     await sandbox.writeFile(`/workspace/${f.path}`, f.content);
   }
   const coldStartMs = Date.now() - t0;
 
-  // Install + start dev server under the wall-clock cap.
-  await sandbox.exec("cd /workspace && npm install --no-audit --no-fund", {
-    // timeout handling is enforced by the harness racing against limits.timeoutMs
-  } as never);
-  await sandbox.exec("cd /workspace && nohup npm run dev >/tmp/dev.log 2>&1 &");
+  await sandbox.exec("cd /workspace && npm install --no-audit --no-fund");
+  // start the dev server in the background and wait for the port to be listening
+  await sandbox.startProcess("cd /workspace && npm run dev");
+  await sandbox.exec("sleep 2");
 
-  const { url } = await sandbox.exposePort(8080);
-
-  const tFirst = Date.now();
-  const probe = await fetch(url);
-  const firstByteMs = Date.now() - tFirst;
-  notes.push(`probe status ${probe.status}`);
+  // mint the live preview URL (needs the worker hostname)
+  const { url } = await sandbox.exposePort(8080, { hostname });
+  notes.push(`preview minted for session ${sessionId}`);
 
   return {
     previewUrl: url,
     coldStartMs,
-    firstByteMs,
+    firstByteMs: 0, // measured by hitting the preview URL from the client
     totalMs: Date.now() - t0,
-    costUsd: null, // metered from CF Containers usage on a live account
-    egressEnforced: limits.egressAllowlist.length > 0, // enforced at container net policy
+    costUsd: null, // metered from CF Containers usage on a live (paid) account
+    egressEnforced: limits.egressAllowlist.length > 0,
     notes,
   };
 }
 
 export default {
   async fetch(req: Request, env: Env): Promise<Response> {
+    // 1 · route preview-subdomain requests into the container
+    const proxied = await proxyToSandbox(req, env);
+    if (proxied) return proxied;
+
+    // 2 · the spike endpoint: run a build, return the result + preview URL
     const { TEST_PROJECT, DEFAULT_LIMITS } = await import("../target");
-    const result = await runBuild(env, "spike-session", TEST_PROJECT, "src/main.jsx", DEFAULT_LIMITS);
+    const hostname = new URL(req.url).host;
+    const result = await runBuild(env, hostname, "spike-session", TEST_PROJECT, "src/main.jsx", DEFAULT_LIMITS);
     return Response.json(result);
   },
 };

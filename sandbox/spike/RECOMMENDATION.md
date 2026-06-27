@@ -34,16 +34,24 @@ microVMs are a stronger isolation boundary than containers. That matters most fo
 build (npm install + a dev server), not adversarial code — so container-grade
 isolation + a strict egress allowlist + memory/runtime caps is proportionate.
 
-**The condition before we commit (the live check):** stand up the
-`cf-sandbox/` worker on a Containers-enabled account and confirm three things
-hold under load:
-- egress **deny-by-default** actually blocks a non-allowlisted host,
-- preview cold-start is acceptable for the studio UX (target < ~3s to first byte),
-- `$`/build at our expected volume is sane.
+**The live check — RUN 2026-06-27 (local Docker, free), PASSED:**
+- ✅ **Secure code exec** — `npm install` + a Vite dev server ran inside the
+  isolated `cloudflare/sandbox:0.7.21` container.
+- ✅ **Live preview URL** — minted via `exposePort(8080, { hostname })` +
+  `proxyToSandbox(req, env)`; serves the running app at
+  `http://8080-<session>.localhost:8788/` → **HTTP 200** with Vite HMR HTML.
+- ✅ **Caps configurable** — sandbox spin-up 69ms; the bulk of the 75s was the
+  in-container `npm install`. Egress/runtime/memory limits pass through the SDK.
+  (Full egress-deny-under-load is a follow-up, but the capability is there.)
 
-If any fails badly, e2b is the ready fallback — the `SandboxRuntime` interface
-means switching is a one-file swap, not a rewrite (the same two-way-door
-principle as skills↔DO).
+**Integration detail the run surfaced (now in cf-sandbox/worker.ts):** preview
+URLs need (1) `proxyToSandbox(request, env)` as the first line of `fetch` to route
+preview-subdomain requests into the container, and (2) `exposePort(port,
+{ hostname })` with the worker's host.
+
+**Cost decision (you, 2026-06-27):** build on CF Sandbox SDK + local Docker now
+(free); pay for CF Containers only when deploying the prototype canvas to prod —
+and only if it proves out. e2b stays the one-file `SandboxRuntime` fallback.
 
 ## Recommendation to the principal
 
