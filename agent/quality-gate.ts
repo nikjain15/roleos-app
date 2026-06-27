@@ -1,5 +1,6 @@
 import { callModel } from "@/agent/registry";
 import type { AgentRunRecord } from "@/agent/registry";
+import { parseModelJson } from "@/lib/json";
 
 /**
  * THE QUALITY GATE (architecture.md §4.4) — nothing reaches the user raw.
@@ -32,9 +33,17 @@ export interface GateVerdict {
   shapeOk: boolean;
   guardrails: GuardrailResult;
   critic: CriticVerdict | null;
+  truth: TruthVerdict | null;
   revised: boolean;
   confidence: "stated" | "strong" | "weak" | "unknown";
-  runs: AgentRunRecord[]; // critic + revise model calls, for agent_runs
+  runs: AgentRunRecord[]; // critic + truth + revise model calls, for agent_runs
+}
+
+/** The truth-gate verdict (gate 1 résumé, etc.): claims traceable to ground truth? */
+export interface TruthVerdict {
+  ok: boolean;
+  /** Each unsupported claim or overstatement, in plain language. */
+  violations: string[];
 }
 
 interface GuardrailResult {
@@ -109,6 +118,28 @@ async function critique(
   return { verdict: { pass, reasons }, run };
 }
 
+const TRUTH_SYSTEM = `You are RO's truth gate for a tailored résumé. You are given the candidate's MASTER PROFILE (the only source of truth) and a DRAFT. Find any claim in the draft that is NOT supported by the master profile, or that OVERSTATES it — invented titles, employers, metrics, skills, scope, or seniority. Reframing real experience is fine; inventing or inflating is not.
+Reply with STRICT JSON only: {"ok": boolean, "violations": ["plain-language description of each unsupported or overstated claim"]}. If everything traces to the profile, ok=true and violations=[].`;
+
+/** The truth gate (gate 1): does every claim trace to the master profile? */
+async function truthGate(
+  skillId: string,
+  output: string,
+  groundTruth: string,
+): Promise<{ verdict: TruthVerdict; run: AgentRunRecord }> {
+  const { text, run } = await callModel(
+    "critic",
+    { system: TRUTH_SYSTEM, prompt: `MASTER PROFILE:\n${groundTruth}\n\nDRAFT:\n${output}` },
+    { skill: `truth:${skillId}` },
+  );
+  const o = parseModelJson<{ ok?: boolean; violations?: unknown }>(text);
+  if (o && typeof o.ok === "boolean") {
+    return { verdict: { ok: o.ok, violations: Array.isArray(o.violations) ? o.violations : [] }, run };
+  }
+  // Fail closed: if the truth judge is genuinely unparseable, don't claim a pass.
+  return { verdict: { ok: false, violations: ["truth gate could not verify the draft"] }, run };
+}
+
 export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   const runs: AgentRunRecord[] = [];
 
@@ -125,30 +156,43 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
       shapeOk,
       guardrails,
       critic: null,
+      truth: null,
       revised: false,
       confidence: "unknown",
       runs,
     };
   }
 
-  // 3 · critic
-  const first = await critique(input.skillId, input.output);
+  // 3 · critic (+ truth gate when ground truth is supplied — gate 1 résumé).
+  const [first, truthRes] = await Promise.all([
+    critique(input.skillId, input.output),
+    input.groundTruth
+      ? truthGate(input.skillId, input.output, input.groundTruth)
+      : Promise.resolve(null),
+  ]);
   let verdict = first.verdict;
   runs.push(first.run);
+  const truth = truthRes?.verdict ?? null;
+  if (truthRes) runs.push(truthRes.run);
 
   let finalOutput = input.output;
   let revised = false;
+
+  // A truth violation is never auto-fixable here — it means a claim isn't
+  // supported. Surface honestly; never ship.
+  const truthOk = truth ? truth.ok : true;
 
   // 4 · revise once, then re-judge — PROSE ONLY. For structured (JSON) output,
   // the prose revise would corrupt the structure, so we skip it: the output
   // already passed shape + guardrails, and the critic verdict is still logged.
   if (input.structured) {
     return {
-      status: verdict.pass && guardrails.ok ? "passed" : "needs_your_eyes",
+      status: verdict.pass && guardrails.ok && truthOk ? "passed" : "needs_your_eyes",
       finalOutput,
       shapeOk,
       guardrails,
       critic: verdict,
+      truth,
       revised: false,
       confidence: "strong",
       runs,
@@ -176,7 +220,7 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   }
 
   const guardrails2 = runGuardrails({ ...input, output: finalOutput });
-  const passed = verdict.pass && guardrails2.ok;
+  const passed = verdict.pass && guardrails2.ok && truthOk;
 
   return {
     status: passed ? "passed" : "needs_your_eyes",
@@ -184,6 +228,7 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
     shapeOk,
     guardrails: guardrails2,
     critic: verdict,
+    truth,
     revised,
     confidence: "strong",
     runs,

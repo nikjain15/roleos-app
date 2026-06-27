@@ -1,29 +1,53 @@
 import { skill } from "./skill";
+import { parseModelJson } from "@/lib/json";
 
 /**
- * Gate 1 — tailored résumé (journey.html §5). auto → you send.
- * Reword the master profile to the role's must_haves. TRUTH GATE: reword real
- * experience only; the quality gate flags any overstatement. NO send tool.
+ * Gate 1 — tailored résumé (journey.html §5, §7). auto → you send.
+ * Rewords/reorders the user's REAL master profile to a role's must_haves and
+ * injects ATS keywords, showing the "why" of each change + the fit lift.
  *
- * Phase-1 scaffold: the prompt is shaped but the grounded data (master_profile,
- * role must_haves) is wired in Phase 3 via the tools below.
+ * TRUTH GATE: this skill reworks real experience only. The quality gate runs a
+ * dedicated truth check (groundTruth = master_profile) that flags any claim not
+ * traceable to the profile, or any reframe that overstates — surfaced honestly,
+ * never shipped. A résumé that lies is worse than useless.
+ *
+ * Structured JSON so the studio can render the diff + rationale; the prose lives
+ * in fields (summary, bullets) and is voice- and truth-judged.
  */
 export default skill({
   id: "draft_resume",
   model: "draft",
   tools: ["get_master_profile", "get_role", "diff"],
   gate: "full",
-  prompt: ({ data }) => ({
-    system: [
-      "You are RO, drafting a role-tailored résumé variant for the user.",
-      "Reword and reorder REAL experience to the role's must-haves and inject ATS keywords.",
-      "TRUTH GATE: never invent or overstate. If a reframe overstates, tone it down and flag it.",
-      "Voice: candid, warm, specific. Lead with the strongest fit. No hype.",
-    ].join(" "),
-    user: `Role: ${JSON.stringify(data.role ?? "{{role}}")}\nMaster profile: ${JSON.stringify(
-      data.masterProfile ?? "{{master_profile}}",
-    )}\n\nDraft the tailored résumé.`,
-  }),
-  // shape check: non-trivial output with at least one bulleted line.
-  expects: (text) => text.trim().length > 80 && /[-•]/.test(text),
+  structured: true,
+  prompt: ({ data }) => {
+    const role = data.role as Record<string, unknown>;
+    const profile = data.profile as string;
+    return {
+      system: [
+        "You are RO, tailoring the user's résumé to ONE role for their job hunt.",
+        "Rework their REAL experience to the role's must_haves and inject the role's ATS keywords.",
+        "TRUTH GATE — non-negotiable: every line must trace to the master profile below.",
+        "Reword and reframe, but NEVER invent titles, employers, metrics, skills, or scope.",
+        "If a reframe risks overstating, tone it down and note it in truth_note.",
+        "Voice: candid, specific, no hype. Lead bullets with impact + a real metric where one exists.",
+        "Return STRICT JSON only with keys:",
+        '{"summary": "2-3 sentence tailored professional summary",',
+        '"bullets": [{"text": "résumé bullet", "rationale": "why this maps to a must_have / what changed",',
+        '"evidence": "the part of the master profile this is grounded in"}],',
+        '"keywords_injected": [string], "fit_lift": "one sentence on how this variant lifts fit",',
+        '"truth_note": "any reframe that approaches overstatement, flagged honestly — or empty string"}',
+      ].join(" "),
+      user: `ROLE:\n${JSON.stringify({
+        company: role.company,
+        role_title: role.role_title,
+        must_haves: role.must_haves,
+        keywords: role.keywords,
+      })}\n\nMASTER PROFILE (the ONLY source of truth — do not exceed it):\n${profile}\n\nTailor the résumé. JSON only.`,
+    };
+  },
+  expects: (text) => {
+    const o = parseModelJson<{ summary?: unknown; bullets?: unknown[] }>(text);
+    return !!o && typeof o.summary === "string" && Array.isArray(o.bullets) && o.bullets.length > 0;
+  },
 });

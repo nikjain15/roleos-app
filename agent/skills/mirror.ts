@@ -1,5 +1,5 @@
 import { skill } from "./skill";
-import { stripFence } from "./match";
+import { parseModelJson } from "@/lib/json";
 
 /**
  * The mirror (journey.html §onboarding B). RO reads the user back as statements
@@ -26,11 +26,7 @@ export default skill({
     user: `BACKGROUND:\n${data.profile as string}\n\nReflect them back + one insight. JSON only.`,
   }),
   expects: (text) => {
-    try {
-      const o = JSON.parse(stripFence(text));
-      return Array.isArray(o.statements) && typeof o.insight === "string";
-    } catch {
-      return false;
-    }
+    const o = parseModelJson<{ statements?: unknown; insight?: unknown }>(text);
+    return !!o && Array.isArray(o.statements) && typeof o.insight === "string";
   },
 });
