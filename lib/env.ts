@@ -4,15 +4,18 @@ import { getCloudflareContext } from "@opennextjs/cloudflare";
  * Typed access to Cloudflare bindings + server secrets. NEVER import this into
  * a client component — everything here is server-only.
  *
- * Bindings (wrangler.jsonc): AI (Workers AI), BUILD_STUDIO + AMBIENT (DOs).
+ * Bindings (wrangler.jsonc): AI (Workers AI). The two Durable Objects are
+ * DEFERRED (see wrangler.jsonc): the build-studio sandbox is its own worker
+ * (sandbox/studio, reached via SANDBOX_URL) and AmbientScheduler is Phase 4 —
+ * neither is bound to the main app yet, so both are optional here.
  * Secrets (.dev.vars / wrangler secret): ANTHROPIC_API_KEY, SUPABASE_*.
  */
 export interface RoleOSEnv {
   // Workers AI binding — embeddings (bge) in dev and prod.
   AI: { run: (model: string, input: unknown) => Promise<unknown> };
-  // Durable Objects
-  BUILD_STUDIO: DurableObjectNamespace;
-  AMBIENT: DurableObjectNamespace;
+  // Durable Objects — not bound yet (deferred); present for when they land.
+  BUILD_STUDIO?: DurableObjectNamespace;
+  AMBIENT?: DurableObjectNamespace;
   // Secrets
   ANTHROPIC_API_KEY: string;
   SUPABASE_SERVICE_ROLE_KEY: string;
