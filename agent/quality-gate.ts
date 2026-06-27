@@ -177,28 +177,47 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
 
   let finalOutput = input.output;
   let revised = false;
+  let truthFinal = truth;
 
-  // A truth violation is never auto-fixable here — it means a claim isn't
-  // supported. Surface honestly; never ship.
-  const truthOk = truth ? truth.ok : true;
-
-  // 4 · revise once, then re-judge — PROSE ONLY. For structured (JSON) output,
-  // the prose revise would corrupt the structure, so we skip it: the output
-  // already passed shape + guardrails, and the critic verdict is still logged.
+  // 4 · structured (JSON) output: skip the PROSE revise (it corrupts JSON), but
+  // run a TRUTH-DRIVEN revise — re-ground the flagged lines to the master profile
+  // and re-check. Keeps the honesty guarantee while sparing the user manual fixes.
   if (input.structured) {
+    if (truth && !truth.ok && input.groundTruth) {
+      const fix = await callModel(
+        "draft",
+        {
+          system:
+            "Revise this JSON résumé to FIX the flagged claims: change each flagged line so it traces strictly to the master profile, or drop it. Do NOT invent anything new. Return the SAME JSON shape, JSON only.",
+          prompt: `FLAGGED (must fix):\n${truth.violations.join("\n")}\n\nMASTER PROFILE (only source of truth):\n${input.groundTruth}\n\nDRAFT JSON:\n${input.output}`,
+        },
+        { skill: `truth-revise:${input.skillId}` },
+      );
+      runs.push(fix.run);
+      // Only accept the revision if it's still shape-valid.
+      if (!input.expects || input.expects(fix.text)) {
+        finalOutput = fix.text;
+        revised = true;
+        const re = await truthGate(input.skillId, finalOutput, input.groundTruth);
+        runs.push(re.run);
+        truthFinal = re.verdict;
+      }
+    }
+    const truthOk2 = truthFinal ? truthFinal.ok : true;
     return {
-      status: verdict.pass && guardrails.ok && truthOk ? "passed" : "needs_your_eyes",
+      status: verdict.pass && guardrails.ok && truthOk2 ? "passed" : "needs_your_eyes",
       finalOutput,
       shapeOk,
       guardrails,
       critic: verdict,
-      truth,
-      revised: false,
+      truth: truthFinal,
+      revised,
       confidence: "strong",
       runs,
     };
   }
 
+  const truthOk = truth ? truth.ok : true;
   if (!verdict.pass || !guardrails.ok) {
     const reviseReasons = [...verdict.reasons, ...guardrails.failures].join("; ");
     const fix = await callModel(
