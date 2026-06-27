@@ -16,6 +16,10 @@ export interface RoleOSEnv {
   // Secrets
   ANTHROPIC_API_KEY: string;
   SUPABASE_SERVICE_ROLE_KEY: string;
+  /** Base URL of the standalone build sandbox worker (gate 3 prototype canvas).
+   *  Optional — unset means the studio runs in graceful offline mode (code only,
+   *  no live preview). e.g. http://localhost:8788 in dev (wrangler dev). */
+  SANDBOX_URL?: string;
   // Public (safe) — also available as NEXT_PUBLIC_* at build for the client.
   NEXT_PUBLIC_SUPABASE_URL: string;
   NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
