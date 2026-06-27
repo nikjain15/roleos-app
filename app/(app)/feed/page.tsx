@@ -50,8 +50,16 @@ export default async function Feed() {
         <SignOut />
       </div>
 
-      <div className="mt-8 flex items-center gap-2 text-sm text-suc">
-        <span className="inline-block h-2 w-2 rounded-full bg-suc" /> RO is working · in the background
+      <div className="mt-8 flex items-center justify-between gap-2">
+        <span className="flex items-center gap-2 text-sm text-suc">
+          <span className="inline-block h-2 w-2 rounded-full bg-suc" /> RO is working · in the background
+        </span>
+        <Link
+          href="/studio/build"
+          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
+        >
+          Open the build studio →
+        </Link>
       </div>
 
       {!matches || matches.length === 0 ? (
