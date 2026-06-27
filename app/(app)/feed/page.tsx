@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import SaveOnboarding from "@/components/SaveOnboarding";
 import SignOut from "@/components/SignOut";
+import TailorButton from "@/components/TailorButton";
 
 /**
  * The decision feed — the home (journey.html §6). No tabs, no Kanban. What RO
@@ -126,10 +127,8 @@ function Card({ m, send }: { m: MatchRow; send?: boolean }) {
       {m.reasoning?.why && <p className="mt-2 text-[15px] leading-relaxed text-tx2">{m.reasoning.why}</p>}
       {send && (
         <div className="mt-3 flex gap-2">
-          {/* Tailoring + the you-send dispatch land in Phase 3. Human-gated outward. */}
-          <button className="rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white opacity-60" disabled>
-            Tailor my résumé →
-          </button>
+          {/* RO drafts; the you-send dispatch stays human-gated (Phase 3+). */}
+          <TailorButton roleId={m.role_id} />
           {m.roles?.url && (
             <a
               href={m.roles.url}

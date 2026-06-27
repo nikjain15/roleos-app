@@ -2,7 +2,7 @@ import { recallRoles } from "@/lib/match";
 import { matchProfile } from "@/lib/run-match";
 import { runSkill } from "@/agent/skills/run";
 import mirrorSkill from "@/agent/skills/mirror";
-import { stripFence } from "@/agent/skills/match";
+import { parseModelJson } from "@/lib/json";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -49,12 +49,10 @@ export async function POST(req: Request): Promise<Response> {
           matchProfile(profile, 6),
         ]);
 
-        try {
-          const mirror = JSON.parse(stripFence(mirrorRes.verdict.finalOutput));
-          send({ type: "mirror", statements: mirror.statements, insight: mirror.insight });
-        } catch {
-          /* mirror is best-effort; matches are the substance */
-        }
+        const mirror = parseModelJson<{ statements: string[]; insight: string }>(
+          mirrorRes.verdict.finalOutput,
+        );
+        if (mirror) send({ type: "mirror", statements: mirror.statements, insight: mirror.insight });
 
         // Slim payload — the UI needs RO's reasoning, not the raw JD JSON.
         const slim = matchRes.matches.map((m) => ({

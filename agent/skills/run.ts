@@ -18,7 +18,7 @@ export interface SkillRunResult {
 export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRunResult> {
   const { system, user } = skill.prompt(input);
 
-  const { text } = await callModel(
+  const { text, run } = await callModel(
     skill.model,
     { system, prompt: user },
     { skill: skill.id },
@@ -31,6 +31,9 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
     structured: skill.structured,
     groundTruth: typeof input.data.groundTruth === "string" ? input.data.groundTruth : undefined,
   });
+
+  // Include the skill's own generation call in the metered runs (for agent_runs).
+  verdict.runs.unshift(run);
 
   return { skillId: skill.id, verdict };
 }

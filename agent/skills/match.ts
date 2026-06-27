@@ -1,4 +1,5 @@
 import { skill } from "./skill";
+import { parseModelJson } from "@/lib/json";
 
 /**
  * Matching (journey.html §"Matching"; architecture.md §4.3). RO reasons over the
@@ -42,16 +43,7 @@ export default skill({
     };
   },
   expects: (text) => {
-    try {
-      const o = JSON.parse(stripFence(text));
-      return Array.isArray(o) && o.every((m) => typeof m.fit === "number" && typeof m.why === "string");
-    } catch {
-      return false;
-    }
+    const o = parseModelJson<Array<{ fit?: unknown; why?: unknown }>>(text);
+    return Array.isArray(o) && o.every((m) => typeof m.fit === "number" && typeof m.why === "string");
   },
 });
-
-/** Models sometimes wrap JSON in ```json fences — tolerate it. */
-export function stripFence(text: string): string {
-  return text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/i, "");
-}

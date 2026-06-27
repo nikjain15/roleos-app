@@ -18,9 +18,21 @@ vi.mock("@/agent/registry", async (importActual) => {
     ...actual,
     callModel: vi.fn(async (job: string) => {
       if (job === "critic") return { text: "PASS", run };
-      // draft/reason → a clean, on-voice, shape-valid résumé draft
+      // draft → a clean, shape-valid structured résumé (draft_resume is JSON)
       return {
-        text: "Senior AI PM\n- Shipped LLM eval platform; cut hallucinations 40%\n- Led 0→1 launch",
+        text: JSON.stringify({
+          summary: "Senior AI PM who ships LLM products with real metrics.",
+          bullets: [
+            {
+              text: "Led 0→1 launch of an LLM support assistant; cut response time 40%.",
+              rationale: "maps to the role's LLM-product must-have",
+              evidence: "the support assistant in the master profile",
+            },
+          ],
+          keywords_injected: ["LLM", "evals"],
+          fit_lift: "Leads with the eval-framework strength they ask for.",
+          truth_note: "",
+        }),
         run,
       };
     }),

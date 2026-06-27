@@ -1,6 +1,7 @@
 import { recallRoles, type CandidateRole } from "@/lib/match";
 import { runSkill } from "@/agent/skills/run";
-import matchSkill, { stripFence } from "@/agent/skills/match";
+import matchSkill from "@/agent/skills/match";
+import { parseModelJson } from "@/lib/json";
 
 /**
  * Full matching: pgvector recall → Claude reasoning (the `match` skill, through
@@ -25,12 +26,7 @@ export async function matchProfile(
     data: { profile: profileText, roles: candidates },
   });
 
-  let reasoned: Array<Record<string, unknown>> = [];
-  try {
-    reasoned = JSON.parse(stripFence(verdict.finalOutput));
-  } catch {
-    reasoned = [];
-  }
+  const reasoned = parseModelJson<Array<Record<string, unknown>>>(verdict.finalOutput) ?? [];
   const byId = new Map(reasoned.map((m) => [m.id, m]));
 
   const matches: MatchedRole[] = candidates.map((c) => {
