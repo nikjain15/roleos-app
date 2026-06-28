@@ -10,8 +10,15 @@ import { extractLinkedInUrl, getProfileFetcher } from "@/lib/profile-fetcher";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-/** Above this, distill the profile with Haiku before the Opus calls (~450+ tokens). */
-const DISTILL_OVER_CHARS = 1800;
+/**
+ * Distill (Haiku) only for genuinely long/redundant profiles. MEASURED:
+ *  - ~1.5k-char clean profile → 6% smaller, NET NEGATIVE (Haiku call + latency
+ *    costs more than the ~50 Opus input tokens it saves);
+ *  - ~4k-char redundant CV → 50% smaller, net-positive + a cleaner signal.
+ * Normalization already captures the free win, so distill earns its place only
+ * above this size. Below it, skip — not worth the call/latency.
+ */
+const DISTILL_OVER_CHARS = 3500;
 
 /**
  * Onboarding (journey.html §3 A→B→C): POST { profile } → STREAM RO working.
