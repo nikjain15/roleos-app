@@ -1,0 +1,268 @@
+{
+  "company": "DoorDash",
+  "role_title": "Manager, Strategy & Operations, DoorDash for Business",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8013164",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8013164",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager",
+  "seniority": {
+    "level": "Senior Manager / IC6",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of experience in strategy and operations, commercial management, operations, or consulting",
+      "Reporting to Sr. Manager of Strategy and Operations",
+      "Title is 'Manager' with significant cross-functional ownership",
+      "Base range $136K–$200K consistent with senior individual contributor or manager level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_strategy_ops",
+      "raw_text_from_jd": "You have 6+ years of experience in strategy and operations, commercial management, operations, or consulting",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "You have a proven track record of owning and leading complex cross-functional workstreams, setting strategy, driving alignment across stakeholders, and consistently delivering measurable business outcomes in fast-paced environments.",
+      "skill_type": "outcome",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_strategic_thinking",
+      "raw_text_from_jd": "You are a highly analytical and strategic thinker who can synthesize complex datasets into actionable recommendations, influence decision-making, and drive business results.",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_centric",
+      "raw_text_from_jd": "You are deeply customer-centric and able to balance the needs of customers, merchants, Dashers, and the business while building strong relationships and influencing stakeholders at all levels.",
+      "skill_type": "capability",
+      "domain": "customer_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_tolerance",
+      "raw_text_from_jd": "You thrive in ambiguity and are comfortable operating with limited direction. You proactively identify opportunities, challenge assumptions, develop strategic solutions, and drive execution from concept through implementation.",
+      "skill_type": "capability",
+      "domain": "autonomous_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_forward",
+      "raw_text_from_jd": "You are AI-forward and leverage AI, automation, and emerging technologies in novel ways to scale impact, improve team efficiency, accelerate decision-making, and solve business problems more effectively.",
+      "skill_type": "capability",
+      "domain": "ai_and_automation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "direct_management_experience",
+      "raw_text_from_jd": "direct management experience, high-growth startup (scaling a business from 0 - 1) experience is preferred",
+      "skill_type": "domain_knowledge",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth startup"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "high_growth_startup",
+      "raw_text_from_jd": "high-growth startup (scaling a business from 0 - 1) experience is preferred",
+      "skill_type": "domain_knowledge",
+      "domain": "startup_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth startup"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_sql",
+      "raw_text_from_jd": "Advanced SQL experience strongly preferred.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_querying",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "DoorDash for Business — corporate meals and benefits platform; customer experience and defect reduction strategy",
+    "business_model": "B2B corporate benefits and meals platform on top of DoorDash marketplace",
+    "primary_metrics_inferred": [
+      "Defect ratio reduction",
+      "Customer experience improvement at scale",
+      "Cross-functional business outcomes / measurable impact"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Operations",
+      "Marketing",
+      "Go-to-Market"
+    ],
+    "core_responsibilities": [
+      "Proactively identify and solve root causes of customer friction to reduce defects and improve customer experience at scale",
+      "Analyze customer support and operational data to uncover critical trends and determine scope and impact of issues",
+      "Design solutions that prevent problems before they occur",
+      "Synthesize insights that highlight key pain points and advocate for the voice of the customer",
+      "Influence strategic decisions across Product, Operations, and Go-to-Market teams",
+      "Work with cross-functional partners to execute short and long-term plans",
+      "Deploy a data-driven approach to identify emerging customer support trends and develop solutions",
+      "Navigate ambiguity and bring structure to undefined opportunities",
+      "Create playbooks and templates and independently drive problems from identification through resolution"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      136000,
+      200000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "strategy and operations",
+    "DoorDash for Business",
+    "customer experience",
+    "defect reduction",
+    "cross-functional",
+    "SQL",
+    "data-driven",
+    "AI-forward",
+    "ambiguity",
+    "corporate benefits",
+    "B2B",
+    "first-principles"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($136K–$200K base) with equity mentioned",
+    "Clear mission and product surface described (DoorDash for Business corporate benefits)",
+    "Explicit expected fill date noted (8/18/26), indicating active and time-bound search",
+    "Comprehensive benefits package described in detail",
+    "Role has significant visibility across the business per JD",
+    "Encourages candidates from diverse backgrounds"
+  ],
+  "red_flags": [
+    "Work location type not specified — no mention of remote, hybrid, or onsite requirements in the body; location type is unclear",
+    "Visa sponsorship not addressed in the JD",
+    "Salary range is wide ($64K spread), which may indicate uncertainty about level or location-based variation",
+    "SQL listed as 'strongly preferred' but framed in the nice-to-have section — could be a de facto hard requirement"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, title, and reporting structure)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.type (not stated in JD body; marked as unclear)",
+      "location.remote_us_eligible (not stated)",
+      "location.visa_sponsorship (not addressed)"
+    ],
+    "ambiguities": [
+      "Work location is never specified in the JD body (no remote/hybrid/onsite language). The pay range references national base pay including Illinois and Colorado, and NYC legal notices are included, suggesting potentially remote-eligible or multi-location role, but this is not confirmed.",
+      "SQL is described as 'Advanced SQL experience strongly preferred' — language is preference but strength of wording ('strongly preferred') may make this a de facto hard requirement. Classified as nice-to-have per schema rules.",
+      "Direct management experience is listed alongside high-growth startup experience in the same sentence as 'preferred' — both treated as soft/nice-to-have."
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "company": "Stripe",
+  "role_title": "Operations Program Manager, Capital Collections",
+  "url": "https://stripe.com/jobs/search?gh_jid=7815794",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7815794",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 3,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "3+ years of program management experience",
+      "Expected to own programs end-to-end and drive cross-functional collaboration",
+      "Handles complex escalated casework independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management",
+      "raw_text_from_jd": "3+ years of program management experience, with a focus on operational process design, implementation, and scaling",
+      "skill_type": "years_of_experience",
+      "domain": "program_management",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_casework",
+      "raw_text_from_jd": "Willingness and ability to perform hands-on casework alongside program responsibilities",
+      "skill_type": "capability",
+      "domain": "collections_casework",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_problem_solving",
+      "raw_text_from_jd": "Strong problem-solving skills with the ability to use data to drive decisions and measure impact",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Excellent communication skills—comfortable conveying complex or sensitive topics to both technical and non-technical audiences",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "concurrent_project_management",
+      "raw_text_from_jd": "Experience managing multiple concurrent projects in a fast-paced, high-growth environment with shifting priorities",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fintech_collections_experience",
+      "raw_text_from_jd": "Experience in financial services or fintech, particularly in collections or lending operations",
+      "skill_type": "domain_knowledge",
+      "domain": "collections_lending",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "automation_and_sql",
+      "raw_text_from_jd": "Familiarity with automation tools and techniques, including a working knowledge of SQL",
+      "skill_type": "tool_proficiency",
+      "domain": "automation_and_data",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "change_management",
+      "raw_text_from_jd": "Experience in change management—taking initiatives from conception through scaled execution",
+      "skill_type": "capability",
+      "domain": "change_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "compliance_regulatory_background",
+      "raw_text_from_jd": "Background in a compliance-sensitive environment with knowledge of relevant regulatory frameworks",
+      "skill_type": "domain_knowledge",
+      "domain": "compliance_and_regulatory",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "qa_program_design",
+      "raw_text_from_jd": "Experience designing or managing QA programs, including audit methodologies, scoring calibration, and quality feedback loops",
+      "skill_type": "capability",
+      "domain": "quality_assurance",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Stripe Capital collections operations — recovery of overdue loans, program design, and scaling",
+    "business_model": "B2B fintech / financial infrastructure — lending product (Stripe Capital)",
+    "primary_metrics_inferred": [
+      "Recovery rates",
+      "Customer experience scores",
+      "Compliance adherence",
+      "Operational efficiency / manual effort reduction"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Compliance",
+      "Operations"
+    ],
+    "core_responsibilities": [
+      "Own complex and escalated collections cases end-to-end",
+      "Design, launch, and manage collections programs aligned with business objectives, regulatory requirements, and customer experience goals",
+      "Identify opportunities to automate, standardize, and scale collections operations",
+      "Ensure regulatory and policy compliance across all collections activities",
+      "Build and maintain QA frameworks including audits and calibration",
+      "Monitor program performance through analytics and develop data-driven strategies",
+      "Partner with Product, Engineering, Compliance, and Operations teams",
+      "Build and maintain process documentation, playbooks, and training materials"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "collections",
+    "program management",
+    "Stripe Capital",
+    "operational scaling",
+    "compliance",
+    "QA",
+    "data-driven",
+    "process optimization",
+    "fintech",
+    "recovery rates",
+    "automation",
+    "SQL",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear articulation of responsibilities spanning both strategic and hands-on work",
+    "Encourages applicants who meet minimum requirements to apply even if they don't meet preferred qualifications",
+    "Cross-functional scope with Product, Engineering, and Compliance signals meaningful organizational influence",
+    "Explicit mention of compliance and QA frameworks suggests a mature operational environment"
+  ],
+  "red_flags": [
+    "No location, work authorization, or visa sponsorship information stated anywhere in the JD",
+    "No compensation range disclosed",
+    "Role requires hands-on casework in collections which may not appeal to candidates seeking purely strategic PM roles"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 3+ years requirement and scope of responsibilities)",
+      "scope.business_model (inferred from Stripe Capital product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs in JD)",
+      "location.type (not stated; left as 'unclear')",
+      "location.work_auth (not stated; left as 'unclear')",
+      "location.visa_sponsorship (not stated; left as 'unclear')"
+    ],
+    "ambiguities": [
+      "No location information is provided in the JD — it is unclear whether this role is remote, hybrid, or onsite, and in which geography",
+      "Archetype is ambiguous: role combines program management (Technical Program Manager) with ops strategy and hands-on casework (BizOps / Strategy & Ops); classified as Technical Program Manager with BizOps secondary"
+    ]
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "company": "Stripe",
+  "role_title": "Product Manager, Link - Consumer",
+  "url": "https://stripe.com/jobs/search?gh_jid=7392697",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7392697",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (consumer product focus)",
+  "seniority": {
+    "level": "Senior IC / Principal PM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years in a product or technical role",
+      "High degree of autonomy and responsibility",
+      "Define and drive an ambitious roadmap",
+      "Establish team pace, clear prioritization, and rigorous execution standards"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_product_or_technical",
+      "raw_text_from_jd": "8+ years in a product or technical role, with experience shipping world-class consumer products at scale",
+      "skill_type": "years_of_experience",
+      "domain": "product_or_technical_role",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "with experience shipping world-class consumer products at scale",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer products"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_product_taste",
+      "raw_text_from_jd": "High taste, design empathy, and sharp judgment — can put yourself in the shoes of consumers and be a steward of crafting great experiences",
+      "skill_type": "capability",
+      "domain": "consumer_product_design",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_rigor_sql",
+      "raw_text_from_jd": "Rigorous with data — comfortable digging into metrics, writing SQL when needed, and thinking from first principles to deliver the right results",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "continuous_product_improvement",
+      "raw_text_from_jd": "Desire for continuous product improvement; able to optimize for shipping a portfolio of small, medium, and large releases",
+      "skill_type": "capability",
+      "domain": "product_delivery",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mindset",
+      "raw_text_from_jd": "Ownership mindset — works on whatever it takes to solve problems and delight consumers",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Strong written and verbal communication, with a talent for distilling user problems into precise, actionable framing",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "external_partnerships",
+      "raw_text_from_jd": "Experience managing high-stakes external partnerships — aligning on milestones and executing integrations end-to-end",
+      "skill_type": "capability",
+      "domain": "partnerships_and_integrations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomy_responsibility",
+      "raw_text_from_jd": "Thrives with a high level of autonomy and responsibility",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "consumer_financial_products",
+      "raw_text_from_jd": "Experience working on consumer financial products",
+      "skill_type": "domain_knowledge",
+      "domain": "consumer_finance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "consumer finance"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "new_products_or_startup",
+      "raw_text_from_jd": "Experience building brand new products or working in a startup environment",
+      "skill_type": "domain_knowledge",
+      "domain": "zero_to_one_product_development",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "startup"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_collaboration",
+      "raw_text_from_jd": "Experience working with GTM teams to bring a new product to market",
+      "skill_type": "capability",
+      "domain": "go_to_market",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Link App (web and native) — consumer digital wallet, identity, and payments experience",
+    "business_model": "consumer network / B2C2B (consumer-facing wallet enabling merchant payments)",
+    "primary_metrics_inferred": [
+      "Consumer conversion and retention on Link",
+      "Consumer registrations and active users (300M+ registered base)",
+      "Frictionless checkout/payment success rates",
+      "Feature adoption across wallet, identity, and finance products"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "GTM",
+      "Operations",
+      "Data Science",
+      "Marketing",
+      "Sales"
+    ],
+    "core_responsibilities": [
+      "Own the consumer perspective — spend time with users, partner closely with Engineering, GTM, and Operations, and synthesize feedback and market signals into clear product direction",
+      "Be the voice of the Link consumer, both within the team and across Stripe",
+      "Define and drive an ambitious roadmap, from expanding core capabilities to leading nascent initiatives through to maturity",
+      "Establish team pace, clear prioritization, and rigorous execution standards",
+      "Partner deeply with Engineering, Design, Data Science, Marketing, Sales, and Operations to ship cohesive, frictionless experiences"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Link",
+    "consumer wallet",
+    "payments",
+    "identity",
+    "AI-driven transactions",
+    "consumer products",
+    "digital wallet",
+    "fintech",
+    "roadmap",
+    "technical PM",
+    "SQL",
+    "stablecoins",
+    "AI agents",
+    "consumer network"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface with large scale (300M+ registered consumers)",
+    "Ambitious and forward-looking team mandate (AI agents, stablecoins, identity)",
+    "Minimum requirements clearly delineated from preferred qualifications",
+    "Encourages candidates who meet minimum requirements to apply even without preferred qualifications",
+    "Cross-functional partner list is specific and realistic"
+  ],
+  "red_flags": [
+    "No location, compensation, or visa/sponsorship information stated in the JD",
+    "8+ years is a high bar that narrows the candidate pool significantly",
+    "JD does not clarify remote vs. hybrid vs. on-site working arrangement"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and scope of ownership/autonomy language)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities and product context; not explicit in JD)",
+      "scope.business_model (inferred from product description and Stripe's platform context)",
+      "compensation.equity_mentioned (not mentioned; defaulted to false)",
+      "location.type (not stated; defaulted to 'unclear')"
+    ],
+    "ambiguities": [
+      "No location type (remote/hybrid/onsite) is specified anywhere in the JD; set to 'unclear'",
+      "Work authorization and visa sponsorship are not addressed; set to 'unclear'",
+      "The JD says 'technical PM' in the body but the minimum requirements do not explicitly require an engineering background; archetype confidence set to 'high' based on SQL requirement and framing, but the role also has strong consumer/generalist PM elements"
+    ]
+  }
+}

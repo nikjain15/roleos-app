@@ -1,0 +1,238 @@
+{
+  "company": "LangChain",
+  "role_title": "Product Manager, Fleet",
+  "url": "https://jobs.ashbyhq.com/langchain/5ac59bcb-0245-4a82-bab0-0ebdeae07ccd",
+  "ats_provider": "ashby",
+  "ats_job_id": "5ac59bcb-0245-4a82-bab0-0ebdeae07ccd",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 3,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "3+ years of product management or engineering experience",
+      "Compensation range $180K-$215K base",
+      "Owns roadmap for a core area of Fleet",
+      "Shapes product strategy alongside founders and leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_or_eng",
+      "raw_text_from_jd": "3+ years of product management or engineering experience",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_or_engineering",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "llm_agent_ai_experience",
+      "raw_text_from_jd": "Hands-on experience building with LLMs, agents, or AI applications.",
+      "skill_type": "capability",
+      "domain": "ai_development",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "agents",
+        "AI applications"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth",
+      "raw_text_from_jd": "Deeply technical — you can hold your own in conversations about API design, system architecture, data pipelines, and debugging production issues.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "API design",
+        "system architecture",
+        "data pipelines"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_toward_action",
+      "raw_text_from_jd": "Bias toward action — you'd rather ship, learn, and iterate than build the perfect solution upfront.",
+      "skill_type": "cultural_fit",
+      "domain": "execution_mindset",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_alignment",
+      "raw_text_from_jd": "Strong written and verbal communicator who can align cross-functional teams around a shared vision.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cs_technical_background",
+      "raw_text_from_jd": "Computer Science, Engineering, or equivalent technical background.",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Computer Science degree",
+        "Engineering degree"
+      ]
+    },
+    {
+      "id": "high_growth_startup_experience",
+      "raw_text_from_jd": "Previous experience at a high-growth startup or developer-focused company.",
+      "skill_type": "domain_knowledge",
+      "domain": "startup_environment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "developer tools"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth startup",
+        "developer-focused company"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "LangSmith Fleet — product for bringing agents to every team in an organization; includes natural language agent management, security, observability, model flexibility, admin controls, and API extensibility",
+    "business_model": "B2B SaaS (enterprise platform) + developer-facing",
+    "primary_metrics_inferred": [
+      "Fleet adoption across organizational teams",
+      "Enterprise customer expansion",
+      "Agent deployment reliability and scale"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Founders / Leadership"
+    ],
+    "core_responsibilities": [
+      "Own the roadmap for a core area of the Fleet.",
+      "Work with customers to understand their challenges and define new product features.",
+      "Work with engineering to define scope, make technical tradeoffs, and ship high-impact features quickly.",
+      "Help shape product strategy alongside our founders and leadership team."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      180000,
+      215000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "meaningful equity (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "LangSmith Fleet",
+    "agents",
+    "LLMs",
+    "AI applications",
+    "observability",
+    "evaluation",
+    "developer platform",
+    "enterprise SaaS",
+    "API design",
+    "system architecture",
+    "product roadmap",
+    "LangChain",
+    "LangGraph"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($180K-$215K base)",
+    "Meaningful equity mentioned",
+    "Clear product surface ownership (Fleet) with defined scope",
+    "Company has strong traction: $125M Series B, 6,000+ customers, 5 of Fortune 10 using LangSmith",
+    "Well-known investors (IVP, Sequoia, Benchmark, CapitalG, Sapphire)",
+    "Explicitly states all team members have meaningful impact"
+  ],
+  "red_flags": [
+    "No location or remote/hybrid policy stated — work arrangement is entirely unclear",
+    "No visa sponsorship information provided",
+    "3+ years floor is relatively low for the strategic scope described (owning roadmap, shaping strategy alongside founders); actual seniority bar may be higher",
+    "Compensation note mentions 'variable compensation for relevant roles' without clarifying if this role qualifies"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and scope of responsibilities)",
+      "location.type (not stated; defaulted to 'unclear')",
+      "location.work_auth (not stated; defaulted to 'open')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
+      "compensation.location_pay_differential (inferred from note about EU/UK/APAC competitive benefits)"
+    ],
+    "ambiguities": [
+      "Location and remote/hybrid policy are entirely absent from the JD body. The JD mentions 'meals on in-office days in the US' as a benefit, implying some in-office expectation, but no city or hybrid structure is specified.",
+      "Whether this role qualifies for 'variable compensation' is not clarified in the JD."
+    ]
+  }
+}

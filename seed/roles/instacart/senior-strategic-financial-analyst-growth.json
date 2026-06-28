@@ -1,14 +1,14 @@
 {
   "company": "Instacart",
   "role_title": "Senior Strategic Financial Analyst – Growth",
-  "url": "https://instacart.careers/job/?gh_jid=7896276",
+  "url": "https://instacart.careers/job/?gh_jid=7896278",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7896276",
-  "fetched_at": "2026-05-25",
+  "ats_job_id": "7896278",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
-    "type": "remote-us",
+    "type": "remote-global",
     "cities_listed": [],
     "remote_us_eligible": true,
     "office_time_required": null,
@@ -16,7 +16,7 @@
     "visa_sponsorship": "unclear"
   },
   "archetype": "BizOps / Strategy & Ops",
-  "archetype_confidence": "high",
+  "archetype_confidence": "medium",
   "secondary_archetype": "Strategic Finance / FP&A",
   "seniority": {
     "level": "Senior IC",
@@ -25,17 +25,16 @@
     "manages_people": false,
     "level_signals": [
       "3+ years of experience in strategic finance/FP&A, investment banking, or management consulting",
-      "Base pay ranges $127K–$160.5K depending on state, consistent with Senior IC",
-      "Engages regularly with VP/C-suite stakeholders",
-      "Owns topline forecasting end-to-end for a major business segment"
+      "Senior in title; partner with VP/C-suite stakeholders",
+      "Part of a 25-person Strategic Finance org, small high-impact team"
     ]
   },
   "must_haves": [
     {
-      "id": "years_strategic_finance_ib_consulting",
+      "id": "years_strategic_finance_experience",
       "raw_text_from_jd": "3+ years of experience in strategic finance/FP&A, investment banking, or management consulting.",
       "skill_type": "years_of_experience",
-      "domain": "strategic_finance_or_investment_banking_or_consulting",
+      "domain": "strategic_finance_fpa_ib_consulting",
       "minimum_value": 3,
       "unit": "years",
       "is_combined": false,
@@ -44,7 +43,10 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [],
+      "industries_named": [
+        "investment banking",
+        "management consulting"
+      ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -65,16 +67,16 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": [
-        "Bachelor's degree in Finance, Economics, Business, Engineering, Mathematics"
+        "Bachelor's degree"
       ]
     },
     {
-      "id": "advanced_excel_sheets",
+      "id": "excel_google_sheets_financial_modeling",
       "raw_text_from_jd": "Advanced proficiency in Excel or Google Sheets, including building driver-based financial models, revenue forecasts, and scenario/sensitivity analyses.",
       "skill_type": "tool_proficiency",
       "domain": "financial_modeling",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [
         "Excel",
@@ -87,11 +89,11 @@
       "credentials_named": []
     },
     {
-      "id": "executive_materials_presentation",
+      "id": "executive_ready_materials",
       "raw_text_from_jd": "Experience preparing and presenting executive-ready materials to VP/C-suite stakeholders, with the ability to distill complex data into clear business narratives.",
       "skill_type": "capability",
       "domain": "executive_communication",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -106,7 +108,7 @@
       "raw_text_from_jd": "Track record of owning end-to-end forecasting and performance reporting for a product line, business segment, or revenue stream.",
       "skill_type": "outcome",
       "domain": "forecasting_and_reporting",
-      "evidence_required": "shipped_products_with_metrics",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -122,9 +124,9 @@
       "id": "two_sided_marketplace_experience",
       "raw_text_from_jd": "Experience in a two-sided marketplace or consumer internet business (e.g., on-demand, e-commerce, advertising, or subscription models).",
       "skill_type": "domain_knowledge",
-      "domain": "marketplace_or_consumer_internet",
+      "domain": "marketplace_consumer_internet",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -139,7 +141,7 @@
       "credentials_named": []
     },
     {
-      "id": "sql_bi_tools",
+      "id": "sql_proficiency",
       "raw_text_from_jd": "Proficiency with SQL for self-serve analysis; familiarity with BI tools such as Looker or Tableau.",
       "skill_type": "tool_proficiency",
       "domain": "data_analysis",
@@ -159,11 +161,11 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_metrics_experiments",
+      "id": "cross_functional_metrics_partnering",
       "raw_text_from_jd": "Experience partnering cross-functionally to define metrics, align on assumptions, evaluate experiments, and operationalize insights.",
       "skill_type": "capability",
-      "domain": "cross_functional_partnership",
-      "evidence_required": "project_examples",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
@@ -174,10 +176,10 @@
       "credentials_named": []
     },
     {
-      "id": "board_ir_materials",
+      "id": "board_investor_materials_background",
       "raw_text_from_jd": "Background creating materials for Board meetings, investor relations, and quarterly/monthly business reviews in a high-growth environment.",
       "skill_type": "capability",
-      "domain": "investor_relations_and_board_reporting",
+      "domain": "investor_relations_board_materials",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -189,7 +191,7 @@
       "credentials_named": []
     },
     {
-      "id": "advanced_credential",
+      "id": "advanced_credential_mba_cfa",
       "raw_text_from_jd": "MBA, CFA, or other relevant advanced credential.",
       "skill_type": "credential",
       "domain": "education",
@@ -207,7 +209,7 @@
       ]
     },
     {
-      "id": "west_coast_hours",
+      "id": "west_coast_hours_availability",
       "raw_text_from_jd": "Ability to collaborate effectively across time zones; availability to align to West Coast hours when needed is a plus.",
       "skill_type": "cultural_fit",
       "domain": "schedule_flexibility",
@@ -228,14 +230,14 @@
   "scope": {
     "team_size_estimate": "Small team within a 25-person Strategic Finance org",
     "surface": "Core grocery business topline forecasting, revenue and unit economics, growth insights",
-    "business_model": "Two-sided marketplace (grocery delivery platform), B2C and B2B",
+    "business_model": "Two-sided marketplace (grocery delivery), B2C and B2B (enterprise retailers)",
     "primary_metrics_inferred": [
-      "LTV (Lifetime Value)",
-      "CAC (Customer Acquisition Cost)",
-      "Conversion rates",
+      "LTV",
+      "CAC",
+      "Conversion",
       "AOV (Average Order Value)",
       "Contribution margin",
-      "Topline revenue forecast accuracy",
+      "Forecast accuracy",
       "Incremental impact of marketing/product/enterprise initiatives"
     ],
     "cross_functional_partners": [
@@ -256,15 +258,13 @@
     ]
   },
   "compensation": {
-    "base_range_usd": [
-      127000,
-      160500
-    ],
+    "base_range_usd": null,
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
     "equity_form": "New hire equity grant as well as annual refresh grants",
     "location_pay_differential": true,
-    "source": "stated"
+    "source": "stated",
+    "notes": "Canadian base pay range stated: $126,000–$133,000 CAD. US range not disclosed. Compensation varies by permanent work location."
   },
   "top_keywords": [
     "strategic finance",
@@ -276,39 +276,40 @@
     "CAC",
     "AOV",
     "contribution margin",
-    "Core grocery business",
-    "executive-ready materials",
-    "scenario analysis",
-    "SQL",
+    "executive materials",
+    "growth",
+    "Core grocery",
     "two-sided marketplace",
-    "growth"
+    "SQL",
+    "scenario analysis"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation ranges clearly disclosed for multiple US geographies",
-    "Equity (new hire + annual refresh) explicitly mentioned",
-    "Fully remote role open to US and Canada candidates",
-    "Small, high-impact team with direct exposure to senior leadership",
-    "Clear scope and ownership area (Core grocery topline forecasting)",
-    "Flex First remote work policy acknowledged"
+    "Remote-first (Flex First) policy with candidates accepted across U.S. and Canada",
+    "Clear scope and ownership — topline forecasting for Core grocery business",
+    "Small, high-impact team with direct visibility to senior leadership",
+    "Equity grants (new hire + annual refresh) mentioned explicitly",
+    "Compensation described as 'highly market-competitive'",
+    "Canadian compensation range ($126K–$133K CAD) disclosed"
   ],
   "red_flags": [
-    "West Coast time zone preference noted, which may be a soft constraint for East Coast or Canada candidates despite role being listed as fully remote",
-    "Canada candidates mentioned in body but compensation ranges only provided for US states — Canada comp is unclear",
-    "Visa sponsorship status not mentioned anywhere in the JD"
+    "US compensation range not disclosed — only Canadian range provided",
+    "Only specific Canadian provinces are eligible (Ontario, Alberta, British Columbia, Nova Scotia) — not all of Canada",
+    "West Coast time zone preference mentioned as helpful, which may disadvantage East Coast or international candidates",
+    "Visa sponsorship status not addressed"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp ranges and years of experience requirement)",
-      "scope.business_model (inferred from product description as two-sided marketplace)",
-      "scope.primary_metrics_inferred (inferred from responsibilities, not directly listed as metrics targets)",
-      "compensation.base_range_usd reported as full range across all US geographies ($127K–$160.5K); state-specific bands differ",
-      "location.type set to remote-us; JD says open to US and Canada but comp ranges only stated for US"
+      "seniority.level (inferred from 'Senior' title, 3+ years requirement, and VP/C-suite stakeholder engagement)",
+      "scope.business_model (inferred from JD description of grocery delivery marketplace)",
+      "scope.primary_metrics_inferred (inferred from listed unit economics in responsibilities)",
+      "compensation.base_range_usd set to null — only CAD range stated for Canada; US range not disclosed",
+      "location.remote_us_eligible (inferred from 'This is a remote role open to candidates across the U.S. and Canada')"
     ],
     "ambiguities": [
-      "JD states role is open to candidates 'across the U.S. and Canada' but compensation ranges are only provided for US states — Canadian comp band is not disclosed.",
-      "West Coast time zone is described as 'helpful but not required' in the overview but listed as 'a plus' under Preferred Qualifications — treated as soft preference.",
-      "Visa sponsorship is not addressed anywhere in the JD; set to 'unclear'."
+      "JD says 'open to candidates across the U.S. and Canada' but the compensation section only discloses CAD pay ranges and lists only four Canadian provinces eligible — it is unclear whether US hiring is currently active or paused.",
+      "Visa sponsorship is not mentioned; work_auth set to 'open' as no restriction is stated but this is inferred.",
+      "Location type set to 'remote-global' to capture both US and Canada eligibility, though the company is US-based and the role may functionally be 'remote-us' for most applicants."
     ]
   }
 }

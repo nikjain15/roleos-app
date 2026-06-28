@@ -1,0 +1,228 @@
+{
+  "company": "Faire",
+  "role_title": "Staff Product Manager, Inspire & App",
+  "url": "https://boards.greenhouse.io/faire/jobs/8572155002?gh_jid=8572155002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8572155002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week (Tuesdays, Thursdays, and one flex day); up to 4 weeks remote per year",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Consumer / Discovery PM with mobile focus",
+  "seniority": {
+    "level": "Staff PM (IC6-equivalent)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product experience required",
+      "Direct executive visibility and work with Faire's CEO",
+      "Multi-year roadmap ownership and 0→1 mandate",
+      "Comp range $220K-$302.5K base, consistent with Staff-level IC at a growth-stage company",
+      "Role title explicitly says 'Staff Product Manager'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_product_experience",
+      "raw_text_from_jd": "8+ years of product experience at a high-growth tech company or as a startup founder, with a track record of driving meaningful user and business impact.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "high-growth tech company or startup founder",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth tech company",
+        "startup founder"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "top_of_funnel_consumer_surfaces",
+      "raw_text_from_jd": "Proven track record owning top-of-funnel or high-engagement consumer surfaces — feeds, homepages, browse experiences, or explore surfaces — ideally at a high-engagement platform (consumer social, e-commerce, marketplace, or content discovery). You've built products that create habits, not just convert transactions.",
+      "skill_type": "outcome",
+      "domain": "consumer_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer social",
+        "e-commerce",
+        "marketplace",
+        "content discovery"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mobile_product_depth",
+      "raw_text_from_jd": "Mobile product depth — you've owned a native app experience as a primary product area, driven measurable improvement in app-specific metrics (conversion, engagement, retention), and worked hands-on with mobile engineering teams. You think natively in mobile UX patterns.",
+      "skill_type": "capability",
+      "domain": "mobile_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "zero_to_one_experience",
+      "raw_text_from_jd": "0→1 experience — you've launched new products or experiences from scratch and know how to scope MVPs that prioritize learning without sacrificing quality.",
+      "skill_type": "outcome",
+      "domain": "new_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "collaborative_communicator",
+      "raw_text_from_jd": "Highly collaborative and persuasive communicator, with excellent written and verbal skills.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "user_empathy",
+      "raw_text_from_jd": "Deep user empathy — you care about understanding customer needs and creating thoughtful, impactful experiences.",
+      "skill_type": "cultural_fit",
+      "domain": "user_research",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Inspire pillar (homepage, category pages, seasonal hubs, global navigation) and Faire mobile app",
+    "business_model": "B2B wholesale marketplace (retailers buying from brands/makers)",
+    "primary_metrics_inferred": [
+      "Top-of-funnel engagement and session depth",
+      "App conversion, engagement, and retention",
+      "Downstream GMV / purchase conversion",
+      "Retailer LTV (especially app-native cohorts)"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Marketing",
+      "Adjacent pod leads",
+      "CEO and senior leadership"
+    ],
+    "core_responsibilities": [
+      "Become an expert on how retailers find inspiration, both on and off Faire, and how these moments influence product discovery and purchasing decisions.",
+      "Own the product vision and roadmap for Faire's top-of-funnel discovery experiences (homepage, category pages, seasonal hubs, global navigation) and the Faire mobile app.",
+      "Lead the mobile app redesign — establish a coherent app vision (information architecture, navigation, core interactions, craft) and drive progress against it in close partnership with design, engineering, and adjacent pod leads.",
+      "Collaborate with Engineering, Design, Data Science, and Marketing to deliver experiences that balance retailer delight, brand voice, and measurable business impact.",
+      "Define and track success metrics for engagement and downstream conversion — running disciplined experiments and translating results into clear roadmap direction.",
+      "Work directly with Faire's CEO and senior leadership to shape Inspire's long-term strategy and the multi-year app vision."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      220000,
+      302500
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "top-of-funnel discovery",
+    "mobile app",
+    "homepage",
+    "category pages",
+    "feed",
+    "personalization",
+    "wholesale marketplace",
+    "0→1",
+    "mobile UX",
+    "engagement",
+    "conversion",
+    "Staff PM",
+    "Inspire",
+    "native app",
+    "retailer discovery"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($220K-$302.5K base)",
+    "Clear product surface ownership with explicit scope (Inspire pillar + mobile app)",
+    "Direct executive visibility including CEO access — high-impact role",
+    "Explicit 0→1 mandate and multi-year strategic ownership",
+    "Company backed by top-tier investors (Sequoia, Y Combinator, Founders Fund, etc.)",
+    "Hybrid policy clearly stated (3 days/week, up to 4 weeks remote/year)"
+  ],
+  "red_flags": [
+    "Hybrid onsite 3 days/week in SF or NYC only — eliminates fully-remote candidates",
+    "Very senior bar (8+ years + mobile depth + top-of-funnel experience + 0→1) may be hard to meet holistically",
+    "No nice-to-haves listed — requirements feel all-or-nothing, with no flexibility signaled",
+    "Visa sponsorship and work authorization not mentioned — unclear for international candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level inferred from comp range, role title ('Staff'), and scope of responsibilities",
+      "scope.team_size_estimate not stated; left as 'unclear'",
+      "scope.primary_metrics_inferred from responsibilities and product context; not explicitly listed in JD",
+      "scope.business_model inferred from company description",
+      "location.work_auth not stated; set to 'unclear'",
+      "location.visa_sponsorship not stated; set to 'unclear'",
+      "posting_first_seen and posting_last_updated not provided"
+    ],
+    "ambiguities": [
+      "No nice-to-haves or 'preferred' qualifications are present in the JD — all listed qualifications treated as must-haves (hard severity).",
+      "The JD mentions an 'ideally' qualifier in the top-of-funnel requirement ('ideally at a high-engagement platform') but does not use formal 'preferred' or 'nice to have' language; the surrounding sentence is otherwise unconditional, so it was retained as hard severity.",
+      "Compensation range is the same for both SF and NYC with no differential noted; treated as no location pay differential."
+    ]
+  }
+}

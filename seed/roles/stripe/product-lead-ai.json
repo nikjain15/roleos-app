@@ -4,7 +4,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7655023",
   "ats_provider": "greenhouse",
   "ats_job_id": "7655023",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,22 +17,21 @@
   },
   "archetype": "AI Product Manager",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Technical PM with people management",
+  "secondary_archetype": "Technical PM with people-management scope",
   "seniority": {
-    "level": "Director / Group PM (IC8 or Director equivalent)",
+    "level": "Director / Group PM",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
-      "10+ years of relevant Product Management experience",
+      "10+ years of Product Management experience",
       "4+ years of experience managing Product Managers",
-      "Responsible for long-term vision, strategy, and roadmap for Payments Intelligence products",
-      "Build and coach your team on best practices"
+      "Responsible for scoping vision, strategy, and coaching team"
     ]
   },
   "must_haves": [
     {
-      "id": "years_pm_experience",
+      "id": "pm_experience_10_years",
       "raw_text_from_jd": "Product Management experience: 10+ years of relevant experience",
       "skill_type": "years_of_experience",
       "domain": "product_management",
@@ -49,7 +48,7 @@
       "credentials_named": []
     },
     {
-      "id": "years_managing_pms",
+      "id": "people_management_pm_4_years",
       "raw_text_from_jd": "4+ years of experience managing Product Managers",
       "skill_type": "years_of_experience",
       "domain": "people_management",
@@ -81,7 +80,7 @@
       "credentials_named": []
     },
     {
-      "id": "customer_partner_facing",
+      "id": "customer_partner_facing_experience",
       "raw_text_from_jd": "Customer and Partner facing experience: You're comfortable in front of customers or third-party collaborators, and have experience navigating customer conversations",
       "skill_type": "capability",
       "domain": "customer_engagement",
@@ -131,7 +130,7 @@
       "skill_type": "capability",
       "domain": "communication",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -160,13 +159,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Payments Intelligence products — Radar, Authorization Boost, Disputes; ML-driven payment infrastructure and fraud/authorization controls",
-    "business_model": "B2B fintech infrastructure platform",
+    "surface": "Payments Intelligence products including Radar, Authorization Boost, and Disputes; ML-powered payment optimization platform",
+    "business_model": "B2B financial infrastructure platform",
     "primary_metrics_inferred": [
-      "Payment authorization rates",
-      "Revenue maximization for users",
+      "Transaction success rate",
+      "Payment cost reduction",
       "Fraud minimization",
-      "Payment cost reduction"
+      "Revenue maximization for users"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -198,43 +197,42 @@
   },
   "top_keywords": [
     "Payments Intelligence",
+    "ML",
+    "fraud",
     "Radar",
     "Authorization Boost",
     "Disputes",
-    "ML",
-    "fraud",
-    "product lead",
-    "AI",
-    "payments infrastructure",
+    "payment optimization",
     "data science",
-    "roadmap",
-    "managing PMs"
+    "product strategy",
+    "people management",
+    "cross-functional"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear product domain with named products (Radar, Authorization Boost, Disputes)",
-    "Explicit minimum requirements section with encouragement to apply if met",
-    "High organizational scope — owns vision, strategy, and team coaching",
-    "Cross-functional breadth across engineering, data science, design, sales, and partnerships"
+    "Clear product surface and ownership area (Payments Intelligence, Radar, Authorization Boost, Disputes)",
+    "Explicit encouragement to apply if minimum requirements are met",
+    "High-impact domain — billions of dollars of transactions processed annually",
+    "Distinguished preferred qualifications as bonus, not required — signals openness"
   ],
   "red_flags": [
-    "No compensation range disclosed",
-    "Location and remote/hybrid policy not stated anywhere in the JD",
-    "No visa sponsorship or work authorization information provided",
-    "Role title says 'AI' but JD body focuses on Payments Intelligence — AI scope is ambiguous",
-    "No preferred qualifications listed, making differentiation criteria unclear"
+    "No location, remote eligibility, or work authorization information stated anywhere in the JD",
+    "No compensation or equity information disclosed",
+    "Role title says 'AI' but JD body focuses primarily on payments/ML — AI framing may be aspirational or unclear",
+    "No preferred qualifications listed despite the JD explicitly mentioning there are preferred qualifications"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 10+ years PM + 4+ years managing PMs + strategic scope)",
-      "scope.business_model (inferred from Stripe's description as a financial infrastructure platform)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
-      "location.type (not stated; marked as unclear)",
-      "compensation.source (unknown; no comp data in JD)"
+      "seniority.level (inferred from 10+ years PM experience and 4+ years managing PMs)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from team description; not explicitly stated)",
+      "location.type (not stated anywhere; defaulted to 'unclear')",
+      "location.work_auth (not stated; defaulted to 'unclear')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
     ],
     "ambiguities": [
-      "Role title is 'Product Lead, AI' but the JD body describes the Payments Intelligence team (Radar, Authorization Boost, Disputes) without explicitly referencing AI as a standalone product area — the AI label may refer to ML/AI embedded in payments intelligence products rather than a separate AI product suite.",
-      "Location, remote eligibility, and office policy are entirely absent from the JD — work arrangement is unclear."
+      "Role title is 'Product Lead, AI' but the JD body describes a Payments Intelligence / ML role without explicit AI product scope — unclear whether 'AI' in title refers to the team, the product domain, or a broader mandate.",
+      "JD states 'The preferred qualifications are a bonus, not a requirement' but lists no preferred qualifications — possible truncation or omission in the JD as provided."
     ]
   }
 }

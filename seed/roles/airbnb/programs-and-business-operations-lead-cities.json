@@ -4,7 +4,7 @@
   "url": "https://careers.airbnb.com/positions/7944603?gh_jid=7944603",
   "ats_provider": "greenhouse",
   "ats_job_id": "7944603",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,17 +17,17 @@
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
-  "secondary_archetype": "Technical Program Manager",
+  "secondary_archetype": "Program Manager (regulatory/compliance focus)",
   "seniority": {
-    "level": "Senior IC / Staff (likely L6+)",
+    "level": "Senior IC / Staff (Lead-level individual contributor)",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "10+ years of experience required",
-      "Regularly interfaces with and influences senior management",
-      "Leads strategic development and execution of highly scalable programs across multiple jurisdictions",
-      "Base pay range $168K–$203K consistent with senior IC at a large tech company"
+      "10+ years of experience in regulatory operations, legal/policy compliance, consulting, project management, or related fields",
+      "Regularly interfacing with senior management to inform strategy and decision-making",
+      "Comp range $168K-$203K base, consistent with senior/staff IC at Airbnb",
+      "Lead with influence, build structure through ambiguity"
     ]
   },
   "must_haves": [
@@ -35,7 +35,7 @@
       "id": "years_regulatory_ops",
       "raw_text_from_jd": "10+ years of experience in regulatory operations, legal/policy compliance, consulting, project management, or related fields, with a strong ability to leverage data and patterns to scale programs effectively.",
       "skill_type": "years_of_experience",
-      "domain": "regulatory_operations_or_related",
+      "domain": "regulatory_operations_or_compliance_or_consulting_or_program_management",
       "minimum_value": 10,
       "unit": "years",
       "is_combined": false,
@@ -46,13 +46,11 @@
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
-      "employer_types_named": [
-        "consulting firm"
-      ],
+      "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "navigate_ambiguity_multi_project",
+      "id": "navigate_ambiguity_multiple_projects",
       "raw_text_from_jd": "Ability to navigate ambiguity and lead multiple projects in a fast-paced and complex regulatory environment.",
       "skill_type": "capability",
       "domain": "project_management",
@@ -70,7 +68,7 @@
       "id": "scalable_technical_solutions",
       "raw_text_from_jd": "Experience building scalable technical solutions and processes to mitigate risks.",
       "skill_type": "capability",
-      "domain": "technical_solutions_and_process_design",
+      "domain": "technical_process_design",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -112,7 +110,7 @@
       "credentials_named": []
     },
     {
-      "id": "senior_leadership_influence",
+      "id": "senior_stakeholder_influence",
       "raw_text_from_jd": "Comfortable and skilled at regularly interfacing with, influencing and being a thought partner to senior management to inform strategy and decision-making, yielding positive outcomes.",
       "skill_type": "capability",
       "domain": "executive_stakeholder_management",
@@ -130,8 +128,8 @@
       "id": "cross_functional_alignment",
       "raw_text_from_jd": "Strong stakeholder management and influencing skills, with a track record of aligning cross-functional teams to achieve business objectives.",
       "skill_type": "outcome",
-      "domain": "stakeholder_management",
-      "evidence_required": "shipped_products_with_metrics",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -143,29 +141,30 @@
     }
   ],
   "nice_to_haves": [],
-  "explicitly_excluded": [],
+  "explicitly_excluded": [
+    "Candidates living in states where Airbnb, Inc. does not have a registered entity (exclusion list applies)"
+  ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Cities team — global regulatory compliance programs and operations across multiple jurisdictions",
-    "business_model": "platform / marketplace (B2C and B2B, two-sided host-guest marketplace)",
+    "surface": "Cities team — global regulatory products, processes, and compliance programs across multiple jurisdictions",
+    "business_model": "platform/marketplace (B2C and B2B, home-sharing/travel)",
     "primary_metrics_inferred": [
-      "Regulatory compliance rate across jurisdictions",
+      "Regulatory compliance outcomes across jurisdictions",
       "Program scalability and operational efficiency",
-      "Alignment of cross-functional teams on regulatory objectives"
+      "Alignment of cross-functional teams to business objectives"
     ],
     "cross_functional_partners": [
-      "Legal/Policy",
-      "Product",
-      "Engineering",
-      "Government Relations",
-      "Senior Leadership"
+      "Senior leadership",
+      "Legal/policy teams",
+      "Cross-functional teams across geographies",
+      "Corporate strategy"
     ],
     "core_responsibilities": [
-      "Lead the strategic development and execution of highly scalable programs across multiple jurisdictions",
-      "Build and maintain program management frameworks that ensure measurable outcomes and sustainable operations",
-      "Translate emerging regulatory trends, data, and cross-functional inputs into actionable business strategies for senior leadership",
-      "Influence cross-functional roadmaps and corporate strategy through deep expertise in regulatory frameworks",
-      "Drive high-impact strategic projects aimed at enhancing efficiency and effectiveness",
+      "Lead the strategic development and execution of highly scalable programs across multiple jurisdictions, effectively communicating outcomes and insights to senior leadership.",
+      "Build and maintain program management frameworks that ensure measurable outcomes, sustainable operations, and readiness to meet evolving legal requirements while ensuring Airbnb's obligations are met with excellence.",
+      "Translate emerging regulatory trends, data, and cross-functional inputs into actionable business strategies for senior leadership.",
+      "Influence cross-functional roadmaps and corporate strategy through deep expertise in regulatory frameworks.",
+      "Drive high-impact strategic projects aimed at enhancing efficiency and effectiveness while also aligning with broader business goals.",
       "Analyze data to identify trends, surface anomalies, and perform the necessary investigation"
     ]
   },
@@ -176,49 +175,48 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "bonus, equity, benefits, and Employee Travel Credits mentioned",
+    "equity_form": "equity mentioned as potentially eligible alongside bonus, benefits, and Employee Travel Credits",
     "location_pay_differential": false,
     "source": "stated"
   },
   "top_keywords": [
     "regulatory operations",
     "program management",
-    "business operations",
     "compliance",
     "cross-functional",
     "scalable programs",
-    "regulatory frameworks",
     "stakeholder management",
     "Cities team",
+    "regulatory frameworks",
+    "business operations",
     "global jurisdictions"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($168K–$203K base)",
-    "Bonus and equity eligibility mentioned",
-    "Remote-US eligible with flexibility",
-    "Clear team mandate and strategic scope (Cities regulatory operations)",
-    "Employee Travel Credits perk — relevant to Airbnb's mission"
+    "Compensation range disclosed ($168K-$203K base) and competitive for senior IC",
+    "Fully remote-US eligible with no mandatory office percentage",
+    "Clear description of team mission (Cities regulatory compliance)",
+    "Equity and bonus eligibility mentioned",
+    "Inclusion and accommodation commitments explicitly stated"
   ],
   "red_flags": [
-    "10+ years required is a hard floor that eliminates many candidates",
-    "Remote-US only with state exclusions — exact excluded states not listed in JD; candidates must verify eligibility",
-    "No visa sponsorship information explicitly stated; work auth left unclear",
-    "No team size or direct reports information provided"
+    "Must reside in a state where Airbnb has a registered entity — exclusion list is 'continuously evolving', creating geographic uncertainty",
+    "Visa sponsorship status not addressed — work_auth inferred as no-sponsorship but not explicitly stated",
+    "10+ years minimum is a hard filter with no equivalence clause",
+    "No specific team size or reporting structure mentioned"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range + years required + leadership signals)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
-      "scope.cross_functional_partners (partially inferred; JD mentions cross-functional broadly without naming specific teams)",
-      "location.visa_sponsorship (not stated; marked unclear)",
-      "location.work_auth (partially inferred; JD says must live in eligible state implying US-only but no explicit sponsorship statement)"
+      "seniority.level (inferred from comp range, 10+ years requirement, and lead/influence framing)",
+      "scope.business_model (inferred from Airbnb company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not stated in JD)",
+      "location.work_auth (inferred as no-sponsorship; not explicitly stated)",
+      "location.visa_sponsorship (not addressed in JD; marked unclear)"
     ],
     "ambiguities": [
-      "Visa sponsorship and work authorization policy not explicitly stated in the JD; work_auth set to no-sponsorship inferred from 'must live in a state where Airbnb, Inc. has a registered entity' language which implies US-based restriction, but this is not a definitive statement on sponsorship.",
-      "manages_people is not stated; set to false as no direct reports or people management language appears, but 'lead with influence' language is used throughout.",
-      "The role title says 'Lead' which could be a senior IC or a people manager role at Airbnb; treated as senior IC given no explicit people management responsibility mentioned."
+      "Visa sponsorship is not mentioned at all — could be open or restricted; marked 'unclear' for visa_sponsorship and 'no-sponsorship' for work_auth as a conservative inference given no explicit offer of sponsorship.",
+      "JD says 'you must live in a state where Airbnb, Inc. has a registered entity' with a dynamic exclusion list — specific excluded states not enumerated in JD.",
+      "Title spans 'more than one career level' per boilerplate — exact level (senior vs. staff vs. principal) is ambiguous."
     ]
   }
 }

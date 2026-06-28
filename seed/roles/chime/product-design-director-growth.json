@@ -1,0 +1,288 @@
+{
+  "company": "Chime",
+  "role_title": "Product Design Director, Growth",
+  "url": "https://boards.greenhouse.io/chime/jobs/8393494002?gh_jid=8393494002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8393494002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "four days a week in the office, Fridays from home",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Other",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Design Director (Growth / Consumer)",
+  "seniority": {
+    "level": "Director / Senior Leadership",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "Title is 'Director' with explicit people management of designers and managers",
+      "Comp range $242,000–$335,000 base, consistent with director-level at a major fintech",
+      "'Significant experience leading and scaling product design teams'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "leading_scaling_design_teams",
+      "raw_text_from_jd": "Significant experience leading and scaling product design teams in consumer technology companies",
+      "skill_type": "years_of_experience",
+      "domain": "design_leadership",
+      "minimum_value": null,
+      "unit": "years",
+      "qualifier": "significant",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "consumer technology companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_experimentation_outcomes",
+      "raw_text_from_jd": "A proven track record driving measurable business outcomes through growth, experimentation, and customer-centered design",
+      "skill_type": "outcome",
+      "domain": "growth_design",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_domain_expertise",
+      "raw_text_from_jd": "Deep expertise in acquisition, onboarding, activation, engagement, retention, or monetization experiences",
+      "skill_type": "domain_knowledge",
+      "domain": "growth_product_design",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "xfn_partnership_strategy",
+      "raw_text_from_jd": "Strong experience partnering with Product, Engineering, Data Science, and executive stakeholders to define strategy and deliver impact",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "qual_quant_insights",
+      "raw_text_from_jd": "Exceptional ability to use qualitative and quantitative insights to inform decision-making and prioritize opportunities",
+      "skill_type": "capability",
+      "domain": "data_driven_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "experimentation_programs",
+      "raw_text_from_jd": "Experience designing and scaling experimentation programs, including hypothesis development, test design, measurement frameworks, and interpretation of results",
+      "skill_type": "capability",
+      "domain": "experimentation_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_technologies_design",
+      "raw_text_from_jd": "Demonstrated success leveraging AI technologies to improve product experiences, accelerate experimentation, or transform team workflows",
+      "skill_type": "capability",
+      "domain": "ai_in_design",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI technologies"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_capabilities_understanding",
+      "raw_text_from_jd": "Strong understanding of emerging AI capabilities and how they can be applied to personalization, growth, engagement, and product innovation",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_product_innovation",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI capabilities"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking_ambiguity",
+      "raw_text_from_jd": "A systems-thinking mindset with the ability to navigate ambiguity, connect near-term wins to long-term strategy, and influence across organizational boundaries",
+      "skill_type": "capability",
+      "domain": "strategic_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_storytelling_leadership",
+      "raw_text_from_jd": "Excellent communication, storytelling, and leadership skills that inspire teams and drive alignment across functions",
+      "skill_type": "capability",
+      "domain": "communication_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Growth Design organization — acquisition, onboarding, activation, engagement, and retention experiences",
+    "business_model": "consumer fintech / B2C",
+    "primary_metrics_inferred": [
+      "Member acquisition",
+      "Onboarding completion / activation rates",
+      "Engagement and retention metrics",
+      "Experimentation velocity and win rate"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Data Science",
+      "Research",
+      "Content Design",
+      "Marketing",
+      "executive stakeholders"
+    ],
+    "core_responsibilities": [
+      "Lead, inspire, and grow a team of product designers focused on acquisition, onboarding, activation, engagement, and retention experiences",
+      "Define and drive the design vision for Growth, ensuring alignment with company objectives and long-term member value",
+      "Build a high-velocity experimentation culture by partnering with Product, Engineering, and Data Science to rapidly test, learn, and iterate",
+      "Translate complex growth opportunities into clear strategies, hypotheses, experiments, and measurable outcomes",
+      "Champion the use of AI throughout the design process—from research synthesis and insight generation to content creation, prototyping, and experimentation",
+      "Partner with cross-functional leaders to identify opportunities for personalization, intelligent onboarding, and AI-powered member experiences",
+      "Establish systems, frameworks, and design patterns that enable teams to move quickly while maintaining quality, consistency, and trust",
+      "Balance short-term experimentation goals with long-term product vision, platform investments, and design excellence",
+      "Mentor and develop designers and managers, elevating craft, strategic thinking, experimentation rigor, and leadership capabilities",
+      "Help shape the future of design at Chime by evolving how teams leverage AI, data, and emerging technologies to create better member experiences"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      242000,
+      335000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "competitive equity package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "growth design",
+    "experimentation",
+    "acquisition",
+    "onboarding",
+    "activation",
+    "retention",
+    "AI-native",
+    "personalization",
+    "design leadership",
+    "consumer fintech",
+    "data-driven design",
+    "high-velocity experimentation"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range explicitly stated and competitive ($242K–$335K base)",
+    "Equity and bonus mentioned in addition to base salary",
+    "Clear scope: owns a distinct Growth Design org with named functional areas",
+    "High visibility role with direct influence on company growth strategy",
+    "Generous benefits package including up to 24 weeks paid parental leave",
+    "Role at intersection of AI, data, and design — forward-looking mandate"
+  ],
+  "red_flags": [
+    "JD tag is '#LI-Onsite' but benefits section describes a hybrid policy (4 days in office, Fridays remote) — mild inconsistency; treated as onsite-primary / hybrid in practice",
+    "No minimum years of experience stated — 'significant' is vague and hard to self-assess",
+    "Visa sponsorship not mentioned; unclear for international candidates",
+    "High buzzword density may signal ambiguity in actual day-to-day expectations",
+    "No mention of team size or current state of Growth Design org — scope of build-out unclear"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Director', people management signals, and comp range)",
+      "seniority.years_required_min (not stated; 'significant experience' is qualitative only)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from Chime being a consumer fintech product)",
+      "location.cities_listed (San Francisco inferred from SF Fair Chance Ordinance reference and known HQ; not explicitly named as role city in body)",
+      "location.remote_us_eligible (inferred as false from '#LI-Onsite' tag and 4-day in-office policy)"
+    ],
+    "ambiguities": [
+      "JD tag '#LI-Onsite' conflicts with benefits section describing a hybrid policy of 'four days a week in the office and Fridays from home.' Treated as onsite-primary hybrid here.",
+      "Visa sponsorship is never mentioned; work_auth set to 'open' and visa_sponsorship set to 'unclear' as defaults.",
+      "Location city is not explicitly named in the role body; San Francisco is inferred from company HQ and SF Fair Chance Ordinance reference in EEO section."
+    ]
+  }
+}

@@ -1,0 +1,240 @@
+{
+  "company": "Anthropic",
+  "role_title": "Product Manager, GTM Experiences",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5254623008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5254623008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% in office",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM (GTM/Commercial Systems)",
+  "seniority": {
+    "level": "Senior IC (likely Senior PM / Staff PM)",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Comp range $305K-$385K base, consistent with Senior or Staff IC at Anthropic",
+      "Drives strategy and roadmap across CPQ, approvals, and deal automation",
+      "Synthesizes competing stakeholder needs and communicates to senior leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "understand_gtm_workflows",
+      "raw_text_from_jd": "Deeply understand sellers, Deal Desk, Legal, and Order Management workflows and where tooling can make them faster and more reliable.",
+      "skill_type": "domain_knowledge",
+      "domain": "GTM / deal operations workflows",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise sales"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_engineering_systems",
+      "raw_text_from_jd": "Partner with engineering to design the systems underpinning quoting, approvals, and deal execution.",
+      "skill_type": "capability",
+      "domain": "technical collaboration / systems design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "drive_product_strategy_roadmap",
+      "raw_text_from_jd": "Drive product strategy and roadmap across CPQ, approvals, and deal automation.",
+      "skill_type": "capability",
+      "domain": "product strategy / roadmap",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "CPQ",
+        "deal automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_synthesis",
+      "raw_text_from_jd": "Synthesize competing stakeholder needs across GTM, Finance, and Legal and communicate prioritization clearly to senior leadership.",
+      "skill_type": "capability",
+      "domain": "stakeholder management / executive communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Minimum education: Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cpq_quoting_approval_workflow_experience",
+      "raw_text_from_jd": "Built or scaled CPQ, quoting, or approval-workflow systems supporting complex enterprise deals.",
+      "skill_type": "outcome",
+      "domain": "CPQ / quoting / approval workflows",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "CPQ"
+      ],
+      "industries_named": [
+        "enterprise sales"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "salesforce_cpq_quote_to_cash_knowledge",
+      "raw_text_from_jd": "Salesforce/CPQ and quote-to-cash knowledge, including how quoting connects to billing and provisioning.",
+      "skill_type": "tool_proficiency",
+      "domain": "quote-to-cash / billing / provisioning",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [
+        "CPQ",
+        "quote-to-cash"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "GTM commercial infrastructure — CPQ, quoting and pricing configuration, approval workflows, deal automation, cloud marketplace transactions",
+    "business_model": "B2B enterprise SaaS / AI (revenue motion for Anthropic's commercial deals)",
+    "primary_metrics_inferred": [
+      "Deal velocity / time-to-quote",
+      "Approval workflow efficiency",
+      "Enterprise deal volume processed through CPQ and automation",
+      "Seller experience and governance compliance"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "GTM",
+      "Deal Desk",
+      "Finance",
+      "Legal",
+      "Operations"
+    ],
+    "core_responsibilities": [
+      "Deeply understand sellers, Deal Desk, Legal, and Order Management workflows and where tooling can make them faster and more reliable",
+      "Partner with engineering to design the systems underpinning quoting, approvals, and deal execution",
+      "Drive product strategy and roadmap across CPQ, approvals, and deal automation",
+      "Synthesize competing stakeholder needs across GTM, Finance, and Legal and communicate prioritization clearly to senior leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      305000,
+      385000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "CPQ",
+    "quote-to-cash",
+    "quoting",
+    "approval workflows",
+    "deal automation",
+    "GTM",
+    "commercial infrastructure",
+    "enterprise deals",
+    "Salesforce",
+    "Deal Desk",
+    "order management",
+    "cloud marketplace"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($305K-$385K)",
+    "Visa sponsorship explicitly offered (with reasonable caveats)",
+    "Clear product surface with concrete ownership (CPQ, quoting, approvals, deal automation)",
+    "Encourages applications even from candidates who don't meet every qualification",
+    "Explicit DE&I statement and awareness of imposter syndrome"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "Years of experience not specified; seniority expectations are implicit and may be difficult to assess pre-application",
+    "Most requirements are under 'Strong candidates may have' framing, making it difficult to distinguish hard vs soft requirements; the responsibilities section implies strong hard requirements but they lack explicit 'required' labeling"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and scope of responsibilities)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "scope.business_model (inferred from product and company context)",
+      "location.cities_listed (San Francisco inferred from HQ reference; no other cities named for this role)",
+      "compensation.equity_form (inferred from 'optional equity donation matching' in benefits section)"
+    ],
+    "ambiguities": [
+      "The 'Strong candidates may have' section header technically implies both bullets are nice-to-haves, but CPQ/quoting/approval-workflow experience and Salesforce/CPQ knowledge are likely de facto requirements for this role given the product surface. Classified as nice_to_haves per JD language, but they are likely near-essential.",
+      "Responsibilities section contains clear hard expectations but are not labeled 'Required' — treated as must_haves given unconditional phrasing.",
+      "Minimum years of experience is stated as 'Years of experience required will correlate with the internal job level requirements for the position' — no concrete number given; left null.",
+      "Compensation range ($305K-$385K) is very wide and could represent either base salary or OTE; the JD notes the range is provided for non-sales roles as base salary but this is a PM role, so treated as base."
+    ]
+  }
+}

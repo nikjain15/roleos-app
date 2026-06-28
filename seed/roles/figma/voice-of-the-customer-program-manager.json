@@ -1,0 +1,217 @@
+{
+  "company": "Figma",
+  "role_title": "Voice of the Customer Program Manager",
+  "url": "https://boards.greenhouse.io/figma/jobs/6008343004?gh_jid=6008343004",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "6008343004",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Voice of the Customer / Insights Program Manager",
+  "seniority": {
+    "level": "Mid to Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Compensation range $127K–$269K base (wide band; localized for remote)",
+      "Owns company-wide VOC program end-to-end",
+      "Cross-functional influence across Product, Engineering, Sales, Support, Research, Marketing",
+      "Described as building something 'at company scale'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "voc_program_experience",
+      "raw_text_from_jd": "Experience building and running a VOC program, as a PM or Manager, with a strong POV on what good looks like",
+      "skill_type": "capability",
+      "domain": "voice_of_customer_programs",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_facing_background",
+      "raw_text_from_jd": "A background in a customer-facing function (Support, Success, or Sales – Support preferred)",
+      "skill_type": "domain_knowledge",
+      "domain": "customer_facing_functions",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mentality",
+      "raw_text_from_jd": "Demonstrated ownership mentality — a track record of identifying problems, driving solutions, and ruthlessly prioritizing when capacity is limited",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_workflows_fluency",
+      "raw_text_from_jd": "Fluency in AI workflows and demonstrated ability to build lightweight, scalable processes quickly",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_workflows",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_communication_skills",
+      "raw_text_from_jd": "Strong analytical and communication skills, with a demonstrated ability to translate data into compelling customer narratives, influence cross-functional stakeholders, and drive action across a range of audiences",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "figma_product_experience",
+      "raw_text_from_jd": "Previous experience with Figma products",
+      "skill_type": "tool_proficiency",
+      "domain": "design_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Figma"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Company-wide Voice of the Customer (VOC) program, sitting within the Product Support org",
+    "business_model": "B2B SaaS design platform",
+    "primary_metrics_inferred": [
+      "Customer pain point resolution rate",
+      "NPS trends",
+      "Speed of insight delivery to Product and Engineering",
+      "Program impact on roadmap prioritization",
+      "Wins returned to Support and Sales"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Support",
+      "Sales",
+      "Research",
+      "Marketing"
+    ],
+    "core_responsibilities": [
+      "Own the rhythm of VOC reporting and define mechanisms that feed into the program, including launch insight reporting",
+      "Surface and prioritize the biggest customer pain points and align with Product and Engineering on roadmap prioritization",
+      "Monitor and report on customer sentiment from pre through post-product launches",
+      "Set shared, data-backed goals with Product and Engineering partners and monitor progress",
+      "Work directly with Sales to bring customer problem statements into the VOC program",
+      "Integrate signals from NPS, Research, Sales, and community alongside Support data into a unified narrative",
+      "Strategically implement AI workflows to build scalable processes that generate and deliver insights faster",
+      "Communicate customer insights across a range of audiences, from frontline support to Product leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      127000,
+      269000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity to employees (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Voice of the Customer",
+    "VOC program",
+    "customer insights",
+    "NPS",
+    "product support",
+    "AI workflows",
+    "cross-functional",
+    "roadmap prioritization",
+    "customer pain points",
+    "data-driven",
+    "program manager",
+    "customer sentiment"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($127K–$269K base)",
+    "Fully remote-US eligible, not limited to hub cities",
+    "Clear program ownership and mandate described ('build something that matters at company scale')",
+    "Encourages applications even if past experience doesn't align perfectly",
+    "Equity and comprehensive benefits package explicitly described",
+    "AI workflow fluency explicitly valued, signaling forward-thinking team"
+  ],
+  "red_flags": [
+    "Compensation range is extremely wide ($127K–$269K), making it difficult to gauge target level without recruiter conversation",
+    "Remote pay is localized at 80–100% of range, which could significantly reduce compensation depending on location",
+    "Visa sponsorship status not mentioned",
+    "No years of experience minimum stated; seniority expectations are ambiguous given the wide comp band"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and scope of responsibilities; not explicitly stated)",
+      "scope.business_model (inferred from Figma's known product and market)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed in JD)",
+      "location.visa_sponsorship (not mentioned; marked unclear)"
+    ],
+    "ambiguities": [
+      "Customer-facing background requirement lists 'Support, Success, or Sales – Support preferred': Support preferred is an added qualifier that could be read as hard (preferred over others) or as making Success/Sales also acceptable; classified as hard must-have with the note that the preference signals Support is most valued.",
+      "The compensation range ($127K–$269K) is very wide and the JD notes it applies to SF/NY hub offices, with remote roles localized at 80–100% of range. Actual target band for a given candidate is unclear without recruiter input."
+    ]
+  }
+}

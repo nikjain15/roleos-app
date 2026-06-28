@@ -1,0 +1,276 @@
+{
+  "company": "Faire",
+  "role_title": "Strategy & Analytics Senior Lead, Growth",
+  "url": "https://boards.greenhouse.io/faire/jobs/8401209002?gh_jid=8401209002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8401209002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week (Tuesdays, Thursdays, and a third flex day); up to 4 weeks remote per year",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth (non-PM) — Marketing Analytics / Strategy Lead",
+  "seniority": {
+    "level": "Senior IC / Staff-level individual contributor",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in analytics, strategy, consulting, investment banking, product analytics, or business operations",
+      "Individual contributor role explicitly stated as 'highly visible, high-impact individual contributor role'",
+      "Comp range $185,500–$255,000 consistent with senior/staff IC level",
+      "Expected to mentor analysts and influence org-level practices without direct management"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_analytics_strategy",
+      "raw_text_from_jd": "8+ years of experience in analytics, strategy, consulting, investment banking, product analytics, or business operations at a high‑growth technology or marketplace company.",
+      "skill_type": "years_of_experience",
+      "domain": "analytics_strategy_consulting",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology",
+        "marketplace"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company",
+        "marketplace company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguous_high_stakes_analytics",
+      "raw_text_from_jd": "Proven ability to own ambiguous, high‑stakes analytical problems end‑to‑end and drive them to clear business impact.",
+      "skill_type": "capability",
+      "domain": "analytics_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "marketing_analytics_expertise",
+      "raw_text_from_jd": "Deep expertise in marketing analytics, with experience in lifecycle/CRM measurement, experimentation, and ROI analysis.",
+      "skill_type": "domain_knowledge",
+      "domain": "marketing_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "attribution_causal_inference",
+      "raw_text_from_jd": "Strong understanding of attribution methodologies and causal inference tradeoffs in a marketing context.",
+      "skill_type": "domain_knowledge",
+      "domain": "marketing_attribution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "causal inference",
+        "attribution methodologies"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_rigor_metrics",
+      "raw_text_from_jd": "Exceptional analytical rigor — able to define metrics, size opportunities, and execute complex analyses independently.",
+      "skill_type": "capability",
+      "domain": "quantitative_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_sql",
+      "raw_text_from_jd": "Advanced SQL proficiency; comfort working directly with large, imperfect datasets.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_querying",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_storytelling",
+      "raw_text_from_jd": "Excellent communication and storytelling skills, with experience influencing senior leaders through data.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_product_intuition",
+      "raw_text_from_jd": "Strong business and product intuition, with the ability to connect analyses to broader company goals.",
+      "skill_type": "capability",
+      "domain": "business_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "lead_through_influence",
+      "raw_text_from_jd": "Ability to lead through influence, operate autonomously, and thrive in a fast‑paced, evolving environment.",
+      "skill_type": "cultural_fit",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Lifecycle & CRM marketing analytics — email, push, onsite channels across a two-sided marketplace (retailers and brands)",
+    "business_model": "B2B two-sided wholesale marketplace",
+    "primary_metrics_inferred": [
+      "Lifecycle marketing ROI and payback",
+      "LTV frameworks",
+      "North-star KPIs for lifecycle/CRM",
+      "Incrementality and attribution accuracy",
+      "Cohort-level retention and engagement"
+    ],
+    "cross_functional_partners": [
+      "Lifecycle Marketing",
+      "Strategic Finance",
+      "Marketing Leadership",
+      "Product",
+      "Data Science",
+      "Engineering"
+    ],
+    "core_responsibilities": [
+      "Own the end‑to‑end measurement framework for Lifecycle & CRM marketing globally",
+      "Act as the primary analytics thought partner to Lifecycle Marketing, Strategic Finance, and Marketing Leadership",
+      "Define and evolve north‑star KPIs and success metrics for lifecycle marketing",
+      "Set the standard for experimentation strategy within Lifecycle/CRM",
+      "Design, analyze, and synthesize experiments focused on driving user behavior",
+      "Be the subject‑matter expert on marketing attribution for owned channels",
+      "Own and evolve payback, ROI, and LTV frameworks for lifecycle marketing",
+      "Lead analyses to assess and improve attribution methodologies",
+      "Surface proactive insights by deeply understanding lifecycle performance trends",
+      "Build and own strategic dashboards and reporting",
+      "Influence analytical best practices across Marketing Analytics",
+      "Mentor and level up analysts through informal coaching"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      185500,
+      255000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "lifecycle marketing",
+    "CRM analytics",
+    "experimentation",
+    "attribution",
+    "causal inference",
+    "ROI",
+    "LTV",
+    "SQL",
+    "marketing analytics",
+    "two-sided marketplace",
+    "incrementality",
+    "forecasting",
+    "north-star KPIs",
+    "strategic finance"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($185,500–$255,000 base)",
+    "High-visibility individual contributor role with genuine strategic ownership",
+    "Clear articulation of cross-functional partners and scope",
+    "Equity and comprehensive benefits mentioned",
+    "Hybrid policy clearly defined (3 days/week in-office with 4-week remote flexibility)"
+  ],
+  "red_flags": [
+    "No visa sponsorship information stated — unclear for non-US candidates",
+    "San Francisco and New York City only — no remote option; fully remote candidates ineligible",
+    "Role is explicitly an individual contributor but expected to mentor analysts and influence org-level practices — scope may be expansive for a non-management role"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, years required, and IC description)",
+      "scope.business_model (inferred from company description as two-sided wholesale marketplace)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly in JD)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)"
+    ],
+    "ambiguities": [
+      "Salary range is stated only for San Francisco, CA and New York City, NY — it is unclear whether other locations are eligible or whether pay differs for non-listed cities.",
+      "The JD lists no preferred/nice-to-have qualifications separately; all qualifications are presented as required, so nice_to_haves is empty."
+    ]
+  }
+}

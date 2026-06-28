@@ -1,23 +1,23 @@
 {
   "company": "Affirm",
   "role_title": "Staff Product Manager, Affirm Bank",
-  "url": "https://job-boards.greenhouse.io/affirm/jobs/7694938003",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7694940003",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7694938003",
-  "fetched_at": "2026-05-25",
+  "ats_job_id": "7694940003",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "remote-us",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "occasional office requirement for proximal roles; this role is remote",
+    "office_time_required": null,
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical PM",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Generalist PM with strong fintech/banking domain focus",
+  "secondary_archetype": "Generalist PM with heavy regulatory/banking domain",
   "seniority": {
     "level": "Staff PM (IC6 equivalent)",
     "years_required_min": 6,
@@ -25,10 +25,9 @@
     "manages_people": false,
     "level_signals": [
       "6+ years of product management experience",
-      "Pay Grade - P, Equity Grade - 13",
-      "Base pay $200K-$275K range consistent with Staff-level IC",
-      "'Strategic, independent leader on complex, ambiguous initiatives'",
-      "Exposure to executive leadership and boards"
+      "Pay Grade - P / Equity Grade - 7 signals Staff-level compensation band",
+      "Single-threaded ownership of an entire bank charter buildout",
+      "Communicate strategy to senior leadership and Bank Board"
     ]
   },
   "must_haves": [
@@ -53,7 +52,7 @@
       "id": "program_leadership_at_scale",
       "raw_text_from_jd": "Proven program leadership at scale — you've owned high visibility cross-functional launches across many stakeholders, with direct exposure to executive leadership and/or boards.",
       "skill_type": "outcome",
-      "domain": "cross_functional_program_leadership",
+      "domain": "program_management",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -76,8 +75,7 @@
       "technologies_named": [],
       "industries_named": [
         "banking",
-        "lending",
-        "deposits"
+        "financial services"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -98,9 +96,7 @@
         "API architecture",
         "core banking platform integrations"
       ],
-      "industries_named": [
-        "banking"
-      ],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -109,7 +105,7 @@
       "id": "ai_assisted_tools_proficiency",
       "raw_text_from_jd": "Proficiency with AI-assisted tools (e.g., Claude, Cursor) to accelerate your own work and raise the bar for quality and speed",
       "skill_type": "tool_proficiency",
-      "domain": "ai_assisted_productivity",
+      "domain": "ai_productivity_tools",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
@@ -127,8 +123,8 @@
       "id": "cross_functional_alignment_regulated",
       "raw_text_from_jd": "Demonstrated ability to drive cross-functional alignment across Legal, Compliance, Engineering, Finance, and executive leadership in highly regulated environments",
       "skill_type": "capability",
-      "domain": "stakeholder_management_regulated_environments",
-      "evidence_required": "work_history",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -139,11 +135,11 @@
       "credentials_named": []
     },
     {
-      "id": "communication_skills",
+      "id": "exceptional_communication",
       "raw_text_from_jd": "Exceptional written and verbal communication — you can distill complex regulatory and financial concepts into clear, compelling narratives for diverse audiences including regulators, executives, and engineering teams",
       "skill_type": "capability",
       "domain": "communication",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
@@ -193,9 +189,9 @@
       "id": "bank_charter_experience",
       "raw_text_from_jd": "Bank charter experience is strongly preferred — you've been through or contributed meaningfully to a de novo bank launch or early-stage bank buildout",
       "skill_type": "domain_knowledge",
-      "domain": "de_novo_bank_charter",
+      "domain": "de_novo_bank_launch",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "no",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -225,10 +221,10 @@
       "credentials_named": []
     },
     {
-      "id": "fintech_familiarity",
+      "id": "fintech_neobanking_bnpl_experience",
       "raw_text_from_jd": "Experience in fintech, financial services, or banking; familiarity with BNPL, neobanking, or platform products is a plus",
       "skill_type": "domain_knowledge",
-      "domain": "fintech_financial_services",
+      "domain": "fintech_neobanking_bnpl",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -238,7 +234,6 @@
         "fintech",
         "financial services",
         "banking",
-        "BNPL",
         "neobanking"
       ],
       "geographies_named": [],
@@ -249,95 +244,94 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Affirm Bank — end-to-end bank product including deposit product, loan originations, bank charter operationalization, and platform integration",
-    "business_model": "regulated consumer bank subsidiary (de novo bank) within a BNPL/fintech platform, B2C deposits and lending",
+    "surface": "Affirm Bank — deposit product, loan originations, bank charter operationalization, and integration with Affirm's consumer platform",
+    "business_model": "B2C consumer banking and BNPL, de novo bank charter, deposit-funded lending",
     "primary_metrics_inferred": [
       "Deposit base growth (target: multi-billion-dollar deposit base)",
       "Loan origination volume through bank entity",
-      "Regulatory readiness and compliance milestones",
-      "Unit economics of loan origination and retention"
+      "Regulatory readiness and compliance posture",
+      "Unit economics of loan retention and sale mechanics",
+      "Consumer adoption of deposit product"
     ],
     "cross_functional_partners": [
+      "Credit",
+      "Capital Markets",
       "Engineering",
+      "Treasury",
       "Legal",
       "Compliance",
       "Risk",
-      "Credit",
-      "Capital Markets",
-      "Treasury",
       "Servicing",
       "Settlements",
       "Consumer Payments",
       "Checkout",
       "Growth",
-      "Bank executive team",
       "Bank Board"
     ],
     "core_responsibilities": [
       "Own the end-to-end bank product across deposits, loan originations, banking compliance, and operations",
       "Launch and own the bank's deposit product and roadmap",
       "Operationalize the de novo bank build including regulatory readiness, process maturity, and vendor integrations",
-      "Drive loan originations through the bank entity",
-      "Navigate banking compliance and regulatory requirements with Legal, Compliance, and Risk",
-      "Integrate the bank deposit product into Affirm's consumer ecosystem across Servicing, Settlements, Consumer Payments, Checkout, and Growth",
+      "Drive originations through the bank entity working with Credit, Capital Markets, Engineering, and Treasury",
+      "Navigate banking compliance and regulatory requirements with Legal, Compliance, Risk, and Bank executive team",
+      "Integrate the bank deposit product into Affirm's consumer ecosystem across multiple platform teams",
       "Communicate strategy, tradeoffs, and priorities to senior leadership and the Bank Board"
     ]
   },
   "compensation": {
-    "base_range_usd": [
-      200000,
-      275000
-    ],
+    "base_range_usd": null,
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "Equity rewards (RSUs implied by Pay/Equity Grade structure); ESPP also mentioned",
+    "equity_form": "Equity Grade 7; ESPP (employee stock purchase plan with discount); equity rewards mentioned as part of total comp",
     "location_pay_differential": true,
-    "source": "stated"
+    "source": "stated",
+    "notes": "CAN base pay range per year: $181,000 - $241,000 (Canadian dollars, not USD). No USD base range stated."
   },
   "top_keywords": [
     "de novo bank",
-    "deposit product",
     "bank charter",
+    "deposit product",
     "loan originations",
     "FDIC",
     "regulatory compliance",
-    "core banking",
     "BNPL",
+    "neobanking",
+    "core banking platform",
     "fintech",
-    "cross-functional",
-    "API architecture",
     "capital markets",
     "treasury",
-    "staff PM"
+    "staff product manager",
+    "cross-functional alignment",
+    "single-threaded owner"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range explicitly disclosed and highly competitive ($200K-$275K base depending on location)",
-    "Rare, high-visibility opportunity to build a foundational bank product from scratch",
-    "Remote-first company with broad US remote eligibility",
-    "Clear scope of ownership — single-threaded product owner with executive and board exposure",
-    "100% subsidized medical coverage is a notable benefit differentiator",
-    "ESPP and equity rewards included in total compensation"
+    "Rare, high-impact opportunity to build a foundational bank from scratch",
+    "Single-threaded ownership with executive and Bank Board exposure",
+    "Remote-first company with wide US geographic eligibility",
+    "Compensation package includes 100% subsidized medical coverage for dependents",
+    "Clearly scoped role with specific deliverables (deposit product launch, loan originations, bank charter operationalization)",
+    "Pay grade and equity grade disclosed (P / Grade 7), aiding level comparison"
   ],
   "red_flags": [
-    "Extremely narrow domain requirement (de novo bank charter, deposit products) makes candidate pool very small",
-    "Role straddles highly regulated banking environment — compliance and legal constraints may slow product velocity significantly",
-    "No mention of visa sponsorship or work authorization eligibility",
-    "Ambiguity between 'strongly preferred' bank charter experience and 'required' banking/deposits experience — line between must-have and nice-to-have is blurred in the JD"
+    "No USD base pay range stated — only Canadian dollar range ($181K-$241K CAD) provided, making US compensation opaque",
+    "Bank charter experience is 'strongly preferred' but classified as nice-to-have; may function as de facto hard filter given role complexity",
+    "Extremely broad scope (deposits + originations + compliance + platform integration) could indicate under-resourcing or unclear team boundaries",
+    "Visa sponsorship and work authorization not addressed in posting"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from Pay Grade P, Equity Grade 13, and comp range)",
-      "scope.business_model (inferred from JD description of Affirm Bank as a de novo bank subsidiary)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
-      "location.work_auth (not stated)",
-      "location.visa_sponsorship (not stated)",
-      "compensation.base_range_usd set to [200000, 275000] to capture the full US range across both tiers"
+      "seniority.level (inferred from Pay Grade P, Equity Grade 7, and scope signals)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not explicitly stated)",
+      "location.work_auth (not stated; marked unclear)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "compensation.base_range_usd (set to null; only CAD range stated — not USD)"
     ],
     "ambiguities": [
-      "'Bank charter experience is strongly preferred' is labeled preferred but carries near-hard weight given the JD context; classified as nice_to_have (soft) per JD language, flagged here for attention",
-      "Two compensation bands stated: CA/WA/NY/NJ/CT ($225K-$275K) and all other US states ($200K-$250K); base_range_usd reflects the full combined range",
-      "JD says '#LI-Remote' and 'remote-first' but notes proximal roles may require occasional office time; this role appears fully remote but not explicitly confirmed"
+      "Bank charter experience is described as 'strongly preferred' (suggesting nice-to-have) but the role is literally to build a de novo bank, making it functionally a hard requirement in practice. Classified as nice-to-have per JD language but flagged here.",
+      "The compensation range ($181,000–$241,000) is explicitly labeled 'CAN base pay range' (Canadian dollars). No US base pay range is provided despite the role being US remote-first. This is ambiguous and potentially confusing.",
+      "JD hashtag is #LI-Remote and text confirms remote-first; no office requirement stated for this role, so treated as remote-us."
     ]
   }
 }

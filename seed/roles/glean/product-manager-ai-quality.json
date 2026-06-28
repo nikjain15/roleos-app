@@ -1,25 +1,25 @@
 {
   "company": "Glean",
   "role_title": "Product Manager, AI Quality",
-  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4525518005",
+  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4694764005",
   "ats_provider": "greenhouse",
-  "ats_job_id": "4525518005",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "4694764005",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "hybrid",
     "cities_listed": [
-      "SF Bay Area, CA"
+      "Mountain View, CA"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "3-4 days a week in one of our SF Bay Area offices",
+    "office_time_required": "4 days a week in Mountain View office",
     "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "AI Product Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Technical PM (LLM/Model Hub platform, API and 3rd-party partnerships)",
+  "secondary_archetype": "Technical PM",
   "seniority": {
     "level": "Mid-Senior IC",
     "years_required_min": 4,
@@ -27,8 +27,8 @@
     "manages_people": false,
     "level_signals": [
       "4+ years of experience in product management",
-      "Compensation range $160K-$240K base, consistent with mid-to-senior IC at a well-funded AI startup",
-      "Scope involves owning LLM roadmap, cost projections, and capacity planning independently"
+      "Comp range $160K-$240K base",
+      "Responsibilities include roadmap ownership, LLM portfolio strategy, and capacity planning"
     ]
   },
   "must_haves": [
@@ -39,7 +39,7 @@
       "domain": "product_management",
       "minimum_value": 4,
       "unit": "years",
-      "qualifier": "at SaaS companies, primarily serving large enterprises with AI/ML Ops and external-facing platform responsibilities",
+      "qualifier": "SaaS companies serving large enterprises",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -49,7 +49,7 @@
       ],
       "industries_named": [
         "SaaS",
-        "enterprise software"
+        "enterprise"
       ],
       "geographies_named": [],
       "employer_types_named": [
@@ -58,7 +58,7 @@
       "credentials_named": []
     },
     {
-      "id": "technical_background_ux_api_partnerships",
+      "id": "technical_background_ux_api",
       "raw_text_from_jd": "You have a strong technical background and experience with both UX and API driven products and 3rd party product partnerships.",
       "skill_type": "capability",
       "domain": "technical_product_management",
@@ -67,7 +67,7 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
-        "APIs"
+        "API"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -75,7 +75,7 @@
       "credentials_named": []
     },
     {
-      "id": "written_verbal_communication",
+      "id": "communication_skills",
       "raw_text_from_jd": "You are an excellent written and verbal communicator.",
       "skill_type": "capability",
       "domain": "communication",
@@ -90,7 +90,7 @@
       "credentials_named": []
     },
     {
-      "id": "ownership_initiative_delivery",
+      "id": "ownership_initiative_results",
       "raw_text_from_jd": "You have a proven track record of taking ownership, taking initiative, and delivering results.",
       "skill_type": "outcome",
       "domain": "product_management",
@@ -108,7 +108,7 @@
       "id": "cross_functional_collaboration",
       "raw_text_from_jd": "You collaborate effectively with cross-functional partners.",
       "skill_type": "capability",
-      "domain": "cross_functional_collaboration",
+      "domain": "stakeholder_management",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -135,7 +135,7 @@
       "credentials_named": []
     },
     {
-      "id": "mission_first_product_success",
+      "id": "mission_first",
       "raw_text_from_jd": "You are mission-first and understand that your success is measured by your product and team's success.",
       "skill_type": "cultural_fit",
       "domain": "team_culture",
@@ -150,17 +150,15 @@
       "credentials_named": []
     },
     {
-      "id": "ai_early_adopter_product_craft",
+      "id": "ai_early_adopter",
       "raw_text_from_jd": "You are an early adopter in building with or adopting AI for your own product craft and you are excited about helping customers accelerate their own AI adoption journey.",
       "skill_type": "domain_knowledge",
-      "domain": "AI adoption",
+      "domain": "AI_tools_and_product_craft",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "AI"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -169,11 +167,11 @@
   ],
   "nice_to_haves": [
     {
-      "id": "llm_at_scale_experience",
+      "id": "llm_experience_at_scale",
       "raw_text_from_jd": "Having built or worked with LLMs for at-scale products is a major plus.",
       "skill_type": "domain_knowledge",
-      "domain": "large_language_models",
-      "evidence_required": "work_history",
+      "domain": "LLM_product_development",
+      "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
@@ -189,32 +187,29 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Glean Model Hub — LLM portfolio, model evaluation, inference provider relationships, customer LLM experimentation, usage/cost/capacity planning",
-    "business_model": "enterprise B2B SaaS, AI platform",
+    "surface": "Glean Model Hub — LLM portfolio management, inference/model provider relationships, customer LLM experimentation, LLM usage/cost/capacity planning",
+    "business_model": "B2B enterprise SaaS, AI platform",
     "primary_metrics_inferred": [
       "LLM usage and cost projections",
-      "Capacity planning accuracy",
-      "Customer upgrade adoption rates for latest LLMs",
-      "Customer enablement and AI adoption journey progress"
+      "LLM capacity utilization",
+      "Customer upgrade adoption rate for latest LLMs",
+      "Customer enablement success"
     ],
     "cross_functional_partners": [
-      "Engineering",
-      "Go-to-market teams",
       "Leadership",
-      "Inference and model providers (external)",
-      "Customers"
+      "Go-to-market teams",
+      "Engineering",
+      "Inference and model providers"
     ],
     "core_responsibilities": [
-      "Evaluate LLM models and define the roadmap for growing Glean's LLM portfolio",
+      "Evaluate LLM models and define roadmap for growing Glean's LLM portfolio",
       "Manage relationships with inference and model providers",
       "Determine product strategy for allowing customers to experiment with different LLMs",
       "Own projections of LLM usage, cost, and capacity planning",
-      "Drive customer enablement and upgrade adoption journey for the latest LLMs and LLM-native capabilities",
+      "Drive customer enablement and upgrade adoption journey for latest LLMs",
       "Spending a lot of time with customers to deeply understand their knowledge needs",
-      "Developing key parts of the product roadmap, marrying customers' needs with product vision",
-      "Empowering the team by giving context, setting direction, and building alignment",
       "Coordinating cross-functionally with leadership, go-to-market teams, and other key stakeholders",
-      "Building processes that will scale as the team and company go through rapid growth"
+      "Building processes that will scale as team and company go through rapid growth"
     ]
   },
   "compensation": {
@@ -224,53 +219,51 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "equity eligible (mentioned alongside variable compensation and benefits)",
-    "location_pay_differential": true,
+    "equity_form": "equity mentioned as eligible for certain roles",
+    "location_pay_differential": false,
     "source": "stated"
   },
   "top_keywords": [
     "LLM",
     "Model Hub",
     "AI quality",
-    "enterprise AI",
+    "enterprise",
+    "SaaS",
+    "AI/ML Ops",
     "LLM portfolio",
     "inference providers",
     "capacity planning",
-    "AI/ML Ops",
-    "Work AI",
-    "enterprise SaaS",
-    "AI adoption",
     "product roadmap",
-    "technical PM"
+    "Work AI",
+    "agentic"
   ],
   "buzzword_density": "high",
   "green_flags": [
-    "Compensation range disclosed and wide ($160K-$240K base), competitive for enterprise AI",
-    "Clear product surface and ownership (Glean Model Hub, not a vague AI role)",
-    "High-visibility role at a recognized fast-growing AI company (Fast Company Top 10, Forbes AI 50, etc.)",
-    "Explicit mention of equity eligibility",
-    "Benefits package well-described including home office stipend, education and wellness stipends",
-    "Inclusive hiring statement included"
+    "Compensation range disclosed and competitive ($160K-$240K base)",
+    "Clear product ownership area (Glean Model Hub) with well-defined scope",
+    "High-growth company with strong market recognition (Fast Company Top 10, Forbes AI 50, etc.)",
+    "Comprehensive benefits including home office stipend, education and wellness stipends, daily lunches",
+    "Explicit DE&I commitment stated"
   ],
   "red_flags": [
-    "Role title is 'AI Quality' but the JD body describes a 'PM for Glean Model Hub' — notable mismatch between title and described responsibilities",
-    "Hybrid requirement of 3-4 days/week in SF Bay Area is close to full-time onsite, restricting candidate pool significantly",
-    "Visa sponsorship not mentioned; unclear for international candidates",
-    "Wide compensation range ($80K spread) makes level and offer expectations opaque"
+    "Hybrid policy requires 4 days/week in Mountain View office — eliminates remote and most hybrid candidates",
+    "Role title is 'AI Quality' but JD body describes a 'PM for Glean Model Hub' — title and body describe different or overlapping scopes, potential internal inconsistency",
+    "Very wide comp band ($80K spread) may indicate significant uncertainty about level",
+    "Visa sponsorship not mentioned"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years requirement + comp range)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
-      "scope.business_model (inferred from company description and product surface)",
-      "location.work_auth (stated as open based on DEI statement and no citizenship requirement mentioned)",
-      "location.visa_sponsorship (not stated; marked unclear)",
-      "compensation.location_pay_differential (inferred from JD statement 'Compensation offered will be determined by factors such as location')"
+      "seniority.level (inferred from comp range and years requirement)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.visa_sponsorship (not mentioned; marked unclear)",
+      "posting_first_seen (not available)",
+      "posting_last_updated (not available)"
     ],
     "ambiguities": [
-      "Role title is 'Product Manager, AI Quality' but the JD body consistently describes the role as 'PM for Glean Model Hub' with no mention of 'AI Quality' as a product area. Possible title mismatch or placeholder title.",
-      "Most requirements are stated as unconditional bullets under 'About you' without explicit 'Required' or 'Preferred' labels; classified as hard must_haves based on unconditional phrasing, except the explicitly flagged 'major plus' item.",
-      "Equity eligibility mentioned as 'may be eligible' — not guaranteed for this role."
+      "Role title is 'Product Manager, AI Quality' but the JD body describes the role as 'PM for Glean Model Hub' with no explicit mention of 'AI Quality' in responsibilities. These may be the same role or there may be a mismatch between the posted title and the actual scope.",
+      "Equity is mentioned as available for 'certain roles' without confirming this role qualifies — treated as equity_mentioned: true with caveat.",
+      "Variable compensation mentioned but it is unclear if this role specifically qualifies."
     ]
   }
 }

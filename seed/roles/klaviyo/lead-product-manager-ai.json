@@ -1,0 +1,301 @@
+{
+  "company": "Klaviyo",
+  "role_title": "Lead Product Manager, AI",
+  "url": "https://www.klaviyo.com/careers/jobs/7701796003?gh_jid=7701796003",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7701796003",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Boston, MA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "5 days/week in Boston office",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Staff / Lead IC (Lead PM)",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7–10+ years of product management experience",
+      "Lead cross-functional initiatives across Product, Engineering, Design, Research, Data Science, and GTM organizations",
+      "Base pay range $168K–$252K USD",
+      "Defining contribution framework for 7+ contributing teams"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7–10+ years of product management experience, including ownership of technically complex or platform-oriented products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "qualifier": "including ownership of technically complex or platform-oriented products",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_powered_products_experience",
+      "raw_text_from_jd": "Experience building AI-powered products, conversational interfaces, workflow automation systems, or agentic experiences.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_products_and_agentic_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "conversational interfaces",
+        "workflow automation",
+        "agentic experiences"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth_systems_architecture",
+      "raw_text_from_jd": "Strong technical depth with the ability to partner closely with engineers on systems architecture, orchestration, integrations, and scalability.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "systems architecture",
+        "orchestration",
+        "integrations",
+        "scalability"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_facing_platform_products",
+      "raw_text_from_jd": "Track record of building customer-facing products on top of sophisticated backend or platform systems.",
+      "skill_type": "outcome",
+      "domain": "platform_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Experience leading ambiguous, cross-functional initiatives with multiple stakeholders and contributing teams.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_empathy_workflow_translation",
+      "raw_text_from_jd": "Strong customer empathy and ability to translate complex workflows into intuitive product experiences.",
+      "skill_type": "capability",
+      "domain": "user_research_and_ux",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "Excellent communication and stakeholder management skills, including experience influencing senior leadership.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_systems_thinking",
+      "raw_text_from_jd": "Strong analytical and systems-thinking capabilities.",
+      "skill_type": "capability",
+      "domain": "analytical_reasoning",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "martech_saas_ai_experience",
+      "raw_text_from_jd": "Experience in marketing technology, SaaS platforms, productivity tooling, or AI copilots is a strong plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "marketing_technology_saas_ai_copilots",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI copilots"
+      ],
+      "industries_named": [
+        "marketing technology",
+        "SaaS",
+        "productivity tooling"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_quality_llm_familiarity",
+      "raw_text_from_jd": "Familiarity with evaluation systems, AI quality frameworks, or LLM-powered experiences is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_evaluation_and_quality",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "evaluation systems",
+        "AI quality frameworks"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Native Composer — Klaviyo's in-app AI assistant and marketing orchestration experience across conversational UX, sub-agent orchestration, sidebars, inline assistance, floating action buttons, and full-page workflows",
+    "business_model": "B2B SaaS, marketing technology platform",
+    "primary_metrics_inferred": [
+      "Adoption and retention of AI-powered workflows",
+      "Agent quality and workflow success rates",
+      "Customer impact from AI-assisted marketing",
+      "Expansion of Composer into native product surfaces"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Research",
+      "GTM",
+      "Marketing",
+      "Operations",
+      "Customer Success",
+      "Sales"
+    ],
+    "core_responsibilities": [
+      "Define and own the product vision and roadmap for Native Composer",
+      "Own the end-to-end in-app AI assistant experience including conversational UX and sub-agent orchestration",
+      "Partner with Engineering and Design to translate marketer workflows into scalable agentic experiences",
+      "Define the contribution framework for skills and agents across 7+ contributing teams",
+      "Drive convergence between Native Composer and Standalone Composer",
+      "Improve reliability, usability, and effectiveness of AI-powered workflows",
+      "Partner with GTM teams to shape product positioning, packaging, and go-to-market execution",
+      "Engage directly with customers to understand emerging workflows and adoption drivers",
+      "Define and track key product and operational metrics",
+      "Lead cross-functional initiatives across Product, Engineering, Design, Research, Data Science, and GTM",
+      "Communicate product strategy, tradeoffs, and execution priorities to stakeholders and executive leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      168000,
+      252000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as part of total compensation package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Native Composer",
+    "AI agents",
+    "agentic experiences",
+    "conversational UX",
+    "marketing orchestration",
+    "LLM",
+    "workflow automation",
+    "sub-agent orchestration",
+    "martech",
+    "platform PM",
+    "AI-native"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range disclosed ($168K–$252K base)",
+    "Clear product surface and ownership area (Native Composer)",
+    "Explicitly encourages close-but-not-exact candidates to apply",
+    "High strategic visibility — team sits at intersection of AI systems, product experience, platform architecture, and GTM",
+    "Exciting and well-defined product domain (agentic AI for marketing)"
+  ],
+  "red_flags": [
+    "5 days/week in-office requirement in Boston — eliminates remote and hybrid candidates entirely",
+    "Highly ambiguous environment with 7+ contributing teams may signal organizational complexity or coordination overhead",
+    "Broad base salary range ($168K–$252K) makes it difficult to assess target level without recruiter conversation",
+    "Up to 10% travel required on top of full-time onsite"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range, comp, and cross-functional scope; not explicitly stated)",
+      "seniority.manages_people (not explicitly stated; inferred as false from IC-style responsibilities)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly as KPIs in JD)",
+      "location.visa_sponsorship (not mentioned in JD; marked unclear)",
+      "compensation.location_pay_differential (inferred from 'cost of labor across various U.S. geographic markets' language)"
+    ],
+    "ambiguities": [
+      "The JD states '7–10+ years' which creates ambiguity about whether 7 is the floor or whether 10+ is the true expectation; treated minimum_value as 7.",
+      "Total compensation mentions annual cash bonus, equity, and sign-on but no specific ranges are given beyond base salary.",
+      "Visa sponsorship is neither offered nor denied; marked as 'unclear'."
+    ]
+  }
+}

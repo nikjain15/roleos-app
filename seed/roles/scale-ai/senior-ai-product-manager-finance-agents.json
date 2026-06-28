@@ -1,0 +1,240 @@
+{
+  "company": "Scale AI",
+  "role_title": "Senior AI Product Manager, Finance Agents",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4611776005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4611776005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY",
+      "Seattle, WA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Domain Expert / Finance Vertical PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 3,
+    "years_required_max": 6,
+    "manages_people": false,
+    "level_signals": [
+      "3–6 years of direct experience in Finance industry",
+      "Compensation range $205K–$257K base in SF/NY/Seattle consistent with Senior IC",
+      "Role title explicitly includes 'Senior'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "finance_industry_experience",
+      "raw_text_from_jd": "3–6 years of direct experience in the Finance industry in one or more of: investment banking, private equity, trading, asset or portfolio management, strategic finance, corp dev, or a fintech product role, with real depth in how the work gets done.",
+      "skill_type": "years_of_experience",
+      "domain": "finance",
+      "minimum_value": 3,
+      "unit": "years",
+      "qualifier": "direct experience in Finance industry",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "investment banking",
+        "private equity",
+        "trading",
+        "asset management",
+        "portfolio management",
+        "strategic finance",
+        "corporate development",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_forward_thinking",
+      "raw_text_from_jd": "AI-Forward Thinking: Quick to adopt AI solutions to streamline your day-to-day workflows and an ability to understand and articulate how it's transforming your industry.",
+      "skill_type": "domain_knowledge",
+      "domain": "artificial_intelligence",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builders_mindset",
+      "raw_text_from_jd": "A builder's mindset: excited by ambiguity and motivated to create new products from the ground up.",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurial_mindset",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_for_action",
+      "raw_text_from_jd": "Bias for action: Comfort wearing multiple hats and operating in fast-moving environments.",
+      "skill_type": "cultural_fit",
+      "domain": "operational_agility",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "product_or_customer_facing_experience",
+      "raw_text_from_jd": "Product or customer-facing experience: A track record of owning outcomes, shaping roadmaps, or working closely with technical stakeholders (formal PM experience is a plus but not required if domain depth is strong).",
+      "skill_type": "capability",
+      "domain": "product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_intuition_technical_fluency",
+      "raw_text_from_jd": "ML Intuition & Technical Fluency: Enough intuition around how model training and evaluation works and what a Reinforcement Learning environment looks like. A software background is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "machine_learning",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "model training",
+        "Reinforcement Learning"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "software_background",
+      "raw_text_from_jd": "A software background is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Finance vertical within Agents Data & Reinforcement Learning Environments team — RL environments and data-as-a-product strategy for financial AI agents",
+    "business_model": "B2B data and AI infrastructure (frontier labs and enterprise customers)",
+    "primary_metrics_inferred": [
+      "Quality and coverage of Finance RL environments",
+      "Adoption by frontier AI labs of Finance training products",
+      "Benchmark launches and brand presence in Finance AI",
+      "Revenue from Finance vertical customers"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "Go-to-market teams",
+      "ML researchers at frontier labs",
+      "AI startups and industry leaders"
+    ],
+    "core_responsibilities": [
+      "Own the Finance AI roadmap & data strategy",
+      "Set product direction for the Finance agents training stack and data strategy",
+      "Build partnerships with research teams at frontier labs",
+      "Design and scale Finance-specific RL environments (financial models, investment memos, forecasts, dashboards, data rooms)",
+      "Collaborate cross-functionally across research, operations, and customer interactions"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      205000,
+      257000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grant subject to Board of Director approval",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Finance agents",
+    "Reinforcement Learning environments",
+    "AI data",
+    "investment banking",
+    "private equity",
+    "agentic AI",
+    "frontier labs",
+    "financial workflows",
+    "RL environments",
+    "data strategy",
+    "domain expertise",
+    "go-to-market"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($205K–$257K base)",
+    "Clear product ownership area with well-defined scope (Finance vertical RL environments)",
+    "Role description explicitly states formal PM experience is not required if domain depth is strong — lowers barrier for finance practitioners",
+    "Strong entrepreneurial mandate — building new product lines from the ground up",
+    "Exposure to frontier AI lab researchers and high-profile customers"
+  ],
+  "red_flags": [
+    "3–6 year finance industry experience framed as 'Ideally, You'd Have' (nice-to-have header) but is listed first and described in very specific terms — ambiguity on whether this is hard or soft",
+    "No explicit mention of visa sponsorship — unclear for international candidates",
+    "Role is onsite in SF, NY, or Seattle — no remote option mentioned",
+    "Wide comp band ($205K–$257K) spans multiple career levels per posting language, making seniority level harder to pin down",
+    "90-day waiting period policy before reconsidering candidates for the same role"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + title + years range)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (not stated in JD)",
+      "location.remote_us_eligible (inferred as false from city-specific pay transparency statement and no remote mention)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "All requirements are listed under 'Ideally, You'd Have' which typically signals nice-to-haves, but the 3–6 years finance industry experience appears to be a true hard requirement given the core premise of the role. It has been classified as hard with a note here.",
+      "The comp range language states it 'may be inclusive of several career levels at Scale' — seniority level and exact tier cannot be confirmed from JD alone.",
+      "Location policy is described only via pay transparency for SF, NY, Seattle — remote eligibility is not explicitly addressed (classified as onsite based on available evidence)."
+    ]
+  }
+}

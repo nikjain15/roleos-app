@@ -4,7 +4,7 @@
   "url": "https://careers.hellofresh.com/global/en/job/7594595?gh_jid=7594595",
   "ats_provider": "greenhouse",
   "ats_job_id": "7594595",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -21,15 +21,15 @@
   "archetype_confidence": "high",
   "secondary_archetype": "AI Product Manager",
   "seniority": {
-    "level": "Staff PM (IC6 equivalent)",
+    "level": "Staff PM (IC6-equivalent)",
     "years_required_min": 6,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "6+ years of PM experience (Senior/Staff level)",
-      "Comp range $200K-$250K base, consistent with Staff IC at a large tech-enabled consumer company",
-      "Leads a squad of Data Scientists and ML Engineers",
-      "Single-threaded leader across Tribes and Alliances"
+      "Single-threaded leader across Tribes and Alliances",
+      "Comp range $200K-$250K base consistent with Staff-level in NYC",
+      "Scope spans entire customer lifecycle across multiple markets"
     ]
   },
   "must_haves": [
@@ -55,10 +55,10 @@
       "credentials_named": []
     },
     {
-      "id": "personalization_scale",
-      "raw_text_from_jd": "a proven track record of architecting and scaling personalization engines or recommendation systems that move the needle for millions of users across multiple markets.",
+      "id": "personalization_recommendation_track_record",
+      "raw_text_from_jd": "proven track record of architecting and scaling personalization engines or recommendation systems that move the needle for millions of users across multiple markets.",
       "skill_type": "outcome",
-      "domain": "ml_personalization",
+      "domain": "ml_product_management",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "no",
       "severity": "hard",
@@ -73,10 +73,10 @@
       "credentials_named": []
     },
     {
-      "id": "technical_fluency_ml",
+      "id": "technical_fluency_ml_data_science",
       "raw_text_from_jd": "A deep-seated ability to partner with Data Science and ML Engineering teams; you are as comfortable discussing model performance, feature engineering, and causal inference as you are defining a product vision.",
       "skill_type": "capability",
-      "domain": "ml_data_science_partnership",
+      "domain": "machine_learning_data_science",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -109,11 +109,11 @@
       "credentials_named": []
     },
     {
-      "id": "roadmap_ownership_benefit_optimization",
+      "id": "roadmap_vision_benefit_optimization",
       "raw_text_from_jd": "Own the vision and roadmap for benefit optimization across the entire customer lifecycle—evolving from basic segmentation to ML-powered systems that deliver the right offer to each customer at the right moment.",
       "skill_type": "capability",
-      "domain": "product_roadmap",
-      "evidence_required": "project_examples",
+      "domain": "product_strategy",
+      "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -127,7 +127,7 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_alignment",
+      "id": "cross_functional_leadership",
       "raw_text_from_jd": "Drive cross-functional alignment as a single-threaded leader across Tribes and Alliances—connecting Commercial, Marketing, CRM, and Growth teams around a unified benefit strategy.",
       "skill_type": "capability",
       "domain": "cross_functional_leadership",
@@ -142,12 +142,27 @@
       "credentials_named": []
     },
     {
-      "id": "metrics_definition",
+      "id": "success_metrics_definition",
       "raw_text_from_jd": "Define success metrics that balance customer outcomes (satisfaction, retention, engagement) with business goals (conversion, LTV, discount efficiency)—measuring what matters for both customers and the company.",
       "skill_type": "capability",
-      "domain": "product_metrics",
-      "evidence_required": "shipped_products_with_metrics",
+      "domain": "metrics_and_analytics",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Interacting with front-end developers, designers, product managers and our teams around the world is very much part of our day-to-day, so communication skills are vital.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -157,46 +172,29 @@
       "credentials_named": []
     }
   ],
-  "nice_to_haves": [
-    {
-      "id": "communication_stakeholder_coaching",
-      "raw_text_from_jd": "Interacting with front-end developers, designers, product managers and our teams around the world is very much part of our day-to-day, so communication skills are vital. We are looking for strong problem-solvers who can apply their engineering skills to a wide range of platforms and environments, while also acting as an ambassador to coach team members and stakeholders.",
-      "skill_type": "cultural_fit",
-      "domain": "communication_and_coaching",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    }
-  ],
+  "nice_to_haves": [],
   "explicitly_excluded": [],
   "scope": {
-    "team_size_estimate": "squad of Data Scientists and Machine Learning Engineers",
-    "surface": "Benefit Optimization platform — AI-powered engine for personalizing value (offers, benefits) across the full customer lifecycle including acquisition, retention, and reacquisition",
+    "team_size_estimate": "squad of Data Scientists and ML Engineers (size not specified)",
+    "surface": "Benefit Optimization platform — ML-powered personalized offers and recommendations across the full customer lifecycle (acquisition, retention, reacquisition)",
     "business_model": "B2C subscription (meal kit delivery)",
     "primary_metrics_inferred": [
-      "Long-term retention",
+      "Customer LTV",
+      "Churn reduction",
+      "Conversion rate",
       "Order frequency",
-      "LTV",
       "Discount efficiency",
-      "Conversion",
-      "Customer satisfaction and engagement"
+      "Customer satisfaction and retention"
     ],
     "cross_functional_partners": [
-      "Data Science",
-      "ML Engineering",
+      "Data Scientists",
+      "ML Engineers",
+      "Commercial",
       "Marketing",
       "CRM",
-      "Commercial",
-      "Growth",
-      "Engineering",
-      "Designers",
-      "Front-end developers"
+      "Growth teams",
+      "Front-end developers",
+      "Designers"
     ],
     "core_responsibilities": [
       "Own the vision and roadmap for benefit optimization across the entire customer lifecycle",
@@ -226,41 +224,40 @@
     "churn",
     "causal inference",
     "feature engineering",
-    "growth",
     "single-threaded leader",
-    "data science partnership",
     "customer lifecycle",
-    "retention",
-    "Staff PM"
+    "growth",
+    "staff PM"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed and competitive ($200K-$250K base for New York)",
-    "Clear product surface and squad ownership (Benefit Optimization platform)",
-    "Explicit ethical and transparency commitments baked into the product philosophy",
-    "Equity and 401k match mentioned as part of compensation",
-    "Generous PTO including sabbatical and 16-week parental leave",
-    "Customer-centric philosophy articulated clearly in the JD"
+    "Compensation range disclosed and competitive ($200K-$250K base for NYC)",
+    "Clear product surface and ownership area (Benefit Optimization platform)",
+    "Equity plan mentioned as part of compensation",
+    "Explicit customer-centric and ethical AI philosophy stated in the role",
+    "Generous PTO, sabbatical, and up to 16 weeks parental leave",
+    "Comprehensive health benefits effective day one at $0 monthly option"
   ],
   "red_flags": [
-    "Pay range labeled 'New York Pay Range' only — implies onsite or location-specific role, but location type and remote eligibility are not explicitly stated",
-    "No mention of visa sponsorship or work authorization requirements",
-    "Paragraph about 'engineering skills' and 'front-end developers' in the requirements section appears misplaced from a different JD template, creating ambiguity about actual PM requirements",
-    "No posting date available — unclear how long the role has been open"
+    "No explicit mention of visa sponsorship or work authorization — unclear for international candidates",
+    "Location type is not explicitly stated (onsite vs. hybrid vs. remote) in the JD body; pay range label says 'New York' suggesting NYC-based role",
+    "No nice-to-haves listed — makes it harder to assess flexibility in candidate requirements",
+    "Squad leadership scope (Data Scientists + ML Engineers) without explicit people management framing — reporting structure ambiguous"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "location.type (inferred as onsite from 'New York Pay Range' label; not explicitly stated)",
-      "location.remote_us_eligible (inferred false from pay range geography specificity)",
-      "seniority.level (inferred from comp range + 6+ years requirement + 'Staff level' label in JD)",
-      "scope.business_model (inferred from HelloFresh being a B2C meal kit subscription company)",
-      "scope.primary_metrics_inferred (inferred from responsibilities and JD context)",
-      "compensation.location_pay_differential (inferred from 'New York Pay Range' heading implying other markets may differ)"
+      "location.type (inferred as onsite from 'New York Pay Range' label; no explicit hybrid/remote language in JD body)",
+      "location.remote_us_eligible (inferred false from NYC pay range specificity and no remote language)",
+      "seniority.level (inferred as Staff IC from title, comp, and scope signals)",
+      "scope.team_size_estimate (inferred from 'squad' language; exact headcount not stated)",
+      "scope.business_model (inferred from HelloFresh's known subscription meal-kit model)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not enumerated as KPIs in JD)",
+      "compensation.location_pay_differential (inferred from 'New York Pay Range' label implying location-specific banding)"
     ],
     "ambiguities": [
-      "The paragraph beginning 'Interacting with front-end developers, designers, product managers...' and referencing 'engineering skills' appears to be boilerplate copied from an engineering JD template and does not clearly apply to a PM role — treated as a soft communication/coaching requirement.",
-      "Location type is not explicitly stated. The 'New York Pay Range' heading implies New York-based, but hybrid vs. onsite vs. remote is not specified. Defaulted to 'onsite' but this should be confirmed with recruiter.",
-      "Visa sponsorship and work authorization requirements are entirely absent from the JD."
+      "Work location type not explicitly stated — JD body contains no 'hybrid', 'remote', or 'onsite' language. The pay range header 'New York Pay Range' implies NYC-based role, treated as onsite here.",
+      "Visa sponsorship and work authorization requirements are completely absent from the JD.",
+      "The role says 'lead the Benefit Optimization squad' of Data Scientists and ML Engineers, but does not clarify whether this is direct people management or cross-functional tech lead responsibility."
     ]
   }
 }

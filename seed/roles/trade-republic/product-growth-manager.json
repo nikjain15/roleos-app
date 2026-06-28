@@ -4,7 +4,7 @@
   "url": "https://traderepublic.com/en-de/about?jobId=7323003003&gh_jid=7323003003",
   "ats_provider": "greenhouse",
   "ats_job_id": "7323003003",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -19,7 +19,7 @@
   },
   "archetype": "Growth PM",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Generalist PM with marketing/internationalization focus",
+  "secondary_archetype": "Generalist PM with growth/marketing focus",
   "seniority": {
     "level": "Mid-level IC",
     "years_required_min": 2,
@@ -27,18 +27,19 @@
     "manages_people": false,
     "level_signals": [
       "Minimum 2 years of experience required",
-      "No people management implied",
-      "High-pace, analytical environment background sought"
+      "No mention of managing direct reports",
+      "Cross-functional coordination role rather than leadership role"
     ]
   },
   "must_haves": [
     {
-      "id": "years_experience_analytical_env",
+      "id": "years_experience_high_pace_analytical",
       "raw_text_from_jd": "Minimum 2 years of experience in a high pace, analytical environment such as tier 1 consulting, investment banking or growth stage startups",
       "skill_type": "years_of_experience",
-      "domain": "analytical_business_environment",
+      "domain": "analytical_high_pace_environment",
       "minimum_value": 2,
       "unit": "years",
+      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -91,7 +92,7 @@
       "id": "fintech_app_power_user",
       "raw_text_from_jd": "Being a power user of our App and excited about financial markets, banking and financial education",
       "skill_type": "domain_knowledge",
-      "domain": "fintech_and_financial_markets",
+      "domain": "financial_markets_and_fintech",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
@@ -99,7 +100,8 @@
       "technologies_named": [],
       "industries_named": [
         "financial markets",
-        "banking"
+        "banking",
+        "fintech"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -110,12 +112,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Intersection of Product and Growth (Internationalization & Marketing) teams across 17 markets",
-    "business_model": "B2C savings and investment platform, free-to-use model",
+    "surface": "Product-Growth intersection; customer-facing communication and launch strategy across 17 markets",
+    "business_model": "B2C savings and investment platform",
     "primary_metrics_inferred": [
       "Product adoption rates",
-      "Campaign performance across global growth channels",
-      "Customer acquisition across 17 markets"
+      "Campaign performance metrics",
+      "Customer acquisition across growth channels",
+      "Engagement across markets"
     ],
     "cross_functional_partners": [
       "Product Management",
@@ -142,42 +145,41 @@
   },
   "top_keywords": [
     "product growth",
+    "launch strategy",
     "growth channels",
     "internationalization",
-    "launch strategy",
+    "paid marketing",
     "data analysis",
     "cross-functional",
-    "fintech",
-    "savings platform",
-    "campaign performance",
-    "17 markets"
+    "financial markets",
+    "18 countries",
+    "customer adoption"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Relocation support explicitly offered",
-    "Clear role scope at intersection of product and growth with 17 markets exposure",
-    "Company scale disclosed: 10M+ customers, 150B+ in assets, 18 countries",
-    "Strong DEI commitment stated with named recruiter contact for questions",
-    "Mission-driven company narrative (closing pension gap, democratising wealth)"
+    "Relocation support explicitly offered for Berlin role",
+    "Clear scope: owning intersection of Product and Growth teams across 17 markets",
+    "Company scale is significant — 10M+ customers, 150B+ in assets — meaningful product surface",
+    "DEI commitment mentioned with a direct point of contact during the interview process"
   ],
   "red_flags": [
-    "No compensation range disclosed",
-    "Work authorization and visa sponsorship terms not explicitly stated beyond relocation support",
-    "Role is Berlin-only onsite with no mention of hybrid or remote flexibility",
-    "No nice-to-haves listed — requirements section is sparse, making it harder to calibrate fit"
+    "Compensation not disclosed anywhere in the JD",
+    "Role is onsite Berlin only — no remote or hybrid option mentioned; significant constraint for non-Berlin candidates despite relocation support",
+    "Visa sponsorship not explicitly addressed; only relocation support is mentioned",
+    "JD is relatively sparse on specifics — unclear team size, tooling, and detailed role expectations"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 2-year minimum and no people management signals)",
-      "location.visa_sponsorship (inferred as yes-conditional from relocation support mention; not explicitly stated)",
-      "scope.business_model (inferred from company description)",
+      "seniority.level (inferred from minimum 2 years requirement and non-leadership framing)",
+      "scope.business_model (inferred from product description as B2C savings platform)",
       "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "compensation.source (unknown; no salary data provided)"
+      "location.visa_sponsorship (set to yes-conditional based on relocation support mention; not explicitly stated)",
+      "location.work_auth (not addressed in JD)"
     ],
     "ambiguities": [
-      "JD says Trade Republic 'operates in 18 countries' in the company description but references '17 markets' in the responsibilities section — minor inconsistency, likely one market is home market (Germany).",
-      "Visa sponsorship is not explicitly addressed; relocation support is mentioned, which may or may not include visa assistance. Treated as yes-conditional.",
-      "Work authorization requirements not stated; treated as unclear."
+      "Visa sponsorship is not explicitly mentioned; only relocation support is offered. Treated as yes-conditional since relocation support implies willingness to hire internationally.",
+      "The JD mentions 18 countries in the intro but 17 markets in the responsibilities section — minor inconsistency, both readings captured.",
+      "Archetype is ambiguous: the role title says 'Product Growth Manager' but the responsibilities lean heavily toward marketing/GTM coordination rather than product management. Classified as Growth PM with medium confidence."
     ]
   }
 }

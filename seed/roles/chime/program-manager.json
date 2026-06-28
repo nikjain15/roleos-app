@@ -1,0 +1,224 @@
+{
+  "company": "Chime",
+  "role_title": "Program Manager",
+  "url": "https://boards.greenhouse.io/chime/jobs/8584954002?gh_jid=8584954002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8584954002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "four days a week in the office for those near one of our offices; Fridays from home; fully remote program also available",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "BizOps / Strategy & Ops — Voice of Member / Customer Insights",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years of experience required",
+      "Base salary range $105,000–$145,000",
+      "Partners with senior leaders and executives but no people management mentioned"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_relevant_roles",
+      "raw_text_from_jd": "4+ years of experience in consulting, product management, product operations, strategy & operations, user research, customer insights, analytics, or similar roles that required structured problem solving and cross-functional influence.",
+      "skill_type": "years_of_experience",
+      "domain": "consulting / product / strategy / analytics / customer insights",
+      "minimum_value": 4,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "narrative_communication",
+      "raw_text_from_jd": "A track record of turning complex information into clear, compelling narratives that help others understand what matters and what to do next.",
+      "skill_type": "outcome",
+      "domain": "communication / insights storytelling",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_instincts",
+      "raw_text_from_jd": "Strong analytical instincts and comfort working with both quantitative and qualitative data. You know how to ask thoughtful questions, separate signal from noise, and build confidence in your conclusions.",
+      "skill_type": "capability",
+      "domain": "data analysis / mixed-methods research",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "curiosity_ownership_self_motivation",
+      "raw_text_from_jd": "A high degree of curiosity, ownership, and self-motivation. You're energized by ambiguous problems, proactively explore new ideas, and don't wait for someone else to tell you what to investigate next.",
+      "skill_type": "cultural_fit",
+      "domain": "self-direction / ambiguity tolerance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_experience",
+      "raw_text_from_jd": "Experience using AI tools to learn quickly, investigate problems, automate workflows, or improve how work gets done. You don't need to be an engineer, but you're excited to experiment and continuously expand your toolkit.",
+      "skill_type": "tool_proficiency",
+      "domain": "AI tooling / workflow automation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools",
+        "workflow automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Excellent written and verbal communication skills, with the ability to tailor your message for audiences ranging from individual contributors to senior leaders and executives.",
+      "skill_type": "capability",
+      "domain": "communication / executive presence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "member_experience_curiosity",
+      "raw_text_from_jd": "A genuine curiosity about what drives member experiences, paired with a desire to influence decisions that create meaningful impact at scale.",
+      "skill_type": "cultural_fit",
+      "domain": "customer / member empathy",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Voice of the Member team — member sentiment, feedback, and experience insights across Chime",
+    "business_model": "B2C fintech / financial technology platform",
+    "primary_metrics_inferred": [
+      "Member satisfaction / sentiment scores",
+      "Coverage and quality of member insights surfaced to leadership",
+      "Speed of insight delivery through automation and AI workflows",
+      "Reduction in sources of member frustration"
+    ],
+    "cross_functional_partners": [
+      "Product teams",
+      "Business leaders",
+      "Executives"
+    ],
+    "core_responsibilities": [
+      "Investigate biggest sources of member frustration and delight across Chime by combining signals from feedback, support conversations, social channels, app reviews, and operational data",
+      "Build and evolve tools, automations, and AI-enabled workflows to help teams access and act on member insights",
+      "Identify opportunities to improve manual analysis, reporting, or decision-making through automation and experimentation",
+      "Turn complex findings into clear, compelling narratives for product teams, business leaders, and executives",
+      "Lead deep-dive analyses on important member experience topics, identifying root causes and quantifying impact",
+      "Shape and deliver company-wide sentiment readouts",
+      "Proactively investigate emerging issues and surface insights"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      105000,
+      145000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "competitive equity package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Voice of the Member",
+    "member insights",
+    "member sentiment",
+    "AI tools",
+    "workflow automation",
+    "qualitative and quantitative data",
+    "cross-functional influence",
+    "customer insights",
+    "analytics",
+    "fintech",
+    "program management",
+    "product operations"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($105K–$145K base)",
+    "Fully remote program explicitly mentioned alongside hybrid option",
+    "Equity and comprehensive benefits package described in detail",
+    "Role has clear ownership area (Voice of the Member team) and defined deliverables",
+    "Generous parental leave (up to 24 weeks for birthing parents)",
+    "Strong member-mission framing provides clear north star for the role"
+  ],
+  "red_flags": [
+    "Title is 'Program Manager' but responsibilities skew heavily toward insights, analytics, and strategy — could cause role ambiguity or title mismatch for some candidates",
+    "Visa sponsorship not mentioned anywhere in the JD",
+    "Location policy is ambiguous: JD is tagged #LI-Remote but benefits section describes a four-day-a-week in-office policy for those near offices — two different tracks coexist and the candidate's eligibility for each is unclear"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years required; not explicitly stated)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.remote_us_eligible (inferred from #LI-Remote tag and 'fully remote program' mention)",
+      "location.visa_sponsorship (not mentioned; marked unclear)"
+    ],
+    "ambiguities": [
+      "Location type: JD is tagged #LI-Remote and mentions a 'fully remote program,' but the benefits section describes a default of four days a week in the office with Fridays from home for those near an office. Two distinct work tracks appear to exist simultaneously. Treated as remote-us eligible but flagged.",
+      "Role archetype: Title is 'Program Manager' but the responsibilities and required skills (customer insights, sentiment analysis, AI-enabled workflows, narrative storytelling) more closely resemble a Strategy & Ops or Customer Insights lead. Archetype confidence set to medium."
+    ]
+  }
+}

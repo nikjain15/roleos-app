@@ -4,29 +4,30 @@
   "url": "https://instacart.careers/job/?gh_jid=6932499",
   "ats_provider": "greenhouse",
   "ats_job_id": "6932499",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "remote-us",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "flexible; regular in-person events encouraged under Flex First policy",
+    "office_time_required": "flexible; in-person events periodically (Flex First policy)",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Enterprise Platform TPM",
+  "secondary_archetype": "Enterprise Platform / Retailer Integrations TPM",
   "seniority": {
-    "level": "Senior IC",
+    "level": "Senior IC (Senior TPM)",
     "years_required_min": 5,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "5+ years of work experience post-graduation in a technology field",
-      "Senior TPM title",
-      "Base pay range $178K–$226K depending on location, consistent with Senior IC"
+      "5+ years of post-graduation experience in a technology field",
+      "Expected to drive executive-level narratives and build alignment with senior Engineering and Product leaders",
+      "Base pay range $178K-$226K depending on state, consistent with Senior IC TPM at a major tech company",
+      "Owns large, complex, high-visibility programs end-to-end"
     ]
   },
   "must_haves": [
@@ -37,7 +38,7 @@
       "domain": "technology / technical program management",
       "minimum_value": 5,
       "unit": "years",
-      "is_combined": false,
+      "qualifier": "post-graduation",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -49,10 +50,10 @@
       "credentials_named": []
     },
     {
-      "id": "functional_specs_program_management",
+      "id": "program_management_end_to_end",
       "raw_text_from_jd": "Demonstrated ability to create functional specs, set program structure and influence program strategy. Previous experience in managing complex multi-org programs end-to-end, from definition to launch, throughout a software development lifecycle.",
       "skill_type": "capability",
-      "domain": "program_management",
+      "domain": "technical program management",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -64,10 +65,10 @@
       "credentials_named": []
     },
     {
-      "id": "stakeholder_communication",
+      "id": "strong_communicator",
       "raw_text_from_jd": "A strong communicator with the ability to distill multiple streams of information, convey priorities and risks, and build a narrative for stakeholders.",
       "skill_type": "capability",
-      "domain": "stakeholder_communication",
+      "domain": "stakeholder communication",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -79,10 +80,10 @@
       "credentials_named": []
     },
     {
-      "id": "ownership_intellectual_curiosity",
+      "id": "ownership_and_curiosity",
       "raw_text_from_jd": "A strong sense of ownership and intellectual curiosity to understand executional and technical problems in depth, identify potential issues and offer actions to prevent them.",
       "skill_type": "cultural_fit",
-      "domain": "ownership_and_problem_solving",
+      "domain": "ownership / problem solving",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -94,10 +95,10 @@
       "credentials_named": []
     },
     {
-      "id": "collaboration_leadership_trust",
+      "id": "collaboration_and_leadership",
       "raw_text_from_jd": "Excellent collaborator and motivator, able to bring a team together to align and deliver on a common goal. Can build trust and partnerships with senior Engineering and Product leaders.",
       "skill_type": "capability",
-      "domain": "cross_functional_collaboration",
+      "domain": "cross-functional leadership",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -112,7 +113,7 @@
       "id": "growth_mindset",
       "raw_text_from_jd": "Growth mindset - seeks and is receptive to actionable feedback and growth opportunities.",
       "skill_type": "cultural_fit",
-      "domain": "team_culture",
+      "domain": "personal development",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -124,10 +125,10 @@
       "credentials_named": []
     },
     {
-      "id": "accountability_independence",
+      "id": "accountability_and_independence",
       "raw_text_from_jd": "Takes accountability seriously; can operate independently to deliver responsibilities and milestones on time and within budget.",
       "skill_type": "capability",
-      "domain": "execution_and_delivery",
+      "domain": "program delivery",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -142,7 +143,7 @@
       "id": "self_motivated_fast_paced",
       "raw_text_from_jd": "Self-motivated and thrives in a fast-paced environment.",
       "skill_type": "cultural_fit",
-      "domain": "work_style",
+      "domain": "work environment fit",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -180,6 +181,7 @@
       "skill_type": "credential",
       "domain": "education",
       "minimum_value": "masters",
+      "accepts_equivalent_experience": false,
       "evidence_required": "verifiable_credential",
       "bridgeable": "n/a",
       "severity": "soft",
@@ -196,7 +198,7 @@
       "id": "deep_technical_domain_knowledge",
       "raw_text_from_jd": "Demonstrated ability to showcase deep technical domain knowledge on the programs that you take on, enabling you to be seen as a strong technical voice in the program and adding significant value towards architecting a program.",
       "skill_type": "domain_knowledge",
-      "domain": "technical_architecture",
+      "domain": "technical architecture / program design",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -210,8 +212,8 @@
     {
       "id": "architectural_strategic_decisions",
       "raw_text_from_jd": "Demonstrated ability to drive architectural and strategic decisions at the org leadership level.",
-      "skill_type": "capability",
-      "domain": "technical_strategy",
+      "skill_type": "outcome",
+      "domain": "technical strategy / org leadership",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -226,7 +228,7 @@
       "id": "innovative_program_management_processes",
       "raw_text_from_jd": "Extensive previous experience around creating innovative program management processes/tools/approaches to deliver company outcomes reliably and efficiently.",
       "skill_type": "capability",
-      "domain": "program_management_process_design",
+      "domain": "program management process innovation",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -241,7 +243,7 @@
       "id": "ecommerce_at_scale",
       "raw_text_from_jd": "Experience working with e-commerce solutions at scale.",
       "skill_type": "domain_knowledge",
-      "domain": "e-commerce",
+      "domain": "e-commerce platforms",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -258,13 +260,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Enterprise platform — retailer onboarding, transitions, and growth across Instacart's multi-sided marketplace",
-    "business_model": "B2B2C marketplace (grocery delivery connecting customers, shoppers, brands, and retailer partners)",
+    "surface": "Enterprise platform for retailer onboarding and growth across Instacart's multi-sided marketplace",
+    "business_model": "B2B2C marketplace (retailers, brands, shoppers, customers)",
     "primary_metrics_inferred": [
-      "On-time and high-quality retailer launches",
-      "Program delivery against milestones and budget",
-      "Stakeholder alignment and risk mitigation",
-      "Operational excellence of retailer launch framework"
+      "On-time, high-quality delivery of enterprise retailer launches",
+      "Retailer platform adoption and growth",
+      "Program execution efficiency and quality metrics"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -276,12 +277,12 @@
       "Sales Engineers"
     ],
     "core_responsibilities": [
-      "Lead planning and high quality technical execution of large engineering programs with high ambiguity, complexity, and visibility",
-      "Work with cross-functional partners to set project objectives and metric-based success criteria",
-      "Own clear and effective communication with stakeholders on priorities, risks, and changes",
-      "Foster a culture of teamwork and shared goals within the program team",
+      "Lead planning and technical execution of large, complex, high-visibility engineering programs",
+      "Drive definition of project requirements and execution plans end-to-end",
+      "Own stakeholder communication including priorities, risks, and changes",
+      "Foster collaborative team environment and drive process efficiency",
       "Contribute to organization-wide initiatives",
-      "Uphold and continuously contribute to the operational excellence framework of retailer launches"
+      "Uphold and improve the operational excellence framework for retailer launches"
     ]
   },
   "compensation": {
@@ -291,53 +292,52 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "New hire equity grant plus annual refresh grants",
+    "equity_form": "new hire equity grant and annual refresh grants",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
     "Technical Program Manager",
     "Enterprise",
-    "retailer launches",
+    "retailer platform",
     "multi-org programs",
-    "cross-functional",
     "software development lifecycle",
-    "operational excellence",
-    "e-commerce",
+    "cross-functional",
     "ML/AI",
     "Gen AI",
-    "stakeholder communication",
-    "program strategy",
+    "e-commerce",
+    "executive narratives",
+    "operational excellence",
+    "grocery industry",
     "Flex First"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Detailed compensation ranges disclosed across multiple US geographies",
-    "Equity explicitly mentioned (new hire + annual refresh)",
-    "Remote-first (Flex First) policy with flexible work location",
-    "Clear program scope around Enterprise retailer platform",
-    "Cross-functional breadth described in detail",
-    "Role embedded within Engineering org — strong technical credibility signal"
+    "Compensation ranges explicitly stated across US geographies ($178K-$226K base)",
+    "Equity mentioned (new hire + annual refresh grants)",
+    "Fully remote-eligible (Flex First policy) with no mandatory office percentage stated",
+    "Clear program scope — Enterprise retailer platform — not vague",
+    "Cross-functional partners and responsibilities well defined",
+    "Role is within an established TPM organization, signaling structural support"
   ],
   "red_flags": [
-    "No visa sponsorship information stated — unclear for international candidates",
-    "Wide compensation band across states ($178K–$226K base) may signal significant geographic pay differences",
-    "Fast-paced, high-ambiguity environment described — could indicate resource or organizational churn",
-    "Bachelor's degree in technology/engineering listed as hard requirement with no equivalent experience alternative stated"
+    "Visa sponsorship and work authorization eligibility not stated anywhere in the JD",
+    "Bachelor's degree in technology/engineering listed as hard requirement with no explicit equivalent experience clause",
+    "Location pay differential is significant — lowest band ($178K-$188K) vs highest ($214K-$226K) is a ~$38K gap depending on state",
+    "Ambiguity around 'Flex First' in-person expectations — described loosely as 'regular in-person events' without specifics"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Senior' and comp range)",
-      "scope.business_model (inferred from product description of multi-sided marketplace)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
-      "scope.team_size_estimate (not stated; left as 'unclear')",
-      "location.work_auth (not stated)",
-      "location.visa_sponsorship (not stated)",
-      "compensation.base_range_usd reported as min of lowest band and max of highest band across all US geographies"
+      "seniority.level (inferred from compensation range, scope, and years requirement — not explicitly titled 'Senior IC')",
+      "scope.primary_metrics_inferred (not stated directly; inferred from responsibilities)",
+      "scope.business_model (inferred from product description and multi-sided marketplace language)",
+      "location.office_time_required (inferred from Flex First policy description; no hard percentage stated)",
+      "compensation.base_range_usd reported as min/max across all US geographies — actual individual offer depends on location"
     ],
     "ambiguities": [
-      "The JD describes a 'Flex First' policy allowing employees to choose where they work, suggesting remote-global eligibility is possible, but all compensation bands listed are US-specific; treated as remote-us.",
-      "Bachelor's degree listed under Minimum Qualifications with no 'or equivalent experience' caveat, making it a hard requirement; however the JD does not explicitly state it is eliminatory — flagged as hard severity based on placement under Minimum Qualifications."
+      "Work authorization and visa sponsorship are entirely unaddressed in the JD — left as 'unclear'",
+      "Flex First policy mentions 'regular in-person events' but gives no frequency or office time percentage — unclear if this qualifies as hybrid or remote-us; treated as remote-us given 'Flex First remote work policy' language",
+      "Bachelor's degree is listed as a Minimum Qualification but no equivalent experience clause is included — severity set to hard, but some tech companies treat degree requirements loosely in practice"
     ]
   }
 }

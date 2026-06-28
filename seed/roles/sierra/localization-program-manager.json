@@ -1,0 +1,272 @@
+{
+  "company": "Sierra",
+  "role_title": "Localization Program Manager",
+  "url": "https://jobs.ashbyhq.com/sierra/4041855f-5a09-47ea-80d3-3141454655f8",
+  "ats_provider": "ashby",
+  "ats_job_id": "4041855f-5a09-47ea-80d3-3141454655f8",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "in-person (primary office)",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager with localization/internationalization specialization",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of experience in localization, international operations, or program/project management",
+      "Owns end-to-end localization program across all functions",
+      "Acts as strategic advisor as well as hands-on program manager"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_localization_ops_pm",
+      "raw_text_from_jd": "6+ years of experience in localization, international operations, or program/project management",
+      "skill_type": "years_of_experience",
+      "domain": "localization_and_program_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_localization_track_record",
+      "raw_text_from_jd": "Proven track record owning end-to-end localization programs across multiple languages and regions, ideally including building repeatable language or market launch processes",
+      "skill_type": "outcome",
+      "domain": "localization_program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_and_tactical_versatility",
+      "raw_text_from_jd": "Strategic thinker who can zoom out to advise on market entry and zoom in to manage a process. You're equally comfortable in both modes",
+      "skill_type": "capability",
+      "domain": "strategy_and_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "tms_platform_experience",
+      "raw_text_from_jd": "Experience working with TMS platforms (e.g., LILT, Phrase, Smartling) and a track record of owning and improving localization tooling and vendor relationships",
+      "skill_type": "tool_proficiency",
+      "domain": "localization_tooling_and_vendor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "LILT",
+        "Phrase",
+        "Smartling"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_skills",
+      "raw_text_from_jd": "Exceptional cross-functional skills. You know how to build trust, drive clarity, and move workstreams forward across Operations, Marketing, Design, Product, and GTM",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_ambiguity",
+      "raw_text_from_jd": "Strong written and verbal communicator. Able to operate effectively in fast-moving, ambiguous environments",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "b2b_saas_or_ai_background",
+      "raw_text_from_jd": "Background in B2B SaaS or AI/tech companies",
+      "skill_type": "domain_knowledge",
+      "domain": "industry_background",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS",
+        "AI/tech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "B2B SaaS companies",
+        "AI/tech companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "design_and_cms_tools",
+      "raw_text_from_jd": "Familiarity with Figma, Sanity CMS, or similar design and content systems",
+      "skill_type": "tool_proficiency",
+      "domain": "design_and_content_management",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Figma",
+        "Sanity CMS"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "building_localization_from_scratch",
+      "raw_text_from_jd": "Experience building localization programs from scratch at a scaling company",
+      "skill_type": "outcome",
+      "domain": "localization_program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "End-to-end localization program across product, marketing, design, and sales for global market expansion",
+    "business_model": "B2B AI platform (enterprise SaaS)",
+    "primary_metrics_inferred": [
+      "Localization coverage across languages and markets",
+      "Quality standards and QA pass rates",
+      "Turnaround time and vendor delivery performance",
+      "Timely alignment of localization with country expansion timelines"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Design",
+      "Marketing",
+      "Sales",
+      "GTM Ops",
+      "Web Producer",
+      "Translation Vendors"
+    ],
+    "core_responsibilities": [
+      "Contribute to the country expansion playbook: build and document repeatable processes, and coordinate execution across product, marketing, design, sales, and operations",
+      "Partner with GTM Ops to align localization priorities with country expansion plans and commercial timelines",
+      "Own and communicate the localization roadmap across all workstreams, keeping stakeholders aligned on priorities and timelines",
+      "Drive cross-functional program management across product UI, product documentation, website, sales assets, and digital campaigns",
+      "Manage our translation vendors and tooling - including turnaround expectations, quality standards, and delivery",
+      "Establish and own a QA framework across all localization projects, setting quality standards and ensuring consistency across markets and asset types",
+      "Coordinate localization rollout priorities with the marketing team and web producer across website, content, sales assets, and digital/search ads",
+      "Partner with Product, Engineering, and Design teams to define and integrate localization requirements into the product development lifecycle",
+      "Monitor and support internal localization systems and workflows, partnering with Engineering to troubleshoot issues, improve reliability, and maintain scalable translation operations"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies.",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "localization",
+    "internationalization",
+    "program management",
+    "TMS platforms",
+    "vendor management",
+    "market expansion",
+    "cross-functional",
+    "translation",
+    "QA framework",
+    "global operations",
+    "LILT",
+    "Phrase",
+    "Smartling"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "High-impact, clearly scoped role owning end-to-end localization at a well-funded AI startup with notable co-founders",
+    "Cross-functional reach across product, marketing, design, and GTM — broad influence",
+    "Company is actively expanding globally (multiple offices listed across multiple continents)",
+    "Equity participation explicitly mentioned",
+    "Encourages applicants even if experience doesn't precisely match the job description"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed",
+    "Role is explicitly based in San Francisco with no mention of remote or hybrid flexibility — eliminates non-SF candidates",
+    "Visa sponsorship and work authorization not addressed in JD",
+    "No team size or reporting structure stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 6+ years requirement and scope of ownership)",
+      "scope.business_model (inferred from company description as B2B AI platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.type (inferred as onsite from 'primarily an in-person company' and 'Based in San Francisco' under role details)",
+      "location.remote_us_eligible (inferred as false from onsite signal)"
+    ],
+    "ambiguities": [
+      "The JD says Sierra is 'primarily an in-person company' and the role says 'Based in San Francisco', but no explicit hybrid/remote policy is stated for this specific role. Treated as onsite.",
+      "The nice-to-have 'ideally including building repeatable language or market launch processes' appears in the same bullet as a must-have requirement — the 'ideally' qualifier creates ambiguity; the broader bullet is classified as hard but the 'repeatable processes' sub-element is noted as preferred."
+    ]
+  }
+}

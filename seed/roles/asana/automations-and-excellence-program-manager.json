@@ -1,0 +1,264 @@
+{
+  "company": "Asana",
+  "role_title": "Automations & Excellence Program Manager",
+  "url": "https://www.asana.com/jobs/apply/7980512?gh_jid=7980512",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7980512",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Monday, Tuesday, and Thursday in-office; Wednesday typically WFH; Friday depends on role/team",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Staff-level Program Manager",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in Program Management or related Business Operations function",
+      "Comp range $190K–$223K base consistent with senior individual contributor at a Bay Area SaaS company",
+      "Expected to present to C-suite stakeholders and contribute to quarterly and annual planning cycles"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management_ops",
+      "raw_text_from_jd": "8+ years of experience in Program Management, Support Operations, Professional Services Operations, or a related Business Operations function within a high-growth SaaS environment",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_operations",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth SaaS environment"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_curiosity_and_leverage",
+      "raw_text_from_jd": "Demonstrates curiosity about AI tools and emerging technologies, with a willingness to learn and leverage them to enhance productivity, collaboration, or decision-making",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_emerging_technology",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "llm_generative_ai_experience",
+      "raw_text_from_jd": "A proactive focus on AI and emerging technologies, with demonstrated experience leveraging Large Language Models (LLMs) and generative AI tools to drive operational efficiency and unlock productivity for yourself and your project teams.",
+      "skill_type": "domain_knowledge",
+      "domain": "generative_ai_and_llms",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_reporting_ai_transformation",
+      "raw_text_from_jd": "Build and present executive-level reporting on AI transformation program health, surfacing risks, milestones, and strategic recommendations to senior and C-suite stakeholders in a clear, actionable format",
+      "skill_type": "capability",
+      "domain": "executive_communication_and_reporting",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_complex_program_management",
+      "raw_text_from_jd": "A proven track record of bringing structure to complex, ambiguous, and fast-paced environments. You know how to scope projects, map dependencies, effectively prioritize amongst competing high-impact initiatives, and hold cross-functional teams accountable",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "support_operations_domain_knowledge",
+      "raw_text_from_jd": "Strong familiarity with core Services & Support operational disciplines (e.g., queue management/case assignment, workforce management/forecasting, scoping/staffing, escalation management, implementation and technical services delivery, etc)",
+      "skill_type": "domain_knowledge",
+      "domain": "services_and_support_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_decision_making",
+      "raw_text_from_jd": "Comfortable interpreting performance data, defining key success metrics (KPIs), and leveraging business intelligence tools to drive data-informed decision-making",
+      "skill_type": "capability",
+      "domain": "analytics_and_business_intelligence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "llm_saas_deployment_familiarity",
+      "raw_text_from_jd": "Familiarity with the deployment and optimization of LLM applications within a SaaS environment, particularly regarding AI-powered chatbots, copilots, and self-service automation tools designed to drive improved customer and employee outcomes",
+      "skill_type": "domain_knowledge",
+      "domain": "llm_application_deployment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "AI-powered chatbots",
+        "copilots",
+        "self-service automation"
+      ],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Customer Experience Organization — Support & Services Automations & Excellence team; AI transformation programs across Services & Support",
+    "business_model": "B2B SaaS — work management platform",
+    "primary_metrics_inferred": [
+      "Customer satisfaction (CSAT)",
+      "Customer retention",
+      "AI consumption / utilization",
+      "Self-service deflection rates",
+      "Program adoption rates",
+      "KPI attainment on transformation initiatives"
+    ],
+    "cross_functional_partners": [
+      "Tooling/Automations",
+      "Knowledge Management",
+      "Analytics",
+      "Workforce Management",
+      "Strategic Support Operations Manager",
+      "C-suite stakeholders",
+      "Engineering (implied)"
+    ],
+    "core_responsibilities": [
+      "Translate business requirements into strategic, multi-horizon, actionable programs, project plans, and cross functional initiatives",
+      "Coordinate transformation AI programs for Services & Support, identifying and realizing high leverage opportunities to support AI product maturity, maximize customer AI consumption, and promote self-service outcomes",
+      "Own the successful execution of those programs, ensuring cross-functional alignment, actionable timelines set with velocity in mind, clear objectives, and quantified success metrics",
+      "Apply and contribute to the improvement of program and project governance frameworks to drive stakeholder alignment and effective communication re: program progress, risk, and decisions",
+      "In partnership with the Strategic Support Operations Manager, contribute to quarterly and annual planning cycles, including goal-setting, resource, planning, and establishing measurable success metrics",
+      "Identify friction points in the customer and internal delivery lifecycles. Scale operations by embedding automation, AI workflows, and industry best practices into our day-to-day motions",
+      "Serve as the connective tissue between the Operations team's specialized pillars (Tooling/Automations, Knowledge Management, Analytics, WFM) to ensure successful, holistic program rollouts",
+      "Execute structured change management and enablement plans to ensure high adoption of new tools, workflows, and policies across a global, highly multi-functional footprint"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      190000,
+      223000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as additional component to base; form not specified",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Program Management",
+    "AI transformation",
+    "LLMs",
+    "generative AI",
+    "Support Operations",
+    "Customer Experience",
+    "SaaS",
+    "operational excellence",
+    "change management",
+    "cross-functional",
+    "self-service automation",
+    "KPIs",
+    "business intelligence",
+    "workforce management"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Salary range disclosed ($190K–$223K base) and competitive for Bay Area SaaS",
+    "Equity mentioned as part of total compensation package",
+    "Explicit statement encouraging candidates who don't meet every requirement to still apply",
+    "Clear articulation of role scope, reporting structure, and cross-functional partners",
+    "AI transformation mandate gives the role strategic importance and visibility to C-suite",
+    "Asana recognized by Fortune Best Workplaces 7+ years — signals stable culture"
+  ],
+  "red_flags": [
+    "No visa sponsorship information provided — unclear for international candidates",
+    "In-office 3 days per week (Mon/Tue/Thu) required in San Francisco — not suitable for fully remote candidates",
+    "High buzzword density may obscure actual day-to-day scope",
+    "Friday WFH policy is ambiguous and role-dependent, not guaranteed",
+    "8+ years floor with a role title of 'Program Manager' (not 'Senior' or 'Staff') may signal title/level mismatch"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, years of experience floor, and C-suite stakeholder exposure)",
+      "scope.primary_metrics_inferred (inferred from responsibilities referencing satisfaction, retention, utilization, consumption; not enumerated as KPIs in JD)",
+      "scope.business_model (inferred from Asana product description)",
+      "location.work_auth (not stated; defaulted to 'open')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
+    ],
+    "ambiguities": [
+      "The JD lists multiple must-have bullets in 'About you' without explicit 'required' vs 'preferred' labeling — all treated as hard requirements per extraction rules since they appear in an unconditional list",
+      "Friday WFH eligibility is described as conditional on 'the type of work you do and the teams with which you partner' — exact policy unclear without recruiter clarification",
+      "Equity form is not specified (options, RSUs, etc.) — only noted as an 'additional component'"
+    ]
+  }
+}

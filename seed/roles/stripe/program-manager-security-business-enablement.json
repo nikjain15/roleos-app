@@ -1,10 +1,10 @@
 {
   "company": "Stripe",
   "role_title": "Program Manager, Security Business Enablement",
-  "url": "https://stripe.com/jobs/search?gh_jid=7917252",
+  "url": "https://stripe.com/jobs/search?gh_jid=7966641",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7917252",
-  "fetched_at": "2026-05-25",
+  "ats_job_id": "7966641",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -15,25 +15,25 @@
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
-  "archetype": "Program Manager",
+  "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Security Program Manager / Business Enablement",
+  "secondary_archetype": "Security Program Manager",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 5,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "5+ years engaging with customer and partner business teams",
-      "Operates autonomously leading large-scale efforts",
-      "Subject matter expert designation",
-      "Stakeholder management up to executive level"
+      "5+ years engaging with customer and partner business, engineering, security, compliance, and legal teams",
+      "Operates autonomously, leading large-scale efforts",
+      "Subject matter expert in information security frameworks",
+      "Reports to / part of Office of the CISO pillar"
     ]
   },
   "must_haves": [
     {
       "id": "infosec_frameworks_sme",
-      "raw_text_from_jd": "You are a subject matter expert in information security frameworks, practices, policies, standards and procedures (e.g. NIST CSF, PCI DSS, ISO 27001, SOC 2 or equivalent)",
+      "raw_text_from_jd": "You are a subject matter expert in information security frameworks, practices, policies, standards, and procedures (e.g., NIST CSF, PCI DSS, ISO 27001, SOC 2, or equivalent)",
       "skill_type": "domain_knowledge",
       "domain": "information_security_frameworks",
       "evidence_required": "work_history",
@@ -55,7 +55,7 @@
       "id": "business_security_balance",
       "raw_text_from_jd": "You understand how to balance business needs with security requirements and focus on business outcomes",
       "skill_type": "capability",
-      "domain": "security_governance",
+      "domain": "security_business_alignment",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -99,10 +99,10 @@
       "credentials_named": []
     },
     {
-      "id": "communication_skills",
+      "id": "written_verbal_communication",
       "raw_text_from_jd": "You have strong written and verbal communication skills, building strong relationships at all levels of the organization from executives to project teams",
       "skill_type": "capability",
-      "domain": "stakeholder_communication",
+      "domain": "communication_and_stakeholder_management",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -114,8 +114,8 @@
       "credentials_named": []
     },
     {
-      "id": "external_security_compliance_communication",
-      "raw_text_from_jd": "You communicate clear and succinct security compliance controls and requirements with external Stripe stakeholders, including security counter-parties at global financial institutions",
+      "id": "security_compliance_external_communication",
+      "raw_text_from_jd": "You communicate clear and succinct security compliance controls and requirements with external Stripe stakeholders, including security counterparties at global financial institutions",
       "skill_type": "capability",
       "domain": "security_compliance_communication",
       "evidence_required": "work_history",
@@ -146,10 +146,10 @@
       "credentials_named": []
     },
     {
-      "id": "critical_thinking_self_driven",
+      "id": "critical_thinker_self_driven",
       "raw_text_from_jd": "You are a critical thinker, passionate, self-driven, and detail-oriented",
       "skill_type": "cultural_fit",
-      "domain": "work_style",
+      "domain": "team_culture",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -163,10 +163,10 @@
   ],
   "nice_to_haves": [
     {
-      "id": "program_dashboards_okrs",
-      "raw_text_from_jd": "You have developed reports on program performance via dashboards and OKRs, and perform detailed data analysis",
+      "id": "dashboards_okrs_data_analysis",
+      "raw_text_from_jd": "You've developed reports on program performance via dashboards and OKRs, and performed detailed data analysis",
       "skill_type": "capability",
-      "domain": "program_reporting_analytics",
+      "domain": "program_performance_reporting",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -178,12 +178,12 @@
       "credentials_named": []
     },
     {
-      "id": "security_controls_automation",
+      "id": "engineering_security_automation",
       "raw_text_from_jd": "You have experience working with engineers for the automation of security controls and generation of evidence",
       "skill_type": "capability",
       "domain": "security_automation",
       "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -193,8 +193,8 @@
       "credentials_named": []
     },
     {
-      "id": "ai_automation_for_security",
-      "raw_text_from_jd": "You have utilized AI to automate complex information gathering tasks and built interfaces for non-technical users",
+      "id": "ai_automation_nontechnical_interfaces",
+      "raw_text_from_jd": "You've utilized AI to automate complex information-gathering tasks and build interfaces for non-technical users",
       "skill_type": "tool_proficiency",
       "domain": "ai_automation",
       "evidence_required": "project_examples",
@@ -213,12 +213,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Security Business Enablement — Office of the CISO; customer and partner trust-building, go-to-market security engagement",
+    "surface": "Security Business Enablement team within Office of the CISO; customer/partner trust-building, go-to-market security support, tooling and automation",
     "business_model": "B2B financial infrastructure platform",
     "primary_metrics_inferred": [
-      "Program health and success metrics",
-      "OKRs for security business enablement",
-      "Coverage and scalability of security resources"
+      "Program health and success metrics / OKRs",
+      "Coverage and scalability of security resources",
+      "Customer and partner trust signals"
     ],
     "cross_functional_partners": [
       "Sales",
@@ -226,13 +226,13 @@
       "Legal",
       "Privacy",
       "Engineering",
-      "Control owners",
-      "Executive stakeholders"
+      "Security",
+      "Compliance"
     ],
     "core_responsibilities": [
       "Function as an information security subject matter expert and lead cross-functional teams to engage with customers and partners to build trust and grow our business",
-      "Serve as the main point of contact for all go-to-market related requests",
-      "Operate autonomously, leading large-scale efforts to implement and operating tooling and automation across multiple teams and functions, with stakeholders in different disciplines and time zones",
+      "Serve as the main point of contact for all go-to-market-related requests",
+      "Operate autonomously, leading large-scale efforts to implement and operate tooling and automation across multiple teams and functions, with stakeholders in different disciplines and time zones",
       "Identify and evaluate information security control gaps and oversee remediation efforts, in partnership with control owners",
       "Develop information security policies and standards based on cybersecurity framework guidelines",
       "Develop, define, and report on the team's program health and success metrics to provide insights to management to help drive strategic direction"
@@ -254,38 +254,38 @@
     "PCI DSS",
     "ISO 27001",
     "SOC 2",
-    "security compliance",
-    "risk and controls",
     "program management",
-    "CISO",
+    "security controls",
+    "Office of the CISO",
+    "risk and controls",
+    "tooling and automation",
     "customer trust",
-    "automation",
-    "stakeholder management"
+    "financial institutions"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear team mission and mandate (Office of the CISO, customer trust and go-to-market enablement)",
-    "Specific security frameworks named (NIST CSF, PCI DSS, ISO 27001, SOC 2), indicating a technically grounded role",
-    "JD explicitly states preferred qualifications are a bonus, not a requirement — inclusive language",
-    "Role has broad cross-functional scope (Sales, Legal, Engineering, executives) suggesting high visibility"
+    "Clear team mission and purpose (Security Business Enablement, Office of the CISO)",
+    "Role is strategic and high-visibility — direct customer/partner engagement representing all of Stripe",
+    "Preferred qualifications explicitly labeled as a bonus, not a requirement — candidate-friendly framing",
+    "Interesting scope: intersection of security, sales, automation, and executive communication"
   ],
   "red_flags": [
-    "No compensation range disclosed",
-    "Location not specified anywhere in the JD — unclear if remote, hybrid, or onsite",
-    "Visa sponsorship and work authorization not mentioned",
-    "Posting first seen and last updated dates unavailable"
+    "No location, remote/hybrid policy, or compensation information disclosed in the JD",
+    "No visa sponsorship or work authorization information provided",
+    "Hard requirement of 5+ years in GTM security engagement is a relatively narrow filter",
+    "Posting date not available — unclear how fresh the role is"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 5+ years requirement, autonomous operation, and SME designation)",
-      "seniority.manages_people (inferred as false; no people management mentioned)",
+      "seniority.level (inferred from autonomy signals, SME framing, and 5+ years requirement; not explicitly stated)",
       "scope.business_model (inferred from Stripe's product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
-      "compensation.equity_mentioned (inferred as false; not mentioned in JD)"
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
+      "location.type set to 'unclear' — no location or work model stated in JD",
+      "compensation.source set to 'unknown' — no compensation data provided"
     ],
     "ambiguities": [
-      "Location type is entirely absent from the JD — no city, no remote/hybrid/onsite designation. Marked as 'unclear'.",
-      "Work authorization and visa sponsorship are not mentioned anywhere in the JD."
+      "No location or work model (remote/hybrid/onsite) is mentioned anywhere in the JD — location.type left as 'unclear'",
+      "No visa sponsorship or work authorization policy stated — both left as 'unclear'"
     ]
   }
 }

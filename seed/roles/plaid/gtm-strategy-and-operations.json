@@ -1,0 +1,242 @@
+{
+  "company": "Plaid",
+  "role_title": "GTM Strategy & Operations",
+  "url": "https://jobs.ashbyhq.com/plaid/33379e81-e111-4bb8-8c6b-9e64d4fa51c5",
+  "ats_provider": "ashby",
+  "ats_job_id": "33379e81-e111-4bb8-8c6b-9e64d4fa51c5",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [
+      "San Francisco",
+      "New York",
+      "Washington D.C.",
+      "London",
+      "Amsterdam"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "GTM / Revenue Operations",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 4,
+    "years_required_max": 6,
+    "manages_people": false,
+    "level_signals": [
+      "4-6 years of experience including 2+ years of business operations or revenue operations, investment banking or management consulting",
+      "Cross-functional initiative leadership without explicit people management mentioned"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "total_years_experience",
+      "raw_text_from_jd": "4-6 years of experience including 2+ years of business operations or revenue operations, investment banking or management consulting",
+      "skill_type": "years_of_experience",
+      "domain": "business_operations_or_revenue_operations",
+      "minimum_value": 4,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "investment banking",
+        "management consulting"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ops_experience_subset",
+      "raw_text_from_jd": "2+ years of business operations or revenue operations, investment banking or management consulting",
+      "skill_type": "years_of_experience",
+      "domain": "business_operations_revenue_operations_or_finance",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "investment banking",
+        "management consulting"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_financial_modeling",
+      "raw_text_from_jd": "Strong analytical, financial modeling and presentation skills",
+      "skill_type": "capability",
+      "domain": "financial_modeling_and_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_problem_solving",
+      "raw_text_from_jd": "Ability to distill complex issues into structured frameworks and action plans",
+      "skill_type": "capability",
+      "domain": "structured_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_collaboration",
+      "raw_text_from_jd": "Excellent communication and collaboration skills with the ability to build productive and positive relationships across the organization",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bi_crm_sql_proficiency",
+      "raw_text_from_jd": "Proficiency with BI tools and CRM systems, including Salesforce, Tableau, knowledge of SQL",
+      "skill_type": "tool_proficiency",
+      "domain": "business_intelligence_and_crm",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce",
+        "Tableau"
+      ],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_for_fintech",
+      "raw_text_from_jd": "A passion for financial services innovation",
+      "skill_type": "cultural_fit",
+      "domain": "fintech_domain_interest",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "small team",
+    "surface": "GTM Operations & Strategy — revenue operations, cross-functional strategic initiatives, dashboards, business reviews",
+    "business_model": "B2B/B2D fintech infrastructure — Plaid sells APIs and data connectivity to developers and enterprises",
+    "primary_metrics_inferred": [
+      "Revenue metrics and dashboards",
+      "GTM performance assessment",
+      "Operational efficiency / synergy impact on P&L"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Sales",
+      "Marketing",
+      "Partnerships",
+      "Ops",
+      "Strategic Finance"
+    ],
+    "core_responsibilities": [
+      "Support day-to-day revenue operations of a fast growing Revenue team",
+      "Develop and track key revenue metrics through dashboards and reporting",
+      "Analyze data to drive execution and identify opportunities for operational improvement and strategic decision-making",
+      "Initiate, manage, and successfully execute new, cross-functional initiatives that increase alignment and create synergies across Plaid",
+      "Establish and maintain efficient operating model for GTM Revenue team, including running monthly business reviews and driving analysis to assess GTM performance"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form unspecified)",
+    "location_pay_differential": true,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "GTM strategy",
+    "revenue operations",
+    "business operations",
+    "financial modeling",
+    "Salesforce",
+    "Tableau",
+    "SQL",
+    "cross-functional",
+    "dashboards",
+    "fintech",
+    "business reviews",
+    "analytics"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Small, high-impact team with direct P&L exposure",
+    "Cross-functional scope across Product, Sales, Marketing, Partnerships — broad learning opportunity",
+    "Plaid is a well-known, large-scale fintech infrastructure company with a clear mission",
+    "JD explicitly encourages applicants even if experience doesn't fully match",
+    "Equity compensation mentioned"
+  ],
+  "red_flags": [
+    "No salary range disclosed despite pay depending on 'scope, experience, and location'",
+    "Location not specified for this role — cities listed are all Plaid offices generically, not tied to this posting",
+    "Work authorization and visa sponsorship not addressed",
+    "Location type (remote/hybrid/onsite) not stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range and responsibilities)",
+      "scope.team_size_estimate (inferred from 'small team' mention in JD body)",
+      "scope.business_model (inferred from product/company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly named in JD)",
+      "location.type (not stated; marked unclear)",
+      "compensation.location_pay_differential (inferred from 'location' being listed as a pay factor)"
+    ],
+    "ambiguities": [
+      "Cities listed (San Francisco, New York, Washington D.C., London, Amsterdam) appear to be general company office locations, not specific options for this role. Role location is unclear.",
+      "The 4-6 years total experience requirement with a 2+ year subset creates overlap ambiguity — it is unclear whether the 2+ years must be distinct from the remaining 2-4 years or can overlap with the total.",
+      "No explicit mention of remote eligibility, hybrid policy, or onsite requirement for this specific role."
+    ]
+  }
+}

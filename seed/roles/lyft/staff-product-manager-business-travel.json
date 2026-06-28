@@ -1,0 +1,267 @@
+{
+  "company": "Lyft",
+  "role_title": "Staff Product Manager, Business Travel",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8594607002?gh_jid=8594607002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8594607002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (B2B2C / partnerships)",
+  "seniority": {
+    "level": "Staff IC (Senior IC / Staff PM)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management experience",
+      "Individual-contributor leadership role: you set the strategy and the bar",
+      "Move the organization through influence, evidence, and craft rather than headcount",
+      "Base pay range $176,000 - $220,000 consistent with Staff PM at a major tech company",
+      "Represent Business Travel in executive reviews and cross-org forums"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "8+ years of product management experience or equivalent, with a meaningful portion owning growth, acquisition, lifecycle, or funnel work at scale on a consumer mobile product.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "with meaningful portion in growth/acquisition/lifecycle/funnel on consumer mobile product",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "measurable_growth_track_record",
+      "raw_text_from_jd": "Track record of measurable, durable impact on acquisition, activation, or retention metrics that you can defend.",
+      "skill_type": "outcome",
+      "domain": "growth_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "broad_ambiguous_ownership",
+      "raw_text_from_jd": "Demonstrated ownership of broad, ambiguous problem areas that span teams. You have set a multi-year growth strategy and built the loops or infrastructure that compounded across products.",
+      "skill_type": "capability",
+      "domain": "strategic_product_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "b2b_b2c_dual_customer",
+      "raw_text_from_jd": "Comfort serving two customers at once, the individual user and the organization that pays, with a feel for where consumer growth tactics and B2B or B2B2C motions meet.",
+      "skill_type": "domain_knowledge",
+      "domain": "B2B2C_product_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "quantitative_rigor_experimentation",
+      "raw_text_from_jd": "Quantitative rigor and experimentation discipline. You think in funnels, cohorts, and growth loops. You size opportunities, design clean A/B tests, and read results without overclaiming.",
+      "skill_type": "capability",
+      "domain": "growth_analytics_and_experimentation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "A/B tests",
+        "funnels",
+        "cohorts",
+        "growth loops"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_stack_fluency",
+      "raw_text_from_jd": "Fluency with the modern growth stack: lifecycle and CRM platforms, attribution, product analytics (Amplitude, Mixpanel, or similar), and experimentation tooling.",
+      "skill_type": "tool_proficiency",
+      "domain": "growth_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Amplitude",
+        "Mixpanel"
+      ],
+      "technologies_named": [
+        "lifecycle platforms",
+        "CRM platforms",
+        "attribution",
+        "product analytics",
+        "experimentation tooling"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partnerships_integrations_acquisition",
+      "raw_text_from_jd": "Experience building or scaling acquisition through partnerships and third-party integrations, with a feel for the integration, incentive, and measurement work that makes a partner channel durable.",
+      "skill_type": "capability",
+      "domain": "partnership_and_integration_channels",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "third-party integrations"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_influence",
+      "raw_text_from_jd": "Exceptional communication and influence at every altitude, from an engineer debating instrumentation to a VP sponsoring the target. You operate independently in a flat, fast-moving organization and move teams to act without relying on authority.",
+      "skill_type": "capability",
+      "domain": "stakeholder_influence_and_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Business Travel full-funnel growth — individual business travelers and managed company accounts, spanning acquisition, onboarding, activation, engagement, and retention",
+    "business_model": "B2B2C — individual consumer rideshare with enterprise/managed company accounts layer",
+    "primary_metrics_inferred": [
+      "New business rider acquisition (self-serve, paid, organic, referral, partner channels)",
+      "Company account adoption (managed accounts)",
+      "First business ride conversion",
+      "Activation and habit formation rates",
+      "Retention and repeat ride frequency",
+      "Cost per acquisition by channel"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Marketing",
+      "Sales"
+    ],
+    "core_responsibilities": [
+      "Define the full-funnel growth strategy for business travel across acquisition, activation, and engagement, spanning both organic business travelers and managed company accounts",
+      "Own new-user acquisition for business travel across self-serve enrollment, paid, organic, referral, and partner channels",
+      "Drive onboarding, activation, and first value from signup through first business ride",
+      "Build partnership- and integration-powered channels with travel booking, expense platforms, corporate cards, loyalty programs, airlines, hotels, and HR/finance systems",
+      "Design engagement and retention loops including business rewards, lifecycle messaging, in-app re-engagement",
+      "Set the experimentation bar including testing cadence, readout standards, and shipping bar",
+      "Translate funnel data, cohort behavior, and experiment results into quarterly priorities and represent Business Travel in executive reviews"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      176000,
+      220000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned but not detailed",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "business travel",
+    "growth",
+    "full-funnel",
+    "acquisition",
+    "activation",
+    "retention",
+    "B2B2C",
+    "managed accounts",
+    "partnerships",
+    "integrations",
+    "experimentation",
+    "lifecycle",
+    "cohort analysis",
+    "growth loops",
+    "staff PM",
+    "consumer mobile"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($176K-$220K base) with equity and bonus mentioned",
+    "Clear product surface and ownership area with well-defined funnel stages",
+    "Individual-contributor role with explicit influence-based leadership model (no direct reports required)",
+    "Business travel framed as 'one of Lyft's largest and most durable growth opportunities' — high strategic visibility",
+    "Hybrid flexibility of up to 4 weeks remote per year in addition to 3-day in-office schedule",
+    "Detailed responsibilities show strategic depth expected, not just execution"
+  ],
+  "red_flags": [
+    "Hybrid requires 3 specific days per week (Mon/Wed/Thu) in office — limited flexibility on schedule even if technically hybrid",
+    "New York City area only for the stated pay range; other locations not mentioned, limiting candidate geography",
+    "Visa sponsorship not addressed in the JD",
+    "No nice-to-haves listed — hard requirement bar is high with no partial credit signals"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement, compensation range, and IC leadership framing)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not enumerated in JD)",
+      "scope.business_model (inferred from product description of individual travelers + managed company accounts)",
+      "location.work_auth (not stated; defaulted to 'open')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')",
+      "compensation.location_pay_differential (inferred from 'salary ranges are dependent on… geographic location')"
+    ],
+    "ambiguities": [
+      "The JD names New York City for the compensation range but does not explicitly state the role is NYC-only; other locations may exist but are not disclosed. Treated as NYC-primary based on stated pay range.",
+      "Nice-to-haves section is entirely absent from the JD — all listed requirements appear as unconditional bullets, so all were classified as must_haves with severity hard."
+    ]
+  }
+}

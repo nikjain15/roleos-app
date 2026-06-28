@@ -1,0 +1,330 @@
+{
+  "company": "Affirm",
+  "role_title": "Staff Product Manager, App Platform & Experience",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7776439003",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7776439003",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional for proximal roles; majority of roles fully remote",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Technical PM (platform/mobile focus)",
+  "seniority": {
+    "level": "Staff PM (IC6 equivalent)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management experience",
+      "Pay Grade P, Equity Grade 7 — consistent with Staff-level IC",
+      "CAN base pay range $181,000–$241,000",
+      "Drive alignment across multiple organizations without direct authority",
+      "Cross-functional leadership role spanning Product, Design, Engineering, Research, Analytics, and Brand"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "8+ years of product management experience building consumer technology products at scale.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "consumer technology products at scale",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Demonstrated success leading highly cross-functional initiatives that span multiple teams and product areas.",
+      "skill_type": "outcome",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_product_instincts",
+      "raw_text_from_jd": "Strong consumer product instincts and exceptional product taste.",
+      "skill_type": "capability",
+      "domain": "consumer_product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mobile_web_experience_ownership",
+      "raw_text_from_jd": "Experience owning or influencing core mobile and web experiences, navigation systems, information architecture, platform experiences, or design systems.",
+      "skill_type": "domain_knowledge",
+      "domain": "mobile_web_consumer_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "design_engineering_partnership",
+      "raw_text_from_jd": "Experience partnering deeply with Design and Engineering organizations to deliver polished consumer experiences.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "react_native_partnership",
+      "raw_text_from_jd": "Experience partnering closely with engineering teams building large-scale consumer applications, including experience working within React Native environments. While deep technical expertise is not required, you should be comfortable shaping product strategy for shared platform capabilities and mobile architecture decisions.",
+      "skill_type": "domain_knowledge",
+      "domain": "mobile_platform_product_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "React Native"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving",
+      "raw_text_from_jd": "Strong analytical and problem-solving skills, with the ability to balance customer needs, business goals, and technical constraints.",
+      "skill_type": "capability",
+      "domain": "analytics_and_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_stakeholder_management",
+      "raw_text_from_jd": "Exceptional communication, stakeholder management, and organizational influence skills.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "influence_without_authority",
+      "raw_text_from_jd": "Proven ability to build alignment and drive outcomes in complex environments without direct authority.",
+      "skill_type": "outcome",
+      "domain": "organizational_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "major_redesign_experience",
+      "raw_text_from_jd": "You've led major redesigns or foundational experience transformations.",
+      "skill_type": "outcome",
+      "domain": "consumer_experience_design",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shared_platform_frameworks",
+      "raw_text_from_jd": "You've built shared product platforms, frameworks, or systems that enabled multiple teams to move faster while improving experience quality.",
+      "skill_type": "outcome",
+      "domain": "platform_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_mobile_web_deep_expertise",
+      "raw_text_from_jd": "You have deep expertise in consumer mobile and web experiences and understand the nuances of designing for engagement, trust, and simplicity.",
+      "skill_type": "domain_knowledge",
+      "domain": "consumer_mobile_web",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_principles_org_influence",
+      "raw_text_from_jd": "You have a track record of defining product principles and influencing organizational decision-making at scale.",
+      "skill_type": "outcome",
+      "domain": "product_strategy_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Consumer mobile apps, web experiences, and future consumer surfaces; foundational experience systems including navigation, information architecture, design systems, React Native stack",
+    "business_model": "B2C consumer fintech (buy now, pay later)",
+    "primary_metrics_inferred": [
+      "Consumer experience quality and cohesion",
+      "Platform adoption and developer velocity across product teams",
+      "Consumer engagement and retention across app and web surfaces",
+      "Reduction in experience inconsistency across surfaces"
+    ],
+    "cross_functional_partners": [
+      "Mobile Engineering",
+      "Web Engineering",
+      "Design",
+      "Research",
+      "Analytics",
+      "Brand",
+      "Consumer organization broadly"
+    ],
+    "core_responsibilities": [
+      "Define and drive the long-term vision for Affirm's core consumer experience across app, web, and future consumer surfaces",
+      "Own foundational experience domains including navigation, information architecture, design systems, shared UX frameworks, and platform capabilities",
+      "Lead major experience initiatives, including large-scale redesigns and structural improvements to the consumer journey",
+      "Partner closely with Mobile and Web Engineering teams to shape architecture, capabilities, and developer experience including React Native application stack",
+      "Help define shared capabilities, navigation patterns, component frameworks, and platform investments",
+      "Establish principles, standards, and frameworks that help product teams deliver consistent and intuitive experiences",
+      "Create scalable approaches for common consumer experience patterns across onboarding, discovery, personalization, engagement, servicing, and account management",
+      "Drive alignment across multiple organizations and influence roadmaps without direct authority",
+      "Establish mechanisms that raise the quality bar across the Consumer organization",
+      "Use research, experimentation, analytics, and product judgment to identify improvement opportunities"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      181000,
+      241000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Equity Grade 7; equity rewards and ESPP mentioned",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "consumer experience",
+    "React Native",
+    "mobile platform",
+    "design systems",
+    "information architecture",
+    "navigation",
+    "foundational experience",
+    "cross-functional leadership",
+    "platform capabilities",
+    "Staff PM",
+    "buy now pay later",
+    "consumer technology",
+    "shared frameworks",
+    "organizational influence"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($181K–$241K CAN base) with equity and benefits detail",
+    "Remote-first company; role tagged #LI-Remote",
+    "Clear product surface and ownership area — foundational consumer experience systems",
+    "Honest about scope: influence without direct authority explicitly acknowledged",
+    "Existing vacancy posted — not a pipeline role",
+    "Comprehensive benefits including 100% subsidized medical coverage"
+  ],
+  "red_flags": [
+    "Compensation range appears to be in Canadian dollars (CAN) but the broader company is US-headquartered and the role is US-remote — currency labeling may confuse candidates expecting USD",
+    "No visa sponsorship information stated anywhere in the JD",
+    "Equity Grade 7 / Pay Grade P are internal labels without external benchmarking context",
+    "Role spans an unusually broad remit (navigation, IA, design systems, React Native platform, governance, experimentation) which may indicate under-resourcing or scope creep risk"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from pay/equity grade labels and years requirement)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)",
+      "compensation.location_pay_differential (inferred from mention of location as a pay factor)"
+    ],
+    "ambiguities": [
+      "Compensation range is labeled 'CAN base pay range' suggesting Canadian dollars, but the role is listed as remote with #LI-Remote and the company is US-headquartered. It is unclear whether this range applies to US candidates or only Canadian hires, or whether 'CAN' is a typo/abbreviation.",
+      "Location type: JD body says 'remote-first' and '#LI-Remote' but notes some roles require occasional office time for 'proximal' employees. The role itself appears to be fully remote; classified as remote-us pending confirmation.",
+      "No explicit statement on work authorization or visa sponsorship — left as 'unclear'."
+    ]
+  }
+}

@@ -1,0 +1,233 @@
+{
+  "company": "Replit",
+  "role_title": "Enterprise Product Manager",
+  "url": "https://jobs.ashbyhq.com/replit/06cbc016-f931-431a-92cf-29fa74eedbf1",
+  "ats_provider": "ashby",
+  "ats_job_id": "06cbc016-f931-431a-92cf-29fa74eedbf1",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM with enterprise/B2B focus",
+  "seniority": {
+    "level": "Staff PM (IC6 equivalent)",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of product management experience, with at least 3 focused on enterprise products",
+      "JD title says 'Enterprise Product Manager' but body says 'Staff Product Manager'",
+      "End-to-end roadmap ownership across a major new product motion"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_total",
+      "raw_text_from_jd": "6+ years of product management experience, with at least 3 focused on enterprise products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_pm_enterprise",
+      "raw_text_from_jd": "with at least 3 focused on enterprise products.",
+      "skill_type": "years_of_experience",
+      "domain": "enterprise_product_management",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "it_admin_buyer_fluency",
+      "raw_text_from_jd": "Fluency with IT and admin buyer personas and what they need to adopt and roll out software at scale.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_it_and_admin_buyers",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Excellent communication and cross-functional skills, with a track record of moving work forward across engineering, design, sales, and security.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_judgment",
+      "raw_text_from_jd": "Strong technical judgment. You can understand deep technical concepts and go deep with engineers on security and infrastructure topics.",
+      "skill_type": "capability",
+      "domain": "security_and_infrastructure",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "regulated_industries_and_compliance",
+      "raw_text_from_jd": "Experience selling into regulated industries and familiarity with frameworks like SOC 2 and HIPAA.",
+      "skill_type": "domain_knowledge",
+      "domain": "compliance_and_regulated_industries",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SOC 2",
+        "HIPAA"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_scaleup_experience",
+      "raw_text_from_jd": "Experience at a scale-up that grew its enterprise motion from infancy to scale.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_go_to_market",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "scale-up"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Replit enterprise product — SSO/SCIM, admin & governance, data privacy & compliance, deployment options, enterprise agent capabilities, land-and-expand product motion",
+    "business_model": "B2B enterprise SaaS (agentic software creation platform, company-wide deployments)",
+    "primary_metrics_inferred": [
+      "Enterprise revenue growth / ARR",
+      "Pilot-to-company-wide conversion rate",
+      "Daily active usage within enterprise accounts",
+      "Account expansion (seats, spend)"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Sales",
+      "Security"
+    ],
+    "core_responsibilities": [
+      "Own the enterprise roadmap end to end. Set the strategy and priorities for everything that makes large companies successful on Replit, from getting through procurement to driving daily usage and expansion across the account.",
+      "Make Replit Agent the best in the world at solving business problems for non-technical users.",
+      "Build the enterprise platform. Own the capabilities serious buyers depend on: identity and access (SSO, SCIM), admin and governance, data privacy and compliance, and flexible deployment options like single-tenant and Cloud-Prem.",
+      "Drive land-and-expand. Build the product-led motion that grows a handful of builders into a company-wide rollout.",
+      "Partner cross-functionally. Work hand in hand with engineering, design, sales, and security, turning what you learn from won and lost deals into product that ships.",
+      "Be the voice of the enterprise customer. Spend real time with customers, on calls, in security reviews, and on-site."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Competitive Salary & Equity (form not specified)",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "enterprise product manager",
+    "staff PM",
+    "Replit Agent",
+    "SSO",
+    "SCIM",
+    "governance",
+    "data privacy",
+    "compliance",
+    "land-and-expand",
+    "non-technical users",
+    "enterprise roadmap",
+    "agentic software",
+    "SOC 2",
+    "HIPAA",
+    "Cloud-Prem"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Explosive revenue growth cited ($2M to $400M+ in under a year) signals high-momentum company",
+    "Role described as having 'unusual leverage' with an early-stage enterprise motion — high-impact opportunity",
+    "Named enterprise customers (Visa, Ernst & Young, Comcast) suggest real traction, not just aspirational",
+    "Equity included in comp package",
+    "Inclusive hiring language encouraging non-traditional and underrepresented candidates"
+  ],
+  "red_flags": [
+    "Role_title in metadata is 'Enterprise Product Manager' but JD body says 'Staff Product Manager' — title inconsistency worth clarifying",
+    "No compensation range disclosed",
+    "Location and remote/hybrid policy are entirely unstated — major ambiguity for candidates",
+    "Visa sponsorship and work authorization not mentioned",
+    "No team size or reporting structure stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Staff Product Manager' in JD body, years required, and scope of ownership)",
+      "seniority.manages_people (inferred as false; no mention of people management)",
+      "scope.business_model (inferred from product description and named enterprise customers)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.type set to 'unclear' — JD mentions in-office benefits (commuter, setup reimbursement, amenities) suggesting some offices exist, but role location and hybrid policy are never stated",
+      "compensation.location_pay_differential set to false by default; not addressed in JD"
+    ],
+    "ambiguities": [
+      "Role title discrepancy: external job board title is 'Enterprise Product Manager' but JD body heading says 'We're hiring a Staff Product Manager'. May be a seniority or titling inconsistency worth confirming with recruiter.",
+      "Location/work model is entirely unspecified in the JD body. The benefits section mentions in-office-only perks (commuter benefits, in-office setup reimbursement, in-office amenities) implying an office exists, but it is unclear if this role is remote, hybrid, or onsite.",
+      "No city or country listed for the role, making location.type 'unclear' rather than any specific type."
+    ]
+  }
+}

@@ -1,47 +1,48 @@
 {
   "company": "Brex",
   "role_title": "Director, Organic Growth & Discoverability",
-  "url": "https://www.brex.com/careers/8522876002?gh_jid=8522876002",
+  "url": "https://www.brex.com/careers/8522918002?gh_jid=8522918002",
   "ats_provider": "greenhouse",
-  "ats_job_id": "8522876002",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "8522918002",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "hybrid",
     "cities_listed": [
-      "San Francisco, CA"
+      "Seattle, WA"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "three days per week in office (Monday, Wednesday, Thursday) starting February 2, 2026; currently minimum two coordinated days (Wednesday and Thursday)",
+    "office_time_required": "three days per week in office - Monday, Wednesday and Thursday (starting February 2, 2026); up to four weeks per year of fully remote work",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Growth (non-PM)",
   "archetype_confidence": "high",
-  "secondary_archetype": "SEO / Organic Growth Director",
+  "secondary_archetype": "Director of SEO / Organic Growth & Discoverability",
   "seniority": {
-    "level": "Director",
+    "level": "Director (people manager, senior IC-adjacent)",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
       "8+ years in SEO, organic growth, or digital marketing",
       "at least 3 years leading a team and owning strategy and budget",
-      "Role title is Director",
       "Reports to Head of Growth Marketing",
-      "Comp range $220K–$276K base"
+      "Comp range $220K-$276K base",
+      "Hire and develop the team",
+      "Own the roadmap, OKRs, and budget"
     ]
   },
   "must_haves": [
     {
-      "id": "years_seo_organic_growth",
+      "id": "years_seo_organic_digital",
       "raw_text_from_jd": "8+ years in SEO, organic growth, or digital marketing, with at least 3 years leading a team and owning strategy and budget at a B2B SaaS, fintech, or technology company.",
       "skill_type": "years_of_experience",
       "domain": "seo_organic_growth_digital_marketing",
       "minimum_value": 8,
       "unit": "years",
-      "qualifier": "with at least 3 years leading a team and owning strategy and budget at a B2B SaaS, fintech, or technology company",
+      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -54,8 +55,34 @@
       ],
       "geographies_named": [],
       "employer_types_named": [
+        "B2B SaaS company",
+        "fintech company",
+        "technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "years_leading_team_strategy_budget",
+      "raw_text_from_jd": "at least 3 years leading a team and owning strategy and budget at a B2B SaaS, fintech, or technology company.",
+      "skill_type": "years_of_experience",
+      "domain": "team_leadership_and_strategy",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
         "B2B SaaS",
         "fintech",
+        "technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "B2B SaaS company",
+        "fintech company",
         "technology company"
       ],
       "credentials_named": []
@@ -86,8 +113,8 @@
       "tools_named": [],
       "technologies_named": [
         "Core Web Vitals",
-        "crawl logs",
         "schema implementations",
+        "crawl logs",
         "site architecture"
       ],
       "industries_named": [],
@@ -99,16 +126,15 @@
       "id": "ai_visibility_fluency",
       "raw_text_from_jd": "You've actively experimented with citation strategies, structured content for model consumption, or measured share of voice in answer engines. We can't train this on the job.",
       "skill_type": "domain_knowledge",
-      "domain": "ai_answer_engine_optimization",
+      "domain": "ai_search_visibility_aeo_geo",
       "evidence_required": "hands_on_use",
       "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
         "citation strategies",
-        "structured content",
-        "answer engines",
-        "model consumption"
+        "structured content for model consumption",
+        "answer engines"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -116,11 +142,11 @@
       "credentials_named": []
     },
     {
-      "id": "content_instincts",
+      "id": "content_instincts_at_scale",
       "raw_text_from_jd": "You can tell the difference between content that earns trust and content that fills a page. You have experience building or managing content operations at scale with high editorial standards.",
       "skill_type": "capability",
       "domain": "content_strategy_and_operations",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -149,7 +175,7 @@
       "id": "comfort_with_ambiguity",
       "raw_text_from_jd": "You make consequential decisions with incomplete data. You like building a function from scratch more than running one that's already humming.",
       "skill_type": "cultural_fit",
-      "domain": "ambiguity_and_function_building",
+      "domain": "ambiguity_and_zero_to-one_building",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -164,7 +190,7 @@
       "id": "experimentation_mindset",
       "raw_text_from_jd": "You treat failure as a feedback loop. You run experiments, kill what doesn't work quickly, and double down on what does.",
       "skill_type": "cultural_fit",
-      "domain": "experimentation_and_iteration",
+      "domain": "growth_experimentation",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -182,12 +208,12 @@
       "raw_text_from_jd": "You've navigated a major Google algorithm update that materially impacted your business and can walk through how you diagnosed, adapted, and recovered.",
       "skill_type": "outcome",
       "domain": "seo_algorithm_recovery",
-      "evidence_required": "shipped_products_with_metrics",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
-        "Google algorithm"
+        "Google algorithm update"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -195,16 +221,17 @@
       "credentials_named": []
     },
     {
-      "id": "rag_understanding",
+      "id": "rag_retrieval_understanding",
       "raw_text_from_jd": "You understand how retrieval-augmented generation systems select and rank sources, and you can translate that into actionable content and structural strategy.",
       "skill_type": "domain_knowledge",
-      "domain": "retrieval_augmented_generation",
+      "domain": "retrieval_augmented_generation_and_llm_retrieval",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
-        "retrieval-augmented generation"
+        "retrieval-augmented generation",
+        "RAG"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -220,7 +247,10 @@
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
-      "technologies_named": [],
+      "technologies_named": [
+        "AI",
+        "automation tools"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -237,7 +267,7 @@
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "regulated industry",
+        "fintech",
         "compliance-sensitive industry"
       ],
       "geographies_named": [],
@@ -247,22 +277,23 @@
   ],
   "explicitly_excluded": [],
   "scope": {
-    "team_size_estimate": "unclear (inherits existing team, grows from there)",
-    "surface": "Organic growth and discoverability across Google, AI answer engines, Reddit, G2, YouTube — end-to-end from first discovery to qualified lead",
+    "team_size_estimate": "unclear (inherits existing team, grows it from there)",
+    "surface": "Organic growth and discoverability across Google, AI answer engines, Reddit, G2, YouTube — from first discovery to qualified lead",
     "business_model": "B2B SaaS / fintech — corporate cards, expense management, business banking",
     "primary_metrics_inferred": [
       "SQL ARR",
       "Bookings",
       "Self-serve activations",
       "Qualified organic traffic",
-      "Organic visitor to activated user conversion rate",
+      "Conversion from organic visitors to activated users and pipeline",
       "Share of voice in AI-generated answers",
-      "Keyword ranking positions"
+      "Keyword rankings",
+      "CAC efficiency"
     ],
     "cross_functional_partners": [
+      "Web Engineering",
       "Sales",
-      "SDR leadership",
-      "Web engineering",
+      "SDR Leadership",
       "Design",
       "Partnerships"
     ],
@@ -271,10 +302,10 @@
       "Build Brex's AEO/GEO playbook for ChatGPT, Perplexity, Gemini, Claude, and Google AI Overviews",
       "Co-own the technical SEO roadmap with web engineering",
       "Run content strategy and production for organic",
-      "Unify discoverability presence across Reddit, G2, YouTube, and community/review surfaces",
-      "Educate sales and partnerships on organic and AI search changes",
-      "Hire and develop the organic growth team",
-      "Manage and rationalize vendor/agency stack"
+      "Unify presence across Reddit, G2, YouTube, and other community and review surfaces",
+      "Get sales and partnerships up to speed on how organic and AI search are changing",
+      "Hire and develop the team",
+      "Be a culture carrier for the Growth Marketing team"
     ]
   },
   "compensation": {
@@ -295,49 +326,49 @@
     "GEO",
     "AI answer engines",
     "discoverability",
-    "Core Web Vitals",
+    "share of voice",
     "technical SEO",
-    "content strategy",
+    "Core Web Vitals",
+    "content operations",
     "pipeline",
     "SQL ARR",
-    "share of voice",
     "ChatGPT",
     "Perplexity",
+    "Google AI Overviews",
     "B2B SaaS",
     "fintech",
-    "agency management",
-    "AI-native"
+    "retrieval-augmented generation"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed and competitive ($220K–$276K base)",
-    "Clear scope of ownership — single accountable owner for all organic/discoverability channels",
-    "Explicit acknowledgment of what success looks like in first 12–18 months",
-    "Team is lean and AI-native by design — signals high autonomy and modern tooling",
-    "Brex has a large balance sheet (Capital One subsidiary) with startup execution speed",
-    "Role reports directly to Head of Growth Marketing — high visibility"
+    "Compensation range disclosed and competitive ($220K-$276K base)",
+    "Clear ownership scope — no single person owns visibility today, giving greenfield authority",
+    "Explicit 12-18 month success criteria stated in JD",
+    "AI-native working culture described with specifics (Claude, Clay, custom integrations)",
+    "Reports directly to Head of Growth Marketing — senior access",
+    "Team carries a number (SQL ARR, bookings, activations) — accountability is clear",
+    "Equity mentioned as part of total comp"
   ],
   "red_flags": [
-    "San Francisco office required (hybrid, 3 days/week starting Feb 2026) — eliminates remote candidates",
-    "AI visibility fluency explicitly flagged as non-trainable ('We can't train this on the job') — hard filter",
-    "Inherits an existing team of unclear composition — potential organizational complexity",
-    "Vendor stack rationalization implies prior underperformance or misalignment — may require difficult decisions early",
-    "Keyword positions have been lost to competitors in recent algorithm shifts — requires recovery from a deficit",
-    "Work auth and visa sponsorship not stated"
+    "Role is Seattle office-based hybrid; moving to 3 days/week in-office from February 2026 — no remote option",
+    "AI visibility fluency is explicitly non-trainable: 'We can't train this on the job' — hard bar with no mitigation path",
+    "No visa sponsorship information stated",
+    "Brex is now a wholly owned subsidiary of Capital One — may affect startup culture/compensation dynamics for candidates seeking pure startup environment",
+    "Inheriting an existing team of unclear size and composition adds onboarding complexity"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Director', years required, and comp range)",
-      "scope.business_model (inferred from product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities and 'We carry a number' language)",
+      "seniority.level (inferred from years required, team leadership requirement, and comp range)",
+      "scope.team_size_estimate (not stated; described as 'inherit some of it, grow it from there')",
+      "scope.primary_metrics_inferred (inferred from responsibilities and Growth Marketing section; not fully enumerated in Requirements)",
+      "scope.business_model (inferred from company description)",
       "location.work_auth (not stated)",
       "location.visa_sponsorship (not stated)",
-      "compensation.location_pay_differential (inferred from 'starting base pay will depend on...candidate's location')"
+      "compensation.location_pay_differential (inferred from 'starting base pay will depend on... the candidate's location')"
     ],
     "ambiguities": [
-      "Office days requirement: body states currently 2 days (Wednesday/Thursday) but transitions to 3 days (Monday, Wednesday, Thursday) starting February 2, 2026. Both readings captured.",
-      "Team size not specified — JD says 'You'll inherit some of it, grow it from there' without numbers.",
-      "Equity form is vague — 'equity and other forms of compensation may be provided' does not specify RSUs vs. options."
+      "JD states 'up to four weeks per year of fully remote work' as a perk but also states the role is based in Seattle office — remote_us_eligible set to false as the role requires Seattle office presence; the 4-week remote perk is supplemental, not full remote eligibility.",
+      "The office schedule describes a transition: currently 2 days/week (Wed/Thu), increasing to 3 days/week (Mon/Wed/Thu) from February 2, 2026. It is unclear which applies at time of hire."
     ]
   }
 }

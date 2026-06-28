@@ -1,0 +1,275 @@
+{
+  "company": "Stripe",
+  "role_title": "Product Lead, Connect",
+  "url": "https://stripe.com/jobs/search?gh_jid=7819759",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7819759",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager (people management component)",
+  "seniority": {
+    "level": "Director / Group PM (people manager, 10+ years PM + 3+ years managing PMs)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "3+ years of managing product managers",
+      "10+ years as a product manager",
+      "Oversee execution for some of the highest-impact initiatives",
+      "Direct reports mentioned explicitly; coaching, mentoring, and hiring responsibilities",
+      "Develop strategy for one of Stripe's core products"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_managing_pms",
+      "raw_text_from_jd": "3+ years of managing product managers, 10+ years as a product manager",
+      "skill_type": "years_of_experience",
+      "domain": "people_management_of_product_managers",
+      "minimum_value": 3,
+      "unit": "years",
+      "qualifier": "managing product managers",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_as_pm",
+      "raw_text_from_jd": "3+ years of managing product managers, 10+ years as a product manager",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_team_initiative_leadership",
+      "raw_text_from_jd": "Experience leading cross-team initiatives from ideation to execution",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_expertise",
+      "raw_text_from_jd": "Technical expertise—you've led technical products or have a background in computer science (or similar)",
+      "skill_type": "domain_knowledge",
+      "domain": "technical_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "computer science degree"
+      ]
+    },
+    {
+      "id": "zero_to_one_and_continuous_improvement",
+      "raw_text_from_jd": "Experience building both new products (0-to-1) as well as a track record of shipping continuous product improvements to an existing product portfolio",
+      "skill_type": "outcome",
+      "domain": "product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "user_empathy",
+      "raw_text_from_jd": "Deep user empathy and a high bar for user experience",
+      "skill_type": "capability",
+      "domain": "user_research_and_ux",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "persistence_whatever_it_takes",
+      "raw_text_from_jd": "Persistence and a whatever-it-takes approach to ensure that your product is successful",
+      "skill_type": "cultural_fit",
+      "domain": "work_ethic",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Strong written and verbal communication skills",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "platform_marketplace_experience",
+      "raw_text_from_jd": "Experience working on a platform or marketplace product",
+      "skill_type": "domain_knowledge",
+      "domain": "platform_and_marketplace_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "paytech_fintech_experience",
+      "raw_text_from_jd": "Experience working on a paytech or fintech product",
+      "skill_type": "domain_knowledge",
+      "domain": "payments_fintech",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "paytech",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Connect product — accounts and transaction APIs for marketplaces, on-demand services, ecommerce platforms, invoicing platforms, professional SaaS, fundraising platforms, rental management platforms",
+    "business_model": "B2B platform / API product; developer-facing payments infrastructure enabling multi-party payment routing",
+    "primary_metrics_inferred": [
+      "Payment volume routed through Connect",
+      "Adoption of accounts and transaction APIs",
+      "Marketplace and platform revenue",
+      "Product improvements shipped per cycle"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Analytics",
+      "Marketing",
+      "Sales",
+      "Customer-facing teams"
+    ],
+    "core_responsibilities": [
+      "Define and drive the product roadmap for the Connect product, including the accounts and transaction APIs",
+      "Devise strategy, steer product requirements, and oversee execution for some of the highest-impact initiatives that serve modern marketplaces and software platforms",
+      "Work cross-functionally with engineering, design, analytics, and other global teams to define, build, and deploy products that delight our users",
+      "Build and coach your team on best practices in defining product requirements and how to deliver against those requirements and the overall roadmap",
+      "Coaching, mentoring, and hiring direct reports"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Connect",
+    "marketplaces",
+    "payment routing",
+    "platform",
+    "accounts API",
+    "transaction API",
+    "product roadmap",
+    "people management",
+    "fintech",
+    "cross-functional",
+    "0-to-1",
+    "technical PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface and ownership area (Connect, accounts and transaction APIs)",
+    "Role offers direct exposure to Stripe's leadership team for strategy feedback",
+    "High-impact product serving millions of users across diverse marketplace and platform categories",
+    "Preferred qualifications explicitly framed as bonuses, lowering bar for non-fintech candidates",
+    "Encourages application if minimum requirements are met"
+  ],
+  "red_flags": [
+    "No location, work authorization, or visa sponsorship information provided in the JD",
+    "No compensation or equity information disclosed",
+    "High bar: 10+ years PM experience AND 3+ years managing PMs — a relatively narrow candidate pool",
+    "Role title is 'Product Lead' but scope implies Director-level; seniority band is ambiguous without comp data"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirements and people management scope; not explicitly stated)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (not stated in JD; marked unclear)",
+      "compensation (not stated)"
+    ],
+    "ambiguities": [
+      "Role title is 'Product Lead' which could map to Senior PM IC or Director/Group PM; the JD body explicitly mentions direct reports and hiring responsibilities, suggesting a people manager, but the title is ambiguous.",
+      "No location specified anywhere in the JD; it is unclear whether this role is remote, hybrid, or onsite, and which cities are applicable.",
+      "Technical expertise requirement accepts either 'led technical products' OR 'background in computer science (or similar)' — two different paths to satisfy the requirement."
+    ]
+  }
+}

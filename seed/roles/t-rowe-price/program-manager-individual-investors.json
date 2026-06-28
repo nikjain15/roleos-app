@@ -4,7 +4,7 @@
   "url": "https://troweprice.wd5.myworkdayjobs.com/en-US/TROWEPRICE/job/Owings-Mills-MD/Program-Manager---Individual-Investors_80796-1",
   "ats_provider": "workday",
   "ats_job_id": null,
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -14,22 +14,22 @@
     ],
     "remote_us_eligible": true,
     "office_time_required": "up to one day per week from home (predominantly in-office)",
-    "work_auth": "unclear",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Program Manager",
   "archetype_confidence": "high",
   "secondary_archetype": "BizOps / Strategy & Ops",
   "seniority": {
-    "level": "Senior IC / Staff-level Program Manager",
+    "level": "Senior IC / Principal (Senior Program Manager)",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "8+ years of total relevant work experience required",
       "Described as 'senior leader responsible for shaping and delivering large, complex, and high-impact strategic initiatives'",
-      "Ongoing engagement with senior stakeholders and executive sponsors",
-      "Base salary range $122,000–$261,000 depending on location, consistent with senior IC"
+      "Base salary range $122,000–$261,000 depending on location, consistent with senior IC level",
+      "Ongoing engagement with senior stakeholders and executive sponsor"
     ]
   },
   "must_haves": [
@@ -68,17 +68,32 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
-    }
-  ],
-  "nice_to_haves": [
+    },
     {
-      "id": "consultant_strategic_planning_exp",
-      "raw_text_from_jd": "Preferred experience in a consultant and/or strategic planning role",
-      "skill_type": "domain_knowledge",
-      "domain": "consulting_strategic_planning",
-      "evidence_required": "work_history",
+      "id": "end_to_end_program_delivery",
+      "raw_text_from_jd": "Lead end-to-end delivery of large, complex strategic programs, ensuring alignment to business objectives, regulatory considerations, and client outcomes within a financial services environment.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
-      "severity": "soft",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_case_development",
+      "raw_text_from_jd": "Shape program strategy by developing business cases, defining multi-year roadmaps, and recommending investment priorities informed by data, market trends, and competitive dynamics.",
+      "skill_type": "capability",
+      "domain": "strategy_and_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [],
@@ -87,12 +102,91 @@
       "credentials_named": []
     },
     {
+      "id": "integrated_program_planning",
+      "raw_text_from_jd": "Develop and manage integrated program plans, including scope, timelines, budgets, and resources, while coordinating across multiple workstreams and functions to ensure seamless execution.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "program_governance",
+      "raw_text_from_jd": "Establish and lead program governance, engaging senior stakeholders and executives to drive alignment, enable effective decision-making, and maintain transparency on progress and risks.",
+      "skill_type": "capability",
+      "domain": "governance_and_stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "risk_management",
+      "raw_text_from_jd": "Proactively identify, assess, and mitigate risks, issues, and dependencies, demonstrating sound judgment and adaptability in complex, fast-paced, and ambiguous environments.",
+      "skill_type": "capability",
+      "domain": "risk_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "program_performance_monitoring",
+      "raw_text_from_jd": "Monitor program performance, including financials, KPIs, and adoption metrics, and drive continuous improvement to ensure delivery of expected value and quality outcomes.",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "consultant_strategic_planning",
+      "raw_text_from_jd": "Preferred experience in a consultant and/or strategic planning role",
+      "skill_type": "domain_knowledge",
+      "domain": "consulting_and_strategic_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "top-tier consulting firm"
+      ],
+      "credentials_named": []
+    },
+    {
       "id": "financial_services_experience",
       "raw_text_from_jd": "Experience in Financial Services/Wealth Management industry a plus",
       "skill_type": "domain_knowledge",
       "domain": "financial_services_wealth_management",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -107,8 +201,8 @@
     {
       "id": "large_scale_pm",
       "raw_text_from_jd": "Large-scale Project Management experience",
-      "skill_type": "capability",
-      "domain": "project_management",
+      "skill_type": "years_of_experience",
+      "domain": "large_scale_program_management",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -139,7 +233,7 @@
       "raw_text_from_jd": "Strong project management and organizational skills; ability to successfully manage multiple projects simultaneously",
       "skill_type": "capability",
       "domain": "project_management",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
@@ -153,7 +247,7 @@
       "id": "analytical_strategic_thinking",
       "raw_text_from_jd": "Strong analytical skills and ability to think strategically and creatively",
       "skill_type": "capability",
-      "domain": "analytics_strategy",
+      "domain": "analytical_and_strategic_thinking",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "soft",
@@ -168,38 +262,8 @@
       "id": "market_needs_research",
       "raw_text_from_jd": "Proven ability to research, identify, interpret, and prioritize market needs",
       "skill_type": "capability",
-      "domain": "market_research",
+      "domain": "market_analysis",
       "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "business_case_development",
-      "raw_text_from_jd": "Experience in developing business cases and influencing change initiatives",
-      "skill_type": "capability",
-      "domain": "business_case_development_change_management",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "presentation_influencing_skills",
-      "raw_text_from_jd": "Effective presentation and influencing skills, including strong written and verbal communication skills",
-      "skill_type": "capability",
-      "domain": "communication_influencing",
-      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
@@ -210,7 +274,37 @@
       "credentials_named": []
     },
     {
-      "id": "collaborative_interpersonal_skills",
+      "id": "business_case_and_change",
+      "raw_text_from_jd": "Experience in developing business cases and influencing change initiatives",
+      "skill_type": "capability",
+      "domain": "business_case_development_change_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "presentation_influencing",
+      "raw_text_from_jd": "Effective presentation and influencing skills, including strong written and verbal communication skills",
+      "skill_type": "capability",
+      "domain": "communication_and_influence",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "collaborative_interpersonal",
       "raw_text_from_jd": "Strong interpersonal skills - Works well in a collaborative, team-based environment",
       "skill_type": "cultural_fit",
       "domain": "team_culture",
@@ -225,7 +319,7 @@
       "credentials_named": []
     },
     {
-      "id": "ambiguity_partnership",
+      "id": "ambiguity_and_partnerships",
       "raw_text_from_jd": "Demonstrated ability of successfully dealing with ambiguity and creating partnerships across business areas",
       "skill_type": "capability",
       "domain": "organizational_navigation",
@@ -240,12 +334,12 @@
       "credentials_named": []
     },
     {
-      "id": "cross_org_navigation",
+      "id": "org_navigation_buyin",
       "raw_text_from_jd": "Proven ability to navigate across organizations and develop partnerships along with gaining buy-in for strategic proposals",
       "skill_type": "capability",
       "domain": "organizational_navigation",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -290,16 +384,16 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Individual Investor (II) organization — Program and Change Management; manages programs for a business serving 1M+ investors and $200B+ in client assets",
-    "business_model": "asset management / individual investor retail",
+    "surface": "Individual Investor (II) Program and Change Management — managing strategic programs for a business unit overseeing $200B+ in client assets and 1M investors",
+    "business_model": "B2C / B2B asset management — retail and institutional investors",
     "primary_metrics_inferred": [
-      "Program delivery against timelines and budgets",
-      "KPIs and adoption metrics for strategic initiatives",
-      "Business case ROI and investment priorities",
-      "Client outcomes and growth of Individual Investor business"
+      "Business growth of Individual Investor segment",
+      "KPIs and adoption metrics for strategic programs",
+      "Program delivery on time/budget",
+      "Client asset and investor base growth"
     ],
     "cross_functional_partners": [
-      "Executive sponsors",
+      "Executive sponsor",
       "Senior stakeholders",
       "Advisory",
       "Sales",
@@ -310,13 +404,13 @@
       "Shared Services"
     ],
     "core_responsibilities": [
-      "Lead end-to-end delivery of large, complex strategic programs within a financial services environment",
-      "Shape program strategy by developing business cases, defining multi-year roadmaps, and recommending investment priorities",
-      "Develop and manage integrated program plans, including scope, timelines, budgets, and resources",
-      "Establish and lead program governance, engaging senior stakeholders and executives",
+      "Lead end-to-end delivery of large, complex strategic programs",
+      "Shape program strategy by developing business cases and defining multi-year roadmaps",
+      "Develop and manage integrated program plans including scope, timelines, budgets, and resources",
+      "Establish and lead program governance with senior stakeholder engagement",
       "Proactively identify, assess, and mitigate risks, issues, and dependencies",
-      "Monitor program performance, including financials, KPIs, and adoption metrics",
-      "Strengthen organizational capabilities by promoting best practices, coaching teams, and enhancing program management methodologies"
+      "Monitor program performance including financials, KPIs, and adoption metrics",
+      "Strengthen organizational capabilities by promoting best practices and coaching teams"
     ]
   },
   "compensation": {
@@ -334,44 +428,44 @@
     "program management",
     "strategic initiatives",
     "business case development",
-    "change management",
-    "Individual Investor",
+    "Individual Investors",
     "financial services",
     "wealth management",
-    "cross-functional",
+    "change management",
     "executive stakeholders",
-    "multi-year roadmap",
+    "roadmap",
+    "cross-functional",
     "governance",
-    "KPIs",
-    "risk management"
+    "risk management",
+    "KPIs"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range explicitly disclosed ($122K–$261K base depending on location)",
-    "High-visibility role with direct executive exposure",
-    "Large scope: $200B AUM and 1M+ investors creates meaningful impact",
-    "Role open until 08/30/2026 — long posting window suggests genuine need",
-    "Hybrid flexibility explicitly stated",
-    "Remote workers eligible for Maryland/Colorado/Washington pay band"
+    "Compensation ranges explicitly disclosed across multiple geographies ($122K–$261K base)",
+    "Clear business context: $200B AUM, 1M investors — meaningful scope",
+    "High-visibility role with executive sponsor engagement — career accelerant",
+    "Posting available until 08/30/2026 — actively hiring",
+    "Broad preferred qualifications list signals openness to adjacent backgrounds",
+    "FINRA license explicitly not required — lower barrier to entry"
   ],
   "red_flags": [
-    "Hybrid policy allows only up to one day per week from home — effectively near-full-time in-office, primarily Owings Mills, MD",
-    "Most substantive qualifications are listed as 'Preferred' rather than 'Required', making the actual bar ambiguous",
-    "Visa sponsorship and work authorization not addressed anywhere in the JD",
-    "Broad pay range ($122K–$261K) across geographies makes benchmarking difficult without knowing candidate's specific location"
+    "Hybrid policy allows only one day per week from home — very limited remote flexibility despite 'remote workers' pay bracket listed",
+    "Role is predominantly in-office at Owings Mills, MD — less attractive to candidates outside the area",
+    "All preferred qualifications are listed as nice-to-haves, making it difficult to gauge what the hiring bar actually is",
+    "Visa sponsorship not addressed — unclear for international candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years required, responsibilities scope, and compensation range)",
-      "scope.business_model (inferred from company description and Individual Investor organization context)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
-      "location.work_auth (not stated in JD)",
-      "location.visa_sponsorship (not stated in JD)",
-      "compensation.base_range_usd set to widest stated range [$122,000–$261,000]; location-specific ranges also disclosed in JD"
+      "seniority.level (inferred from 8+ years required, exec-facing responsibilities, and comp range)",
+      "scope.primary_metrics_inferred (not directly stated; inferred from responsibilities)",
+      "scope.business_model (inferred from company description and II segment context)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "compensation.base_range_usd (lowest and highest bands used to represent full stated range)"
     ],
     "ambiguities": [
-      "URL suggests Owings Mills, MD as primary location, but pay bands include remote workers under the Maryland/Colorado/Washington range — remote eligibility is somewhat unclear given the near-full-time in-office hybrid policy",
-      "Most qualifications beyond education and 8+ years are listed under 'Preferred', making the true hard requirements difficult to distinguish beyond the two explicit 'Required' items"
+      "Compensation table lists 'remote workers' as one of the Maryland/Colorado/Washington pay brackets ($122K–$209K), implying some remote eligibility, but the Work Flexibility section says 'up to one day per week from home' — treated as hybrid/primarily onsite here.",
+      "The JD URL references 'Owings-Mills-MD' but the body does not explicitly name the primary city — Owings Mills, MD inferred as primary office location from URL.",
+      "All preferred qualifications are listed under 'Preferred' but some (e.g., large-scale PM experience, senior stakeholder management) closely mirror must-have responsibilities described in the role summary — classified as soft per JD section labeling."
     ]
   }
 }

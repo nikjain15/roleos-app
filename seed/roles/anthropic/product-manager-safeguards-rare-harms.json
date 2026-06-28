@@ -1,0 +1,310 @@
+{
+  "company": "Anthropic",
+  "role_title": "Product Manager, Safeguards Rare Harms",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5139628008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5139628008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% of the time",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Safety / Trust & Safety PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in product management required",
+      "Comp range $305K-$385K base, consistent with Senior IC at Anthropic",
+      "Expected to drive roadmaps, strategy, and cross-functional alignment independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years in product management with a focus on fast problem understanding, building roadmaps with tractable progress, ability to get into the details on data, detection & interventions, infrastructure & tools, and/or evals.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_tradeoff_decisions",
+      "raw_text_from_jd": "Ability to make technical tradeoff decisions; ideally with experience working across policy experts, AI/ML research engineers and software engineering teams to design and build state of the art safety systems.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "user_understanding_safeguards",
+      "raw_text_from_jd": "Strong user understanding of how our products are used, their Safeguards concerns and how we provide the best solutions.",
+      "skill_type": "domain_knowledge",
+      "domain": "trust_and_safety",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_strategy",
+      "raw_text_from_jd": "Demonstrated ability to build product and engineering strategy across multiple cross-functional teams for a rapidly changing space.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "metrics_design_risk_evaluation",
+      "raw_text_from_jd": "Demonstrated experience in designing and building metrics to evaluate risks, system performance, user impact and making crisp tradeoffs",
+      "skill_type": "capability",
+      "domain": "metrics_and_measurement",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "prioritization_ambiguity",
+      "raw_text_from_jd": "Very strong ability to navigate, and prioritize amidst rapidly changing product specs, and to flex into different domains to bring clarity and execute.",
+      "skill_type": "capability",
+      "domain": "prioritization",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "judgment_in_ambiguity",
+      "raw_text_from_jd": "Evidence of exercising judgment and decision making in ambiguous situations.",
+      "skill_type": "capability",
+      "domain": "decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "zero_to_one_product",
+      "raw_text_from_jd": "Planning, building, launching and measuring new products / systems in a zero to one environment.",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_communication",
+      "raw_text_from_jd": "Ability to clearly articulate complex technical concepts to non-technical audiences in written and verbal communication.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "creative_risk_thinking",
+      "raw_text_from_jd": "Think creatively about the risks and benefits of new technologies, and think beyond past checklists and playbooks.",
+      "skill_type": "cultural_fit",
+      "domain": "risk_assessment",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "safety_evals_writing",
+      "raw_text_from_jd": "Ability to write safety evals and communicate externally about safety.",
+      "skill_type": "capability",
+      "domain": "ai_safety_evaluation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Safeguards systems across Claude.ai, 1P API, and external cloud providers; detections, evals, interventions, and tools for deployment and user risk mitigation",
+    "business_model": "B2C and B2B API platform (consumer + enterprise AI safety)",
+    "primary_metrics_inferred": [
+      "Risk mitigation coverage and detection performance",
+      "Blindspot reduction in safety systems",
+      "User impact metrics from safety interventions",
+      "System performance and eval scores"
+    ],
+    "cross_functional_partners": [
+      "Policy",
+      "Enforcement",
+      "Research",
+      "Engineering",
+      "AI/ML research engineers",
+      "Software engineering teams"
+    ],
+    "core_responsibilities": [
+      "Determine how to build in safety by design upstream and leverage downstream defenses for Anthropic's frontier models, AI products, customers on different surfaces - Claude.ai, 1P API, external Cloud providers.",
+      "Ability to write safety evals and communicate externally about safety.",
+      "Drive impact via ruthless prioritization by clearly defining problems, solution options forward, clarity on both business & technical tradeoffs and accordingly clear requirements toward MVP vs. ideal state.",
+      "Align & collaborate with policy, enforcement, research, engineering and cross functional stakeholders.",
+      "Understand the AI landscape and ecosystem to plan for mitigation of deployment risks of increasingly powerful models and determined adversaries.",
+      "Lead the development of metrics to understand the area, performance, blindspots to help inform future project planning."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      305000,
+      385000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Safeguards",
+    "AI safety",
+    "safety evals",
+    "trust and safety",
+    "detections",
+    "interventions",
+    "frontier models",
+    "Claude.ai",
+    "deployment risks",
+    "risk mitigation",
+    "metrics",
+    "generative AI",
+    "policy",
+    "zero to one"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($305K-$385K base)",
+    "Visa sponsorship explicitly offered (with caveats)",
+    "Clear mission-driven focus on AI safety with real product ownership",
+    "Encourages applications from underrepresented groups and candidates who don't meet every qualification",
+    "Cross-functional scope provides high visibility across research, policy, and engineering"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "Broad and ambiguous scope ('rare harms') may indicate evolving or undefined product area",
+    "Compensation upper bound ($385K) is significantly higher than other senior PM roles at Anthropic, suggesting level ambiguity or wide band",
+    "JD does not clearly distinguish must-haves from nice-to-haves; most requirements are under 'You may be a good fit if you have' language, creating classification uncertainty"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years requirement)",
+      "location.cities_listed (inferred from HQ mention; role-specific city not explicitly stated beyond SF HQ)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed directly in JD)",
+      "scope.business_model (inferred from product surface description)",
+      "archetype secondary_archetype (inferred from trust/safety focus)"
+    ],
+    "ambiguities": [
+      "All requirements are listed under 'You may be a good fit if you have' rather than a hard 'Required' section. Per extraction rules, unconditional bullets in a 'What we look for' equivalent section are treated as hard must-haves, except 'safety evals' which reads as a standalone capability bullet closer to a nice-to-have given phrasing.",
+      "The 'ideally with experience working across policy experts, AI/ML research engineers...' qualifier in the technical tradeoff item softens that clause but is embedded in a broader hard requirement bullet — the overall item is treated as hard.",
+      "Location not explicitly named for this specific role in the body; SF inferred from company HQ and prior Anthropic postings pattern."
+    ]
+  }
+}

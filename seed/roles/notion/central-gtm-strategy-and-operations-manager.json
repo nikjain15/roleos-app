@@ -1,0 +1,310 @@
+{
+  "company": "Notion",
+  "role_title": "Central GTM Strategy & Operations Manager",
+  "url": "https://jobs.ashbyhq.com/Notion/c45ae77a-37d4-451a-bc59-1723fb15422e",
+  "ats_provider": "ashby",
+  "ats_job_id": "c45ae77a-37d4-451a-bc59-1723fb15422e",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco",
+      "New York City"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Mondays, Tuesdays, and Thursdays (Anchor Days); additional days possible",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager (GTM-focused)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in highly analytical, fast-paced environments",
+      "Independently leading multi-month initiatives in ambiguous environments",
+      "Base salary range $185,000–$200,000 consistent with Senior IC in SF/NYC",
+      "Executive presence and influencing leadership decisions"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_analytical_experience",
+      "raw_text_from_jd": "5+ years of experience in highly analytical, fast-paced environments (e.g., strategy & ops, finance, consulting, investment banking, or similar quantitative roles)",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_operations_finance",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "consulting",
+        "investment banking"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "first_principles_problem_solving",
+      "raw_text_from_jd": "Strong first-principles problem solving and structured thinking, with ability to break down ambiguous business problems into clear analytical frameworks",
+      "skill_type": "capability",
+      "domain": "analytical_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_analytical_modeling",
+      "raw_text_from_jd": "Advanced analytical and modeling skills, including ability to conduct complex analysis in Excel/Google Sheets, SQL, or AI-assisted tools (e.g., Claude Code)",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis_modeling",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Excel",
+        "Google Sheets",
+        "Claude Code"
+      ],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "dashboard_kpi_reporting_design",
+      "raw_text_from_jd": "Experience designing dashboards, KPI frameworks, or performance reporting systems that drive business decisions and executive visibility",
+      "skill_type": "capability",
+      "domain": "performance_reporting",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "extreme_ownership_initiative_leadership",
+      "raw_text_from_jd": "Extreme ownership mindset with track record of independently leading multi-month initiatives in ambiguous environments",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_executive_communication",
+      "raw_text_from_jd": "Strong cross-functional communication and executive presence, with ability to influence across Sales, Customer Success, Finance, Data, and Product teams",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking_process_improvement",
+      "raw_text_from_jd": "Strong systems thinking with ability to identify inefficiencies and design scalable process improvements; you don't need to be an AI expert, but you're curious and willing to adopt AI tools to work smarter and deliver better results.",
+      "skill_type": "capability",
+      "domain": "process_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "notion_power_user",
+      "raw_text_from_jd": "Notion power user or desire to learn -- prior Notion experience is not required, but you have the ability and desire to become a pro",
+      "skill_type": "tool_proficiency",
+      "domain": "productivity_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Notion"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "plg_gtm_experience",
+      "raw_text_from_jd": "Experience in a PLG or hybrid PLG + sales-led go-to-market environment",
+      "skill_type": "domain_knowledge",
+      "domain": "go_to_market",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "progressive_responsibilities",
+      "raw_text_from_jd": "History of promotions or progressive responsibilities at work",
+      "skill_type": "outcome",
+      "domain": "career_trajectory",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_workflow_automation_exposure",
+      "raw_text_from_jd": "Exposure to AI-enabled workflows or automation tools in a business context (e.g., using AI to streamline reporting, research, or operational processes)",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_automation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI-enabled workflows",
+        "automation tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Central GTM Strategy & Operations — global go-to-market performance management, strategic analytics, and operating systems across Sales, Customer Success, Marketing, Finance, Data, and BizTech",
+    "business_model": "PLG + sales-led SaaS (B2C and B2B)",
+    "primary_metrics_inferred": [
+      "Forecast accuracy",
+      "Revenue efficiency and productivity",
+      "Sales and post-sales KPIs",
+      "Headcount allocation and coverage model effectiveness",
+      "Funnel efficiency"
+    ],
+    "cross_functional_partners": [
+      "GTM Leadership",
+      "Sales",
+      "Customer Success",
+      "Finance",
+      "BizTech",
+      "Data",
+      "Marketing",
+      "CX",
+      "Product"
+    ],
+    "core_responsibilities": [
+      "Own core GTM performance reporting including forecasting, QBRs, Board updates, weekly business reviews, and ad-hoc updates",
+      "Lead high-impact analyses that shape how we invest and grow, including market expansion, segmentation, coverage models, headcount allocation, and productivity optimization",
+      "Drive high impact GTM initiatives from problem definition through execution, including forecasting redesigns, funnel efficiency improvements, post-sales target & incentive strategy, territory and motion design, quota strategy, sales profile design, and AI-enabled transformation efforts",
+      "Design and continuously improve the operating cadence, KPI frameworks, target methodologies, and cross-functional planning systems for Sales & Post-Sales",
+      "Identify inefficiencies and build scalable solutions using automation and AI-enabled workflows to reduce manual work, accelerate insights, and increase leverage across GTM teams"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      185000,
+      200000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned alongside cash compensation and benefits but form not specified",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "GTM strategy",
+    "go-to-market operations",
+    "forecasting",
+    "KPI frameworks",
+    "SQL",
+    "Excel/Google Sheets",
+    "PLG",
+    "revenue operations",
+    "AI-enabled workflows",
+    "performance management",
+    "executive visibility",
+    "first-principles thinking",
+    "quota strategy",
+    "segmentation",
+    "automation"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($185K–$200K base for SF/NYC)",
+    "Equity mentioned as part of package",
+    "Clear scope of ownership — high-visibility role reporting into GTM leadership",
+    "Encourages applicants who don't meet every bullet to still apply",
+    "AI curiosity welcomed without requiring deep expertise — accessible bar",
+    "Role spans both strategy and execution, offering breadth"
+  ],
+  "red_flags": [
+    "Hybrid policy requires 3 designated Anchor Days per week (Mon, Tue, Thu) in-office — effectively near-onsite, not traditional hybrid",
+    "Visa sponsorship not addressed in the JD — unclear for international candidates",
+    "Compensation range qualified as SF/NYC-specific; other locations may vary downward",
+    "No mention of direct reports, but scope is very broad — potential for high expectations on a solo contributor",
+    "#LI-Onsite tag in JD may indicate fully onsite expectations vs. the described Anchor Days policy — mild inconsistency"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years + scope of independence)",
+      "scope.business_model (inferred from PLG mention in nice-to-haves and Notion's known GTM model)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not enumerated as metrics in JD)",
+      "location.remote_us_eligible (inferred as false from Anchor Days requirement and #LI-Onsite tag)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "JD is tagged #LI-Onsite but describes a hybrid policy (Anchor Days Mon/Tue/Thu). Treated as hybrid here given explicit body language, but near-onsite in practice.",
+      "Compensation range is explicitly stated for SF and NYC only; no guidance given for other locations, and it's unclear whether other locations are eligible.",
+      "Equity is mentioned generically ('highly competitive cash compensation, equity, and benefits') without specifying form (RSUs, options, etc.)."
+    ]
+  }
+}

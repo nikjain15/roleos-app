@@ -1,0 +1,196 @@
+{
+  "company": "DoorDash",
+  "role_title": "Materials Program Manager, DoorDash Air",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8024217",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8024217",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Materials / Supply Chain Program Manager",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in materials planning or equivalent",
+      "Base pay range $105,400–$155,000 consistent with mid-senior IC at DoorDash"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_materials_planning",
+      "raw_text_from_jd": "You have 5+ years of experience in materials planning, supply planning, production planning, procurement operations, inventory control, or equivalent experience.",
+      "skill_type": "years_of_experience",
+      "domain": "materials_planning_supply_chain",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "material_readiness_ctb",
+      "raw_text_from_jd": "You have experience owning material readiness or clear-to-build planning for hardware, manufacturing, robotics, drones, or equivalent programs.",
+      "skill_type": "domain_knowledge",
+      "domain": "clear_to_build_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware",
+        "manufacturing",
+        "robotics",
+        "drones"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bom_supply_chain_fluency",
+      "raw_text_from_jd": "You are comfortable working with complex bills of materials, supplier lead times, purchase orders, inventory, demand forecasts, and build schedules.",
+      "skill_type": "capability",
+      "domain": "supply_chain_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_process_building",
+      "raw_text_from_jd": "You can operate with ambiguity, build structure where processes are still developing, and communicate risks clearly to cross-functional partners.",
+      "skill_type": "capability",
+      "domain": "process_development_cross_functional_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_physical_inventory",
+      "raw_text_from_jd": "You are comfortable working hands-on with physical inventory and systems, including receiving, labeling, organizing, tracking, and preparing materials for builds.",
+      "skill_type": "capability",
+      "domain": "physical_inventory_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "DoorDash Air drone aircraft supply chain — material readiness, clear-to-build planning, inventory, purchasing coordination across prototype, validation, and production builds",
+    "business_model": "internal robotics/drone program within DoorDash Labs targeting last-mile logistics automation",
+    "primary_metrics_inferred": [
+      "Clear-to-build rate",
+      "Shortage reduction / on-time build starts",
+      "Inventory accuracy",
+      "Lead time visibility and expedite reduction"
+    ],
+    "cross_functional_partners": [
+      "Procurement",
+      "Engineering",
+      "Manufacturing",
+      "Finance",
+      "Supply Chain Lead"
+    ],
+    "core_responsibilities": [
+      "Lead material readiness for aircraft builds by translating BOMs, build schedules, inventory, supplier lead times, and open orders into a clear build readiness plan.",
+      "Own shortage management and clear-to-build status across prototype, validation, and production builds, including risk tracking and escalation.",
+      "Partner with procurement, engineering, manufacturing, and finance to align material availability with program timing and budget needs.",
+      "Build scalable processes for inventory accuracy, allocation, receiving, labeling, kitting, and build readiness as the program grows.",
+      "Identify long-lead and high-risk materials early, recommend mitigation plans, and help reduce last-minute expediting and build delays."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      105400,
+      155000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "materials program manager",
+    "clear-to-build",
+    "supply chain",
+    "BOM",
+    "shortage management",
+    "inventory control",
+    "production planning",
+    "drone",
+    "DoorDash Air",
+    "procurement operations",
+    "build readiness",
+    "last-mile logistics"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range disclosed ($105,400–$155,000 base)",
+    "Equity grants included",
+    "Clear ownership area: clear-to-build planning and material readiness for drone aircraft builds",
+    "Comprehensive benefits package described in detail",
+    "Novel, high-impact domain (commercial drones / autonomous delivery)"
+  ],
+  "red_flags": [
+    "Work location not specified — unclear whether this is remote, hybrid, or on-site, and no cities listed for the role itself",
+    "Visa sponsorship not mentioned",
+    "Program is early-stage ('scaling to higher-volume production'), which may mean significant ambiguity and process gaps",
+    "Hands-on physical inventory requirement may imply mandatory on-site presence not explicitly stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and comp range)",
+      "location.type (not stated in JD body; left as 'unclear')",
+      "scope.business_model (inferred from DoorDash Labs description)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "location.visa_sponsorship (not mentioned; left as 'unclear')",
+      "location.work_auth (not mentioned; defaulted to 'open')"
+    ],
+    "ambiguities": [
+      "Work location is not stated anywhere in the JD body. The role involves hands-on physical inventory work, strongly implying on-site, but no city or location type is confirmed. Treated as 'unclear'.",
+      "The national pay range note references 'Illinois and Colorado' specifically, suggesting the role may be available in multiple US locations, but no specific cities for this role are named."
+    ]
+  }
+}

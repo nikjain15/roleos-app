@@ -1,0 +1,313 @@
+{
+  "company": "Airbnb",
+  "role_title": "Senior Programs and Business Operations Lead, Monthly Stays",
+  "url": "https://careers.airbnb.com/positions/7736820?gh_jid=7736820",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7736820",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional work at an Airbnb office or attendance at offsites, as agreed to with your manager",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager",
+  "seniority": {
+    "level": "Senior IC / Director-level",
+    "years_required_min": 15,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "15+ years experience in strategic roles, consulting, sales leadership or scaling global businesses",
+      "Manages a handful of analysts",
+      "Comp range $200K-$247K base",
+      "Works with Homes Leadership to develop and execute strategies"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_strategic_experience",
+      "raw_text_from_jd": "15+ years experience in strategic roles, consulting, sales leadership or scaling global businesses",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_consulting_sales_or_global_business",
+      "minimum_value": 15,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_experience",
+      "raw_text_from_jd": "Experience working cross-functionally with product, marketing, sales operations and enablement teams",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "initiative_and_uncertainty",
+      "raw_text_from_jd": "Ability to take initiative and deal with uncertainties",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_project_management",
+      "raw_text_from_jd": "Ability to manage complex projects and multi-task with excellent organization skills.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_and_macro_orientation",
+      "raw_text_from_jd": "Pays attention to both details and macro-level outcomes",
+      "skill_type": "capability",
+      "domain": "analytical_thinking",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Seasoned internal and external communicator with strong interpersonal skills",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "startup_environment_fit",
+      "raw_text_from_jd": "Ability to thrive in a fast-paced, dynamic and ever changing startup environment",
+      "skill_type": "cultural_fit",
+      "domain": "startup_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "minimal_guidance_proactive",
+      "raw_text_from_jd": "Ability to flourish with minimal guidance, be proactive, and handle uncertainty and ambiguity.",
+      "skill_type": "cultural_fit",
+      "domain": "autonomy_and_ambiguity",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_strategic",
+      "raw_text_from_jd": "Data driven, can do attitude, strategic thinker and passion for new products and solutions.",
+      "skill_type": "capability",
+      "domain": "data_driven_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "excel_sql_proficiency",
+      "raw_text_from_jd": "Comfortable with Excel, SQL",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Excel",
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "verbal_written_communication",
+      "raw_text_from_jd": "Strong verbal and written communication skills",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "airbnb_community_appetite",
+      "raw_text_from_jd": "Strong appetite for working with the Airbnb community",
+      "skill_type": "cultural_fit",
+      "domain": "marketplace_community",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "manages a handful of analysts",
+    "surface": "Monthly Stays global offering — supply growth, host success, in-market strategy, international expansion",
+    "business_model": "marketplace (hosts and guests), B2C",
+    "primary_metrics_inferred": [
+      "Monthly Stays supply growth",
+      "Host success and listing optimization",
+      "International revenue and booking performance",
+      "Business performance across countries (strength/weakness deep dives)"
+    ],
+    "cross_functional_partners": [
+      "Homes Leadership",
+      "Regional teams",
+      "FP&A",
+      "Advanced Analytics",
+      "Marketing",
+      "Communications",
+      "Product",
+      "Sales Operations"
+    ],
+    "core_responsibilities": [
+      "Drive annual strategy & planning process, including determining business upside and resources needed to deliver that",
+      "Build tools and equip teams with the relevant data support to tools to make actionable decisions",
+      "Develop actionable business analysis - enable functional leads to provide consistent information to their teams and stakeholders",
+      "Assist to leadership inquiries, providing data driven insights driven insights quickly and accurately by leveraging tools such as SQL, excel and Tableau",
+      "Manage a handful analysts to support local and regional partners with insights and decision making capabilities",
+      "Create materials to communicate strategy and business performance to key stakeholders",
+      "Liaise with functional teams (comms, marketing) to provide business recommendation and inform functional priorities and initiatives",
+      "Assist ongoing projects with progress tracking and measurement capabilities such as performance dashboards",
+      "Work with FP&A and Advanced Analytics to assess business performance (across multiple forums) and deep dive into areas of strength and weakness of the countries",
+      "Incubate / run special projects that can be proven and handed off for scaling"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      200000,
+      247000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as possible component alongside bonus and Employee Travel Credits",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Monthly Stays",
+    "business operations",
+    "strategy & planning",
+    "SQL",
+    "Tableau",
+    "Excel",
+    "host success",
+    "global supply",
+    "international growth",
+    "data driven",
+    "cross-functional",
+    "FP&A",
+    "performance dashboards",
+    "analyst management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($200K-$247K base)",
+    "Remote-US eligible role with flexibility agreed with manager",
+    "Equity, bonus, and Employee Travel Credits mentioned as additional comp components",
+    "Clear scope tied to a specific product area (Monthly Stays) within a well-known global company",
+    "People management responsibility (analysts) signals real organizational authority"
+  ],
+  "red_flags": [
+    "15+ years minimum experience is a high bar that excludes most mid-career candidates",
+    "Visa sponsorship status is unclear — work authorization only inferred from state-restriction language",
+    "JD contains duplicated phrase 'data driven insights driven insights' suggesting copy-editing gaps",
+    "Role scope spans strategy, operations, analytics, people management, and stakeholder comms — very broad remit that may indicate under-defined ownership"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 15+ years requirement and comp range; not explicitly labeled in JD)",
+      "seniority.manages_people (inferred from 'Manage a handful analysts' in responsibilities)",
+      "scope.business_model (inferred from Airbnb marketplace description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
+      "location.work_auth (inferred as no-sponsorship from state-restriction language; not explicitly stated)",
+      "location.visa_sponsorship (unclear; not explicitly addressed in JD)"
+    ],
+    "ambiguities": [
+      "Visa sponsorship is not explicitly addressed; work authorization inferred from the state-eligibility restriction language which implies US-based employment entity but does not confirm or deny sponsorship.",
+      "'Strong appetite for working with the Airbnb community' appears in the 'Your Expertise' (required) section but reads as a cultural/motivational trait rather than a hard skill; classified as nice-to-have soft item rather than hard must-have.",
+      "The JD lists 'Tableau' only in the responsibilities body ('leveraging tools such as SQL, excel and Tableau') but not in the explicit 'Your Expertise' requirements list — treated as implied but not hard-required; captured under scope responsibilities only."
+    ]
+  }
+}

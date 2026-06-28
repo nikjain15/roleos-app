@@ -1,0 +1,342 @@
+{
+  "company": "Airbnb",
+  "role_title": "Senior Technical Program Manager, Payments",
+  "url": "https://careers.airbnb.com/positions/7980228?gh_jid=7980228",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7980228",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional work at an Airbnb office or attendance at offsites, as agreed to with your manager",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Payments TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of experience in the software development industry, with at least 5 years as a TPM",
+      "Comp range $179K-$210K base, consistent with Senior IC",
+      "Role title explicitly 'Senior Technical Program Manager'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_software_industry",
+      "raw_text_from_jd": "7+ years of experience in the software development industry, with at least 5 years as a TPM or relevant experience.",
+      "skill_type": "years_of_experience",
+      "domain": "software_development",
+      "minimum_value": 7,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_as_tpm",
+      "raw_text_from_jd": "with at least 5 years as a TPM or relevant experience.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bs_cs",
+      "raw_text_from_jd": "B.S. in Computer Science or a related technical discipline, or equivalent experience.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "B.S. in Computer Science"
+      ]
+    },
+    {
+      "id": "ambiguity_to_solution",
+      "raw_text_from_jd": "Demonstrated ability to work calmly through ambiguity to detailed solutions. You can take a vague problem, crisply decompose and frame the challenge, outline the big picture, identify a path forward, and drive an initiative over the finish-line.",
+      "skill_type": "capability",
+      "domain": "program_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "self_motivated_adaptable",
+      "raw_text_from_jd": "Self-motivated, proactive and ability to adapt well and work with teams having different operating cadences.",
+      "skill_type": "cultural_fit",
+      "domain": "team_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "influence_and_analytics",
+      "raw_text_from_jd": "Proven track record of influencing others in combination with strong analytical skills and allowing others to give feedback while understanding their viewpoints.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_development",
+      "raw_text_from_jd": "Experience developing processes where little exists and demonstrated flexibility to get things done.",
+      "skill_type": "capability",
+      "domain": "process_improvement",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_oriented_big_picture",
+      "raw_text_from_jd": "Detail-oriented with the ability to understand the bigger picture by using your technical expertise and problem solving abilities to prioritize and manage blocking issues.",
+      "skill_type": "capability",
+      "domain": "technical_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Experience working in a highly cross-functional environment where communication with multiple groups is imperative.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_communication",
+      "raw_text_from_jd": "Excellent written and oral business communication and people skills, with the ability to influence stakeholders.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "task_management_tooling",
+      "raw_text_from_jd": "Exhibit knowledge of Asana, Jira, or other equivalent task management tooling.",
+      "skill_type": "tool_proficiency",
+      "domain": "project_management_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Asana",
+        "Jira"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ml_ai_platform_experience",
+      "raw_text_from_jd": "Experience developing or working directly on various aspects of large-scale ML/AI platforms.",
+      "skill_type": "domain_knowledge",
+      "domain": "ml_ai_platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ML/AI platforms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_product_experience",
+      "raw_text_from_jd": "Experience with feature development of AI-powered product experiences.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_models_passion",
+      "raw_text_from_jd": "Experience and passion for building and maintaining products leveraging AI models",
+      "skill_type": "cultural_fit",
+      "domain": "ai_product_development",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI models"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Payments Engineering — cross-functional programs spanning payments capabilities, product, and ops",
+    "business_model": "marketplace (B2C/B2B travel and hosting platform)",
+    "primary_metrics_inferred": [
+      "On-time delivery of Payments strategic programs",
+      "Stakeholder alignment and milestone achievement",
+      "Risk mitigation effectiveness",
+      "Portfolio visibility / KPI tracking"
+    ],
+    "cross_functional_partners": [
+      "Payments Engineering",
+      "Payments Ops",
+      "Payments Product",
+      "Senior Leadership"
+    ],
+    "core_responsibilities": [
+      "Lead planning, execution, and delivery of large cross-functional initiatives aimed at meeting key business priorities.",
+      "Shape and influence the technical direction of projects, ensuring we meet stakeholder needs while maintaining high-quality standards.",
+      "Define and secure stakeholder alignment on clear, measurable success criteria to accelerate initiatives.",
+      "Regularly assess risks and opportunities, and devise proactive mitigation strategies to maintain momentum and project success.",
+      "Maintain transparent and effective communication channels to keep stakeholders informed of progress, developments, and challenges.",
+      "Expertly present outcomes and updates to senior leadership, clearly and comprehensively articulating trade-offs, risks, and emerging opportunities.",
+      "Develop a portfolio view of Payments programs.",
+      "Regularly assess opportunities, drive for process improvements, and find new ways of operating, with a focus on simplification and productivity."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      179000,
+      210000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "eligible for bonus, equity, benefits, and Employee Travel Credits",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Payments",
+    "cross-functional",
+    "stakeholder alignment",
+    "program execution",
+    "risk mitigation",
+    "portfolio management",
+    "Jira",
+    "Asana",
+    "ML/AI platforms",
+    "senior leadership"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($179K-$210K base)",
+    "Remote-US eligible role with flexibility",
+    "Clear ownership area (Payments engineering programs)",
+    "Bonus and equity eligibility mentioned",
+    "Encourages broad talent pool; disability accommodations explicitly offered"
+  ],
+  "red_flags": [
+    "Must live in a state where Airbnb has a registered entity — excluded states list exists and is evolving; candidates should verify eligibility",
+    "No explicit visa sponsorship information stated; work authorization requirements unclear",
+    "Payments domain expertise not listed as a hard requirement despite being the core focus — may indicate misalignment in screening"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level inferred from comp range and role title",
+      "scope.business_model inferred from Airbnb product description",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.work_auth inferred as no-sponsorship from US-state residency requirement language, but not explicitly stated"
+    ],
+    "ambiguities": [
+      "Visa sponsorship is not explicitly addressed in the JD; work_auth set to 'no-sponsorship' based on the requirement to reside in a US state where Airbnb has a registered entity, but this is inferred not stated.",
+      "Payments domain expertise is implied by the role context but never listed as a named requirement under 'Your Expertise' — could be screening gap or intentional.",
+      "The JD mentions 'your position is employed by another Airbnb entity' suggesting multiple legal entities; exact eligibility rules are external to this posting."
+    ]
+  }
+}

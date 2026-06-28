@@ -1,0 +1,281 @@
+{
+  "company": "Stripe",
+  "role_title": "Program Manager, Agentic Commerce Go-to-Market",
+  "url": "https://stripe.com/jobs/search?gh_jid=8017214",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8017214",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of experience in program management, sales operations, business operations, or a related GTM operations role",
+      "Reports to Agentic Commerce GTM lead, not listed as managing people",
+      "Scope spans senior stakeholders and executive audiences (RTBR)"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management_gtm",
+      "raw_text_from_jd": "7+ years of experience in program management, sales operations, business operations, or a related GTM operations role — ideally at a high-growth technology or payments company",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_gtm_operations",
+      "minimum_value": 7,
+      "unit": "years",
+      "qualifier": "ideally at a high-growth technology or payments company",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology",
+        "payments"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company",
+        "payments company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_multistakeholder_program_management",
+      "raw_text_from_jd": "Demonstrated ability to manage complex, multi-work stream programs involving 5+ cross-functional stakeholders simultaneously, without direct authority",
+      "skill_type": "capability",
+      "domain": "cross_functional_program_management",
+      "minimum_value": 5,
+      "unit": "stakeholders",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Strong written and verbal communication skills — you can synthesize ambiguous situations into crisp updates, and write clearly for both executive and working-level audiences",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_systems_from_scratch",
+      "raw_text_from_jd": "Proven track record of building and running operational systems from scratch: project trackers, meeting cadences, reporting frameworks, and decision-making infrastructure",
+      "skill_type": "outcome",
+      "domain": "operations_and_program_infrastructure",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_ownership_accountability",
+      "raw_text_from_jd": "High ownership and accountability — you proactively identify what needs to be done and do it without waiting to be ask",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_and_initiative",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "gtm_emerging_product_categories",
+      "raw_text_from_jd": "Experience working on GTM programs for emerging product categories — ideally AI, developer platforms, fintech, or payments infrastructure",
+      "skill_type": "domain_knowledge",
+      "domain": "gtm_emerging_categories",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI",
+        "developer platforms",
+        "fintech",
+        "payments infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_gtm_familiarity",
+      "raw_text_from_jd": "Familiarity with enterprise go-to-market motions, including partner/alliance programs, professional services, and solutions architecture teams",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_go_to_market",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "self_serve_scaled_onboarding",
+      "raw_text_from_jd": "Experience building or scaling self-serve and scaled onboarding programs alongside a product team",
+      "skill_type": "capability",
+      "domain": "onboarding_program_development",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_instincts_dashboards",
+      "raw_text_from_jd": "Strong analytical instincts — you can pull data, build dashboards, and frame problems quantitatively, even if this isn't your primary skill",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_reporting",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Agentic Commerce GTM function — merchant and agent ecosystem development, partner launches, pilot/beta programs, scaled onboarding",
+    "business_model": "B2B payments infrastructure, enterprise and partner GTM motions",
+    "primary_metrics_inferred": [
+      "GTM KPIs (pipeline, progress visibility)",
+      "Merchant integration readiness",
+      "Agent partner launch readiness / go-live",
+      "Pilot graduation to scaled onboarding and self-serve",
+      "Forecasting accuracy (with SSO and F&S)"
+    ],
+    "cross_functional_partners": [
+      "Global Partnerships",
+      "Enterprise Sales",
+      "Industry Sales",
+      "Solution Architects",
+      "Alliances & Channels",
+      "Professional Services",
+      "Marketing",
+      "Product",
+      "Engineering",
+      "Legal",
+      "Product S&O",
+      "SSO",
+      "F&S"
+    ],
+    "core_responsibilities": [
+      "Own the operating cadence of the Agentic Commerce GTM function, including driving weekly cross-functional GTM meetings like GTM SteerCo and pipeline",
+      "Serve as connective tissue across all GTM workstreams, maintaining a unified view of progress, blockers, and dependencies",
+      "Identify process gaps or inefficiencies across GTM workstreams and drive improvements",
+      "Stay updated on product developments to ensure GTM roadmap is aligned with product strategy",
+      "Sharpen multi-party execution across agents and sellers to ensure Stripe delivers a first class experience and enables pilots and betas to graduate to scaled onboarding and eventual self-serve",
+      "Drive merchants towards integration readiness by coordinating across product, engineering, professional services, legal, sales, and more; proactively identify risks and help unblock",
+      "Manage launch readiness for key agent partner launches ensuring our field, our partners, and our users are prepared for go-live",
+      "Work with Product S&O to define and track the right GTM KPIs",
+      "Build and maintain program tracking systems, dashboards, and reporting to give pipeline and progress visibility to senior stakeholders (e.g., RTBR)",
+      "Partner with SSO and F&S to develop forecasts and drive planning"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Agentic Commerce",
+    "GTM",
+    "program management",
+    "cross-functional",
+    "payments",
+    "merchant",
+    "agent ecosystem",
+    "pilot programs",
+    "scaled onboarding",
+    "self-serve",
+    "launch readiness",
+    "KPIs",
+    "dashboards",
+    "SteerCo",
+    "fintech"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clearly defined responsibilities and cross-functional scope",
+    "High-impact emerging area (Agentic Commerce) at a major fintech company",
+    "JD distinguishes minimum requirements from preferred qualifications explicitly",
+    "Candidates meeting minimum requirements are explicitly encouraged to apply",
+    "Role has direct visibility to senior stakeholders and GTM leadership"
+  ],
+  "red_flags": [
+    "No location, remote eligibility, or work authorization information provided in the JD",
+    "No compensation or equity information disclosed",
+    "No team size or direct reporting structure below the role stated",
+    "Posting date not available — unclear how fresh this role is"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement and scope of senior stakeholder engagement)",
+      "seniority.manages_people (inferred as false; JD describes peer coordination without direct authority)",
+      "scope.business_model (inferred from Stripe's product description and enterprise/partner GTM framing)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "compensation.equity_mentioned (inferred as false; not mentioned in JD)",
+      "location.type (set to unclear; no location or work arrangement specified)"
+    ],
+    "ambiguities": [
+      "Location and remote eligibility are entirely absent from the JD — cannot determine onsite, hybrid, or remote status",
+      "Work authorization and visa sponsorship are not mentioned",
+      "The qualifier 'ideally at a high-growth technology or payments company' in the 7+ years requirement is ambiguous — treated as a soft modifier on a hard experience floor"
+    ]
+  }
+}

@@ -1,0 +1,271 @@
+{
+  "company": "Robinhood",
+  "role_title": "Senior Product Manager, Crypto Trading",
+  "url": "https://boards.greenhouse.io/robinhood/jobs/7589765?t=gh_src=&gh_jid=7589765",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7589765",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Menlo Park, CA",
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 3 days per week",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM (consumer fintech / crypto focus)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years experience in a consumer facing product management role",
+      "At least 1 year of shipping crypto products",
+      "Base pay Zone 1 $217K–$255K, consistent with Senior PM level",
+      "Role title explicitly 'Senior Product Manager'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_bachelors_or_equiv",
+      "raw_text_from_jd": "Bachelor's, Master's, or equivalent experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's",
+        "Master's"
+      ]
+    },
+    {
+      "id": "years_consumer_pm",
+      "raw_text_from_jd": "4+ years experience in a consumer facing product management role",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "qualifier": "consumer-facing",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_shipping_crypto",
+      "raw_text_from_jd": "At least 1 year of shipping crypto products",
+      "skill_type": "years_of_experience",
+      "domain": "crypto_products",
+      "minimum_value": 1,
+      "unit": "years",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "crypto"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "research_experimentation_analytics",
+      "raw_text_from_jd": "Familiarity using research, experimentation and product analytics to guide decision making",
+      "skill_type": "capability",
+      "domain": "product_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_creative_balance",
+      "raw_text_from_jd": "Ability to balance strategic with creative decision making",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "urgency_and_speed",
+      "raw_text_from_jd": "A strong sense of urgency and speed",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_standards_work_ethic",
+      "raw_text_from_jd": "High standards and a strong work ethic - you always bring your best and expect your colleagues to do the same",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "innovation_impact_complex_environments",
+      "raw_text_from_jd": "Delight in bringing innovation and impact to customers, particularly in complex and dynamic environments",
+      "skill_type": "cultural_fit",
+      "domain": "customer_focus",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "crypto_products_experience",
+      "raw_text_from_jd": "Experience in Crypto products",
+      "skill_type": "domain_knowledge",
+      "domain": "crypto_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "crypto"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Crypto trading product — trading UX, advanced order types, exchange integrations, smart order routing, liquidity partnerships, CeDeFi / DeFi-powered experiences, staking",
+    "business_model": "consumer fintech / retail brokerage with crypto capabilities, B2C",
+    "primary_metrics_inferred": [
+      "Execution quality improvements",
+      "Crypto trading volume / user engagement",
+      "Adoption of advanced trading features by sophisticated/professional traders",
+      "CeDeFi product adoption and onchain activity"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data",
+      "Research",
+      "Operations",
+      "Marketing"
+    ],
+    "core_responsibilities": [
+      "Define and drive the strategy to make Robinhood the leading platform for sophisticated and professional crypto traders",
+      "Lead cross-functional teams to identify high-impact opportunities across trading UX, execution quality, liquidity access, and market structure",
+      "Ship advanced trading capabilities, exchange integrations, and routing improvements",
+      "Build and scale crypto-native CeDeFi experiences — embedding onchain products, staking, and DeFi-powered functionality into the Robinhood app",
+      "Use research, experimentation, and product analytics to inform decisions and continuously improve trading outcomes",
+      "Deliver high-quality products with speed and rigor in a fast-moving, highly dynamic market environment"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      217000,
+      255000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as part of total compensation alongside bonus",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "crypto trading",
+    "CeDeFi",
+    "DeFi",
+    "smart order routing",
+    "liquidity partnerships",
+    "advanced order types",
+    "exchange integrations",
+    "staking",
+    "onchain",
+    "trading UX",
+    "market structure",
+    "execution quality",
+    "consumer PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed across three pay zones — Zone 1 $217K–$255K base",
+    "Equity and bonus mentioned on top of base pay",
+    "Clear product surface and ownership area (crypto trading, CeDeFi, DeFi-powered features)",
+    "Comprehensive benefits: 100% paid health insurance, mental health support, parental leave, fertility benefits",
+    "Mission-driven company at the intersection of consumer finance and crypto",
+    "Cross-functional ownership clearly articulated"
+  ],
+  "red_flags": [
+    "Hybrid requirement of at least 3 days/week in Menlo Park or NYC only — no remote option",
+    "Visa sponsorship and work authorization not addressed in JD",
+    "Hard 1-year crypto shipping requirement may be difficult to mitigate without direct crypto PM experience",
+    "'Experience in Crypto products' listed twice (once as 'At least 1 year of shipping crypto products' and once as 'Experience in Crypto products') — some redundancy but suggests this is a firm emphasis"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and role title)",
+      "seniority.manages_people (not stated; inferred false from IC-level framing)",
+      "scope.team_size_estimate (not stated)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
+      "scope.business_model (inferred from product description)",
+      "location.work_auth and location.visa_sponsorship (not stated in JD)"
+    ],
+    "ambiguities": [
+      "'Experience in Crypto products' appears both as a standalone bullet and implicitly covered by '1 year of shipping crypto products' — treated as separate requirements given different phrasing, but may be the same intent",
+      "All listed must-haves appear in an undifferentiated 'What you bring' section with no explicit 'required' vs 'preferred' separation — all treated as hard per schema rules; no nice-to-haves were explicitly marked as preferred or bonus in the JD"
+    ]
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "company": "Lyft",
+  "role_title": "Senior Technical Program Manager, Infrastructure",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8604675002?gh_jid=8604675002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8604675002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in Technical Program Management or a TPM/PM hybrid role",
+      "Autonomously leads cross-functional programs with only high-level direction",
+      "Owns roadmap strategy and prioritization",
+      "Base pay range $148,000 - $185,000 consistent with Senior IC at Lyft"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_experience",
+      "raw_text_from_jd": "5+ years in Technical Program Management or a TPM/PM hybrid role",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "engineering_background",
+      "raw_text_from_jd": "A background in software, data, or systems engineering, enough to go deep with engineers",
+      "skill_type": "domain_knowledge",
+      "domain": "software_or_systems_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems",
+        "data infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "roadmap_ownership",
+      "raw_text_from_jd": "Experience owning a roadmap: setting strategy, prioritizing across competing demands, and defining what success looks like",
+      "skill_type": "capability",
+      "domain": "product_roadmap_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_platform_migration_experience",
+      "raw_text_from_jd": "Experience driving data platform or infrastructure migrations: data lakes, pipelines, warehouses, or compute platforms",
+      "skill_type": "domain_knowledge",
+      "domain": "data_platform_migrations",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "data lakes",
+        "pipelines",
+        "warehouses",
+        "compute platforms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_leadership",
+      "raw_text_from_jd": "A strong track record leading cross-functional programs with real dependencies and tight timelines, autonomously and with only high-level direction",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_relationship_ownership",
+      "raw_text_from_jd": "Experience owning customer relationships across engineering teams, gathering requirements, and translating their needs into roadmaps and technical specs",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "success_metrics_tracking",
+      "raw_text_from_jd": "Comfortable defining and tracking success metrics and adoption",
+      "skill_type": "capability",
+      "domain": "metrics_and_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_across_levels",
+      "raw_text_from_jd": "Clear communicator across the stack, from engineer to VP",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_background_distributed_systems",
+      "raw_text_from_jd": "Use your technical background in distributed systems and data infrastructure to ask sharp questions and build plans the team believes in",
+      "skill_type": "domain_knowledge",
+      "domain": "distributed_systems_and_data_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems",
+        "data infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "databricks_hex_familiarity",
+      "raw_text_from_jd": "Hands-on familiarity with Databricks, Hex, or similar data platform and BI tooling is a strong plus",
+      "skill_type": "tool_proficiency",
+      "domain": "data_platform_and_bi_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Databricks",
+        "Hex"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Infrastructure and data platform programs at Lyft",
+    "business_model": "internal platform / developer infrastructure (B2C ridesharing company)",
+    "primary_metrics_inferred": [
+      "Program delivery milestones and on-time delivery",
+      "Adoption metrics for platform areas",
+      "Customer (internal engineering team) satisfaction and pain point resolution",
+      "Migration progress across data platform modernization initiatives"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data teams",
+      "Platform teams",
+      "Infrastructure leads",
+      "Stakeholders up to VP level"
+    ],
+    "core_responsibilities": [
+      "Run infrastructure programs end to end, from kickoff through delivery",
+      "Own the roadmap for your platform area: shape the strategy, sequence the work, and make the prioritization calls",
+      "Drive data platform migration and modernization work, coordinating across engineering, data, and platform teams to keep dependencies and timelines under control",
+      "Be the voice of the customer: partner with engineering teams across Lyft, surface their pain points, and feed that back into priorities and roadmaps",
+      "Define success metrics and adoption goals, gather and document customer requirements, and make sure what ships actually solves the problem",
+      "Build feedback loops with customer teams and turn what you hear into concrete improvements",
+      "Partner with engineering and infrastructure leads to build plans, call out risks early, and keep stakeholders aligned",
+      "Own program health: track milestones, surface blockers before they slip, and keep decision-makers in the loop",
+      "Share in the team's release oncall rotation"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      148000,
+      185000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned but not detailed",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "infrastructure",
+    "data platform",
+    "roadmap ownership",
+    "migration",
+    "Databricks",
+    "distributed systems",
+    "cross-functional",
+    "data lakes",
+    "pipelines",
+    "warehouses",
+    "oncall",
+    "stakeholder alignment"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range disclosed ($148,000 - $185,000 base)",
+    "Equity mentioned as part of package",
+    "Clear scope: infrastructure and data platform programs",
+    "Specific office days named (Mon/Wed/Thu), reducing scheduling ambiguity",
+    "Role has real ownership — roadmap strategy, prioritization, and customer voice responsibilities",
+    "Flexibility to work from anywhere up to 4 weeks per year",
+    "Strong benefits package including 18 weeks paid parental leave"
+  ],
+  "red_flags": [
+    "Visa sponsorship not mentioned anywhere in the JD",
+    "Oncall rotation requirement may not be typical expectation for a TPM role — worth clarifying scope",
+    "Hybrid mandate requires 3 specific days in office (Mon/Wed/Thu) in San Francisco — eliminates all non-SF candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and years requirement)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from company context; not stated in JD)",
+      "location.work_auth (inferred as open; not stated)",
+      "location.visa_sponsorship (not mentioned; marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD does not explicitly state visa sponsorship availability; marked as 'unclear'.",
+      "The role is labeled 'Technical Program Manager' but also includes strong product management responsibilities (roadmap ownership, prioritization, voice of customer), making the archetype boundary between TPM and Generalist PM somewhat blurry."
+    ]
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "company": "Scale AI",
+  "role_title": "Technical Program Manager, Platform",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4703275005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4703275005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY",
+      "Seattle, WA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Platform / Infrastructure TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience as a TPM, PM, or Software Engineer",
+      "3+ years dedicated platform/infrastructure program management",
+      "Base salary range $211,200–$264,000 consistent with Senior IC at Scale AI",
+      "Interfaces directly with executive leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_pm_swe",
+      "raw_text_from_jd": "5+ years of experience as a Technical Program Manager, Product Manager, or Software Engineer, with a proven track record of having built and shipped technical products or platforms from scratch (e.g., internal cloud infrastructure, developer APIs, distributed systems, or ML platforms).",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management_or_engineering",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "cloud infrastructure",
+        "developer APIs",
+        "distributed systems",
+        "ML platforms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_domain_expertise",
+      "raw_text_from_jd": "Platform Domain Expertise: 3+ years of dedicated experience managing programs focused directly on core engineering infrastructure, cloud-native ecosystems (AWS/GCP), container orchestration (Kubernetes), or distributed systems.",
+      "skill_type": "years_of_experience",
+      "domain": "platform_infrastructure_program_management",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [
+        "AWS",
+        "GCP",
+        "Kubernetes"
+      ],
+      "technologies_named": [
+        "cloud-native ecosystems",
+        "container orchestration",
+        "distributed systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_ml_infrastructure_literacy",
+      "raw_text_from_jd": "AI/ML Infrastructure Literacy: Foundational understanding of the infrastructure required for the Generative AI lifecycle, including high-throughput data pipelines, GPU/CPU cluster utilization, or model training/evaluation setups.",
+      "skill_type": "domain_knowledge",
+      "domain": "generative_ai_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "high-throughput data pipelines",
+        "GPU/CPU cluster utilization",
+        "model training",
+        "model evaluation",
+        "Generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Masterful Communication: Proven track record of presenting to and influencing executive-level stakeholders, with the ability to translate complex technical/architectural challenges into clear business impacts.",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "execution_excellence_agile",
+      "raw_text_from_jd": "Execution Excellence: Advanced proficiency with iterative development methodologies and modern project management tooling (Linear, Jira, etc.) applied to foundational infrastructure environments.",
+      "skill_type": "tool_proficiency",
+      "domain": "project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Linear",
+        "Jira"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "engineering_roots",
+      "raw_text_from_jd": "Engineering Roots: Strong software engineering fundamentals, with prior professional experience as a Software Engineer, DevOps Engineer, or Data Developer before transitioning into program management.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_adoption_track_record",
+      "raw_text_from_jd": "Platform Adoption Track Record: Proven success driving the internal adoption of technical platforms, SDKs, or APIs across disparate, fast-moving product lines.",
+      "skill_type": "outcome",
+      "domain": "internal_platform_adoption",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SDKs",
+        "APIs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_centric_ai_familiarity",
+      "raw_text_from_jd": "Data-Centric AI Familiarity: Direct experience working with large-scale data quality pipelines, distributed vector databases, or specialized AI inference engines (e.g., Triton, Ray).",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_data_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [
+        "Triton",
+        "Ray"
+      ],
+      "technologies_named": [
+        "large-scale data quality pipelines",
+        "distributed vector databases",
+        "AI inference engines"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Scale Generative AI Platform (SGP) — orchestration layers, model serving, APIs, core infrastructure",
+    "business_model": "B2B enterprise AI platform and data services",
+    "primary_metrics_inferred": [
+      "SGP adoption metrics",
+      "System reliability / SLOs",
+      "Delivery forecasts",
+      "Engineering bottleneck resolution",
+      "GPU utilization and compute efficiency"
+    ],
+    "cross_functional_partners": [
+      "Platform Engineering",
+      "Core ML",
+      "Research",
+      "Product",
+      "Executive Leadership"
+    ],
+    "core_responsibilities": [
+      "Lead strategic planning and high-velocity execution for SGP core capabilities (orchestration layers, model serving, APIs)",
+      "Drive execution and manage complex technical dependencies across systems engineering, Core ML, Research, and Product teams",
+      "Translate complex infrastructure metrics into actionable roadmaps",
+      "Proactively identify, track, and mitigate technical risks unique to massive-scale GenAI infrastructure",
+      "Establish lightweight agile processes that empower engineers to ship fast without breaking core systems",
+      "Define and enforce clear SLOs and performance benchmarks",
+      "Track and report on SGP adoption metrics, system reliability, delivery forecasts, and engineering bottlenecks directly to executive leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      211200,
+      264000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grant (RSUs/options subject to Board of Director approval)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Generative AI Platform",
+    "SGP",
+    "distributed systems",
+    "Kubernetes",
+    "AWS",
+    "GCP",
+    "LLM inference",
+    "GPU utilization",
+    "platform adoption",
+    "SLOs",
+    "cloud-native",
+    "infrastructure",
+    "executive stakeholders",
+    "agile"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($211,200–$264,000 base) with equity on top",
+    "Clear product surface with named platform (SGP) and specific technical domains",
+    "Role has direct executive visibility and strategic impact",
+    "Company has named enterprise and government customers indicating stability and scale",
+    "Inclusive and equal opportunity employer statements present"
+  ],
+  "red_flags": [
+    "Location appears onsite-only in SF, NY, or Seattle with no mention of remote eligibility — eliminates fully remote candidates",
+    "90-day waiting period before reconsidering candidates for the same role is an unusual policy worth noting",
+    "High buzzword density ('hyper-growth', 'connective tissue', 'masterful communication') may obscure actual role clarity",
+    "Visa sponsorship not mentioned — unclear for international candidates",
+    "Very broad year-range for seniority band could compress compensation offer despite stated range"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, years requirement, and executive-facing responsibilities)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated as KPIs)",
+      "scope.business_model (inferred from company description and product context)",
+      "location.remote_us_eligible (inferred as false from 'Please reference the job posting's subtitle for where this position will be located' and pay transparency statement listing only SF, NY, Seattle)"
+    ],
+    "ambiguities": [
+      "Location type: The JD provides salary ranges only for SF, NY, and Seattle, and says to 'reference the job posting's subtitle for where this position will be located,' which implies onsite; however, the JD does not explicitly say 'no remote,' creating mild ambiguity. Treated as onsite here.",
+      "Visa sponsorship: Not mentioned anywhere in the JD. Classified as 'unclear'.",
+      "The compensation note says the range 'may be inclusive of several career levels at Scale,' making it hard to pinpoint exact seniority tier from comp alone."
+    ]
+  }
+}

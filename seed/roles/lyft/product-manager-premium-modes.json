@@ -4,7 +4,7 @@
   "url": "https://app.careerpuck.com/job-board/lyft/job/8514382002?gh_jid=8514382002",
   "ats_provider": "greenhouse",
   "ats_job_id": "8514382002",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -27,8 +27,9 @@
     "manages_people": false,
     "level_signals": [
       "3+ years of product management experience",
-      "Lead a cross-functional pod of engineers, designers, and data scientists",
-      "Base pay range $128,000-$160,000 in SF area"
+      "Base range $128,000-$160,000 consistent with mid-senior PM in SF",
+      "End-to-end ownership of product area",
+      "Leads cross-functional pod"
     ]
   },
   "must_haves": [
@@ -84,8 +85,8 @@
       "id": "data_fluency",
       "raw_text_from_jd": "Data fluency - you define and analyze metrics that inform the success of your products, and you're comfortable running and interpreting experiments",
       "skill_type": "capability",
-      "domain": "data_analysis",
-      "evidence_required": "project_examples",
+      "domain": "data_analysis_and_experimentation",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -99,7 +100,7 @@
       "id": "communication_skills",
       "raw_text_from_jd": "Strong communication skills across audiences and levels, including the ability to convey complex tradeoffs in a clear and compelling way",
       "skill_type": "capability",
-      "domain": "stakeholder_communication",
+      "domain": "communication",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -114,7 +115,7 @@
       "id": "customer_obsession",
       "raw_text_from_jd": "Customer obsessed - strong user empathy and experience in the customer discovery and product development process",
       "skill_type": "capability",
-      "domain": "user_research",
+      "domain": "user_research_and_discovery",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -131,7 +132,7 @@
       "id": "marketplace_or_premium_experience",
       "raw_text_from_jd": "Ideally have experience with marketplace products or premium consumer experiences",
       "skill_type": "domain_knowledge",
-      "domain": "marketplace_products",
+      "domain": "marketplace_or_premium_consumer",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -156,27 +157,9 @@
       ],
       "industries_named": [
         "travel",
-        "ridesharing",
+        "ride-hailing",
         "sustainability"
       ],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "ai_tools_leverage",
-      "raw_text_from_jd": "Leverage AI tools and emerging technology to accelerate your team's workflows and enhance the products you build",
-      "skill_type": "tool_proficiency",
-      "domain": "ai_tools",
-      "evidence_required": "hands_on_use",
-      "bridgeable": "yes",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [
-        "AI tools",
-        "emerging technology"
-      ],
-      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -185,29 +168,30 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Lyft Black and Black SUV (Premium Modes), EV/electrification strategy",
-    "business_model": "B2C ridesharing marketplace, premium consumer product",
+    "surface": "Lyft Black and Black SUV premium ride modes; EV/electrification strategy",
+    "business_model": "B2C consumer ride-hailing marketplace",
     "primary_metrics_inferred": [
-      "Rider adoption and retention of Premium modes",
-      "Driver quality / supply for premium tiers",
-      "Mode growth metrics",
-      "EV penetration on Lyft platform"
+      "Rider satisfaction and retention for premium modes",
+      "Driver quality and supply metrics",
+      "Premium mode growth (GMV, rides)",
+      "EV adoption within Lyft platform"
     ],
     "cross_functional_partners": [
       "Engineering",
       "Design",
       "Data Science",
-      "Executive stakeholders",
-      "Partner teams"
+      "Partner teams",
+      "Executives"
     ],
     "core_responsibilities": [
-      "Own your product area end-to-end - from problem identification through launch, growth, and iteration. Translate Lyft's strategic priorities into an ambitious roadmap for your area and be accountable for outcomes",
-      "Deliver on this vision by setting your team's goals, success metrics, and roadmap to align with Lyft's mission - designing and running experiments to drive maximum impact",
-      "Drive a rapid experimentation and learning culture by continuously shipping and iterating on products, while staying deeply customer obsessed",
-      "Lead a cross-functional pod of engineers, designers, and data scientists - setting context, maintaining momentum, and unblocking the team",
-      "Deeply understand your customers across different rider segments and use cases, leveraging data analysis, market research, and user research to inform decisions",
-      "Collaborate across the company and communicate roadmaps, priorities, and decisions clearly to audiences ranging from partner teams to executive levels",
-      "Leverage AI tools and emerging technology to accelerate your team's workflows and enhance the products you build"
+      "Own product area end-to-end from problem identification through launch, growth, and iteration",
+      "Set team goals, success metrics, and roadmap aligned with Lyft's mission",
+      "Drive rapid experimentation and learning culture",
+      "Lead a cross-functional pod of engineers, designers, and data scientists",
+      "Deeply understand customers across rider segments using data analysis, market research, and user research",
+      "Collaborate across the company and communicate roadmaps and priorities to partner teams and executives",
+      "Leverage AI tools and emerging technology to accelerate workflows and enhance products",
+      "Own technology behind Lyft's electrification strategy"
     ]
   },
   "compensation": {
@@ -217,50 +201,51 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "potential equity offering mentioned but not detailed",
+    "equity_form": "potential equity offering mentioned (form not specified)",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
     "Premium Modes",
     "Lyft Black",
-    "Lyft Black SUV",
     "marketplace",
-    "consumer product",
+    "consumer products",
     "experimentation",
     "EV",
     "electrification",
     "cross-functional",
     "data fluency",
+    "roadmap",
     "rider experience",
-    "premium consumer experience"
+    "supply-side",
+    "AI tools"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($128K-$160K base in SF area)",
-    "High ownership role explicitly stated — 'high-ownership role at the center of a business Lyft is betting on'",
-    "Clear product surface with strategic importance (premium growth + EV strategy)",
-    "Equity mentioned as part of package",
-    "Hybrid schedule with flexibility to work from anywhere up to 4 weeks per year"
+    "Compensation range disclosed ($128K-$160K base) in SF",
+    "Equity mentioned as additional upside",
+    "High-ownership role tied to a stated strategic bet for the company",
+    "Clear product surface (Lyft Black/Black SUV + EV strategy)",
+    "Hybrid flexibility with up to 4 weeks fully remote per year",
+    "Encourages broad applicant pool via equal opportunity language"
   ],
   "red_flags": [
-    "Hybrid requires 3 specific days per week in office (Mon/Wed/Thu) — limited schedule flexibility",
-    "Compensation range only stated for San Francisco area; other locations not specified",
-    "Visa sponsorship not mentioned — unclear for non-US citizens",
-    "AI tools usage listed as a responsibility but not a stated requirement — ambiguous whether it is truly expected"
+    "Visa sponsorship status not stated — unclear",
+    "Hybrid requires 3 specific days in office (Mon/Wed/Thu) in SF — no flexibility on which days",
+    "Role spans both premium modes and EV/electrification — potentially broad scope for one PM",
+    "No explicit mention of team size or reporting structure"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range and years required)",
-      "scope.business_model (inferred from product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "location.work_auth (not stated; defaulted to open)",
-      "location.visa_sponsorship (not mentioned; set to unclear)"
+      "seniority.level (inferred from comp range and years requirement)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "scope.business_model (inferred from company description)",
+      "location.visa_sponsorship (not mentioned; marked unclear)",
+      "compensation.equity_form (mentioned but form/structure not specified)"
     ],
     "ambiguities": [
-      "'Leverage AI tools and emerging technology to accelerate your team's workflows' appears in Responsibilities (suggesting a must-have) but is not listed in the Experience section; classified as nice_to_have due to lack of explicit requirement language",
-      "'ideally with meaningful time spent on consumer-facing products' softens the 3+ years requirement somewhat but the 3-year minimum is treated as hard per unconditional bullet framing",
-      "Compensation range is stated only for San Francisco area; role may be open to other locations at different ranges, but only SF is mentioned in the JD body"
+      "The must-have for '3+ years of product management experience' includes the qualifier 'ideally with meaningful time spent on consumer-facing products' — the word 'ideally' softens it, but it appears in the required Experience section, so classified as hard with qualifier noted.",
+      "Marketplace or premium consumer experience is listed under Experience section but uses 'Ideally' — classified as nice_to_have."
     ]
   }
 }

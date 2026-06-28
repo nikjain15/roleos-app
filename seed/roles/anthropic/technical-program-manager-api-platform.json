@@ -1,0 +1,261 @@
+{
+  "company": "Anthropic",
+  "role_title": "Technical Program Manager, API Platform",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5256303008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5256303008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% in office",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Infrastructure / Platform TPM",
+  "seniority": {
+    "level": "Senior IC (likely Staff / Principal TPM)",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of technical program management experience",
+      "Comp range $365K-$435K base, consistent with senior individual contributor at Anthropic",
+      "Expected to surface risks to engineering leadership and drive org-wide cross-functional programs independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_experience",
+      "raw_text_from_jd": "Have 7+ years of technical program management experience, with a track record of successfully delivering complex, cross-functional programs",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "api_platform_distributed_systems",
+      "raw_text_from_jd": "Have experience with API platforms, distributed systems, and core infrastructure programs and can engage meaningfully with the engineers who design and operate them",
+      "skill_type": "domain_knowledge",
+      "domain": "api_platforms_and_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "API platforms",
+        "distributed systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "scaling_performance_efficiency_programs",
+      "raw_text_from_jd": "Have driven scaling, performance, or efficiency programs for high-volume production systems, including the tradeoffs across performance, reliability, and cost",
+      "skill_type": "outcome",
+      "domain": "infrastructure_scaling",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_org_dependency_management",
+      "raw_text_from_jd": "Have coordinated programs spanning many partner organizations, managing cross-team dependencies, commitments, and escalations at the working level",
+      "skill_type": "capability",
+      "domain": "cross_functional_program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "parallel_workstream_management",
+      "raw_text_from_jd": "Are highly organized and can manage multiple parallel workstreams effectively across distributed teams",
+      "skill_type": "capability",
+      "domain": "program_management_organization",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_structure",
+      "raw_text_from_jd": "Thrive in unstructured environments with a knack for bringing order to chaos and creating clarity in ambiguous situations, including where decision ownership is unclear",
+      "skill_type": "cultural_fit",
+      "domain": "operating_in_ambiguity",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_influence",
+      "raw_text_from_jd": "Have excellent written and verbal communication skills, with the ability to influence without authority",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_alignment",
+      "raw_text_from_jd": "Are passionate about Anthropic's mission and interested in the challenges of operating AI infrastructure safely and reliably",
+      "skill_type": "cultural_fit",
+      "domain": "ai_safety_and_mission",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Minimum education: Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "API Platform stack — spanning API layer, compute, databases, networking, and inference infrastructure",
+    "business_model": "B2B and B2D (developers and enterprise customers building on Anthropic's API)",
+    "primary_metrics_inferred": [
+      "API scaling efficiency and predictability",
+      "Cross-org program delivery on time and without blockers",
+      "Cost, reliability, and performance trade-off outcomes for the API stack"
+    ],
+    "cross_functional_partners": [
+      "API team",
+      "Infrastructure team",
+      "Database team",
+      "Networking team",
+      "Inference team",
+      "Engineering leadership"
+    ],
+    "core_responsibilities": [
+      "Drive scaling and core efficiency programs for the API stack from architectural direction through sequenced, deliverable execution",
+      "Run multiple large programs simultaneously across infrastructure, networking, and the API layer",
+      "Act as the connective tissue between API, infrastructure, database, networking, and inference teams, owning cross-org dependencies end to end",
+      "Establish decision-making clarity: who owns what, where trade-offs get made, and how isolated streams roll up into one program view",
+      "Surface risks, progress, and trade-offs to engineering leadership with the right altitude and cadence"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      365000,
+      435000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned (suggests options/RSUs are part of package)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "API platform",
+    "distributed systems",
+    "infrastructure scaling",
+    "cross-functional programs",
+    "networking",
+    "inference",
+    "efficiency programs",
+    "cross-org dependencies",
+    "AI infrastructure"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($365K-$435K base)",
+    "Visa sponsorship explicitly offered (with caveats) and immigration lawyer retained",
+    "Clear ownership problem stated: no single person currently focused on cross-team cohesion — role has obvious impact",
+    "Specific infrastructure domains named (compute, databases, networking, inference) — not vague",
+    "Encourages applications from candidates who don't meet every qualification",
+    "Emphasis on diversity and underrepresented groups in candidate pool"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% in-office time in San Francisco — eliminates fully-remote candidates",
+    "No explicit nice-to-haves stated, making it harder to gauge flexibility on qualifications",
+    "High comp range may indicate very high internal bar for the role"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + 7+ years requirement)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
+      "scope.business_model (inferred from API product description)",
+      "location.cities_listed (inferred as San Francisco from HQ reference; no other cities explicitly listed for this role)",
+      "compensation.equity_form (inferred from 'optional equity donation matching' benefit mention)"
+    ],
+    "ambiguities": [
+      "The JD states 'some roles may require more time in our offices' — it is unclear whether this TPM role requires more than 25% in-office time. Treated as standard 25% hybrid here.",
+      "No explicit nice-to-haves section exists; all requirements in 'You may be a good fit if you' bullets are treated as hard must-haves given unconditional framing. The education requirement is soft given the 'or equivalent combination' language.",
+      "posting_first_seen and posting_last_updated are not available from the provided data."
+    ]
+  }
+}

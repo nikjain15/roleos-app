@@ -1,0 +1,259 @@
+{
+  "company": "Stripe",
+  "role_title": "Product Manager, Global Payouts – Cross-Border & Enterprise Capabilities",
+  "url": "https://stripe.com/jobs/search?gh_jid=7994443",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7994443",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM with fintech / payments domain depth",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of product management experience",
+      "End-to-end product ownership with strategy + execution mandate",
+      "Cross-functional leadership across Sales, Partnerships, and GTM",
+      "High-impact, broad-scope role described as 'absolute center' of expansion mission"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7+ years of product management experience",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_product_ownership",
+      "raw_text_from_jd": "Demonstrated ability to own a product area end-to-end—defining strategy, driving execution, and measuring outcomes",
+      "skill_type": "capability",
+      "domain": "product_strategy_and_execution",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_segment_or_complex_products",
+      "raw_text_from_jd": "Experience shipping products that serve multiple user segments or operate across significant technical or regulatory complexity",
+      "skill_type": "capability",
+      "domain": "product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_gtm_collaboration",
+      "raw_text_from_jd": "Proven ability to work with Sales, GTM, or enterprise customers and translate their needs into scalable product investments",
+      "skill_type": "capability",
+      "domain": "enterprise_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_instincts",
+      "raw_text_from_jd": "Strong analytical instincts: comfort with data, metrics, and building the measurement framework before you ship",
+      "skill_type": "capability",
+      "domain": "data_and_metrics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_communication",
+      "raw_text_from_jd": "Strong written communication: crisp specs, clear PRDs, and the ability to build alignment across functions and levels",
+      "skill_type": "capability",
+      "domain": "communication_and_alignment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "payments_fintech_domain",
+      "raw_text_from_jd": "Experience in payments, fintech, financial infrastructure, or other regulated industries",
+      "skill_type": "domain_knowledge",
+      "domain": "payments_and_fintech",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech",
+        "financial infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_b2b_background",
+      "raw_text_from_jd": "Background working on enterprise or B2B products with complex commercial or compliance requirements",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_b2b_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "productizing_bespoke_solutions",
+      "raw_text_from_jd": "Experience productizing bespoke or custom solutions into broadly available features",
+      "skill_type": "capability",
+      "domain": "product_scalability",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Global Payouts – cross-border infrastructure and enterprise capabilities (Dashboard, APIs, platform integrations via Financial Accounts)",
+    "business_model": "B2B financial infrastructure platform; serves both self-serve and enterprise segments including high-growth fintechs, AI platforms, and large marketplaces",
+    "primary_metrics_inferred": [
+      "Adoption across self-serve and enterprise segments",
+      "Cross-border payout volume and reach",
+      "Enterprise deal conversion and retention",
+      "Feature scalability (self-serve readiness of productized capabilities)"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Partnerships",
+      "Go-to-Market (GTM)",
+      "Financial Accounts",
+      "Connect",
+      "money movement platform"
+    ],
+    "core_responsibilities": [
+      "Own the roadmap for global payout infrastructure, prioritizing rate locking, local bank coverage, and cross-border card rails",
+      "Productize fee passthrough, transforming a custom integration into a scalable, self-serve offering",
+      "Design industry-specific solutions for high-value verticals (e.g., remittance, fintech)",
+      "Ship enterprise-grade controls and reporting tools, including recipient tax reporting, two-step confirmation workflows, and advanced security access controls",
+      "Architect enterprise billing primitives—such as Interchange Plus (IC+) and platform fees",
+      "Partner with Sales and Partnerships to support active enterprise deals and PUA requests",
+      "Collaborate across Financial Accounts, Connect, and the broader money movement platform",
+      "Define and track success metrics, holding yourself accountable to measurable adoption targets"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "global payouts",
+    "cross-border infrastructure",
+    "enterprise capabilities",
+    "fee passthrough",
+    "rate locking",
+    "local bank coverage",
+    "cross-border card rails",
+    "recipient tax reporting",
+    "Interchange Plus (IC+)",
+    "enterprise billing",
+    "remittance",
+    "fintech",
+    "financial accounts",
+    "self-serve",
+    "enterprise"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Highly specific product surface and strategic mandate described in detail (cross-border + enterprise dual pillar)",
+    "Clear 12–18 month expansion horizon giving PM tangible mission and timeline",
+    "Role sits at 'absolute center' of a high-momentum growth phase, indicating real organizational priority",
+    "Preferred qualifications are genuinely preferred (not disguised requirements), keeping the bar appropriately scoped",
+    "Strong cross-functional scope signals PM will have real influence across Sales, GTM, and engineering"
+  ],
+  "red_flags": [
+    "No location, compensation, or visa sponsorship information provided — significant unknowns for candidates",
+    "Extremely broad scope (two full product pillars: cross-border expansion + enterprise capabilities) may indicate understaffing or unclear team boundaries",
+    "No mention of team size or reporting structure, making it hard to assess actual support available"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement, scope breadth, and leadership signals; not explicitly stated)",
+      "scope.business_model (inferred from JD description of Stripe and team context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly enumerated in JD)",
+      "location.type set to 'unclear' — no location information provided in JD",
+      "compensation.source set to 'unknown' — no compensation details provided"
+    ],
+    "ambiguities": [
+      "Location is entirely absent from the JD — no city, remote/hybrid/onsite signal, or work authorization requirements stated. Set to 'unclear' across all location fields.",
+      "The JD does not specify whether this is a single PM role or whether the candidate will have PM reports or dedicated teams for each pillar — manages_people set to false by default but unconfirmed."
+    ]
+  }
+}

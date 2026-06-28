@@ -1,0 +1,320 @@
+{
+  "company": "Glean",
+  "role_title": "Product Manager, Core Experience",
+  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4702147005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4702147005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "4 days a week in San Francisco office",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "AI Product Manager with growth and consumer-craft focus",
+  "seniority": {
+    "level": "Senior / Staff IC PM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in product management",
+      "Comp range $200K-$300K base, consistent with senior IC level",
+      "Expected to shape product roadmap and product team itself",
+      "Described as highly strategic and execution-oriented with outsized role on lean team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "You have 8+ years of experience in product management, with a track record of owning and shipping meaningful product areas in B2B SaaS, enterprise software, AI products, consumer products, or high-engagement workflow platforms.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS",
+        "enterprise software",
+        "AI products",
+        "consumer products"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_sense_strategy_execution",
+      "raw_text_from_jd": "You have a strong product sense for translating complex, ambiguous problems into clear, polished product experiences, and you are comfortable moving between strategy and detailed execution.",
+      "skill_type": "capability",
+      "domain": "product_strategy_and_execution",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_software_passion",
+      "raw_text_from_jd": "You have a deep interest in AI and software, and you are excited by the opportunity to shape consumer-grade experiences that combine search, chat, context, and proactive intelligence.",
+      "skill_type": "domain_knowledge",
+      "domain": "AI_and_software",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "search",
+        "chat",
+        "proactive intelligence"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_engagement_retention_track_record",
+      "raw_text_from_jd": "You have a strong track record of driving growth, engagement, and retention through experimentation, instrumentation, and data-driven iteration.",
+      "skill_type": "outcome",
+      "domain": "growth_and_engagement",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "You are an outstanding cross-functional partner and influencer who can drive outcomes across surfaces you don't directly own, aligning adjacent teams into a cohesive user experience.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "You have strong technical fluency and are comfortable partnering with engineering and data teams on systems involving retrieval, ranking, client infrastructure, and intelligence layers across web, desktop, mobile, and SDK surfaces.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "retrieval",
+        "ranking",
+        "client infrastructure",
+        "intelligence layers"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "granular_product_thinking",
+      "raw_text_from_jd": "You can demonstrate granular product thinking, including how a user should experience a workflow, what the right interaction model is, and how to sequence product capabilities into something customers will actually adopt.",
+      "skill_type": "capability",
+      "domain": "product_design_and_workflow",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_comfort",
+      "raw_text_from_jd": "You are comfortable operating in highly ambiguous spaces and can create clarity, momentum, and alignment even when the product area is still emerging.",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "You are an excellent written and verbal communicator, and have a learning and growth mindset.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_and_delivery",
+      "raw_text_from_jd": "You have a proven track record of taking ownership, taking initiative, and delivering results, and collaborate effectively with cross-functional partners.",
+      "skill_type": "outcome",
+      "domain": "execution_and_ownership",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_first_mindset",
+      "raw_text_from_jd": "You are an early adopter in building with or adopting AI for your own product craft and you are excited about helping customers accelerate their own AI adoption journey.",
+      "skill_type": "cultural_fit",
+      "domain": "AI_adoption",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "lean product team (exact size not stated)",
+    "surface": "Homepage, Mobile, Desktop, Browser Extension, SDK, app shell, navigation, notifications, settings",
+    "business_model": "B2B enterprise SaaS / Work AI platform",
+    "primary_metrics_inferred": [
+      "Engagement and session depth",
+      "User retention and daily active usage",
+      "Onboarding activation rates",
+      "Virality and collaboration metrics",
+      "Growth via A/B experimentation"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data",
+      "Growth",
+      "Go-to-market",
+      "Solutions",
+      "Support",
+      "Forward-deployed teams",
+      "Search team",
+      "Chat team"
+    ],
+    "core_responsibilities": [
+      "Define and drive product strategy and roadmap for Core Experience",
+      "Own end-to-end quality of Glean's core surfaces including Homepage, Mobile, Desktop, Extension, and SDK",
+      "Partner closely with Search and Chat teams to influence their roadmaps and ensure cohesive user journey",
+      "Spend significant time with users, customers, and stakeholders to understand friction and drop-off",
+      "Drive growth, engagement, virality, collaboration, and session depth",
+      "Champion rapid experimentation using A/B tests, instrumentation, and qualitative research",
+      "Partner with engineering, design, and data teams to turn ambiguous concepts into well-scoped products",
+      "Drive customer-focused prioritization and efficient execution",
+      "Collaborate with go-to-market, solutions, support, and forward-deployed teams",
+      "Bring high bar for product craft including concrete workflows, UI behavior, and adoption paths"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      200000,
+      300000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity eligible (certain roles); form not specified",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Core Experience",
+    "Work AI",
+    "enterprise search",
+    "AI Assistant",
+    "consumer-grade product",
+    "growth",
+    "engagement",
+    "experimentation",
+    "homepage",
+    "mobile",
+    "desktop",
+    "browser extension",
+    "SDK",
+    "onboarding",
+    "retention",
+    "B2B SaaS",
+    "retrieval",
+    "ranking",
+    "chat",
+    "agentic AI"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Wide base salary range disclosed ($200K-$300K), competitive for senior PM roles",
+    "Clear product surface ownership — Homepage, Mobile, Desktop, Extension, SDK",
+    "Outsized influence on lean team: shapes both roadmap and team itself",
+    "Well-articulated company strategy (chat-first AI entry point) giving PM clear north star",
+    "Comprehensive benefits including home office stipend, education and wellness stipends, 401k"
+  ],
+  "red_flags": [
+    "4 days per week in San Francisco office is a near-onsite requirement, eliminating remote and most hybrid candidates",
+    "Very wide base salary range ($200K-$300K) gives little signal about target level",
+    "8+ year minimum is a hard bar with no stated exceptions or equivalent paths",
+    "High buzzword density in JD may indicate evolving scope or unclear product boundaries",
+    "Work authorization and visa sponsorship not stated — unclear for international candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years + 'shape the product team itself' language)",
+      "scope.team_size_estimate (stated only as 'very lean product team'; exact number not given)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs)",
+      "scope.business_model (inferred from product description)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)",
+      "compensation.location_pay_differential (inferred from 'Compensation offered will be determined by factors such as location')"
+    ],
+    "ambiguities": [
+      "The role is tagged #LI-HYBRID and described as hybrid (4 days/week in SF office), which is functionally near-onsite; location.type set to 'hybrid' per JD language but office requirement is very high",
+      "Compensation range is unusually wide ($200K-$300K); may reflect multiple seniority bands or location differentials",
+      "Nice-to-haves section is empty — the JD does not use preferred/bonus language; all requirements appear as unconditional bullets under 'About you'"
+    ]
+  }
+}

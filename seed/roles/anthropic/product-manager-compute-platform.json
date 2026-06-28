@@ -1,0 +1,383 @@
+{
+  "company": "Anthropic",
+  "role_title": "Product Manager, Compute Platform",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5124623008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5124623008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% in office",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Infrastructure / Platform PM",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of product management experience",
+      "Comp range $305K-$385K base, well above typical Senior PM, consistent with Staff/Principal PM at Anthropic",
+      "Expected to own strategy and roadmap independently and communicate to senior leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7+ years of product management experience, with deep exposure to compute infrastructure, distributed systems, or scheduling/orchestration platforms",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "qualifier": "with deep exposure to compute infrastructure, distributed systems, or scheduling/orchestration platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems",
+        "scheduling/orchestration platforms",
+        "compute infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "infra_product_from_zero_to_scale",
+      "raw_text_from_jd": "Experience taking technical infrastructure products from infancy to scale—you've built something from the ground up and grown it to serve demanding internal or external customers",
+      "skill_type": "outcome",
+      "domain": "infrastructure_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_prioritization_tradeoffs",
+      "raw_text_from_jd": "Track record of building platform products that balance the needs of multiple users and stakeholders—you're comfortable making prioritization trade-offs between utilization, latency, cost, and fairness, and communicating them clearly",
+      "skill_type": "outcome",
+      "domain": "platform_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_systems_comprehension",
+      "raw_text_from_jd": "Ability to internalize complex technical systems (job schedulers, cluster managers, resource orchestrators) and translate that understanding into a comprehensive product vision",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "job schedulers",
+        "cluster managers",
+        "resource orchestrators"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_fluency",
+      "raw_text_from_jd": "Fluent across functions—you're equally credible discussing scheduling algorithms with engineers, capacity economics with finance, and infrastructure strategy with leadership",
+      "skill_type": "capability",
+      "domain": "cross_functional_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "scheduling algorithms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_to_business_outcomes",
+      "raw_text_from_jd": "Strong instinct for connecting technical decisions to business outcomes: every percentage point of cluster utilization has measurable impact",
+      "skill_type": "capability",
+      "domain": "infrastructure_economics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "scrappy_resourceful",
+      "raw_text_from_jd": "Scrappy and resourceful—you do what it takes to get things done in a fast-moving environment",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Minimum education: Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "job_scheduling_systems_experience",
+      "raw_text_from_jd": "Built or scaled job scheduling, resource orchestration, or workload management systems for large-scale compute clusters (e.g., Kubernetes, Slurm, Borg, YARN, or custom schedulers).",
+      "skill_type": "domain_knowledge",
+      "domain": "job_scheduling_orchestration",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [
+        "Kubernetes",
+        "Slurm",
+        "Borg",
+        "YARN"
+      ],
+      "technologies_named": [
+        "job scheduling",
+        "resource orchestration",
+        "workload management"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gpu_accelerator_scheduling",
+      "raw_text_from_jd": "Deep familiarity with GPU/accelerator scheduling challenges, including gang-scheduling, topology-aware placement, preemption, and hardware affinity constraints.",
+      "skill_type": "domain_knowledge",
+      "domain": "gpu_accelerator_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "GPU scheduling",
+        "gang-scheduling",
+        "topology-aware placement",
+        "preemption",
+        "hardware affinity"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sla_resource_guarantees",
+      "raw_text_from_jd": "Experience defining and enforcing SLAs and resource guarantees for compute workloads—including mechanisms to validate job prerequisites (data readiness, checkpoint availability, hardware compatibility) before scheduling to avoid wasted resources.",
+      "skill_type": "domain_knowledge",
+      "domain": "compute_sla_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SLAs",
+        "resource guarantees"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "capacity_planning_experience",
+      "raw_text_from_jd": "Capacity planning experience across cloud and on-premises infrastructure, including cost modeling, demand forecasting, and vendor management for compute procurement.",
+      "skill_type": "domain_knowledge",
+      "domain": "capacity_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "cost modeling",
+        "demand forecasting"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hypergrowth_compute_intensive",
+      "raw_text_from_jd": "Scaled through hypergrowth in compute-intensive environments (AI/ML, HPC, large-scale cloud infrastructure).",
+      "skill_type": "domain_knowledge",
+      "domain": "compute_intensive_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI/ML",
+        "HPC",
+        "large-scale cloud infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "observability_efficiency_tooling",
+      "raw_text_from_jd": "Experience with observability and efficiency tooling for distributed infrastructure—building dashboards, automation, and governance workflows that drive utilization and cost accountability.",
+      "skill_type": "domain_knowledge",
+      "domain": "infrastructure_observability",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "observability",
+        "distributed infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Compute Platform — scheduling, orchestration, and capacity management systems powering Anthropic's GPU and accelerator cluster infrastructure",
+    "business_model": "internal platform / infrastructure product serving research, engineering, and product teams",
+    "primary_metrics_inferred": [
+      "Cluster utilization rate",
+      "Cost efficiency (cost-to-serve)",
+      "Researcher velocity",
+      "Job scheduling latency",
+      "Resource waste reduction",
+      "Queue depth and scheduling efficiency"
+    ],
+    "cross_functional_partners": [
+      "Infrastructure",
+      "Compute Operations",
+      "Engineering",
+      "Finance & Strategy",
+      "Research",
+      "Capacity Strategy & Operations"
+    ],
+    "core_responsibilities": [
+      "Partner with Infrastructure to build job scheduling, prioritization, and allocation systems across GPU and accelerator clusters",
+      "Define and own strategy and roadmap across job scheduling primitives, capacity allocation policies, preemption and fairness frameworks, quota management, and observability tooling",
+      "Understand needs of internal customers across Research, Infrastructure, Product, and Finance",
+      "Define and iterate on the semantic layer for job scheduling: abstractions, priority tiers, resource classes, and preemption policies",
+      "Partner with engineering leads to design scheduling capabilities that maximize cluster utilization while honoring resource guarantees",
+      "Drive product strategy for compute capacity management including quota systems, fairness policies, bin-packing optimizations, and gang-scheduling",
+      "Own the trade-off framework between utilization efficiency, job latency, cost, and reliability",
+      "Collaborate with Capacity Strategy & Operations on capacity planning models, demand forecasting, and cost-to-serve analytics",
+      "Build and champion observability tools and dashboards for real-time visibility into cluster health and scheduling efficiency"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      305000,
+      385000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "compute platform",
+    "job scheduling",
+    "resource orchestration",
+    "cluster utilization",
+    "GPU infrastructure",
+    "capacity planning",
+    "gang-scheduling",
+    "preemption",
+    "observability",
+    "distributed systems",
+    "infrastructure PM",
+    "quota management",
+    "bin-packing",
+    "HPC"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($305K-$385K base)",
+    "Visa sponsorship explicitly offered with good-faith effort stated",
+    "Clear and specific product surface with well-articulated ownership scope",
+    "Encourages applications from underrepresented groups and candidates who don't meet every qualification",
+    "High-impact, foundational infrastructure role — directly affects all model training and inference at Anthropic",
+    "Cross-functional scope gives the PM significant leverage and visibility"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "7+ years PM experience combined with deep compute infrastructure domain knowledge is an unusually narrow intersection, making qualified candidates rare",
+    "Comp range upper bound ($385K) is notably high even for Anthropic, suggesting this may be a Staff/Principal-level role but JD does not explicitly state the level — seniority expectations may be even higher than the 7-year minimum implies",
+    "No explicit remote eligibility outside SF noted"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range $305K-$385K and scope of responsibilities; not explicitly titled Senior or Staff in JD)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated verbatim in JD)",
+      "scope.business_model (inferred from internal platform context)",
+      "location.cities_listed (SF inferred from 'headquartered in San Francisco' and hybrid policy; no other city explicitly named for this role)",
+      "equity_form (inferred from 'optional equity donation matching' in benefits section, implying equity is part of compensation)"
+    ],
+    "ambiguities": [
+      "The JD states 'Minimum years of experience: Years of experience required will correlate with the internal job level requirements for the position' — this is circular and non-informative; the 7+ years figure comes from the qualifications section and is treated as the operative minimum.",
+      "The role's seniority level is not named (Senior PM, Staff PM, Principal PM) in the JD. The compensation range ($305K-$385K) strongly implies Staff/Principal level, but this is inferred.",
+      "The JD logistics section says 'some roles may require more time in our offices' — it is unclear whether this compute infrastructure role falls into that category."
+    ]
+  }
+}

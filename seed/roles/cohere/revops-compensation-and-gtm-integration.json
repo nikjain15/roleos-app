@@ -1,0 +1,226 @@
+{
+  "company": "Cohere",
+  "role_title": "RevOps - Compensation & GTM Integration",
+  "url": "https://jobs.ashbyhq.com/cohere/f3cf5d6a-5a93-41b5-8a00-160e120859ff",
+  "ats_provider": "ashby",
+  "ats_job_id": "f3cf5d6a-5a93-41b5-8a00-160e120859ff",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [
+      "New York City, NY",
+      "San Francisco, CA",
+      "Toronto, ON"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Revenue Operations / Compensation Design",
+  "seniority": {
+    "level": "Senior IC / Lead",
+    "years_required_min": 5,
+    "years_required_max": 8,
+    "manages_people": false,
+    "level_signals": [
+      "5-8 years in RevOps, sales operations or sales finance in a B2B environment",
+      "Owns and administers GTM variable compensation architecture end-to-end",
+      "Serves as RevOps lead on post-close M&A integration for GTM",
+      "Reports to Head of Revenue Operations",
+      "US base range $115,000–$240,000 indicates wide band covering mid-to-senior levels"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_revops_sales_ops_finance",
+      "raw_text_from_jd": "Have 5-8 years in RevOps, sales operations or sales finance in a B2B environment",
+      "skill_type": "years_of_experience",
+      "domain": "revenue_operations",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "qualifier": "B2B environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "variable_comp_design_admin",
+      "raw_text_from_jd": "Hands on experience designing and administering variable compensation plans (not just reporting on them)",
+      "skill_type": "capability",
+      "domain": "variable_compensation_design",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ma_gtm_integration",
+      "raw_text_from_jd": "Experience supporting or leading GTM workstreams in M&A integrations",
+      "skill_type": "domain_knowledge",
+      "domain": "mergers_and_acquisitions_integration",
+      "evidence_required": "project_examples",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "financial_modelling_fluency",
+      "raw_text_from_jd": "Have financial modelling fluency, building bottoms up capacity models, compensation scenarios, and attainment distribution",
+      "skill_type": "capability",
+      "domain": "financial_modelling",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clear_communicator_exec_presence",
+      "raw_text_from_jd": "Are a clear communicator able to present complex compensation plans or compensation frameworks to sales leadership and executives",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_tolerance",
+      "raw_text_from_jd": "Are comfortable working in ambiguous, fast moving environments",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "GTM variable compensation architecture and post-close M&A GTM integration",
+    "business_model": "B2B enterprise AI / SaaS",
+    "primary_metrics_inferred": [
+      "OTE attainment rates across GTM teams",
+      "Compensation cost as % of revenue",
+      "Integration milestone completion",
+      "Quota attainment distribution",
+      "Headcount unlock criteria outcomes"
+    ],
+    "cross_functional_partners": [
+      "Finance",
+      "HR / People Team",
+      "GTM Leadership",
+      "Sales Enablement",
+      "RevOps Leadership",
+      "Cross-functional integration teams"
+    ],
+    "core_responsibilities": [
+      "Own and administer GTM variable compensation architecture including accelerators and SPIFs across sales, BDRs, CSMs, SAs and the partner team",
+      "Model scenarios to stress test costs, attainment distributions, and behavioural incentives before plans are finalized",
+      "Partner with finance on commission actuals and with HR on benchmarking against market data",
+      "Own the plan roll out with the people team and GTM leadership including documentation, communications, resolution frameworks, exception handling/tracking, system configuration and compensation governance",
+      "Work with sales enablement to ensure reps have a clear path to OTE - identifying quota, ramp, and efficiency gaps before they impact attainment",
+      "Partner with finance and GTM leadership to model headcount unlock criteria, identifying when and where to hire to support growth in new regions and segments",
+      "Serve as the RevOps lead on all post-close GTM integration items, including designing and maintaining an integration playbook covering role mapping, territory carving, quota assignment, system integration items and data mapping",
+      "Track integration milestones and surface risks to RevOps leadership and cross-functional integration teams"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      115000,
+      240000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "RevOps",
+    "variable compensation",
+    "GTM integration",
+    "M&A integration",
+    "OTE",
+    "quota",
+    "attainment",
+    "financial modelling",
+    "sales operations",
+    "compensation design",
+    "SPIFs",
+    "accelerators",
+    "territory carving",
+    "headcount planning",
+    "integration playbook"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and is wide ($115K–$240K USD base), indicating flexibility for strong candidates",
+    "Role has clear ownership and scope — 'design and execution role' with explicit accountability",
+    "Reports to Head of Revenue Operations — direct access to senior leadership",
+    "Remote US eligible despite office locations listed",
+    "Generous benefits: 6 weeks PTO, 401K, full health and dental, parental leave top-up",
+    "Encourages applicants whose experience doesn't line up exactly"
+  ],
+  "red_flags": [
+    "Very wide compensation band ($115K–$240K) may indicate ambiguity in level/seniority being targeted",
+    "Location section says 'Remote US' but qualifications section lists 'NYC, SF, Toronto' — mild inconsistency worth confirming",
+    "No explicit mention of equity despite being a high-growth AI company — may be an omission",
+    "M&A integration experience is a hard requirement that is relatively rare and non-bridgeable",
+    "Role combines two distinct disciplines (comp design + M&A integration) which could mean high scope/breadth demands"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required, scope of ownership, and comp range)",
+      "seniority.manages_people (inferred; no direct reports mentioned)",
+      "scope.business_model (inferred from company description and B2B qualifier in JD)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "compensation.equity_mentioned (no mention of equity in JD; inferred as false)"
+    ],
+    "ambiguities": [
+      "Location field in role overview says 'NYC, SF, Toronto' but the Working Location section says 'Remote US' — treated as remote-US eligible with those cities as potential office hubs",
+      "Canada compensation range provided ($160K–$240K CAD) but work auth and sponsorship status are not stated for either country",
+      "No explicit mention of equity compensation despite it being common at AI companies of Cohere's stage"
+    ]
+  }
+}

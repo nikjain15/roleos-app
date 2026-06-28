@@ -1,0 +1,316 @@
+{
+  "company": "Airtable",
+  "role_title": "Program Manager, Community Contract",
+  "url": "https://job-boards.greenhouse.io/airtable/jobs/8604559002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8604559002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Community & Customer Programs",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 3,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "3–7+ years of experience in community management, customer programs, customer education, operations, or related fields",
+      "Hourly rate $60–$80 USD, consistent with mid-senior contractor"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_community_ops_experience",
+      "raw_text_from_jd": "3–7+ years of experience in community management, customer programs, customer education, operations, or related fields.",
+      "skill_type": "years_of_experience",
+      "domain": "community_management_or_operations",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "community_program_building",
+      "raw_text_from_jd": "Demonstrated experience building and scaling community programs, such as user groups, ambassador programs, advocacy initiatives, or community-led events.",
+      "skill_type": "outcome",
+      "domain": "community_programs",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native_operator_mindset",
+      "raw_text_from_jd": "An AI-native operator mindset and proven track record of using AI to plan, create, analyze, automate, and execute work. You should be able to articulate how AI has improved your productivity, quality, throughput, or business outcomes.",
+      "skill_type": "capability",
+      "domain": "ai_tooling_and_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "program_management_operational_skills",
+      "raw_text_from_jd": "Strong program management and operational skills, including the ability to manage multiple initiatives simultaneously, build scalable processes, and drive projects from concept through execution.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_communication_community_engagement",
+      "raw_text_from_jd": "Strong written communication and community engagement skills, with the ability to create experiences that foster participation, learning, and customer advocacy.",
+      "skill_type": "capability",
+      "domain": "communication_and_community_engagement",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Comfortable working cross-functionally with Product, Marketing, Customer Success, Education, and other stakeholders.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_data_driven",
+      "raw_text_from_jd": "Analytical and data-driven, with experience measuring program performance and using insights to guide decisions and investments.",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_program_measurement",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "reddit_social_community_experience",
+      "raw_text_from_jd": "Experience supporting Reddit communities, social engagement programs, or community growth initiatives on third-party platforms.",
+      "skill_type": "domain_knowledge",
+      "domain": "social_community_platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Reddit"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "saas_customer_success_familiarity",
+      "raw_text_from_jd": "Familiarity with SaaS customer success, customer education, product adoption, or customer lifecycle programs.",
+      "skill_type": "domain_knowledge",
+      "domain": "saas_customer_success",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "airtable_experience",
+      "raw_text_from_jd": "Experience using Airtable; experience designing and building apps in Airtable is a strong plus.",
+      "skill_type": "tool_proficiency",
+      "domain": "no_code_platform_usage",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Airtable"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_automation_passion",
+      "raw_text_from_jd": "Passion for AI, automation, and helping customers adopt new ways of working.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_automation_enthusiasm",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "flexible_schedule_international",
+      "raw_text_from_jd": "Comfortability with a flexible schedule (we have international events that will sometimes need support).",
+      "skill_type": "cultural_fit",
+      "domain": "schedule_flexibility",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Airtable Community programs — Builder Crews (user groups), community engagement initiatives, community operations, Reddit and social channels",
+    "business_model": "B2B SaaS, no-code app platform",
+    "primary_metrics_inferred": [
+      "AI feature adoption (AI WAUs)",
+      "Community engagement metrics",
+      "Community health metrics",
+      "User group program scale and participation"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Marketing",
+      "Customer Success",
+      "Education"
+    ],
+    "core_responsibilities": [
+      "Recruiting, onboarding, and supporting Builder Crew leaders",
+      "Developing playbooks, templates, and operational processes for local events",
+      "Partnering with internal teams on event promotion, measurement, and follow-up",
+      "Supporting engagement initiatives across Airtable Community and social channels",
+      "Expanding Airtable's presence and participation on Reddit and other community platforms",
+      "Identifying and amplifying customer success stories, best practices, and AI use cases",
+      "Managing program operations, documentation, reporting, and workflows",
+      "Identifying opportunities to automate manual work and improve operational efficiency"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "hourly_rate_usd": [
+      60,
+      80
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "community programs",
+    "Builder Crews",
+    "user groups",
+    "AI adoption",
+    "AI WAUs",
+    "program management",
+    "community engagement",
+    "Reddit",
+    "operations",
+    "no-code",
+    "Airtable",
+    "ambassador programs",
+    "customer advocacy",
+    "contractor"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Hourly rate range disclosed ($60–$80 USD)",
+    "Fully remote role",
+    "Clear north star metric stated (AI WAUs / AI feature adoption)",
+    "Specific program scope (Builder Crews, Reddit, community ops) — not vague",
+    "12-month contract with full-time hours (40 hr/week) gives meaningful runway",
+    "Equal opportunity employer statement with accommodations process outlined"
+  ],
+  "red_flags": [
+    "This is a contractor role, not a full-time employee position — no benefits mentioned",
+    "12-month duration is fixed; no mention of conversion path to FTE",
+    "International events may require occasional off-hours availability (flagged as nice-to-have but real operational ask)",
+    "Visa sponsorship status not addressed for a contractor engagement"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range 3–7+ and hourly rate $60–$80)",
+      "scope.business_model (inferred from company description as B2B SaaS)",
+      "scope.primary_metrics_inferred (inferred from JD body; AI WAUs is stated as north star)",
+      "location.work_auth (stated as open based on EEO language and no restriction mentioned)",
+      "compensation.base_range_usd set to null; hourly_rate_usd added as non-schema field to capture stated range"
+    ],
+    "ambiguities": [
+      "JD says 'Location: Remote' and includes '#LI-Remote' tag, but does not specify US-only remote vs. global remote. Treated as remote-us given VEVRAA-Federal Contractor designation and US pay disclosure.",
+      "Visa sponsorship is not addressed for a contractor engagement; left as 'unclear'.",
+      "Years range '3–7+' is slightly unusual — the '+' suggests the upper bound is open-ended; minimum captured as 3.",
+      "Compensation schema does not include an hourly_rate field; base_range_usd set to null and hourly noted in extraction_notes. The stated range is $60–$80/hr USD."
+    ]
+  }
+}

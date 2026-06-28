@@ -1,10 +1,10 @@
 {
   "company": "Scale AI",
   "role_title": "Product Manager of AI Applications, Global Public Sector",
-  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4650514005",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4589749005",
   "ats_provider": "greenhouse",
-  "ats_job_id": "4650514005",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "4589749005",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,7 +17,7 @@
   },
   "archetype": "AI Product Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Technical PM with forward-deployed / enterprise solutioning focus",
+  "secondary_archetype": "Technical PM (forward-deployed, public sector focus)",
   "seniority": {
     "level": "Mid-Senior IC",
     "years_required_min": 4,
@@ -27,18 +27,18 @@
       "4+ years of experience building products",
       "Leads cross-functional team of engineers, MLEs, and operators",
       "Owns large AI projects for one or many customers",
-      "Drives millions in revenue for the business"
+      "Entrepreneurial and experienced product leader framing"
     ]
   },
   "must_haves": [
     {
-      "id": "years_product_building",
+      "id": "years_product_experience",
       "raw_text_from_jd": "4+ years of experience building products with specific experience within the last 1-2 years building AI-powered products",
       "skill_type": "years_of_experience",
       "domain": "product_management",
       "minimum_value": 4,
       "unit": "years",
-      "qualifier": "including 1-2 years building AI-powered products",
+      "qualifier": "with recent 1-2 years specifically in AI-powered products",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "id": "generative_ai_understanding",
+      "id": "genai_understanding",
       "raw_text_from_jd": "Strong understanding of generative AI technologies and their applications in both enterprise and consumer settings",
       "skill_type": "domain_knowledge",
       "domain": "generative_ai",
@@ -89,7 +89,7 @@
       "id": "vibe_coding_and_design_tools",
       "raw_text_from_jd": "Experience with vibe coding tools (i.e., Replit, Lovable, Bolt, etc.) and design tools (i.e., Figma/Canva/Miro)",
       "skill_type": "tool_proficiency",
-      "domain": "rapid_prototyping_and_design",
+      "domain": "ai_and_design_tooling",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
@@ -108,7 +108,7 @@
       "credentials_named": []
     },
     {
-      "id": "leadership_communication",
+      "id": "leadership_and_communication",
       "raw_text_from_jd": "Exceptional leadership, presentation and communication skills with the ability to influence cross-functional teams",
       "skill_type": "capability",
       "domain": "leadership_and_communication",
@@ -152,24 +152,22 @@
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [],
-      "geographies_named": [
-        "MENA"
-      ],
+      "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     }
   ],
   "explicitly_excluded": [
-    "Candidates who applied for the same role within the last 90 days are not reconsidered (90-day waiting period policy)"
+    "Candidates who have applied for the same role within the last 90 days are not reconsidered"
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Custom AI applications and custom LLMs for governments and government-backed entities outside the United States, powered by the Scale GenAI Platform",
-    "business_model": "B2G (business-to-government), enterprise AI solutions with bespoke forward-deployed development",
+    "surface": "Global Public Sector AI applications — custom AI solutions and custom LLMs for international governments and government-backed entities",
+    "business_model": "B2G (business-to-government), bespoke forward-deployed AI solutions, multi-million dollar contracts",
     "primary_metrics_inferred": [
-      "Revenue generated per customer (millions in revenue cited)",
-      "AI application adoption and deployment success",
-      "Client satisfaction and feedback integration"
+      "Revenue generated per customer engagement (millions in revenue)",
+      "Model performance against evaluation sets",
+      "Customer satisfaction and adoption of AI applications"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -180,10 +178,10 @@
     "core_responsibilities": [
       "Lead design workshops with the client to define custom AI solutions",
       "Scope out new AI application use cases across various government entities",
-      "Lead cross-functional development of AI applications and custom LLMs with diverse stakeholders",
-      "Consistently engage with future end-users to solicit feedback and ensure effective prioritization",
+      "Lead cross-functional development of AI applications and custom LLMs with diverse stakeholders (Engineering + Ops + Go-to-Market)",
+      "Consistently engage with future end-users to solicit feedback and ensure we are prioritizing effectively",
       "Stay up to date with latest research in applied AI and training custom LLMs",
-      "Scope out model evaluation sets and performance requirements, review results, and iterate on the solution",
+      "Scope out model evaluation sets and performance requirements, consistently review results, and iterate on the solution",
       "Give regular progress updates to the client and Global Public Sector leadership"
     ]
   },
@@ -197,47 +195,47 @@
   },
   "top_keywords": [
     "AI applications",
+    "global public sector",
+    "government",
     "custom LLMs",
     "generative AI",
-    "Global Public Sector",
-    "government",
-    "forward deployed",
-    "Scale GenAI Platform",
+    "forward-deployed",
+    "GenAI Platform",
     "vibe coding",
-    "cross-functional leadership",
-    "applied AI",
     "model evaluation",
-    "Arabic"
+    "cross-functional",
+    "Arabic",
+    "enterprise AI",
+    "bespoke solutions"
   ],
-  "buzzword_density": "medium",
+  "buzzword_density": "high",
   "green_flags": [
-    "Clear ownership scope: large AI projects for one or many government customers",
-    "Entrepreneurial role on a rapidly growing team",
-    "Explicit mention of real-world impact: government entities and frontier AI agents",
-    "Nice-to-haves are well-scoped and not inflated into hard requirements",
-    "Equal opportunity employer with explicit disability accommodation process"
+    "Clear ownership scope: large AI projects for one or many public sector customers",
+    "Explicitly calls out international/global focus — differentiated from typical US-centric roles",
+    "Arabic language as a nice-to-have signals genuine regional deployment intent (likely MENA)",
+    "Company lists real government clients (Government of Qatar, U.S. Army, U.S. Air Force) — credibility signal",
+    "Role sits on a 'quickly expanding team' with direct revenue impact framing"
   ],
   "red_flags": [
-    "No compensation range disclosed anywhere in the JD",
-    "Location not specified — unclear whether role is remote, hybrid, or onsite, and in which country/region",
-    "Visa sponsorship policy not stated",
-    "Work authorization requirements not stated — role involves non-US governments but candidate geography is unclear",
-    "Arabic as a nice-to-have strongly implies MENA focus but the region is not explicitly named in the role scope",
-    "90-day re-application waiting period may disadvantage candidates who applied recently"
+    "No location or city specified — remote vs. onsite vs. hybrid entirely unclear",
+    "No compensation range disclosed despite referencing US Pay Transparency compliance",
+    "Visa sponsorship not addressed",
+    "Vague seniority framing ('entrepreneurial and experienced') without title level clarity",
+    "High buzzword density may obscure actual day-to-day scope"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years required, cross-functional ownership, and revenue accountability; not explicitly stated)",
-      "scope.business_model (inferred from 'governments and government-backed entities outside the United States' and bespoke solution framing)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed in JD)",
-      "location.type (not stated in JD; marked unclear)",
-      "geographies_named on arabic_proficiency nice-to-have (MENA inferred from Arabic language requirement and Government of Qatar reference in About Us)"
+      "seniority.level (inferred from years required, leadership framing, and cross-functional ownership)",
+      "scope.business_model (inferred from 'government and government-backed entities' and 'bespoke solutions')",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities and 'millions in revenue' mention)",
+      "location.type (not stated; left as 'unclear')",
+      "geographies_named on individual requirements (MENA inferred from Arabic nice-to-have but not stated explicitly as target geography)"
     ],
     "ambiguities": [
-      "Location of the role is entirely unstated — the team operates globally (outside the US) but no city, country, or remote policy is mentioned for the candidate's base.",
-      "Work authorization and visa sponsorship are not addressed in the JD body.",
-      "STEM degree is listed as 'and/or experience building technical software products', making it partially substitutable — severity kept hard but accepts_equivalent_experience set to true.",
-      "The 'Global Public Sector' team focuses on non-US governments, but the About Us section references US government agencies (Army, Air Force) — unclear whether this role could touch US government work."
+      "JD does not specify a work location (city, country, or remote policy) — location.type set to 'unclear'",
+      "Compensation section references US Pay Transparency compliance but discloses no range — unclear whether role is US-based or global",
+      "Arabic language proficiency as a nice-to-have strongly suggests MENA regional focus, but the JD only says 'outside of the United States' broadly",
+      "Vibe coding tools requirement ('Replit, Lovable, Bolt') classified as hard/must-have per its placement under Minimum Qualifications, though it reads more like a tool-familiarity check than a gating criterion"
     ]
   }
 }

@@ -1,0 +1,259 @@
+{
+  "company": "Figma",
+  "role_title": "Product Manager, CMS",
+  "url": "https://boards.greenhouse.io/figma/jobs/6092802004?gh_jid=6092802004",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "6092802004",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience as a full-time Product Manager or equivalent title",
+      "2+ years of experience working in the content or digital asset management space",
+      "Experience leading significant strategic initiatives on highly complex, ambiguous, and scaled products",
+      "Compensation range $169K–$303K base"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years of experience as a full-time Product Manager or equivalent title",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_cms_dam_experience",
+      "raw_text_from_jd": "2+ years of experience working in the content or digital asset management space",
+      "skill_type": "years_of_experience",
+      "domain": "content_management_digital_asset_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_initiative_leadership",
+      "raw_text_from_jd": "Experience leading significant strategic initiatives on highly complex, ambiguous, and scaled products",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_communication_analytical_skills",
+      "raw_text_from_jd": "Excellent organizational, communication, and analytical skills, spanning both technical and UX-related disciplines",
+      "skill_type": "capability",
+      "domain": "communication_and_analytical_skills",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "enterprise_cms_dam_implementation",
+      "raw_text_from_jd": "Experience implementing enterprise-scale CMS or DAM platforms, internally or for a customer",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_cms_dam",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "frontend_headless_cms_infra_background",
+      "raw_text_from_jd": "Strong technical background with an understanding of frontend development, headless content management systems, and the infra that brings all of it together",
+      "skill_type": "domain_knowledge",
+      "domain": "frontend_and_headless_cms_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "frontend development",
+        "headless content management systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_profile_consultancy_experience",
+      "raw_text_from_jd": "High-profile consultancy experience, where you've led many digital innovation strategies for enterprise organizations as they identify and adopt new CMS / DAM platforms",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_digital_transformation",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-profile consultancy"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "open_source_experience",
+      "raw_text_from_jd": "Experience running or contributing to large open source projects",
+      "skill_type": "capability",
+      "domain": "open_source",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "open source"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Figma CMS Area — content and digital asset management systems natively integrated into Figma's platform",
+    "business_model": "B2B SaaS / product-led growth",
+    "primary_metrics_inferred": [
+      "Adoption of CMS/DAM capabilities within Figma",
+      "Integration depth with existing Figma product surfaces (Editor, Build Tools)",
+      "Enterprise customer satisfaction and retention"
+    ],
+    "cross_functional_partners": [
+      "Editor team",
+      "Infrastructure team",
+      "Build Tools team",
+      "Growth + Monetization team",
+      "Product leadership",
+      "Design leadership",
+      "Engineering leadership"
+    ],
+    "core_responsibilities": [
+      "Combine experience with design systems, technical expertise, and empathy for teams who rely daily on CMS / DAM products",
+      "Partner with product, design, and engineering leadership to define, sharpen, and deliver the long-term strategy of Figma's future CMS",
+      "Align your team around solutions to complex infrastructure-related product requirements",
+      "Embrace and advance the world of open source software as we deliver engineering teams tools that fit their workflows",
+      "Work closely with the core Figma Editor team in order to connect dynamic content to existing Figma product surfaces in new ways",
+      "Translate complex technical concepts for non-technical stakeholders and communicate the value of foundational improvements across the organization"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      169000,
+      303000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity to employees (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "CMS",
+    "DAM",
+    "content management",
+    "digital asset management",
+    "design systems",
+    "headless CMS",
+    "infrastructure",
+    "open source",
+    "enterprise",
+    "Figma Editor",
+    "technical PM",
+    "product strategy"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Wide compensation range disclosed ($169K–$303K base) with equity on top",
+    "Fully remote in the US eligible — not restricted to hub cities",
+    "JD encourages candidates whose experience doesn't align perfectly to apply anyway",
+    "Clear product surface and cross-functional scope articulated",
+    "Explicit mention of open source as a strategic direction — signals engineering-friendly culture"
+  ],
+  "red_flags": [
+    "Compensation range is very wide ($169K–$303K), making actual offer difficult to predict without knowing leveling",
+    "Remote pay adjusted by 80–100% of range depending on location — candidates outside SF/NYC may see materially lower offers",
+    "Required camera-on for all video interviews and mandatory in-person onboarding may be barriers for some candidates",
+    "Visa sponsorship status not mentioned — unclear"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and comp range)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
+      "scope.business_model (inferred from Figma's known product and go-to-market)",
+      "location.work_auth (not stated; defaulted to 'open')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
+    ],
+    "ambiguities": [
+      "The JD says 'full time role that can be held from one of our US hubs or remotely in the United States' — treated as remote-us with hub options in SF and NY, not strictly onsite.",
+      "Pay range ($169K–$303K) is extremely wide; it is listed for SF/NY hub offices specifically, with remote pay localized at 80–100% of that range. Actual level and comp unclear.",
+      "Nice-to-haves section header says 'not required' and 'added plus' — all four items treated as soft/nice-to-have accordingly."
+    ]
+  }
+}

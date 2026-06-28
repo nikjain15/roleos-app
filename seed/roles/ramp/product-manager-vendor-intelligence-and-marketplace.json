@@ -1,0 +1,368 @@
+{
+  "company": "Ramp",
+  "role_title": "Product Manager | Vendor Intelligence & Marketplace",
+  "url": "https://jobs.ashbyhq.com/ramp/cf3516f6-4d6b-4872-831f-c8ef4a3078ee",
+  "ats_provider": "ashby",
+  "ats_job_id": "cf3516f6-4d6b-4872-831f-c8ef4a3078ee",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York, NY",
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 2 days/week in-person at NYC or SF office",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (data products, marketplace, B2B intelligence)",
+  "seniority": {
+    "level": "Senior IC (Senior PM)",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of product management experience",
+      "Expected to own strategy and roadmap end to end",
+      "Cross-functional alignment ownership including GTM, compliance, and legal",
+      "Building 0→1 products at a high-growth fintech"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_technical",
+      "raw_text_from_jd": "BA/BS in a technical or analytical field (Computer Science, Engineering, Analytics, Mathematics, Economics, or related).",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "BA/BS",
+        "Computer Science",
+        "Engineering",
+        "Analytics",
+        "Mathematics",
+        "Economics"
+      ]
+    },
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years of product management experience, ideally with products where data quality and customer trust are the core value proposition.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_marketplace_product_judgment",
+      "raw_text_from_jd": "Sharp product judgment on data products and marketplaces: you understand flywheel dynamics, network effects, coverage-versus-accuracy tradeoffs, and the cold-start problem.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_products_and_marketplaces",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_fluency",
+      "raw_text_from_jd": "AI fluency: hands-on experience building AI features, comfort with LLM-based extraction and retrieval, evaluation methodology, and human-in-the-loop design.",
+      "skill_type": "capability",
+      "domain": "ai_product_development",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "LLM-based extraction",
+        "retrieval",
+        "human-in-the-loop design"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "commercial_instincts",
+      "raw_text_from_jd": "Strong commercial instincts: you understand how businesses buy software, what levers drive negotiation outcomes, and why price transparency changes behavior.",
+      "skill_type": "domain_knowledge",
+      "domain": "b2b_software_procurement",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "trust_based_products",
+      "raw_text_from_jd": "Track record building products where trust is earned over time: explainability, auditability, graceful degradation, and clear user controls.",
+      "skill_type": "outcome",
+      "domain": "trust_and_reliability",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_environment_comfort",
+      "raw_text_from_jd": "Comfort working in technical environments (Figma, SQL, Git) and prototyping quickly with modern AI tools (Claude Code, Cursor).",
+      "skill_type": "tool_proficiency",
+      "domain": "technical_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Figma",
+        "SQL",
+        "Git",
+        "Claude Code",
+        "Cursor"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication",
+      "raw_text_from_jd": "Clear, direct communication across technical and non-technical stakeholders; ability to make a crisp case for a product bet without a deck full of slides.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "benchmarking_or_contract_analytics",
+      "raw_text_from_jd": "Experience building price benchmarking, market intelligence, or contract analytics products, anywhere from procurement software to B2B SaaS to fintech.",
+      "skill_type": "domain_knowledge",
+      "domain": "price_benchmarking_and_contract_analytics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "procurement software",
+        "B2B SaaS",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "marketplace_experience",
+      "raw_text_from_jd": "Marketplace experience: supply/demand matching, seller acquisition, buyer discovery, and the trust primitives that make two-sided systems work.",
+      "skill_type": "domain_knowledge",
+      "domain": "two_sided_marketplace",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "document_understanding",
+      "raw_text_from_jd": "Document understanding: OCR, LLM-based extraction, normalizing structured data from unstructured contracts.",
+      "skill_type": "capability",
+      "domain": "document_ai",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "OCR",
+        "LLM-based extraction"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "procurement_background",
+      "raw_text_from_jd": "Background in procurement, vendor management, or enterprise SaaS buying and selling, either as a PM or as a practitioner.",
+      "skill_type": "domain_knowledge",
+      "domain": "procurement_and_vendor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "compliance_adjacent",
+      "raw_text_from_jd": "Familiarity with compliance-adjacent domains: vendor due diligence, security reviews, NDAs, audit trails.",
+      "skill_type": "domain_knowledge",
+      "domain": "compliance_and_vendor_due_diligence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_growth_startup_0to1",
+      "raw_text_from_jd": "Experience at a high-growth startup taking 0→1 products to scale.",
+      "skill_type": "outcome",
+      "domain": "0_to_1_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth startup"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Vendor Intelligence & Marketplace — price benchmarking engine, contract analysis (extraction and risk from vendor agreements), B2B marketplace connecting Ramp's buyer base to vendors",
+    "business_model": "B2B SaaS / fintech platform, buyer-side intelligence layer, emerging two-sided B2B marketplace",
+    "primary_metrics_inferred": [
+      "Benchmark accuracy and coverage",
+      "Customer negotiation outcomes / savings driven",
+      "Vendor marketplace GMV or engagement",
+      "Contract analysis accuracy and explainability scores",
+      "Customer trust and adoption of AI-powered recommendations"
+    ],
+    "cross_functional_partners": [
+      "Data science",
+      "GTM / sales enablement",
+      "Legal / compliance",
+      "Engineering",
+      "Finance"
+    ],
+    "core_responsibilities": [
+      "Own the strategy and roadmap for price benchmarks and contract intelligence",
+      "Build the B2B marketplace primitives for vendor discovery, comparison, and engagement",
+      "Design 'decision moments' surfaces delivering benchmarks, contract context, or vendor alternatives at key customer action points",
+      "Partner with data science to build extraction, normalization, and modeling pipelines for price benchmarks",
+      "Define evaluation methodology, quality bar, and feedback loops for AI-powered contract analysis",
+      "Cover the full vendor lifecycle from discovery through renewal with contextual intelligence",
+      "Develop deep understanding of procurement, finance, and legal team workflows",
+      "Drive cross-functional alignment on dependencies, GTM enablement, compliance review, and launch readiness"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "vendor intelligence",
+    "price benchmarking",
+    "contract analytics",
+    "B2B marketplace",
+    "LLM-based extraction",
+    "data products",
+    "procurement",
+    "network effects",
+    "cold-start problem",
+    "AI fluency",
+    "two-sided marketplace",
+    "spend data",
+    "fintech"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific product surface with meaningful ownership (price benchmarking, contract intelligence, marketplace)",
+    "Unique data moat described — $200B+ annualized spend across 70,000+ companies",
+    "Role is described as 'one of the first PMs' in this area, signaling high strategic importance and career opportunity",
+    "Benefits package is comprehensive and explicitly detailed for multiple regions (US, Canada, UK)",
+    "Relocation support to NYC or SF offered",
+    "Unlimited AI token usage listed as a benefit — signals AI-forward culture consistent with role requirements"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Hybrid requirement of 2 days/week in NYC or SF — eliminates fully remote candidates",
+    "Visa sponsorship status is not stated anywhere in the JD",
+    "Role combines multiple complex domains (benchmarking engine, contract AI, marketplace) which may indicate an extremely broad scope for one PM",
+    "No explicit mention of team size or eng/design resourcing"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ years requirement, strategic ownership, and role complexity — no explicit level named)",
+      "seniority.manages_people (inferred as false; no management language present)",
+      "scope.business_model (inferred from product description and company overview)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly in JD)",
+      "compensation.equity_mentioned (no equity mentioned anywhere in JD)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)"
+    ],
+    "ambiguities": [
+      "The 'ideally with products where data quality and customer trust are the core value proposition' qualifier on the 5+ years PM requirement is a soft modifier on a stated hard requirement; treated the years as hard and the domain qualifier as a soft emphasis.",
+      "JD mentions global benefits section but role location is only NYC or SF; Canada and UK benefit sections appear for company-level disclosure, not this specific role."
+    ]
+  }
+}

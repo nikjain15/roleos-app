@@ -1,0 +1,292 @@
+{
+  "company": "DoorDash",
+  "role_title": "Associate Manager, New Verticals - Convenience Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8004278",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8004278",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "a few days a month in person together",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (product-adjacent, roadmap ownership)",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4-6+ years of experience required",
+      "Individual contributor position reporting into a Senior Manager",
+      "Base salary range $105,400–$155,000",
+      "Title is 'Associate Manager' — IC role despite manager title"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_strategy_ops",
+      "raw_text_from_jd": "You have 4-6+ years of experience. You've succeeded in similar cultures that are highly analytical and cross-functional (whether in tech, operations, strategy, consulting, banking, or a related experience).",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 4,
+      "unit": "years",
+      "qualifier": "highly analytical and cross-functional environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "tech",
+        "consulting",
+        "banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_data_pulling",
+      "raw_text_from_jd": "you're comfortable pulling your own data in SQL and building models in excel.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL",
+        "Excel"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_modeling",
+      "raw_text_from_jd": "Build models using Excel and SQL to evaluate the economic, operational and strategic costs and benefits of various programs and experiments",
+      "skill_type": "capability",
+      "domain": "quantitative_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Excel",
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "first_principles_problem_solving",
+      "raw_text_from_jd": "You solve problems from first principles. You have a talent for synthesizing complex problems, can translate high-level goals into actionable plans, and enjoy implementing a process",
+      "skill_type": "capability",
+      "domain": "strategic_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "You'll partner with and influence cross-functional teams including growth, quality, finance, product and engineering to launch initiatives to the finish line.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mindset",
+      "raw_text_from_jd": "You are an owner. You're always looking for opportunities to better your work product and own the outcome – both the good and the bad",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_and_accountability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_active_use",
+      "raw_text_from_jd": "You're energized by AI tools — and you actively experiment with them. You don't wait to be told how to use a new tool; you've already tried it. You bring a builder's mindset to AI: using it to automate the repetitive, accelerate the analytical, and unlock work that would otherwise require a larger team.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools_and_automation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_tolerance",
+      "raw_text_from_jd": "You're unafraid of ambiguity. Rapid change and learning is exciting to you, and you thrive in ambiguous, startup environment",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "You have a completed Bachelor's Degree.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's Degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "mba",
+      "raw_text_from_jd": "MBA is a plus!",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Convenience vertical within DoorDash New Verticals — fulfillment strategy, inventory precision, operational roadmap",
+    "business_model": "marketplace / on-demand delivery (B2C and B2B merchant-side)",
+    "primary_metrics_inferred": [
+      "Order accuracy",
+      "Fulfillment speed",
+      "Inventory data sync accuracy",
+      "Week-over-week operational metrics on tracking dashboards"
+    ],
+    "cross_functional_partners": [
+      "Growth",
+      "Quality",
+      "Finance",
+      "Product",
+      "Engineering",
+      "Dashers (operational stakeholders)",
+      "Merchants"
+    ],
+    "core_responsibilities": [
+      "Architect the fulfillment strategy of DoorDash's convenience network by overseeing and streamlining in-store fulfillment",
+      "Drive enterprise inventory precision by spearheading cross-functional initiatives to ensure real-time data syncs between platform inventory and actual in-store availability",
+      "Own the operational roadmap by setting the long-term vision and establishing key metrics",
+      "Own tracking dashboards and manage week over week metrics to drive high quality operations",
+      "Use AI tools to automate manual processes, build new prototypes and develop product visions",
+      "Build models using Excel and SQL to evaluate economic, operational and strategic costs and benefits",
+      "Partner with and influence cross-functional teams to launch initiatives"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      105400,
+      155000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Convenience",
+    "New Verticals",
+    "Strategy & Operations",
+    "fulfillment strategy",
+    "inventory precision",
+    "SQL",
+    "Excel",
+    "AI tools",
+    "cross-functional",
+    "operational roadmap",
+    "marketplace",
+    "DashMart"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($105,400–$155,000 base)",
+    "Equity grants included in comp package",
+    "Clear product surface and vertical ownership (Convenience within New Verticals)",
+    "Hybrid model with minimal in-person requirement (a few days a month)",
+    "Comprehensive benefits package including 16 weeks paid parental leave and 401(k) with employer matching",
+    "Role is at a high-growth, well-funded company with established scale"
+  ],
+  "red_flags": [
+    "Title says 'Associate Manager' but is an individual contributor role — title may be misleading for candidates expecting people management",
+    "No visa sponsorship information stated — unclear for international candidates",
+    "AI tool usage is framed as a hard expectation with evolving scope, which may signal role instability as AI capabilities change",
+    "4-6+ years range is somewhat wide; actual bar unclear without recruiter clarification"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, years required, and IC designation)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from company description and vertical context)",
+      "location.cities_listed (not role-specific cities named; left empty)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Years experience stated as '4-6+ years' — the '+' after 6 makes the upper bound open-ended; minimum treated as 4.",
+      "Location type: JD says 'hybrid model' with 'a few days a month in person' but no specific cities for this role are mentioned — cities_listed left empty.",
+      "Work authorization and visa sponsorship are not mentioned in the JD body."
+    ]
+  }
+}

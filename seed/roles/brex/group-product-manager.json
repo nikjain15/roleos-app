@@ -1,10 +1,10 @@
 {
   "company": "Brex",
   "role_title": "Group Product Manager",
-  "url": "https://www.brex.com/careers/8438581002?gh_jid=8438581002",
+  "url": "https://www.brex.com/careers/8438582002?gh_jid=8438582002",
   "ats_provider": "greenhouse",
-  "ats_job_id": "8438581002",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "8438582002",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -22,17 +22,17 @@
   },
   "archetype": "Generalist PM",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Technical PM with people management / GPM",
+  "secondary_archetype": "AI Product Manager / PM People Lead",
   "seniority": {
-    "level": "Staff / Group PM (likely IC7 or Director-equivalent)",
+    "level": "Senior IC / Manager of PMs (GPM / Director-equivalent)",
     "years_required_min": 7,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
       "7+ years in product management, with direct experience managing and developing PMs",
       "Manage and develop a team of Product Managers",
-      "Own multi-quarter vision and strategy for a core product area",
-      "Comp range $280K-$350K base, consistent with senior people-manager PM at Brex"
+      "Own a product area at the center of Brex's highest-priority bets",
+      "Comp range $280K-$350K base, consistent with a senior people-managing PM role"
     ]
   },
   "must_haves": [
@@ -55,7 +55,7 @@
       "credentials_named": []
     },
     {
-      "id": "people_management_pm",
+      "id": "pm_people_management",
       "raw_text_from_jd": "7+ years in product management, with direct experience managing and developing PMs.",
       "skill_type": "capability",
       "domain": "people_management",
@@ -70,9 +70,9 @@
       "credentials_named": []
     },
     {
-      "id": "complex_product_areas_b2b",
+      "id": "b2b_saas_fintech_ownership",
       "raw_text_from_jd": "Have owned and scaled complex product areas in B2B, SaaS, or fintech, including driving measurable business outcomes across a multi-team portfolio.",
-      "skill_type": "outcome",
+      "skill_type": "domain_knowledge",
       "domain": "b2b_saas_fintech_product",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
@@ -92,7 +92,7 @@
       "id": "strategy_to_roadmap",
       "raw_text_from_jd": "Can set strategy across multiple product surfaces and translate it into roadmaps your team actually executes against.",
       "skill_type": "capability",
-      "domain": "product_strategy_roadmapping",
+      "domain": "product_strategy",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -119,10 +119,10 @@
       "credentials_named": []
     },
     {
-      "id": "data_driven",
+      "id": "data_driven_mindset",
       "raw_text_from_jd": "Data-driven by default: you define the metrics, design the experiments, and use the results to make calls.",
       "skill_type": "capability",
-      "domain": "data_analysis_experimentation",
+      "domain": "data_analysis_and_experimentation",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -134,12 +134,12 @@
       "credentials_named": []
     },
     {
-      "id": "ambiguity_operating",
+      "id": "ambiguity_and_prioritization",
       "raw_text_from_jd": "Comfortable operating in ambiguity, making prioritization tradeoffs with incomplete information, and bringing senior stakeholders along.",
       "skill_type": "capability",
-      "domain": "executive_stakeholder_management",
+      "domain": "prioritization_and_stakeholder_management",
       "evidence_required": "project_examples",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -149,12 +149,12 @@
       "credentials_named": []
     },
     {
-      "id": "communication_executive",
+      "id": "executive_communication",
       "raw_text_from_jd": "Clear, concise communicator — written and verbal — who can distill complex product problems into narratives that land with executives and cross-functional partners alike.",
       "skill_type": "capability",
       "domain": "executive_communication",
       "evidence_required": "project_examples",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -164,7 +164,7 @@
       "credentials_named": []
     },
     {
-      "id": "ai_ml_product_experience",
+      "id": "ai_ml_product_integration",
       "raw_text_from_jd": "Experience incorporating AI/ML capabilities (e.g., LLMs, automation systems, predictive models) into customer-facing or internal products, with a strong understanding of where AI meaningfully improves user experience, efficiency, or decision quality.",
       "skill_type": "domain_knowledge",
       "domain": "ai_ml_product_development",
@@ -183,15 +183,18 @@
       "credentials_named": []
     },
     {
-      "id": "ai_tools_usage",
+      "id": "ai_tools_for_product_work",
       "raw_text_from_jd": "Demonstrated ability to leverage AI tools to accelerate product discovery, analysis, experimentation, and execution (e.g., rapid prototyping, customer insight synthesis, requirement drafting, data exploration).",
       "skill_type": "tool_proficiency",
-      "domain": "ai_tools_for_pm_workflow",
+      "domain": "ai_tools_for_product_management",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [],
+      "technologies_named": [
+        "AI tools",
+        "rapid prototyping"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -202,12 +205,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Core product area aligned to Brex's highest company priorities (spend management, AI-native automation, finance platform)",
-    "business_model": "B2B SaaS / fintech — corporate cards, banking, spend management, bill pay, and travel software",
+    "surface": "Core product area at the center of Brex's highest-priority bets; includes AI/automation, spend management, or related fintech surfaces",
+    "business_model": "B2B SaaS / fintech — corporate cards, banking, spend management, bill pay, travel software",
     "primary_metrics_inferred": [
-      "Company-level business outcomes (not just feature shipping)",
-      "Customer and business impact (durable)",
-      "Measurable results tied to success metrics"
+      "Company-level metrics (not just feature shipping)",
+      "Measurable business outcomes across a multi-team portfolio",
+      "Customer impact and durable business impact"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -223,9 +226,10 @@
       "Define and own the multi-quarter vision and strategy for a core product area aligned to Brex's highest company priorities",
       "Manage and develop a team of Product Managers, providing coaching, feedback, and career development",
       "Partner closely with Engineering, Design, Data, Risk, Legal, Compliance, Finance, and GTM leaders to deliver complex, cross-functional initiatives",
-      "Experience incorporating AI/ML capabilities into customer-facing or internal products",
+      "Incorporate AI/ML capabilities into customer-facing or internal products",
       "Leverage AI tools to accelerate product discovery, analysis, experimentation, and execution",
-      "Establish strong planning, prioritization, and execution frameworks across your portfolio"
+      "Establish strong planning, prioritization, and execution frameworks across your portfolio",
+      "Define success metrics tied to company-level outcomes"
     ]
   },
   "compensation": {
@@ -246,8 +250,8 @@
     "fintech",
     "spend management",
     "B2B SaaS",
-    "multi-quarter strategy",
     "people management",
+    "multi-quarter vision",
     "cross-functional",
     "data-driven",
     "automation",
@@ -255,31 +259,33 @@
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range explicitly disclosed and highly competitive ($280K-$350K base)",
-    "Clear scope of responsibilities and ownership area defined",
-    "Company lists well-known customers (DoorDash, Coinbase, Robinhood, Zoom, Plaid, Reddit, SeatGeek)",
-    "Multiple office location options (SF, Seattle, Vancouver, NYC)",
-    "Explicit commitment to building a diverse team and inclusive culture"
+    "Compensation range disclosed and highly competitive ($280K-$350K base)",
+    "Clear expectation of people management and PM team development",
+    "Explicit AI/ML product ownership signals a modern, high-leverage product mandate",
+    "Well-known fintech brand with recognizable enterprise customers (DoorDash, Coinbase, Robinhood, Zoom)",
+    "Multiple office location options (SF, Seattle, Vancouver, NYC)"
   ],
   "red_flags": [
-    "Mandatory 3-days-per-week in-office (Mon/Wed/Thu) with only 4 weeks remote per year — limited flexibility for remote candidates",
-    "No explicit visa sponsorship information provided",
-    "AI/ML product experience listed under Responsibilities section rather than Requirements — may be treated as hard requirement despite structural placement creating ambiguity",
-    "No posting date available to assess freshness"
+    "Hybrid requirement is strict: 3 fixed days per week (Mon, Wed, Thu) in office — eliminates remote candidates",
+    "Remote work capped at 4 weeks per year, minimum 1 week at a time — unusually restrictive",
+    "Visa sponsorship status not mentioned — unclear for non-US/non-Canadian candidates",
+    "Broad seniority language ('Group PM') without stating whether this is an IC or formal director-level people manager — scope of team unclear",
+    "Vancouver listed as a location option which may complicate US work authorization assumptions"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range + people management scope + 7+ years requirement)",
-      "scope.team_size_estimate (not stated)",
-      "scope.primary_metrics_inferred (inferred from responsibilities language; not explicitly listed as KPIs)",
-      "scope.business_model (inferred from company description)",
-      "location.remote_us_eligible (inferred from hybrid policy details)",
-      "compensation.location_pay_differential (inferred from 'starting base pay will depend on... candidate's location')"
+      "seniority.level (inferred from comp range, people management requirement, and 'Group PM' title)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.surface (inferred from JD context; not explicitly defined per product area)",
+      "scope.primary_metrics_inferred (inferred from responsibilities language; not directly listed)",
+      "scope.business_model (inferred from product description)",
+      "location.remote_us_eligible (inferred from hybrid + office mandate language)",
+      "compensation.location_pay_differential (inferred from 'starting base pay will depend on... the candidate's location')"
     ],
     "ambiguities": [
-      "AI/ML product experience and AI tools usage items appear under 'Responsibilities' section rather than 'Requirements' section. They read as expectations/requirements in language ('Experience incorporating...', 'Demonstrated ability to...') but their structural placement is ambiguous. Treated as must_haves given unconditional phrasing.",
-      "Visa sponsorship is not mentioned anywhere in the JD; set to 'unclear'.",
-      "Vancouver is a Canadian city — the role may span US and Canada, but work authorization requirements are not differentiated by location."
+      "Responsibilities section includes items phrased as requirements ('Experience incorporating AI/ML capabilities...', 'Demonstrated ability to leverage AI tools...') rather than duties — treated as must_haves given unconditional phrasing in a requirements-adjacent block.",
+      "Vancouver is listed as a valid office location alongside US cities; visa sponsorship and work authorization implications are not addressed in the JD.",
+      "The role is titled 'Group Product Manager' which typically implies managing PMs, but the JD does not specify the size of the PM team or whether this is a formally titled director-equivalent."
     ]
   }
 }

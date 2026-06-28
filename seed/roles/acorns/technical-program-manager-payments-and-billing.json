@@ -1,0 +1,341 @@
+{
+  "company": "Acorns",
+  "role_title": "Technical Program Manager, Payments & Billing",
+  "url": "https://jobs.ashbyhq.com/acorns/4608f2ac-9177-4900-94c4-2c24ca981640",
+  "ats_provider": "ashby",
+  "ats_job_id": "4608f2ac-9177-4900-94c4-2c24ca981640",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [
+      "Irvine, CA"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": "optional access to office space in Irvine, CA",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "no"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Payments & Infrastructure TPM",
+  "seniority": {
+    "level": "Senior IC (TPM)",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of Technical Program Management experience in Fintech",
+      "Compensation range $150K-$170K base",
+      "Leads high-stakes vendor relationships and defines infrastructure strategy"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "tpm_fintech_experience",
+      "raw_text_from_jd": "5+ years of Technical Program Management experience in Fintech, with a proven track record of running complex projects that balance technical constraints with customer needs.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "qualifier": "in Fintech",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "payments_expertise",
+      "raw_text_from_jd": "Strong foundational knowledge of the mechanics of apple pay, google pay, credit/debit cards, prepaid cards, and the nuances of working with payment processors, point of sale systems, and banking institutions.",
+      "skill_type": "domain_knowledge",
+      "domain": "payments",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Apple Pay",
+        "Google Pay"
+      ],
+      "technologies_named": [
+        "credit/debit cards",
+        "prepaid cards",
+        "point of sale systems"
+      ],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_savvy_apis_sql",
+      "raw_text_from_jd": "An understanding of APIs, SQL, and the mechanics of payment processing and account linking (e.g., Plaid).",
+      "skill_type": "tool_proficiency",
+      "domain": "technical_fundamentals",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Plaid"
+      ],
+      "technologies_named": [
+        "APIs",
+        "SQL",
+        "payment processing",
+        "account linking"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "account_connectivity_knowledge",
+      "raw_text_from_jd": "Deep understanding of account connectivity (e.g., Plaid, manual linking, and automated verification) and how to optimize these for conversion and security.",
+      "skill_type": "domain_knowledge",
+      "domain": "account_connectivity",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Plaid"
+      ],
+      "technologies_named": [
+        "manual linking",
+        "automated verification"
+      ],
+      "industries_named": [
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_analysis_expertise",
+      "raw_text_from_jd": "Expertise in data analysis and the ability to articulate using data the tradeoff between enhancing security postures against adding friction to the customer experience.",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_obsession",
+      "raw_text_from_jd": "A mindset that prioritizes both the Acorns customer and our internal operations team, with the ability to build a seamless payment platform that reflects our brand.",
+      "skill_type": "cultural_fit",
+      "domain": "customer_focus",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vendor_partner_management",
+      "raw_text_from_jd": "Lead high-stakes relationships and technical integrations with processors, bank SaaS providers, payment vendors, and merchants.",
+      "skill_type": "capability",
+      "domain": "vendor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "bank SaaS providers",
+        "payment vendors"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "recurly_billing_tools",
+      "raw_text_from_jd": "Develop the strategy for how Acorns will leverage technologies like Recurly, Apple Pay, Google Pay, debit card providers, and ACH to reduce friction for our customers",
+      "skill_type": "tool_proficiency",
+      "domain": "billing_platforms",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Recurly",
+        "Apple Pay",
+        "Google Pay"
+      ],
+      "technologies_named": [
+        "ACH",
+        "debit card"
+      ],
+      "industries_named": [
+        "fintech",
+        "payments"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "emerging_payment_rails",
+      "raw_text_from_jd": "Expand Acorns ecosystem beyond Apple Pay and Google Pay to include future integrations like Venmo, Zelle, and other emerging rails",
+      "skill_type": "domain_knowledge",
+      "domain": "emerging_payment_rails",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Apple Pay",
+        "Google Pay",
+        "Venmo",
+        "Zelle"
+      ],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hunger_deliver_products",
+      "raw_text_from_jd": "Hunger to deliver game-changing products.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_driven_mindset",
+      "raw_text_from_jd": "A belief that your work is tied to your life's mission.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Payments, Billing, and Account Linking infrastructure for millions of customers",
+    "business_model": "B2C fintech / financial wellness app; subscription and micro-investing platform",
+    "primary_metrics_inferred": [
+      "Payment conversion rate",
+      "Billing error/exception rate",
+      "Account linking success and verification rates",
+      "Customer experience friction reduction",
+      "System uptime and scalability"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Finance",
+      "Data Science",
+      "Internal Operations"
+    ],
+    "core_responsibilities": [
+      "Collaborate with Engineering, Finance, and Data Science to define and execute the payments and billing roadmap",
+      "Drive delivery of improvements for bank account connectivity and verification experiences",
+      "Develop strategy for leveraging Recurly, Apple Pay, Google Pay, debit card providers, and ACH",
+      "Expand Acorns ecosystem to include Venmo, Zelle, and other emerging payment rails",
+      "Drive workflow strategies and tools to scale internal team's efficiency in managing payment exceptions and billing inquiries",
+      "Lead high-stakes relationships and technical integrations with processors, bank SaaS providers, payment vendors, and merchants"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      150000,
+      170000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "stock options and equity grants mentioned",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Payments",
+    "Billing",
+    "Account Linking",
+    "Plaid",
+    "ACH",
+    "Apple Pay",
+    "Google Pay",
+    "Recurly",
+    "Fintech",
+    "Payment Processing",
+    "APIs",
+    "SQL",
+    "Money Movement",
+    "Infrastructure"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($150K-$170K base)",
+    "Remote-first organization with optional office access — no mandatory in-office requirement",
+    "Explicitly states 'You are not expected to have experience with all listed requirements'",
+    "Clear product surface and ownership area (Payments, Billing, Account Linking)",
+    "Equity (stock options) mentioned in addition to base",
+    "Well-defined responsibilities across infrastructure, vendor management, and customer experience"
+  ],
+  "red_flags": [
+    "E-Verify participation signals no visa sponsorship, though work authorization policy is not explicitly stated as 'no sponsorship' in the JD body",
+    "Broad scope (payments infrastructure, billing, account linking, vendor management, ops) may indicate a lean team or high expectations for a single TPM",
+    "Global scaling mentioned ('scaling our systems for global use') but company appears US-focused — scope ambiguity",
+    "No explicit mention of team size or reporting structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirement and comp range)",
+      "location.work_auth set to 'no-sponsorship' inferred from E-Verify participation; not explicitly stated as 'no sponsorship'",
+      "location.visa_sponsorship set to 'no' inferred from E-Verify participation",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "compensation.location_pay_differential (inferred from 'base pay offered may vary depending on multiple individualized factors, including market location')"
+    ],
+    "ambiguities": [
+      "Work authorization: JD mentions E-Verify participation but does not explicitly say 'no sponsorship.' Treated as no-sponsorship based on E-Verify being a common signal of that policy.",
+      "Several responsibilities (e.g., Recurly, Venmo, Zelle integrations) are framed as forward-looking goals rather than required past experience — classified as nice-to-haves on that basis.",
+      "JD closing line ('Would you like me to refine the technical requirements further...') appears to be an AI-generated artifact accidentally included in the JD body — not content from Acorns."
+    ]
+  }
+}

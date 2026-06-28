@@ -1,0 +1,288 @@
+{
+  "company": "Plaid",
+  "role_title": "Strategic Initiatives",
+  "url": "https://jobs.ashbyhq.com/plaid/5d8abedc-018a-4b42-ae1f-0e70b34f2007",
+  "ats_provider": "ashby",
+  "ats_job_id": "5d8abedc-018a-4b42-ae1f-0e70b34f2007",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [
+      "San Francisco",
+      "New York",
+      "Washington D.C.",
+      "London",
+      "Amsterdam"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Chief of Staff",
+  "seniority": {
+    "level": "Senior IC / Director-equivalent",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "10+ years of total experience",
+      "Experience directly managing high-performing teams",
+      "Works directly with leaders across Plaid on company's most important problems",
+      "Meaningful time in consulting as well as direct operating roles"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_total_experience",
+      "raw_text_from_jd": "10+ years of total experience, with meaningful time in consulting as well as direct operating roles (BizOps, Strategy & Ops, Finance, Chief of Staff, etc.",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "consulting firm",
+        "BizOps",
+        "Strategy & Ops",
+        "Finance",
+        "Chief of Staff"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "independent_problem_identification",
+      "raw_text_from_jd": "A track record of independently identifying problems and driving them to outcomes with limited top-down direction",
+      "skill_type": "outcome",
+      "domain": "strategic_problem_solving",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_agency_ownership",
+      "raw_text_from_jd": "High agency, sense of ownership, and willingness to roll up your sleeves",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_relationship_building",
+      "raw_text_from_jd": "Ability to build relationships at all levels and drive cross-functional teams to action",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_structured_thinking",
+      "raw_text_from_jd": "Strong analytical and structured-thinking skills; comfort translating ambiguity into frameworks, plans, and decisions",
+      "skill_type": "capability",
+      "domain": "analytical_reasoning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "people_management",
+      "raw_text_from_jd": "Experience directly managing high-performing teams",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_default_usage",
+      "raw_text_from_jd": "Use AI tools and agents as a default part of how you work — not as an experiment, but as a force multiplier",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools_and_agents",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools",
+        "AI agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_tools_workflow_acceleration",
+      "raw_text_from_jd": "Familiarity with AI tools and agents to accelerate workflows is a plus",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools_and_agents",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools",
+        "AI agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_tableau",
+      "raw_text_from_jd": "Knowledge of SQL and Tableau preferred",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "SQL",
+        "Tableau"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fintech_payments_saas_experience",
+      "raw_text_from_jd": "Experience in fintech, payments, or high-growth SaaS preferred",
+      "skill_type": "domain_knowledge",
+      "domain": "industry_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "payments",
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Company-wide strategic initiatives, cross-functional problem solving at the seams of multiple teams or functions",
+    "business_model": "B2B API / fintech infrastructure",
+    "primary_metrics_inferred": [
+      "Outcomes delivered on high-priority, unowned problems",
+      "Cross-functional efficiency and team performance"
+    ],
+    "cross_functional_partners": [
+      "All business functions (strategy, GTM, operations, product, finance)"
+    ],
+    "core_responsibilities": [
+      "Work directly with leaders across Plaid on the company's most important and least-defined problems, particularly those at the seams of multiple teams or functions",
+      "Identify unowned, high-leverage opportunities across the business and driving them to clean outcomes",
+      "Operate across a wide aperture (strategy, GTM, operations, product, etc.) without being boxed into a single lane",
+      "Lead (directly or indirectly) high performing teams",
+      "Use AI tools and agents as a default part of how you work — not as an experiment, but as a force multiplier"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as additional compensation form",
+    "location_pay_differential": true,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "strategic initiatives",
+    "BizOps",
+    "Strategy & Ops",
+    "Chief of Staff",
+    "consulting",
+    "AI tools",
+    "cross-functional",
+    "high-agency",
+    "fintech",
+    "Plaid",
+    "SQL",
+    "Tableau",
+    "unowned problems",
+    "force multiplier"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "High-visibility role working directly with company leaders on most important problems",
+    "Explicitly encourages applicants whose experience doesn't fully match the JD",
+    "Equity compensation mentioned",
+    "Comprehensive benefits (medical, dental, vision, 401k) mentioned",
+    "Broad aperture role — not boxed into a single lane"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Location/work arrangement not specified in the JD body — unclear if remote, hybrid, or onsite",
+    "Role title 'Strategic Initiatives' is vague and does not clearly indicate level or function",
+    "Visa sponsorship policy not stated",
+    "AI tools listed as both a must-have (responsibilities) and a nice-to-have (qualifications) — creates ambiguity about how hard this requirement is"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required, management responsibility, and scope of role)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (not stated; marked unclear)",
+      "compensation.location_pay_differential (inferred from 'Pay is based on factors such as... location')"
+    ],
+    "ambiguities": [
+      "AI tools appear in both the Responsibilities section (as a hard expectation) and the Qualifications section as 'a plus' — treated as hard in must_haves per responsibility framing, and also captured in nice_to_haves per qualification framing.",
+      "Location/work arrangement is not specified in the JD; company offices are listed generically (San Francisco, New York, Washington D.C., London, Amsterdam) but it is unclear which apply to this role or whether remote is permitted.",
+      "Role title 'Strategic Initiatives' could map to BizOps / Strategy & Ops, Chief of Staff, or a senior individual contributor function — classified as BizOps / Strategy & Ops with Chief of Staff as secondary."
+    ]
+  }
+}

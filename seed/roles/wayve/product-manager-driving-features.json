@@ -1,0 +1,278 @@
+{
+  "company": "Wayve",
+  "role_title": "Product Manager, Driving Features",
+  "url": "https://wayve.firststage.co/jobs?gh_jid=8568841002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8568841002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Sunnyvale, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "hybrid — combines time in office and time working from home",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Independently own a substantial work package end-to-end",
+      "Lead a cross-functional team without formal authority",
+      "Comp range $204,100–$256,700 consistent with Senior IC",
+      "Engage senior engineers and researchers as a peer"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "independent_ownership",
+      "raw_text_from_jd": "Demonstrated ability to independently own a substantial work package and lead a cross-functional team to deliver it. You take outcomes personally and don't wait to be unblocked.",
+      "skill_type": "outcome",
+      "domain": "product_ownership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth_ai_ml",
+      "raw_text_from_jd": "Strong technical depth, ideally in AI / ML, autonomy, robotics or another deep-tech domain, with the credibility to engage senior engineers and researchers as a peer.",
+      "skill_type": "domain_knowledge",
+      "domain": "AI_ML_autonomy_robotics",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "ML",
+        "autonomy",
+        "robotics"
+      ],
+      "industries_named": [
+        "deep-tech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_interpersonal",
+      "raw_text_from_jd": "Excellent communication and interpersonal skills. A careful listener, a clear writer, and someone who can motivate and energise a team through ambiguity.",
+      "skill_type": "capability",
+      "domain": "communication_leadership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pm_or_tpm_track_record",
+      "raw_text_from_jd": "Proven track record in product management, technical program management or a similar role on complex, cutting-edge technical products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_or_technical_program_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomy_judgment_bias_for_action",
+      "raw_text_from_jd": "High autonomy, strong judgment and a bias for action. Comfortable making decisions with imperfect information and adjusting as you learn.",
+      "skill_type": "cultural_fit",
+      "domain": "decision_making",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "autonomous_driving_domain",
+      "raw_text_from_jd": "Domain experience in autonomous driving, ADAS, automotive or other safety-critical product areas. Useful but not required. We will help the right person ramp up on the domain.",
+      "skill_type": "domain_knowledge",
+      "domain": "autonomous_driving_ADAS_automotive",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ADAS"
+      ],
+      "industries_named": [
+        "autonomous driving",
+        "automotive",
+        "safety-critical"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_ai_ml_background",
+      "raw_text_from_jd": "Hands-on background in AI / ML, for example research, applied ML, or shipping ML-powered products.",
+      "skill_type": "capability",
+      "domain": "AI_ML_hands_on",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "global_team_experience",
+      "raw_text_from_jd": "Background working across global teams (US ↔ UK / EU) in a startup or scale-up environment.",
+      "skill_type": "domain_knowledge",
+      "domain": "global_cross_functional_collaboration",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "US",
+        "UK",
+        "EU"
+      ],
+      "employer_types_named": [
+        "startup",
+        "scale-up"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Wayve AI Driver product — a critical work package within the AI driving features roadmap",
+    "business_model": "B2B — AI software and foundation models sold to automakers for automated driving",
+    "primary_metrics_inferred": [
+      "KPIs and milestones on AI Driver product delivery",
+      "Capability sequencing to maximise impact",
+      "De-risked delivery of R&D-to-product pipeline"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "AI Research",
+      "Program Management",
+      "Leadership/Executives",
+      "Customers/Partners"
+    ],
+    "core_responsibilities": [
+      "Independently own a substantial work package end-to-end. Define the problem, set the strategy, sequence the work, and lead the team to ship outcomes that move the AI Driver product forward.",
+      "Lead a cross-functional team of engineers, researchers and PMs without formal authority. Give them clarity, remove blockers, and motivate them through hard, ambiguous problems.",
+      "Engage deeply with technical detail across AI / ML, autonomy and embodied AI. Debate trade-offs credibly with senior researchers and engineers, and bring structured thinking to complex technical decisions.",
+      "Translate R&D progress and customer needs into a clear product roadmap, sequencing capabilities to maximise impact and de-risk delivery.",
+      "Communicate crisply across audiences, from deep technical reviews with engineers, to executive updates with leadership, to customer-facing conversations.",
+      "Listen actively to engineers, partners and customers, and turn what you hear into better decisions and stronger team alignment.",
+      "Set, track and report on clear KPIs and milestones, and establish the operating rhythm the team needs to deliver."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      204100,
+      256700
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "competitive equity package",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "AI Driver",
+    "AI / ML",
+    "autonomy",
+    "embodied AI",
+    "autonomous driving",
+    "product roadmap",
+    "cross-functional",
+    "technical depth",
+    "KPIs",
+    "foundation models",
+    "ADAS",
+    "deep-tech"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($204,100–$256,700 base) plus competitive equity",
+    "Encourages applications from candidates who don't meet all requirements",
+    "Clear ownership scope and product surface described",
+    "Explicit acknowledgment they will help the right candidate ramp up on domain knowledge",
+    "Inclusive hiring commitments and accommodation offers stated"
+  ],
+  "red_flags": [
+    "Role title in the JD body is 'Product Manager, AI Driver' but the identity field says 'Product Manager, Driving Features' — mild inconsistency worth confirming",
+    "Visa sponsorship status not stated; E-Verify notice referenced for US candidates implying work authorization requirements",
+    "Key responsibilities section duplicated verbatim in the JD, suggesting possible formatting/copy-paste error",
+    "No explicit years-of-experience requirement stated, making seniority expectations ambiguous"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and ownership expectations)",
+      "scope.business_model (inferred from company description — B2B automaker focus)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not explicitly listed)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "location.visa_sponsorship (not stated; E-Verify link referenced but no explicit sponsorship policy)"
+    ],
+    "ambiguities": [
+      "Role title in the JD metadata is 'Product Manager, Driving Features' but the JD body consistently refers to the role as 'Product Manager, AI Driver'.",
+      "The key responsibilities section appears twice in the JD with slight variations (one says 'research progress', the other says 'R&D progress'; one says 'with researchers', the other 'with engineers'). Both versions captured; the second version used in scope.core_responsibilities as it appears more precise.",
+      "Visa sponsorship policy is not explicitly stated; a US E-Verify notice is linked but this does not confirm or deny sponsorship availability."
+    ]
+  }
+}

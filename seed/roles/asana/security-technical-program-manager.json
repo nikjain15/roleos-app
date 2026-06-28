@@ -1,0 +1,204 @@
+{
+  "company": "Asana",
+  "role_title": "Security Technical Program Manager",
+  "url": "https://www.asana.com/jobs/apply/7959069?gh_jid=7959069",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7959069",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Monday, Tuesday, and Thursday in-office; Wednesday optional WFH; Friday depends on role/team",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Security Program Management / Security Ops",
+  "seniority": {
+    "level": "Senior / Staff TPM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of TPM experience required",
+      "High-autonomy, high-impact framing: 'you create the structure rather than waiting for it'",
+      "Comp range $194K-$220K base consistent with Senior/Staff IC at Asana",
+      "Thought partner to security leadership on org design"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_security",
+      "raw_text_from_jd": "8+ years of TPM experience, with meaningful time in a security context (security engineering, GRC, product security, infra security, or similar)",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "with meaningful time in a security context",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "security engineering",
+        "GRC",
+        "product security",
+        "infra security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "security_technical_understanding",
+      "raw_text_from_jd": "Strong understanding of security with the ability to engage technical teams and communicate clearly to executive stakeholders",
+      "skill_type": "domain_knowledge",
+      "domain": "security",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_leadership",
+      "raw_text_from_jd": "Demonstrated ability to lead large-scale, cross-functional programs from ambiguous inception through delivery",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_influence",
+      "raw_text_from_jd": "Exceptional written and verbal communication, with proven ability to influence without authority at all levels",
+      "skill_type": "capability",
+      "domain": "communication_and_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_autonomy_structure_creation",
+      "raw_text_from_jd": "Track record of operating with high autonomy — you create the structure rather than waiting for it",
+      "skill_type": "outcome",
+      "domain": "operational_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Security organization-wide operating model: planning cycles, KPI frameworks, dashboards, cross-functional programs",
+    "business_model": "B2B SaaS",
+    "primary_metrics_inferred": [
+      "Security risk posture",
+      "Program health indicators",
+      "Strategic goal progress (OKRs)",
+      "Cross-functional stakeholder alignment on security priorities"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Product",
+      "IT",
+      "Legal",
+      "Compliance",
+      "Security leadership"
+    ],
+    "core_responsibilities": [
+      "Lead high-impact, cross-functional special projects spanning organizational boundaries",
+      "Own the Security organization's annual and quarterly planning cycles",
+      "Drive prioritization and communication of security asks across stakeholders",
+      "Define and own the Security team's KPI framework covering risk posture, program health, and strategic goal progress",
+      "Build dashboards and reporting cadences for leadership visibility",
+      "Establish and continuously improve operating cadences (All Hands, program reviews, OKR check-ins)",
+      "Act as thought partner to security leadership on org design, process improvement, and operational scale"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      194000,
+      220000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Security TPM",
+    "technical program manager",
+    "security engineering",
+    "GRC",
+    "product security",
+    "infra security",
+    "KPI framework",
+    "OKRs",
+    "cross-functional programs",
+    "planning cycles",
+    "operating model",
+    "dashboards",
+    "influence without authority",
+    "risk posture"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($194K-$220K base) and competitive",
+    "Explicitly states 'if you're interested and don't meet every listed requirement, we still encourage you to apply'",
+    "High autonomy and high-impact framing — not a execution-only role",
+    "Clear articulation of scope and responsibilities",
+    "Asana has a strong brand and consistent workplace culture recognition (Fortune Best Workplaces 7+ years)",
+    "Equity included in package"
+  ],
+  "red_flags": [
+    "In-office 3 days per week (Mon/Tue/Thu) in San Francisco — not suitable for remote candidates",
+    "Visa sponsorship not mentioned; unclear whether available",
+    "No nice-to-haves listed — hard requirements may be strictly enforced",
+    "Security context requirement is meaningful but vaguely scoped ('meaningful time') — could be interpreted strictly or loosely"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + autonomy signals + 8+ years requirement)",
+      "scope.business_model (inferred from Asana's product description as SaaS platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as metrics)",
+      "location.visa_sponsorship set to 'unclear' — not mentioned in JD"
+    ],
+    "ambiguities": [
+      "Friday WFH eligibility is conditional ('depends on the type of work you do and the teams with which you partner') — actual hybrid schedule may vary from the Mon/Tue/Thu standard",
+      "'Meaningful time in a security context' is not quantified — ambiguous as to how many years in security are required vs total TPM years"
+    ]
+  }
+}

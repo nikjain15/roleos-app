@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
-import { getAdminStats, RUNS_WINDOW } from "@/lib/admin-stats";
+import { getAdminStats, getDemandStats, RUNS_WINDOW, type DemandStats } from "@/lib/admin-stats";
 
 /**
  * Admin dashboard (journey.html §6 admin panel, Phase 4). Costs + models +
@@ -17,6 +17,7 @@ const tok = (n: number) => (n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n))
 export default async function AdminDashboard() {
   await requireAdmin();
   const s = await getAdminStats();
+  const d = await getDemandStats();
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
@@ -38,6 +39,9 @@ export default async function AdminDashboard() {
         Every model call is metered in the path. {s.capped ? `Last ${RUNS_WINDOW.toLocaleString()} runs` : `All ${s.totals.runs.toLocaleString()} runs`}
         {s.capped && <span className="text-warn"> (window capped — older runs not shown)</span>}.
       </p>
+
+      {/* Demand — what users are hunting for (drives ingestion) */}
+      <DemandView d={d} />
 
       {s.totals.runs === 0 ? (
         <div className="mt-8 rounded-xl border border-bd bg-surf2 p-6 text-[15px] text-tx2">
@@ -139,6 +143,54 @@ export default async function AdminDashboard() {
         </>
       )}
     </main>
+  );
+}
+
+function DemandView({ d }: { d: DemandStats }) {
+  const chips = (rows: { key: string; count: number }[]) =>
+    rows.length === 0 ? (
+      <span className="text-sm text-tx3">— nothing yet</span>
+    ) : (
+      <div className="flex flex-wrap gap-2">
+        {rows.map((r) => (
+          <span key={r.key} className="rounded-full bg-surf2 px-2.5 py-1 text-xs text-tx2">
+            {r.key} <span className="font-semibold text-tx">·{r.count}</span>
+          </span>
+        ))}
+      </div>
+    );
+
+  return (
+    <Section title="Demand — what people are hunting for (drives ingestion)">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Tile label="Watchers" value={d.watchers.toLocaleString()} hint="active 'keep me in the loop' intents" />
+        <Tile label="Pushing hard" value={d.pushing.toLocaleString()} hint="in push mode" tone={d.pushing ? "good" : "neutral"} />
+        <Tile label="Distinct companies" value={String(d.topCompanies.length)} hint="wanted across users" />
+        <Tile label="Distinct roles" value={String(d.topRoles.length)} hint="targeted" />
+      </div>
+      <div className="mt-4 space-y-4">
+        <div>
+          <p className="mb-2 text-xs font-medium text-tx">Most-wanted companies</p>
+          {chips(d.topCompanies)}
+        </div>
+        <div>
+          <p className="mb-2 text-xs font-medium text-tx">Target roles</p>
+          {chips(d.topRoles)}
+        </div>
+        <div>
+          <p className="mb-2 text-xs font-medium text-tx">Role keywords</p>
+          {chips(d.topKeywords)}
+        </div>
+        <div>
+          <p className="mb-2 text-xs font-medium text-tx">Locations</p>
+          {chips(d.topLocations)}
+        </div>
+      </div>
+      <p className="mt-3 text-xs text-tx3">
+        This is the demand signal the ingestion pipeline reads — we fetch the roles &amp; companies
+        people actually want, growing the corpus where it matters.
+      </p>
+    </Section>
   );
 }
 

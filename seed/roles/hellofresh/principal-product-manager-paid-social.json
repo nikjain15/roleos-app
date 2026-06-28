@@ -1,0 +1,287 @@
+{
+  "company": "HelloFresh",
+  "role_title": "Principal Product Manager - Paid Social",
+  "url": "https://careers.hellofresh.com/global/en/job/7808767?gh_jid=7808767",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7808767",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "New York"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM (Ad-Tech / Paid Social Platform)",
+  "seniority": {
+    "level": "Principal / Staff IC",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years in product management",
+      "5+ years building products within or deeply integrated with paid social advertising platforms",
+      "Demonstrated principal behavior: set direction across teams, resolve ambiguity without escalation",
+      "Comp range $194,250–$235,000 base, consistent with Principal IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_total",
+      "raw_text_from_jd": "10+ years in product management, with 5+ years building products within or deeply integrated with paid social advertising platforms  at a technology company, ad-tech firm, social platform, or large-scale DTC brand",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "ad-tech",
+        "DTC"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "technology company",
+        "ad-tech firm",
+        "social platform",
+        "large-scale DTC brand"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "years_paid_social_product",
+      "raw_text_from_jd": "5+ years building products within or deeply integrated with paid social advertising platforms  at a technology company, ad-tech firm, social platform, or large-scale DTC brand",
+      "skill_type": "years_of_experience",
+      "domain": "paid_social_advertising_products",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "ad-tech",
+        "DTC"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "technology company",
+        "ad-tech firm",
+        "social platform",
+        "large-scale DTC brand"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "paid_social_platform_api_depth",
+      "raw_text_from_jd": "Hands-on depth across multiple paid social platforms and their APIs: Meta (Marketing API, CAPI, Advantage+, Creator Marketplace), TikTok (Ads API, Events API, Creator Marketplace), YouTube (Ads API, Brand Connect), and at least one of Pinterest, Snapchat, or LinkedIn",
+      "skill_type": "tool_proficiency",
+      "domain": "paid_social_platform_apis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Meta Marketing API",
+        "CAPI",
+        "Advantage+",
+        "Creator Marketplace",
+        "TikTok Ads API",
+        "TikTok Events API",
+        "YouTube Ads API",
+        "Brand Connect",
+        "Pinterest",
+        "Snapchat",
+        "LinkedIn"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "creative_intelligence_track_record",
+      "raw_text_from_jd": "Track record of building creative intelligence products, creative scoring, DCO, or multivariate testing infrastructure that demonstrably improved performance at scale",
+      "skill_type": "outcome",
+      "domain": "creative_intelligence",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "DCO",
+        "multivariate testing"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "measurement_expertise",
+      "raw_text_from_jd": "Deep measurement expertise: you've personally designed and shipped MMM, MTA, or incrementality frameworks, not just consumed their outputs",
+      "skill_type": "capability",
+      "domain": "marketing_measurement",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "MMM",
+        "MTA",
+        "incrementality"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "influencer_creator_product",
+      "raw_text_from_jd": "Experience in influencer or creator product development: discovery tooling, workflow automation, or performance attribution for creator-driven paid and organic content",
+      "skill_type": "domain_knowledge",
+      "domain": "influencer_creator_product",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "Strong technical fluency: you lead cross-functional squads with engineers, data scientists, and analysts as peer collaborators  you can write a technical spec, review a model card, and challenge architectural decisions",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "principal_behavior",
+      "raw_text_from_jd": "Demonstrated principal behavior: you set direction across teams, resolve ambiguity without escalation, drive alignment at senior levels, and communicate at publication quality",
+      "skill_type": "cultural_fit",
+      "domain": "leadership_and_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [
+    "This is a product role, not a marketing one."
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Next-generation Paid Social platform: creative intelligence, signal strategy, measurement + incrementality, budget allocation and execution automation spanning Meta, TikTok, YouTube, Pinterest, Snapchat, and emerging channels",
+    "business_model": "B2C subscription (meal-kit), global DTC, growth marketing platform",
+    "primary_metrics_inferred": [
+      "Paid social spend efficiency (hundreds of millions in budget)",
+      "Creative performance at scale",
+      "Signal quality and platform alignment",
+      "Incrementality / causal lift",
+      "Model-driven budget allocation accuracy"
+    ],
+    "cross_functional_partners": [
+      "VP Marketing",
+      "Data Science",
+      "Engineering"
+    ],
+    "core_responsibilities": [
+      "Own a closed-loop growth system, including both the platform and the team practices that surround it",
+      "Build systems that predict, score, and generate high-performing creative (DCO across Meta, TikTok, YouTube)",
+      "Define and evolve platform signals (CAPI, Events APIs, modeled conversions) and shift optimization toward downstream value",
+      "Move from manual planning to model-driven budget allocation; integrate with platform bidding systems (Advantage+, Smart+)",
+      "Own incrementality, MMM, and causal measurement frameworks and translate model outputs into actionable decisions",
+      "Partner with VP Marketing, Data Science, and Engineering; resolve platform vs. internal optimization tradeoffs",
+      "Set the standard for product thinking, decision frameworks, and experimentation rigor"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      194250,
+      235000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "company equity plan based on role",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "paid social",
+    "creative intelligence",
+    "DCO",
+    "MMM",
+    "incrementality",
+    "CAPI",
+    "Advantage+",
+    "signal strategy",
+    "budget allocation",
+    "ad-tech",
+    "ML-driven optimization",
+    "influencer",
+    "creator marketplace",
+    "measurement",
+    "principal PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($194,250–$235,000 base)",
+    "Very specific product surface and ownership (closed-loop growth system, not vague marketing role)",
+    "Role explicitly distinguishes itself as product, not marketing — clear scope clarity",
+    "Equity plan mentioned",
+    "Generous benefits: $0 health options, 16-week parental leave, sabbatical PTO",
+    "High-scale environment with hundreds of millions in paid social spend — strong learning opportunity"
+  ],
+  "red_flags": [
+    "Location limited to New York; no remote eligibility mentioned — eliminates distributed candidates",
+    "Visa sponsorship and work authorization not addressed",
+    "10+ years minimum is a hard bar that narrows the candidate pool significantly",
+    "No team size or reporting structure disclosed",
+    "Influencer/creator product experience listed as a must-have but reads more like a nice-to-have in context — slight ambiguity"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (inferred as onsite from New York Pay Range and no remote language in body)",
+      "location.remote_us_eligible (inferred false; not explicitly stated)",
+      "seniority.level (inferred from comp range and 'principal behavior' language)",
+      "scope.business_model (inferred from JD intro describing HelloFresh as B2C subscription meal-kit)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed in JD)",
+      "compensation.location_pay_differential (inferred from 'New York Pay Range' label suggesting differential may exist for other locations)"
+    ],
+    "ambiguities": [
+      "Influencer/creator product experience is listed in the 'What you'll bring' section without 'preferred' or 'bonus' language, so it is treated as hard/must-have, though its breadth suggests it could be a nice-to-have.",
+      "Work authorization and visa sponsorship are not mentioned anywhere in the JD; treated as 'unclear'.",
+      "Location type: the JD lists 'New York Pay Range' but does not explicitly state hybrid, onsite, or remote; treated as onsite by inference."
+    ]
+  }
+}

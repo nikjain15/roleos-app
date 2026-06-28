@@ -4,14 +4,14 @@
   "url": "https://careers.upstart.com/jobs?gh_jid=7843720",
   "ats_provider": "greenhouse",
   "ats_job_id": "7843720",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "remote-us",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "majority of employees encouraged to spend high quality time in-person via regular onsites; most teams meet once or twice per quarter for 2-4 consecutive days",
+    "office_time_required": "majority of work remote; in-person onsites once or twice per quarter for 2-4 consecutive days",
     "work_auth": "no-sponsorship",
     "visa_sponsorship": "unclear"
   },
@@ -19,20 +19,21 @@
   "archetype_confidence": "high",
   "secondary_archetype": "Platform / Infrastructure PM",
   "seniority": {
-    "level": "Principal / Staff IC",
+    "level": "Principal / Staff IC (Senior+)",
     "years_required_min": 5,
     "years_required_max": 7,
     "manages_people": false,
     "level_signals": [
       "Title is 'Principal Product Manager'",
-      "5-7 years of product management experience",
+      "5-7 years of product management experience required",
       "Comp range $187,900–$260,000 USD base, consistent with Principal/Staff IC",
-      "Expected to define long-term platform vision and strategy independently"
+      "Owns strategy for one of the most critical systems at Upstart",
+      "#LI-MidSenior tag in JD"
     ]
   },
   "must_haves": [
     {
-      "id": "education_ba_bs",
+      "id": "education_bachelors",
       "raw_text_from_jd": "BA/BS in Economics, Computer Science, Electrical Engineering, Mathematics, Statistics, a related technical field, or equivalent practical experience.",
       "skill_type": "credential",
       "domain": "education",
@@ -47,11 +48,12 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": [
-        "BA/BS in Economics",
-        "BA/BS in Computer Science",
-        "BA/BS in Electrical Engineering",
-        "BA/BS in Mathematics",
-        "BA/BS in Statistics"
+        "BA/BS",
+        "Economics",
+        "Computer Science",
+        "Electrical Engineering",
+        "Mathematics",
+        "Statistics"
       ]
     },
     {
@@ -60,8 +62,8 @@
       "skill_type": "years_of_experience",
       "domain": "product_management",
       "minimum_value": 5,
+      "maximum_value": 7,
       "unit": "years",
-      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -76,7 +78,7 @@
       "id": "backend_platform_experience",
       "raw_text_from_jd": "Experience building or managing backend platforms or infrastructure systems",
       "skill_type": "domain_knowledge",
-      "domain": "backend_platforms_and_infrastructure",
+      "domain": "backend_platforms_infrastructure",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -91,7 +93,7 @@
       "id": "large_scale_complex_systems",
       "raw_text_from_jd": "Experience working with engineering teams on large-scale, complex systems",
       "skill_type": "capability",
-      "domain": "large_scale_systems",
+      "domain": "technical_product_management",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -120,10 +122,10 @@
   ],
   "nice_to_haves": [
     {
-      "id": "pricing_ads_optimization_systems",
+      "id": "pricing_or_ads_platforms",
       "raw_text_from_jd": "Experience working on pricing systems, ads platforms, or similar optimization systems",
       "skill_type": "domain_knowledge",
-      "domain": "pricing_and_optimization_systems",
+      "domain": "pricing_systems_optimization",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -135,17 +137,17 @@
       "credentials_named": []
     },
     {
-      "id": "monolith_to_modular",
+      "id": "monolith_to_soa_evolution",
       "raw_text_from_jd": "Experience evolving monolithic systems into modular or service-oriented architectures",
-      "skill_type": "capability",
-      "domain": "system_architecture_evolution",
+      "skill_type": "domain_knowledge",
+      "domain": "system_architecture",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
-        "service-oriented architecture",
-        "modular architecture"
+        "service-oriented architectures",
+        "monolithic systems"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -153,18 +155,17 @@
       "credentials_named": []
     },
     {
-      "id": "ml_data_science_analytics",
+      "id": "ml_data_science_environment",
       "raw_text_from_jd": "Experience working in machine learning, data science, or analytics-driven environments",
       "skill_type": "domain_knowledge",
-      "domain": "machine_learning_and_data_science",
+      "domain": "machine_learning_data_science",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
         "machine learning",
-        "data science",
-        "analytics"
+        "data science"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -172,7 +173,7 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_environments",
+      "id": "cross_functional_stakeholder_management",
       "raw_text_from_jd": "Experience operating in highly cross-functional environments with multiple stakeholders",
       "skill_type": "capability",
       "domain": "stakeholder_management",
@@ -187,17 +188,18 @@
       "credentials_named": []
     }
   ],
-  "explicitly_excluded": [],
+  "explicitly_excluded": [
+    "Quebec-based candidates (Canada roles): 'For roles based in Canada, please note that we are not currently able to hire in Quebec.'"
+  ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Pricing Platform — core primitives translating application data into loan offers (APR) across unsecured, auto, and home loan products; includes eligibility, qualification, underwriting, and offer selection systems",
-    "business_model": "B2B2C AI lending marketplace partnering with banks and credit unions",
+    "surface": "Pricing Platform — core primitives translating application data into loan offers (APR) across unsecured, auto, and home loan products; covering eligibility, qualification, underwriting, and offer selection",
+    "business_model": "B2B2C AI lending marketplace — partners with banks and credit unions to deliver consumer lending",
     "primary_metrics_inferred": [
-      "Pricing platform reliability and availability",
-      "Engineering velocity across loan product teams",
-      "Reduction of high-impact pricing system failures",
-      "Platform modularity and reusability",
-      "Offer quality and accuracy (APR delivered to customers)"
+      "Reliability and availability of pricing systems",
+      "Engineering velocity / reduced dependency bottlenecks",
+      "Scalability of platform across multiple loan products",
+      "Reduction of high-impact failures in pricing systems"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -220,7 +222,7 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "annual equity grants that vest quarterly; Employee Stock Purchase Plan (ESPP) with discounted stock purchase options (US only)",
+    "equity_form": "annual equity grants that vest quarterly; Employee Stock Purchase Plan (ESPP) with discounted stock purchase options",
     "location_pay_differential": true,
     "source": "stated"
   },
@@ -232,42 +234,42 @@
     "service-oriented",
     "monolithic systems",
     "machine learning",
-    "AI lending",
     "loan pricing",
-    "offer selection",
     "platform strategy",
     "technical PM",
-    "cross-functional"
+    "principal PM",
+    "AI lending",
+    "platform primitives",
+    "engineering velocity"
   ],
   "buzzword_density": "medium",
   "green_flags": [
     "Compensation range disclosed and competitive ($187,900–$260,000 USD base)",
-    "Fully remote-eligible in the US and Canada",
-    "Equity compensation and target bonuses explicitly mentioned",
-    "Clear product surface with well-defined ownership (pricing platform primitives)",
-    "Generous benefits package including 401k match, ESPP, wellness allowance, and productivity allowance",
-    "Mission-driven company with meaningful social impact framing"
+    "Equity compensation and bonus explicitly mentioned",
+    "Fully remote-eligible across US (and Canada outside Quebec)",
+    "Clear product surface with well-defined ownership (pricing platform, not vague)",
+    "Generous 401(k) match ($2 for every $1, up to $15,000 annually)",
+    "In-person cadence is lightweight (once or twice per quarter)",
+    "Team operates across East/West coast time zones — broad flexibility"
   ],
   "red_flags": [
-    "JD states 'This role is available in the following locations: Remote' but does not confirm visa sponsorship or work authorization requirements — unclear if non-US-citizens can apply",
-    "Team operates on East/West coast time zones — could restrict fully async-international candidates",
-    "Canadian candidates excluded from ESPP and some US-only benefits; Quebec explicitly excluded from hiring",
-    "5–7 years range framing is somewhat narrow and may be used to screen aggressively",
-    "No specific mention of team size or reporting structure"
+    "Work authorization and visa sponsorship not explicitly stated — unclear for non-US/non-Canadian applicants",
+    "Canada-specific salary range is in CAD ($182,800–$230,000 CAD), which is significantly lower in USD terms than the US range",
+    "Location pay differential applies — actual base may be lower than the top of the stated range depending on geography",
+    "Role requires very specific platform/infrastructure PM background which narrows the candidate pool considerably"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Principal' + comp range + years required)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "seniority.level (inferred from title 'Principal', comp range, and scope of ownership)",
       "scope.business_model (inferred from company description)",
-      "location.work_auth (inferred as unclear; no explicit statement in JD)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.work_auth (not explicitly stated; set to no-sponsorship based on absence of sponsorship mention and US/Canada only hiring)",
       "location.visa_sponsorship (not stated; marked unclear)"
     ],
     "ambiguities": [
-      "Location type: JD metadata and body both say 'Remote' but also mentions offices in Columbus, Austin, Bay Area, and NYC, and encourages in-person onsites 1–2x per quarter. Treated as remote-us with periodic travel expectation.",
-      "Work authorization and visa sponsorship are not addressed in the JD body; marked unclear.",
-      "The salary range for Canada is provided in CAD ($182,800–$230,000 CAD), making a direct USD comparison ambiguous — base_range_usd reflects US range only.",
-      "years_required_max: JD states '5-7 years' which could signal either a range or a ceiling; treated as a range with min=5, max=7."
+      "JD lists 'Remote' as position location but also lists offices in Columbus, Austin, Bay Area, and NYC — it is unclear if candidates must be US-based or if Canada is equally available for this specific role (Canada salary range is provided, suggesting yes)",
+      "Work authorization and visa sponsorship are not mentioned in the JD; no-sponsorship was not confirmed but no sponsorship offer was made either",
+      "Time zone requirement ('East/West coast time zones') could imply US-only availability even though Canada is mentioned"
     ]
   }
 }

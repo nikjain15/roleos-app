@@ -1,0 +1,256 @@
+{
+  "company": "DoorDash",
+  "role_title": "Manager, Digital Ordering - Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8010907",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8010907",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Go-to-Market Strategy & Operations (SaaS)",
+  "seniority": {
+    "level": "Manager / Senior IC (likely equivalent to L5-L6)",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of relevant experience required",
+      "Title is 'Manager' but JD describes IC-style ownership with cross-functional influence, not direct reports",
+      "Comp range $136K-$200K base nationally, consistent with senior IC or manager-level at DoorDash",
+      "Expected to influence senior teammates who don't report to you"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_relevant_experience",
+      "raw_text_from_jd": "6+ years of relevant experience in high-performance cultures (whether in tech, operations, strategy, consulting, banking, or a related experience)",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_operations_or_adjacent",
+      "minimum_value": 6,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "tech",
+        "operations",
+        "strategy",
+        "consulting",
+        "banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-performance cultures"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "first_principles_problem_solving",
+      "raw_text_from_jd": "You solve problems from first principles. You rethink problems from the ground up, and resist \"this is how it's always been done\" thinking.",
+      "skill_type": "capability",
+      "domain": "strategic_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_adoption",
+      "raw_text_from_jd": "You are a builder at heart, and have already adopted AI tools beyond ChatGPT to meaningfully improve how you work",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_productivity_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "ChatGPT"
+      ],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "You thrive leading cross-functional teams. You can empathize with diverse perspectives, chart the right path, and influence senior teammates who don't report to you",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_data_driven",
+      "raw_text_from_jd": "You're highly analytical and find the signal through the noise. You are equally at home picking apart funnel metrics as you are pulling insights from 50+ sales calls",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operating_altitude_range",
+      "raw_text_from_jd": "You're equally comfortable operating at 10,000 feet and 1 foot. You don't hesitate to get in the weeds and operate at the lowest level of detail, but you're just as comfortable thinking long-term and inspiring a team. No job is beneath you.",
+      "skill_type": "cultural_fit",
+      "domain": "operational_versatility",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_self_starter",
+      "raw_text_from_jd": "The ideal candidate for this role should be a self-starter with an entrepreneurial mindset, able to take ownership and create plans from scratch, and drive execution while obtaining cross-functional buy-in",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurial_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "saas_experience",
+      "raw_text_from_jd": "High-growth SaaS experience is nice-to-have, but not required",
+      "skill_type": "domain_knowledge",
+      "domain": "saas_business",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth SaaS"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Digital Ordering SaaS business unit — online ordering, branded mobile apps, loyalty solutions for merchants (restaurants, grocers, retailers)",
+    "business_model": "SaaS (first-party digital ordering platform sold to merchants)",
+    "primary_metrics_inferred": [
+      "Sales funnel conversion metrics",
+      "Go-to-market efficiency and scale",
+      "Merchant partner growth / retention",
+      "Revenue growth across Digital Ordering segment"
+    ],
+    "cross_functional_partners": [
+      "GTM",
+      "Product",
+      "Marketing",
+      "Sales",
+      "Senior stakeholders"
+    ],
+    "core_responsibilities": [
+      "Drive high visibility, cross-functional workstreams addressing Digital Ordering's most challenging questions",
+      "Shape strategies, workstreams, and playbooks across go-to-market priorities",
+      "Design and influence GTM sales motion at each stage of the sales funnel",
+      "Develop deep understanding of go-to-market engine and use it to scale",
+      "Parse complex data sets and qualitative feedback to provide insights and recommendations"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      136000,
+      200000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "SaaS",
+    "Digital Ordering",
+    "go-to-market",
+    "strategy & operations",
+    "cross-functional",
+    "merchant",
+    "sales funnel",
+    "first principles",
+    "AI tools",
+    "analytics",
+    "playbooks",
+    "entrepreneurial"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($136K-$200K base nationally)",
+    "Equity grants included in compensation",
+    "Comprehensive benefits package disclosed (401k, parental leave, healthcare, etc.)",
+    "One of fastest-growing segments at DoorDash — high-impact role",
+    "High-growth SaaS experience listed as nice-to-have, not required — broadens candidate pool",
+    "Applications accepted on ongoing basis — active, open role"
+  ],
+  "red_flags": [
+    "Location type is unclear — JD does not specify remote, hybrid, or onsite; cities are not mentioned for this role",
+    "Role title includes 'Manager' but JD does not mention direct reports — people management expectation is ambiguous",
+    "Visa sponsorship not mentioned anywhere in the JD",
+    "No explicit mention of which team or squad within Digital Ordering this role sits under"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years required + influence-without-authority framing)",
+      "seniority.manages_people (inferred as false; JD describes influencing without direct reports but never states headcount)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "scope.business_model (inferred from 'SaaS business unit' description)",
+      "location.remote_us_eligible (inferred from national pay range including Colorado and Illinois; no explicit remote statement)",
+      "location.type set to 'unclear' because JD body never specifies remote/hybrid/onsite for this role"
+    ],
+    "ambiguities": [
+      "Role title is 'Manager' but JD never mentions managing direct reports; could be an IC-track manager title common in ops/strategy at DoorDash",
+      "Location is unstated in the JD body; the national pay range disclosure and Colorado/Illinois callout suggest remote eligibility, but this is not confirmed",
+      "Visa sponsorship and work authorization are not mentioned anywhere in the JD"
+    ]
+  }
+}

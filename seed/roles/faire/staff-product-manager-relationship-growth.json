@@ -1,0 +1,342 @@
+{
+  "company": "Faire",
+  "role_title": "Staff Product Manager, Relationship Growth",
+  "url": "https://boards.greenhouse.io/faire/jobs/8572160002?gh_jid=8572160002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8572160002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week (Tuesdays, Thursdays, and a third flex day); up to 4 weeks remote per year",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Growth PM with marketplace and martech focus",
+  "seniority": {
+    "level": "Staff PM (IC6 equivalent)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management experience required",
+      "Role title is 'Staff Product Manager'",
+      "Comp range $220K-$302.5K base, consistent with Staff-level IC at a Series D+ marketplace company",
+      "Expected to set multi-year direction, influence at executive level, and recruit A-players"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "8+ years of product management experience.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "marketplace_experience",
+      "raw_text_from_jd": "Direct marketplace experience. You are fluent with the dynamics of competing customer objectives across both sides of the marketplace, you anticipate second-order effects, and you have a track record of finding elusive win-win solutions.",
+      "skill_type": "domain_knowledge",
+      "domain": "two_sided_marketplaces",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_first_workflows",
+      "raw_text_from_jd": "AI-first in your own and your team's workflows, and in what you build. You actively use AI to move faster, ship more, and make your team more effective. You have a clear point of view on how to apply AI to brand-facing tools in wholesale tech and martech, including what is possible now and what is around the corner.",
+      "skill_type": "capability",
+      "domain": "ai_application_and_strategy",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "martech"
+      ],
+      "industries_named": [
+        "wholesale tech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_focus_qualitative_quantitative",
+      "raw_text_from_jd": "Highly customer-focused, with strong qualitative and quantitative judgment. You make decisions that hold up on both sides of the marketplace, for brands and for retailers.",
+      "skill_type": "capability",
+      "domain": "customer_insight_and_decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_thinking_and_execution",
+      "raw_text_from_jd": "Strong strategic thinking and execution skills. Excited to set high-level vision and strategy while also finessing customer-experience details, with a clear track record of driving business impact through product.",
+      "skill_type": "outcome",
+      "domain": "product_strategy_and_execution",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "zero_to_one_product_experience",
+      "raw_text_from_jd": "Proven zero-to-one product experience. You have built and shipped new, customer-facing capabilities from early concept through launch and iteration, with the discipline to set crisp success metrics and drive tight build-learn-iterate cycles.",
+      "skill_type": "outcome",
+      "domain": "new_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_communicator_systems_thinker",
+      "raw_text_from_jd": "Structured communicator and systems thinker who can make complexity simple.",
+      "skill_type": "capability",
+      "domain": "communication_and_systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "major_launch_experience_with_gtm",
+      "raw_text_from_jd": "Experience leading major launches alongside go-to-market and marketing teams.",
+      "skill_type": "capability",
+      "domain": "product_launches_and_gtm",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_analytics_ab_testing",
+      "raw_text_from_jd": "Experience with product analytics, A/B testing, long-term holdouts, and modeling out product impact. You pull a coherent picture from a wide range of data types and methods, you acknowledge what you do not yet know, and you are a thoughtful partner and challenger to your data and analytics partners.",
+      "skill_type": "capability",
+      "domain": "product_analytics_and_experimentation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "A/B testing",
+        "long-term holdouts"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_executive_influence",
+      "raw_text_from_jd": "Proven leader who influences across functions and at the executive level. You set direction for the full EPDD and GTM team, pull in the right partners, hold them accountable, recruit A-players, and uplevel the people around you.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "owner_and_builder_mindset",
+      "raw_text_from_jd": "Owner and builder. You want to meaningfully rebuild and up-level tools and programs, you get into the details, and you hold a high bar for yourself and the team across a large and complex scope.",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_and_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "consulting_finance_professional_services_or_mba",
+      "raw_text_from_jd": "Experience in consulting, finance, professional services, or business school can be especially useful preparation for the strategic and cross-functional complexity it involves.",
+      "skill_type": "domain_knowledge",
+      "domain": "strategy_and_business_acumen",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "consulting firm",
+        "finance firm",
+        "professional services firm"
+      ],
+      "credentials_named": [
+        "business school",
+        "MBA"
+      ]
+    },
+    {
+      "id": "growth_marketing_crm_experience",
+      "raw_text_from_jd": "Direct experience in growth, marketing, or CRM is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "growth_marketing_crm",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "CRM"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Relationship Growth — brand-side tools including retailer tracking/insights, brand-to-retailer communications (email, in-product, messaging), and personalized sales/support tools (lead gen, promos, CRM-like capabilities)",
+    "business_model": "B2B two-sided wholesale marketplace",
+    "primary_metrics_inferred": [
+      "Relationship LTV (brand-retailer)",
+      "Brand engagement and retention on platform",
+      "Retailer discovery and conversion driven by brand tools",
+      "GMV growth from brand-driven outreach channels"
+    ],
+    "cross_functional_partners": [
+      "Design",
+      "Engineering",
+      "Data Science",
+      "Marketing",
+      "Account Management",
+      "PMM",
+      "Brand Sales"
+    ],
+    "core_responsibilities": [
+      "Own strategy and roadmap for Relationship Growth",
+      "Set the multi-year direction for how Faire's brand-side tools evolve and deliver compounding value",
+      "Meaningfully rebuild and up-level tools and programs where the current ceiling is too low",
+      "Partner across the full EPDD and GTM team",
+      "Shape how brand-driven communications fit within the broader Faire ecosystem",
+      "Set the direction for how AI reshapes the wholesale tech and martech tools brands rely on"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      220000,
+      302500
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Staff PM",
+    "Relationship Growth",
+    "two-sided marketplace",
+    "brand engagement",
+    "retailer",
+    "CRM",
+    "martech",
+    "AI-first",
+    "wholesale",
+    "go-to-market",
+    "LTV",
+    "zero-to-one",
+    "A/B testing",
+    "product analytics",
+    "cross-functional leadership"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated and competitive ($220K-$302.5K base)",
+    "Clear product surface and ownership described in detail",
+    "Role has genuine strategic scope (multi-year roadmap, AI direction-setting)",
+    "Company backed by top-tier investors including Sequoia, Y Combinator, Founders Fund",
+    "Explicit acknowledgment that the role goes beyond traditional PM — signals maturity of expectations"
+  ],
+  "red_flags": [
+    "Hybrid requirement is 3 days/week in office (SF or NYC only) — no fully remote option",
+    "Visa sponsorship and work authorization not addressed in the JD",
+    "Very wide comp range ($82.5K spread) may indicate significant leveling ambiguity or location-based variation",
+    "Role is described as 'closer to running a small business inside Faire' — scope and accountability may be underestimated at hiring stage",
+    "No explicit headcount or team size mentioned — unclear how much is leading vs. doing"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Staff PM', comp range, and scope signals)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from product description)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)",
+      "compensation.location_pay_differential (range given for SF/NYC jointly, not separately, so no differential apparent)"
+    ],
+    "ambiguities": [
+      "The JD lists a single pay range attributed to 'San Francisco, CA/New York City, NY' — it is unclear if this is a combined range applicable to both cities or if there is an unstated differential between the two locations.",
+      "The consulting/finance/MBA background item is presented in a way that blurs between must-have and nice-to-have; it is classified as nice-to-have here since the phrasing is 'can be especially useful preparation' rather than a hard requirement.",
+      "manages_people is set to false because the JD does not explicitly assign direct reports, but the role is expected to 'recruit A-players' and 'uplevel the people around you', which may imply indirect or future people management."
+    ]
+  }
+}

@@ -1,0 +1,407 @@
+{
+  "company": "Instacart",
+  "role_title": "Principal Product Manager, AI",
+  "url": "https://instacart.careers/job/?gh_jid=8024357",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8024357",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "Flex First — employees choose where they work; regular in-person events",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (B2B enterprise, agentic AI)",
+  "seniority": {
+    "level": "Principal / Staff IC (P6+)",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of product management experience",
+      "3+ years delivering AI/ML-powered products",
+      "Base pay range up to $264K in top markets, consistent with Principal-level IC",
+      "Owns vision, roadmap, and go-to-market from 0 to 1",
+      "Presents business cases to executive audiences"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "6+ years of product management experience building B2B or enterprise software, including 3+ years delivering AI/ML-powered products from concept through GA.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML"
+      ],
+      "industries_named": [
+        "B2B",
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_aiml_products",
+      "raw_text_from_jd": "including 3+ years delivering AI/ML-powered products from concept through GA.",
+      "skill_type": "years_of_experience",
+      "domain": "ai_ml_product_management",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shipped_aiml_products",
+      "raw_text_from_jd": "Proven record shipping at least 2 AI/ML products used by enterprise customers with measurable financial outcomes (e.g., margin improvement, cost reduction, or productivity gains).",
+      "skill_type": "outcome",
+      "domain": "ai_ml_product_launches",
+      "minimum_value": 2,
+      "unit": "products",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML"
+      ],
+      "industries_named": [
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_proficiency_sql",
+      "raw_text_from_jd": "Hands-on data proficiency, including the ability to query or analyze large datasets (e.g., SQL or equivalent) and evaluate data quality, model performance, and signal reliability.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_execution",
+      "raw_text_from_jd": "Experience leading cross-functional execution with engineering, data science, design, sales, and marketing to launch and scale products.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "roi_unit_economics",
+      "raw_text_from_jd": "Demonstrated ability to build ROI and unit economics models and present business cases to executive audiences.",
+      "skill_type": "capability",
+      "domain": "financial_modeling",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_sales_cycles",
+      "raw_text_from_jd": "Experience navigating complex enterprise sales cycles, including security, IT, and legal/procurement processes.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_sales",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Exceptional written and verbal communication skills; able to translate technical concepts for commercial audiences and commercial concepts for technical audiences.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree in a technical, quantitative, or business field (e.g., Computer Science, Engineering, Mathematics, Economics) or equivalent practical experience.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree",
+        "Computer Science",
+        "Engineering",
+        "Mathematics",
+        "Economics"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "grocery_retail_supply_chain",
+      "raw_text_from_jd": "Experience in grocery, retail, or supply chain with familiarity in store operations, inventory management, and key margin levers.",
+      "skill_type": "domain_knowledge",
+      "domain": "grocery_retail_supply_chain",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "grocery",
+        "retail",
+        "supply chain"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agentic_ai_llm_exposure",
+      "raw_text_from_jd": "Exposure to agentic AI systems, LLM-based workflows, autonomous decision pipelines, prompt engineering, and AI evaluation/guardrail practices.",
+      "skill_type": "domain_knowledge",
+      "domain": "agentic_ai_llm",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "agentic AI",
+        "prompt engineering",
+        "autonomous decision pipelines"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "demand_forecasting_inventory",
+      "raw_text_from_jd": "Background with demand forecasting, replenishment, or inventory optimization products and metrics (e.g., OSA, service level, shrink).",
+      "skill_type": "domain_knowledge",
+      "domain": "demand_forecasting_inventory_optimization",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "retail"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "retail_tech_stack",
+      "raw_text_from_jd": "Familiarity with the retail tech stack, including WMS, POS, ERP/replenishment modules, EDI, and API-based integrations.",
+      "skill_type": "domain_knowledge",
+      "domain": "retail_technology",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "WMS",
+        "POS",
+        "ERP"
+      ],
+      "technologies_named": [
+        "EDI",
+        "API-based integrations"
+      ],
+      "industries_named": [
+        "retail"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "competitive_displacement",
+      "raw_text_from_jd": "Experience displacing incumbents or winning competitive takeouts in enterprise accounts.",
+      "skill_type": "outcome",
+      "domain": "enterprise_sales_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consulting_solutions_analytics_background",
+      "raw_text_from_jd": "Early-career experience in management consulting, solutions architecture, or business analytics; comfortable running diagnostics and leading with financial outcomes.",
+      "skill_type": "domain_knowledge",
+      "domain": "consulting_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "management consulting firm"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "2 PMs + 7 engineers (stated at time of posting)",
+    "surface": "B2B agentic AI products for retailers and CPGs (out-of-stock, shrink/waste, fulfillment utilization)",
+    "business_model": "B2B SaaS / enterprise, margin-recovery and efficiency products sold to retailers and CPGs",
+    "primary_metrics_inferred": [
+      "Margin improvement / cost reduction for retailer/CPG customers",
+      "Out-of-stock reduction (OSA)",
+      "Shrink and waste reduction",
+      "Fulfillment utilization improvement",
+      "Revenue from new agentic AI products"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data Science",
+      "Design",
+      "Sales",
+      "Marketing",
+      "Data Engineering",
+      "Retailer Success",
+      "Enterprise Sales",
+      "Business Development"
+    ],
+    "core_responsibilities": [
+      "Own the product vision, strategy, and roadmap for agentic AI solutions that reduce out-of-stocks, shrink and waste, and improve fulfillment utilization for retailers and CPGs.",
+      "Work backwards from customer outcomes to write crisp problem statements, PRDs, and success metrics; prioritize ruthlessly to deliver v0, iterate to v1, and scale proven features.",
+      "Partner with engineering and data science to scope experiments, manage backlogs, define KPIs and evaluation frameworks, and ensure models and agents are reliable, safe, and observable.",
+      "Lead discovery with customers; design pilots and proof points; collaborate with sales and marketing on go-to-market, pricing and packaging, enablement, and case studies that drive revenue.",
+      "Own the business case: model unit economics and ROI, set financial targets for margin recovery/efficiency, and report performance to executives and external stakeholders.",
+      "Ensure data readiness and integrity by assessing data quality, telemetry, integrations, and feedback loops; implement human-in-the-loop and policy guardrails where appropriate.",
+      "Operate cross-functionally with data engineering, retailer success, enterprise sales, and BD to bring products from concept to launch and expansion."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      209000,
+      264000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "New hire equity grant plus annual refresh grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "agentic AI",
+    "B2B enterprise",
+    "AI/ML products",
+    "out-of-stock",
+    "shrink and waste",
+    "fulfillment utilization",
+    "retailers",
+    "CPGs",
+    "LLM",
+    "unit economics",
+    "go-to-market",
+    "0 to 1",
+    "supply chain",
+    "inventory management",
+    "principal product manager"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges fully disclosed across all US geographies",
+    "Equity (new hire + annual refresh grants) explicitly mentioned",
+    "Fully remote role (#LI-Remote) with Flex First policy",
+    "Small, focused team (2 PMs + 7 engineers) with clear mandate and resources",
+    "Clear product surface and business outcomes — not vague AI strategy role",
+    "Real financial levers (margin recovery, cost reduction) as success criteria"
+  ],
+  "red_flags": [
+    "0-to-1 ownership on a small team may mean limited PM support and high ambiguity",
+    "Compensation floor in 'all other states' ($209K-$220.5K) is notably lower than CA/NY tier ($250K-$264K)",
+    "Visa sponsorship and work authorization not addressed in JD",
+    "Role requires 2+ shipped AI/ML products with measurable financial outcomes — hard bar for many candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Principal' title, comp range, and scope of ownership)",
+      "scope.business_model (inferred from B2B focus and retailer/CPG customer context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as metrics in JD)",
+      "compensation.base_range_usd uses the full US range floor ($209K) to ceiling ($264K) to represent the overall band; exact range depends on state",
+      "location.work_auth and visa_sponsorship (not addressed in JD; marked unclear)"
+    ],
+    "ambiguities": [
+      "JD states 'Flex First' which allows full remote, and is tagged #LI-Remote, but also mentions 'regular in-person events' — treated as remote-us with occasional in-person expectations",
+      "Multiple state-based compensation tiers make a single base_range_usd ambiguous; the full US min ($209K) to max ($264K) is captured with location_pay_differential flagged as true"
+    ]
+  }
+}

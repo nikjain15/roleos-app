@@ -1,0 +1,277 @@
+{
+  "company": "Intercom",
+  "role_title": "Principal Program Manager",
+  "url": "https://job-boards.greenhouse.io/intercom/jobs/7961835",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7961835",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least three days per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager (Strategic / Cross-functional)",
+  "seniority": {
+    "level": "Principal / Staff IC",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in program management required",
+      "Described as 'senior individual contributor role'",
+      "Base salary range $189,000-$225,750 in San Francisco, consistent with Principal/Staff IC",
+      "Partners directly with execs and senior leadership",
+      "Mentors and develops teammates"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management",
+      "raw_text_from_jd": "You have 8+ years of experience in program management with a track record of leading large, complex, cross-functional programs in a fast paced AI/SaaS B2B environment with an evolving strategy",
+      "skill_type": "years_of_experience",
+      "domain": "program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI",
+        "SaaS",
+        "B2B"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "exec_engagement",
+      "raw_text_from_jd": "Proven experience working directly with senior level leadership, you're comfortable engaging with and influencing senior executives and leadership to get to the right outcome",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_ownership_multitasking",
+      "raw_text_from_jd": "High ownership and agency, with the ability to manage multiple high-profile, high-visibility programs simultaneously in a fast-paced environment",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_thinking",
+      "raw_text_from_jd": "A strategic thinker who connects execution to company strategy, spots gaps across programs, and understands how mission, product, and financial plan tie together",
+      "skill_type": "capability",
+      "domain": "strategic_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "solutions_oriented_proactive",
+      "raw_text_from_jd": "You are solutions oriented and proactive when it comes to taking action to solve problems and mitigate risks",
+      "skill_type": "cultural_fit",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "facilitation_stakeholder_management",
+      "raw_text_from_jd": "You have strong facilitation and stakeholder management skills with a track record of bringing together senior-level viewpoints and driving alignment",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "self_starter_execution",
+      "raw_text_from_jd": "You're an excellent self-starter with a track record of seamless execution on complex programs with minimal guidance",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "built_pm_practices",
+      "raw_text_from_jd": "You've built and significantly improved program management practices, frameworks, or ways of working at a previous company",
+      "skill_type": "outcome",
+      "domain": "program_management_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_flex",
+      "raw_text_from_jd": "Excellent communicator who can flex between an exec room and a cross-functional working group, adapting style and depth to the audience",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mentoring_others",
+      "raw_text_from_jd": "Experience mentoring or developing others, whether direct reports or peers - you make the people around you better",
+      "skill_type": "capability",
+      "domain": "mentorship",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Strategic Program Management team; cross-company highest-priority programs at Fin (Intercom)",
+    "business_model": "B2B SaaS / AI Customer Agent",
+    "primary_metrics_inferred": [
+      "On-time delivery of high-priority company objectives",
+      "Cross-functional alignment and decision velocity",
+      "Program risk mitigation and momentum"
+    ],
+    "cross_functional_partners": [
+      "Executives",
+      "Senior leadership across every org",
+      "Workstream drivers",
+      "Exec sponsors"
+    ],
+    "core_responsibilities": [
+      "Partner directly with execs and senior leadership to define programs of work that enable Fin to hit its highest priority company objectives",
+      "Take a holistic view across programs, connecting the dots back to company strategy and surfacing gaps, misalignment, or opportunities to streamline",
+      "Take ambiguous, high-stakes problems and drive them to clarity - defining the right structure, roles, and decision-making frameworks, often from scratch",
+      "Drive cross-functional decision-making by identifying the right stakeholders, surfacing the information they need and recommendations",
+      "Proactively identify program risks and anticipate change before it happens, driving action to course-correct and maintain momentum",
+      "Set and raise the bar for how program management works at Fin - creating new frameworks, challenging existing processes that aren't working, and feeding learnings back into how the team operates",
+      "Hold people accountable at every level, from workstream drivers to exec sponsors, ensuring progress and ownership across complex, cross-functional programs",
+      "Mentor and develop teammates, making the people around you better and faster",
+      "Evangelize program management across the company - shaping how other teams and orgs think about execution, collaboration, and ways of working"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      189000,
+      225750
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Restricted Stock Units (RSUs); also eligible for corporate bonus program",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "program management",
+    "cross-functional",
+    "executive stakeholder management",
+    "AI/SaaS",
+    "B2B",
+    "strategic programs",
+    "risk management",
+    "frameworks",
+    "alignment",
+    "mentorship",
+    "Fin",
+    "principal",
+    "senior individual contributor"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($189,000-$225,750 base) for San Francisco Bay Area",
+    "RSUs and bonus program mentioned as additional compensation",
+    "Claude Code and best-in-class AI tools access is a differentiator for practitioners",
+    "Clear reporting structure (Senior Manager, Strategic Program Management)",
+    "Specific hybrid policy articulated (3 days/week in-office)",
+    "Role has clear seniority framing ('senior individual contributor') reducing ambiguity"
+  ],
+  "red_flags": [
+    "No mention of visa sponsorship; unclear for international candidates",
+    "Hybrid policy requires 3 days/week in San Francisco office — eliminates remote-only candidates",
+    "No nice-to-haves listed, making it harder to gauge what differentiates candidates",
+    "JD uses 'Fin' and 'Intercom' interchangeably, which may cause branding/organizational confusion for candidates researching the role"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level inferred from compensation range, 'senior individual contributor' label, and years requirement",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "scope.business_model inferred from product description",
+      "location.visa_sponsorship inferred as unclear (not addressed in JD)",
+      "compensation.location_pay_differential inferred from explicit statement that range applies to San Francisco Bay Area candidates only"
+    ],
+    "ambiguities": [
+      "JD uses both 'Fin' and 'Intercom' as company names — Fin appears to be the rebranded product/company name while Intercom is the ATS entity; the role is posted under Intercom's ATS but the JD body consistently refers to the company as 'Fin'",
+      "No nice-to-haves are explicitly listed in the JD; all requirements are presented as unconditional, so all were classified as must-haves"
+    ]
+  }
+}

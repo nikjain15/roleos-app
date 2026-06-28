@@ -1,0 +1,253 @@
+{
+  "company": "Lemonade",
+  "role_title": "Staff Product Manager",
+  "url": "https://jobs.ashbyhq.com/lemonade/2b3ef179-4dd6-42d6-895a-6f53e70115e8",
+  "ats_provider": "ashby",
+  "ats_job_id": "2b3ef179-4dd6-42d6-895a-6f53e70115e8",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "most days of the week",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Staff IC (Staff PM)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of product management experience required",
+      "'Staff Product Manager' title explicitly stated",
+      "Mentor across the organization",
+      "Owns strategy and execution for critical foundational platforms"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "10+ years of product management experience in a successful startup or fast-growing company",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "successful startup",
+        "fast-growing company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "genai_llm_hands_on",
+      "raw_text_from_jd": "Hands-on experience building and deploying GenAI applications and working with LLMs at scale",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_ml_engineering",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "GenAI",
+        "LLMs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "automation_track_record",
+      "raw_text_from_jd": "A proven track record of automating complex, manual processes and scaling foundational workflows",
+      "skill_type": "outcome",
+      "domain": "automation_and_infrastructure",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_optimization",
+      "raw_text_from_jd": "Strong ability to deconstruct and optimize intricate, multi-step systems and data-heavy user journeys",
+      "skill_type": "capability",
+      "domain": "systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_analytical",
+      "raw_text_from_jd": "A data-driven, analytical approach - someone who turns platform metrics into meaningful product decisions",
+      "skill_type": "capability",
+      "domain": "data_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Fluent English with sharp communication skills across technical and non-technical audiences",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_agile",
+      "raw_text_from_jd": "A self-organized, process-driven approach to managing competing priorities and leading cross-functional agile teams",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technology_curiosity",
+      "raw_text_from_jd": "A genuine curiosity for new technology - you read constantly, experiment often, and love sharing what you learn",
+      "skill_type": "cultural_fit",
+      "domain": "continuous_learning",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "office_presence",
+      "raw_text_from_jd": "Ready to work in an office environment most days of the week",
+      "skill_type": "cultural_fit",
+      "domain": "work_arrangement",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Core automation and AI infrastructure platforms powering internal workflows and end-user touchpoints",
+    "business_model": "insurtech B2C/B2B platform, AI-first insurance",
+    "primary_metrics_inferred": [
+      "Automation rate of manual processes",
+      "Platform efficiency gains",
+      "Reduction of friction for internal teams and end-users",
+      "Scale of foundational workflows"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Analytics",
+      "Internal Stakeholders"
+    ],
+    "core_responsibilities": [
+      "Lead zero-to-one strategy and execution for critical automation platforms",
+      "Map and untangle complex, multi-step logic to identify where self-service and AI can replace manual effort",
+      "Build with the latest GenAI tools and LLMs alongside homegrown internal tooling",
+      "Partner closely with engineers, designers, data analysts, and internal stakeholders to shape product strategy",
+      "Own the roadmap for foundational infrastructure",
+      "Mentor across the organization, championing rigorous problem-solving, systems thinking, and a culture of continuous learning"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "GenAI",
+    "LLMs",
+    "automation",
+    "infrastructure",
+    "zero-to-one",
+    "AI-first",
+    "platform strategy",
+    "self-service",
+    "systems thinking",
+    "foundational workflows",
+    "Staff PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear seniority signal — 'Staff' level with explicit 10+ years requirement",
+    "Specific technical scope (GenAI, LLMs, automation platforms) rather than vague PM role",
+    "Mentions mentorship and organization-wide visibility, suggesting real scope of influence",
+    "AI-first framing is substantive — LLMs and GenAI appear in hard requirements, not just aspirations"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No city or country specified — office location unknown despite onsite requirement",
+    "Visa sponsorship and work authorization not addressed",
+    "No posting date provided — unclear how fresh the role is",
+    "'Most days of the week' in office is vague and may not satisfy candidates seeking clarity on hybrid policy"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.manages_people (inferred false — mentorship mentioned but no direct reports stated)",
+      "scope.business_model (inferred from Lemonade's known insurtech profile and JD context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.cities_listed (not stated in JD body; left empty)",
+      "location.type (inferred as onsite from 'most days of the week in an office environment')"
+    ],
+    "ambiguities": [
+      "No city or country is named for the office location — 'office environment most days of the week' provides no geography",
+      "technology_curiosity is listed under 'What you'll need' (required section) but reads as a cultural/attitudinal trait; classified as hard per schema rules since it appears in the required section"
+    ]
+  }
+}

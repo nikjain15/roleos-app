@@ -1,0 +1,355 @@
+{
+  "company": "Ramp",
+  "role_title": "Product Manager | Agentic CX",
+  "url": "https://jobs.ashbyhq.com/ramp/a3afd259-ba6b-4eb0-a1b6-05d01dddacd8",
+  "ats_provider": "ashby",
+  "ats_job_id": "a3afd259-ba6b-4eb0-a1b6-05d01dddacd8",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York, NY",
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "unclear",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Lead",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in product management, applied AI, product operations, or hybrid builder role",
+      "Expected to own strategy and execution end to end",
+      "Reports to Head of Operations and AI — suggests senior IC not manager",
+      "Nice-to-have: 'Experience managing small teams' implies not currently required"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_applied_ai",
+      "raw_text_from_jd": "5+ years in product management, applied AI, product operations, or a hybrid builder role where you shipped AI-powered products or systems at scale.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_or_applied_ai",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_ai_building",
+      "raw_text_from_jd": "Deep hands-on experience building with AI: you've prototyped, shipped, and iterated on AI tools, agents, or workflows, not just managed roadmaps about them. Technical fluency with modern AI coding harnesses (Cursor, Claude Code, Codex).",
+      "skill_type": "tool_proficiency",
+      "domain": "applied_ai_engineering",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Cursor",
+        "Claude Code",
+        "Codex"
+      ],
+      "technologies_named": [
+        "AI agents",
+        "AI workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "llm_concepts_knowledge",
+      "raw_text_from_jd": "Working knowledge of core LLM concepts and systems (prompting, fine-tuning, embeddings, retrieval, evaluation) and the judgment to translate these into reliable, user-facing products.",
+      "skill_type": "domain_knowledge",
+      "domain": "large_language_models",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "prompting",
+        "fine-tuning",
+        "embeddings",
+        "retrieval",
+        "evaluation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_empathy",
+      "raw_text_from_jd": "Operational empathy: you can partner with sales, CX, finance, risk, and other business teams to deeply understand their challenges and deliver rapid AI-powered solutions.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_obsession",
+      "raw_text_from_jd": "Customer obsession - demonstrated ability to keep the customer (internal or external) front and center when building technical systems.",
+      "skill_type": "outcome",
+      "domain": "customer_focus",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_communicator",
+      "raw_text_from_jd": "Strong communicator who can write crisp docs, run engaging internal training, and translate between deeply technical and non-technical audiences.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_and_ai_evals_fluency",
+      "raw_text_from_jd": "Fluency in data and AI evals: you know when to trust numbers and when to lean on principles.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_analysis_and_ai_evaluation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI evals"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_ownership_self_starter",
+      "raw_text_from_jd": "Self-starter with high ownership, comfortable with autonomy and ambiguity. You default to building, not asking for permission.",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "team_management_experience",
+      "raw_text_from_jd": "Experience managing small teams of technical or operational professionals.",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_growth_startup_fintech_saas",
+      "raw_text_from_jd": "Experience at high-growth startups, especially in fintech, enterprise SaaS, or other domains requiring complex systems thinking.",
+      "skill_type": "domain_knowledge",
+      "domain": "startup_fintech_enterprise_saas",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "enterprise SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth startups"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "internal_enablement_change_management",
+      "raw_text_from_jd": "Prior experience in internal enablement, change management, or rolling out new tools and workflows across an organization.",
+      "skill_type": "capability",
+      "domain": "change_management_and_enablement",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "departmental_workflow_familiarity",
+      "raw_text_from_jd": "Familiarity with departmental workflows in operating teams (Sales, CX, Finance, Risk, HR, etc.).",
+      "skill_type": "domain_knowledge",
+      "domain": "business_operations_workflows",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "commercializing_internal_ai",
+      "raw_text_from_jd": "Curiosity about commercializing internal AI work: customer-facing AI agents, AI spend management, or turning operational learnings into product.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_commercialization",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI agents"
+      ],
+      "industries_named": [
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "You prefer strategy briefings over hands-on delivery.",
+    "You lean toward AI research or building models rather than applied AI work.",
+    "You're not excited about building for and transforming the work of internal operators alongside external customers.",
+    "You're not interested in the foundational, sometimes unglamorous work of making AI systems reliable and scalable at the infrastructure level."
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "AI agents, tools, and workflows powering Ramp's Customer Experience (CX) teams and customer-facing agentic products",
+    "business_model": "B2B fintech / spend management SaaS — internal AI operations platform plus customer-facing AI CX products",
+    "primary_metrics_inferred": [
+      "AI agent and tool performance (quality, accuracy, reliability)",
+      "CX team AI adoption rate",
+      "Customer satisfaction and support resolution speed",
+      "Rate of improvement in customer-facing AI CX motion (daily/weekly)"
+    ],
+    "cross_functional_partners": [
+      "Head of CX",
+      "Engineering",
+      "Data",
+      "Go-to-market",
+      "Sales",
+      "Finance",
+      "Risk"
+    ],
+    "core_responsibilities": [
+      "Build and ship AI agents and platforms that make Ramp's CX motions faster, higher quality, and more reliable",
+      "Define standards of quality and accuracy for AI agents and human operator collaboration",
+      "Define the future of AI-powered operations and roles in the CX context",
+      "Own evaluation and iteration: build dashboards, eval systems, QA checks, and feedback systems",
+      "Tackle foundational AI infrastructure challenges in partnership with engineering",
+      "Tell the story externally through customer pitches, conferences, and content"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "agentic CX",
+    "AI agents",
+    "applied AI",
+    "customer experience",
+    "LLMs",
+    "AI operations",
+    "evaluation",
+    "Claude Code",
+    "Cursor",
+    "internal AI tools",
+    "product management",
+    "fintech",
+    "builder",
+    "AI workflows",
+    "operational empathy"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Clear and specific description of what has already been built (Ramp Glass, Ramp Inspect, Dojo, Sensei, etc.) — strong signal of real AI investment",
+    "Role is explicitly 'build and ship' not strategy-deck — suggests genuine hands-on scope",
+    "Encourages applications from candidates who don't check every box",
+    "Broad benefits package disclosed including flexible PTO, unlimited AI token usage, medical/dental/vision, parental leave",
+    "Reports to Head of Operations and AI — senior exposure and clear reporting line",
+    "Company at meaningful scale (70,000+ companies, $200B+ annualized spend) with demonstrated AI traction"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship not addressed",
+    "Location requirements are ambiguous — relocation support to NYC or SF is mentioned but whether remote is eligible is not stated",
+    "Role title is 'Product Manager' in the JD title but the body refers to 'AI Operations Manager' — possible inconsistency in role framing",
+    "Very broad scope (internal AI tools, customer-facing agents, external storytelling, infrastructure) may indicate under-resourced or unclear role boundaries",
+    "High buzzword density may obscure concrete day-to-day expectations"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ year floor, scope, and nice-to-have people management signal)",
+      "seniority.manages_people (inferred from 'nice-to-have' framing for team management, not required)",
+      "location.type (inferred as hybrid; relocation to NYC or SF mentioned but specific office policy not stated)",
+      "location.remote_us_eligible (inferred false based on relocation support framing toward NYC/SF)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "compensation.equity_mentioned (no equity language in JD)"
+    ],
+    "ambiguities": [
+      "Role title in JD header is 'Product Manager | Agentic CX' but body text calls the role 'AI Operations Manager at Ramp' — unclear which title is canonical",
+      "Location/remote policy not explicitly stated; relocation support to NYC or SF is offered but whether fully remote candidates are eligible is not addressed",
+      "Visa sponsorship is not mentioned anywhere in the JD; left as 'unclear'"
+    ]
+  }
+}

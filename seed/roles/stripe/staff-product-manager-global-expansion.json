@@ -1,0 +1,308 @@
+{
+  "company": "Stripe",
+  "role_title": "Staff Product Manager, Global Expansion",
+  "url": "https://stripe.com/jobs/search?gh_jid=7570242",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7570242",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Growth PM with geo-expansion and payments focus",
+  "seniority": {
+    "level": "Staff PM / Principal PM",
+    "years_required_min": 12,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "12+ years of experience in product management or equivalent roles",
+      "Staff-level title in role title",
+      "End-to-end ownership of India product strategy and roadmap",
+      "Represents market perspective to regional and global stakeholders"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "Demonstrated product leadership in payments, fintech, marketplaces, or developer platform products, with 12+ years of experience in product management or equivalent roles.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 12,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech",
+        "marketplaces",
+        "developer platforms"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "india_payments_knowledge",
+      "raw_text_from_jd": "Deep knowledge of the Indian payments and commerce ecosystem: local payment methods, banks, regulatory landscape.",
+      "skill_type": "domain_knowledge",
+      "domain": "india_payments_ecosystem",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments"
+      ],
+      "geographies_named": [
+        "India"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "localized_product_shipping_india",
+      "raw_text_from_jd": "Track record of shipping localized products and scaling go-to-market plays in India (or similar complex emerging markets).",
+      "skill_type": "outcome",
+      "domain": "localization_and_go_to_market",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "India"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_instincts_experiments",
+      "raw_text_from_jd": "Strong analytical instincts: experience running experiments, using metrics to drive decisions.",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_experimentation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_prioritization",
+      "raw_text_from_jd": "Comfortable with ambiguity and skilled at prioritizing high-impact initiatives while moving quickly and iterating.",
+      "skill_type": "capability",
+      "domain": "prioritization_and_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Excellent communicator and collaborator who can influence across engineering, legal, operations, and sales.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_obsession_merchant_feedback",
+      "raw_text_from_jd": "Customer-obsessed with first-hand experience talking to merchants, partners, and developer communities; able to translate feedback into product requirements.",
+      "skill_type": "capability",
+      "domain": "customer_discovery",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_bias_for_action",
+      "raw_text_from_jd": "Entrepreneurial mindset, bias for action, and experience operating with limited resources to unlock outsized outcomes.",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurial_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cross_border_payments_experience",
+      "raw_text_from_jd": "Experience with cross-border payments, currency conversion, payouts, or compliance for global trade.",
+      "skill_type": "domain_knowledge",
+      "domain": "cross_border_payments",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_platform_sdks_apis",
+      "raw_text_from_jd": "Prior work with developer platforms, SDKs/APIs, or businesses that serve platforms and marketplaces.",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SDKs",
+        "APIs"
+      ],
+      "industries_named": [
+        "marketplaces"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "regulator_liaison_compliance",
+      "raw_text_from_jd": "Experience liaising with regulators or navigating complex compliance requirements.",
+      "skill_type": "domain_knowledge",
+      "domain": "regulatory_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "India product strategy and roadmap — domestic merchant expansion and cross-border/global enablement for Indian businesses",
+    "business_model": "B2B financial infrastructure platform (payments processing, developer APIs, marketplace enablement)",
+    "primary_metrics_inferred": [
+      "Revenue growth in India",
+      "Merchant acquisition and satisfaction",
+      "Cross-border payment volume from Indian businesses",
+      "Go-to-market scale and distribution"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Operations",
+      "Legal/Compliance",
+      "Sales",
+      "Partnerships",
+      "Business Development"
+    ],
+    "core_responsibilities": [
+      "Own the India product strategy and roadmap end-to-end: define vision, prioritize initiatives, and measure outcomes tied to growth, revenue, and merchant satisfaction.",
+      "Lead cross-functional teams (engineering, design, data science, ops, legal/compliance, sales, partnerships) to deliver product features, integrations, and commercial programs tailored to India.",
+      "Move quickly from insight to experiment: design and run rapid experiments, launch localized features and pricing, and iterate based on quantitative and qualitative feedback.",
+      "Deeply understand Indian merchants, platforms, PSPs, gateways, regulators and payment rails; translate market dynamics into product differentiation and commercial opportunity.",
+      "Build products and flows that make it simpler for Indian businesses to sell globally — cross-border routing, FX and reconciliation, compliance, payout rails, and developer experience improvements.",
+      "Partner with partnerships and business development teams to secure and scale strategic distribution and platform integrations.",
+      "Represent the product and market perspective to regional and global stakeholders; provide clear decision-making and trade-off rationale."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "India",
+    "global expansion",
+    "payments",
+    "fintech",
+    "cross-border payments",
+    "go-to-market",
+    "product strategy",
+    "localization",
+    "developer platform",
+    "emerging markets",
+    "PSPs",
+    "payment rails",
+    "FX",
+    "compliance",
+    "staff PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Highly specific market focus (India) with clear strategic rationale provided",
+    "End-to-end ownership of product strategy and roadmap — high autonomy and impact",
+    "Clear list of cross-functional partners and responsibilities",
+    "Preferred qualifications explicitly labeled as bonus, not requirements — inclusive framing",
+    "Stripe's scale and mission provide credible context for the role's importance"
+  ],
+  "red_flags": [
+    "No location specified in the JD — unclear whether this role is based in India, US, or remote",
+    "No compensation range disclosed",
+    "12+ years minimum is a high bar that may filter out strong candidates with 8-11 years",
+    "Visa sponsorship and work authorization not addressed"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (not stated; set to 'unclear' — no city, country, or remote policy mentioned)",
+      "location.remote_us_eligible (inferred as false given India market focus, but not stated)",
+      "seniority.level (inferred from 'Staff' title and 12+ years requirement)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "compensation.equity_mentioned (inferred as false; not mentioned in JD body)"
+    ],
+    "ambiguities": [
+      "Role location is entirely unstated — 'Global Expansion' title and India focus could suggest India-based, US-based with India responsibility, or remote; cannot determine from JD alone.",
+      "The JD does not clarify if this is an India-based hire or a role at Stripe's US/global HQ with India market ownership."
+    ]
+  }
+}

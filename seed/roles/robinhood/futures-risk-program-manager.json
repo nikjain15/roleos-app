@@ -1,0 +1,310 @@
+{
+  "company": "Robinhood",
+  "role_title": "Futures Risk Program Manager",
+  "url": "https://boards.greenhouse.io/robinhood/jobs/7975474?t=gh_src=&gh_jid=7975474",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7975474",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Chicago, IL"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least five days per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Risk & Compliance Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5 years of progressively responsible experience required",
+      "Bachelor's degree plus five years experience",
+      "Base pay range $138,632–$175,000 consistent with senior IC",
+      "Mentor others on the team implied",
+      "Shapes vision and execution across key strategic initiatives"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_bachelors_cs",
+      "raw_text_from_jd": "Bachelor's degree or foreign equivalent in Computer Science or related field plus five years of progressively responsible experience in job offered or related occupation.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree",
+        "Computer Science"
+      ]
+    },
+    {
+      "id": "years_experience",
+      "raw_text_from_jd": "Bachelor's degree or foreign equivalent in Computer Science or related field plus five years of progressively responsible experience in job offered or related occupation.",
+      "skill_type": "years_of_experience",
+      "domain": "risk_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cftc_nfa_regulatory",
+      "raw_text_from_jd": "Apply Commodity Futures Trading Commission (CFTC) and National Futures Association (NFA) regulatory requirements into risk controls, supervisory procedures, and program documentation;",
+      "skill_type": "domain_knowledge",
+      "domain": "futures_regulatory_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "futures",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_fcm_risk_assessments",
+      "raw_text_from_jd": "Design and execute enterprise or Future Commission Merchant (FCM) level risk assessments;",
+      "skill_type": "capability",
+      "domain": "risk_assessment",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "futures",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Future Commission Merchant (FCM)"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "etl_pipelines_automations",
+      "raw_text_from_jd": "Build and implement automations such as ETL data pipelines and scheduled data jobs (Airflow-type scheduling tools) to support risk monitoring;",
+      "skill_type": "tool_proficiency",
+      "domain": "data_engineering",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Airflow"
+      ],
+      "technologies_named": [
+        "ETL data pipelines",
+        "scheduled data jobs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "realtime_monitoring_alerting",
+      "raw_text_from_jd": "Develop real-time or near–real-time monitoring and alerting systems that detect risk limit breaches, unusual trading activity, or system anomalies;",
+      "skill_type": "capability",
+      "domain": "real_time_risk_monitoring",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "real-time monitoring",
+        "alerting systems"
+      ],
+      "industries_named": [
+        "futures",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "control_testing_programs",
+      "raw_text_from_jd": "Execute control testing programs for risk mitigation;",
+      "skill_type": "capability",
+      "domain": "control_testing",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "python_statistical_analytics",
+      "raw_text_from_jd": "Perform advanced statistical analytics on large structured datasets utilizing Python or similar programming tools to identify trends and quantify risk exposures;",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Python",
+        "statistical analytics"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bi_visualization_dashboards",
+      "raw_text_from_jd": "Utilize industry-standard business intelligence or visualization platforms (Looker, Superset, Tableau, or PowerBI) to build dashboards, trend analyses, and key risk metric reporting;",
+      "skill_type": "tool_proficiency",
+      "domain": "business_intelligence",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Looker",
+        "Superset",
+        "Tableau",
+        "PowerBI"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "investigate_risk_scenarios",
+      "raw_text_from_jd": "Investigate complex risk scenarios and develop mitigation strategies aligned with industry regulatory standards.",
+      "skill_type": "capability",
+      "domain": "risk_mitigation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Futures risk management platform — risk controls, monitoring systems, dashboards, and regulatory compliance for futures trading",
+    "business_model": "B2C retail brokerage and fintech, futures trading product",
+    "primary_metrics_inferred": [
+      "Risk limit breach detection rate",
+      "Operational risk exposure quantification",
+      "Control testing effectiveness",
+      "Regulatory compliance adherence"
+    ],
+    "cross_functional_partners": [
+      "Cross-functional leaders (implied)",
+      "Risk stakeholders",
+      "Engineering (implied)",
+      "Regulatory/Compliance teams (implied)"
+    ],
+    "core_responsibilities": [
+      "Design and implement a comprehensive risk management strategy emphasizing early risk detection, automated alert systems, incident response, and continuous improvement.",
+      "Conduct thorough risk assessments focused on operational and technology risks, identifying vulnerabilities, and recommending mitigations.",
+      "Support Risk Exposure Reporting, regulatory reviews, and updates to the Risk Management Program to meet evolving business and regulatory needs.",
+      "Develop automations for robust supervision and risk management.",
+      "Develop real-time monitoring systems to quickly identify adverse market conditions or operational issues.",
+      "Implement a robust control testing framework to validate risk mitigation measures and the effectiveness of controls.",
+      "Implement automated alert mechanisms for risk limit breaches, unusual trading patterns, and system anomalies.",
+      "Leverage advanced analytics tools to uncover risk trends and provide actionable insights for decision-making.",
+      "Build dashboards and reports using tools like Looker to visualize key risk metrics and inform stakeholders effectively."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      138632,
+      175000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity ownership mentioned as part of compensation package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "futures risk",
+    "CFTC",
+    "NFA",
+    "FCM",
+    "ETL pipelines",
+    "Airflow",
+    "real-time monitoring",
+    "Python",
+    "Looker",
+    "risk management",
+    "control testing",
+    "regulatory compliance",
+    "fintech",
+    "program manager"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($138,632–$175,000 base)",
+    "Equity and bonus explicitly mentioned in addition to base",
+    "Very specific required skills (CFTC/NFA, FCM, Python, Looker) suggest a well-scoped role",
+    "Telecommuting permitted noted in responsibilities section (may indicate some flexibility despite 5-days onsite listed)",
+    "Comprehensive benefits including 100% paid health insurance for employees",
+    "Clear job code (9902186) indicating an official labor filing — requirements are likely precise"
+  ],
+  "red_flags": [
+    "Role requires at least five days per week in-person in Chicago, IL — eliminates remote candidates",
+    "JD body notes 'Telecommuting permitted' but also states 'in-person attendance expected at least five days per week' — direct contradiction worth clarifying",
+    "Highly specialized CFTC/NFA/FCM domain knowledge required — narrow candidate pool",
+    "Background checks required noted explicitly",
+    "No mention of visa sponsorship — unclear policy"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and years requirement)",
+      "seniority.manages_people (inferred false; no direct reports mentioned, though mentoring noted)",
+      "scope.team_size_estimate (not stated)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly in JD)",
+      "scope.business_model (inferred from product context)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "location.remote_us_eligible (inferred false from 5-days onsite requirement)"
+    ],
+    "ambiguities": [
+      "JD body states 'Telecommuting permitted' in responsibilities section but also states 'in-person attendance expected at least five days per week' earlier — these are contradictory. Treated as onsite given the stronger and more explicit language about five days per week.",
+      "Visa sponsorship policy is not mentioned anywhere in the JD; marked as unclear."
+    ]
+  }
+}

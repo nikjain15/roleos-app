@@ -4,7 +4,7 @@
   "url": "https://www.betterment.com/careers/current-openings/job?gh_jid=7922405&gh_jid=7922405",
   "ats_provider": "greenhouse",
   "ats_job_id": "7922405",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,30 +17,28 @@
     "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
-  "archetype": "Generalist PM",
+  "archetype": "Technical PM",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Technical PM (risk/identity/trust domain)",
+  "secondary_archetype": "Risk / Trust & Safety PM",
   "seniority": {
-    "level": "Mid to Senior IC",
+    "level": "Mid-Senior IC",
     "years_required_min": null,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "Owns the roadmap independently across multiple product areas",
-      "Navigates multiple concurrent projects from definition through launch",
-      "Compensation range $121K-$143K base in NYC, consistent with mid-to-senior PM",
-      "Leads cross-functional delivery with engineering, design, analytics, and operations"
+      "Owns product roadmap across identity verification, authentication, and account security",
+      "Leads cross-functional delivery from problem definition through launch",
+      "Comp range $121K-$143K base in NYC, consistent with mid-to-senior IC PM"
     ]
   },
   "must_haves": [
     {
-      "id": "fintech_regulated_pm_experience",
+      "id": "fintech_risk_pm_experience",
       "raw_text_from_jd": "Product management experience building products in fintech, financial services, or other regulated / risk-heavy domains (e.g., payments, security, marketplaces).",
       "skill_type": "domain_knowledge",
-      "domain": "fintech / regulated / risk-heavy product management",
+      "domain": "fintech_financial_services_risk",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -58,13 +56,12 @@
       "credentials_named": []
     },
     {
-      "id": "analytical_data_informed_decisions",
+      "id": "analytical_data_informed_skills",
       "raw_text_from_jd": "Strong analytical and data-informed decision-making skills, comfortable using metrics, experiments, and qualitative inputs (CX tickets, risk case data, user research) to set direction.",
       "skill_type": "capability",
-      "domain": "data-driven decision making",
+      "domain": "data_analysis_and_experimentation",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -79,10 +76,9 @@
       "id": "fraud_risk_cx_balance",
       "raw_text_from_jd": "Ability to balance fraud/risk reduction with customer experience and growth, and clearly communicate the tradeoffs you're making.",
       "skill_type": "capability",
-      "domain": "risk vs. customer experience tradeoffs",
+      "domain": "risk_and_customer_experience_tradeoffs",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -97,10 +93,9 @@
       "id": "cross_functional_leadership",
       "raw_text_from_jd": "Proven success leading cross-functional work with engineering, design, CX, Operations, Compliance, Legal, and Security to ship complex features.",
       "skill_type": "outcome",
-      "domain": "cross-functional product delivery",
+      "domain": "cross_functional_product_delivery",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -112,13 +107,12 @@
       "credentials_named": []
     },
     {
-      "id": "trust_identity_domain_knowledge",
+      "id": "trust_and_identity_domain_knowledge",
       "raw_text_from_jd": "Comfort with concepts like KYC/AML, identity verification, authentication, ACH and card risk, account takeover, and device intelligence (or a demonstrated ability to ramp quickly).",
       "skill_type": "domain_knowledge",
-      "domain": "identity verification / fraud / trust",
+      "domain": "identity_verification_fraud_risk",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -134,20 +128,19 @@
       ],
       "industries_named": [
         "fintech",
-        "payments"
+        "financial services"
       ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "written_verbal_communication",
+      "id": "communication_and_storytelling",
       "raw_text_from_jd": "Excellent written and verbal communication and storytelling skills; able to create clear specs and influence stakeholders at multiple levels.",
       "skill_type": "capability",
-      "domain": "communication and stakeholder influence",
+      "domain": "stakeholder_communication",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -162,10 +155,9 @@
       "id": "ownership_ambiguity",
       "raw_text_from_jd": "Strong sense of ownership and a track record of driving work forward in ambiguous environments while maintaining a high bar for quality and customer trust.",
       "skill_type": "cultural_fit",
-      "domain": "ownership / ambiguity tolerance",
+      "domain": "ownership_and_autonomy",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -181,13 +173,14 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "User Trust — identity verification, authentication, device risk, behavioral signals, account security for Betterment's retail investing and cash products; tooling for Customer Experience and Operations teams serving 1M+ customers",
-    "business_model": "B2C fintech (retail investing, savings, cash) and B2B2C (401k for SMBs)",
+    "surface": "User Trust — identity verification, authentication, device risk, behavioral signals, account security for Betterment's retail investing and cash products; KYC/KYB, 2FA, risk scoring, transaction monitoring, case management controls",
+    "business_model": "B2C and B2B fintech — retail investing, savings, retirement, 401(k) for SMBs",
     "primary_metrics_inferred": [
       "Financial risk reduction",
       "Login success rates",
-      "Signup and funding conversion rates",
-      "Customer experience quality alongside security controls"
+      "Conversion rates",
+      "Platform integrity / fraud metrics",
+      "Customer experience quality (friction vs. security balance)"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -195,19 +188,20 @@
       "Security",
       "Compliance",
       "Legal",
-      "Customer Experience",
-      "Analytics",
+      "Customer Experience (CX)",
       "Design",
+      "Analytics",
+      "Security Engineering",
       "Other product teams"
     ],
     "core_responsibilities": [
-      "Own the product roadmap across identity verification, authentication, device risk, behavioral signals, and account security",
+      "Own the product roadmap across identity verification, authentication, device risk, behavioral signals, and account security for Betterment's retail investing and cash products",
       "Identify and prioritize opportunities to increase security and integrity while minimizing friction in signup, funding, withdrawals, login, and sensitive profile changes",
       "Partner with Operations, Security Engineering, Customer Experience, and Compliance to design, implement, and iterate on KYC/KYB, 2FA, risk scoring, transaction monitoring, and case management controls",
-      "Work closely with engineering to define solutions and tradeoffs",
-      "Lead cross-functional delivery from problem definition through discovery, specs, launch, and iteration",
-      "Run experiments and tests to calibrate trust controls",
-      "Define and track success metrics that balance platform integrity with customer experience",
+      "Work closely with engineering to define solutions and tradeoffs, while actively questioning assumptions and default approaches before converging on an implementation",
+      "Lead cross-functional delivery with design, engineering, analytics, and operations from problem definition through discovery, specs, launch, and iteration",
+      "Run experiments and tests to calibrate trust controls, including where to require additional verification, how to tune thresholds, and how to communicate risk decisions",
+      "Define and track success metrics that balance platform integrity with customer experience, including financial risk, login success rates, and conversion",
       "Build deep insight into customers and internal operators through research, risk and incident reviews, CX shadowing, and market and competitive analysis"
     ]
   },
@@ -217,54 +211,54 @@
       143000
     ],
     "total_comp_estimate_usd": null,
-    "equity_mentioned": false,
-    "equity_form": null,
+    "equity_mentioned": true,
+    "equity_form": "Equity for all employees, including new hire and refresher grants",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
     "User Trust",
     "identity verification",
-    "KYC/AML",
+    "KYC/KYB",
     "authentication",
-    "fraud risk",
-    "account takeover",
-    "device intelligence",
     "risk scoring",
     "transaction monitoring",
+    "account takeover",
+    "device intelligence",
+    "fraud prevention",
     "fintech",
-    "product roadmap",
+    "regulated domains",
     "cross-functional",
-    "customer experience"
+    "AML",
+    "2FA",
+    "ACH risk"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range explicitly stated ($121K-$143K base for NYC)",
-    "Clear product surface and ownership scope (not vague)",
-    "Variable bonus compensation also mentioned",
-    "Specific technologies and domain concepts named (KYC/AML, 2FA, device intelligence) indicating a mature team",
-    "Explicit acknowledgement that candidates who can ramp quickly are also acceptable on domain knowledge",
-    "Thoughtful interview process described with timeline transparency"
+    "Compensation range explicitly disclosed ($121K-$143K base in NYC)",
+    "Equity offered to all employees including refresher grants",
+    "Clear product surface and ownership area (identity, authentication, risk controls)",
+    "Explicitly acknowledges candidates who can ramp quickly on domain concepts, reducing hard barrier",
+    "Flexible PTO and paid sabbatical at year six signal strong employee investment",
+    "Day-one 401(k) match and student loan payment matching are competitive benefits"
   ],
   "red_flags": [
-    "Hybrid policy requires four days/week in-office in NYC — very high office commitment, effectively eliminates remote candidates",
-    "No years-of-experience minimum stated, making seniority expectations somewhat ambiguous",
-    "Visa sponsorship status not explicitly addressed despite E-Verify participation noted",
-    "No equity compensation mentioned, which is unusual for a fintech of this profile",
-    "'About Betterment' section is duplicated verbatim in the JD — minor quality signal"
+    "Four days/week in-office requirement is unusually high and eliminates most remote candidates",
+    "Role is NYC-based only — limited geographic flexibility",
+    "No minimum years of experience stated, making seniority level ambiguous",
+    "Visa sponsorship not mentioned; unclear whether international candidates are eligible"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range and scope of ownership; not stated directly)",
-      "scope.business_model (inferred from product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated as KPIs)",
-      "location.visa_sponsorship (E-Verify participation noted but sponsorship availability not stated; marked unclear)",
-      "compensation.equity_mentioned (no equity mentioned; inferred absence)"
+      "seniority.level (inferred from comp range and scope of ownership)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as metrics in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.work_auth (defaulted to 'open' as not stated)"
     ],
     "ambiguities": [
-      "Visa sponsorship: JD mentions E-Verify participation but does not explicitly state whether sponsorship is offered or not. Marked 'unclear'.",
-      "No minimum years of experience stated anywhere in the JD; seniority inferred from scope and compensation only.",
-      "The nice_to_haves list is empty because the JD 'What We're Looking For' section uses unconditional language throughout with no 'preferred' or 'bonus' qualifiers."
+      "No minimum years of PM experience are stated; seniority is inferred from compensation and scope of responsibilities",
+      "Visa sponsorship is not addressed anywhere in the JD; 'unclear' chosen rather than defaulting to 'no'",
+      "Nice-to-haves section is absent from the JD — all requirements are in a single 'What We're Looking For' section with no explicit tiering; all treated as hard based on unconditional language"
     ]
   }
 }

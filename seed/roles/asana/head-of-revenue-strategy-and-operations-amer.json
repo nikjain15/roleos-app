@@ -1,0 +1,286 @@
+{
+  "company": "Asana",
+  "role_title": "Head of Revenue Strategy and Operations - AMER",
+  "url": "https://www.asana.com/jobs/apply/7950870?gh_jid=7950870",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7950870",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY",
+      "Chicago, IL"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": "Monday, Tuesday, and Thursday in-office (standard); Wednesday and Friday variable",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Revenue Operations Leader",
+  "seniority": {
+    "level": "Senior Director / VP (people manager, global scope)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "10+ years of experience in strategy, operations, or similar roles",
+      "Experience building and leading multi-layered teams across strategy and operational functions",
+      "Regular exposure to senior leadership and C-suite; trusted advisor to GMs",
+      "Comp range up to $316,000 base (Zone A), consistent with VP/Senior Director level",
+      "Described as 'one of the most senior roles on the Revenue Strategy & Operations team'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_strategy_ops",
+      "raw_text_from_jd": "10+ years of experience in strategy, operations, or similar roles, ideally within a software or high-growth enterprise environment.",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "software",
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth enterprise"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "team_leadership",
+      "raw_text_from_jd": "Experience building and leading multi-layered teams across strategy and operational functions.",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_and_operational_track_record",
+      "raw_text_from_jd": "Proven track record owning both strategic planning and day-to-day operational execution.",
+      "skill_type": "outcome",
+      "domain": "strategy_and_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "whitespace_builder",
+      "raw_text_from_jd": "Energized by building in white space; the Velocity remit is an emerging priority that will need structure, strategy, and operational foundation built around an evolving GTM motion.",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_and_build",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_stakeholder_management",
+      "raw_text_from_jd": "Demonstrated ability to work cross-functionally and act as a trusted advisor to executive stakeholders, including GMs and C-suite leaders.",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_and_communication_fluency",
+      "raw_text_from_jd": "Exceptional analytical fluency and communication skills, with the range to move between high-level strategy and ground-level execution.",
+      "skill_type": "capability",
+      "domain": "analytics_and_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_curiosity",
+      "raw_text_from_jd": "Demonstrates curiosity about AI tools and emerging technologies, with a willingness to learn and leverage them to enhance productivity, collaboration, or decision-making.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_emerging_technology",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "software_or_high_growth_env",
+      "raw_text_from_jd": "10+ years of experience in strategy, operations, or similar roles, ideally within a software or high-growth enterprise environment.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_or_high_growth",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth enterprise"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_gtm_tooling_familiarity",
+      "raw_text_from_jd": "Familiarity with AI-powered GTM tooling and a point of view on where automation creates leverage in a revenue org.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_gtm_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI-powered GTM tooling",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "AMER Revenue Strategy & Operations + Global Velocity GTM motion (SDR, BDR, SMB)",
+    "business_model": "B2B SaaS, enterprise and SMB segments",
+    "primary_metrics_inferred": [
+      "Forecast accuracy",
+      "Pipeline health and velocity",
+      "AE productivity",
+      "Headcount and productivity targets",
+      "Revenue growth across AMER and Velocity"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Finance",
+      "Revenue Transformation",
+      "CX",
+      "Marketing",
+      "Product",
+      "Global Head of Revenue Strategy and Operations"
+    ],
+    "core_responsibilities": [
+      "Define Asana's go-to-market strategy for the AMER region over a 1–3 year horizon, acting as a strategic partner to the GM of AMER across both Enterprise and Corporate segments.",
+      "Own AMER operational execution: forecasting cadence, pipeline health, QBRs, and performance readouts with clearly explained variance and recommended actions.",
+      "Lead strategy and operations for Asana's global Velocity business, building the operating model, planning inputs, and execution infrastructure for this motion as it scales.",
+      "Embed AI-native tooling and workflows into AMER and Velocity operating rhythms, driving measurable improvements in AE productivity, pipeline velocity, and forecast accuracy.",
+      "Translate annual strategy into detailed plans during planning season, including territory and coverage design, book-of-business allocation, headcount recommendations, and productivity targets.",
+      "Identify, own, and execute strategic initiatives to drive growth and efficiency across AMER and Velocity.",
+      "Drive data-driven decision-making and surface proactive insights; own the operating cadence that keeps the business informed and moving.",
+      "Build, develop, and retain a high-performing team.",
+      "Partner closely with the Global Head of Revenue Strategy and Operations on org-wide priorities."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      215000,
+      316000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Revenue Strategy and Operations",
+    "AMER",
+    "Velocity GTM",
+    "SDR",
+    "BDR",
+    "SMB",
+    "forecasting",
+    "pipeline",
+    "AI-native tooling",
+    "go-to-market strategy",
+    "enterprise",
+    "territory design",
+    "QBR",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed across three geographic pay zones ($215K–$316K base)",
+    "Equity mentioned as part of total compensation",
+    "Clear scope of role — both AMER regional ownership and global Velocity remit are explicitly described",
+    "High-visibility role with regular exposure to senior leadership and C-suite",
+    "Explicitly encourages applications from candidates who don't meet every listed requirement",
+    "Remote eligibility within the US depending on state",
+    "Asana named to Fortune's Best Workplaces for 7+ years"
+  ],
+  "red_flags": [
+    "Dual remit (AMER region + global Velocity) may be very broad scope for a single leader",
+    "Velocity business described as 'emerging priority' — significant ambiguity and build-from-scratch expected",
+    "Work auth and visa sponsorship not stated anywhere in the JD",
+    "Remote eligibility is state-dependent and not fully clarified in the JD",
+    "JD tagged #LI-Hybrid but body allows full remote for some US states — mild inconsistency"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, scope, and 'one of the most senior roles' language)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed in JD)",
+      "scope.business_model (inferred from product context and GTM motion description)",
+      "compensation.base_range_usd min/max (derived by combining all three geographic zones; Zone A $269K–$316K, Zone B $242K–$284K, Zone C $215K–$253K — range reflects overall floor and ceiling)"
+    ],
+    "ambiguities": [
+      "JD is tagged #LI-Hybrid but explicitly states 'This role can either be fully remote depending on which US state you live in' — treated as hybrid with remote-US eligibility depending on state.",
+      "Work authorization and visa sponsorship are not mentioned anywhere; classified as 'unclear'.",
+      "The 'ideally within a software or high-growth enterprise environment' qualifier on the 10+ years requirement makes it ambiguous whether this is a hard or soft requirement. Treated as soft (nice-to-have) while the 10+ years itself is hard.",
+      "Equity form is mentioned but not specified (options, RSUs, etc.)."
+    ]
+  }
+}

@@ -1,0 +1,306 @@
+{
+  "company": "Anthropic",
+  "role_title": "Customer Program Manager, Executive Briefing Center",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5251699008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5251699008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% of the time",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Customer-facing Executive Briefing Program Lead",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Compensation range $255K-$320K base, consistent with senior IC at Anthropic",
+      "Owns and scales a strategic program end-to-end",
+      "Credibility required with Fortune 500 VP- and C-level customers",
+      "Interfaces with GTM leadership, Office of the CCO, and executive bench"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "ebc_program_ownership",
+      "raw_text_from_jd": "Built or significantly scaled an executive briefing program — you have defined qualification criteria, stood up an intake process, and managed a speaker bench.",
+      "skill_type": "outcome",
+      "domain": "executive_briefing_programs",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_tech_narrative_fluency",
+      "raw_text_from_jd": "Fluency with enterprise technology narratives — you're as comfortable shaping the story for a specific customer as you are orchestrating the program around it.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_technology_storytelling",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_volume_operator",
+      "raw_text_from_jd": "A track record as a strong operator at high volume: many briefings in flight at once, rigorous tracking, nothing dropped.",
+      "skill_type": "outcome",
+      "domain": "program_operations",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sales_leadership_credibility",
+      "raw_text_from_jd": "Demonstrated credibility with enterprise Sales leadership and account teams as an advisor on briefing strategy and account engagement.",
+      "skill_type": "capability",
+      "domain": "enterprise_sales_partnership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_presence",
+      "raw_text_from_jd": "Executive presence with Fortune 500 VP- and C-level customers; comfortable running discovery, hosting the room, and facilitating executive conversations.",
+      "skill_type": "capability",
+      "domain": "executive_engagement",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Fortune 500"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_operating",
+      "raw_text_from_jd": "Strong cross-functional operating skills — able to orchestrate PMM, Solutions, Events, and a rotating bench of executives who don't report to you.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pipeline_reporting",
+      "raw_text_from_jd": "Comfort owning a number and reporting on program-influenced pipeline or expansion to senior leadership.",
+      "skill_type": "capability",
+      "domain": "pipeline_metrics_and_reporting",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Clear written and verbal communication; you can brief an executive sponsor in three bullets and write the discovery doc behind it.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_interest",
+      "raw_text_from_jd": "Genuine interest in AI and in helping the world's largest enterprises adopt it responsibly.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_enterprise_adoption",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [
+        "enterprise technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "unit": null,
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Executive Briefing Center program for Anthropic's most strategic enterprise customers",
+    "business_model": "enterprise B2B, strategic customer engagement and pipeline acceleration",
+    "primary_metrics_inferred": [
+      "Briefing volume",
+      "Strategic-account coverage",
+      "Program-influenced pipeline and expansion",
+      "Briefing SLA adherence"
+    ],
+    "cross_functional_partners": [
+      "GTM / Sales leadership",
+      "Office of the CCO",
+      "Product Marketing (PMM)",
+      "Solutions",
+      "Events / Workplace",
+      "Anthropic executive bench"
+    ],
+    "core_responsibilities": [
+      "Define and own the Executive Briefing program: briefing formats, qualification criteria, the request-and-intake process from Sales, capacity planning, calendar, and operating SLAs.",
+      "Govern which strategic accounts and executives receive a briefing each quarter in partnership with GTM leadership.",
+      "Lead discovery with account teams ahead of each briefing to understand the customer's objectives, business context, and where they are in their evaluation.",
+      "Own agenda design and co-own agenda development with Product Marketing for every briefing.",
+      "Build and manage the speaker bench: maintain the roster, match speakers to briefings, run prep, and manage capacity.",
+      "Own day-of orchestration and the customer experience standard for briefings.",
+      "Drive post-briefing follow-through: capture commitments and feedback, route them to owners, and track to close.",
+      "Build the playbooks, tooling, and best practices that let the program scale consistently as volume grows.",
+      "Own measurement and reporting, including briefing volume, strategic-account coverage, and program-influenced pipeline and expansion."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      255000,
+      320000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Executive Briefing Center",
+    "EBC",
+    "executive briefing program",
+    "enterprise accounts",
+    "strategic customers",
+    "speaker bench",
+    "agenda design",
+    "program-influenced pipeline",
+    "cross-functional",
+    "GTM",
+    "Fortune 500",
+    "C-level",
+    "discovery",
+    "AI adoption"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($255K-$320K)",
+    "Visa sponsorship explicitly offered (with caveats and immigration lawyer retained)",
+    "Role has clear ownership and defined scope (program end-to-end)",
+    "Encourages applications from candidates who don't meet every qualification",
+    "Explicit note on DEI and underrepresented groups"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "No explicit years-of-experience floor stated, making it harder to self-assess fit",
+    "High coordination burden: orchestrating executives who don't report to you and a rotating speaker bench at volume is operationally demanding"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and program ownership scope)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly as KPIs)",
+      "scope.business_model (inferred from enterprise sales and GTM context)",
+      "location.cities_listed (inferred from 'headquartered in San Francisco' + hybrid policy; no other cities named for this role)",
+      "equity_mentioned (inferred from 'optional equity donation matching' in benefits section, which implies equity is part of comp)"
+    ],
+    "ambiguities": [
+      "The JD title says 'Customer Program Manager, Executive Briefing Center' but the body refers to the role as 'Executive Briefing Program Lead' — treated as the same role.",
+      "Minimum years of experience is stated as 'Years of experience required will correlate with the internal job level requirements for the position' — no numeric floor given; left as null.",
+      "The compensation section header references 'OTE' for sales roles but this role is a program management role, not sales; the $255K-$320K range is most likely base salary, not OTE. Treated as base_range_usd."
+    ]
+  }
+}

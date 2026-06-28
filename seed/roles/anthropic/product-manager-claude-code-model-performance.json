@@ -1,0 +1,267 @@
+{
+  "company": "Anthropic",
+  "role_title": "Product Manager, Claude Code Model Performance",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5247640008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5247640008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA",
+      "Seattle, WA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% in office",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Senior IC (likely Senior PM / Staff PM)",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2+ years in product management (minimum stated)",
+      "Comp range $305K-$460K base — top of range consistent with Staff-level at Anthropic",
+      "Expected to own model launch end-to-end and drive research team direction",
+      "Role requires influencing frontier research team and defining eval roadmap"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "personally_built_agentic_evals",
+      "raw_text_from_jd": "Have personally built agentic evals (e.g. SWE-bench-style task suites)",
+      "skill_type": "capability",
+      "domain": "ai_evaluation",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "agentic evals",
+        "SWE-bench"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "daily_claude_code_user",
+      "raw_text_from_jd": "Are a daily Claude Code user and can articulate what behaviors you'd want to change or add to the model",
+      "skill_type": "hands_on_use",
+      "domain": "ai_coding_tools",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Claude Code"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "engineering_background_pm_experience",
+      "raw_text_from_jd": "Have an engineering background and 2+ years in product management, or equivalent experience driving product direction as an engineer",
+      "skill_type": "years_of_experience",
+      "domain": "product_management+engineering",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_concepts_model_behavior",
+      "raw_text_from_jd": "Have a deep grasp of AI concepts and are comfortable going deep on model behavior, prompt engineering, and evaluation methodology",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_model_behavior",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "prompt engineering",
+        "evaluation methodology"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinker",
+      "raw_text_from_jd": "Are a systems thinker: when you find a problem, you build the infrastructure that prevents its whole class",
+      "skill_type": "capability",
+      "domain": "systems_thinking",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "launched_in_research_adjacent_env",
+      "raw_text_from_jd": "Have launched products or capabilities in ambiguous, research-adjacent environments",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "unit": null,
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "hacker_spirit",
+      "raw_text_from_jd": "Have a creative, hacker spirit and love solving puzzles",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Claude Code model performance — model launches, agentic evals, coding capability improvements",
+    "business_model": "developer-facing AI coding agent, mixed B2C and B2B",
+    "primary_metrics_inferred": [
+      "Real-world coding performance (eval scores)",
+      "Model launch readiness and quality",
+      "Developer-facing capability improvements",
+      "Competitive benchmark standing"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Product Engineering",
+      "Internal users",
+      "External developers"
+    ],
+    "core_responsibilities": [
+      "Own model launch planning and execution for Claude Code: define readiness criteria, coordinate across research and product engineering, and ensure launches land cleanly with developers",
+      "Design and implement agentic evals that measure real-world coding performance",
+      "Drive the engineering team's eval roadmap",
+      "Partner with researchers working on coding capabilities to define target behaviors and influence model development with evidence from real usage",
+      "Talk with users and analyze transcripts to understand capability gaps and turn research progress into shipped improvements",
+      "Synthesize signal from internal users, external developers, and competitive benchmarks into clear priorities"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      305000,
+      460000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned (suggests options/RSUs are part of package)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Claude Code",
+    "agentic evals",
+    "model performance",
+    "SWE-bench",
+    "model launches",
+    "coding agent",
+    "prompt engineering",
+    "evaluation methodology",
+    "frontier research",
+    "developer-facing",
+    "systems thinker",
+    "model behavior"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($305K-$460K base)",
+    "Visa sponsorship explicitly offered (with caveats)",
+    "Clear ownership: model launch end-to-end and eval roadmap",
+    "Encourages applications even from candidates who don't meet every qualification",
+    "Strong product surface clarity — Claude Code model performance is a well-defined scope",
+    "Direct partnership with frontier researchers signals high-impact role"
+  ],
+  "red_flags": [
+    "Hard requirement to have 'personally built agentic evals' is a narrow bar that eliminates most PMs",
+    "San Francisco and Seattle only — no remote option, eliminates distributed candidates",
+    "Wide comp range ($305K-$460K) makes it difficult to assess target level without additional context",
+    "Years of experience minimum is stated as 2+ years PM but comp ceiling suggests far more senior candidate is expected — ambiguity in seniority targeting"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and scope of responsibilities; not explicitly stated)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly in JD)",
+      "scope.business_model (inferred from product description)",
+      "posting_first_seen (not available)",
+      "posting_last_updated (not available)"
+    ],
+    "ambiguities": [
+      "The JD lists 'You might be a good fit if you' framing for all requirements, making it formally ambiguous whether they are hard or soft. Given the specificity and conditional phrasing, items have been classified as hard must-haves except for 'hacker spirit' which is clearly cultural. This follows rule 3 guidance.",
+      "Minimum years of experience is stated as '2+ years in product management' but the compensation ceiling of $460K is consistent with a Staff-level or principal candidate — the role may target a wide band. Flagged as ambiguity.",
+      "The education field of study requirement ('A field relevant to the role as demonstrated through coursework, training, or professional experience') is vague and not mapped to a specific discipline."
+    ]
+  }
+}

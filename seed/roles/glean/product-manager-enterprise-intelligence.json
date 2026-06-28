@@ -1,0 +1,323 @@
+{
+  "company": "Glean",
+  "role_title": "Product Manager, Enterprise Intelligence",
+  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4702369005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4702369005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Mountain View, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "4 days a week in Mountain View office",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (analytics/intelligence platform focus)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in product management stated directly",
+      "Comp range $170K-$250K base consistent with Senior IC at a high-growth AI startup",
+      "Expected to shape product roadmap and product team itself — outsized scope for lean team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "You have 5+ years of experience in product management, with a track record of owning and shipping meaningful product areas in B2B SaaS, enterprise software, AI products, analytics products, or workflow/intelligence platforms.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS",
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_sense_strategy_to_execution",
+      "raw_text_from_jd": "You have a strong product sense for translating complex, ambiguous problems into clear product experiences, and you are comfortable moving between strategy and detailed execution.",
+      "skill_type": "capability",
+      "domain": "product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_and_enterprise_software_passion",
+      "raw_text_from_jd": "You have a deep interest in AI and enterprise software, and you are excited by the opportunity to shape products that combine context, workflows, analytics, and proactive intelligence.",
+      "skill_type": "domain_knowledge",
+      "domain": "AI and enterprise software",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "analytics",
+        "proactive intelligence"
+      ],
+      "industries_named": [
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "You have strong technical fluency and are comfortable partnering with engineering and data teams on systems involving structured and unstructured data, knowledge graphs, retrieval, or intelligence layers.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "structured and unstructured data",
+        "knowledge graphs",
+        "retrieval",
+        "intelligence layers"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "granular_product_thinking",
+      "raw_text_from_jd": "You can demonstrate granular product thinking, including how a user should experience a workflow, what the right interaction model is, and how to sequence product capabilities into something customers will actually adopt.",
+      "skill_type": "capability",
+      "domain": "product_design_and_ux",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_operating",
+      "raw_text_from_jd": "You are comfortable operating in highly ambiguous spaces and can create clarity, momentum, and alignment even when the product area is still emerging.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "You are an excellent written and verbal communicator.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_and_delivery",
+      "raw_text_from_jd": "You have a proven track record of taking ownership, taking initiative, and delivering results.",
+      "skill_type": "outcome",
+      "domain": "product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "You collaborate effectively with cross-functional partners.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_first_mindset",
+      "raw_text_from_jd": "You are an early adopter in building with or adopting AI for your own product craft and you are excited about helping customers accelerate their own AI adoption journey.",
+      "skill_type": "cultural_fit",
+      "domain": "AI adoption",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "learning_growth_mindset",
+      "raw_text_from_jd": "You have a learning and growth mindset.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_first",
+      "raw_text_from_jd": "You are mission-first and understand that your success is measured by your product and team's success.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "lean product team (exact size not stated)",
+    "surface": "Enterprise Intelligence product area — proactive insights, organizational visibility, dashboards, recommendations, and decision-support tools for leaders and teams",
+    "business_model": "B2B SaaS / enterprise platform",
+    "primary_metrics_inferred": [
+      "Enterprise intelligence product adoption",
+      "Customer value delivered via actionable insights",
+      "Hours of productivity gained",
+      "Measurable business impact for enterprise customers"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data",
+      "Go-to-market",
+      "Solutions",
+      "Support",
+      "Forward-deployed teams",
+      "Product lead"
+    ],
+    "core_responsibilities": [
+      "Define and drive product strategy and roadmap for Enterprise Intelligence",
+      "Spend significant time with customers, prospects, and internal stakeholders to understand high-value enterprise intelligence use cases",
+      "Build products that turn Glean's enterprise context layer, graph, and connected system intelligence into actionable workflows, dashboards, recommendations, and proactive experiences",
+      "Partner with engineering, design, and data teams to turn ambiguous concepts into well-scoped products",
+      "Drive customer-focused prioritization and efficient execution",
+      "Collaborate with go-to-market, solutions, support, and forward-deployed teams",
+      "Help establish product foundations for a new category of Enterprise Intelligence",
+      "Bring a high bar for product craft including concrete workflows, UI behavior, and adoption paths"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      170000,
+      250000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as eligible for certain roles",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Enterprise Intelligence",
+    "AI",
+    "enterprise context layer",
+    "knowledge graph",
+    "proactive insights",
+    "B2B SaaS",
+    "analytics",
+    "agentic AI",
+    "workflows",
+    "enterprise search",
+    "product roadmap",
+    "cross-functional"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range disclosed ($170K-$250K base)",
+    "Clear product surface and ownership area for an emerging but well-framed category",
+    "Described as 'outsized role' in shaping both roadmap and product team — high impact opportunity",
+    "Well-known, award-winning company (Fast Company Top 10, Forbes AI 50, CNBC Disruptor 50)",
+    "Lean team structure signals high autonomy and visibility"
+  ],
+  "red_flags": [
+    "4 days/week in Mountain View office is a very high in-office requirement that eliminates most remote candidates",
+    "Very wide comp range ($170K-$250K, $80K spread) makes it difficult to gauge level alignment without further information",
+    "Emerging product area with high ambiguity may result in shifting priorities and unclear success metrics early on",
+    "Visa sponsorship not addressed in JD",
+    "Buzzword density is high — 'superintelligent enterprise', 'enterprise context layer', 'proactive intelligence' may obscure concrete product scope"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirement + comp range)",
+      "scope.team_size_estimate (not stated; described as 'very lean product team')",
+      "scope.primary_metrics_inferred (inferred from responsibilities and company materials; not explicitly listed in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.visa_sponsorship (not addressed in JD; marked unclear)",
+      "location.work_auth (not stated; marked open as default)"
+    ],
+    "ambiguities": [
+      "Variable compensation and equity eligibility described as 'certain roles may be eligible' — not confirmed for this role specifically",
+      "'learning and growth mindset' and 'mission-first' are listed in the 'About you' section alongside hard requirements without differentiation; classified as soft/nice-to-haves given their cultural-fit nature rather than skills",
+      "The JD does not state whether visa sponsorship is available; marked as unclear"
+    ]
+  }
+}

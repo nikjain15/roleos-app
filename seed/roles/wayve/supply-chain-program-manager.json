@@ -4,7 +4,7 @@
   "url": "https://wayve.firststage.co/jobs?gh_jid=8545642002",
   "ats_provider": "greenhouse",
   "ats_job_id": "8545642002",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -13,33 +13,33 @@
       "Sunnyvale, CA"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "hybrid — time in office combined with work from home, no specific split stated",
-    "work_auth": "unclear",
+    "office_time_required": "hybrid — time split between office/workshops and home, no fixed percentage stated",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
   "secondary_archetype": "Supply Chain / Hardware Operations Program Manager",
   "seniority": {
-    "level": "Senior IC / Staff (10+ years experience)",
+    "level": "Senior IC / Staff-level Program Manager",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "10+ years of progressive experience in supply chain program management, NPI, and hardware operations",
-      "Cross-functional ownership across Engineering, Operations, and Supply Chain",
-      "Acts as primary Supply Chain lead for assigned programs"
+      "10+ years of progressive experience in supply chain program management",
+      "Compensation range $184,200–$240,000 base consistent with senior IC",
+      "End-to-end program ownership including cross-functional and external partner management"
     ]
   },
   "must_haves": [
     {
-      "id": "years_supply_chain_program_management",
+      "id": "years_supply_chain_program_mgmt",
       "raw_text_from_jd": "10+ years of progressive experience in supply chain program management, NPI, and hardware operations",
       "skill_type": "years_of_experience",
       "domain": "supply_chain_program_management",
       "minimum_value": 10,
       "unit": "years",
-      "is_combined": false,
+      "is_combined": true,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -54,7 +54,7 @@
       "id": "bom_material_planning_procurement",
       "raw_text_from_jd": "Strong understanding of BOM management, material planning, and procurement processes.",
       "skill_type": "domain_knowledge",
-      "domain": "bom_and_material_planning",
+      "domain": "supply_chain_operations",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -81,11 +81,29 @@
       "credentials_named": []
     },
     {
-      "id": "analytical_problem_solving_risk_management",
+      "id": "supplier_compliance_frameworks",
+      "raw_text_from_jd": "Familiarity with supplier compliance frameworks including TISAX, ISO standards, and ethical sourcing requirements.",
+      "skill_type": "domain_knowledge",
+      "domain": "supplier_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "TISAX",
+        "ISO standards"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving_risk_mgmt",
       "raw_text_from_jd": "Strong analytical, problem-solving, and risk management skills.",
       "skill_type": "capability",
-      "domain": "analytical_and_risk_management",
-      "evidence_required": "work_history",
+      "domain": "risk_management",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -116,7 +134,7 @@
       "skill_type": "capability",
       "domain": "travel_availability",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -127,29 +145,11 @@
       ],
       "employer_types_named": [],
       "credentials_named": []
-    },
-    {
-      "id": "supplier_compliance_frameworks",
-      "raw_text_from_jd": "Familiarity with supplier compliance frameworks including TISAX, ISO standards, and ethical sourcing requirements.",
-      "skill_type": "domain_knowledge",
-      "domain": "supplier_compliance",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [
-        "TISAX",
-        "ISO"
-      ],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
     }
   ],
   "nice_to_haves": [
     {
-      "id": "automotive_consumer_hardware_robotics",
+      "id": "automotive_hardware_robotics_industry",
       "raw_text_from_jd": "Automotive, consumer, hardware, or robotic industry experience preferred",
       "skill_type": "domain_knowledge",
       "domain": "industry_experience",
@@ -171,26 +171,24 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "End-to-end supply chain execution across assigned programs and product builds including prototype development, NPI, and fleet launches",
-    "business_model": "B2B — AI software and foundation models for automakers enabling automated driving",
+    "surface": "End-to-end supply chain execution across assigned programs and product builds — prototype development, NPI, and fleet launches",
+    "business_model": "B2B — AI/autonomous driving software and hardware sold to automakers",
     "primary_metrics_inferred": [
       "Material availability",
       "Total cost savings",
       "Inventory cycle count accuracy",
       "Program milestone adherence",
-      "Supplier compliance rate"
+      "Supplier compliance rates"
     ],
     "cross_functional_partners": [
       "Engineering",
-      "Operations",
-      "Manufacturing",
       "Planning",
       "Sourcing",
       "Logistics",
       "Finance",
       "Legal",
       "Suppliers",
-      "Global upfitters",
+      "Upfitters",
       "Third-party integration partners"
     ],
     "core_responsibilities": [
@@ -204,56 +202,59 @@
     ]
   },
   "compensation": {
-    "base_range_usd": null,
+    "base_range_usd": [
+      184200,
+      240000
+    ],
     "total_comp_estimate_usd": null,
-    "equity_mentioned": false,
-    "equity_form": null,
+    "equity_mentioned": true,
+    "equity_form": "competitive equity package",
     "location_pay_differential": false,
-    "source": "unknown"
+    "source": "stated"
   },
   "top_keywords": [
     "supply chain program management",
     "NPI",
     "BOM management",
     "material planning",
-    "procurement",
-    "upfitter",
     "TISAX",
     "ISO",
-    "supplier compliance",
+    "upfitter",
     "hardware operations",
-    "KPI",
+    "autonomous driving",
     "cross-functional",
-    "autonomous vehicles",
-    "embodied AI"
+    "supplier compliance",
+    "KPI management",
+    "prototype development",
+    "fleet launch"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear and detailed responsibility breakdown across multiple functional areas",
-    "Role described as 'critical cross-functional' — indicates real organizational importance",
-    "Explicit inclusion/diversity commitment with accommodations offered",
-    "Encourages applications from candidates who don't meet all requirements",
-    "Hybrid policy with flexible core working hours"
+    "Compensation range explicitly stated ($184,200–$240,000 base) plus equity",
+    "Clear role scope — end-to-end supply chain ownership for hardware programs",
+    "Well-defined cross-functional partners and responsibilities listed",
+    "Hybrid working policy with core hours giving schedule flexibility",
+    "Company encourages applications from candidates who don't meet every requirement",
+    "Explicit diversity and inclusion commitments stated"
   ],
   "red_flags": [
-    "No compensation range disclosed",
-    "Visa sponsorship status not mentioned",
-    "10+ years minimum is a high bar that may be inflexible",
-    "International travel required but frequency/extent not specified",
-    "Office location is Sunnyvale only — limited flexibility for non-Bay Area candidates"
+    "Visa sponsorship status not stated — unclear for international candidates",
+    "International travel required with no frequency specified — ambiguous commitment level",
+    "10+ years minimum is a high bar that may filter strong candidates with 7–9 years of directly relevant experience",
+    "Role spans US, UK, and other regions but is based only in Sunnyvale, CA — significant timezone burden implied"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 10+ years requirement and scope of responsibilities)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (partially stated in JD as KPIs; framing as inferred since not all are explicitly listed as primary metrics)",
-      "location.work_auth (not stated)",
-      "location.visa_sponsorship (not stated)",
-      "compensation.equity_mentioned (not stated; defaulted to false)"
+      "seniority.level (inferred from compensation range and years requirement)",
+      "scope.business_model (inferred from company description — AI software/hardware for automakers)",
+      "scope.primary_metrics_inferred (partially inferred; some metrics stated in JD under KPI section)",
+      "location.visa_sponsorship (not mentioned; set to 'unclear')",
+      "posting_first_seen and posting_last_updated (not provided)"
     ],
     "ambiguities": [
-      "The JD lists 'Familiarity with supplier compliance frameworks including TISAX, ISO standards' under Skills & Qualifications without explicitly labeling it as required or preferred — classified as hard given its unconditional placement in the required skills list, but could be argued as soft given 'familiarity' language.",
-      "The JD does not specify how much international travel is required ('as needed'), making it difficult to assess burden on candidates."
+      "Supplier compliance frameworks (TISAX, ISO) listed under 'Skills & Qualifications' without explicit 'required' vs 'preferred' language — treated as hard requirement given unconditional bullet phrasing, but could be interpreted as preferred domain knowledge",
+      "International travel frequency not specified — 'as needed' leaves scope undefined",
+      "JD does not specify whether visa sponsorship is available for this role"
     ]
   }
 }

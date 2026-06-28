@@ -1,0 +1,370 @@
+{
+  "company": "Anthropic",
+  "role_title": "Program Manager, Communications",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5252781008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5252781008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% of the time",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Communications Operations",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of experience in program management, communications operations, or closely-related discipline",
+      "Described as 'a senior role'",
+      "Comp range $265K-$295K base, consistent with Senior IC at Anthropic",
+      "Expected to influence senior stakeholders and partner closely with comms leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_mgmt_comms",
+      "raw_text_from_jd": "Have 10+ years of experience in program management, communications operations, or a closely-related discipline, including significant time working in or alongside communications teams",
+      "skill_type": "years_of_experience",
+      "domain": "program_management+communications_operations",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "comms_function_fluency",
+      "raw_text_from_jd": "Deeply understand how communications functions work — how campaigns are built, how media moments unfold, and how crisis response operates in practice",
+      "skill_type": "domain_knowledge",
+      "domain": "communications_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_visibility_programs_under_pressure",
+      "raw_text_from_jd": "Have led complex, high-visibility programs under pressure, with a track record of bringing calm, structure, and momentum to chaotic situations",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_growth_team_scaling",
+      "raw_text_from_jd": "Have experience with high-growth teams whose processes need to scale as fast as they are",
+      "skill_type": "domain_knowledge",
+      "domain": "organizational_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "senior_stakeholder_influence",
+      "raw_text_from_jd": "Can influence and align senior stakeholders across very different functions and working styles, without relying on formal authority",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_skills_and_judgment",
+      "raw_text_from_jd": "Possess impeccable organizational skills, paired with the judgment to know when process creates clarity and when it gets in the way",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_real_time_thinking",
+      "raw_text_from_jd": "Think strategically in real time — connecting the immediate fire drill to the bigger picture and helping leadership see around corners",
+      "skill_type": "capability",
+      "domain": "strategic_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "flexibility_and_adaptability",
+      "raw_text_from_jd": "Are genuinely flexible: comfortable with last-minute pivots, shifting priorities, and plans that change mid-flight",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "follow_through_relentless",
+      "raw_text_from_jd": "Are relentless about follow-through: you don't let things drop, even when the team is at its busiest",
+      "skill_type": "cultural_fit",
+      "domain": "execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication_clarity",
+      "raw_text_from_jd": "Communicate with exceptional clarity, especially when synthesizing messy situations for executive audiences",
+      "skill_type": "capability",
+      "domain": "executive_communications",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_safety_values",
+      "raw_text_from_jd": "Care about ensuring that transformative AI systems are developed safely",
+      "skill_type": "cultural_fit",
+      "domain": "ai_safety",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Minimum education: Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "inhouse_or_agency_comms_tech",
+      "raw_text_from_jd": "In-house communications or agency experience at a high-growth technology company",
+      "skill_type": "domain_knowledge",
+      "domain": "communications",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "crisis_comms_experience",
+      "raw_text_from_jd": "Direct experience supporting crisis communications or rapid-response efforts",
+      "skill_type": "domain_knowledge",
+      "domain": "crisis_communications",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stood_up_pm_ops_from_scratch",
+      "raw_text_from_jd": "Experience standing up program management or operations functions from scratch",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_landscape_familiarity",
+      "raw_text_from_jd": "Familiarity with the AI landscape and the issues shaping the public conversation around it",
+      "skill_type": "domain_knowledge",
+      "domain": "artificial_intelligence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Communications team operations — major product launches, announcements, reactive/crisis situations, external, internal, and editorial communications",
+    "business_model": "internal function support at an AI safety company",
+    "primary_metrics_inferred": [
+      "Operational efficiency of communications campaigns",
+      "Speed and quality of crisis response",
+      "Cross-functional alignment and accountability"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Marketing",
+      "Policy",
+      "Legal",
+      "Research",
+      "Executive teams",
+      "Comms leadership"
+    ],
+    "core_responsibilities": [
+      "Run the operating rhythm for major campaigns: planning, prioritization, status reporting, and retrospectives",
+      "Translate fast-changing, ambiguous projects into clear workstreams, owners, timelines, and decision points",
+      "Serve as a strategic thought partner: bring recommendations, surface risks and tradeoffs early, and drive decisions under pressure",
+      "Build alignment and drive accountability across cross-functional partners without formal authority",
+      "Anticipate operational bottlenecks before they hit and resolve them with incomplete information and compressed timelines",
+      "Design and continuously improve the team's operating framework: launching playbooks, crisis response protocols, escalation paths, and cross-team coordination models"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      265000,
+      295000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "program management",
+    "communications operations",
+    "crisis response",
+    "product launches",
+    "stakeholder alignment",
+    "operating rhythm",
+    "playbooks",
+    "cross-functional",
+    "executive communications",
+    "high-growth"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($265K-$295K base)",
+    "Visa sponsorship explicitly offered (with caveats)",
+    "Clear description of the role's purpose and day-to-day operational context",
+    "Explicitly encourages applications from underrepresented groups and those who don't meet every qualification",
+    "Senior, high-visibility role with direct partnership with comms leadership and executive teams"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "10+ years minimum experience is a high bar for a non-people-management IC role",
+    "Role is highly context-dependent (communications fluency required); hard to enter from a purely operational background without comms exposure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'senior role' language + comp range + years requirement)",
+      "seniority.manages_people (inferred as false; no mention of direct reports)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicit in JD)",
+      "scope.business_model (inferred from internal function context)",
+      "location.cities_listed (San Francisco inferred from HQ mention; no explicit city listed for this role)"
+    ],
+    "ambiguities": [
+      "The JD says 'some roles may require more time in our offices' — it is unclear if this role specifically requires more than 25%; treated as 25% minimum here.",
+      "The 'Required field of study' is stated as 'A field relevant to the role as demonstrated through coursework, training, or professional experience' — effectively open-ended; no specific degree field required."
+    ]
+  }
+}

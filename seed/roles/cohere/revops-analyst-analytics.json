@@ -1,0 +1,253 @@
+{
+  "company": "Cohere",
+  "role_title": "RevOps Analyst Analytics",
+  "url": "https://jobs.ashbyhq.com/cohere/cd3eacfe-1169-4df0-8164-93a857d5ddf0",
+  "ats_provider": "ashby",
+  "ats_job_id": "cd3eacfe-1169-4df0-8164-93a857d5ddf0",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [
+      "New York City, NY",
+      "San Francisco, CA",
+      "Toronto, ON"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Revenue Operations / GTM Analytics",
+  "seniority": {
+    "level": "Mid-level IC",
+    "years_required_min": 3,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "3+ years of experience in sales operations or a related role",
+      "3+ years of big data experience",
+      "Comp range $75K–$120K USD base"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_sales_ops",
+      "raw_text_from_jd": "Have 3+ years of experience in sales operations or a related role",
+      "skill_type": "years_of_experience",
+      "domain": "sales_operations",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "salesforce_experience",
+      "raw_text_from_jd": "Have Salesforce experience; CPQ Experience and Admin certification plus",
+      "skill_type": "tool_proficiency",
+      "domain": "crm",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_tech_stack_familiarity",
+      "raw_text_from_jd": "Have familiarity with GTM tech stacks and how they support revenue workflows (CRM, enrichment, engagement, automation, analytics)",
+      "skill_type": "domain_knowledge",
+      "domain": "gtm_technology",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "CRM",
+        "enrichment",
+        "engagement",
+        "automation",
+        "analytics"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_big_data_bi_sql",
+      "raw_text_from_jd": "Bring 3+ years of big data experience: using BI tools such as Looker or Tableau and/or writing complex yet efficient SQL is a daily habit for you",
+      "skill_type": "years_of_experience",
+      "domain": "data_analytics",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [
+        "Looker",
+        "Tableau"
+      ],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "etl_and_data_warehouses",
+      "raw_text_from_jd": "Have experience getting your hands dirty with ETL and familiar with popular data warehouses (BigQuery, Snowflake, etc)",
+      "skill_type": "tool_proficiency",
+      "domain": "data_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "BigQuery",
+        "Snowflake"
+      ],
+      "technologies_named": [
+        "ETL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "senior_communication",
+      "raw_text_from_jd": "Are an excellent communicator with senior management audiences - explaining \"what it is\", \"why it matters\" and \"what should we do\" in terms of your data and analysis; delivering customer-oriented KPIs and dashboards that drive alignment",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "salesforce_cpq_admin_cert",
+      "raw_text_from_jd": "CPQ Experience and Admin certification plus",
+      "skill_type": "credential",
+      "domain": "salesforce_administration",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [
+        "CPQ"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Salesforce Admin certification"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Revenue Operations — GTM analytics, CRM governance, quote-to-cash, reporting and dashboards",
+    "business_model": "enterprise B2B AI",
+    "primary_metrics_inferred": [
+      "Revenue growth",
+      "Sales productivity",
+      "Data hygiene and reporting accuracy",
+      "Customer-oriented KPIs"
+    ],
+    "cross_functional_partners": [
+      "GTM leadership",
+      "Revenue team",
+      "Senior management"
+    ],
+    "core_responsibilities": [
+      "Partner with GTM leadership to elevate reporting, systems and process to drive revenue growth and decision making",
+      "Manage, and enhance our quote-to-cash processes to ensure accuracy and compliance",
+      "Collaborate cross-functionally to enable the Revenue team to be able to see a 360 degree view of the customer in the CRM, including product usage, customer engagement (support tickets, sales emails, marketing campaigns, attribution) and contract data to drive revenue growth and improve sales productivity",
+      "Drive initiative to improve data hygiene, reporting accuracy and CRM governance",
+      "Manage urgent ad hoc operational requests"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      75000,
+      120000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Revenue Operations",
+    "GTM analytics",
+    "Salesforce",
+    "SQL",
+    "Looker",
+    "Tableau",
+    "BigQuery",
+    "Snowflake",
+    "ETL",
+    "CRM governance",
+    "quote-to-cash",
+    "data hygiene",
+    "KPIs",
+    "dashboards"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($75K–$120K USD)",
+    "Remote-US eligible role",
+    "6 weeks paid vacation and strong benefits package disclosed",
+    "Encourages applicants who don't match every qualification to still apply",
+    "Reporting line stated (Head of Revenue Operations)"
+  ],
+  "red_flags": [
+    "Location listed in the role description as 'NYC, SF, Toronto' but Working Location field says 'Remote US' — ambiguity about whether Toronto-based candidates are eligible for remote or must be in-office",
+    "Visa sponsorship status not mentioned",
+    "Equity compensation not mentioned despite being a VC-backed AI company",
+    "CPQ/Admin cert bullet is ambiguous — framed as 'plus' but placed within the main qualifications list rather than a separate preferred section"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirements and comp range)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not stated explicitly)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)",
+      "posting_first_seen (not available)",
+      "posting_last_updated (not available)"
+    ],
+    "ambiguities": [
+      "Role header lists 'Location: NYC, SF, Toronto' but the Working Location field reads 'Remote US' — unclear if Toronto candidates are eligible or if the listed cities are office options for in-person workers. Treated as remote-us with those cities as optional office locations.",
+      "Salesforce CPQ experience and Admin certification are described as 'plus' within the main qualifications bullet, making it unclear if they are hard requirements or nice-to-haves. Treated as nice-to-have (soft) given the 'plus' language, but flagged here."
+    ]
+  }
+}

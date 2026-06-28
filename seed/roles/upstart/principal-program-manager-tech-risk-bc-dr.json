@@ -1,0 +1,305 @@
+{
+  "company": "Upstart",
+  "role_title": "Principal Program Manager, Tech Risk BC/DR",
+  "url": "https://careers.upstart.com/jobs?gh_jid=7959005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7959005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "majority of work remote; most teams meet once or twice per quarter for 2-4 consecutive days",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Risk & Resilience Program Manager (BC/DR)",
+  "seniority": {
+    "level": "Principal / Staff (IC6-equivalent)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in business continuity, disaster recovery, or related fields",
+      "Title 'Principal Program Manager' signals senior IC level",
+      "Comp range $172,100–$238,300 base, consistent with Principal IC at a fintech"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_or_experience",
+      "raw_text_from_jd": "Bachelor's degree in Information Security, Computer Science, Business, Risk Management, or a related field, or equivalent practical experience, plus 8 years of experience in business continuity, disaster recovery, operational resilience, information security, risk management, or program management.",
+      "skill_type": "credential",
+      "domain": "education_or_experience",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree",
+        "Information Security",
+        "Computer Science",
+        "Business",
+        "Risk Management"
+      ]
+    },
+    {
+      "id": "years_bcdr_experience",
+      "raw_text_from_jd": "8+ years of experience leading or materially maturing business continuity, disaster recovery, or operational resilience programs.",
+      "skill_type": "years_of_experience",
+      "domain": "business_continuity_disaster_recovery",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "regulated_financial_services_experience",
+      "raw_text_from_jd": "Experience designing or maturing business continuity, disaster recovery, or operational resilience programs in a bank, fintech, lending, or other regulated financial services environment.",
+      "skill_type": "domain_knowledge",
+      "domain": "regulated_financial_services_bcdr",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "banking",
+        "fintech",
+        "lending",
+        "regulated financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "bank",
+        "fintech",
+        "lending company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "bia_and_recovery_planning",
+      "raw_text_from_jd": "Experience conducting business impact analyses, recovery planning, dependency mapping, resilience testing, and remediation tracking.",
+      "skill_type": "capability",
+      "domain": "business_impact_analysis_recovery_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bcdr_frameworks",
+      "raw_text_from_jd": "Experience implementing or operating against business continuity, disaster recovery, or operational resilience frameworks or standards such as ISO 22301, NIST, FFIEC, or equivalent regulatory guidance.",
+      "skill_type": "domain_knowledge",
+      "domain": "bcdr_frameworks_and_standards",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ISO 22301",
+        "NIST",
+        "FFIEC"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cloud_tech_resilience_knowledge",
+      "raw_text_from_jd": "Knowledge of technology resilience concepts, including cloud infrastructure resilience, service outages, incident response coordination, system dependencies, and vendor recovery planning.",
+      "skill_type": "domain_knowledge",
+      "domain": "cloud_infrastructure_resilience",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "cloud infrastructure resilience"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "audit_regulatory_support",
+      "raw_text_from_jd": "Experience supporting audits, regulatory reviews, or compliance initiatives related to business continuity, disaster recovery, or operational resilience.",
+      "skill_type": "capability",
+      "domain": "audit_and_regulatory_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "scalable_operational_processes",
+      "raw_text_from_jd": "Skilled in developing scalable operational processes, program governance models, documentation repositories, and executive-level reporting.",
+      "skill_type": "capability",
+      "domain": "program_governance_and_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "Ability to communicate resilience risks, recovery strategies, and program priorities to technical and non-technical stakeholders.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "professional_certifications",
+      "raw_text_from_jd": "Professional certifications such as CBCP, CISSP, CISM, CRISC, or related business continuity, security, or risk certifications",
+      "skill_type": "credential",
+      "domain": "professional_certifications",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "CBCP",
+        "CISSP",
+        "CISM",
+        "CRISC"
+      ]
+    }
+  ],
+  "explicitly_excluded": [
+    "Candidates based in Quebec, Canada (noted for Canadian roles generally)"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise business continuity and disaster recovery program within the Information Security team at Upstart Bank",
+    "business_model": "AI lending marketplace, B2B2C (partners with banks and credit unions)",
+    "primary_metrics_inferred": [
+      "BC/DR program maturity score",
+      "Recovery time objective (RTO) / recovery point objective (RPO) adherence",
+      "Test completion rates and remediation tracking",
+      "Audit and regulatory readiness"
+    ],
+    "cross_functional_partners": [
+      "Enterprise Risk Management",
+      "Compliance",
+      "Engineering",
+      "Security",
+      "Operations",
+      "Vendor Management",
+      "Business process owners",
+      "Office Operations"
+    ],
+    "core_responsibilities": [
+      "Lead the enterprise business continuity and disaster recovery program strategy, execution, governance, and ongoing maturity efforts.",
+      "Own and mature the business impact analysis process, including critical business process identification, dependency mapping, ownership assignment, risk-rating methodology, and recovery strategy development.",
+      "Develop and maintain business continuity plans, disaster recovery plans, crisis management processes, and supporting documentation for critical business and technology functions.",
+      "Drive cross-functional execution across Technology, Security, Office Operations, Vendor Management, Enterprise Risk Management, Compliance, and business process owners.",
+      "Coordinate disaster recovery exercises, tabletop tests, remediation tracking, and evidence collection to improve organizational preparedness and support audit or regulatory expectations.",
+      "Maintain and improve program repositories, workflows, and reporting, including business impact analysis records, recovery plans, testing evidence, program metrics, and remediation status."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      172100,
+      238300
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "annual equity grants that vest quarterly; Employee Stock Purchase Plan (ESPP) with discounted stock purchase options",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "business continuity",
+    "disaster recovery",
+    "operational resilience",
+    "business impact analysis",
+    "BC/DR",
+    "ISO 22301",
+    "NIST",
+    "FFIEC",
+    "first line of defense",
+    "fintech",
+    "Upstart Bank",
+    "program management",
+    "information security",
+    "risk management",
+    "tabletop exercises"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($172,100–$238,300 base) and competitive for a principal-level remote role",
+    "Fully remote-US eligible with no requirement to be in a specific city",
+    "Clear program scope and ownership area — inheriting and maturing existing BC/DR foundations",
+    "Generous 401(k) match ($2 for $1 up to $15,000 annually) and equity compensation",
+    "Role sits in first line of defense with broad executive visibility",
+    "Growing team context (Upstart Bank expansion) signals investment in the function"
+  ],
+  "red_flags": [
+    "Visa sponsorship eligibility is not explicitly stated — unclear for non-US-citizen candidates",
+    "8+ years hard requirement is a high bar and marked as a Minimum Qualification, not preferred",
+    "Regulated financial services experience (bank/fintech) is a hard requirement, limiting candidates from non-financial industries",
+    "Travel cadence not precisely defined — 'once or twice per quarter for 2-4 consecutive days' could mean up to ~16 days/year of travel"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Principal' and comp range)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from product/company description)",
+      "location.work_auth (inferred as no-sponsorship from standard US remote hiring language; not explicitly stated)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Work authorization and visa sponsorship are not explicitly addressed in the JD; marked as 'no-sponsorship' and 'unclear' respectively based on absence of any sponsorship offer language.",
+      "The JD mentions offices in Columbus, Austin, Bay Area, and NYC but the role is listed as fully remote — cities_listed left empty as they pertain to company offices, not this role's requirement.",
+      "ISO 22301 and NIST are listed under 'technologies_named' as they are technical standards/frameworks, not traditional technologies — flagged as a classification judgment call."
+    ]
+  }
+}

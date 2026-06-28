@@ -1,0 +1,278 @@
+{
+  "company": "Spotify",
+  "role_title": "Product Manager - Data Platform",
+  "url": "https://jobs.lever.co/spotify/03437e2a-2d5e-4593-9e97-11271014932e",
+  "ats_provider": "lever",
+  "ats_job_id": "03437e2a-2d5e-4593-9e97-11271014932e",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Toronto"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "some in person meetings, still allows for flexibility to work from home",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Platform PM (Data Infrastructure)",
+  "seniority": {
+    "level": "Mid-level IC (PM II / PM)",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2+ years of Product Management experience",
+      "Platform / data infrastructure focus suggests need for some technical maturity but relatively low minimum bar",
+      "No senior or staff designation in title"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "You have 2+ years of Product Management experience, ideally working on platform products, developer tools, data infrastructure, analytics platforms, or data governance systems.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_foundation",
+      "raw_text_from_jd": "You have a technical foundation through a degree in Computer Science, Engineering, a related field, and/or prior experience in engineering or technical roles.",
+      "skill_type": "credential",
+      "domain": "technical_background",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Computer Science degree",
+        "Engineering degree"
+      ]
+    },
+    {
+      "id": "technical_collaboration",
+      "raw_text_from_jd": "You are comfortable working with engineers and can engage in technical discussions while representing customer and business needs.",
+      "skill_type": "capability",
+      "domain": "technical_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_alignment",
+      "raw_text_from_jd": "You are an excellent communicator and collaborator who can build alignment across teams with different priorities and levels of technical expertise.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "You have strong systems-thinking skills and can connect workflows, platforms, users, and business outcomes.",
+      "skill_type": "capability",
+      "domain": "systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_user_empathy",
+      "raw_text_from_jd": "You have empathy for people who work with data and understand the challenges they face every day.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_workflows",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_tolerance",
+      "raw_text_from_jd": "You enjoy working through ambiguity, breaking down complex problems, and creating clarity for teams.",
+      "skill_type": "cultural_fit",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_curiosity",
+      "raw_text_from_jd": "You are curious about how AI is transforming the data landscape and are excited to help shape that future.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_and_data",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "collaborative_leadership",
+      "raw_text_from_jd": "You lead with humility, build trust through collaboration, and help teams move forward with focus and momentum.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "platform_or_data_infra_pm_experience",
+      "raw_text_from_jd": "You have 2+ years of Product Management experience, ideally working on platform products, developer tools, data infrastructure, analytics platforms, or data governance systems.",
+      "skill_type": "domain_knowledge",
+      "domain": "platform_products_or_data_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Spotify's data catalogue, metadata, and data lineage capabilities within the Data Platform Studio",
+    "business_model": "internal platform / developer tooling (B2B internal)",
+    "primary_metrics_inferred": [
+      "Adoption of data catalogue and metadata capabilities",
+      "Value creation and business impact of data platform investments",
+      "Data discovery, trust, and governance KPIs"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Analytics",
+      "Product teams across Spotify",
+      "ML engineers"
+    ],
+    "core_responsibilities": [
+      "Develop and own the product strategy and roadmap for Spotify's data catalogue, metadata, and data lineage domain.",
+      "Diagnose and deeply understand the needs of Spotify's data community, including data engineers, data scientists, analysts, ML engineers, and increasingly AI agents.",
+      "Identify and prioritize the highest-impact problems to solve, balancing user needs, business priorities, platform requirements, and regulatory considerations.",
+      "Evaluate and deliver solutions through building, buying, or integrating third-party products and capabilities.",
+      "Define success metrics and KPIs that measure adoption, value creation, and business impact.",
+      "Build strong relationships with internal product, engineering, analytics, and data teams to understand workflows, gather feedback, and shape future platform investments.",
+      "Collaborate closely with engineering, design, and data science partners to deliver high-quality platform experiences.",
+      "Influence stakeholders across the Data Platform Studio and broader Spotify organization to align around product direction and priorities.",
+      "Help shape how Spotify approaches metadata, governance, discoverability, lineage, and trust in an increasingly AI-driven world.",
+      "Stay informed on industry trends across data platforms, developer tools, AI/ML infrastructure, analytics, and data governance."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "data catalogue",
+    "metadata",
+    "data lineage",
+    "data governance",
+    "data platform",
+    "developer tools",
+    "AI agents",
+    "discoverability",
+    "data infrastructure",
+    "platform products",
+    "ML infrastructure",
+    "data engineers",
+    "data scientists"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface and domain ownership (data catalogue, metadata, lineage) — not vague",
+    "Hybrid flexibility explicitly stated with ability to work from home",
+    "Role sits at a strategically important infrastructure domain ('center of one of the most important infrastructure domains at Spotify')",
+    "Encourages candidates with equivalent experience in lieu of formal degree"
+  ],
+  "red_flags": [
+    "Compensation not disclosed anywhere in the JD",
+    "Visa sponsorship and work authorization requirements not mentioned — unclear for international candidates",
+    "2+ years minimum is low for the strategic scope described (own strategy and roadmap, influence org-wide stakeholders), suggesting either a wide candidate band or potential misalignment between title and responsibilities",
+    "No indication of team size or reporting structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from '2+ years' minimum and mid-level title; no explicit level stated)",
+      "scope.business_model (inferred as internal platform from JD context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs in JD)",
+      "location.remote_us_eligible (inferred as false since role is stated as Toronto-based)",
+      "posting_first_seen (not provided)",
+      "posting_last_updated (not provided)"
+    ],
+    "ambiguities": [
+      "The 'ideally working on platform products, developer tools, data infrastructure...' qualifier in the years-of-experience requirement is ambiguous — it reads as a soft preference attached to a hard minimum. Treated as: 2+ years PM = hard requirement; platform/data domain context = nice-to-have.",
+      "Work authorization and visa sponsorship are not addressed anywhere in the JD; left as 'unclear'.",
+      "Office time requirement is described vaguely ('some in person meetings') with no percentage or days-per-week specified."
+    ]
+  }
+}

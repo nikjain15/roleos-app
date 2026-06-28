@@ -1,0 +1,208 @@
+{
+  "company": "Robinhood",
+  "role_title": "Senior Product Manager, Government Products",
+  "url": "https://boards.greenhouse.io/robinhood/jobs/7968044?t=gh_src=&gh_jid=7968044",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7968044",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York, NY",
+      "Washington, DC"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 3 days per week in New York, NY office with regular travel to Washington DC",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Consumer Fintech / Government Partnerships PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience building and shipping high-quality consumer fintech product experiences",
+      "Lead the vision, strategy, and execution for our Government Products portfolio",
+      "Base pay range Zone 1: $166,000–$195,000 USD, consistent with Senior IC",
+      "Role title is explicitly 'Senior Product Manager'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_consumer_fintech_pm",
+      "raw_text_from_jd": "5+ years of experience building and shipping high-quality consumer fintech product experiences.",
+      "skill_type": "years_of_experience",
+      "domain": "consumer_fintech_product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_strategy_judgment",
+      "raw_text_from_jd": "Product strategy & judgment: Strong product judgment and the ability to turn ambiguous opportunities into a clear strategy, roadmap, and execution plans.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "collaborative_leadership",
+      "raw_text_from_jd": "Collaborative leadership: Excellent communication and relationship-management skills, with a track record of guiding highly cooperative teams and building alignment.",
+      "skill_type": "capability",
+      "domain": "leadership_and_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_regulatory_experience",
+      "raw_text_from_jd": "Partner & regulatory experience: Experience working with third-party partners on large-scale projects and collaborating with legal, compliance, operations, policy, or regulated-product partners.",
+      "skill_type": "domain_knowledge",
+      "domain": "regulatory_and_partner_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_decision_making",
+      "raw_text_from_jd": "Data-driven & mission-aligned: Experience using research, experimentation, and product analytics to guide decision-making, coupled with excitement about building products that can expand financial access at national scale.",
+      "skill_type": "capability",
+      "domain": "data_driven_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "US"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Government Products portfolio, including Trump Accounts and new government partnership verticals",
+    "business_model": "public-private financial products, B2C consumer fintech via government partnerships",
+    "primary_metrics_inferred": [
+      "Product adoption and app store rankings",
+      "User growth and financial access expansion at national scale",
+      "Quality and reliability of consumer product experience",
+      "Speed and quality of product launches"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Research",
+      "Data Science",
+      "Marketing",
+      "Legal",
+      "Compliance",
+      "Policy",
+      "Operations",
+      "Finance",
+      "Communications",
+      "External government partners"
+    ],
+    "core_responsibilities": [
+      "Lead product strategy: Establish and execute a clear product vision and strategy for Government Products, including scaling Trump Accounts and identifying new opportunities to expand Robinhood's impact through government partnerships.",
+      "Build & launch 0-1 products: Guide a team of engineers, designers, researchers, data scientists, and marketers to take large-scale, trusted consumer financial products from concept to national launch.",
+      "Drive internal and external collaboration: Work closely with key internal partners across legal, compliance, policy, operations, finance, and communications, as well as external partners, to ensure products are built with high quality and integrity.",
+      "Foster a culture of execution: Navigate ambiguity across product, regulatory, operational, and partnership workstreams, delivering delightful consumer experiences on time with an extremely high quality bar.",
+      "Iterate through data: Foster a culture of learning and continuous improvement through rapid experimentation, customer research, and data analysis."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      166000,
+      195000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity ownership (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Government Products",
+    "consumer fintech",
+    "zero-to-one",
+    "Trump Accounts",
+    "public-private partnerships",
+    "regulatory",
+    "national scale",
+    "product strategy",
+    "financial access",
+    "0-1 products"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($166K–$195K base for Zone 1)",
+    "Equity and bonus programs mentioned in addition to base",
+    "Clear product surface and ownership area (Government Products portfolio, Trump Accounts)",
+    "High-visibility product with demonstrated traction (#3 app in App Store, #1 in Finance at launch)",
+    "Exciting and novel product category (public-private consumer fintech)",
+    "Comprehensive benefits package including 100% paid health insurance"
+  ],
+  "red_flags": [
+    "Role requires in-person attendance at least 3 days per week in New York, NY — eliminates remote candidates",
+    "Regular travel to Washington DC is expected and may be burdensome",
+    "Government partnership products carry inherent political risk (e.g., Trump Accounts branding tied to political environment)",
+    "Visa sponsorship policy not stated — unclear for international applicants",
+    "Zero-to-one scope in a regulated, politically sensitive domain adds significant ambiguity and execution risk"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title, years requirement, and comp range)",
+      "seniority.manages_people (inferred as false — JD says 'guide a team' not 'manage direct reports')",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated in JD)",
+      "scope.business_model (inferred from product description)",
+      "compensation.base_range_usd (Zone 1 selected as primary since role is based in New York, NY)"
+    ],
+    "ambiguities": [
+      "The JD lists Washington DC as a Zone 1 compensation location alongside New York, NY, but the role is described as based in New York, NY with 'regular travel to Washington DC' — DC may not be an alternative base location.",
+      "Visa sponsorship is not mentioned anywhere in the JD; treated as 'unclear'.",
+      "Managing people: the JD says 'guide a team of engineers, designers...' which could imply informal leadership or formal people management. Treated as non-people-manager IC role but flagged as ambiguous."
+    ]
+  }
+}

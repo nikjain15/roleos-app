@@ -1,0 +1,253 @@
+{
+  "company": "Plaid",
+  "role_title": "Senior Product Manager - Consumer",
+  "url": "https://jobs.ashbyhq.com/plaid/ecfa7ea5-8849-4666-9bed-8fe9f57f20cf",
+  "ats_provider": "ashby",
+  "ats_job_id": "ecfa7ea5-8849-4666-9bed-8fe9f57f20cf",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Consumer PM (B2C)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title is 'Senior Product Manager'",
+      "Expected to 'lead product development and execution within a startup-like environment'",
+      "Expected to independently define ambitious vision/roadmap and drive prioritization"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "consumer_feature_launches",
+      "raw_text_from_jd": "You have successfully launched large consumer facing features driving meaningful outcomes at B2C companies",
+      "skill_type": "outcome",
+      "domain": "consumer_product_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "B2C companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_problem_first",
+      "raw_text_from_jd": "You start with the consumer problem and have held a high bar for consumer experience",
+      "skill_type": "capability",
+      "domain": "consumer_experience",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_decisions",
+      "raw_text_from_jd": "You naturally gravitate towards using data to make strategic decisions",
+      "skill_type": "capability",
+      "domain": "data_driven_product_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_communication",
+      "raw_text_from_jd": "You have communicated complex concepts succinctly for broad audiences to drive decisions",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "roadmap_prioritization_impact",
+      "raw_text_from_jd": "You have driven roadmap and prioritization exercises and driven clear impact through your decisions",
+      "skill_type": "outcome",
+      "domain": "product_roadmap_and_prioritization",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_ownership_culture_fit",
+      "raw_text_from_jd": "You thrive in a culture of high ownership, velocity, and throughput, and speak your mind regardless of level",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_navigation",
+      "raw_text_from_jd": "You have a track record of scrappily developing clear perspectives in areas of ambiguity",
+      "skill_type": "capability",
+      "domain": "ambiguity_and_problem_solving",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "anti_fraud_ml_products",
+      "raw_text_from_jd": "Experience building anti-fraud or ML-driven products",
+      "skill_type": "domain_knowledge",
+      "domain": "anti_fraud_and_ml_products",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Plaid's consumer-facing surfaces including Link (flagship product) and 0-1 consumer initiatives",
+    "business_model": "B2B2C — Plaid sells developer tools/APIs to companies who embed Plaid products (like Link) for end consumers",
+    "primary_metrics_inferred": [
+      "Consumer conversion and activation via Link",
+      "Revenue impact from Link usage",
+      "Consumer experience quality and NPS",
+      "Quarterly/half-year goal attainment"
+    ],
+    "cross_functional_partners": [
+      "Design",
+      "Research",
+      "Data Science",
+      "Legal",
+      "Compliance"
+    ],
+    "core_responsibilities": [
+      "Define an ambitious vision / roadmap, sign up for quarterly / half year goals, and partner with the cross-functional team to hit them",
+      "Drive prioritization and execution (build, measure, iterate)",
+      "Identify opportunities through consumer feedback and staying close to our data / dashboards",
+      "Partner with cross-functional team (design, research, data science, legal, and compliance) to do all of the above"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity and/or commission dependent on position",
+    "location_pay_differential": true,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "consumer product management",
+    "Link",
+    "B2C",
+    "roadmap",
+    "prioritization",
+    "data-driven",
+    "consumer experience",
+    "fintech",
+    "0-1 initiatives",
+    "anti-fraud",
+    "ML-driven products",
+    "financial services"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Plaid is a well-known, high-growth fintech company with strong brand recognition",
+    "Link is described as driving 'vast majority of Plaid's revenue' — high-impact product surface",
+    "Explicitly encourages candidates to apply even if experience doesn't fully match",
+    "0-1 consumer initiatives signal greenfield product opportunity",
+    "Equity mentioned as part of compensation package"
+  ],
+  "red_flags": [
+    "No compensation range disclosed despite JD mentioning pay factors",
+    "Location and remote eligibility not stated in JD body — headquarters is SF but work modality is unclear",
+    "Visa sponsorship not mentioned",
+    "No specific years of experience stated, making seniority bar harder to assess externally"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior Product Manager' and scope of responsibilities)",
+      "scope.business_model (inferred from product description — B2B2C)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.cities_listed (SF listed as HQ; role's specific location not explicitly stated)",
+      "compensation.location_pay_differential (inferred from 'Pay is based on factors such as... location')"
+    ],
+    "ambiguities": [
+      "Work location type is not stated in the JD body (remote, hybrid, or onsite). Plaid HQ is SF but no modality is specified for this role. Marked as 'unclear'.",
+      "Visa sponsorship is not mentioned anywhere in the JD. Marked as 'unclear'.",
+      "JD lists offices in NY, DC, London, Amsterdam but does not specify which offices are eligible for this role."
+    ]
+  }
+}

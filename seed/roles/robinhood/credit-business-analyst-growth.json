@@ -1,0 +1,259 @@
+{
+  "company": "Robinhood",
+  "role_title": "Credit Business Analyst, Growth",
+  "url": "https://boards.greenhouse.io/robinhood/jobs/7961175?t=gh_src=&gh_jid=7961175",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7961175",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Menlo Park, CA",
+      "New York, NY",
+      "Washington, DC"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 3 days per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth (non-PM)",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 3,
+    "years_required_max": 5,
+    "manages_people": false,
+    "level_signals": [
+      "3-5 years of experience building and leading acquisition and growth initiatives",
+      "Base pay range $136,000–$160,000 USD (Zone 1), consistent with mid-senior IC",
+      "Expected to communicate with senior leadership and drive strategy independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "quantitative_analytical_skills",
+      "raw_text_from_jd": "Strong quantitative analytical skills.",
+      "skill_type": "capability",
+      "domain": "quantitative_analysis",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_acquisition_growth_credit",
+      "raw_text_from_jd": "3-5 years of experience building and leading acquisition and growth initiatives for credit card or other lending products.",
+      "skill_type": "years_of_experience",
+      "domain": "credit_card_growth",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "credit card",
+        "lending"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_r_python_proficiency",
+      "raw_text_from_jd": "Hands-on experience with SQL, R, or Python (specifically Pandas, Scikit-learn, etc.).",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis_programming",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL",
+        "R",
+        "Python",
+        "Pandas",
+        "Scikit-learn"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Strong communication skills and the ability to simplify complex programs to focus on key areas of improvement.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "experimentation_experience",
+      "raw_text_from_jd": "Experience with experimentation, including test design, reading results, and communicating insights to guide decisions.",
+      "skill_type": "capability",
+      "domain": "experimentation_and_testing",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Demonstrated ability to collaborate with partners across Product, Engineering, Data Science, Legal, and Compliance.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_degree",
+      "raw_text_from_jd": "Bachelor's or Master's degree in Computer Science, Engineering, Information Systems, Analytics, Mathematics, Physics, Applied Sciences, or a related field.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree",
+        "Master's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "credit_card_scaling_experience",
+      "raw_text_from_jd": "Experience growing and scaling credit card programs is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "credit_card_program_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "credit card"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Credit card growth strategy — acquisition campaigns, NPV modeling, marketing performance",
+    "business_model": "consumer fintech, B2C credit card product",
+    "primary_metrics_inferred": [
+      "Credit card customer base growth",
+      "Campaign response rates",
+      "Net Present Value (NPV) of customer mix",
+      "Marketing campaign performance"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Operations",
+      "Engineering",
+      "Data Science",
+      "Legal",
+      "Compliance",
+      "Senior Leadership"
+    ],
+    "core_responsibilities": [
+      "Use data, technology, and customer-focused thinking to design initiatives that expand our credit card business.",
+      "Collaborate with partners across product, operations, and engineering to build and run campaigns that drive high response rates for the credit card product.",
+      "Use Net Present Value (NPV) models to design a growth strategy that delivers a resilient mix of customers to the card program.",
+      "Propose novel solutions and gather data independently to solve complex problems.",
+      "Oversee, build, and monitor marketing campaigns, using feedback loops to continuously improve performance.",
+      "Communicate clearly and effectively with senior leadership, product managers, and engineering partners, tailoring content to the audience and ensuring alignment."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      136000,
+      160000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity ownership mentioned as part of total rewards",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "credit card",
+    "growth",
+    "acquisition",
+    "NPV",
+    "SQL",
+    "Python",
+    "experimentation",
+    "marketing campaigns",
+    "quantitative analytics",
+    "fintech",
+    "lending",
+    "data-driven"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed across three geographic zones",
+    "Clearly scoped role with defined ownership of credit card growth strategy",
+    "Specific tooling requirements (SQL, Python, R) signal technical rigor rather than vague 'data skills'",
+    "Equity, bonus, and 401(k) matching mentioned in addition to base pay",
+    "Benefits package is comprehensive (100% paid health insurance for employees, 90% for dependents)"
+  ],
+  "red_flags": [
+    "Hybrid requirement of at least 3 days per week in Menlo Park CA, New York NY, or Washington DC — eliminates fully remote candidates",
+    "Visa sponsorship status not addressed anywhere in the JD",
+    "Team size and reporting structure not disclosed",
+    "3-5 year experience range specifically tied to credit card or lending products — narrow domain requirement"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range + comp zone)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "compensation.base_range_usd uses Zone 1 (highest zone) as the stated range per schema convention; Zone 2 and Zone 3 ranges also exist in JD"
+    ],
+    "ambiguities": [
+      "The JD lists Washington, DC in the body as a valid office location, and Zone 1 compensation includes Menlo Park CA, New York NY, Bellevue WA, and Washington DC — Bellevue WA is not named as an office location in the role description, only in the pay table.",
+      "Visa sponsorship is neither confirmed nor denied; treated as 'unclear'.",
+      "The role title includes 'Analyst' but the scope and expectations (owning growth strategy, communicating with senior leadership, NPV modeling) are closer to a senior IC than a traditional analyst — seniority flagged as mid-senior IC."
+    ]
+  }
+}

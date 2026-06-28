@@ -1,0 +1,249 @@
+{
+  "company": "Glean",
+  "role_title": "Product Manager, Connectors",
+  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4701618005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4701618005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Mountain View, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "4 days a week in Mountain View office",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in product management",
+      "Compensation range $165K–$280K base",
+      "Experience spanning customer-facing surfaces and internal capabilities"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_saas",
+      "raw_text_from_jd": "You have 5+ years of experience in product management at SaaS companies, primarily serving large enterprises with responsibilities spanning customer-facing surfaces and features as well as internal capabilities and services.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_saas_enterprise",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS",
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "SaaS companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_background_api_integrations",
+      "raw_text_from_jd": "You have a strong technical background and experience with API-first products, integration paths, and 3rd party product partnerships.",
+      "skill_type": "domain_knowledge",
+      "domain": "api_products_and_integrations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "API-first products"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "You are an excellent written and verbal communicator.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_initiative_results",
+      "raw_text_from_jd": "You have a proven track record of taking ownership, taking initiative, and delivering results.",
+      "skill_type": "outcome",
+      "domain": "product_delivery",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "You collaborate effectively with cross-functional partners.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "learning_growth_mindset",
+      "raw_text_from_jd": "You have a learning and growth mindset.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_first",
+      "raw_text_from_jd": "You are mission-first and understand that your success is measured by your product and team's success.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_early_adopter",
+      "raw_text_from_jd": "You are an early adopter in building with or adopting AI for your own product craft and you are excited about helping customers accelerate their own AI adoption journey.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_tools_and_adoption",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Glean Connectors — connectors library, product integrations, Indexing API, and custom connector capabilities",
+    "business_model": "B2B enterprise SaaS, Work AI platform",
+    "primary_metrics_inferred": [
+      "Breadth and depth of connectors library",
+      "Enterprise customer adoption of integrations",
+      "Indexing API usage and custom connector adoption",
+      "Customer knowledge access coverage"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Leadership",
+      "Go-to-market teams",
+      "Key stakeholders across the company"
+    ],
+    "core_responsibilities": [
+      "Expand Glean's connectors library",
+      "Improve and deepen existing product integrations",
+      "Improve Indexing API and custom connector capabilities",
+      "Spend time with customers to deeply understand their knowledge needs",
+      "Develop key parts of the product roadmap, marrying customers' needs with product vision",
+      "Empower the team by giving context, setting direction, and building alignment",
+      "Drive customer-focused decisions, clear prioritization, and efficient execution",
+      "Coordinate cross-functionally with leadership, go-to-market teams, and other key stakeholders",
+      "Build processes that will scale as team and company go through rapid growth"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      165000,
+      280000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as potential eligibility; form not specified",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "connectors",
+    "API-first products",
+    "integrations",
+    "enterprise SaaS",
+    "Work AI",
+    "Indexing API",
+    "custom connectors",
+    "product roadmap",
+    "enterprise search",
+    "AI adoption"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range disclosed and wide ($165K–$280K base)",
+    "Clear product surface and ownership area (Connectors, Indexing API, custom connectors)",
+    "Company has strong market recognition (Fast Company Top 10, CNBC Disruptor 50, Forbes AI 50)",
+    "1,000+ employees and customers across 50+ industries signals scale and stability",
+    "Comprehensive benefits package including home office stipend, education and wellness stipends"
+  ],
+  "red_flags": [
+    "Requires 4 days per week in Mountain View office — very high in-person commitment, eliminates remote candidates",
+    "Compensation range is extremely wide ($115K spread), making level and seniority difficult to assess",
+    "No explicit mention of visa sponsorship or work authorization requirements",
+    "Nice-to-haves section is entirely absent — difficult to differentiate candidates on secondary criteria"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years + comp range)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from product description)",
+      "compensation.location_pay_differential (inferred from comp language: 'Compensation offered will be determined by factors such as location')",
+      "location.work_auth (not stated; marked unclear)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "The compensation range ($165K–$280K) is unusually wide, making it unclear whether this role is mid, senior, or staff level. Seniority treated as Senior IC based on 5+ years requirement.",
+      "Variable compensation and equity mentioned as possible eligibility but not confirmed as part of the standard package."
+    ]
+  }
+}

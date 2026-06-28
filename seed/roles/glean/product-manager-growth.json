@@ -1,0 +1,275 @@
+{
+  "company": "Glean",
+  "role_title": "Product Manager, Growth",
+  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4702151005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4702151005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "4 days a week in San Francisco office",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (PLG platform)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in product management",
+      "Comp range $175K-$280K base, consistent with mid-to-senior IC at a growth-stage startup",
+      "Expected to own roadmap and strategy end to end on a lean team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "You have 5+ years of experience in product management, with a track record of owning and shipping growth, activation, or PLG product areas in B2B SaaS, consumer, AI, or platform products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "qualifier": "growth, activation, or PLG product areas",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS",
+        "consumer",
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "plg_growth_mechanics_fluency",
+      "raw_text_from_jd": "You are deeply fluent in growth mechanics — funnels, activation, retention, virality, and lifecycle — and you let data and experimentation guide your decisions, with the analytical fluency to define metrics, instrument funnels, and interpret results alongside engineering and data teams.",
+      "skill_type": "domain_knowledge",
+      "domain": "growth_mechanics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "granular_product_thinking",
+      "raw_text_from_jd": "You have strong product sense and granular product thinking, comfortable moving between strategy and detailed execution and specifying how a user should experience onboarding and adoption.",
+      "skill_type": "capability",
+      "domain": "product_design_and_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_enterprise_interest",
+      "raw_text_from_jd": "You have a deep interest in AI and enterprise software, and you thrive in ambiguous spaces, creating clarity, momentum, and alignment even when the product area is still emerging.",
+      "skill_type": "domain_knowledge",
+      "domain": "AI_and_enterprise_software",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "You are an excellent communicator, take ownership and initiative, collaborate effectively with cross-functional partners, and bring a learning and growth mindset.",
+      "skill_type": "cultural_fit",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_first_ai_adoption",
+      "raw_text_from_jd": "You are mission-first, measure your success by your product and team's success, and are an early adopter of AI for your own craft who's excited to help customers accelerate their AI adoption journey.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_first_mindset",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "plg_motion_ownership",
+      "raw_text_from_jd": "Own the PLG motion end to end — from acquisition and onboarding through activation, habit formation, and self-serve expansion — and design the loops that turn individual adopters into team- and org-wide usage.",
+      "skill_type": "outcome",
+      "domain": "product_led_growth",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "experimentation_culture",
+      "raw_text_from_jd": "Build a rigorous experimentation and measurement culture, defining the activation and retention metrics that matter, instrumenting the funnel, and running A/B tests to learn fast and ship what moves the numbers.",
+      "skill_type": "capability",
+      "domain": "experimentation_and_analytics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "granular_implementation_skills",
+      "raw_text_from_jd": "the ability to demonstrate granular product implementation skills such as designing specific user interfaces, onboarding flows, and experiments rather than staying at a high conceptual level.",
+      "skill_type": "capability",
+      "domain": "product_implementation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "lean product team (exact size not stated)",
+    "surface": "Growth product area — activation, retention, PLG motion, off-surface engagement (browser extension, email, Slack, Teams, mobile), platform-level growth capabilities (referrals, invitations, notifications, lifecycle messaging)",
+    "business_model": "B2B enterprise SaaS, product-led growth motion",
+    "primary_metrics_inferred": [
+      "Activation rate",
+      "Retention / habit formation",
+      "Self-serve expansion / org-wide adoption",
+      "Funnel conversion metrics",
+      "A/B test win rates"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data",
+      "Marketing",
+      "Go-to-market",
+      "Solutions",
+      "Support"
+    ],
+    "core_responsibilities": [
+      "Define and drive the product strategy and roadmap for Growth across activation, retention, and expansion",
+      "Own the PLG motion end to end from acquisition through self-serve expansion",
+      "Build platform-level growth capabilities such as referrals, invitations, notifications, in-product education, and lifecycle messaging",
+      "Drive off-surface growth via browser extension, email, Slack, Teams, mobile, and other entry points",
+      "Partner with engineering, design, and data to turn ambiguous concepts into scoped products and experiments",
+      "Build a rigorous experimentation and measurement culture",
+      "Drive customer-focused prioritization and efficient execution",
+      "Collaborate with go-to-market, marketing, solutions, and support teams",
+      "Bring a high bar for product craft including concrete onboarding flows, UI behavior, and adoption paths"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      175000,
+      280000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity eligible (mentioned as part of variable compensation package)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Product-led growth (PLG)",
+    "activation",
+    "retention",
+    "Growth PM",
+    "B2B SaaS",
+    "enterprise",
+    "AI",
+    "onboarding",
+    "experimentation",
+    "A/B testing",
+    "funnel",
+    "off-surface engagement",
+    "lifecycle messaging",
+    "virality",
+    "Work AI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($175K-$280K base)",
+    "Clear product surface and ownership (Growth area, PLG motion, off-surface engagement)",
+    "Explicit statement that candidate will have outsized influence on roadmap and team given lean team size",
+    "Well-defined set of responsibilities tied to measurable outcomes",
+    "Recognition from Fast Company, Forbes AI 50, and others signals company momentum"
+  ],
+  "red_flags": [
+    "4 days per week in-office requirement in San Francisco is highly restrictive and eliminates remote candidates",
+    "Comp range is unusually wide ($175K-$280K), making it difficult to calibrate seniority level expectations",
+    "No mention of visa sponsorship — unclear for international candidates",
+    "Growth product area is described as still emerging, indicating ambiguity in scope and direction"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirement and comp range)",
+      "scope.team_size_estimate (described as 'very lean' but exact headcount not given)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly in JD)",
+      "scope.business_model (inferred from product description and PLG context)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "compensation.location_pay_differential (inferred from JD statement that compensation is determined by location)"
+    ],
+    "ambiguities": [
+      "Comp range of $175K-$280K is unusually wide; it could span multiple seniority levels (senior IC to staff/principal), making level inference uncertain.",
+      "The JD mentions 'Certain roles may be eligible for variable compensation, equity, and benefits' — it is not definitively confirmed whether this specific role includes equity.",
+      "Visa sponsorship not mentioned; work authorization requirements are ambiguous."
+    ]
+  }
+}

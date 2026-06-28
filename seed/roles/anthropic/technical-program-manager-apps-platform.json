@@ -1,0 +1,261 @@
+{
+  "company": "Anthropic",
+  "role_title": "Technical Program Manager, Apps Platform",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5251609008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5251609008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% in office",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Platform / Cross-functional TPM",
+  "seniority": {
+    "level": "Senior IC (likely Senior TPM)",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Comp range $365K-$435K base, consistent with Senior IC at Anthropic",
+      "'Several years of experience in technical program management' phrasing",
+      "Cross-org, end-to-end platform ownership scope implies significant seniority"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "tpm_experience",
+      "raw_text_from_jd": "Have several years of experience in technical program management, with a track record of successfully delivering complex, cross-functional programs",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": null,
+      "unit": "years",
+      "qualifier": "several",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_engineering_experience",
+      "raw_text_from_jd": "Have experience with platform engineering efforts (shared services, developer platforms, or common capabilities consumed by multiple product teams) and can engage meaningfully with the engineers building them",
+      "skill_type": "domain_knowledge",
+      "domain": "platform_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "shared services",
+        "developer platforms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_adoption_track_record",
+      "raw_text_from_jd": "Have driven platform adoption across consuming teams, where success depended on other teams choosing to build on what you shipped",
+      "skill_type": "outcome",
+      "domain": "platform_adoption",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_team_coordination",
+      "raw_text_from_jd": "Have experience coordinating across multiple engineering teams and organizations simultaneously",
+      "skill_type": "capability",
+      "domain": "cross_functional_coordination",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organization_parallel_workstreams",
+      "raw_text_from_jd": "Are highly organized and can manage multiple parallel workstreams effectively across distributed teams",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "unstructured_environment_comfort",
+      "raw_text_from_jd": "Thrive in unstructured environments with a knack for bringing order to chaos and creating clarity in ambiguous situations",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_influence",
+      "raw_text_from_jd": "Have excellent written and verbal communication skills, with the ability to influence without authority",
+      "skill_type": "capability",
+      "domain": "communication_and_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_alignment",
+      "raw_text_from_jd": "Are passionate about Anthropic's mission and interested in the challenges of bringing AI capabilities to users safely and reliably",
+      "skill_type": "cultural_fit",
+      "domain": "ai_safety_mission",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Minimum education: Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Apps Platform — shared platform capabilities powering Claude, Cowork, Claude Code, and future surfaces",
+    "business_model": "Internal developer platform serving consumer and developer products; B2C and B2B end products",
+    "primary_metrics_inferred": [
+      "Developer velocity across consuming teams",
+      "Platform adoption rate by product teams",
+      "Reduction of duplication across surfaces",
+      "Speed and reliability of product shipping on shared platform"
+    ],
+    "cross_functional_partners": [
+      "Platform engineering teams",
+      "Apps product teams",
+      "Consumer product teams",
+      "Developer product teams"
+    ],
+    "core_responsibilities": [
+      "Own the cross-Apps platform roadmap end to end: sequencing, dependencies, and tradeoffs across platform teams and the apps teams that depend on them",
+      "Drive alignment between platform engineering and apps teams so platform investments map to real consumer needs and adoption actually happens",
+      "Identify duplication across surfaces and convert it into shared platform capabilities",
+      "Establish the operating rhythm: planning, status, escalation paths, and launch coordination across orgs",
+      "Create program documentation including roadmaps, status reports, risk assessments, and communication plans",
+      "Facilitate technical decision-making by bringing together stakeholders, driving consensus, and ensuring timely resolution of blocking issues"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      365000,
+      435000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "technical program management",
+    "platform engineering",
+    "developer platform",
+    "shared services",
+    "cross-functional",
+    "platform adoption",
+    "roadmap",
+    "Apps Platform",
+    "Claude",
+    "developer velocity",
+    "operating rhythm"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($365K-$435K base)",
+    "Visa sponsorship explicitly offered (with caveats)",
+    "Clear product surface and ownership area — not a vague TPM role",
+    "Explicit encouragement to apply even without meeting every qualification",
+    "Cross-org scope signals high-impact, high-visibility role"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "Years of experience floor is unstated ('several years') — ambiguous bar to assess against",
+    "Single city (San Francisco) implied from HQ reference but not explicitly named for this role in the JD body — minor ambiguity"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + scope; not stated explicitly)",
+      "seniority.years_required_min (not stated; 'several years' used in JD but no number given)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from product descriptions)",
+      "location.cities_listed (inferred as San Francisco from HQ reference; body does not name a specific city for this role)"
+    ],
+    "ambiguities": [
+      "'Several years of experience' is used rather than a specific number; years_required_min left null",
+      "No explicit nice-to-haves section in the JD; all 'You may be a good fit if you' bullets treated as must-haves per hard classification rules since they appear as unconditional criteria",
+      "Location city not explicitly named in role body; San Francisco inferred from company HQ context"
+    ]
+  }
+}

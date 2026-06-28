@@ -4,23 +4,20 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7397265",
   "ats_provider": "greenhouse",
   "ats_job_id": "7397265",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "unclear",
-    "cities_listed": [
-      "Hong Kong",
-      "Taiwan"
-    ],
-    "remote_us_eligible": false,
-    "office_time_required": "Open to travel to Asia, including traveling at times to our Hong Kong or Taiwan locations",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Hardware/Platform PM",
+  "secondary_archetype": "Generalist PM",
   "seniority": {
     "level": "Senior IC / Staff PM",
     "years_required_min": 8,
@@ -28,9 +25,9 @@
     "manages_people": false,
     "level_signals": [
       "8+ years of product management experience or equivalent",
-      "Multi-year vision setting responsibility",
-      "Executive communications and stakeholder management expected",
-      "Cross-functional leadership across hardware, software, and partnerships"
+      "Multi-year vision setting and OKR ownership",
+      "Executive communications and stakeholder management",
+      "Leading platform and firmware strategy across two teams"
     ]
   },
   "must_haves": [
@@ -54,7 +51,7 @@
     },
     {
       "id": "scalable_technology_execution",
-      "raw_text_from_jd": "Demonstrated success and strong execution track record in building and sustaining scalable technology products.",
+      "raw_text_from_jd": "Demonstrated success and strong execution track record in building and sustaining scalable technology products",
       "skill_type": "outcome",
       "domain": "product_execution",
       "evidence_required": "shipped_products_with_metrics",
@@ -69,7 +66,7 @@
     },
     {
       "id": "interpersonal_communication",
-      "raw_text_from_jd": "Great interpersonal skills and strong verbal and written communication. You can collaborate and thrive in productive, healthy debate done with mutual respect and shared goals. You can make complex concepts accessible with clear communication",
+      "raw_text_from_jd": "Great interpersonal skills and strong verbal and written communication. You can collaborate and thrive in productive, healthy debate done with mutual respect and shared goals. You can make complex concepts accessible with clear communication.",
       "skill_type": "capability",
       "domain": "communication",
       "evidence_required": "work_history",
@@ -85,7 +82,7 @@
     {
       "id": "stakeholder_management",
       "raw_text_from_jd": "Proven track record of successful stakeholder management including executive communications, handling escalations, and advocating for ongoing investment in your product.",
-      "skill_type": "capability",
+      "skill_type": "outcome",
       "domain": "stakeholder_management",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
@@ -98,8 +95,8 @@
       "credentials_named": []
     },
     {
-      "id": "developer_interface_experience",
-      "raw_text_from_jd": "Experience working on products with developer interfaces (App deployment, APIs, SDKs); hardware or hardware-related product experience a plus.",
+      "id": "developer_interfaces_experience",
+      "raw_text_from_jd": "Experience working on products with developer interfaces, including app deployment, APIs, and SDKs",
       "skill_type": "domain_knowledge",
       "domain": "developer_tools",
       "evidence_required": "work_history",
@@ -109,7 +106,7 @@
       "technologies_named": [
         "APIs",
         "SDKs",
-        "App deployment"
+        "app deployment"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -117,7 +114,7 @@
       "credentials_named": []
     },
     {
-      "id": "technical_systems_thinking",
+      "id": "technical_systems_thinker",
       "raw_text_from_jd": "Technically adept systems thinker, ideally with a Computer Science or equivalent degree or experience working as a software engineer",
       "skill_type": "capability",
       "domain": "systems_thinking",
@@ -134,20 +131,20 @@
       ]
     },
     {
-      "id": "asia_travel_availability",
+      "id": "travel_asia",
       "raw_text_from_jd": "Open to travel to Asia, including traveling at times to our Hong Kong or Taiwan locations.",
       "skill_type": "capability",
       "domain": "travel_availability",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [
+        "Asia",
         "Hong Kong",
-        "Taiwan",
-        "Asia"
+        "Taiwan"
       ],
       "employer_types_named": [],
       "credentials_named": []
@@ -160,7 +157,7 @@
       "skill_type": "domain_knowledge",
       "domain": "mobile_device_management",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
@@ -175,13 +172,13 @@
       "id": "android_os_internals",
       "raw_text_from_jd": "Android operating system internals",
       "skill_type": "domain_knowledge",
-      "domain": "android_os",
+      "domain": "mobile_operating_systems",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
-        "Android operating system",
+        "Android",
         "AOSP"
       ],
       "industries_named": [],
@@ -193,9 +190,24 @@
       "id": "hardware_lifecycle_management",
       "raw_text_from_jd": "Hardware build and lifecycle management",
       "skill_type": "domain_knowledge",
-      "domain": "hardware_product_management",
+      "domain": "hardware_lifecycle",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_product_experience",
+      "raw_text_from_jd": "Hardware or hardware-related product experience",
+      "skill_type": "domain_knowledge",
+      "domain": "hardware_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -206,11 +218,11 @@
     },
     {
       "id": "payments_ecommerce_experience",
-      "raw_text_from_jd": "Payments and/or eCommerce",
+      "raw_text_from_jd": "Payments or eCommerce",
       "skill_type": "domain_knowledge",
       "domain": "payments_ecommerce",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -224,26 +236,11 @@
     },
     {
       "id": "zero_to_one_products",
-      "raw_text_from_jd": "Experience successfully building and launching 0-1 products",
+      "raw_text_from_jd": "Experience successfully building and launching 0–1 products",
       "skill_type": "outcome",
-      "domain": "zero_to_one_product_development",
+      "domain": "product_launches",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "hardware_product_experience",
-      "raw_text_from_jd": "hardware or hardware-related product experience a plus.",
-      "skill_type": "domain_knowledge",
-      "domain": "hardware_product_management",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -256,31 +253,32 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Stripe Terminal device software platform — device OS, firmware, boot, updates, security, connectivity, accessories",
-    "business_model": "B2B platform — in-person payments infrastructure for businesses and platforms",
+    "surface": "Stripe Terminal device software platform — OS platform, firmware, and third-party hardware partnerships for in-person commerce devices",
+    "business_model": "B2B payments infrastructure; in-person payments hardware and software platform",
     "primary_metrics_inferred": [
-      "Device software reliability and scalability",
-      "Market differentiation of Terminal hardware/software",
-      "OKR achievement for Terminal OS Platform and Firmware teams",
-      "Third-party hardware partnership growth"
+      "Device software scalability and reliability",
+      "Terminal user experience quality (device boot, updates, security, performance)",
+      "Third-party hardware partnership growth",
+      "OKR attainment against multi-year roadmap milestones"
     ],
     "cross_functional_partners": [
       "Hardware team",
-      "Software engineers",
-      "Firmware team",
+      "Engineering (firmware and software)",
       "Partnerships team",
       "Terminal leadership",
-      "Stripe leadership"
+      "Stripe leadership",
+      "External technology partners"
     ],
     "core_responsibilities": [
-      "Set a motivating multi-year vision for device software in partnership with the Hardware team and then break it down into measurable, meaningful milestones for the Terminal OS Platform Team and the Firmware team",
-      "Partner with software and hardware engineers to deeply understand the technology that our devices rely on",
-      "Partner with cross-functional partners to research, document, and deeply understand what Terminal customers need",
-      "Build empathy with our end users and the differentiation they aim to deliver for their merchants",
-      "Deeply research and understand the competitive landscape and translate that understanding into differentiating features",
-      "Collaborate with the Partnerships team to develop a compelling roadmap for how we can extend Terminal growth via third-party hardware partnerships",
-      "Use metrics to inform your point of view and leverage analytics to measure success",
-      "Define product requirements, provide clear guidance on prioritization, and support decisions related to development sequencing"
+      "Set a motivating multi-year vision for device software in partnership with the Hardware team",
+      "Break vision into measurable milestones for the Terminal OS Platform Team and Firmware team",
+      "Partner with software and hardware engineers to understand device technology",
+      "Research and document what Terminal customers need for excellent in-person payments experience",
+      "Research competitive landscape and translate into differentiating features",
+      "Collaborate with Partnerships team to develop roadmap for third-party hardware partnerships",
+      "Use metrics and analytics to inform prioritization and measure success",
+      "Define product requirements and support development sequencing decisions",
+      "Leverage technical knowledge to support technical trade-off decisions"
     ]
   },
   "compensation": {
@@ -294,45 +292,46 @@
   "top_keywords": [
     "Terminal",
     "device software",
+    "in-person payments",
     "firmware",
     "AOSP",
-    "in-person payments",
-    "hardware",
-    "scalability",
-    "product roadmap",
-    "OKRs",
-    "developer interfaces",
+    "Android",
+    "hardware partnerships",
+    "OS platform",
+    "mobile device management",
     "APIs",
     "SDKs",
-    "third-party hardware partnerships",
-    "mobile device management",
-    "Android"
+    "multi-year roadmap",
+    "OKRs",
+    "scalability",
+    "reliability"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear product ownership area with specific technical depth (device OS, firmware, AOSP)",
-    "Multi-year strategy ownership — senior scope with real influence",
-    "Well-known company with large-scale infrastructure impact",
-    "Nice-to-haves explicitly broken out in a separate section, reducing ambiguity"
+    "Clear product surface and ownership area (Terminal OS Platform + Firmware teams)",
+    "Encourages applications from candidates who meet minimum requirements even without preferred qualifications",
+    "Well-defined responsibility scope with concrete technical domains listed",
+    "Stripe's scale and mission offer significant career impact"
   ],
   "red_flags": [
-    "Compensation not disclosed",
-    "Location/work arrangement not stated — unclear whether remote, hybrid, or onsite",
-    "Travel to Asia (Hong Kong/Taiwan) required — significant commitment not quantified",
-    "8+ years hard requirement with broad scope may indicate high bar or role already internally staffed"
+    "No compensation range disclosed",
+    "Location not specified in JD — unclear if remote, hybrid, or onsite",
+    "Work authorization and visa sponsorship not addressed",
+    "Travel to Asia (Hong Kong/Taiwan) required — may be a constraint for some candidates",
+    "Role requires deep cross-functional ownership across both hardware and software organizations, which is a broad and demanding scope"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 8+ years requirement, executive comms scope, and multi-year strategy ownership)",
-      "scope.business_model (inferred from product description and team mission)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "location.type (not stated; set to 'unclear')",
-      "compensation.base_range_usd (not stated)"
+      "seniority.level (inferred from 8+ years requirement and scope of responsibilities)",
+      "scope.business_model (inferred from Stripe Terminal product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.type set to 'unclear' — no location mentioned in JD body",
+      "compensation.equity_mentioned set to false — no mention of equity in JD"
     ],
     "ambiguities": [
-      "Hardware product experience appears in both must_haves (as part of developer interface requirement sentence) and nice_to_haves (explicit 'a plus' language) — treated as a soft/nice-to-have based on 'a plus' qualifier",
-      "Location type is entirely unstated in the JD body — no mention of remote, hybrid, or onsite. Cities listed (Hong Kong, Taiwan) are travel destinations, not primary work locations.",
-      "The CS degree qualifier uses 'ideally' which could be soft, but it is nested within a 'We're looking for someone who has' required section — classified as hard with bridgeable='maybe'"
+      "The JD does not specify a location or work arrangement (remote, hybrid, onsite). Cities and location type cannot be determined from the JD content.",
+      "'Technically adept systems thinker, ideally with a Computer Science or equivalent degree' uses 'ideally' suggesting a preference, but it appears in the Minimum Requirements section — classified as hard with a note that equivalent experience is accepted.",
+      "The AOSP technology is mentioned only in the responsibilities section (not requirements), but Android OS internals appears in preferred qualifications — both captured appropriately."
     ]
   }
 }

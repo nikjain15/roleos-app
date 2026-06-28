@@ -1,0 +1,315 @@
+{
+  "company": "Figma",
+  "role_title": "Technical Program Manager, Infrastructure",
+  "url": "https://boards.greenhouse.io/figma/jobs/6020719004?gh_jid=6020719004",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "6020719004",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": "remote eligible; in-person onboarding required if hired",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Infrastructure-focused TPM",
+  "seniority": {
+    "level": "Senior IC (Staff-level TPM)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years in Infrastructure TPM or related roles",
+      "Expected to engage executive leadership and external partners independently",
+      "Base range $185K–$317K USD, consistent with senior/staff IC",
+      "Expected to set up and scale TPM functions"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_infra_tpm",
+      "raw_text_from_jd": "8+ years in Infrastructure TPM or related roles (cloud engineering, SRE, or infra-focused software engineering), with hands-on experience in cloud-native architectures and distributed systems (AWS, GCP, or similar)",
+      "skill_type": "years_of_experience",
+      "domain": "infrastructure_tpm_or_related_engineering",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [
+        "AWS",
+        "GCP"
+      ],
+      "technologies_named": [
+        "cloud-native architectures",
+        "distributed systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "infra_technical_depth",
+      "raw_text_from_jd": "Deep technical expertise across infrastructure components - storage (S3, RDS, DynamoDB), caching (Redis), search (OpenSearch), and event-driven systems (Kafka) - with the ability to reason across org-level goals, architectural trade-offs, and component-level details",
+      "skill_type": "domain_knowledge",
+      "domain": "infrastructure_components",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "S3",
+        "RDS",
+        "DynamoDB",
+        "Redis",
+        "OpenSearch",
+        "Kafka"
+      ],
+      "technologies_named": [
+        "storage",
+        "caching",
+        "search",
+        "event-driven systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "large_scale_infra_programs",
+      "raw_text_from_jd": "Track record driving large-scale infrastructure programs such as migrations, cost optimization, encryption/key management, and reliability initiatives for high-availability, business-critical services",
+      "skill_type": "outcome",
+      "domain": "infrastructure_program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "migrations",
+        "encryption/key management",
+        "high-availability"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_mgmt",
+      "raw_text_from_jd": "Strong cross-functional program management skills, including coordinating multi-team engineering orgs, tracking performance bottlenecks, optimizing infrastructure SLAs, and establishing PM best practices in ambiguous environments",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_management_exec_comms",
+      "raw_text_from_jd": "Proven stakeholder management, with experience engaging external partners (cloud providers, enterprise customers) and translating complex technical challenges into clear executive-level communications",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "cloud providers",
+        "enterprise customers"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "scaling_tpm_function",
+      "raw_text_from_jd": "A track record of setting up and scaling TPM functions or program management practices within an engineering organization",
+      "skill_type": "outcome",
+      "domain": "tpm_function_building",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_security_compliance",
+      "raw_text_from_jd": "Experience working on high-visibility enterprise security and compliance programs (SOC 2, FedRAMP, encryption key management)",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_security_and_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SOC 2",
+        "FedRAMP",
+        "encryption key management"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "incident_management",
+      "raw_text_from_jd": "Infrastructure incident management and analysis experience",
+      "skill_type": "domain_knowledge",
+      "domain": "incident_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "external_enterprise_partners",
+      "raw_text_from_jd": "Experience working with external enterprise partners on technical programs (e.g., Apple, AWS, Google)",
+      "skill_type": "domain_knowledge",
+      "domain": "external_enterprise_partnerships",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [
+        "AWS"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Apple",
+        "AWS",
+        "Google"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "swe_sre_background",
+      "raw_text_from_jd": "Background in software engineering or site reliability engineering (SWE/SRE-to-TPM career path)",
+      "skill_type": "domain_knowledge",
+      "domain": "software_or_site_reliability_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Infrastructure program management — reliability, storage, distributed systems, cloud-native performance, compliance (FedRAMP, SOC 2, encryption key management)",
+    "business_model": "B2B/B2C SaaS design collaboration platform",
+    "primary_metrics_inferred": [
+      "Infrastructure SLA performance",
+      "On-time delivery of infrastructure programs",
+      "System reliability and uptime",
+      "Risk and blocker resolution velocity"
+    ],
+    "cross_functional_partners": [
+      "Engineering (backend, infrastructure, security)",
+      "Compliance",
+      "Legal",
+      "Executive leadership",
+      "External enterprise partners (cloud providers, enterprise customers)"
+    ],
+    "core_responsibilities": [
+      "Lead the execution, coordination, and risk management of Figma's infrastructure projects, ensuring seamless integration with minimal performance impact",
+      "Drive key infrastructure initiatives, including reliability, storage, distributed systems, cloud-native performance improvements, and compliance programs (e.g., encryption key management, FedRAMP, SOC 2)",
+      "Partner closely with engineering, security, compliance, and legal teams to ensure alignment and on-time delivery",
+      "Track program milestones and ensure seamless delivery across multiple infrastructure teams, including data, caching, observability, and security engineering",
+      "Provide regular updates to executive leadership, external partners, and internal teams on the status of infrastructure programs, including risks, blockers, and dependencies",
+      "Develop and drive best practices in infrastructure program management, improving visibility into progress, risks, and technical dependencies",
+      "Facilitate large-scale testing and rollout strategies for critical infrastructure changes to minimize downtime and ensure high system reliability",
+      "Translate technical constraints and risks into executive-level communications for senior leadership and external stakeholders"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      185000,
+      317000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Infrastructure",
+    "distributed systems",
+    "cloud-native",
+    "AWS",
+    "GCP",
+    "FedRAMP",
+    "SOC 2",
+    "encryption key management",
+    "reliability",
+    "Kafka",
+    "Redis",
+    "OpenSearch",
+    "SRE",
+    "program management",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Wide base salary range disclosed ($185K–$317K) indicating transparency",
+    "Fully remote-US eligible, not restricted to hub offices",
+    "Explicitly encourages candidates to apply even if experience doesn't align perfectly",
+    "Clear scope and ownership area — infrastructure TPM greenspace",
+    "Equity and robust benefits package mentioned explicitly",
+    "Real technical depth expected (specific infra tools named), signaling a genuine engineering-focused TPM role"
+  ],
+  "red_flags": [
+    "Very wide comp range ($185K–$317K) makes it difficult to calibrate level expectations",
+    "Remote pay is localized at 80–100% of stated range, so actual remote compensation may be substantially lower than stated max",
+    "8+ years requirement is hard; no stated flexibility for fewer years with exceptional credentials",
+    "In-person onboarding is required despite remote-eligible status — logistics consideration for some candidates",
+    "Visa sponsorship status not addressed anywhere in the JD"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and 8+ years requirement)",
+      "scope.business_model (inferred from Figma's publicly known product)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
+      "location.visa_sponsorship (not mentioned anywhere; marked unclear)"
+    ],
+    "ambiguities": [
+      "Pay range ($185K–$317K) is extremely wide; JD notes it applies to SF and NY hub offices, with remote roles localized at 80–100% — actual salary for remote workers could be significantly lower than the stated maximum",
+      "The JD lists the role as available from 'US hubs or remotely in the United States' — treated as remote-us eligible with hybrid optional",
+      "Visa sponsorship is not mentioned at all; marked as unclear rather than assumed open"
+    ]
+  }
+}

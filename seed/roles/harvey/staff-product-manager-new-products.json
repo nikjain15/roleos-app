@@ -1,0 +1,262 @@
+{
+  "company": "Harvey",
+  "role_title": "Staff Product Manager, New Products",
+  "url": "https://jobs.ashbyhq.com/harvey/e89103ca-765f-42f1-882a-80364f3c2321",
+  "ats_provider": "ashby",
+  "ats_job_id": "e89103ca-765f-42f1-882a-80364f3c2321",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM — 0→1 / New Products",
+  "seniority": {
+    "level": "Staff PM (IC6-equivalent)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management experience",
+      "at least 3 years at a Staff or Senior PM level",
+      "Comp range $213,600–$300,000 consistent with Staff IC at a high-growth AI startup",
+      "Role title is explicitly 'Staff Product Manager'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "8+ years of product management experience, with at least 3 years at a Staff or Senior PM level at a high-growth technology company.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "at a high-growth technology company",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "years_staff_or_senior_pm",
+      "raw_text_from_jd": "at least 3 years at a Staff or Senior PM level at a high-growth technology company.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 3,
+      "unit": "years",
+      "qualifier": "Staff or Senior PM level",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_or_infrastructure_product_ownership",
+      "raw_text_from_jd": "Proven track record of owning and scaling complex platform or infrastructure products, ideally in enterprise SaaS, document management, knowledge management, or data-intensive domains.",
+      "skill_type": "outcome",
+      "domain": "platform_or_infrastructure_products",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "enterprise SaaS",
+        "document management",
+        "knowledge management"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_acumen_system_design",
+      "raw_text_from_jd": "Strong technical acumen with the ability to engage deeply with engineering on system design, distributed systems, data pipelines, and retrieval architectures.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems",
+        "data pipelines",
+        "retrieval architectures"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sensitive_data_security_compliance",
+      "raw_text_from_jd": "Experience building products that handle sensitive data with robust security, compliance, and access control requirements.",
+      "skill_type": "domain_knowledge",
+      "domain": "security_and_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication_influence",
+      "raw_text_from_jd": "Excellent communication skills with the ability to influence stakeholders at various levels, from engineers to executives.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_fast_pace",
+      "raw_text_from_jd": "Demonstrated ability to thrive in ambiguous, fast-paced environments and drive clarity through complexity.",
+      "skill_type": "cultural_fit",
+      "domain": "execution_and_environment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_sense_and_detail",
+      "raw_text_from_jd": "Strong product sense and attention to detail-ability to think through both high-level strategy and nitty-gritty implementation details.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "New product at intersection of AI, legal data, and legal work — including Harvey application, Word Add-In, Outlook plugin, integrations, APIs, and data partnerships",
+    "business_model": "enterprise B2B SaaS, AI platform for legal and professional services",
+    "primary_metrics_inferred": [
+      "Integration adoption and customer value delivered",
+      "Competitive differentiation via integrations",
+      "Commercial impact aligned with GTM strategy",
+      "Health metrics for new product"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Partnerships",
+      "GTM",
+      "Customer Success",
+      "PMM",
+      "Integrations engineering pod"
+    ],
+    "core_responsibilities": [
+      "Define and execute the product strategy for Harvey's new product across the Harvey application, Word Add-In, Outlook plugin, and beyond",
+      "Work closely with the Integrations engineering pod and Partnerships team to prioritize, scope, and ship integrations that drive customer value and competitive differentiation",
+      "Translate partner and customer demand signals into a coherent product roadmap",
+      "Collaborate closely with Engineering, GTM, Customer Success, and PMM to ensure investments are aligned with commercial strategy and customer needs",
+      "Partner with GTM and Partnerships to translate new capabilities into sales enablement, positioning, and customer-facing narratives",
+      "Define success metrics for health and iterate based on data"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      213600,
+      300000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Staff PM",
+    "0→1 product development",
+    "enterprise SaaS",
+    "legal AI",
+    "integrations",
+    "platform",
+    "agentic AI",
+    "data pipelines",
+    "retrieval architectures",
+    "distributed systems",
+    "Word Add-In",
+    "Outlook plugin",
+    "partnerships",
+    "GTM",
+    "professional services"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($213,600–$300,000)",
+    "Clear product surface and 0→1 ownership with named surfaces (Word Add-In, Outlook plugin)",
+    "Harvey has strong product-market fit signals: 1500+ customers in 60+ countries",
+    "World-class investor support mentioned, signals financial stability",
+    "Role is genuinely strategic — not execution-only"
+  ],
+  "red_flags": [
+    "Location and work authorization not stated anywhere in the JD — remote/hybrid/onsite and visa sponsorship status completely unclear",
+    "No equity details provided despite likely being a significant part of total comp at this level",
+    "Very broad comp range ($213,600–$300,000) may suggest high location pay differential or wide level band",
+    "No 'nice to have' section means all requirements are stated as hard — high bar with limited flexibility signaled"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from role title + years + comp range)",
+      "seniority.manages_people (inferred as false; no people management mentioned)",
+      "location.type (not stated; marked unclear)",
+      "location.work_auth (not stated; marked unclear)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "compensation.location_pay_differential (inferred from 'Depending on your location' language in privacy notice footer)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
+      "compensation.equity_mentioned (inferred as false; not referenced in JD)"
+    ],
+    "ambiguities": [
+      "The JD mentions 'ideally in enterprise SaaS, document management, knowledge management, or data-intensive domains' under the platform/infrastructure track record requirement — this reads as a soft qualifier (ideally) but is nested within an otherwise hard requirement. Treated as context/flavoring for a hard requirement rather than a separate nice-to-have.",
+      "Location is entirely absent from the JD body. The footer references an Applicant Privacy Notice 'depending on your location' which implies multiple geographies are possible, but no city, region, or remote eligibility is specified."
+    ]
+  }
+}

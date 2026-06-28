@@ -1,0 +1,278 @@
+{
+  "company": "Decagon",
+  "role_title": "Product Manager, Duet",
+  "url": "https://jobs.ashbyhq.com/decagon/9109be1c-b6e3-430f-a964-887253ef891a",
+  "ats_provider": "ashby",
+  "ats_job_id": "9109be1c-b6e3-430f-a964-887253ef891a",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "in-office (full)",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of product management experience required",
+      "First dedicated PM for Duet — founding/senior scope",
+      "Comp range $232K–$290K base consistent with Senior IC at a well-funded AI startup",
+      "Owns roadmap end-to-end, owns customer relationships, participates in sales demos"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years of product management experience at a company building AI, developer tooling, or enterprise software — you've owned a meaningful surface area and shipped things real customers depend on",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "qualifier": "at a company building AI, developer tooling, or enterprise software",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "LLMs"
+      ],
+      "industries_named": [
+        "developer tooling",
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_acumen",
+      "raw_text_from_jd": "Technical acumen — you can read an agent trace, engage meaningfully with engineers on model behavior, and form your own opinions about whether an AI output is good or not",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "agent trace",
+        "model behavior"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_written_communication",
+      "raw_text_from_jd": "Strong written communication — specs, strategy docs, and async updates that don't require follow-up questions",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_instincts",
+      "raw_text_from_jd": "Customer instincts — you know how to run discovery without leading the witness, and you can tell the difference between what customers say they want and what they actually need",
+      "skill_type": "capability",
+      "domain": "customer_discovery",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_navigation",
+      "raw_text_from_jd": "Comfort navigating ambiguity and a track record of making good decisions with incomplete information",
+      "skill_type": "capability",
+      "domain": "decision_making",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "llm_product_experience",
+      "raw_text_from_jd": "Experience shipping AI-powered features or working with LLMs in a product context is a strong plus",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "AI-powered features"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cs_engineering_math_degree",
+      "raw_text_from_jd": "A Computer Science, Engineering, or Math degree or equivalent technical experience.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Computer Science degree",
+        "Engineering degree",
+        "Math degree"
+      ]
+    },
+    {
+      "id": "startup_experience",
+      "raw_text_from_jd": "Previous startup or high-growth company experience.",
+      "skill_type": "domain_knowledge",
+      "domain": "startup_environment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "startup",
+        "high-growth company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "prototype_zero_to_one",
+      "raw_text_from_jd": "Experience with building prototypes and 0-to-1 products",
+      "skill_type": "outcome",
+      "domain": "early_stage_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Duet — AI-powered agent lifecycle improvement product; analyzes production conversations, identifies gaps, generates and validates AOP updates, and automates self-testing with human approval gates",
+    "business_model": "B2B enterprise SaaS, conversational AI platform",
+    "primary_metrics_inferred": [
+      "Duet adoption by customers",
+      "Agent performance improvement over time",
+      "Compression of iteration cycle for customers (days to minutes)",
+      "Quality of Duet AI output (evaluation criteria)"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Research",
+      "Design",
+      "Go-to-Market (GTM)",
+      "Sales"
+    ],
+    "core_responsibilities": [
+      "Own the Duet product roadmap from discovery through delivery",
+      "Spend meaningful time with customers to understand how they use Duet",
+      "Partner with engineering and research team to ship and validate quickly",
+      "Develop evaluation criteria for Duet's AI output quality",
+      "Work with GTM to translate Duet's capabilities into proof points that land with heads of CX and technical buyers — join customer calls and sales demos",
+      "Define the metrics that matter: not just adoption, but whether Duet is actually making agents better over time and compressing the iteration cycle for customers"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      232000,
+      290000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Duet",
+    "agent lifecycle",
+    "AI agents",
+    "conversational AI",
+    "LLMs",
+    "product roadmap",
+    "enterprise software",
+    "developer tooling",
+    "agent trace",
+    "model behavior",
+    "AOP updates",
+    "Autopilot",
+    "customer discovery",
+    "0-to-1"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed and competitive ($232K–$290K base + equity)",
+    "First dedicated PM for Duet — high ownership, high impact, founding-level opportunity",
+    "Clear product surface with articulated problem space (agent lifecycle improvement)",
+    "Well-funded company (a16z, Accel, Bain Capital Ventures, Coatue, Index Ventures)",
+    "Strong enterprise customer roster (Cash App, Square, Chime, Oura Health, Avis Budget Group)"
+  ],
+  "red_flags": [
+    "Fully in-office requirement with no remote option; specific office location(s) not named in JD",
+    "No visa sponsorship or work authorization information provided",
+    "Role scope is broad (roadmap, customer relationships, sales demos, GTM, AI evaluation) — may indicate resource constraints or high expectations for a single PM",
+    "JD does not specify office location city, making it difficult to assess commute feasibility"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and 'founding PM' framing)",
+      "scope.business_model (inferred from product description and customer list)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly in JD)",
+      "location.cities_listed (not stated in JD body; left empty)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)"
+    ],
+    "ambiguities": [
+      "Office location city is never named; JD says 'We're an in-office company' but does not specify which city/cities are relevant to this role.",
+      "The JD mentions UK employees receive 25 days statutory leave, suggesting potential international hiring, but the role description and compensation (USD) suggest US-primary; work authorization requirements are unstated."
+    ]
+  }
+}

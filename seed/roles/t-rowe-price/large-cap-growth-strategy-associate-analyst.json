@@ -4,7 +4,7 @@
   "url": "https://troweprice.wd5.myworkdayjobs.com/en-US/TROWEPRICE/job/Baltimore-MD/Large-Cap-Growth-Strategy-Associate-Analyst_76537",
   "ats_provider": "workday",
   "ats_job_id": null,
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -19,17 +19,18 @@
   },
   "archetype": "Other",
   "archetype_confidence": "high",
-  "secondary_archetype": "Fundamental Equity Research Associate Analyst",
+  "secondary_archetype": "Equity Research / Investment Associate Analyst",
   "seniority": {
-    "level": "Junior IC / Associate (structured 3-5 year program)",
+    "level": "Junior / Early Career (Associate Analyst, structured program)",
     "years_required_min": null,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "Associate Analyst program is a three-to-five-year structured program",
       "Designed to develop future fundamental investment analysts",
-      "Bachelor's Degree required",
-      "Comp range $110K-$160K base, consistent with junior/associate level at asset manager"
+      "Exceptional performers have the potential to be promoted to Investment Analyst",
+      "Bachelor's Degree required — entry-level credential",
+      "Base salary $110,000-$160,000 consistent with junior analyst range at asset managers"
     ]
   },
   "must_haves": [
@@ -56,16 +57,14 @@
       "id": "excel_financial_modelling",
       "raw_text_from_jd": "Strong Excel and financial modelling skills including previous experience building three-statement models",
       "skill_type": "tool_proficiency",
-      "domain": "financial_modelling",
-      "evidence_required": "work_history",
+      "domain": "financial_modeling",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [
         "Excel"
       ],
-      "technologies_named": [
-        "three-statement models"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -74,11 +73,11 @@
   ],
   "nice_to_haves": [
     {
-      "id": "strong_academic_background",
+      "id": "strong_academic_background_curiosity",
       "raw_text_from_jd": "Strong academic background and intellectual curiosity",
       "skill_type": "cultural_fit",
-      "domain": "academic_achievement",
-      "evidence_required": "degree_or_work_history",
+      "domain": "academic_excellence",
+      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
@@ -92,7 +91,7 @@
       "id": "self_starter_collaborative",
       "raw_text_from_jd": "Highly motivated, confident self-starter, with ability to work independently and collaboratively in a performance-driven environment",
       "skill_type": "cultural_fit",
-      "domain": "work_style",
+      "domain": "work_ethic_and_teamwork",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -115,7 +114,7 @@
       "technologies_named": [],
       "industries_named": [
         "asset management",
-        "financial markets"
+        "equity markets"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -137,10 +136,10 @@
       "credentials_named": []
     },
     {
-      "id": "research_insight_derivation",
+      "id": "research_insights",
       "raw_text_from_jd": "Demonstrated ability to derive meaningful insights from in-depth research and analysis",
       "skill_type": "capability",
-      "domain": "research_and_analysis",
+      "domain": "fundamental_research",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "soft",
@@ -169,19 +168,19 @@
       ]
     },
     {
-      "id": "llm_claude_python_familiarity",
+      "id": "llm_claude_python",
       "raw_text_from_jd": "Familiarity with LLMs, Claude Code, and/or Python is preferred",
       "skill_type": "tool_proficiency",
-      "domain": "ai_and_programming",
+      "domain": "ai_and_programming_tools",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [
-        "Claude Code",
-        "Python"
+        "Claude Code"
       ],
       "technologies_named": [
-        "LLMs"
+        "LLMs",
+        "Python"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -190,29 +189,31 @@
     }
   ],
   "explicitly_excluded": [
-    "FINRA licenses are not required and will not be supported for this role."
+    "FINRA licenses are not required and will not be supported for this role.",
+    "Applicants for employment in the US must have work authorization that does not now or in the future require sponsorship of a visa for employment authorization in the United States (e.g., H1-B visa, F-1 visa (OPT), TN visa or any other non-immigrant work status)."
   ],
   "scope": {
     "team_size_estimate": "unclear",
     "surface": "Large-Cap Growth Strategy — fundamental equity research support for Portfolio Manager",
-    "business_model": "B2B and B2C asset management (institutional and individual investors)",
+    "business_model": "B2B and B2C asset management (institutional, retirement, individual clients)",
     "primary_metrics_inferred": [
-      "Quality and accuracy of financial models and research",
-      "Contribution to investment decisions",
-      "Promotion potential to Investment Analyst within 3-5 years"
+      "Quality of investment research and recommendations",
+      "Performance of Large-Cap Growth Strategy",
+      "Development toward Investment Analyst promotion"
     ],
     "cross_functional_partners": [
       "Investment Analysts",
       "Portfolio Managers",
       "Senior Investment Professionals",
-      "Public Company C-Suite Executives"
+      "Public company C-suite executives"
     ],
     "core_responsibilities": [
-      "Provide fundamental research support to the Large-Cap Growth Strategy Portfolio Manager",
+      "Provide fundamental research support to Large-Cap Growth Strategy Portfolio Manager",
       "Collaboration with investment analysts and portfolio managers",
       "Extensive financial analysis and company/industry related research projects",
-      "Incorporating macroeconomic and market analysis into bottom-up company research to support investment decisions",
+      "Incorporate macroeconomic and market analysis into bottom-up company research",
       "Interact with public company C-suite executives",
+      "Learn directly from senior investment professionals",
       "Provide investment insight and impact the investment process beyond just number crunching"
     ]
   },
@@ -233,41 +234,41 @@
     "financial modelling",
     "three-statement models",
     "bottom-up research",
-    "portfolio manager support",
     "investment analyst",
+    "portfolio manager",
     "CFA",
-    "equity investing",
+    "Excel",
     "macroeconomic analysis",
-    "LLMs",
-    "Python"
+    "equity investing",
+    "institutional investor"
   ],
   "buzzword_density": "low",
   "green_flags": [
-    "Compensation range disclosed ($110K-$160K base) and consistent across all geographies",
-    "Structured 3-5 year development program with mentoring and training",
-    "Clear promotion path to Investment Analyst for exceptional performers",
-    "Access to senior investment professionals and C-suite executives",
-    "Discretionary bonus eligibility on top of base salary",
-    "Generous benefits package including retirement plan and hybrid work schedule"
+    "Base salary range disclosed ($110,000-$160,000) — consistent and transparent across all locations",
+    "Structured 3-to-5-year development program with mentoring and training",
+    "Clear promotion path from Associate Analyst to Investment Analyst for exceptional performers",
+    "Access to senior investment professionals and C-suite executives directly",
+    "Competitive compensation with discretionary bonus upside",
+    "Established firm with 85+ years of asset management experience"
   ],
   "red_flags": [
-    "Hybrid policy is very limited — only up to one day per week from home, essentially near-full on-site commitment in Baltimore, MD",
-    "Work authorization requirement explicitly excludes H1-B, F-1 (OPT), TN, and other non-immigrant visa holders, with no sponsorship",
-    "Role is investment research, not product/program management — archetype 'Other' applied; may not match PM-focused applicants",
-    "No maximum years of experience stated — seniority expectations for applicants remain somewhat ambiguous (likely new grad / early career given program structure)"
+    "Hybrid policy is heavily in-office — only one day per week from home; fully remote candidates ineligible",
+    "No visa sponsorship under any circumstances; work authorization requirement is strict",
+    "JD city in URL is Baltimore, MD but location is not explicitly named in body — primary city inferred from URL",
+    "Most 'Preferred' qualifications read like de facto expectations for a competitive candidate pool at a top asset manager"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 'three-to-five-year structured program', 'designed to develop future fundamental investment analysts', and Bachelor's degree requirement)",
-      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities and program structure)",
-      "scope.business_model (inferred from company description as asset manager serving individuals and institutions)",
-      "location.cities_listed (inferred from URL showing Baltimore-MD; body says 'Please review the job posting for the location')",
-      "compensation.location_pay_differential (ranges are identical across all listed geographies, so differential is false)"
+      "seniority.level (inferred from 'Associate Analyst' program description, structured duration, and comp range)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "scope.business_model (inferred from firm description)",
+      "location.cities_listed (Baltimore, MD inferred from URL; body says 'our offices' generically)",
+      "location.remote_us_eligible (inferred as false from 'up to one day per week from home')"
     ],
     "ambiguities": [
-      "The JD lists identical salary ranges ($110K-$160K) for Maryland/Colorado/Washington/remote, Washington D.C., and New York/California — unusual given cost-of-living differences; unclear if this is intentional or a template artifact.",
-      "The JD mentions 'remote workers' in the salary range section but the work flexibility section says hybrid with 'up to one day per week from home' — treated as hybrid/onsite here; 'remote workers' reference may be a templated pay disclosure.",
-      "Most 'Preferred' qualifications read more like cultural/behavioral expectations that many would consider near-requirements (e.g., intellectual curiosity, passion for equity investing) — flagged but kept as soft per JD language."
+      "The JD body states compensation ranges for Maryland, Colorado, Washington, D.C., New York, and California — all at the same $110,000-$160,000 range — implying no location pay differential, but also suggests multiple possible work locations beyond Baltimore. The URL anchors to Baltimore, MD. Treated primary city as Baltimore.",
+      "Preferred qualifications list includes items that appear culturally required (e.g., 'demonstrated interest and passion for equity investing') but are listed under 'Preferred'. Classified as soft per JD structure."
     ]
   }
 }

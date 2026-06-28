@@ -4,7 +4,7 @@
   "url": "https://sofi.com/careers/job/7697154003?gh_jid=7697154003",
   "ats_provider": "greenhouse",
   "ats_job_id": "7697154003",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,7 +17,7 @@
   },
   "archetype": "Technical PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Fintech / Payments Infrastructure PM",
+  "secondary_archetype": "Generalist PM with fintech/payments domain",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 5,
@@ -26,7 +26,8 @@
     "level_signals": [
       "5+ years of product management experience",
       "Accountable to results reported at the executive level",
-      "Role title explicitly states 'Senior Product Manager'"
+      "Zero-to-one commercial banking platform ownership",
+      "Role title is 'Senior Product Manager'"
     ]
   },
   "must_haves": [
@@ -50,7 +51,7 @@
       ]
     },
     {
-      "id": "years_pm_experience",
+      "id": "years_pm_payments",
       "raw_text_from_jd": "5+ years of product management experience, with meaningful time in payments, commercial/B2B fintech, or financial infrastructure.",
       "skill_type": "years_of_experience",
       "domain": "product_management",
@@ -64,7 +65,7 @@
       "technologies_named": [],
       "industries_named": [
         "payments",
-        "fintech",
+        "commercial/B2B fintech",
         "financial infrastructure"
       ],
       "geographies_named": [],
@@ -72,12 +73,12 @@
       "credentials_named": []
     },
     {
-      "id": "payments_domain_knowledge",
+      "id": "payment_rails_knowledge",
       "raw_text_from_jd": "Deep understanding of how money moves - wires, ACH, real-time rails, stablecoins - and what's different about commercial payments: higher stakes, multi-party authorization, beneficiary management, batch operations.",
       "skill_type": "domain_knowledge",
       "domain": "payments",
       "evidence_required": "work_history",
-      "bridgeable": "no",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
@@ -94,7 +95,7 @@
       "credentials_named": []
     },
     {
-      "id": "api_product_experience",
+      "id": "api_shipping_experience",
       "raw_text_from_jd": "Experience shipping APIs that external developers integrate against. You think in contracts, error codes, idempotency keys, and developer experience.",
       "skill_type": "capability",
       "domain": "api_product_management",
@@ -104,7 +105,6 @@
       "tools_named": [],
       "technologies_named": [
         "APIs",
-        "idempotency keys",
         "webhooks"
       ],
       "industries_named": [],
@@ -113,12 +113,12 @@
       "credentials_named": []
     },
     {
-      "id": "requirements_clarity",
+      "id": "requirements_definition",
       "raw_text_from_jd": "Ability to cut through swirl and define the requirements. You can take ambiguous client needs and translate them into clear, testable requirements that an engineering team can execute without constant clarification.",
       "skill_type": "capability",
-      "domain": "requirements_definition",
+      "domain": "requirements_management",
       "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -133,7 +133,7 @@
       "skill_type": "capability",
       "domain": "stakeholder_management",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -154,7 +154,7 @@
       "technologies_named": [],
       "industries_named": [
         "fintech",
-        "banking"
+        "financial services"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -164,14 +164,14 @@
       "id": "technical_credibility",
       "raw_text_from_jd": "Technical credibility - you can read an API spec, review a sequence diagram, and discuss system design with engineers. You self-service data.",
       "skill_type": "capability",
-      "domain": "technical_acumen",
-      "evidence_required": "hands_on_use",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
         "API spec",
-        "sequence diagrams",
+        "sequence diagram",
         "system design"
       ],
       "industries_named": [],
@@ -180,17 +180,15 @@
       "credentials_named": []
     },
     {
-      "id": "communication_and_ai_fluency",
+      "id": "communication_ai_fluency",
       "raw_text_from_jd": "Strong communication, forward lean and AI-fluency",
       "skill_type": "capability",
-      "domain": "communication",
+      "domain": "communication_and_ai",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "AI"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -199,7 +197,7 @@
   ],
   "nice_to_haves": [
     {
-      "id": "bank_neobank_experience",
+      "id": "bank_or_neobank_experience",
       "raw_text_from_jd": "Experience at a bank, neobank, or banking-as-a-service provider - particularly on the commercial or treasury side.",
       "skill_type": "domain_knowledge",
       "domain": "banking_commercial_treasury",
@@ -210,7 +208,8 @@
       "technologies_named": [],
       "industries_named": [
         "banking",
-        "fintech"
+        "neobank",
+        "banking-as-a-service"
       ],
       "geographies_named": [],
       "employer_types_named": [
@@ -221,10 +220,10 @@
       "credentials_named": []
     },
     {
-      "id": "realtime_rails_stablecoin",
+      "id": "rtp_fednow_stablecoin_familiarity",
       "raw_text_from_jd": "Familiarity with real-time payment rails (FedNow, RTP) and/or stablecoin settlement infrastructure.",
       "skill_type": "domain_knowledge",
-      "domain": "real_time_payments",
+      "domain": "real_time_payments_stablecoins",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -235,14 +234,15 @@
         "stablecoin settlement"
       ],
       "industries_named": [
-        "payments"
+        "payments",
+        "fintech"
       ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "developer_facing_product_companies",
+      "id": "developer_facing_product_experience",
       "raw_text_from_jd": "Experience with developer-facing products at companies like Stripe, Plaid, Marqeta, Unit, Treasury Prime, Modern Treasury, or similar.",
       "skill_type": "domain_knowledge",
       "domain": "developer_facing_products",
@@ -272,13 +272,13 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Big Business Banking (BBB) - SoFi's zero-to-one commercial banking platform for institutional clients; payments product experience and API/developer platform",
-    "business_model": "B2B commercial banking / financial infrastructure, national bank charter",
+    "surface": "Payments product experience and API/developer platform for Big Business Banking (BBB) - SoFi's zero-to-one commercial banking platform for institutional clients",
+    "business_model": "B2B commercial banking / financial infrastructure (national bank charter backed)",
     "primary_metrics_inferred": [
-      "Client adoption of new payment rails",
-      "Time-to-first-successful-API-payment for new clients",
-      "Payment exception/failure resolution rate",
-      "Go-to-market readiness for new rail launches"
+      "Client adoption of payment rails",
+      "API integration success rate (time from signed contract to first successful API payment)",
+      "Payment operations exception resolution speed",
+      "Go-to-market readiness and rail launch adoption"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -311,51 +311,49 @@
   "top_keywords": [
     "commercial banking",
     "payments",
-    "API product",
-    "developer experience",
-    "wires",
     "ACH",
+    "wires",
     "FedNow",
     "RTP",
-    "stablecoin",
     "SEN",
+    "API",
+    "developer experience",
     "B2B fintech",
-    "PRD",
-    "sandbox",
+    "Big Business Banking",
+    "stablecoin",
     "treasury",
-    "Reg E",
-    "BSA",
-    "idempotency",
-    "zero-to-one"
+    "PRD",
+    "regulated environment"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear, well-scoped product surface with specific payment rails named (wires, SEN, FedNow, RTP, ACH, SoFiUSD)",
-    "Zero-to-one greenfield commercial banking platform - high ownership and impact opportunity",
-    "Backed by national bank charter - meaningful institutional backing",
-    "Explicit list of cross-functional partners and responsibilities, suggesting organizational clarity",
-    "Mentions compliance as a product feature, not a blocker - mature product mindset"
+    "Zero-to-one commercial banking platform - high ownership and impact opportunity",
+    "Clear articulation of responsibilities and required technical depth",
+    "Specific payment rails named (FedNow, RTP, ACH, SEN, wires) - signals genuine domain seriousness",
+    "AI-fluency listed as a requirement rather than just a nice-to-have, suggesting modern product culture",
+    "EEO and San Francisco Fair Chance Ordinance mentioned - inclusive hiring signals"
   ],
   "red_flags": [
-    "Compensation range not disclosed in the JD body (only references a separate benefits page)",
-    "Location/remote policy is unclear - JD body does not specify city or hybrid requirements, though Hawaii and Alaska are excluded",
-    "Zero-to-one platform may indicate early-stage internal product with uncertain resourcing or prioritization dynamics",
-    "No mention of visa sponsorship"
+    "Compensation range not disclosed despite mention that 'base pay range for this role is listed below' - appears to be missing from the JD as scraped",
+    "Location type is unclear - no city or remote policy explicitly stated in the body (Hawaii/Alaska exclusion is the only geographic signal)",
+    "Visa sponsorship not addressed",
+    "Equity not mentioned despite senior-level role at a public fintech"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
       "seniority.level (inferred from title 'Senior' and 5+ years requirement)",
-      "seniority.manages_people (inferred as false; no management responsibility mentioned)",
-      "location.type (set to 'unclear'; no city, hybrid, or remote policy stated beyond Hawaii/Alaska exclusion)",
-      "location.remote_us_eligible (inferred true from Hawaii/Alaska exclusion language implying remote is otherwise possible)",
-      "scope.business_model (inferred from platform description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "compensation.location_pay_differential (inferred from 'Final base pay offer will be determined based on individual factors such as the candidate's experience, skills, and location')"
+      "seniority.manages_people (inferred as false; no management responsibilities mentioned)",
+      "location.type (unclear; no explicit remote/hybrid/onsite policy stated in body)",
+      "location.remote_us_eligible (inferred as likely true given Hawaii/Alaska exclusion language implying remote is possible elsewhere)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "scope.business_model (inferred from product description)",
+      "compensation.base_range_usd (JD text says range is listed below but content was not present in scraped markdown)",
+      "compensation.location_pay_differential (inferred from standard SoFi language about final offer based on candidate location)"
     ],
     "ambiguities": [
-      "Location policy not explicitly stated - JD references Hawaii/Alaska exclusion suggesting remote is possible, but no formal remote/hybrid/onsite designation is given. Treated as 'unclear'.",
-      "Compensation base range referenced ('listed below') but not included in the scraped JD content - may be present on the actual job page but absent here.",
-      "Visa sponsorship status not mentioned anywhere in the JD."
+      "The JD states 'The base pay range for this role is listed below' but no range appears in the scraped content — likely a rendering/scraping artifact. Compensation marked as unknown.",
+      "Location policy is not stated. The only geographic reference is an exclusion of Hawaii and Alaska for remote work, implying remote is offered elsewhere, but hybrid vs fully-remote is not clarified.",
+      "Visa sponsorship is not addressed anywhere in the JD."
     ]
   }
 }

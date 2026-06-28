@@ -1,0 +1,241 @@
+{
+  "company": "Sierra",
+  "role_title": "RFP Strategy & Operations Analyst",
+  "url": "https://jobs.ashbyhq.com/sierra/03424869-528d-4db1-b099-5d7f736d1a39",
+  "ats_provider": "ashby",
+  "ats_job_id": "03424869-528d-4db1-b099-5d7f736d1a39",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "primarily in-person",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Revenue / Deal Operations",
+  "seniority": {
+    "level": "Junior-Mid IC",
+    "years_required_min": 2,
+    "years_required_max": 3,
+    "manages_people": false,
+    "level_signals": [
+      "2-3 years of experience at a high-growth technology company",
+      "Operational execution role, no people management mentioned",
+      "Described as 'operational backbone' without leadership scope"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_relevant_function",
+      "raw_text_from_jd": "2-3 years of experience at a high-growth technology company in product operations, revenue operations, legal operations, deal desk, solutions engineering, or investment banking",
+      "skill_type": "years_of_experience",
+      "domain": "operations_or_deal_adjacent",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "attention_to_detail_prioritization",
+      "raw_text_from_jd": "Exceptional attention to detail and the ability to manage multiple competing priorities simultaneously without losing quality",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_communication",
+      "raw_text_from_jd": "Strong written communication skills - you can translate complex, technical information into clear and accurate language quickly",
+      "skill_type": "capability",
+      "domain": "written_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_output_quality",
+      "raw_text_from_jd": "Proven ability to sustain high output and high quality simultaneously - you don't cut corners when the workload spikes",
+      "skill_type": "outcome",
+      "domain": "operational_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_improvement_track_record",
+      "raw_text_from_jd": "A track record of improving the processes you inherit, not just running them",
+      "skill_type": "outcome",
+      "domain": "process_improvement",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_automation_enthusiasm",
+      "raw_text_from_jd": "Genuine enthusiasm for applying AI and automation tools to make repetitive work faster and better",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_automation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "security_compliance_exposure",
+      "raw_text_from_jd": "Exposure to enterprise security or compliance questionnaires (SOC 2, ISO 27001, GDPR, etc.)",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_security_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SOC 2",
+        "ISO 27001",
+        "GDPR"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sales_adjacent_customer_trust",
+      "raw_text_from_jd": "Experience in a sales-adjacent or customer trust function",
+      "skill_type": "domain_knowledge",
+      "domain": "sales_or_customer_trust",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "RFP response function — end-to-end ownership of RFP triage, coordination, content infrastructure, and automation",
+    "business_model": "B2B enterprise SaaS (AI customer experience platform)",
+    "primary_metrics_inferred": [
+      "RFP response accuracy and quality",
+      "On-time delivery of RFP responses",
+      "Knowledge base coverage and freshness",
+      "Reduction in manual work via automation"
+    ],
+    "cross_functional_partners": [
+      "Security",
+      "Legal",
+      "Product",
+      "Sales (AEs)"
+    ],
+    "core_responsibilities": [
+      "Own Sierra's RFP response: Triage incoming RFP requests, coordinate with internal stakeholders, and deliver accurate, polished responses back to sales on time",
+      "Drive cross-functional coordination: Partner with subject-matter experts (SMEs) in Security, Legal, and Product to get the right answers fast, managing competing stakeholder priorities without losing momentum or quality",
+      "Own the content infrastructure: Maintain and continuously improve Sierra's RFP knowledge base, identifying gaps, working with SMEs to close them, and raising the quality bar on every response",
+      "Build toward automation: Implement and iterate on AI tooling and workflow automation to reduce manual work and increase consistency across the response process",
+      "Support Sales in high-stakes evaluations: Help AEs navigate complex RFP requirements, flag patterns and themes in prospect questions that inform how Sales positions Sierra, and ensure every response puts Sierra's best foot forward"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "RFP",
+    "revenue operations",
+    "deal desk",
+    "knowledge base",
+    "AI automation",
+    "enterprise sales",
+    "cross-functional coordination",
+    "security questionnaires",
+    "process improvement",
+    "content infrastructure"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear, specific scope of ownership — RFP function is well-defined",
+    "AI-forward role with explicit automation mandate",
+    "High-profile co-founders (Bret Taylor, Clay Bavor) signal credibility and growth",
+    "Encourages applications even if experience doesn't precisely match",
+    "Equity participation mentioned for full-time employees",
+    "Enterprise AI company in growth phase — relevant market exposure"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed",
+    "Primarily in-person in San Francisco — eliminates remote candidates",
+    "Visa sponsorship and work authorization not addressed",
+    "Role title 'Analyst' may underrepresent scope or limit leveling ceiling",
+    "No mention of team structure or reporting line, making growth path unclear"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range 2-3 and operational IC framing)",
+      "scope.business_model (inferred from product description: AI customer experience platform sold to enterprises)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.remote_us_eligible (inferred false from 'primarily an in-person company based in San Francisco')",
+      "location.office_time_required (inferred from 'primarily an in-person company' language)"
+    ],
+    "ambiguities": [
+      "JD lists many global office locations (Atlanta, New York, London, Paris, Madrid, Munich, Singapore, Tokyo, Sydney) but the role appears to be San Francisco-based given 'primarily in-person' framing and no explicit remote/hybrid option stated for this role. It is unclear if other city offices are eligible for this position.",
+      "Severity of 'Genuine enthusiasm for applying AI and automation tools' — phrased as a characteristic rather than a requirement, but appears in the unconditional 'What you'll bring' section; classified as hard with cultural_fit skill_type."
+    ]
+  }
+}

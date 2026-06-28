@@ -1,0 +1,431 @@
+{
+  "company": "Wayve",
+  "role_title": "Lead Technical Program Manager, Data",
+  "url": "https://wayve.firststage.co/jobs?gh_jid=8602891002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8602891002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Sunnyvale, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Data Platform / ML Data Infrastructure TPM",
+  "seniority": {
+    "level": "Lead / Staff TPM (people manager)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "8+ years in data TPM explicitly required",
+      "Responsibility to build, coach, and grow a TPM team",
+      "Comp range $259,200–$312,400 base consistent with Lead/Staff IC",
+      "'Lead the function' language implies people leadership scope"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_data_tpm",
+      "raw_text_from_jd": "8+ years in data: Deep, hands-on experience delivering data programs as a technical program manager - data platform, pipelines, enrichment / curation, labelling - including people and process leadership. You've built or scaled a program function and you get things done with ownership and a bias for action.",
+      "skill_type": "years_of_experience",
+      "domain": "data_program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "data platform",
+        "pipelines",
+        "enrichment",
+        "curation",
+        "labelling"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "people_leadership",
+      "raw_text_from_jd": "People leadership: You build, coach, and grow high-performing teams, and raise the bar on the craft.",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_credibility_data_infra",
+      "raw_text_from_jd": "Technically strong: Credible with engineers on data platforms, pipelines, and large-scale data infrastructure, even though you won't write production code. Experience with distributed data platforms at Petabyte scale.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "data platforms",
+        "pipelines",
+        "large-scale data infrastructure",
+        "distributed data platforms",
+        "Petabyte scale"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_ingestion_dags",
+      "raw_text_from_jd": "Experience with data ingestion from raw data to processing through different stages and pipelines. Understands Directed Acyclic Graphs, their usage and challenges.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_pipelines",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Directed Acyclic Graphs",
+        "data ingestion",
+        "pipelines"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_understanding",
+      "raw_text_from_jd": "Solid understanding of Machine Learning, GPUs and training and inference of 500M-20B parameter models.",
+      "skill_type": "domain_knowledge",
+      "domain": "machine_learning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Machine Learning",
+        "GPUs",
+        "training",
+        "inference",
+        "500M-20B parameter models"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_platform_tooling_proficiency",
+      "raw_text_from_jd": "Proficient with some or all of Databricks, Flyte, Ray, Kubernetes, Azure, Docker, Python.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_platform_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Databricks",
+        "Flyte",
+        "Ray",
+        "Kubernetes",
+        "Azure",
+        "Docker",
+        "Python"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_agents_proficiency",
+      "raw_text_from_jd": "Proficient with AI Agents to accelerate execution: eg. Cursor, Claude, Codex.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_coding_assistants",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Cursor",
+        "Claude",
+        "Codex"
+      ],
+      "technologies_named": [
+        "AI Agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_resilience",
+      "raw_text_from_jd": "Stays neutral and adapts under pressure: Effective in ambiguous, fast-moving environments; you flex your style and bring structure without slowing delivery.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "Systems thinking: You reason about how the parts of a complex data system fit together, and how a change in one area ripples into others.",
+      "skill_type": "capability",
+      "domain": "data_systems",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_minded",
+      "raw_text_from_jd": "Product-minded: You focus on outcomes and the people your programs serve - prioritising by impact and defining what good looks like, not just tracking activity.",
+      "skill_type": "capability",
+      "domain": "product_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Exceptional cross-functional leadership: You align and influence across data, ML, and engineering without relying on authority.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_business_impact",
+      "raw_text_from_jd": "Strategic & business impact: You link data investment to measurable outcomes - quality, throughput, cost.",
+      "skill_type": "outcome",
+      "domain": "strategy",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_communicator",
+      "raw_text_from_jd": "Clear, data-driven communicator: You set direction with clarity and steer with the right metrics.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_mindset",
+      "raw_text_from_jd": "Growth mindset: Open to feedback and always looking to improve.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "large_scale_distributed_platform_experience",
+      "raw_text_from_jd": "Working experience with a large scale distributed data platform used by 100s of engineers and researchers.",
+      "skill_type": "domain_knowledge",
+      "domain": "large_scale_data_platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed data platform"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "av_robotics_ml_background",
+      "raw_text_from_jd": "Background in autonomous vehicles, robotics, or another large-scale data / ML program.",
+      "skill_type": "domain_knowledge",
+      "domain": "autonomous_vehicles_robotics_ml",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "autonomous vehicles",
+        "robotics"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "engineering_cs_degree_or_background",
+      "raw_text_from_jd": "An engineering or computer science degree, or experience working as an engineer; fluent with modern delivery tooling (e.g. Jira).",
+      "skill_type": "credential",
+      "domain": "education_or_engineering_experience",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Jira"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "engineering degree",
+        "computer science degree"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "small TPM team (exact size not stated)",
+    "surface": "Data org — data platform, ingestion, standardisation pipelines, enrichment, curation, and labelling for the AI Driver; also supports simulation and validation teams",
+    "business_model": "B2B — AI software and foundation models for automakers (automated driving systems)",
+    "primary_metrics_inferred": [
+      "Data quality",
+      "Data throughput",
+      "Cost of data operations",
+      "Time-to-insight / data delivery predictability"
+    ],
+    "cross_functional_partners": [
+      "Data leadership",
+      "Engineering",
+      "ML",
+      "External data/annotation suppliers",
+      "Simulation and validation teams"
+    ],
+    "core_responsibilities": [
+      "Build, coach, and grow a small TPM team; hire to fill gaps and raise the bar",
+      "Partner with Data leadership on planning, prioritisation, and execution across the data roadmap",
+      "Maintain partnership with Engineering leaders to land big outcomes",
+      "Drive flagship programs directly: data platform, data pipelines, enrichment & curation, labelling/annotation, dataset management and quality",
+      "Establish scalable practices: planning cadences, governance, KPIs and dashboards, escalations and operational reviews",
+      "Align cross-functionally with data, ML, engineering, and external annotation suppliers; manage dependencies, risk, and trade-offs",
+      "Tie delivery to data quality, throughput, cost, and time-to-insight; represent the data org in company-level reviews"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      259200,
+      312400
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "competitive equity package",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "data platform",
+    "data pipelines",
+    "enrichment and curation",
+    "labelling",
+    "Petabyte scale",
+    "Directed Acyclic Graphs",
+    "Databricks",
+    "Kubernetes",
+    "Machine Learning",
+    "autonomous vehicles",
+    "people leadership",
+    "data quality",
+    "throughput",
+    "AI agents"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($259,200–$312,400 base) plus equity",
+    "Clear ownership scope and measurable success criteria (data quality, throughput, cost)",
+    "Role has people management scope with explicit team-building mandate",
+    "JD explicitly encourages candidates who don't meet every requirement to apply",
+    "Inclusive interview accommodations mentioned",
+    "Company at frontier of AV/Embodied AI — high-impact technical domain"
+  ],
+  "red_flags": [
+    "No visa sponsorship information stated — unclear for international candidates",
+    "Hybrid in Sunnyvale, CA only — eliminates fully remote candidates",
+    "Broad technical requirements (Petabyte-scale infra, DAGs, 500M-20B parameter models, multiple cloud/orchestration tools) may be difficult to fully satisfy",
+    "Office time requirement for hybrid not specified — ambiguity around in-office expectations"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, 8+ years requirement, and people management scope)",
+      "scope.team_size_estimate (JD says 'small TPM team' but no headcount given)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and delivery framing; not a discrete list in JD)",
+      "scope.business_model (inferred from company description — B2B automaker-facing AI software)",
+      "location.remote_us_eligible (inferred as false from 'full-time role based in Sunnyvale, CA (hybrid)' language)",
+      "location.visa_sponsorship (not mentioned in JD body; marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD lists 14 bullets under 'Essential' but explicitly states 'The first four are our must-haves.' Items 5–14 under Essential are therefore ambiguous — they appear as unconditional bullets but the JD implies only the first four are strict gates. All Essential items are classified as hard severity here since they appear in the required section without 'preferred' language; however the first four carry special emphasis per the JD.",
+      "Office time percentage for hybrid role is not specified — only 'hybrid' is stated.",
+      "Visa sponsorship policy not mentioned; left as 'unclear'."
+    ]
+  }
+}

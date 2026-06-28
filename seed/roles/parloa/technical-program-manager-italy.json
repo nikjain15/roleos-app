@@ -1,0 +1,365 @@
+{
+  "company": "Parloa",
+  "role_title": "Technical Program Manager Italy",
+  "url": "https://job-boards.eu.greenhouse.io/parloa/jobs/4907445101",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4907445101",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Delivery Manager / Customer-Facing TPM",
+  "seniority": {
+    "level": "Mid-level / Senior IC",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "+2 years of experience in technical project management, program management, or delivery management",
+      "Primary delivery contact for enterprise customers; owns end-to-end delivery lifecycle",
+      "Manages multiple concurrent projects with global, distributed teams"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_experience",
+      "raw_text_from_jd": "+2 years of experience in technical project management, program management, or delivery management for SaaS or enterprise software.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS",
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cx_platform_experience",
+      "raw_text_from_jd": "Hands-on experience delivering solutions involving at least one of: Contact Center / CCaaS, UCaaS, conversational AI, IVA/IVR, or related CX platforms.",
+      "skill_type": "domain_knowledge",
+      "domain": "contact_center_cx_platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "CCaaS",
+        "UCaaS",
+        "conversational AI",
+        "IVA",
+        "IVR"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_stakeholder_management",
+      "raw_text_from_jd": "Demonstrated ability to work across technical and business stakeholders (IT, Security, Operations, Business Owners).",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "delivery_methodology_knowledge",
+      "raw_text_from_jd": "Solid understanding of software delivery methodologies (Agile/Scrum, Hybrid, and Waterfall) and when to apply each.",
+      "skill_type": "domain_knowledge",
+      "domain": "delivery_methodologies",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_planning_tools",
+      "raw_text_from_jd": "Strong skills in project planning tools (e.g., Jira, Asana, Monday, MS Project, Smartsheet) and collaboration tools (e.g., Confluence, Notion, Miro).",
+      "skill_type": "tool_proficiency",
+      "domain": "project_management_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Jira",
+        "Asana",
+        "Monday",
+        "MS Project",
+        "Smartsheet",
+        "Confluence",
+        "Notion",
+        "Miro"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_facilitation_conflict_resolution",
+      "raw_text_from_jd": "Excellent communication, facilitation, and conflict resolution skills.",
+      "skill_type": "capability",
+      "domain": "communication_and_facilitation",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "concurrent_global_project_management",
+      "raw_text_from_jd": "Proven track record managing multiple concurrent projects with global, distributed teams.",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "english_italian_fluency",
+      "raw_text_from_jd": "Fluency in English & Italian is required",
+      "skill_type": "capability",
+      "domain": "language_fluency",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Italy"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_ml_nlp_llm_experience",
+      "raw_text_from_jd": "Experience delivering AI/ML, NLP, LLM-based, or Agentic AI solutions.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_ml_nlp_agentic_ai",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML",
+        "NLP",
+        "LLMs",
+        "Agentic AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "professional_services_consulting_background",
+      "raw_text_from_jd": "Background in professional services or consulting working with enterprise clients.",
+      "skill_type": "domain_knowledge",
+      "domain": "professional_services_consulting",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "professional services firm",
+        "consulting firm"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_integration_familiarity",
+      "raw_text_from_jd": "Familiarity with APIs, webhooks, event-driven architectures, cloud infra (AWS/Azure/GCP).",
+      "skill_type": "domain_knowledge",
+      "domain": "cloud_and_integration_architecture",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs",
+        "webhooks",
+        "event-driven architectures",
+        "AWS",
+        "Azure",
+        "GCP"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pm_certifications",
+      "raw_text_from_jd": "Certifications: PMP, PRINCE2, CSM/CSPO, SAFe, or equivalent.",
+      "skill_type": "credential",
+      "domain": "project_management_certifications",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP",
+        "PRINCE2",
+        "CSM",
+        "CSPO",
+        "SAFe"
+      ]
+    },
+    {
+      "id": "partner_co_delivery_experience",
+      "raw_text_from_jd": "Experience with partner co-delivery (SI, GSI, BPO, or ISV ecosystems).",
+      "skill_type": "domain_knowledge",
+      "domain": "partner_ecosystem_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "SI",
+        "GSI",
+        "BPO",
+        "ISV"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "End-to-end delivery of Agentic AI / conversational AI platform deployments for enterprise customers; pod model (TPM + Forward Deployed Engineer + Agent Architect)",
+    "business_model": "B2B SaaS / enterprise software — conversational AI platform",
+    "primary_metrics_inferred": [
+      "Time to Blueprint",
+      "Time to First Agent in UAT",
+      "Time to Go-Live",
+      "Milestone On-Time Rate",
+      "Defect and incident trends during QA/UAT and Hypercare"
+    ],
+    "cross_functional_partners": [
+      "Forward Deployed Engineers",
+      "Agent Architects",
+      "Sales",
+      "Solution Engineering",
+      "Product",
+      "Support",
+      "SI/GSI/BPO partners"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end delivery for assigned Agentic AI customer projects (scope, schedule, budget, risk, quality)",
+      "Run the pod (TPM + FDE + Agent Architect) as a single accountable delivery unit",
+      "Select and apply appropriate delivery methodology (Waterfall, Agile, or Hybrid) based on customer context and risk profile",
+      "Serve as primary delivery contact for customer project sponsors, IT, and business stakeholders",
+      "Facilitate recurring governance: status calls, steering committees, UAT readouts, and go-live reviews",
+      "Maintain up-to-date project plan, RAID log, and change log",
+      "Manage scope and change requests",
+      "Coordinate with Forward Deployed Engineers and Agent Architects",
+      "Report delivery status, risk posture, and mitigation plans to internal and external stakeholders"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Agentic AI",
+    "conversational AI",
+    "enterprise deployment",
+    "CCaaS",
+    "IVR/IVA",
+    "RAID log",
+    "pod model",
+    "Agile",
+    "Waterfall",
+    "Italian fluency",
+    "customer delivery",
+    "stakeholder management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear pod delivery model with defined cross-functional roles (TPM + FDE + Agent Architect)",
+    "Specific, measurable deployment KPIs defined in the JD (Time to Blueprint, Time to Go-Live, etc.)",
+    "Company has shipped over one billion interactions with named enterprise clients (Booking.com, Allianz, SAP, TUI)",
+    "Recruiting process stages clearly outlined",
+    "Equal opportunity employer statement included"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Location not specified in the JD body — unclear if this is remote, hybrid, or onsite in Italy",
+    "Visa sponsorship and work authorization requirements not addressed",
+    "Minimum years requirement is low (+2 years) but the scope described (enterprise, multi-stakeholder, global) implies senior-level expectations",
+    "Role title includes 'Italy' but no Italian city or office location is named"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years_required_min + scope complexity; not explicitly stated)",
+      "scope.business_model (inferred from product description and customer list)",
+      "scope.primary_metrics_inferred (partially stated in JD under Metrics & Reporting section)",
+      "location.type (not stated; defaulted to 'unclear')",
+      "location.remote_us_eligible (not stated; defaulted to false given Italy-focused role)",
+      "compensation (not stated anywhere in JD)"
+    ],
+    "ambiguities": [
+      "Role title says 'Italy' but the JD body does not name any specific city in Italy or specify whether the role is remote, hybrid, or onsite. 'cities_listed' left empty and location.type set to 'unclear'.",
+      "Parloa is noted as an e-verify employer in the USA, but this role appears Italy-focused — work authorization requirements for Italy are not addressed.",
+      "Minimum experience of +2 years is stated but the scope (enterprise, global teams, executive stakeholders, multi-partner delivery) is consistent with more senior hires."
+    ]
+  }
+}

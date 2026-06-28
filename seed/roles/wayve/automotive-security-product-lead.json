@@ -1,0 +1,267 @@
+{
+  "company": "Wayve",
+  "role_title": "Automotive Security Product Lead",
+  "url": "https://wayve.firststage.co/jobs?gh_jid=8602635002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8602635002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Sunnyvale, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "hybrid policy combining office time and work from home",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Proven and demonstrable experience as a Technical Program Manager or similar role",
+      "Expected to act as a coach to others and drive delivery-mindset across teams",
+      "Critical in establishing what good delivery looks like across Wayve"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "tpm_experience",
+      "raw_text_from_jd": "You have proven and demonstrable experience as a Technical Program Manager or similar role, working closely with multi-disciplinary engineering teams to successfully develop and ship products at an early stage of maturity.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_background",
+      "raw_text_from_jd": "You have a strong technical background, with a solid understanding of software and systems engineering principles and technologies.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_and_systems_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sdlc_agile_experience",
+      "raw_text_from_jd": "You have a deep understanding of software development lifecycle and methodologies, with a track record of leading software programs using agile or iterative approaches.",
+      "skill_type": "capability",
+      "domain": "software_development_lifecycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "rapid_technical_learning",
+      "raw_text_from_jd": "You embrace the challenge of learning new technical concepts and requirements quickly, translating them into actionable work plans.",
+      "skill_type": "capability",
+      "domain": "technical_translation",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "problem_solving_analytical",
+      "raw_text_from_jd": "You have strong problem-solving and analytical abilities, with a detail-oriented mindset.",
+      "skill_type": "capability",
+      "domain": "analytical_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management_skills",
+      "raw_text_from_jd": "You have exceptional project management skills, with the ability to prioritise tasks, manage resources effectively, and deliver results within tight deadlines.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_interpersonal",
+      "raw_text_from_jd": "You have excellent communication and interpersonal skills, capable of building strong relationships with technical and non-technical stakeholders.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "coaching_enabling",
+      "raw_text_from_jd": "You get energy from enabling and coaching others.",
+      "skill_type": "cultural_fit",
+      "domain": "team_development",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_for_action",
+      "raw_text_from_jd": "You have a bias for action and thrive in a fast-paced and dynamic environment, adapting quickly to changing priorities.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "av_curiosity",
+      "raw_text_from_jd": "You are deeply curious about building something new and relish the idea of helping to define AV2.0 and how we build it.",
+      "skill_type": "cultural_fit",
+      "domain": "autonomous_vehicles",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "autonomous vehicles"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Software organisation covering Engineering Infrastructure, Onboard Systems, Embodied AI Development, and Evaluation and Validation",
+    "business_model": "B2B — AI software and foundation models for automakers enabling automated driving",
+    "primary_metrics_inferred": [
+      "On-time delivery of software programs",
+      "Adherence to project timelines and quality standards",
+      "Speed of iteration across ML model training, validation, and production delivery"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Program Management",
+      "Product Management",
+      "Research"
+    ],
+    "core_responsibilities": [
+      "Drive the end-to-end planning, execution, and delivery of software programs, ensuring adherence to project timelines, budget, and quality standards.",
+      "Collaborate with program managers, product managers, software engineers, and other teams to define clear program requirements, scope, and success criteria.",
+      "Develop and maintain detailed project plans, identifying dependencies, risks, and mitigation strategies.",
+      "Drive effective communication and coordination among team members and stakeholders to ensure project progress, risks, and issues are properly addressed.",
+      "Track project milestones and deliverables, providing regular updates to senior management and key stakeholders.",
+      "Facilitate cross-functional collaboration, ensuring clarity, alignment and synergy among different teams.",
+      "Identify and resolve project-related issues and risks, proactively addressing any obstacles to project success.",
+      "Lead regular program reviews and provide status updates to relevant stakeholders, addressing any program-related issues, risks, and challenges.",
+      "Foster a culture of continuous improvement, leveraging lessons learned from previous programs to enhance future project execution."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "AV2.0",
+    "autonomous vehicles",
+    "software development lifecycle",
+    "agile",
+    "ML models",
+    "Engineering Infrastructure",
+    "Embodied AI",
+    "cross-functional",
+    "delivery"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear description of team scope and four distinct domains (Engineering Infrastructure, Onboard Systems, Embodied AI Development, Evaluation and Validation)",
+    "Explicitly encourages candidates who don't meet every requirement to apply",
+    "Hybrid working policy acknowledged",
+    "Commitment to inclusive interview process and DEI monitoring stated",
+    "Role positioned as critical and growth-oriented within a scaling company"
+  ],
+  "red_flags": [
+    "Role title in JD header is 'Automotive Security Product Lead' but the body describes a Technical Program Manager role — significant mismatch that may indicate a copy-paste error or misposted JD",
+    "No compensation or equity information disclosed",
+    "No minimum years of experience stated, making seniority expectations ambiguous",
+    "Visa sponsorship situation not addressed in the body (E-Verify notice referenced only for US candidates)"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from coaching responsibility and scope language, not stated explicitly)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.work_auth (inferred as open based on E-Verify notice mention; not explicitly stated)"
+    ],
+    "ambiguities": [
+      "Role title in identity fields is 'Automotive Security Product Lead' but the JD body consistently describes a Technical Program Manager role. The body contains no content about automotive security. This appears to be a mislabeled or misposted JD. Archetype is classified based on body content (Technical Program Manager).",
+      "Visa sponsorship is not explicitly addressed. E-Verify notice is referenced for US candidates, suggesting US-based hiring, but sponsorship availability is unclear.",
+      "No years of experience specified; seniority level inferred from coaching/coaching responsibility language and scope."
+    ]
+  }
+}

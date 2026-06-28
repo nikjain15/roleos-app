@@ -1,0 +1,281 @@
+{
+  "company": "Vercel",
+  "role_title": "Product Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/6011651004",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "6011651004",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY",
+      "London",
+      "Berlin"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": "Monday, Tuesday, and Friday anchor days if within commuting distance of an office; fully remote otherwise",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager with product strategy focus",
+  "seniority": {
+    "level": "Senior IC / Director-level (strategic leadership)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "8+ years in product operations, business operations, strategy, or closely adjacent function",
+      "Described as a 'senior, cross-functional role' and 'strategic leadership position'",
+      "Building and running a function from the ground up",
+      "Works in close partnership with CPO and EPD Leads",
+      "Base pay range $232,000–$348,000 in SF, consistent with Director-level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_ops_strategy",
+      "raw_text_from_jd": "8+ years in product operations, business operations, strategy, or a closely adjacent function inside a high-growth technology company.",
+      "skill_type": "years_of_experience",
+      "domain": "product_operations_strategy",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "inside a high-growth technology company",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "high-growth technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_product_comprehension",
+      "raw_text_from_jd": "Ability to understand complex, technical products and articulate their value to non-technical audiences.",
+      "skill_type": "capability",
+      "domain": "technical_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sdlc_familiarity",
+      "raw_text_from_jd": "Deep familiarity with the full software development lifecycle — you understand how EPD teams plan, build, and ship, and have experience improving those processes.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_development_lifecycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguous_problem_solving",
+      "raw_text_from_jd": "Passion for structuring and solving highly ambiguous strategic problems and owning end-to-end execution of solutions.",
+      "skill_type": "capability",
+      "domain": "strategic_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_project_leadership",
+      "raw_text_from_jd": "Experience leading complex, cross-functional projects with multiple functional stakeholders.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_gtm_intersection",
+      "raw_text_from_jd": "Past experience working at the intersection of product and go-to-market teams in a software company.",
+      "skill_type": "domain_knowledge",
+      "domain": "product_gtm",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Strong oral and written communication skills, with a proven ability to work effectively with multiple, cross-functional stakeholders, including users.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "developer_tooling_background",
+      "raw_text_from_jd": "Background in developer tooling, cloud infrastructure, or platform products — you understand the Vercel customer and can speak credibly about the space.",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_tooling_cloud_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "developer tooling",
+        "cloud infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agentic_workflow_building",
+      "raw_text_from_jd": "Frequently build your own agents to support workflows and data analyses",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_agents",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Product Strategy & Operations function for the entire EPD (Engineering, Product, Design) organization at Vercel",
+    "business_model": "B2B/B2D developer infrastructure platform (SaaS)",
+    "primary_metrics_inferred": [
+      "Product adoption post-launch",
+      "Business outcomes from shipped features",
+      "Roadmap-revenue alignment",
+      "Team capacity and execution risk visibility",
+      "Competitive intelligence coverage"
+    ],
+    "cross_functional_partners": [
+      "CPO",
+      "EPD Leads",
+      "GTM leadership",
+      "Finance",
+      "Sales",
+      "Marketing",
+      "Data Engineering",
+      "Data Science"
+    ],
+    "core_responsibilities": [
+      "Own the EPD rhythm of business: weekly operating reviews, monthly business reviews, planning cycles, and roadmap processes — building minimum viable process for each.",
+      "Run the ShipOps function to enable Launch Calendar reviews and Vercel's high velocity 'You Can Just Ship Things' approach.",
+      "Establish a 'product landing' framework — a structured post-launch process that goes beyond the ship date to ensure new features and products are actually adopted, drive the intended business outcomes, and generate learnings that feed the next iteration.",
+      "Partner closely with Sales and Marketing teams to set targets, make plans and execute tactics that drive deal pipeline creation, and user launches and ramps.",
+      "Develop and maintain competitive intelligence systems that give product leaders a continuously updated view of the market landscape.",
+      "Partner with Data Engineering and Data Science to ensure the analytical infrastructure (data pipelines, warehouse models, tooling) supports the speed of analysis our business requires.",
+      "Partner with EPD leads to maintain team health, capacity visibility, and resource allocation so that the right bets are properly staffed and execution risk is surfaced early."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      232000,
+      348000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity-based compensation included in total package; form not specified",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "product strategy",
+    "product operations",
+    "ShipOps",
+    "EPD",
+    "rhythm of business",
+    "product landing",
+    "competitive intelligence",
+    "cross-functional",
+    "go-to-market",
+    "developer tooling",
+    "agentic infrastructure",
+    "roadmap",
+    "data pipelines"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($232K–$348K base in SF, competitive for the level)",
+    "Equity included in compensation package",
+    "High-visibility role reporting into CPO-level, building function from the ground up",
+    "Clear scope of ownership across three distinct areas (rhythm of business, measurement, planning)",
+    "Flexible remote eligibility for candidates outside commuting distance of an office",
+    "Company explicitly encourages applications from candidates who don't check every box",
+    "Vercel has strong brand recognition with notable customers (OpenAI, PayPal, Ramp)"
+  ],
+  "red_flags": [
+    "Role is described as building the function 'from the ground up' — high ambiguity and organizational complexity",
+    "Hybrid anchor days (Mon/Tue/Fri) for office-proximate candidates is a significant in-office commitment",
+    "Compensation outside SF may be adjusted downward — exact range for other locations not disclosed",
+    "Visa sponsorship and work authorization not addressed in the JD",
+    "No mention of direct reports — unclear if this is an IC or people-manager role, though 'strategic leadership' language implies some management"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, 'senior' descriptor, 'strategic leadership position', and function-building mandate)",
+      "seniority.manages_people (inferred from 'building and running a function from the ground up' and 'strategic leadership position'; not explicitly confirmed)",
+      "scope.business_model (inferred from product descriptions and customer list)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated as KPIs in JD)",
+      "location.work_auth and location.visa_sponsorship (not mentioned in JD; marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD does not clarify whether this role has direct reports or is a senior IC. 'Building and running the function from the ground up' and 'strategic leadership position' suggest people management is likely, but it is not confirmed.",
+      "Compensation range ($232K–$348K) applies to San Francisco only; the JD states 'Compensation outside of San Francisco may be adjusted based on employee location' without providing alternate ranges.",
+      "Remote eligibility depends on commuting distance to an office (SF, NY, London, Berlin) — the threshold distance is not defined; candidates must connect with recruiting for location-specific details."
+    ]
+  }
+}

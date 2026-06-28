@@ -1,0 +1,313 @@
+{
+  "company": "iCapital",
+  "role_title": "Direct Funds Product Manager",
+  "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8564195002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8564195002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Lisbon",
+      "Zurich",
+      "London"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "four days in office, one day remote (Friday)",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Fund Operations / Private Markets Product Manager",
+  "seniority": {
+    "level": "Senior IC to Principal (based on 6–15 years range and autonomy signals)",
+    "years_required_min": 6,
+    "years_required_max": 15,
+    "manages_people": false,
+    "level_signals": [
+      "6–15 years of relevant experience required",
+      "Operates with a high degree of autonomy and ownership",
+      "Acts as central coordination and escalation point across complex fund structures"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience",
+      "raw_text_from_jd": "6–15 years of relevant experience in product management, fund structuring, fund operations or related roles within private markets",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_fund_operations",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "private markets"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "luxembourg_fund_structures",
+      "raw_text_from_jd": "Strong experience with Luxembourg fund structures, particularly UCI Part II, RAIFs or similar vehicles",
+      "skill_type": "domain_knowledge",
+      "domain": "luxembourg_fund_structures",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "private markets"
+      ],
+      "geographies_named": [
+        "Luxembourg"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "private_markets_lifecycle",
+      "raw_text_from_jd": "Strong understanding of private markets fund structures, lifecycle management and governance frameworks",
+      "skill_type": "domain_knowledge",
+      "domain": "private_markets_fund_lifecycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "private markets"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "aifm_familiarity",
+      "raw_text_from_jd": "Familiarity with AIFM environments and key service providers (administrator, depositary, auditors)",
+      "skill_type": "domain_knowledge",
+      "domain": "AIFM_regulatory_environment",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "private markets"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fund_documentation",
+      "raw_text_from_jd": "Solid understanding of fund documentation and its operational implications",
+      "skill_type": "domain_knowledge",
+      "domain": "fund_documentation",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "private markets"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_stakeholder_ownership",
+      "raw_text_from_jd": "Proven ability to operate in complex, multi-stakeholder environments with a high degree of ownership",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "problem_solving",
+      "raw_text_from_jd": "Strong problem-solving skills, with the ability to handle non-standard and time-sensitive situations",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "attention_to_detail",
+      "raw_text_from_jd": "High attention to detail and strong organisational capabilities",
+      "skill_type": "capability",
+      "domain": "operational_excellence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_stakeholder_management",
+      "raw_text_from_jd": "Excellent communication and stakeholder management skills across internal and external parties",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "evergreen_semi_liquid_structures",
+      "raw_text_from_jd": "Experience with evergreen or semi-liquid structures is advantageous",
+      "skill_type": "domain_knowledge",
+      "domain": "evergreen_semi_liquid_fund_structures",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "private markets"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_border_product_structuring",
+      "raw_text_from_jd": "Exposure to cross-border product structuring and multi-jurisdictional setups is a plus",
+      "skill_type": "domain_knowledge",
+      "domain": "cross_border_fund_structuring",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "private markets"
+      ],
+      "geographies_named": [
+        "EMEA"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Post-launch product management and lifecycle oversight for private markets funds in EMEA, primarily Luxembourg-domiciled structures (UCI Part II, RAIFs)",
+    "business_model": "B2B financial services platform for private markets fund distribution and operations",
+    "primary_metrics_inferred": [
+      "Timely and consistent fund operational execution",
+      "Client and investor satisfaction (DDQ/query response quality)",
+      "Governance and compliance adherence across fund structures",
+      "Successful post-launch enhancements and share class additions"
+    ],
+    "cross_functional_partners": [
+      "Structuring",
+      "Legal",
+      "Tax",
+      "Operations",
+      "Compliance",
+      "Platform teams",
+      "Clients",
+      "GPs",
+      "External service providers (administrator, depositary, auditors)"
+    ],
+    "core_responsibilities": [
+      "Act as the central coordination point across Structuring, Legal, Tax, Operations, Compliance and Platform teams",
+      "Oversee operational aspects of fund structures, including share class design, fee structures, reporting requirements and platform configuration",
+      "Coordinate the operational review and implementation of fund documentation (PPMs, LPAs, subscription materials)",
+      "Serve as the primary interface with clients, GPs and external stakeholders on operational and product-related matters",
+      "Respond to due diligence questionnaires (DDQs), investor queries and fund-related information requests",
+      "Handle AML / KYC questionnaires and coordinate with relevant internal teams",
+      "Act as escalation point for complex operational, governance and product-related issues",
+      "Lead and implement product enhancements post-launch, including structural adjustments and new share classes",
+      "Contribute to standardisation of processes, templates and service frameworks across EMEA"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Luxembourg fund structures",
+    "UCI Part II",
+    "RAIF",
+    "AIFM",
+    "private markets",
+    "fund lifecycle management",
+    "evergreen structures",
+    "DDQ",
+    "AML/KYC",
+    "EMEA",
+    "fund operations",
+    "post-launch product management",
+    "share class design",
+    "PPM",
+    "LPA"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Highly specific domain: Luxembourg fund structures (UCI Part II, RAIFs) — role is well-defined and not vague",
+    "Multiple office locations offered (Lisbon, Zurich, London) providing geographic flexibility within EMEA",
+    "Clear responsibilities spanning operations, governance, client interaction and post-launch development",
+    "High autonomy and ownership signals a senior, meaningful role"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship not mentioned — unclear for non-EU candidates across three jurisdictions",
+    "Broad years range (6–15) may indicate undefined seniority level or budget uncertainty",
+    "Hybrid policy is 4 days in office — limited remote flexibility",
+    "Role title says 'Product Manager' but responsibilities are heavily fund operations and governance — may not suit candidates with traditional software PM backgrounds"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range and autonomy signals; not explicitly stated)",
+      "scope.business_model (inferred from iCapital's known platform model and JD context)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)"
+    ],
+    "ambiguities": [
+      "The role title is 'Product Manager' but the responsibilities read more like senior fund operations / governance management with minimal traditional PM (roadmap, discovery, prioritisation) language — archetype confidence is medium rather than high.",
+      "Years range of 6–15 is unusually wide and does not cleanly map to a single seniority band; treated as Senior IC to Principal.",
+      "AML/KYC handling is listed as a responsibility — unclear whether this requires formal AML certification or is informally coordinated."
+    ]
+  }
+}

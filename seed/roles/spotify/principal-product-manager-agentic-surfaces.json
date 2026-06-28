@@ -1,0 +1,397 @@
+{
+  "company": "Spotify",
+  "role_title": "Principal Product Manager, Agentic Surfaces",
+  "url": "https://jobs.lever.co/spotify/a025cf69-f8c6-4873-9a8b-7ca6b1fbe9fd",
+  "ats_provider": "lever",
+  "ats_job_id": "a025cf69-f8c6-4873-9a8b-7ca6b1fbe9fd",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (consumer at scale)",
+  "seniority": {
+    "level": "Principal / Staff IC",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of product management experience",
+      "Principal in title",
+      "Base range $182,308 - $260,441 consistent with principal-level IC at a large tech company",
+      "Expected to set standards across the org and influence senior leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "10+ years of product management experience, with a majority in AI, consumer-focused roles",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "qualifier": "majority in AI, consumer-focused roles",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [
+        "consumer"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agentic_products_shipped",
+      "raw_text_from_jd": "Proven track record shipping and scaling agentic products in production at scale — real agents that take autonomous action for users, not prototypes, demos, or scripted chatbots",
+      "skill_type": "outcome",
+      "domain": "agentic_ai_products",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "agents",
+        "agentic AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_products_at_scale",
+      "raw_text_from_jd": "Experience owning consumer products with tens or hundreds of millions of users",
+      "skill_type": "outcome",
+      "domain": "consumer_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "balancing_maturing_emerging_tech",
+      "raw_text_from_jd": "Demonstrated ability to balance investment across maturing and emerging technologies — knowing when to bet on the new and when to lean on the proven",
+      "skill_type": "capability",
+      "domain": "technology_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vision_and_roadmap_exec_alignment",
+      "raw_text_from_jd": "Demonstrated ability to set product vision and roadmap and bring executive and developer-leadership audiences along",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_taste",
+      "raw_text_from_jd": "Exceptional product taste and instinct for what makes an experience delightful",
+      "skill_type": "capability",
+      "domain": "product_craft",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "decisiveness_under_ambiguity",
+      "raw_text_from_jd": "Decisiveness under incomplete information: you triangulate the best evidence available, make the call, and own the consequences — \"the AI recommended it\" is never an excuse",
+      "skill_type": "cultural_fit",
+      "domain": "decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_and_experimentation",
+      "raw_text_from_jd": "Highly analytical; fluent in experimentation and using data to drive decisions",
+      "skill_type": "capability",
+      "domain": "data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_management_large_orgs",
+      "raw_text_from_jd": "Excellent communication and stakeholder management across large, distributed, cross-functional orgs",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_agents_deep_expertise",
+      "raw_text_from_jd": "Deep, current expertise in how AI and agents are transforming consumer software, with a track record of building and launching agentic capabilities at scale in production",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_and_agents",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "agents"
+      ],
+      "industries_named": [
+        "consumer software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "recommender_systems_personalization",
+      "raw_text_from_jd": "Experience with recommender systems, personalization, or large-scale ML-driven products — and the judgment to decide where an established stack stays durable versus where to move onto a new paradigm",
+      "skill_type": "domain_knowledge",
+      "domain": "recommender_systems_personalization",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "recommender systems",
+        "ML-driven products",
+        "personalization"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_ml_partnership",
+      "raw_text_from_jd": "Technical background or proven ability to partner closely with ML engineers and researchers on what's feasible — comfortable pulling your own data, exploring a codebase, or spinning up a prototype to unblock yourself",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "eval_frameworks_ai_products",
+      "raw_text_from_jd": "Experience building evaluation frameworks for AI-driven or personalized products at scale",
+      "skill_type": "capability",
+      "domain": "ai_product_evaluation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "broad_org_influence",
+      "raw_text_from_jd": "Experience influencing across broad organizations and helping teams adopt new ways of working",
+      "skill_type": "capability",
+      "domain": "organizational_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "founder_or_startup_experience",
+      "raw_text_from_jd": "You have either founder or startup experience",
+      "skill_type": "work_history",
+      "domain": "entrepreneurship",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "startup",
+        "founder"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "passion_audio_discovery",
+      "raw_text_from_jd": "Passion for audio, discovery, and redefining how the world finds what it loves next",
+      "skill_type": "cultural_fit",
+      "domain": "audio_and_music",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "audio"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "prototypes, demos, or scripted chatbots (not acceptable as evidence of agentic product experience)"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Home (primary), with mandate extending to Now Playing, Browse, and other surfaces as strategy matures",
+    "business_model": "consumer subscription / ad-supported streaming (B2C)",
+    "primary_metrics_inferred": [
+      "User engagement and retention on Home surface",
+      "Discovery quality (content listening attributed to Home recommendations)",
+      "Agent task completion / intent satisfaction",
+      "A/B experiment win rate on agentic experiences"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "ML researchers",
+      "Design",
+      "Research",
+      "Data Science",
+      "Senior leadership"
+    ],
+    "core_responsibilities": [
+      "Own the product vision, strategy, and roadmap for the agentic future of Home, with flexibility to extend across Now Playing, Browse, and other surfaces as the strategy matures",
+      "Set the strategy for how Home's personalization evolves — determining where the established recommendation stack remains durable and where we deprecate it in favor of agents and the Large Personalization Model",
+      "Lead the ideation, development, and launch of agentic experiences that move from reactive recommendations to proactive, intent-aware action",
+      "Translate frontier model and agent capabilities into intuitive experiences a broad global audience understands and loves",
+      "Establish the evaluation bar for agentic experiences: rigorous eval frameworks, instrumentation, and honest assessment across diverse user segments",
+      "Use prototypes and real results to learn — favor showing a working prototype over writing a long doc",
+      "Use a mix of quantitative data, experimentation, and user research to understand behavior and make prioritization calls",
+      "Partner deeply with engineering, ML, design, research, and data science to ship high-impact improvements at a fast cadence",
+      "Influence senior stakeholders across Spotify, building alignment around a vision that spans multiple teams and surfaces"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      182308,
+      260441
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form unspecified)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "agentic surfaces",
+    "Home",
+    "Large Personalization Model",
+    "recommender systems",
+    "agents",
+    "consumer AI",
+    "personalization",
+    "frontier models",
+    "evaluation frameworks",
+    "product vision",
+    "ML engineers",
+    "agentic experiences",
+    "discovery",
+    "audio"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range disclosed ($182,308 - $260,441 base) plus equity",
+    "Clear product surface ownership (Home, largest Spotify surface)",
+    "Explicit mandate scope with potential to expand across surfaces",
+    "Fully remote within North America — no office requirement stated",
+    "Generous benefits package itemized (6-month parental leave, 23 days PTO, 13 flexible holidays)",
+    "Role described as 'defining' — high visibility and strategic importance"
+  ],
+  "red_flags": [
+    "Extremely rare requirement: production agentic products at 'tens or hundreds of millions' of users scale — very few candidates globally qualify",
+    "Founder or startup experience listed as a plain unconditional bullet (treated as hard requirement here but may be aspirational — ambiguous)",
+    "High buzzword density throughout JD — 'agentic', 'AI-native', 'Large Personalization Model' repeated without precise definitions",
+    "Visa sponsorship status not mentioned — unclear if Spotify sponsors for this role",
+    "Eastern Standard time zone collaboration requirement may limit candidates in Pacific time zones despite 'North America' framing"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Principal' title, 10+ years requirement, and comp range)",
+      "scope.business_model (inferred from Spotify's known consumer subscription/ad model)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.work_auth (not stated; left as no-sponsorship because visa sponsorship is not mentioned — flagged as ambiguous)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "'You have either founder or startup experience' appears as a plain unconditional bullet in 'Who You Are' — treated as hard must-have per schema rules, but it may function as a strong preference rather than a firm gate. Worth confirming with recruiter.",
+      "Location says 'North America region as long as we have a work location' — interpreted as remote-us eligible but could include Canada; treated as remote-us given compensation is stated in USD and the US range is explicitly noted.",
+      "Visa sponsorship is not mentioned anywhere in the JD; work_auth set to no-sponsorship and visa_sponsorship to unclear as a conservative default."
+    ]
+  }
+}

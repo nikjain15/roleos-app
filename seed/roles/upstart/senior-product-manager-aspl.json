@@ -1,0 +1,245 @@
+{
+  "company": "Upstart",
+  "role_title": "Senior Product Manager, ASPL",
+  "url": "https://careers.upstart.com/jobs?gh_jid=7961614",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7961614",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "majority remote; team onsites once or twice per quarter for 2-4 consecutive days",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM (consumer lending / fintech product growth)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years of product management experience",
+      "Title is Senior Product Manager",
+      "Expected base salary $162,100–$224,500 USD (consistent with Senior IC)",
+      "Expected to independently author and execute multi-quarter roadmaps"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "4+ years of product management experience on fast-moving, consumer-obsessed teams",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "qualifier": "fast-moving, consumer-obsessed teams",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_quarter_roadmap",
+      "raw_text_from_jd": "Strong product sense.  You have independently authored and executed on a multi-quarter roadmap, and have been around to see the consequences (good and bad) of your decisions.",
+      "skill_type": "outcome",
+      "domain": "product_strategy",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving",
+      "raw_text_from_jd": "Rigorous and analytical problem solving; well structured, concise, and highly effective communication.",
+      "skill_type": "capability",
+      "domain": "analytical_reasoning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_growth_mindset",
+      "raw_text_from_jd": "Ownership and growth mindset. You act like an owner. You're often right, but humble and open minded about being wrong. You're perpetually dissatisfied and striving to improve yourself and the team.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fintech_consumer_lending_experience",
+      "raw_text_from_jd": "Experience building products in fintech or consumer lending",
+      "skill_type": "domain_knowledge",
+      "domain": "fintech_consumer_lending",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "consumer lending"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "kyc_kyb_verifications_ai",
+      "raw_text_from_jd": "Experience with KYC/KYB or verifications, especially with AI automation",
+      "skill_type": "domain_knowledge",
+      "domain": "identity_verification",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI automation"
+      ],
+      "industries_named": [
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "securitization_capital_markets",
+      "raw_text_from_jd": "Experience with securitization and capital markets",
+      "skill_type": "domain_knowledge",
+      "domain": "capital_markets_securitization",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "consumer lending"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Quebec-based candidates (Canada roles: 'we are not currently able to hire in Quebec')"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Auto Secured Personal Loans (ASPL) product — borrower conversion, funnel optimization, capital onboarding",
+    "business_model": "B2C lending marketplace; partners with banks and credit unions; AI-powered credit decisions",
+    "primary_metrics_inferred": [
+      "ASPL conversion rate",
+      "Number of borrowers offered ASPL",
+      "Limiter removal / funnel expansion",
+      "Capital onboarded for ASPL"
+    ],
+    "cross_functional_partners": [
+      "Software engineers",
+      "UX designers",
+      "Marketing",
+      "Research scientists",
+      "Data analysts",
+      "Legal and compliance",
+      "Operations",
+      "Capital Markets",
+      "Product leaders across Upstart"
+    ],
+    "core_responsibilities": [
+      "Deeply understand the potential ASPL borrower and their motivation for choosing a secured loan",
+      "Define the strategy on how and where we can offer ASPL to applicants in our core Personal Loans funnel",
+      "Analyze the limiters that prevent us from offering ASPL to more borrowers and define a plan to remove those limiters",
+      "Partner with engineering manager, product designer, product leaders across Upstart, legal, operations, analytics, and compliance teams to gather requirements and ensure solutions meet business needs and regulatory standards",
+      "Partner with our Capital Markets organization to execute a plan to onboard capital for ASPL"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      162100,
+      224500
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Annual equity grants that vest quarterly; Employee Stock Purchase Plan (ESPP) with discounted stock purchase options (US only)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Auto Secured Personal Loans",
+    "ASPL",
+    "consumer lending",
+    "fintech",
+    "product roadmap",
+    "conversion",
+    "funnel optimization",
+    "capital markets",
+    "securitization",
+    "KYC/KYB",
+    "AI lending",
+    "borrower experience",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($162,100–$224,500 USD base)",
+    "Fully remote eligible across the US",
+    "Equity and bonus explicitly mentioned in addition to base",
+    "Described as 'fastest-growing product at Upstart' — high-visibility scope",
+    "Clear product surface and ownership area with specific cross-functional partners listed",
+    "Digital-first culture with flexibility to work from home"
+  ],
+  "red_flags": [
+    "East/West coast time zone requirement could exclude candidates in other time zones despite 'remote' designation",
+    "Visa sponsorship not mentioned — work authorization openness unclear for non-US citizens",
+    "Capital markets / securitization experience is preferred but could be de facto required given the Capital Markets partnership responsibility",
+    "Canada salary range is in CAD ($153,000–$190,000 CAD), which is materially lower than US range in USD equivalent"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title, years required, and comp range)",
+      "seniority.manages_people (not stated; inferred false — no people management responsibilities mentioned)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.work_auth (no-sponsorship inferred from absence of sponsorship mention; not explicitly stated)",
+      "location.visa_sponsorship (unclear — not addressed in JD)"
+    ],
+    "ambiguities": [
+      "Location metadata and body both say 'Remote' but the JD also lists physical offices (Columbus, Austin, Bay Area, NYC) and describes in-person onsites — treated as remote-us with periodic in-person travel requirement.",
+      "Time zone requirement ('East/West coast time zones') may restrict candidates in non-US time zones despite remote designation.",
+      "Canada hiring is mentioned with a separate salary range (CAD), but Quebec is explicitly excluded — scope of Canada eligibility is partly unclear.",
+      "KYC/KYB and capital markets experience are listed as 'Preferred' but the core responsibilities explicitly include capital markets partnership — severity borderline between soft and hard for capital markets domain knowledge."
+    ]
+  }
+}

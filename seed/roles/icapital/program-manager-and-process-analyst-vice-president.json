@@ -1,0 +1,271 @@
+{
+  "company": "iCapital",
+  "role_title": "Program Manager & Process Analyst - Vice President",
+  "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8566346002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8566346002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "four days in office, one day remote (Friday)",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Scrum Master / Agile Delivery Lead",
+  "seniority": {
+    "level": "Mid-level (VP title but mid-level scrum master by JD content)",
+    "years_required_min": 3,
+    "years_required_max": 6,
+    "manages_people": false,
+    "level_signals": [
+      "3–6 years of experience as a Scrum Master, Agile Project Manager, or similar role",
+      "JD explicitly describes 'mid-level Scrum Master' in opening",
+      "VP title in role name conflicts with mid-level framing in JD body"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_scrum_master_exp",
+      "raw_text_from_jd": "3–6 years of experience as a Scrum Master, Agile Project Manager, or similar role",
+      "skill_type": "years_of_experience",
+      "domain": "agile_delivery",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "tech_delivery_experience",
+      "raw_text_from_jd": "Experience supporting technology delivery teams (software, data, automation, or AI)",
+      "skill_type": "domain_knowledge",
+      "domain": "technology_delivery",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "software",
+        "data",
+        "automation",
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "scrum_agile_frameworks",
+      "raw_text_from_jd": "Strong understanding of Scrum and Agile delivery frameworks",
+      "skill_type": "domain_knowledge",
+      "domain": "agile_frameworks",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agile_tooling",
+      "raw_text_from_jd": "Experience with Agile tooling such as Jira, Confluence, Azure DevOps, or similar",
+      "skill_type": "tool_proficiency",
+      "domain": "agile_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Jira",
+        "Confluence",
+        "Azure DevOps"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_facilitation",
+      "raw_text_from_jd": "Strong communication, facilitation, and organizational skills",
+      "skill_type": "capability",
+      "domain": "facilitation_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "scrum_certification",
+      "raw_text_from_jd": "Scrum Master certification (CSM, PSM I/II, or equivalent)",
+      "skill_type": "credential",
+      "domain": "agile_certification",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "CSM",
+        "PSM I",
+        "PSM II"
+      ]
+    },
+    {
+      "id": "financial_services_experience",
+      "raw_text_from_jd": "Experience working in financial services or other regulated environments",
+      "skill_type": "domain_knowledge",
+      "domain": "financial_services",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "distributed_teams_experience",
+      "raw_text_from_jd": "Experience supporting globally distributed or offshore teams",
+      "skill_type": "capability",
+      "domain": "distributed_team_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "automation_ai_exposure",
+      "raw_text_from_jd": "Exposure to automation platforms (e.g., UiPath) or AI‑related initiatives",
+      "skill_type": "domain_knowledge",
+      "domain": "automation_and_ai",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "UiPath"
+      ],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Agile delivery across technology teams focused on data, automation, and AI-enabled solutions",
+    "business_model": "financial services / fintech platform (B2B)",
+    "primary_metrics_inferred": [
+      "Sprint velocity",
+      "Burndown rate",
+      "Throughput",
+      "Delivery predictability"
+    ],
+    "cross_functional_partners": [
+      "Product Owners",
+      "Engineering teams",
+      "Business stakeholders"
+    ],
+    "core_responsibilities": [
+      "Facilitate Agile ceremonies including sprint planning, daily standups, backlog refinement, sprint reviews, and retrospectives",
+      "Support Agile teams in delivering committed sprint objectives with predictability and quality",
+      "Identify, track, and help remove delivery impediments and risks",
+      "Partner with Product Owners to ensure backlog readiness, prioritization, and clear acceptance criteria",
+      "Manage dependencies across engineering, data, automation, and business teams",
+      "Track and report Agile delivery metrics (velocity, burndown, throughput)",
+      "Provide clear delivery status updates and escalate risks as needed",
+      "Promote Agile best practices and continuous improvement across teams"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity for all full-time employees",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Scrum Master",
+    "Agile",
+    "sprint planning",
+    "backlog refinement",
+    "Jira",
+    "Confluence",
+    "Azure DevOps",
+    "data",
+    "automation",
+    "AI",
+    "delivery metrics",
+    "velocity",
+    "burndown",
+    "regulated environment",
+    "globally distributed teams"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Comprehensive benefits package including 100% employer-paid health and dental insurance",
+    "Equity offered to all full-time employees",
+    "Annual performance bonus mentioned",
+    "Clear Agile tooling requirements specified (Jira, Confluence, Azure DevOps)",
+    "Hybrid flexibility (1 remote day per week)"
+  ],
+  "red_flags": [
+    "Role title is 'Vice President' but JD body explicitly describes a 'mid-level Scrum Master' — significant seniority mismatch that may reflect inflated titling or misaligned expectations",
+    "No compensation range disclosed despite competitive market norms",
+    "No cities listed; office location unclear from JD",
+    "Visa sponsorship and work authorization requirements not addressed"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "scope.business_model (inferred from iCapital's known identity as a fintech/financial services platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs)",
+      "location.cities_listed (no specific city named in JD body for this role)",
+      "compensation.base_range_usd (not stated)"
+    ],
+    "ambiguities": [
+      "Role title is 'Program Manager & Process Analyst - Vice President' but the JD body opens with 'We are seeking a mid-level Scrum Master' — VP title and mid-level descriptor are contradictory; could reflect iCapital's internal leveling (VP = mid-level IC) or a genuine mismatch.",
+      "Location/city not specified in JD; office policy (4 days in office) is stated but the office location is unknown.",
+      "Work authorization and visa sponsorship not mentioned anywhere in the JD."
+    ]
+  }
+}

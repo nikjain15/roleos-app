@@ -1,0 +1,365 @@
+{
+  "company": "Vercel",
+  "role_title": "Head of Workplace Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/6006177004",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "6006177004",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "5 days a week in San Francisco",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Other",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Head of Workplace / Real Estate & Facilities",
+  "seniority": {
+    "level": "Senior Director / Head-of (likely Director or VP)",
+    "years_required_min": 8,
+    "years_required_max": 10,
+    "manages_people": true,
+    "level_signals": [
+      "8-10 years of experience in Facilities, Workplace Experience, Security and/or Real Estate leadership, including leading teams of various sizes",
+      "Owns global real estate and workplace strategy",
+      "Comp range $220K-$265K base + equity",
+      "Partners directly with senior leadership and executive team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_facilities_workplace_leadership",
+      "raw_text_from_jd": "8-10 years of experience in Facilities, Workplace Experience, Security and/or Real Estate leadership, including leading teams of various sizes",
+      "skill_type": "years_of_experience",
+      "domain": "facilities_workplace_real_estate_security_leadership",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_tech_scaling_experience",
+      "raw_text_from_jd": "Proven success at companies in the high tech space that evolved into first spaces, multiple spaces and then to regional spaces, with a track record of being scrappy, creative, and resourceful in scaling operations efficiently",
+      "skill_type": "outcome",
+      "domain": "real_estate_operations_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "high tech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "senior_leadership_credibility",
+      "raw_text_from_jd": "Demonstrated ability to build rapport and credibility with senior leadership and site leaders, driving alignment on long-term real estate strategy as well as day-to-day operations",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "people_centered_design_passion",
+      "raw_text_from_jd": "Passion for creating people-centered, inclusive environments, through design and experiences",
+      "skill_type": "cultural_fit",
+      "domain": "workplace_experience_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "design_brand_aesthetic_sensibility",
+      "raw_text_from_jd": "Belief in the power of design and brand to build meaningful workplace experiences and engagement with a strong aesthetic sensibility and an eye for how physical space reinforces brand identity",
+      "skill_type": "domain_knowledge",
+      "domain": "workplace_brand_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "physical_security_executive_protection",
+      "raw_text_from_jd": "Experience establishing and managing physical security programs, including day-to-day security operations and Executive Protection",
+      "skill_type": "domain_knowledge",
+      "domain": "physical_security_executive_protection",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "team_building_leadership",
+      "raw_text_from_jd": "Proven ability to build, develop, and empower a team by fostering a culture of ownership, accountability, and local impact",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management_vendor_negotiation",
+      "raw_text_from_jd": "Strong project management and vendor negotiation skills",
+      "skill_type": "capability",
+      "domain": "project_management_vendor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_executive_collaboration",
+      "raw_text_from_jd": "Experience building relationships and collaborating with the Executive Team, People, IT, Legal, Finance and other business leaders",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "change_management",
+      "raw_text_from_jd": "Strong change management skills, especially in growth phases",
+      "skill_type": "capability",
+      "domain": "change_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fmp_certification",
+      "raw_text_from_jd": "FMP® (Facility Management Professional) – IFMA",
+      "skill_type": "credential",
+      "domain": "facility_management",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "FMP® (Facility Management Professional)"
+      ]
+    },
+    {
+      "id": "sfp_certification",
+      "raw_text_from_jd": "SFP® (Sustainability Facility Professional) – IFMA",
+      "skill_type": "credential",
+      "domain": "sustainability_facility_management",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "SFP® (Sustainability Facility Professional)"
+      ]
+    },
+    {
+      "id": "leed_accreditation",
+      "raw_text_from_jd": "LEED Accreditation – U.S. Green Building Council",
+      "skill_type": "credential",
+      "domain": "sustainability_green_building",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "U.S."
+      ],
+      "employer_types_named": [],
+      "credentials_named": [
+        "LEED Accreditation"
+      ]
+    },
+    {
+      "id": "pmp_certification",
+      "raw_text_from_jd": "Project Management Certification (e.g. PMP) – a plus",
+      "skill_type": "credential",
+      "domain": "project_management",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP"
+      ]
+    },
+    {
+      "id": "osha_safety_training",
+      "raw_text_from_jd": "OSHA or local safety compliance training",
+      "skill_type": "credential",
+      "domain": "health_safety_compliance",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "OSHA"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Global workplace strategy and operations across offices in San Francisco, New York, Austin, London, and Berlin",
+    "business_model": "B2B/B2D SaaS — developer infrastructure and agentic platform",
+    "primary_metrics_inferred": [
+      "Employee satisfaction with workplace experience",
+      "Facilities cost management and budget adherence",
+      "Lease negotiation outcomes and real estate cost efficiency",
+      "Security program effectiveness and incident rates"
+    ],
+    "cross_functional_partners": [
+      "Senior Leadership",
+      "People",
+      "IT",
+      "Legal",
+      "Finance",
+      "Internal Design Team",
+      "Site Leaders"
+    ],
+    "core_responsibilities": [
+      "Own global real estate and workplace strategy",
+      "Lead site selection, lease negotiations, and build-outs",
+      "Develop standards for new offices",
+      "Create spaces designed for collaboration, focus, wellness, and belonging",
+      "Be the guardian of Vercel's brand and aesthetic in the physical world",
+      "Own day-to-day operations across all locations",
+      "Build and run physical security programs including Executive Protection",
+      "Develop health, safety, and compliance programs",
+      "Own the workplace budget and manage vendor ecosystem"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      220000,
+      265000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity-based compensation mentioned as part of total compensation package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "workplace strategy",
+    "real estate",
+    "facilities operations",
+    "executive protection",
+    "physical security",
+    "global offices",
+    "lease negotiation",
+    "vendor management",
+    "workplace experience",
+    "brand identity",
+    "change management",
+    "San Francisco"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($220K-$265K base) plus equity",
+    "Clear scope of offices named (SF, NY, Austin, London, Berlin)",
+    "Well-defined responsibilities across strategy, experience, operations, and budget",
+    "Vercel encourages applicants who don't check every box",
+    "Role has broad executive visibility and ownership"
+  ],
+  "red_flags": [
+    "Strictly onsite 5 days a week in San Francisco — eliminates all non-SF candidates or those preferring any flexibility",
+    "Compensation outside San Francisco may be adjusted downward, though role is SF-only",
+    "Visa sponsorship not mentioned — unclear for international candidates",
+    "8-10 year range is framed as a specific band which may exclude very senior candidates above that range"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, team ownership, and executive partnership signals)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "location.visa_sponsorship (not mentioned; marked as 'unclear')"
+    ],
+    "ambiguities": [
+      "The JD says 'Compensation outside of San Francisco may be adjusted based on employee location,' but the role is explicitly stated as San Francisco 5 days a week — this clause appears to be boilerplate and may not apply to this specific role.",
+      "The years range '8-10 years' is unusually narrow for a Head-of role; it is unclear whether candidates with 11+ years would be screened out or whether this is aspirational framing."
+    ]
+  }
+}

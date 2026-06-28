@@ -1,0 +1,356 @@
+{
+  "company": "Klaviyo",
+  "role_title": "Senior Technical Program Manager, Information Security",
+  "url": "https://www.klaviyo.com/careers/jobs/7727704003?gh_jid=7727704003",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7727704003",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "up to 10% travel",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Information Security / GRC Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of experience as a technical program manager in information security",
+      "Acts as player-coach to other program managers",
+      "Reports into Head of Security Strategy and Governance",
+      "Comp range $100K–$150K base, consistent with Senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_infosec",
+      "raw_text_from_jd": "6+ years of experience as a technical program manager in information security, with a track record of delivering complex, multi-team initiatives across engineering and security stakeholders; demonstrated expertise scoping, planning, and delivering strategic and tactical security program within a matrixed environment",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management_information_security",
+      "minimum_value": 6,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "information security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "risk_management_lifecycle",
+      "raw_text_from_jd": "Manage the Information Security Risk Management lifecycle by partnering with engineering and security experts to implement regulations, test controls, and deploy security solutions across the technology stack.",
+      "skill_type": "capability",
+      "domain": "information_security_risk_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "information security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "security_frameworks_knowledge",
+      "raw_text_from_jd": "Working knowledge of security frameworks — NIST, ISO 27001, SOC 2, PCI DSS, CIS Controls — and how they translate into credible delivery plans",
+      "skill_type": "domain_knowledge",
+      "domain": "security_frameworks",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "NIST",
+        "ISO 27001",
+        "SOC 2",
+        "PCI DSS",
+        "CIS Controls"
+      ],
+      "industries_named": [
+        "information security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pm_security_certifications",
+      "raw_text_from_jd": "Project management and/or security framework certifications (PMP, PRINCE2, ITIL, COBIT, ISO 27001) are expected at this level",
+      "skill_type": "credential",
+      "domain": "project_management_security",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP",
+        "PRINCE2",
+        "ITIL",
+        "COBIT",
+        "ISO 27001"
+      ]
+    },
+    {
+      "id": "security_kpis_metrics",
+      "raw_text_from_jd": "Experience building and tracking security KPIs and metrics to measure program success and drive continuous improvement.",
+      "skill_type": "capability",
+      "domain": "security_metrics_and_reporting",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "information security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_automation_program_tooling",
+      "raw_text_from_jd": "Practical experience using AI-enabled or automation-first program tooling (security GRC, TPRM, continuous control monitoring) and a clear point of view on where AI augments versus replaces human judgement in program delivery",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_and_automation_program_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "security GRC",
+        "TPRM",
+        "continuous control monitoring"
+      ],
+      "industries_named": [
+        "information security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "A strong communicator and problem-solver who balances persuasion with active listening, possesses exceptional stakeholder management skills to engage with engineering leaders and executives, and utilizes proven project management techniques to drive results.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "hands_on_security_roles",
+      "raw_text_from_jd": "3+ years of hands-on experience in equivalent security roles, such as Security Delivery Manager, Information Security Officer, or Threat Intelligence Program Manager",
+      "skill_type": "years_of_experience",
+      "domain": "hands_on_security_delivery",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "information security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "security_professional_certifications",
+      "raw_text_from_jd": "Relevant professional certifications such as Certified Information Systems Security Professional, Certified Information Security Manager, Certified in Risk and Information Systems Control, CompTIA Cybersecurity Analyst or Certified Fraud Examiner",
+      "skill_type": "credential",
+      "domain": "information_security_certifications",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "information security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "CISSP",
+        "CISM",
+        "CRISC",
+        "CompTIA Cybersecurity Analyst",
+        "Certified Fraud Examiner"
+      ]
+    },
+    {
+      "id": "ai_governance_exposure",
+      "raw_text_from_jd": "Exposure to AI governance, model risk, or responsible-AI program work",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_governance_model_risk",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI governance",
+        "model risk"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "privacy_legislation_knowledge",
+      "raw_text_from_jd": "Knowledge of privacy legislation and regulations such as HIPAA and GDPR",
+      "skill_type": "domain_knowledge",
+      "domain": "privacy_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "HIPAA",
+        "GDPR"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cloud_security_risk_tooling",
+      "raw_text_from_jd": "Experience working with security and risk tooling in cloud infrastructure, hosting, and platform contexts",
+      "skill_type": "tool_proficiency",
+      "domain": "cloud_security_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "cloud infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Security Strategy and Governance (SSG) team within Global Security Services (GSS); cross-functional programs spanning third-party risk, compliance and audit readiness, AI governance, and risk and control framework rollouts",
+    "business_model": "B2B SaaS / ecommerce marketing platform",
+    "primary_metrics_inferred": [
+      "OKR alignment and delivery outcomes for GSS programs",
+      "Security KPIs and monthly KPI updates",
+      "Risk posture improvement metrics",
+      "Quarterly Board contributions"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Product",
+      "GTS (Global Technology Solutions)",
+      "Legal",
+      "Business Operations",
+      "Security Risk and Trust",
+      "Security Product and Development",
+      "Global Protection Services",
+      "Security Intelligence Operations"
+    ],
+    "core_responsibilities": [
+      "Lead program delivery for GSS's most complex initiatives — including third-party risk, compliance and audit readiness, AI governance, and the data-driven cyber risk and control framework",
+      "Set and continuously refine the program rhythm: planning cycles, status reporting, OKR alignment, and decision logs",
+      "Apply AI-enabled GSS tooling to reduce manual toil and improve the timeliness and signal of program reporting",
+      "Identify automation and AI opportunities in program management itself",
+      "Run risk analysis, contingency planning, and trade-off conversations with senior stakeholders",
+      "Maintain authoritative status materials for GSS leadership team, monthly KPI updates, and quarterly Board contributions",
+      "Act as a player-coach to other program managers across GSS and GTS",
+      "Flex into other GSS functions where strategic initiatives need senior program leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      100000,
+      150000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as part of total compensation package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "technical program manager",
+    "information security",
+    "GRC",
+    "TPRM",
+    "third-party risk",
+    "compliance",
+    "audit readiness",
+    "AI governance",
+    "NIST",
+    "ISO 27001",
+    "SOC 2",
+    "PCI DSS",
+    "OKR",
+    "risk management",
+    "security KPIs",
+    "player-coach"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($100K–$150K base)",
+    "Clear reporting line (Head of Security Strategy and Governance) and team context",
+    "Well-defined program surface and cross-functional partners listed",
+    "Mentions AI tooling and automation as genuine program priorities, not just buzzwords",
+    "Encourages close-but-not-exact applicants to apply",
+    "Travel requirement explicitly scoped (up to 10%) and described as advance-coordinated"
+  ],
+  "red_flags": [
+    "Certifications (PMP, PRINCE2, ITIL, COBIT, ISO 27001) described as 'expected at this level' — treated as hard requirement but may be flexible in practice; flagged as ambiguity",
+    "Location is ambiguous: salary range mentions 'various U.S. geographic markets' suggesting US-based but no specific cities or remote/hybrid policy is explicitly stated for this role",
+    "Visa sponsorship not addressed anywhere in the JD"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years + player-coach language)",
+      "scope.business_model (inferred from company description — ecommerce/marketing SaaS)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed as metrics in JD)",
+      "location.type (inferred as hybrid from 10% travel requirement and US salary bands; no explicit remote/hybrid/onsite label in JD body)",
+      "location.remote_us_eligible (inferred from geo-based salary range language implying US locations but no office requirement stated)"
+    ],
+    "ambiguities": [
+      "Certifications (PMP, PRINCE2, ITIL, COBIT, ISO 27001) are described as 'expected at this level', which reads as a hard requirement, but the opening paragraph encourages close-but-not-exact candidates to apply. Classified as hard severity with bridgeable: maybe.",
+      "Location type is unclear: the JD does not explicitly state remote, hybrid, or onsite. The geo-based salary language implies US-only but no office attendance requirement is mentioned aside from up to 10% travel. Treated as hybrid/remote-flexible.",
+      "Visa sponsorship is not mentioned anywhere in the JD; set to unclear."
+    ]
+  }
+}

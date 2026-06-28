@@ -1,0 +1,366 @@
+{
+  "company": "Ramp",
+  "role_title": "Growth Manager, Verticalization & Startups GM",
+  "url": "https://jobs.ashbyhq.com/ramp/80a2e918-1b21-44c3-92f9-a6da507130ef",
+  "ats_provider": "ashby",
+  "ats_job_id": "80a2e918-1b21-44c3-92f9-a6da507130ef",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time in-person; physically present where startups form",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Growth GM / Segment General Manager",
+  "seniority": {
+    "level": "Senior IC / Lead (GM-level individual contributor)",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years across founding, growth, GTM, or general management",
+      "Owns a P&L and segment number end to end",
+      "Reports directly to VP of Growth",
+      "Expected to run segment 'like its own business'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "founder_or_founding_team_experience",
+      "raw_text_from_jd": "You have started a company, or you have operated at the founding-team level of an early startup and lived the incorporation-to-traction journey firsthand",
+      "skill_type": "domain_knowledge",
+      "domain": "entrepreneurship / startup founding",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "startups"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "early startup"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "startup_community_embedded",
+      "raw_text_from_jd": "You are deeply, currently embedded in the startup community: accelerators, angels, founder networks, the SF startup social scene. You can name the up-and-coming companies before they are obvious, and the community knows you back",
+      "skill_type": "domain_knowledge",
+      "domain": "startup community / founder networks",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "startups"
+      ],
+      "geographies_named": [
+        "San Francisco"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_experience",
+      "raw_text_from_jd": "5+ years across some combination of founding, growth, GTM, or general management, with clear evidence you can own an outcome end to end rather than one function",
+      "skill_type": "years_of_experience",
+      "domain": "founding / growth / GTM / general management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gm_instinct_pl",
+      "raw_text_from_jd": "A GM instinct: you think in P&L, you make tradeoffs across product, pricing, and marketing, and you are comfortable owning a number with no one to hand it to",
+      "skill_type": "capability",
+      "domain": "general management / P&L ownership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_fluency",
+      "raw_text_from_jd": "Demonstrable AI fluency: specific tools, workflows, or systems you have built or adopted that materially changed your output",
+      "skill_type": "tool_proficiency",
+      "domain": "AI tools / workflows",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Claude"
+      ],
+      "technologies_named": [
+        "AI agents",
+        "LLMs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Sharp written and verbal communication. You can write the landing page and command the room at the dinner",
+      "skill_type": "capability",
+      "domain": "communication / copywriting",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sf_relocation",
+      "raw_text_from_jd": "You live in or will relocate to San Francisco and will be in-market, in-person",
+      "skill_type": "cultural_fit",
+      "domain": "location / in-person presence",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "San Francisco"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "accelerator_alumni_or_operator",
+      "raw_text_from_jd": "You went through YC, Techstars, Neo, South Park Commons, or an equivalent program, or you ran one",
+      "skill_type": "domain_knowledge",
+      "domain": "startup accelerator participation or operation",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "startups"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "YC",
+        "Techstars",
+        "Neo",
+        "South Park Commons"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "founder_community_audience",
+      "raw_text_from_jd": "You have an existing audience or following in the founder community",
+      "skill_type": "domain_knowledge",
+      "domain": "founder community / thought leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "startups"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "built_popular_ai_tool",
+      "raw_text_from_jd": "You have built a wildly popular AI tool, or agent that automated a repeatable workflow",
+      "skill_type": "outcome",
+      "domain": "AI product / tool building",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fintech_banking_experience",
+      "raw_text_from_jd": "Experience with fintech, banking, or developer-led product distribution",
+      "skill_type": "domain_knowledge",
+      "domain": "fintech / banking / developer distribution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "comparison_aeo_seo",
+      "raw_text_from_jd": "Familiarity with comparison and AEO SEO as a land-grab tactic",
+      "skill_type": "tool_proficiency",
+      "domain": "SEO / AEO / comparison marketing",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AEO SEO",
+        "comparison SEO"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "angel_investing_advising",
+      "raw_text_from_jd": "You have angel invested or advised early companies",
+      "skill_type": "domain_knowledge",
+      "domain": "angel investing / startup advising",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "startups"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Remote or hybrid-anywhere candidates",
+    "Candidates who need a defined playbook handed to them",
+    "Candidates who do not want to attend dinners and demo days"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Startup segment end to end — acquisition, onboarding, pricing, incentives, positioning, lifecycle, product strategy for newly incorporated US companies",
+    "business_model": "B2B SaaS / fintech — corporate card and spend management platform targeting startups at inception",
+    "primary_metrics_inferred": [
+      "90%+ of all newly incorporated US startups starting on Ramp",
+      "Incorporation-to-activated-card conversion rate",
+      "Startup segment pipeline and revenue number"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "VP of Growth",
+      "Marketing (implied)",
+      "Community / Events"
+    ],
+    "core_responsibilities": [
+      "Own positioning for startup segment vs. Brex, Mercury, and Every",
+      "Build full acquisition motion: community/events, founder/angel networks, accelerator partnerships, SEO, paid, referral, incentive-driven growth",
+      "Own product strategy for the segment — define day-zero product experience and carry to Product",
+      "Own onboarding — make incorporation-to-funded-card the fastest path in market",
+      "Own pricing and incentives — design the offer that makes Ramp default at incorporation",
+      "Be the face of Ramp in the startup community — host dinners, speak at demo days",
+      "Drive toward 90%+ of newly incorporated US startups starting on Ramp; build and instrument the funnel"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "startup segment GM",
+    "P&L ownership",
+    "founder community",
+    "acquisition",
+    "onboarding",
+    "pricing and incentives",
+    "YC",
+    "demo days",
+    "AI-native",
+    "comparison SEO",
+    "Brex Mercury Every",
+    "incorporation",
+    "accelerator"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Extremely clear scope — one segment, one brutal metric (90%+ of newly incorporated US startups)",
+    "High autonomy and P&L ownership from day one",
+    "Reports directly to VP of Growth — short decision chain",
+    "Relocation support to SF explicitly offered",
+    "Unlimited AI token usage as a benefit signals genuine AI-native culture",
+    "Comprehensive benefits package including 100% medical/dental/vision"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Hard onsite requirement in San Francisco — eliminates all remote candidates",
+    "Founder or founding-team experience is effectively a hard prerequisite, significantly narrowing the pool",
+    "Role expects the candidate to already be a known, trusted figure in the SF startup community — very high bar for community credibility",
+    "Equity not mentioned anywhere in the JD — unusual for a GM-level role at a high-growth fintech"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from P&L ownership, reports to VP of Growth, and 5+ years requirement; no explicit level stated)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and stated goal; not listed as a discrete section)",
+      "scope.business_model (inferred from company description and product context)",
+      "compensation.equity_mentioned (inferred as false — equity not mentioned anywhere in JD)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Archetype is ambiguous: the role is titled 'Growth Manager' but operates as a Segment GM with P&L ownership, community motion, and product strategy input — closer to BizOps/Strategy & Ops or a Growth GM hybrid than a standard Growth PM or Growth (non-PM).",
+      "manages_people: not stated explicitly; the role is described as running 'the segment like its own business' under VP of Growth, suggesting a senior IC GM role without direct reports, but this is not confirmed.",
+      "No equity or total comp information provided anywhere in the JD."
+    ]
+  }
+}

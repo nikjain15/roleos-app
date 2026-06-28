@@ -1,0 +1,340 @@
+{
+  "company": "Cursor",
+  "role_title": "Strategic Partnerships & Growth Lead — DoW / US Army",
+  "url": "https://jobs.ashbyhq.com/cursor/0d4431c8-78e7-4a41-9407-ed5dbf60d1f2",
+  "ats_provider": "ashby",
+  "ats_job_id": "0d4431c8-78e7-4a41-9407-ed5dbf60d1f2",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "us-citizenship-required",
+    "visa_sponsorship": "no"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Channel Sales / Partnerships (Defense)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of channel sales, BD, or partnership management experience",
+      "This is a senior individual contributor role with revenue ownership, reporting directly to sales leadership",
+      "Owns a revenue target for Army/DoD prime channel business"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "active_secret_clearance",
+      "raw_text_from_jd": "Active Secret clearance or above — candidates without an active clearance will not be considered",
+      "skill_type": "credential",
+      "domain": "security_clearance",
+      "minimum_value": "Secret",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Active Secret clearance"
+      ]
+    },
+    {
+      "id": "years_channel_bd_defense",
+      "raw_text_from_jd": "5+ years of channel sales, BD, or partnership management experience inside the defense industrial base, with a focus on Army-aligned programs",
+      "skill_type": "years_of_experience",
+      "domain": "channel_sales_and_business_development",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense industrial base"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "existing_prime_contractor_relationships",
+      "raw_text_from_jd": "Existing relationships at one or more major Army prime contractors (SAIC, Leidos, Booz Allen, CACI, Peraton) at the BD, program management, or technical leadership level",
+      "skill_type": "capability",
+      "domain": "defense_prime_contractor_relationships",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense industrial base"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "SAIC",
+        "Leidos",
+        "Booz Allen",
+        "CACI",
+        "Peraton"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "prime_contractor_software_evaluation_understanding",
+      "raw_text_from_jd": "Understanding of how prime contractors evaluate, approve, and deploy software tools across their development teams and program deliveries",
+      "skill_type": "domain_knowledge",
+      "domain": "defense_software_procurement",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense industrial base"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "channel_revenue_track_record",
+      "raw_text_from_jd": "Track record of standing up or expanding channel and partner relationships that drove material software revenue ($500K+)",
+      "skill_type": "outcome",
+      "domain": "channel_partnerships_revenue",
+      "minimum_value": 500000,
+      "unit": "usd",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "prime_and_enduser_comfort",
+      "raw_text_from_jd": "Comfortable working both the prime-facing channel layer (BD, program managers, contracts) and the end-user pull-through layer (Army software developers, Software Factory operators)",
+      "skill_type": "capability",
+      "domain": "multi-stakeholder_sales_and_partnerships",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense industrial base"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ts_sci_clearance",
+      "raw_text_from_jd": "Active TS/SCI",
+      "skill_type": "credential",
+      "domain": "security_clearance",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "TS/SCI"
+      ]
+    },
+    {
+      "id": "army_software_modernization_service",
+      "raw_text_from_jd": "Prior active duty or civilian service in an Army software or digital modernization role (Software Factory, PEO, Army Futures Command)",
+      "skill_type": "domain_knowledge",
+      "domain": "army_software_modernization",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense",
+        "US Army"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_tools_ai_sdlc_selling",
+      "raw_text_from_jd": "Experience selling developer tools, AI/ML platforms, or SDLC tooling through or alongside defense primes",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_tools_sales",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML platforms",
+        "SDLC tooling"
+      ],
+      "industries_named": [
+        "defense industrial base"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "army_developer_tooling_standards_familiarity",
+      "raw_text_from_jd": "Familiarity with how Army programs evaluate and mandate developer tooling standards across prime and subcontractor teams",
+      "skill_type": "domain_knowledge",
+      "domain": "army_developer_tooling_policy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "US Army",
+        "defense industrial base"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "army_side_relationships",
+      "raw_text_from_jd": "Existing Army-side relationships at Kessel Run, PEO EIS, Army CIO/G-6, or Futures Command",
+      "skill_type": "capability",
+      "domain": "army_government_relationships",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "US Army",
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Candidates without an active clearance will not be considered"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Army/DoD prime contractor channel — building partnerships with defense primes (SAIC, Leidos, Booz Allen Hamilton, CACI, Peraton) and generating Army end-user pull-through",
+    "business_model": "enterprise B2B / channel sales within defense industrial base",
+    "primary_metrics_inferred": [
+      "Revenue target for Army/DoD prime channel business",
+      "Pipeline of prime contractor partnerships and program-level co-sell opportunities",
+      "Enterprise agreement volume with defense primes",
+      "Developer seat expansion across defense industrial base"
+    ],
+    "cross_functional_partners": [
+      "Field Engineering",
+      "Legal and compliance teams",
+      "Cursor GTM leadership",
+      "Cursor roadmap/product team",
+      "Sales leadership"
+    ],
+    "core_responsibilities": [
+      "Own and grow Cursor's relationships with defense prime contractors focused on Army programs",
+      "Negotiate and close partnership agreements — reseller arrangements, teaming agreements, and approved vendor designations",
+      "Work with prime contractor BD and program management teams to co-sell Cursor into new Army contract awards at the proposal stage",
+      "Build relationships inside Army Software Factories (Kessel Run, Project Origen, Castle Rock) and program offices",
+      "Engage Army CIO/G-6, PEO EIS, and Futures Command tech organizations",
+      "Represent Cursor at AUSA, NDIA, and Army-focused industry events",
+      "Own a revenue target for Army/DoD prime channel business",
+      "Build and manage a pipeline of prime contractor partnerships and program-level co-sell opportunities",
+      "Forecast and report on channel pipeline with the same rigor as direct enterprise deals",
+      "Partner with Field Engineering on technical evaluations and POCs",
+      "Work with Cursor's legal and compliance teams on teaming agreements and FedRAMP/IL considerations",
+      "Channel Army developer feedback and product gaps back to Cursor's roadmap team"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "defense industrial base",
+    "prime contractors",
+    "US Army",
+    "channel sales",
+    "Secret clearance",
+    "TS/SCI",
+    "developer tools",
+    "AI code editor",
+    "Software Factory",
+    "Kessel Run",
+    "SAIC",
+    "Leidos",
+    "Booz Allen Hamilton",
+    "CACI",
+    "Peraton",
+    "FedRAMP",
+    "DoD",
+    "BD",
+    "enterprise agreements",
+    "Army modernization"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership: senior IC with direct revenue accountability and reporting line to sales leadership",
+    "Well-defined target account list (SAIC, Leidos, Booz Allen, CACI, Peraton) — not a vague market",
+    "Cursor already has existing prime contractor presence — role builds on warm foundation rather than cold start",
+    "Direct line to GTM and product leadership mentioned explicitly",
+    "Specific Army ecosystem touchpoints named (Kessel Run, PEO EIS, CIO/G-6, Futures Command) — JD shows genuine domain knowledge"
+  ],
+  "red_flags": [
+    "Compensation not disclosed",
+    "Location/remote policy not stated at all — unclear where candidate must be based",
+    "Active Secret clearance hard requirement eliminates most candidates and narrows pool severely",
+    "No visa sponsorship is possible given security clearance requirements — not stated but practically implied",
+    "Revenue target amount not disclosed, making it difficult to assess quota pressure",
+    "JD does not clarify whether this is a new function being built from scratch with no team support"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type set to 'unclear' — no office location, remote policy, or city mentioned anywhere in JD",
+      "location.work_auth set to 'us-citizenship-required' — Secret clearance and above requires US citizenship; not explicitly stated but practically required",
+      "location.visa_sponsorship set to 'no' — inferred from security clearance requirement",
+      "seniority.level inferred from 'senior individual contributor' label and 5+ years requirement",
+      "scope.business_model inferred from product description and channel motion described",
+      "scope.primary_metrics_inferred — specific numbers not given, inferred from responsibilities",
+      "compensation.equity_mentioned false — equity not mentioned in JD"
+    ],
+    "ambiguities": [
+      "Archetype is ambiguous: the role is labeled 'Strategic Partnerships & Growth Lead' and involves revenue ownership, but it is not a classic PM or program manager role; mapped to BizOps/Strategy & Ops as closest fit with secondary note of Channel Sales/Partnerships",
+      "Work location is entirely unstated — could be remote, hybrid, or DC/Northern Virginia-area onsite, which is common for defense-focused roles",
+      "Security clearance work auth: JD does not explicitly state US citizenship is required, but Active Secret clearance effectively mandates it"
+    ]
+  }
+}

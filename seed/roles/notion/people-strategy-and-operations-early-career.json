@@ -1,0 +1,261 @@
+{
+  "company": "Notion",
+  "role_title": "People Strategy & Operations, Early Career",
+  "url": "https://jobs.ashbyhq.com/Notion/83c8907b-e05e-401a-a5de-9ebe0b1a800f",
+  "ats_provider": "ashby",
+  "ats_job_id": "83c8907b-e05e-401a-a5de-9ebe0b1a800f",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "on-site (#LI-Onsite)",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "People Operations / HR Operations",
+  "seniority": {
+    "level": "Entry-level / Early Career (IC1–IC2)",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Role is explicitly titled 'Early Career'",
+      "Compensation range $85,000–$120,000 annualized (or $40–$57/hr) consistent with early-career IC",
+      "JD emphasizes learning, growth, and developing expertise rather than years of experience",
+      "No specific years of experience required"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "builders_mindset",
+      "raw_text_from_jd": "You're resourceful and willing to roll up your sleeves. You have strong organizational and project management skills, with experience managing multiple priorities in a fast-paced environment.",
+      "skill_type": "capability",
+      "domain": "project_management_and_operations",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native",
+      "raw_text_from_jd": "You're genuinely interested in AI technologies and eager to learn how to build with them. You see AI as a tool to automate workflows, reduce toil, and accelerate execution.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_tools_and_automation",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "workflow automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "execution_track_record",
+      "raw_text_from_jd": "You hold yourself to a high quality bar. Details matter. You test end-to-end. You use data and metrics to guide decisions. In whatever field or passion you've pursued, you've excelled—whether in academics, athletics, creative work, or professional projects.",
+      "skill_type": "outcome",
+      "domain": "execution_and_delivery",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "thoughtful_problem_solving",
+      "raw_text_from_jd": "You approach problems holistically, starting with a clear and accurate understanding of the context. You can navigate ambiguity successfully, decompose complex problems into clean solutions, while also balancing the business impact of what you're building.",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "proactive_communication_and_agency",
+      "raw_text_from_jd": "You own your work, communicating clearly about progress and blockers. You don't wait for instructions for every step but rather show initiative in identifying what needs to be done and driving projects forward.",
+      "skill_type": "cultural_fit",
+      "domain": "communication_and_ownership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "This role is designed for a strong operator and communicator who brings cross-functional partners together thoughtfully, drives clarity, and executes at pace.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "curiosity_and_growth_mindset",
+      "raw_text_from_jd": "Most importantly, we're looking for someone who is deeply curious, hungry to grow, and eager to hone their craft in People.",
+      "skill_type": "cultural_fit",
+      "domain": "people_operations",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_adoption_championship",
+      "raw_text_from_jd": "Beyond personal use, you're excited to champion AI adoption across the People organization, helping teammates discover new ways to work smarter and more efficiently.",
+      "skill_type": "capability",
+      "domain": "change_management_and_ai_adoption",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "People team strategy and operations, including Employer Brand, Internal Mobility, and Global Onboarding",
+    "business_model": "B2B and B2C SaaS (collaborative AI workspace)",
+    "primary_metrics_inferred": [
+      "Project delivery on time and on track",
+      "Measurable outcomes from People initiatives",
+      "Employee experience quality"
+    ],
+    "cross_functional_partners": [
+      "People Leadership",
+      "Project leaders",
+      "Environment team",
+      "New hires",
+      "Wider Notion organization"
+    ],
+    "core_responsibilities": [
+      "Support the People Leadership team on high impact initiatives such as Employer Brand, Internal Mobility, and Global Onboarding",
+      "Keep the People team aligned around strategic objectives",
+      "Spot gaps before they become blockers and put process in place where it makes sense",
+      "Drive projects from idea to execution with measurable outcomes",
+      "Partner with leadership to navigate complex, sensitive matters",
+      "Collaborate across the organization as it scales globally",
+      "Act as a culture carrier and help preserve company values as Notion scales"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      85000,
+      120000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned generically alongside cash compensation and benefits",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "People Strategy",
+    "People Operations",
+    "early career",
+    "Employer Brand",
+    "Internal Mobility",
+    "Global Onboarding",
+    "cross-functional",
+    "AI native",
+    "project management",
+    "culture carrier",
+    "operator",
+    "ambiguity"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($85K–$120K base or $40–$57/hr)",
+    "Equity mentioned as part of package",
+    "Explicitly designed for early-career candidates with no strict years-of-experience requirement",
+    "Encourages applicants who don't meet every bullet to still apply",
+    "Clear articulation of scope and high-impact initiatives (Employer Brand, Internal Mobility, Global Onboarding)",
+    "Role positioned as a 'launchpad' with intentional investment in the candidate's growth"
+  ],
+  "red_flags": [
+    "On-site requirement in San Francisco eliminates remote candidates",
+    "Role is broad and ambiguous in scope ('wear many hats'), which may make it difficult to assess fit or career trajectory",
+    "No specific years of experience or educational requirements stated, making qualification bar unclear",
+    "Hourly framing ($40–$57/hr) alongside annualized salary may indicate contractor or temp-to-perm possibility — not clarified in JD"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Early Career' title and compensation range)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.work_auth (not stated; defaulted to open)",
+      "location.visa_sponsorship (not stated; defaulted to unclear)",
+      "posting_first_seen (not available)",
+      "posting_last_updated (not available)"
+    ],
+    "ambiguities": [
+      "Compensation is presented both as an hourly rate ($40–$57/hr) and an annualized salary ($85K–$120K); it is unclear whether this is an hourly/contract role or a salaried FTE role.",
+      "No explicit educational credential requirement is stated; cannot determine if a degree is needed.",
+      "Visa sponsorship policy is not mentioned anywhere in the JD."
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "company": "Lyft",
+  "role_title": "Staff Growth Product Manager, Lyft Business",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8547683002?gh_jid=8547683002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8547683002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Staff PM (IC6 / Staff)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management experience",
+      "Staff Product Manager title",
+      "Multi-year growth strategy ownership, shared infrastructure across products",
+      "Represents Lyft Business Growth in exec reviews and cross-org forums",
+      "Base pay range $176,000 - $220,000 in NYC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "8+ years of product management experience, with a meaningful portion owning growth, lifecycle, or funnel work at scale.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "with meaningful portion in growth, lifecycle, or funnel work at scale",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "measurable_growth_impact",
+      "raw_text_from_jd": "Track record of measurable, durable impact on acquisition, activation, or retention metrics that you can defend.",
+      "skill_type": "outcome",
+      "domain": "growth_metrics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "broad_ambiguous_ownership",
+      "raw_text_from_jd": "Demonstrated ownership of broad, ambiguous problem areas that span teams. You have set a multi-year growth strategy and built shared infrastructure that compounded across products.",
+      "skill_type": "capability",
+      "domain": "cross_team_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "quantitative_rigor_experimentation",
+      "raw_text_from_jd": "Quantitative rigor and experimentation discipline. You think in funnels, cohorts, and growth loops. You size opportunities, design clean A/B tests, and read results without overclaiming.",
+      "skill_type": "capability",
+      "domain": "experimentation_and_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "A/B testing",
+        "funnels",
+        "cohort analysis",
+        "growth loops"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_stack_fluency",
+      "raw_text_from_jd": "Fluency with the modern growth stack: lifecycle and CRM platforms, attribution, product analytics (Amplitude, Mixpanel, or similar), and experimentation tooling.",
+      "skill_type": "tool_proficiency",
+      "domain": "growth_technology_stack",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Amplitude",
+        "Mixpanel"
+      ],
+      "technologies_named": [
+        "lifecycle platforms",
+        "CRM platforms",
+        "attribution",
+        "product analytics",
+        "experimentation tooling"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "b2b_b2b2c_marketplace_context",
+      "raw_text_from_jd": "Comfortable in B2B, B2B2C, or marketplace contexts with multiple customer types whose interests do not always align.",
+      "skill_type": "domain_knowledge",
+      "domain": "b2b_b2b2c_marketplace",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B",
+        "B2B2C",
+        "marketplace"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_influence",
+      "raw_text_from_jd": "Exceptional communication and influence at every altitude, from a growth engineer debating instrumentation to a VP sponsoring the revenue target. You move organizations to act.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Lyft Business growth — acquisition, activation, lifecycle, growth loops, marketing and lifecycle stack across B2B and B2B2C surfaces (admin portal, rider app, partner surfaces)",
+    "business_model": "B2B and B2B2C — transportation solutions for organizations including business travel, employee commutes, courtesy rides, and non-emergency medical trips",
+    "primary_metrics_inferred": [
+      "Customer acquisition cost (cost to acquire)",
+      "Activation rate / time to first value",
+      "Retention and durable engagement",
+      "Revenue run rate",
+      "Experiment velocity and validated test rate"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data Science",
+      "Design",
+      "Lifecycle Marketers",
+      "Product Marketers",
+      "Vertical PMs",
+      "Marketing"
+    ],
+    "core_responsibilities": [
+      "Own demand generation and build the acquisition playbook across channels, tactics, and mar-tech",
+      "Own activation in partnership with vertical PMs to drive customers to first value",
+      "Architect the journey from awareness through landing in admin portal, rider app, and partner surfaces",
+      "Design and operate growth loops converting acquired customers into channels for new acquisition",
+      "Set the experimentation cadence, shipping bar, and readout standards",
+      "Translate funnel data, cohort behavior, and experiment results into prioritization",
+      "Represent Lyft Business Growth in exec reviews and cross-org forums"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      176000,
+      220000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned but not detailed",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "growth",
+    "Lyft Business",
+    "acquisition",
+    "activation",
+    "lifecycle",
+    "growth loops",
+    "experimentation",
+    "B2B",
+    "B2B2C",
+    "funnel",
+    "attribution",
+    "CRM",
+    "Amplitude",
+    "Mixpanel",
+    "Staff PM",
+    "demand generation"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($176K–$220K base in NYC area) and competitive for Staff PM level",
+    "Clear product surface and scope — Lyft Business Growth with well-defined responsibilities",
+    "Lyft Business described as 'one of Lyft's fastest-growing and most profitable units'",
+    "Strong cross-functional team including Engineers, Designers, Data Scientists, and Lifecycle/Product Marketers",
+    "Hybrid flexibility with up to 4 weeks per year working from anywhere",
+    "Generous benefits including 18 weeks paid parental leave and 401(k) match"
+  ],
+  "red_flags": [
+    "Hybrid role requires in-office 3 days per week (Mon, Wed, Thu) — limited flexibility for those not in NYC",
+    "Role is NYC-area specific; no mention of remote eligibility or other city options",
+    "Visa sponsorship status not mentioned — unclear for non-US-authorized candidates",
+    "8+ years PM experience with meaningful growth focus is a high bar that eliminates most generalist PMs"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Staff' title, 8+ years requirement, and comp range)",
+      "seniority.manages_people (inferred as false — no direct reports mentioned in JD)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed)",
+      "scope.business_model (partially inferred from product description)",
+      "location.work_auth (inferred as open; no restriction stated)",
+      "location.visa_sponsorship (not stated — marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD says 'The expected base pay range for this position in the New York City area' but does not specify whether this role is exclusively NYC or if other locations are possible — treated as NYC-primary hybrid based on available context.",
+      "Equity is mentioned as 'potential equity offering' but the form (RSUs, options, etc.) is not specified."
+    ]
+  }
+}

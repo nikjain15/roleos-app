@@ -4,7 +4,7 @@
   "url": "https://app.careerpuck.com/job-board/lyft/job/8318645002?gh_jid=8318645002",
   "ats_provider": "greenhouse",
   "ats_job_id": "8318645002",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -21,15 +21,15 @@
   "archetype_confidence": "high",
   "secondary_archetype": "Group PM / People Manager",
   "seniority": {
-    "level": "Senior Manager / Group PM (people manager, 6+ years PM)",
+    "level": "Staff / Group PM (people manager, IC6+ equivalent)",
     "years_required_min": 6,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
       "6+ years of experience in product management",
       "2+ years of experience managing product managers",
-      "Manages a team of PMs and leads a large cross-functional team",
-      "Comp range $176K-$220K base, consistent with senior group PM level"
+      "Leads a large cross-functional team and manages a team of PMs",
+      "Comp range $176K-$220K base, consistent with senior people-manager PM at Lyft"
     ]
   },
   "must_haves": [
@@ -40,7 +40,7 @@
       "domain": "product_management",
       "minimum_value": 6,
       "unit": "years",
-      "qualifier": "consumer mobile apps",
+      "qualifier": "consumer mobile apps focus",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -69,28 +69,43 @@
       "credentials_named": []
     },
     {
+      "id": "consumer_mobile_apps_leadership",
+      "raw_text_from_jd": "significant time spent leading consumer mobile apps",
+      "skill_type": "domain_knowledge",
+      "domain": "consumer_mobile_apps",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
       "id": "passion_for_lyft_mission",
       "raw_text_from_jd": "Passion for Lyft and what we are trying to achieve in sustainable urban transportation",
       "skill_type": "cultural_fit",
-      "domain": "company_mission_alignment",
+      "domain": "mission_alignment",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "urban transportation",
-        "rideshare"
+        "transportation",
+        "urban mobility"
       ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "project_ambiguity_management",
+      "id": "project_ambiguity_complexity",
       "raw_text_from_jd": "Natural ability to make things happen around you. You manage project ambiguity, complexity and interdependencies in an organized and structured way. Be able to define and analyze metrics that inform the success of products",
       "skill_type": "capability",
-      "domain": "program_execution_and_analytics",
+      "domain": "program_management_and_analytics",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -117,7 +132,7 @@
       "credentials_named": []
     },
     {
-      "id": "communication_skills",
+      "id": "communication_strategy",
       "raw_text_from_jd": "Strong communication skills and intuition for communication strategy at every level -- within teams, within the company, to users, to press, and other audiences",
       "skill_type": "capability",
       "domain": "communication",
@@ -134,8 +149,8 @@
     {
       "id": "post_launch_optimization",
       "raw_text_from_jd": "Experience leading post-launch optimizations including developing testing strategies",
-      "skill_type": "outcome",
-      "domain": "product_launches",
+      "skill_type": "capability",
+      "domain": "product_growth_and_experimentation",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -152,7 +167,7 @@
       "skill_type": "capability",
       "domain": "project_management",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -162,10 +177,10 @@
       "credentials_named": []
     },
     {
-      "id": "organizational_skills",
+      "id": "detail_orientation_organization",
       "raw_text_from_jd": "Detail oriented with superior organizational skills -- balancing multiple projects, deadlines, and requests should be second nature to you",
       "skill_type": "capability",
-      "domain": "organization_and_execution",
+      "domain": "organizational_skills",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -180,14 +195,14 @@
   "nice_to_haves": [],
   "explicitly_excluded": [],
   "scope": {
-    "team_size_estimate": "unclear",
-    "surface": "Core Rider consumer app — home screen, request flow, pickup experience, in-ride experience, rate & pay; targeted experiences including Lyft Silver for Seniors and Price Lock for commuters; AV extensions",
-    "business_model": "B2C consumer mobility / rideshare marketplace",
+    "team_size_estimate": "unclear (manages a team of PMs + large cross-functional team)",
+    "surface": "Lyft consumer app — home screen, request flow, pickup experience, in-ride experience, rate & pay; AV extensions; segments including Lyft Silver for Seniors and Price Lock for commuters",
+    "business_model": "B2C consumer rideshare platform",
     "primary_metrics_inferred": [
-      "Rider conversion and completion through request and purchase flows",
-      "Pickup and in-ride experience quality (ratings, complaints)",
-      "Retention and engagement across rider segments (seniors, commuters)",
-      "Revenue via Price Lock and other monetization features"
+      "Rider conversion and completion rate through request flow",
+      "Pickup and in-trip experience quality (ratings, reliability)",
+      "Segment-specific engagement (seniors, commuters)",
+      "Revenue metrics tied to Price Lock and premium experiences"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -199,11 +214,11 @@
       "Operations"
     ],
     "core_responsibilities": [
-      "Understand Lyft's strategic and competitive position. Set your team's goals and success metrics that align with Lyft's mission and drive maximum impact based on data analysis, market research and usability studies",
-      "Set an incredibly ambitious vision that motivates and inspires your team, peers and leadership and scales equally well across places and situations of all types",
-      "Completely own your team's products, existing or new, from ideation, through development, to experiment, launch, growth and maintenance, caring deeply about our users",
-      "Lead and align cross functional partners and teams: engineers, designers, analysts, marketers, business partners and operations to drive a shared vision",
-      "Communicate clear roadmaps, priorities, experiments and decisions across a wide spectrum of audiences from partner teams to executive level"
+      "Understand Lyft's strategic and competitive position; set team goals and success metrics",
+      "Set an ambitious vision that scales across places and situations of all types",
+      "Own team's products from ideation through development, experiment, launch, growth and maintenance",
+      "Lead and align cross functional partners and teams to drive a shared vision",
+      "Communicate clear roadmaps, priorities, experiments and decisions across audiences from partner teams to executive level"
     ]
   },
   "compensation": {
@@ -213,7 +228,7 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "potential equity offering mentioned (not detailed)",
+    "equity_form": "potential equity offering (form not specified)",
     "location_pay_differential": true,
     "source": "stated"
   },
@@ -221,44 +236,42 @@
     "Group Product Manager",
     "consumer mobile app",
     "rideshare",
-    "Core Rider",
+    "rider journey",
     "autonomous vehicles",
     "Lyft Silver",
     "Price Lock",
-    "request flow",
-    "pickup experience",
-    "in-ride experience",
-    "product roadmap",
+    "cross-functional leadership",
     "people management",
-    "cross-functional leadership"
+    "product roadmap",
+    "experimentation",
+    "urban transportation"
   ],
   "buzzword_density": "medium",
   "green_flags": [
     "Compensation range disclosed ($176K-$220K base) plus equity and bonus mentioned",
-    "Clear product surface ownership described in concrete detail (home screen, request flow, pickup, in-ride, rate & pay)",
-    "Explicit people management scope — manages a team of PMs",
-    "High-visibility role: product used by millions of people every day",
-    "Hybrid schedule clearly defined (Mon/Wed/Thu in office)",
-    "Strong benefits package including 18 weeks paid parental leave"
+    "Clear product surface with specific ownership areas named (home screen, request flow, in-ride, rate & pay, AV, Silver, Price Lock)",
+    "High-impact, high-visibility role touching millions of daily active users",
+    "Hybrid schedule with defined in-office days (Mon/Wed/Thu) and flexibility to work remotely up to 4 weeks per year",
+    "Comprehensive benefits package including 18 weeks paid parental leave"
   ],
   "red_flags": [
-    "No visa sponsorship information stated — unclear for international candidates",
-    "Hybrid role requires in-office 3 days per week in San Francisco — no full-remote option",
-    "Role spans very broad scope (entire rider journey + AV extensions + segment experiences) which may indicate high complexity and competing priorities"
+    "Hybrid role requires in-office 3 days per week (Mon, Wed, Thu) in San Francisco — eliminates remote candidates outside SF",
+    "Visa sponsorship not mentioned; unclear for international applicants",
+    "Role combines IC strategic depth with people management of PMs and large XFN teams — broad scope may stretch capacity",
+    "No explicit mention of preferred or bonus qualifications — hard to gauge where bar is set for competitive candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years requirements, people management scope, and comp range)",
+      "seniority.level (inferred from comp range, people management requirement, and cross-functional scope)",
+      "scope.team_size_estimate (not stated; described as 'team of PMs' and 'large cross-functional team')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
       "scope.business_model (inferred from product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities and product surface; not stated in JD)",
-      "location.visa_sponsorship (not stated; set to unclear)",
-      "posting_first_seen (not stated)",
-      "posting_last_updated (not stated)"
+      "location.visa_sponsorship (not mentioned; marked unclear)",
+      "posting_first_seen and posting_last_updated (not available)"
     ],
     "ambiguities": [
-      "The JD lists no explicit nice-to-haves or preferred qualifications section; all listed requirements treated as must-haves.",
-      "Equity is mentioned as 'potential equity offering' but form (RSUs, options) is not specified.",
-      "Compensation note says 'San Francisco area' range but also mentions salary ranges vary by working location — could imply other locations exist, though the JD specifies San Francisco headquarters only."
+      "JD lists no 'Preferred' or 'Nice to Have' section; all Experience bullets treated as must-haves with hard severity. No nice-to-haves were separable.",
+      "Years experience requirement covers 'product management, product design or equivalent consultant experience' — whether design-only backgrounds qualify is ambiguous."
     ]
   }
 }

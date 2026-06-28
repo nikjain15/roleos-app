@@ -1,0 +1,264 @@
+{
+  "company": "Klaviyo",
+  "role_title": "Lead Product Manager, Core Data",
+  "url": "https://www.klaviyo.com/careers/jobs/7728815003?gh_jid=7728815003",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7728815003",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Boston, MA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "5 days/week in Boston office",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Platform PM (Data Infrastructure)",
+  "seniority": {
+    "level": "Lead / Staff IC (Lead PM)",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Role title explicitly 'Lead Product Manager'",
+      "Expected to set direction, influence engineering leadership, and drive org-wide alignment",
+      "Comp range $168K-$252K base consistent with Lead/Staff IC level",
+      "'Proven experience as a Lead or Senior Platform Product Manager'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "lead_senior_platform_pm_experience",
+      "raw_text_from_jd": "Proven experience as a Lead or Senior Platform Product Manager in data infrastructure, distributed systems, or developer platform environments — with a track record of driving velocity and reliability at scale.",
+      "skill_type": "years_of_experience",
+      "domain": "platform_product_management",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems"
+      ],
+      "industries_named": [
+        "data infrastructure",
+        "developer platforms"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_infrastructure_depth",
+      "raw_text_from_jd": "Deep understanding of data architecture and large-scale systems; experience with event-driven systems, high-volume ingestion pipelines, or complex data movement patterns.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_architecture_and_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "event-driven systems",
+        "high-volume ingestion pipelines",
+        "data movement patterns"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "Comfort engaging in highly technical discussions around pipelines, infrastructure, and system evolution; ability to operate at both strategic and highly detailed technical levels.",
+      "skill_type": "capability",
+      "domain": "technical_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "pipelines",
+        "infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_forward_mindset",
+      "raw_text_from_jd": "Understanding of the transformative potential of AI in platform engineering; ability to separate hype from practical value and drive adoption of AI-forward practices.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_in_platform_engineering",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "metrics_oriented",
+      "raw_text_from_jd": "Fluency in measuring success via engineering productivity, quality, and reliability metrics; data-driven approach to prioritization and investment decisions.",
+      "skill_type": "capability",
+      "domain": "metrics_and_analytics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "influential_collaborator",
+      "raw_text_from_jd": "Proven ability to define structure and clarity in ambiguous, newly forming teams; skilled at stakeholder management across multiple technical organizations.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_for_action",
+      "raw_text_from_jd": "Thrives in fast-moving environments; balances short-term wins with long-term strategy and biases toward automation, simplicity, and self- service solutions.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "onsite_boston",
+      "raw_text_from_jd": "Please note this role requires 5 days/week in our Boston oﬃce.",
+      "skill_type": "capability",
+      "domain": "work_location_requirement",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Boston, MA"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Data Ingestion Platform — ingestion, transformation, and reliability of large-volume data within Klaviyo's core systems",
+    "business_model": "B2B SaaS (marketing automation / ecommerce data platform)",
+    "primary_metrics_inferred": [
+      "Ingestion reliability",
+      "Pipeline latency",
+      "Data freshness",
+      "Change failure rate",
+      "Engineering productivity",
+      "Incident rate reduction"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Engineering Leadership",
+      "Integration Teams",
+      "SRE",
+      "Platform Teams",
+      "Senior Leadership"
+    ],
+    "core_responsibilities": [
+      "Define the long-term mission, charter, and ownership boundaries for a newly formed team",
+      "Develop and maintain a coherent, high-impact roadmap balancing foundational investments with active initiatives",
+      "Define the strategy for ingesting large volumes of data from numerous sources",
+      "Partner with engineering to design ingestion systems that are scalable, resilient, and maintainable",
+      "Institutionalize AI and automation as force multipliers across ingestion workflows",
+      "Establish instrumentation and success metrics to validate impact and adjust priorities",
+      "Drive improvements in observability, monitoring, and operational excellence for ingestion systems",
+      "Identify and drive architectural simplifications that improve platform health",
+      "Create transparency and open feedback loops with engineers, engineering managers, and senior leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      168000,
+      252000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as part of total compensation package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Data Ingestion Platform",
+    "platform PM",
+    "data infrastructure",
+    "distributed systems",
+    "event-driven systems",
+    "pipeline reliability",
+    "observability",
+    "data architecture",
+    "AI automation",
+    "engineering productivity",
+    "data freshness",
+    "scalable ingestion",
+    "Lead PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and wide ($168K-$252K base)",
+    "Clear product surface and ownership area (Data Ingestion Platform for a newly formed team)",
+    "Explicit success criteria stated in JD",
+    "Role has genuine strategic scope — defining vision for a newly formed team, not just executing",
+    "Company explicitly states openness to close-but-not-exact matches"
+  ],
+  "red_flags": [
+    "5 days/week in Boston office required — fully eliminates remote and hybrid candidates",
+    "No years of experience minimum explicitly stated, creating ambiguity about seniority bar",
+    "Newly formed team with 'ambiguity' — may lack established processes, tooling, or organizational support",
+    "No visa sponsorship information stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from role title 'Lead PM', JD language about setting direction/influencing engineering leadership, and comp range)",
+      "scope.business_model (inferred from company description as B2B SaaS ecommerce marketing platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and success criteria sections; specific targets not stated)",
+      "location.work_auth (not stated; defaulted to 'open')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
+    ],
+    "ambiguities": [
+      "No explicit minimum years of experience stated; 'Lead or Senior Platform PM' language implies substantial seniority but no numeric floor given.",
+      "Visa sponsorship and work authorization requirements are entirely absent from the JD.",
+      "Nice-to-haves section is absent from the JD — all requirements appear in a single 'What You Bring' section framed as expected qualifications; all treated as hard must-haves."
+    ]
+  }
+}

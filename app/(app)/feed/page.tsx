@@ -69,6 +69,12 @@ export default async function Feed() {
         </span>
         <div className="flex gap-2">
           <Link
+            href="/watch"
+            className="rounded-md border border-info bg-info-bg px-3 py-1.5 text-xs font-medium text-info-tx"
+          >
+            Keep me in the loop →
+          </Link>
+          <Link
             href="/studio/recruiter"
             className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
           >
@@ -136,7 +142,11 @@ export default async function Feed() {
                 <p className="mb-3 text-sm text-tx2">
                   Nothing&apos;s a slam-dunk &ldquo;pursue&rdquo; against your profile this week, and I&apos;d
                   rather say that than pad the list. But these are real maybes — open any one and I&apos;ll
-                  tailor your résumé to it, build a portfolio piece, or run a mock. Your move.
+                  tailor your résumé to it, build a portfolio piece, or run a mock. Or{" "}
+                  <Link href="/watch" className="font-medium text-info hover:underline">
+                    tell me exactly what you&apos;re after
+                  </Link>{" "}
+                  and I&apos;ll widen the hunt.
                 </p>
               )}
               <div className="space-y-3">

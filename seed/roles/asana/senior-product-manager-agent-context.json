@@ -4,17 +4,17 @@
   "url": "https://www.asana.com/jobs/apply/7663184?gh_jid=7663184",
   "ats_provider": "greenhouse",
   "ats_job_id": "7663184",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "hybrid",
     "cities_listed": [
-      "New York City, NY"
+      "New York, NY"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "Monday, Tuesday, and Thursday in-office; Wednesday and Friday may vary",
-    "work_auth": "open",
+    "office_time_required": "Monday, Tuesday, and Thursday in-office; Wednesday optional WFH; Friday depends on role/team",
+    "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "AI Product Manager",
@@ -27,19 +27,19 @@
     "manages_people": false,
     "level_signals": [
       "5+ years of product management experience",
-      "Title is 'Senior Product Manager'",
-      "Base salary range $202,000–$230,000 consistent with Senior IC"
+      "Role titled 'Senior Product Manager'",
+      "Comp range $202K-$230K base consistent with Senior IC at NYC-based tech company"
     ]
   },
   "must_haves": [
     {
       "id": "years_pm_experience",
-      "raw_text_from_jd": "5+ years of product management experience, specifically within search, retrieval, AI, or platform-centric products.",
+      "raw_text_from_jd": "5+ years of product management experience, ideally focusing on search, retrieval, AI, or platform products.",
       "skill_type": "years_of_experience",
       "domain": "product_management",
       "minimum_value": 5,
       "unit": "years",
-      "qualifier": "specifically within search, retrieval, AI, or platform-centric products",
+      "qualifier": "ideally focusing on search, retrieval, AI, or platform products",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -55,18 +55,33 @@
       "credentials_named": []
     },
     {
-      "id": "platform_thesis_roadmap",
-      "raw_text_from_jd": "Proven ability to define a long-term platform thesis and translate technical constraints (APIs, LLMs, integrations) into a cohesive roadmap.",
+      "id": "technical_competency_platform_thesis",
+      "raw_text_from_jd": "Strong technical competency in translating customer needs and technical constraints into a multi-year platform thesis.",
       "skill_type": "capability",
-      "domain": "platform_product_strategy",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_systems_collaboration",
+      "raw_text_from_jd": "Proven ability to work with engineering teams on complex, ambiguous systems like APIs, automation, or agents.",
+      "skill_type": "capability",
+      "domain": "engineering_collaboration",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
         "APIs",
-        "LLMs",
-        "integrations"
+        "automation",
+        "agents"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -74,55 +89,10 @@
       "credentials_named": []
     },
     {
-      "id": "complex_systems_engineering_collab",
-      "raw_text_from_jd": "Experienced in working with engineering teams on complex, ambiguous systems where quality and performance are critical.",
-      "skill_type": "capability",
-      "domain": "technical_product_management",
-      "evidence_required": "work_history",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "data_oriented_product_judgment",
-      "raw_text_from_jd": "Data-oriented with strong product judgment, comfortable using metrics and experimentation to navigate uncertainty.",
-      "skill_type": "capability",
-      "domain": "data_driven_decision_making",
-      "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "exceptional_communicator",
-      "raw_text_from_jd": "Exceptional communicator who can articulate technical strategies to both technical and non-technical audiences.",
-      "skill_type": "capability",
-      "domain": "stakeholder_communication",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "ai_tools_fluency",
-      "raw_text_from_jd": "Demonstrates fluency in AI tools and emerging technologies, with a desire to learn and leverage them to enhance productivity, collaboration, or decision-making.",
-      "skill_type": "domain_knowledge",
-      "domain": "ai_tools_and_emerging_technology",
+      "id": "ai_curiosity_emerging_tech",
+      "raw_text_from_jd": "Demonstrated curiosity about AI tools and emerging technologies, with a willingness to learn and leverage them to enhance productivity, collaboration, or decision-making.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_emerging_technology",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
@@ -136,18 +106,31 @@
       "credentials_named": []
     },
     {
-      "id": "enterprise_software_passion",
-      "raw_text_from_jd": "Passionate about enterprise software and inventing new workflows for the future of coordination.",
-      "skill_type": "cultural_fit",
-      "domain": "enterprise_software",
+      "id": "communication_and_influence",
+      "raw_text_from_jd": "Excellent written and verbal communication skills with the ability to influence cross-functional partners and leadership.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [
-        "enterprise software"
-      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_metrics_experimentation",
+      "raw_text_from_jd": "Comfortable with data, metrics, and experimentation to drive product judgment.",
+      "skill_type": "capability",
+      "domain": "data_driven_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -155,10 +138,10 @@
   ],
   "nice_to_haves": [
     {
-      "id": "llm_rag_search_eval_familiarity",
-      "raw_text_from_jd": "Familiarity with LLMs, RAG, search quality, or evaluation systems is highly preferred.",
+      "id": "llm_rag_search_eval_experience",
+      "raw_text_from_jd": "Experience with LLMs, RAG, search quality, or evaluation systems is a plus.",
       "skill_type": "domain_knowledge",
-      "domain": "ai_retrieval_systems",
+      "domain": "ai_retrieval_and_search",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -178,32 +161,28 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Agent Context — search, retrieval, and knowledge extraction systems powering Asana's AI experiences",
+    "surface": "Agent Context team — search, retrieval, and knowledge extraction within Asana's AI/work graph platform",
     "business_model": "B2B SaaS, enterprise work management platform",
     "primary_metrics_inferred": [
-      "Retrieval quality and relevance",
+      "Retrieval quality and coverage",
       "Search performance at scale",
-      "AI-driven results comprehensiveness and trustworthiness",
-      "Usage metrics for AI context features"
+      "AI trustworthiness/reliability metrics",
+      "Customer impact of AI platform improvements"
     ],
     "cross_functional_partners": [
       "Engineering",
       "Design",
-      "Experience Research",
       "Data Science",
-      "Sales",
-      "Support",
-      "Marketing",
-      "GTM teams"
+      "GTM teams",
+      "Leadership"
     ],
     "core_responsibilities": [
-      "Define and drive the multi-year roadmap for Agent Context, positioning Asana as the essential 'organizational memory' for the agentic enterprise.",
-      "Optimize retrieval quality and performance across search and RAG experiences, ensuring AI-driven results are comprehensive, relevant, and trustworthy.",
-      "Shape core AI capabilities that enable shared knowledge extraction, allowing humans and AI agents to coordinate work with full context.",
-      "Partner on governance and trust, working with cross-functional teams to ensure AI systems are dependable, safe, and enterprise-ready.",
-      "Translate complex data into action, using customer pain points and usage metrics to guide high-impact product decisions and roadmap prioritization.",
-      "Collaborate cross-functionally with Engineering, Design, and GTM teams to ship improvements that enhance the speed and utility of core AI experiences.",
-      "Communicate strategic vision, aligning stakeholders and leadership on technical tradeoffs and the path toward a more context-aware platform."
+      "Drive the product vision and prioritized roadmap for Agent Context, tying work directly to customer impact and Asana's mission.",
+      "Improve retrieval quality, coverage, and performance across search and RAG experiences to make AI more trustworthy.",
+      "Define success metrics and use data-driven insights to guide product decisions and crisp trade-offs.",
+      "Partner closely with engineering, design, and data science to ship high-impact platform improvements.",
+      "Collaborate with GTM teams and stakeholders to ensure enterprise AI is dependable, safe, and aligned with governance standards.",
+      "Shape capabilities that enable shared organizational memory, allowing humans and agents to coordinate actions effortlessly."
     ]
   },
   "compensation": {
@@ -213,49 +192,54 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "equity mentioned as part of compensation package alongside benefits",
+    "equity_form": "equity mentioned as part of compensation package (form not specified)",
     "location_pay_differential": false,
     "source": "stated"
   },
   "top_keywords": [
     "Agent Context",
-    "RAG",
     "search",
     "retrieval",
+    "RAG",
     "LLMs",
+    "work graph",
     "agentic enterprise",
-    "organizational memory",
+    "platform",
+    "AI",
     "knowledge extraction",
-    "AI platform",
-    "enterprise software",
-    "roadmap",
-    "search quality"
+    "organizational memory",
+    "enterprise AI",
+    "product roadmap",
+    "data-driven"
   ],
-  "buzzword_density": "medium",
+  "buzzword_density": "high",
   "green_flags": [
-    "Compensation range disclosed ($202,000–$230,000 base)",
-    "Clear product surface and ownership area (Agent Context, retrieval and search for AI experiences)",
-    "Explicit pay equity audit commitment mentioned",
-    "Well-defined in-office schedule (Mon/Tue/Thu) rather than vague hybrid language",
-    "Multi-year roadmap ownership signals high-impact senior role"
+    "Compensation range disclosed ($202K-$230K base) and competitive for NYC market",
+    "Clear product surface and ownership area (Agent Context team, search/RAG/retrieval focus)",
+    "Role tightly tied to a specific, growing AI-native product area",
+    "Yearly pay equity audit commitment mentioned, signals structured comp fairness",
+    "Hybrid schedule clearly defined (Mon/Tue/Thu in-office)"
   ],
   "red_flags": [
-    "NYC office-centric hybrid with Mon/Tue/Thu in-office requirement eliminates fully-remote candidates",
-    "Visa sponsorship not addressed in JD — unclear for international applicants",
-    "Role spans search, retrieval, RAG, governance, and enterprise trust — broad scope may stretch one PM thin"
+    "NYC-only hybrid role with significant in-office days (Mon, Tue, Thu mandatory); eliminates remote candidates",
+    "No mention of visa sponsorship — unclear for international candidates",
+    "High buzzword density — 'agentic enterprise,' 'coordination and memory layer,' 'organizational memory' may indicate early-stage or aspirational product definition",
+    "Friday in-office policy is ambiguous and team-dependent"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
       "seniority.level (inferred from title 'Senior' and comp range)",
-      "scope.business_model (inferred from product description and 'enterprise' language)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
-      "scope.team_size_estimate (not stated; left as 'unclear')",
-      "location.work_auth (not stated; defaulted to 'open')",
-      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
+      "scope.business_model (inferred from product description and company context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)",
+      "posting_first_seen (not available)",
+      "posting_last_updated (not available)"
     ],
     "ambiguities": [
-      "Friday work-from-home policy is conditional ('depends on the type of work you do and the teams with which you partner'), making the exact hybrid cadence ambiguous beyond Mon/Tue/Thu.",
-      "The JD lists 'Familiarity with LLMs, RAG, search quality, or evaluation systems is highly preferred' — 'highly preferred' is treated as nice-to-have (soft) rather than hard required, though the strong language could indicate near-requirement."
+      "The 'ideally focusing on search, retrieval, AI, or platform products' qualifier on the 5+ years experience could be read as a nice-to-have domain focus rather than a hard requirement; treated as a qualifier on a hard requirement here.",
+      "Friday in-office policy is conditionally stated: 'depends on the type of work you do and the teams with which you partner' — not fully deterministic.",
+      "Equity form not specified (options, RSUs, etc.); only mentioned as a potential component."
     ]
   }
 }

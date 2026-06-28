@@ -1,0 +1,291 @@
+{
+  "company": "Scale AI",
+  "role_title": "Director, Technical Program Manager",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4694435005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4694435005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "People manager / org builder for enterprise TPM function",
+  "seniority": {
+    "level": "Director (people manager, likely L7/D-level)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "10+ years in Technical Program Management or Engineering Leadership",
+      "at least 4+ years in a people management capacity leading other TPMs or Engineers",
+      "Recruit, hire, and mentor a high-performing team of Technical Program Managers",
+      "Comp range $241,600–$302,000 base, consistent with Director-level at a high-growth AI company"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_or_eng_leadership",
+      "raw_text_from_jd": "10+ years of experience in Technical Program Management or Engineering Leadership, with at least 4+ years in a people management capacity leading other TPMs or Engineers.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management_or_engineering_leadership",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_people_management",
+      "raw_text_from_jd": "at least 4+ years in a people management capacity leading other TPMs or Engineers.",
+      "skill_type": "years_of_experience",
+      "domain": "people_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "team_building_high_growth",
+      "raw_text_from_jd": "Proven track record of building teams from scratch in high-growth, fast-paced environments (e.g., Series C through IPO or within a major tech incumbent).",
+      "skill_type": "outcome",
+      "domain": "team_building_organizational_design",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Series C through IPO",
+        "major tech incumbent"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_ml_lifecycle_expertise",
+      "raw_text_from_jd": "Deep expertise in the AI/ML lifecycle, including LLM fine-tuning, performance evaluation, and the infrastructure requirements for deploying GenAI at scale.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_ml_lifecycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML lifecycle",
+        "LLM fine-tuning",
+        "performance evaluation",
+        "GenAI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_management",
+      "raw_text_from_jd": "Expert-level Stakeholder Management: Ability to navigate complex organizational politics and drive consensus among diverse technical and non-technical leaders.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "Systems Thinking: The ability to look beyond individual projects to see the broader technical ecosystem and identify \"force multipliers\" for the organization.",
+      "skill_type": "capability",
+      "domain": "systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_tooling_proficiency",
+      "raw_text_from_jd": "Strategic Tooling Proficiency: Experience implementing enterprise-level planning and tracking frameworks (e.g., Jira Align, specialized roadmap software, or custom internal dashboards).",
+      "skill_type": "tool_proficiency",
+      "domain": "enterprise_program_management_tooling",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Jira Align"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "engineering_background",
+      "raw_text_from_jd": "Engineering Background: A background as a Software or ML Engineer, providing the \"technical gravity\" needed to earn the respect of senior architects and principals.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_or_ml_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_first_mindset",
+      "raw_text_from_jd": "Platform-First Mindset: Experience building and driving adoption of internal developer platforms or horizontal services used by thousands of internal stakeholders.",
+      "skill_type": "domain_knowledge",
+      "domain": "internal_developer_platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "change_management",
+      "raw_text_from_jd": "Change Management Expertise: Proven ability to lead large-scale organizational shifts in methodology or technical architecture.",
+      "skill_type": "capability",
+      "domain": "change_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear (building from scratch)",
+    "surface": "Enterprise TPM function — building and scaling a world-class TPM team from the ground up across all business units",
+    "business_model": "B2B enterprise AI data and infrastructure platform",
+    "primary_metrics_inferred": [
+      "Data quality standards",
+      "Operational efficiency across business units",
+      "Enterprise program delivery reliability",
+      "OKR alignment across teams",
+      "Team growth and retention metrics"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Product",
+      "Executive/C-suite",
+      "Platform teams",
+      "Data teams",
+      "Board of Directors"
+    ],
+    "core_responsibilities": [
+      "Recruit, hire, and mentor a high-performing team of Technical Program Managers",
+      "Define the long-term execution strategy for Enterprise programs, ensuring alignment with company-wide OKRs and product milestones",
+      "Establish standardized processes for program delivery, risk management, and cross-functional communication",
+      "Serve as the primary bridge between Engineering, Product, and Executive leadership",
+      "Translate complex technical roadmaps and GenAI initiatives into clear business outcomes for the C-suite and Board",
+      "Drive the adoption of enterprise-grade standards for data quality and infrastructure reliability"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      241600,
+      302000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grant subject to Board of Director approval",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Director",
+    "Enterprise",
+    "AI/ML lifecycle",
+    "LLM fine-tuning",
+    "GenAI",
+    "team building",
+    "organizational design",
+    "executive communication",
+    "OKRs",
+    "data quality",
+    "operational excellence",
+    "cross-functional orchestration",
+    "Jira Align",
+    "systems thinking"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range clearly disclosed ($241,600–$302,000 base) with equity mentioned",
+    "High-impact 'build from scratch' leadership opportunity with organizational design authority",
+    "Clear articulation of scope — not just managing programs but architecting a new organizational capability",
+    "Scale AI is a well-funded, high-profile AI infrastructure company with marquee clients",
+    "Role has true Director-level cross-functional authority including C-suite and Board exposure"
+  ],
+  "red_flags": [
+    "All requirements listed under 'Ideally You'd Have' rather than 'Required', creating ambiguity about which are truly hard requirements",
+    "No mention of visa sponsorship — unclear for international candidates",
+    "90-day waiting period policy for reconsidering same-role candidates noted explicitly",
+    "Location appears to be San Francisco onsite only; no remote or hybrid language stated",
+    "High buzzword density in JD may indicate organizational ambiguity or aspirational role definition"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, years requirements, and people management scope)",
+      "location.type (inferred as onsite; JD only mentions SF salary range with no remote/hybrid language)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "location.remote_us_eligible (inferred false; no remote language present)"
+    ],
+    "ambiguities": [
+      "All must-have requirements are listed under 'Ideally You'd Have' rather than a 'Required' section, making hard vs. soft classification ambiguous. Treated as hard severity based on seniority level and unconditional framing of each bullet.",
+      "Location type: JD provides only a San Francisco salary range with no explicit mention of remote, hybrid, or onsite policy. Treated as onsite but could be hybrid.",
+      "Visa sponsorship: Not mentioned anywhere in the JD body. Marked as 'unclear'."
+    ]
+  }
+}

@@ -4,7 +4,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7869917",
   "ats_provider": "greenhouse",
   "ats_job_id": "7869917",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,9 +17,9 @@
   },
   "archetype": "AI Product Manager",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Technical PM / PM Leader (people manager)",
+  "secondary_archetype": "Technical PM / PM Manager (Group PM / Director level)",
   "seniority": {
-    "level": "Director / Group PM (people manager of PMs)",
+    "level": "Director / Group PM (people manager)",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": true,
@@ -27,7 +27,7 @@
       "8+ years as a product manager",
       "3+ years of managing product managers",
       "Leading and growing a team of experienced Product Managers",
-      "Orienting company leadership around goals"
+      "Experience hiring, managing, and building high-performing customer-focused Product Management teams in multiple continents"
     ]
   },
   "must_haves": [
@@ -35,7 +35,7 @@
       "id": "years_managing_pms",
       "raw_text_from_jd": "3+ years of managing product managers, 8+ years as a product manager",
       "skill_type": "years_of_experience",
-      "domain": "people_management_of_pms",
+      "domain": "people_management_product",
       "minimum_value": 3,
       "unit": "years",
       "qualifier": "managing product managers",
@@ -82,9 +82,9 @@
       "credentials_named": []
     },
     {
-      "id": "multi_year_vision_strategy",
+      "id": "multiyear_strategy_roadmap",
       "raw_text_from_jd": "Experience developing a multi-year vision, strategy and roadmap for large scale products",
-      "skill_type": "capability",
+      "skill_type": "outcome",
       "domain": "product_strategy",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
@@ -98,9 +98,9 @@
     },
     {
       "id": "global_pm_team_building",
-      "raw_text_from_jd": "Experience hiring, managing, and building high performing customer-focused Product Management teams in multiple continents",
+      "raw_text_from_jd": "Experience hiring, managing, and building high-performing customer-focused Product Management teams in multiple continents",
       "skill_type": "capability",
-      "domain": "people_management",
+      "domain": "team_building_global",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -112,7 +112,7 @@
       "credentials_named": []
     },
     {
-      "id": "cross_team_initiative_leadership",
+      "id": "cross_team_initiatives",
       "raw_text_from_jd": "Experience leading cross-team initiatives from ideation to execution",
       "skill_type": "capability",
       "domain": "cross_functional_leadership",
@@ -144,7 +144,7 @@
       ]
     },
     {
-      "id": "communication_skills",
+      "id": "written_verbal_communication",
       "raw_text_from_jd": "Strong written and verbal communication skills",
       "skill_type": "capability",
       "domain": "communication",
@@ -163,21 +163,21 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Conversational AI and human support experience platform across Stripe's product suite",
-    "business_model": "B2B financial infrastructure platform",
+    "surface": "Support Experience — conversational AI and human support systems and platforms for Stripe's users and support teams",
+    "business_model": "B2B and B2C financial infrastructure platform",
     "primary_metrics_inferred": [
       "Customer support resolution rate / deflection",
-      "User satisfaction with support experience",
-      "Scale of customers served (millions of businesses)"
+      "Support experience quality for Stripe users",
+      "Agent productivity uplift via AI tooling"
     ],
     "cross_functional_partners": [
-      "AI teams",
-      "Operations / senior leaders in Operations",
-      "User-facing support teams"
+      "Stripe AI teams",
+      "Operations / senior leaders",
+      "Support teams"
     ],
     "core_responsibilities": [
       "Own and drive the product roadmap for the future of conversational AI and human support at Stripe",
-      "Shape strategy, steer product requirements, and hold a high bar for the execution of high impact initiatives that impact key segments and top customers",
+      "Shape strategy, steer product requirements, and hold a high bar for the execution of high-impact initiatives that impact key segments and top customers",
       "Partner with Stripe's AI teams to unlock opportunities for serving users more effectively",
       "Build strong relationships with senior leaders across Operations to continually uplevel our human support functions",
       "Grow and coach a global team of PMs in building systems and platforms for conversational and human agents"
@@ -195,40 +195,39 @@
     "conversational AI",
     "support experience",
     "product lead",
-    "people management",
-    "PM manager",
+    "PM management",
     "applied AI",
-    "customer support at scale",
     "multi-year roadmap",
     "global team",
-    "financial infrastructure"
+    "user empathy",
+    "technical PM",
+    "human support"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "High-visibility area within Stripe with direct exposure to company leadership",
-    "Explicit encouragement to apply if minimum requirements are met",
-    "Clear product surface: conversational AI + human support at scale",
-    "Opportunity to work at the forefront of applied AI"
+    "High-visibility area with direct access to company leadership",
+    "Applied AI focus — at the forefront of a rapidly evolving product surface",
+    "Clear scope: conversational AI + human support at scale for millions of businesses",
+    "Encouraged to apply if minimum requirements are met — preferred qualifications stated as bonus only",
+    "Support Experience is described as mission-critical at Stripe"
   ],
   "red_flags": [
-    "No compensation range disclosed",
-    "No location or remote/hybrid policy stated anywhere in the JD — candidates cannot assess logistics",
-    "No visa sponsorship information provided",
-    "Preferred qualifications section is referenced but entirely empty — no nice-to-haves surfaced"
+    "No compensation or equity information disclosed",
+    "No location or remote/hybrid policy specified — unclear where this role is based",
+    "Visa sponsorship and work authorization requirements not stated",
+    "No preferred qualifications listed beyond minimum requirements — unusual and limits signal about what distinguishes strong candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years requirements + people-manager signals; not explicitly titled)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
-      "location.type (not stated; marked as unclear)",
-      "location.work_auth (not stated; marked as unclear)",
-      "location.visa_sponsorship (not stated; marked as unclear)"
+      "seniority.level (inferred from 8+ years PM + 3+ years managing PMs and scope of responsibilities; likely Director or Group PM)",
+      "scope.primary_metrics_inferred (not stated; inferred from product surface and responsibilities)",
+      "scope.business_model (inferred from Stripe's product description)",
+      "location.type set to 'unclear' — no location information in JD body or metadata",
+      "compensation.source set to 'unknown' — no compensation data provided"
     ],
     "ambiguities": [
-      "Technical expertise requirement uses 'and/or' — either leading technical products OR a CS background satisfies it; treated as a single hard requirement with both paths acceptable.",
-      "Preferred qualifications are mentioned in the JD structure ('The preferred qualifications are a bonus, not a requirement') but no preferred qualifications are actually listed; nice_to_haves is therefore empty.",
-      "Location is entirely absent from the JD body — it is unclear whether this role is remote, hybrid, or onsite, and in which geography."
+      "Technical expertise requirement includes 'and/or' — either leading technical products OR a CS background satisfies it; classified as hard given unconditional bullet placement but the OR condition makes it more flexible than a pure credential check.",
+      "No preferred qualifications section despite JD text stating 'The preferred qualifications are a bonus, not a requirement' — either all listed items are minimums or the preferred section was omitted from the posting."
     ]
   }
 }

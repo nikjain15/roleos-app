@@ -4,7 +4,7 @@
   "url": "https://troweprice.wd5.myworkdayjobs.com/en-US/TROWEPRICE/job/Baltimore-MD/Team-Analyst---Global-Focused-Growth-Strategy_78674",
   "ats_provider": "workday",
   "ats_job_id": null,
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -13,22 +13,23 @@
       "Baltimore, MD"
     ],
     "remote_us_eligible": true,
-    "office_time_required": "up to one day per week from home (implying ~4 days in office)",
+    "office_time_required": "up to one day per week from home (predominantly in-office)",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Other",
   "archetype_confidence": "high",
-  "secondary_archetype": "Buy-Side Investment Analyst (fundamental equity research)",
+  "secondary_archetype": "Buy-side Investment Analyst / Equity Research Analyst",
   "seniority": {
-    "level": "Mid-Senior IC (4+ years investment experience)",
+    "level": "Mid-Senior IC (4+ years buy-side/sell-side experience)",
     "years_required_min": 4,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "Bachelor's degree and 4+ years of relevant buy-side/sell-side investment experience",
-      "Base salary range $180,000–$300,000 consistent with experienced analyst level",
-      "Apprenticeship framing suggests non-PM but senior enough for independent coverage"
+      "Base salary range $180,000–$300,000",
+      "Described as 'apprenticeship with senior investors' suggesting non-senior but experienced hire",
+      "Responsibilities expand 'if appropriate' implying growth role"
     ]
   },
   "must_haves": [
@@ -39,7 +40,6 @@
       "domain": "investment_research",
       "minimum_value": 4,
       "unit": "years",
-      "qualifier": "buy-side/sell-side",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -47,8 +47,7 @@
       "technologies_named": [],
       "industries_named": [
         "asset management",
-        "buy-side",
-        "sell-side"
+        "investment management"
       ],
       "geographies_named": [],
       "employer_types_named": [
@@ -60,43 +59,27 @@
       ]
     },
     {
-      "id": "bachelor_degree",
-      "raw_text_from_jd": "Bachelor's degree and 4+ years of relevant buy-side/sell-side investment experience.",
-      "skill_type": "credential",
-      "domain": "education",
-      "minimum_value": "bachelors",
-      "accepts_equivalent_experience": false,
-      "evidence_required": "degree_or_work_history",
-      "bridgeable": "n/a",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": [
-        "Bachelor's degree"
-      ]
-    },
-    {
-      "id": "advanced_excel_financial_modeling",
+      "id": "excel_financial_modeling",
       "raw_text_from_jd": "Advanced Excel and financial modeling capability, including three-statement builds and time-series analytics.",
       "skill_type": "tool_proficiency",
       "domain": "financial_modeling",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [
         "Excel"
       ],
-      "technologies_named": [],
+      "technologies_named": [
+        "three-statement builds",
+        "time-series analytics"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "academic_foundation_quant",
+      "id": "academic_quantitative_foundation",
       "raw_text_from_jd": "Strong academic foundation combining liberal-arts reasoning with quantitative training (e.g., calculus, statistics, econometrics; CFA coursework).",
       "skill_type": "credential",
       "domain": "quantitative_analysis",
@@ -104,12 +87,16 @@
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [],
+      "technologies_named": [
+        "calculus",
+        "statistics",
+        "econometrics"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": [
-        "CFA"
+        "CFA coursework"
       ]
     },
     {
@@ -137,9 +124,7 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [
-        "equity markets"
-      ],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -148,13 +133,12 @@
       "id": "ai_tools_prompt_engineering",
       "raw_text_from_jd": "Proven facility with AI tools and prompt engineering for research use cases.",
       "skill_type": "tool_proficiency",
-      "domain": "ai_research_tooling",
+      "domain": "ai_research_tools",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
-        "AI tools",
         "prompt engineering"
       ],
       "industries_named": [],
@@ -198,9 +182,9 @@
       "id": "cfa_designation",
       "raw_text_from_jd": "CFA preferred",
       "skill_type": "credential",
-      "domain": "investment_credentials",
+      "domain": "investment_certification",
       "evidence_required": "verifiable_credential",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -236,15 +220,13 @@
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [
-        "equity markets"
-      ],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "research_to_insights_track_record",
+      "id": "research_to_actionable_insights",
       "raw_text_from_jd": "Track record of converting deep research into clear, actionable insights.",
       "skill_type": "outcome",
       "domain": "investment_research",
@@ -264,17 +246,18 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Global Focused Growth Strategy — a complex, diversified global equity portfolio managed by Portfolio Manager Dave Eiswert",
-    "business_model": "active asset management, B2B and institutional",
+    "surface": "Global Focused Growth Strategy — diversified global growth equity mandate managed by Portfolio Manager Dave Eiswert",
+    "business_model": "active equity investment management (buy-side asset manager)",
     "primary_metrics_inferred": [
       "Portfolio performance vs. benchmark",
-      "Quality of investment recommendations / ex-ante vs. ex-post accuracy",
-      "Breadth and depth of research coverage"
+      "Investment insight generation and accuracy of forecasts",
+      "Ex-ante vs. ex-post assumption tracking",
+      "Research speed and quality improvements via AI workflows"
     ],
     "cross_functional_partners": [
-      "Portfolio Manager (Dave Eiswert)",
+      "Portfolio Manager Dave Eiswert",
       "Senior analysts",
-      "Public-company executives (CEOs/CFOs)",
+      "CEOs/CFOs of portfolio companies",
       "External experts"
     ],
     "core_responsibilities": [
@@ -302,49 +285,49 @@
     "source": "stated"
   },
   "top_keywords": [
-    "global growth equity",
-    "fundamental investing",
+    "global focused growth",
+    "equity research",
+    "buy-side",
     "financial modeling",
     "three-statement model",
-    "buy-side research",
     "AI tools",
     "prompt engineering",
-    "primary diligence",
-    "portfolio management support",
+    "investment research",
     "CFA",
-    "investment analysis",
-    "global focused growth"
+    "portfolio management",
+    "fundamental investing",
+    "primary diligence",
+    "performance attribution"
   ],
   "buzzword_density": "low",
   "green_flags": [
-    "Compensation range disclosed and highly competitive ($180K–$300K base)",
-    "Named Portfolio Manager (Dave Eiswert) signals a specific, well-defined seat rather than a generic posting",
-    "Clear apprenticeship framing with long-term advancement path articulated",
-    "AI tooling explicitly embedded in role responsibilities — forward-looking",
-    "Broad benefits disclosed including hybrid work and annual bonus eligibility",
-    "Role covers truly global mandate, providing broad learning surface"
+    "Compensation range explicitly stated and highly competitive ($180K–$300K base)",
+    "Clear reporting structure to named Portfolio Manager (Dave Eiswert)",
+    "Explicit mention of AI tool usage as a core capability, signaling modern research culture",
+    "Apprenticeship model with senior investors for long-term career development",
+    "Annual bonus eligibility and generous retirement plan mentioned",
+    "Role scope and responsibilities are detailed and specific"
   ],
   "red_flags": [
-    "Hybrid policy is only one day per week from home — effectively near-full in-office commitment required",
-    "Very wide comp band ($180K–$300K) makes actual placement difficult to assess without knowing seniority ceiling",
-    "No visa sponsorship information stated — unclear for international candidates",
-    "FINRA licenses explicitly not supported, which may signal limited career mobility within financial services firms that require them"
+    "Hybrid policy allows only up to one day per week from home — heavily in-office requirement",
+    "Role is listed in Baltimore, MD but salary ranges also list remote workers; remote eligibility is ambiguous",
+    "Very wide compensation band ($180K–$300K) makes it difficult to gauge where a candidate would land",
+    "Work authorization and visa sponsorship not addressed in the JD",
+    "Role is not a traditional PM role; archetype is investment analyst, which may attract different audiences"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years requirement and comp range)",
-      "scope.team_size_estimate (not stated; left as 'unclear')",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "scope.business_model (inferred from firm description)",
-      "location.cities_listed (URL contains Baltimore-MD; body references Maryland as a comp jurisdiction)",
-      "location.work_auth (not stated)",
-      "location.visa_sponsorship (not stated)"
+      "seniority.level (inferred from years requirement and compensation range)",
+      "scope.business_model (inferred from company description as global asset manager)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "location.work_auth (not stated; marked unclear)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "location.remote_us_eligible (inferred from salary range listing 'remote workers' as a salary tier)"
     ],
     "ambiguities": [
-      "The JD states the role 'is eligible for hybrid work, with up to one day per week from home' — this is a very limited hybrid arrangement closer to onsite. Classified as hybrid per stated policy but candidates should note ~4 days/week in office expectation.",
-      "Compensation note says 'Please review the job posting for the location of this specific opportunity' but then lists the same $180K–$300K range for all listed geographies (Maryland/Colorado/Washington/remote, DC, New York/California). It is unclear whether ranges actually differ by location or are uniform.",
-      "Remote workers are listed as eligible for the $180K–$300K range, but the hybrid policy elsewhere says up to one day from home — it is ambiguous whether fully remote is truly an option or only referenced for comp disclosure purposes.",
-      "CFA coursework appears in Required qualifications section under academic foundation, while 'CFA preferred' appears separately under Preferred — severity assigned as soft for standalone CFA designation, hard component inferred only for coursework exposure."
+      "The job URL includes 'Baltimore-MD' but the compensation section lists salary ranges for Maryland, Colorado, Washington, D.C., New York, California, and 'remote workers' — it is unclear whether this role can be fully remote or if 'remote workers' refers to an existing category. Treated as hybrid with remote_us_eligible: true given the explicit 'remote workers' salary tier.",
+      "The hybrid policy states 'up to one day per week from home' which implies predominantly in-office (~4 days/week), yet remote pay tiers are listed — possible inconsistency.",
+      "location.pay_differential: all three listed salary tiers show the same $180K–$300K range, so no differential was applied, though multiple geographies are listed."
     ]
   }
 }

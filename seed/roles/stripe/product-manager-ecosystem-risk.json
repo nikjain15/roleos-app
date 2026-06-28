@@ -1,0 +1,194 @@
+{
+  "company": "Stripe",
+  "role_title": "Product Manager, Ecosystem Risk",
+  "url": "https://stripe.com/jobs/search?gh_jid=7984866",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7984866",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years in Product Management",
+      "Own the vision and multi-year roadmap",
+      "Align leadership and stakeholders including executives",
+      "Drive cross-functional execution across engineering, operations, design, data science, go-to-market, legal"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm",
+      "raw_text_from_jd": "7+ years in Product Management",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "infra_and_ux_at_scale",
+      "raw_text_from_jd": "Proven experience building infrastructure and user experiences at scale",
+      "skill_type": "capability",
+      "domain": "infrastructure_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_operating",
+      "raw_text_from_jd": "Track record of operating effectively in highly cross-functional environments",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving",
+      "raw_text_from_jd": "Excellent analytical, problem-solving, and decision-making skills",
+      "skill_type": "capability",
+      "domain": "analytical_reasoning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "financial_crimes_fraud_experience",
+      "raw_text_from_jd": "Experience in financial crimes or fraud prevention within financial services",
+      "skill_type": "domain_knowledge",
+      "domain": "financial_crimes_fraud_prevention",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "AI-powered financial crimes controls — detection, investigation, information collection, UI and API surfaces; investigator tools; merchant-facing UI and API experiences",
+    "business_model": "B2B financial infrastructure platform",
+    "primary_metrics_inferred": [
+      "Financial crimes detection accuracy",
+      "Merchant onboarding and activation rates in emerging/regulated industries",
+      "Investigator case review efficiency",
+      "Consumer and merchant protection outcomes"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "Design",
+      "Data Science",
+      "Go-to-Market",
+      "Legal",
+      "Product teams across Stripe"
+    ],
+    "core_responsibilities": [
+      "Own the vision and multi-year roadmap for AI-powered financial crimes controls",
+      "Build core infrastructure underpinning Stripe's growing suite of products and services",
+      "Develop investigator tools that power accurate case reviews using AI and human expertise",
+      "Drive cross-functional execution with engineering, operations, design, data science, go-to-market, legal, and product teams",
+      "Define and own success metrics, navigate trade-offs, drive prioritization, and measure outcomes",
+      "Align leadership and stakeholders by synthesizing input and communicating a clear point of view to peers and executives",
+      "Monitor regulatory trends, emerging technologies, and competitive offerings to inform strategy"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "financial crimes",
+    "fraud prevention",
+    "AI-powered",
+    "infrastructure",
+    "investigator tools",
+    "ecosystem risk",
+    "product roadmap",
+    "cross-functional",
+    "detection",
+    "merchant-facing",
+    "API",
+    "financial services"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface and ownership area (AI-powered financial crimes controls, investigator tools, UI and API surfaces)",
+    "High-impact domain at Stripe — powers every transaction on the platform",
+    "Explicit preferred qualifications section signals flexibility on nice-to-haves",
+    "Cross-functional scope signals influence and visibility (legal, data science, go-to-market, executives)"
+  ],
+  "red_flags": [
+    "No location or work arrangement information provided — remote eligibility, office requirement, and city are all unclear",
+    "No compensation or equity information disclosed",
+    "No visa sponsorship or work authorization details stated",
+    "Posting dates not available — unclear how recent or active this role is"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement, multi-year roadmap ownership, and executive stakeholder alignment)",
+      "scope.business_model (inferred from Stripe's product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type set to 'unclear' — JD provides no location or work arrangement details",
+      "compensation.equity_mentioned set to false — no mention in JD"
+    ],
+    "ambiguities": [
+      "archetype is classified as Technical PM but AI Product Manager is also a strong fit given the explicit focus on AI-driven solutions and AI-powered financial crimes controls; confidence is medium",
+      "No location information is present in the JD — location.type, cities_listed, remote eligibility, and visa sponsorship are all unknown"
+    ]
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "company": "Coalition",
+  "role_title": "Staff Product Manager, Claims Experience",
+  "url": "https://www.coalitioninc.com/job-posting?gh_jid=4707629005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4707629005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM — internal platform / ops tooling focus",
+  "seniority": {
+    "level": "Staff IC",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of experience building and shipping software products",
+      "Staff-level title explicitly stated in role name",
+      "Leads complex, cross-functional initiatives as individual contributor",
+      "Comp range $155K–$225K base consistent with Staff PM"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7+ years of experience building and shipping software products, ideally in SaaS, fintech, or related domains.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "zero_to_one_track_record",
+      "raw_text_from_jd": "Demonstrated track record of taking products or major features from zero to meaningful customer benefit, including defining the problem, validating solutions, and iterating post-launch.",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "migrations_systems_transformations",
+      "raw_text_from_jd": "Proven experience leading migrations or systems transformations (for example, claims platforms, workflow tools, or other critical internal/enterprise systems).",
+      "skill_type": "capability",
+      "domain": "systems_migrations_and_platform_evolution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_experience_sense",
+      "raw_text_from_jd": "Strong customer experience sense, with a demonstrated ability to deeply understand internal workflows while maintaining clear sight of the end-customer experience.",
+      "skill_type": "capability",
+      "domain": "customer_experience_and_internal_workflows",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_daily_use",
+      "raw_text_from_jd": "Demonstrated ability to use AI tools as part of daily product work, with a willingness to learn and expand knowledge in this domain.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Exceptional written and verbal communication skills, with the ability to explain complex technical and operational concepts to diverse stakeholders and guide discussions to actionable decisions.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "measured_impact_delivery",
+      "raw_text_from_jd": "Measured success delivering against company and strategic goals, with clear examples of impact on both customer outcomes and business metrics.",
+      "skill_type": "outcome",
+      "domain": "product_impact_and_business_metrics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "short_long_term_balance",
+      "raw_text_from_jd": "Ability to balance short-term execution with long-term platform and experience investments.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_comfort",
+      "raw_text_from_jd": "Comfort with change and ambiguity; experience operating in rapidly growing and evolving environments.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "influence_without_authority",
+      "raw_text_from_jd": "Strong influence skills and collaborative mindset, with a track record of driving alignment across diverse stakeholders without relying on formal authority.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "insurance_regulated_financial",
+      "raw_text_from_jd": "Experience with the business of insurance or other regulated financial products (underwriting, policy administration, claims, or compliance-heavy workflows).",
+      "skill_type": "domain_knowledge",
+      "domain": "insurance_and_regulated_financial_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "insurance",
+        "regulated financial products"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_ops_systems",
+      "raw_text_from_jd": "Experience with enterprise systems used by internal operations teams, such as Salesforce, NetSuite, or similar platforms.",
+      "skill_type": "tool_proficiency",
+      "domain": "enterprise_operations_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Salesforce",
+        "NetSuite"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_science_ml_experience",
+      "raw_text_from_jd": "Prior work with Data Science and ML teams, including designing products that use predictive models, risk scores, or automated decisioning while managing operational and regulatory considerations.",
+      "skill_type": "domain_knowledge",
+      "domain": "machine_learning_and_data_science_product_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "predictive models",
+        "risk scores",
+        "automated decisioning",
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cyber_risk_security_ops",
+      "raw_text_from_jd": "Familiarity with cyber risk, security operations, or incident response workflows.",
+      "skill_type": "domain_knowledge",
+      "domain": "cybersecurity_and_incident_response",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "cyber risk",
+        "security operations",
+        "incident response"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Claims experience platform — internal workflow tooling, automation, ML-powered insights, and broker/policyholder-facing claims experiences",
+    "business_model": "B2B insurtech / cyber insurance SaaS with internal platform orientation",
+    "primary_metrics_inferred": [
+      "Claims handling speed and resolution time",
+      "Manual overhead reduction for claims professionals",
+      "Operational efficiency across the claims workflow",
+      "Broker and policyholder satisfaction with claims experience"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Claims",
+      "Actuarial",
+      "Finance",
+      "Legal",
+      "Data Science",
+      "Insurance Operations",
+      "Sales",
+      "Marketing"
+    ],
+    "core_responsibilities": [
+      "Define and evolve the claims experience strategy and product roadmap",
+      "Lead complex software migrations and platform evolution end-to-end",
+      "Serve internal customers (claims professionals, operations, finance, actuarial) with strong customer experience mindset",
+      "Leverage AI and automation across the product lifecycle and partner with engineering and data science",
+      "Own requirements, documentation, and cross-functional communication",
+      "Make data-informed decisions using quantitative and qualitative data",
+      "Lead intricate, cross-functional initiatives spanning multiple teams and systems"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      155000,
+      225000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "claims experience",
+    "workflow automation",
+    "systems migration",
+    "internal tooling",
+    "ML-powered insights",
+    "cyber insurance",
+    "operational efficiency",
+    "staff PM",
+    "cross-functional leadership",
+    "platform evolution"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($155K–$225K base)",
+    "Clear product surface and ownership area (claims experience platform)",
+    "Staff-level individual contributor role with real cross-functional scope",
+    "Remote-friendly distributed working arrangements stated",
+    "Strong mission context (cyber insurance, protecting businesses from digital risk)",
+    "Explicit equal opportunity and accommodations language"
+  ],
+  "red_flags": [
+    "No equity mentioned — unusual omission at Staff PM level",
+    "Wide comp range ($155K–$225K) indicates significant geographic pay differential; actual offer may be at lower end for many US markets",
+    "Visa sponsorship status not stated — unclear for international candidates",
+    "Role spans many cross-functional stakeholders (Claims, Actuarial, Finance, Legal, Data Science, Ops) which may signal high coordination overhead"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level ('Staff IC' inferred from role title and comp range)",
+      "scope.business_model (inferred from company description and product context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.type (inferred as remote-us from 'United States/Canada, with flexible, distributed working arrangements'; Canada eligibility noted but role title/comp stated in US terms)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD states the position is 'based in the United States/Canada' — it is unclear whether Canada-based candidates are eligible for the same comp range, which is quoted only in USD. Treated as remote-us primary but Canada may also be eligible.",
+      "Equity is not mentioned in the compensation or perks sections, which is atypical for a Staff-level PM role at a Series E+ insurtech; may have been omitted from the JD rather than definitively excluded.",
+      "Visa sponsorship is never addressed in the JD; marked as 'unclear' rather than open or no-sponsorship."
+    ]
+  }
+}

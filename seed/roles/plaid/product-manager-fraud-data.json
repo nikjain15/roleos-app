@@ -1,0 +1,236 @@
+{
+  "company": "Plaid",
+  "role_title": "Product Manager, Fraud Data",
+  "url": "https://jobs.ashbyhq.com/plaid/bda0f40d-5ac5-4ea4-aaab-3e5e013c0a26",
+  "ats_provider": "ashby",
+  "ats_job_id": "bda0f40d-5ac5-4ea4-aaab-3e5e013c0a26",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [
+      "San Francisco",
+      "New York",
+      "Washington D.C.",
+      "London",
+      "Amsterdam"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Mid to Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Owns full feature roadmap for Protect product",
+      "Partners with data scientists and MLEs as a day-to-day collaborator",
+      "Requires hands-on fraud prevention experience and direct DS/ML collaboration experience",
+      "No explicit years-of-experience stated"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "fraud_prevention_experience",
+      "raw_text_from_jd": "Real hands-on fraud prevention experience: fraud vectors, detection systems, risk signal evaluation. Not general fintech.",
+      "skill_type": "domain_knowledge",
+      "domain": "fraud_prevention",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "fraud vectors",
+        "detection systems",
+        "risk signal evaluation"
+      ],
+      "industries_named": [
+        "fintech",
+        "financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ds_ml_collaboration",
+      "raw_text_from_jd": "Direct experience collaborating with data scientists or ML engineers to ship data-driven products. You need to be able to talk to a DS about feature distributions, label quality, and model performance, not just read summaries.",
+      "skill_type": "capability",
+      "domain": "data_science_collaboration",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "feature distributions",
+        "label quality",
+        "model performance"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fraud_vendor_experience",
+      "raw_text_from_jd": "Experience at a fraud vendor (SentiLink, Sardine, Socure, Persona, Incode) or a fraud operations team at a large fintech or bank",
+      "skill_type": "domain_knowledge",
+      "domain": "fraud_vendor_or_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [
+        "SentiLink",
+        "Sardine",
+        "Socure",
+        "Persona",
+        "Incode"
+      ],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "fraud vendor",
+        "fraud operations team at a large fintech or bank"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_model_background",
+      "raw_text_from_jd": "Background with ML model inputs/outputs: feature engineering, offline evaluation, and moving from experimentation to production",
+      "skill_type": "domain_knowledge",
+      "domain": "machine_learning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "feature engineering",
+        "offline evaluation",
+        "ML model inputs/outputs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fraud_vector_specialization",
+      "raw_text_from_jd": "Specialization in a specific fraud vector (ATO, synthetic identity, or first-party fraud)",
+      "skill_type": "domain_knowledge",
+      "domain": "fraud_vector_specialization",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ATO",
+        "synthetic identity",
+        "first-party fraud"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "General fintech experience (without specific fraud prevention focus)"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Protect — Plaid's fraud intelligence platform; specifically the signal stack (attributes, scores, fraud vector intelligence) and labeling pipeline",
+    "business_model": "B2B SaaS / fintech infrastructure — fraud data products sold to enterprise and fintech customers",
+    "primary_metrics_inferred": [
+      "Signal coverage and fill rates",
+      "Precision/recall targets on fraud vector scores",
+      "Label quality and feedback loop effectiveness",
+      "Customer-facing value from attribute improvements and new scores"
+    ],
+    "cross_functional_partners": [
+      "Data scientists",
+      "ML engineers",
+      "GTM",
+      "Protect PM"
+    ],
+    "core_responsibilities": [
+      "Own the feature roadmap for Protect: what we build, how we validate it, and how we measure coverage and fill rates",
+      "Build and manage the labeling pipeline as a product, including customer retros, data partnerships, and the label feedback loop into model training",
+      "Define the product requirements for fraud vector scores, including signal selection, precision/recall targets, and customer-facing output design",
+      "Partner with data scientists and MLEs as a day-to-day collaborator, not just a requester. Translate between model needs and product requirements in both directions",
+      "Work with GTM and Protect PM on how attribute improvements and new scores translate into customer-facing value propositions"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": true,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "fraud prevention",
+    "fraud vectors",
+    "Protect",
+    "signal stack",
+    "labeling pipeline",
+    "data scientists",
+    "ML engineers",
+    "feature engineering",
+    "precision/recall",
+    "risk signal",
+    "synthetic identity",
+    "ATO",
+    "first-party fraud",
+    "fraud intelligence"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Highly specific and well-scoped product role — clear ownership area (Protect signal stack)",
+    "Explicit differentiation between required and nice-to-have qualifications",
+    "JD is technically precise, signaling a sophisticated hiring team",
+    "Encourages applications even from candidates who don't fully match",
+    "Equity mentioned as part of compensation package",
+    "Medical, dental, vision, and 401(k) benefits explicitly stated",
+    "Plaid is an established fintech infrastructure company with significant market presence (12,000 FIs)"
+  ],
+  "red_flags": [
+    "No base salary range disclosed",
+    "No explicit location or remote policy stated — unclear if role is hybrid, onsite, or remote",
+    "Hard requirement for hands-on fraud experience specifically excludes general fintech backgrounds — narrows candidate pool significantly",
+    "No years of experience stated, making seniority level ambiguous"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from scope of ownership and DS/ML collaboration requirements; no explicit level or years stated)",
+      "scope.business_model (inferred from product description and customer references)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated as KPIs)",
+      "location.type (not stated in JD body; left as 'unclear')",
+      "compensation.location_pay_differential (inferred from 'Pay is based on factors such as... location' language)"
+    ],
+    "ambiguities": [
+      "Location/work arrangement not specified in the JD body — cities listed are all Plaid offices generically mentioned in the company description, not role-specific assignments. Role location is unclear.",
+      "Visa sponsorship and work authorization not addressed anywhere in the JD.",
+      "Seniority level is not stated explicitly; no title level (Senior, Staff, etc.) or years of experience provided."
+    ]
+  }
+}

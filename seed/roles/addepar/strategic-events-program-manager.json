@@ -1,0 +1,243 @@
+{
+  "company": "Addepar",
+  "role_title": "Strategic Events Program Manager",
+  "url": "https://job-boards.greenhouse.io/addepar1/jobs/8594189002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8594189002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [
+      "Colorado",
+      "California",
+      "New York"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "us-citizenship-required",
+    "visa_sponsorship": "no"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Field Marketing / Events Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years in Client Marketing, Events, or a closely related field",
+      "Direct ownership of large-scale, multi-stakeholder events from strategy through measurement",
+      "Comp range $94,000-$148,000 base consistent with Senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_client_marketing_events",
+      "raw_text_from_jd": "6+ years in Client Marketing, Events, or a closely related field — with direct ownership of large-scale, multi-stakeholder events from strategy through measurement.",
+      "skill_type": "years_of_experience",
+      "domain": "client_marketing_and_events",
+      "minimum_value": 6,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "event_strategy_and_roi_reporting",
+      "raw_text_from_jd": "Proven track record defining event strategy, building content agendas, and reporting ROI to senior leadership.",
+      "skill_type": "outcome",
+      "domain": "event_strategy",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "budget_management",
+      "raw_text_from_jd": "Demonstrated ability to build and manage event budgets with accountability for outcomes.",
+      "skill_type": "capability",
+      "domain": "budget_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "program_management_cross_functional",
+      "raw_text_from_jd": "Strong program manager: you can hold cross-functional teams accountable, manage competing priorities, and keep complex programs on track without losing the details.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Excellent written and verbal communicator; able to turn ambiguous goals into clear briefs, project plans, and stakeholder updates.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "us_work_authorization",
+      "raw_text_from_jd": "Applicants must be legally authorized to work in the United States for any employer without requiring current or future visa sponsorship (for example, employment-based visas such as H-1B, F-1/OPT, or similar), and must be authorized to begin work in the U.S. on their first day of employment.",
+      "skill_type": "credential",
+      "domain": "work_authorization",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "United States"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "b2b_tech_or_financial_services",
+      "raw_text_from_jd": "Experience in B2B tech or financial services preferred; familiarity with wealth management, fintech, or enterprise SaaS a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "b2b_tech_financial_services",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B tech",
+        "financial services",
+        "wealth management",
+        "fintech",
+        "enterprise SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Client-facing events: annual user conference (AddeConf), executive summits, community meetup program",
+    "business_model": "B2B SaaS / data and AI platform for investment professionals",
+    "primary_metrics_inferred": [
+      "Event-level KPIs (attendance, engagement)",
+      "Business impact / ROI reported to senior stakeholders",
+      "Content agenda effectiveness and narrative coherence"
+    ],
+    "cross_functional_partners": [
+      "Account Management",
+      "GTM",
+      "R&D",
+      "Product Marketing",
+      "Executive Leadership",
+      "Client Advocacy"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end strategy, design, and execution of Addepar's client-facing events",
+      "Define strategic objectives, target audience, and success metrics for events",
+      "Own event-level KPIs and deliver results reporting to senior stakeholders",
+      "Lead agenda-setting: define session structure, content themes, and narrative arc",
+      "Partner with Product Marketing, R&D, and GTM to shape session content",
+      "Own content development including deadlines, schedules, speaker prep, and dry runs",
+      "Lead cross-functional working group across Marketing, GTM, R&D, and executive leadership",
+      "Partner with Client Advocacy team to identify and onboard client speakers",
+      "Oversee end-to-end event execution: venue, A/V, run of show, vendor management, on-site logistics",
+      "Design the attendee journey from pre-event communication to post-event follow-up",
+      "Build and manage event budgets",
+      "Travel to key events multiple times per year, primarily domestically with occasional international travel"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      94000,
+      148000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (unspecified form) + bonus",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "strategic events",
+    "program management",
+    "AddeConf",
+    "executive summits",
+    "community meetups",
+    "content agenda",
+    "cross-functional alignment",
+    "event strategy",
+    "ROI measurement",
+    "field marketing",
+    "client advocacy",
+    "B2B",
+    "wealth management",
+    "fintech"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($94,000-$148,000 base) plus bonus and equity",
+    "Clear scope of ownership: three named event programs (AddeConf, executive summits, community meetups)",
+    "JD explicitly states this is a strategic role, not a logistics role — strong signal of meaningful ownership",
+    "Named cross-functional partners and stakeholder map provided",
+    "Company has substantial scale ($9T AUM, 1,400+ firms, 60 countries) providing event visibility"
+  ],
+  "red_flags": [
+    "Visa sponsorship explicitly excluded — no H-1B, F-1/OPT, or similar supported",
+    "Location type is unclear from JD body (no explicit remote/hybrid/onsite policy stated); cities listed appear only in comp context",
+    "Salary range spans $54K ($94K-$148K), indicating significant variance by location or experience — actual offer may skew lower",
+    "Travel required multiple times per year domestically and occasionally internationally — could be a lifestyle constraint"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (inferred as 'unclear' — JD does not specify remote, hybrid, or onsite policy in the body)",
+      "location.remote_us_eligible (assumed false given no remote language; flagged as ambiguous)",
+      "seniority.level (inferred from comp range and 6+ years requirement)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not directly listed as metrics)"
+    ],
+    "ambiguities": [
+      "Location type not stated in JD body — Colorado, California, and New York are referenced only for compensation range context; actual work location policy (remote/hybrid/onsite) is not specified.",
+      "The 'preferred' qualifier for 'Experience in B2B tech or financial services' and the 'a plus' for wealth management/fintech/enterprise SaaS are in the same sentence — both treated as soft/nice-to-have.",
+      "Work authorization requirement uses 'legally authorized to work in the United States for any employer without requiring current or future visa sponsorship' which is mapped to us-citizenship-required as the closest enum, though it also covers green card holders and other permanent work authorization statuses."
+    ]
+  }
+}

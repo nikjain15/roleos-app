@@ -1,0 +1,299 @@
+{
+  "company": "Stripe",
+  "role_title": "Procurement Transformation Program Manager, Operations and AI",
+  "url": "https://stripe.com/jobs/search?gh_jid=7989423",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7989423",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of professional experience required",
+      "Expected to drive large-scale transformation programs independently",
+      "Expected to coach and enable others across a global team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_professional_experience",
+      "raw_text_from_jd": "5+ years of professional experience in a role requiring critical thinking, problem-solving, and cross-functional collaboration including direct experience in procurement, supply chain, finance operations, consulting, or a related operational function",
+      "skill_type": "years_of_experience",
+      "domain": "procurement_or_operations",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "procurement",
+        "supply chain",
+        "finance operations",
+        "consulting"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_building",
+      "raw_text_from_jd": "Demonstrated, hands-on experience building AI-powered tools, agents, automations, or workflows that transformed real work processes (not just using AI as a chatbot — building with it)",
+      "skill_type": "capability",
+      "domain": "ai_development",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI-powered tools",
+        "agents",
+        "automations",
+        "workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_development_tools_proficiency",
+      "raw_text_from_jd": "Proficiency with AI development tools and platforms (e.g., Claude, Claude Code, Codex, custom agent frameworks, API integrations, and workflow automation tools)",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_development_platforms",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Claude",
+        "Claude Code",
+        "Codex"
+      ],
+      "technologies_named": [
+        "custom agent frameworks",
+        "API integrations",
+        "workflow automation tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "coaching_enabling_others",
+      "raw_text_from_jd": "Track record of coaching, teaching, or enabling others — formally or informally — with evidence that people you've helped changed how they work",
+      "skill_type": "outcome",
+      "domain": "enablement_and_coaching",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_improvement_methodologies",
+      "raw_text_from_jd": "Familiarity with process improvement methodologies (Lean, Six Sigma, process mapping, etc.) or structured consulting frameworks",
+      "skill_type": "domain_knowledge",
+      "domain": "process_improvement",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Lean",
+        "Six Sigma",
+        "process mapping"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "change_management_experience",
+      "raw_text_from_jd": "Experience with change management, organizational transformation, or large-scale enablement programs",
+      "skill_type": "domain_knowledge",
+      "domain": "change_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "procurement_tech_stack",
+      "raw_text_from_jd": "Familiarity with Procurement technology stacks (e.g., Zip, Ramp, Oracle, etc.)",
+      "skill_type": "tool_proficiency",
+      "domain": "procurement_technology",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Zip",
+        "Ramp",
+        "Oracle"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "internal_tools_scaling",
+      "raw_text_from_jd": "Experience building and scaling internal tools, templates, or playbooks that were adopted beyond your immediate team",
+      "skill_type": "outcome",
+      "domain": "internal_tooling",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consulting_or_technical_client_facing",
+      "raw_text_from_jd": "Background in consulting, solutions engineering, technical account management, or other client-facing technical roles",
+      "skill_type": "domain_knowledge",
+      "domain": "consulting_or_technical_client_roles",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "consulting firm",
+        "solutions engineering",
+        "technical account management"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "payments_fintech_familiarity",
+      "raw_text_from_jd": "Familiarity with the payments industry and fintech landscape",
+      "skill_type": "domain_knowledge",
+      "domain": "payments_and_fintech",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Global Procurement organization — Strategic Sourcing, Third Party Risk, Contracting, Procurement Operations",
+    "business_model": "internal operations / enterprise B2B financial infrastructure",
+    "primary_metrics_inferred": [
+      "Number of workflows permanently transformed",
+      "Extent to which team members start tasks with an AI tool",
+      "Manual effort eliminated through automation"
+    ],
+    "cross_functional_partners": [
+      "Procurement Enablement",
+      "Internal Systems teams",
+      "Finance",
+      "Strategic Sourcing",
+      "Third Party Risk",
+      "Contracting",
+      "Procurement Operations"
+    ],
+    "core_responsibilities": [
+      "Identify and document the highest-leverage workflow transformations within your group's day-to-day work by understanding their processes and outputs",
+      "Build and maintain a structured backlog of workflow improvement opportunities, using data and stakeholder input to sequence work effectively",
+      "Build and deploy AI-powered tools, automations, and intelligent workflows that eliminate manual effort and enhance procurement capabilities, including autonomous agents, data products, and integrations with Stripe's procurement tech stack",
+      "Work across Procurement Enablement and partner teams to uncover AI use cases, document requirements, and translate complex procurement workflows into scalable technical solutions",
+      "Coach and partner across Procurement through a progressive journey: from awareness, to first win, to regular AI integration, to full workflow transformation, to self-sufficiency",
+      "Develop operating models, SOPs, and process documentation that make improved ways of working repeatable and scalable",
+      "Teach Procurement SMEs not just to use AI tools, but to design, build, and oversee their own automated workflows over time"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "procurement transformation",
+    "AI-powered tools",
+    "workflow automation",
+    "process improvement",
+    "autonomous agents",
+    "operational analytics",
+    "change management",
+    "enablement",
+    "Lean",
+    "Six Sigma",
+    "procurement tech stack",
+    "cross-functional collaboration"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Role is clearly scoped with specific sub-teams named (Strategic Sourcing, Third Party Risk, Contracting, Procurement Operations)",
+    "Explicit success metric stated: 'the number of workflows you've permanently transformed'",
+    "Encourages candidates who meet minimum requirements to apply even without preferred qualifications",
+    "Hands-on, build-oriented role rather than advisory — suggests real ownership"
+  ],
+  "red_flags": [
+    "No location or remote/hybrid policy stated anywhere in the JD — candidates cannot assess workplace flexibility",
+    "No compensation range disclosed",
+    "No visa sponsorship information provided",
+    "Broad scope ('global procurement organization') with no team size or reporting structure clarity"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ years requirement and scope of autonomy expected)",
+      "scope.business_model (inferred from Stripe's product description and internal operations context)",
+      "scope.primary_metrics_inferred (inferred from JD language about 'measure of success')",
+      "compensation.equity_mentioned (not stated; defaulted to false)",
+      "location.type (not stated; defaulted to unclear)"
+    ],
+    "ambiguities": [
+      "Location and remote eligibility are entirely absent from the JD — no city, country, or work arrangement is mentioned. Treated as 'unclear'.",
+      "The role title says 'Program Manager' but responsibilities are heavily technical (building AI tools, writing code-adjacent automations) — could be read as Technical PM or Technical Program Manager. Classified as Technical Program Manager given program management framing with BizOps secondary archetype."
+    ]
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "company": "Palantir",
+  "role_title": "Events Program Manager",
+  "url": "https://jobs.lever.co/palantir/b62d4169-665d-45bb-b246-078f414f675e",
+  "ats_provider": "lever",
+  "ats_job_id": "b62d4169-665d-45bb-b246-078f414f675e",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "4-5 days per week when facilitating new hire onboarding or executing internal events",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "People Experience / Internal Events Program Manager",
+  "seniority": {
+    "level": "Mid-level IC",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2+ years experience in an operational role required",
+      "Salary range $75,000 - $103,000/year",
+      "Individual contributor owning end-to-end events delivery"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_operational_experience",
+      "raw_text_from_jd": "2+ years experience in an operational role, preferably in a fast-paced or dynamic environment.",
+      "skill_type": "years_of_experience",
+      "domain": "operations",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "onsite_availability",
+      "raw_text_from_jd": "Ability and willingness to be onsite 4-5 days per week when facilitating new hire onboarding or executing internal events.",
+      "skill_type": "capability",
+      "domain": "in_person_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "travel_willingness",
+      "raw_text_from_jd": "Ability and willingness to travel between global offices, up to 25% of the time.",
+      "skill_type": "capability",
+      "domain": "travel",
+      "minimum_value": 25,
+      "unit": "percent_of_time",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_events_ownership",
+      "raw_text_from_jd": "Primary operational owner of global internal events, from vision-setting and budget allocation to vendor management and on-the-ground execution.",
+      "skill_type": "outcome",
+      "domain": "event_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_problem_solving",
+      "raw_text_from_jd": "Strong organizational and problem-solving skills, with the ability to anticipate challenges, manage competing priorities, and make sound tradeoffs in a fast-moving environment.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Excellent communication and interpersonal skills, with experience collaborating across functions, both internal and external.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "attention_to_detail_tracking",
+      "raw_text_from_jd": "Strong attention to detail and a habit of maintaining accurate records, tracking project metrics, and surfacing the right information to the right stakeholders at the right time.",
+      "skill_type": "capability",
+      "domain": "project_tracking",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fast_paced_environment",
+      "raw_text_from_jd": "2+ years experience in an operational role, preferably in a fast-paced or dynamic environment.",
+      "skill_type": "domain_knowledge",
+      "domain": "fast_paced_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "facilitation_skills",
+      "raw_text_from_jd": "Occasional facilitation of new hire and intern onboarding.",
+      "skill_type": "capability",
+      "domain": "facilitation",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "creative_project_management",
+      "raw_text_from_jd": "A creative approach to project management built around lightweight frameworks, rapid iteration, and low-overhead communication that keeps partnering teams informed.",
+      "skill_type": "capability",
+      "domain": "creative_project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Internal events, people experience programming, new hire onboarding, employer branding, and external events across global Palantir offices",
+    "business_model": "enterprise software (B2G/B2B)",
+    "primary_metrics_inferred": [
+      "Event execution quality and attendee experience",
+      "Community engagement across global offices",
+      "Operational efficiency and process scalability"
+    ],
+    "cross_functional_partners": [
+      "Finance",
+      "Recruiting",
+      "Legal",
+      "Physical Security",
+      "External vendors"
+    ],
+    "core_responsibilities": [
+      "Primary operational owner of global internal events, from vision-setting and budget allocation to vendor management and on-the-ground execution",
+      "Design events and programming that build genuine community and connection across our people, while reinforcing Palantir's mission and values",
+      "Contribute to a wide range of operational workflows across the People Experience team, from Affinity and Interest Group programming to swag management and ad-hoc projects",
+      "Occasional facilitation of new hire and intern onboarding",
+      "Work directly with external vendors and internal teams to manage the full lifecycle of event logistics",
+      "Identify and onboard new vendors and tools to expand the team's capabilities and scale its reach"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      75000,
+      103000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Restricted Stock Units (RSUs), sign-on bonus and other potential future incentives mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "internal events",
+    "program manager",
+    "people experience",
+    "event management",
+    "vendor management",
+    "new hire onboarding",
+    "community building",
+    "operations",
+    "facilitation",
+    "global offices"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Salary range explicitly disclosed ($75,000 - $103,000/year)",
+    "RSUs and sign-on bonus mentioned as additional compensation",
+    "Comprehensive benefits package described in detail",
+    "Role has clear ownership and broad scope with explicit cross-functional partners listed",
+    "Explicit acknowledgment that 'the role and org aren't rigidly defined, and that's by design' signals growth opportunity"
+  ],
+  "red_flags": [
+    "No specific city listed for the role despite being onsite-required — candidates cannot confirm their commute requirement",
+    "Onsite 4-5 days per week requirement is effectively full-time in-office, limiting flexibility significantly",
+    "Up to 25% travel required in addition to onsite presence adds meaningful lifestyle constraint",
+    "Role scope described as deliberately broad and ambiguous, which may not suit all candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years_required_min)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.cities_listed (no specific city named for this role in JD body)"
+    ],
+    "ambiguities": [
+      "No city or region is specified for the role despite an onsite requirement; candidates cannot determine the office location from the JD alone.",
+      "The 'preferably in a fast-paced or dynamic environment' qualifier on the 2+ years requirement is technically a soft preference attached to a hard requirement — the 2+ years is treated as hard, the environment qualifier as soft.",
+      "Facilitation is listed under Core Responsibilities as 'occasional' but is also listed under What We Require as an expected capability — treated as a nice-to-have given 'occasional' framing.",
+      "Visa sponsorship not mentioned anywhere in the JD; marked as 'unclear'."
+    ]
+  }
+}

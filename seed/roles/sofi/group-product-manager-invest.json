@@ -1,33 +1,34 @@
 {
   "company": "SoFi",
   "role_title": "Group Product Manager, Invest",
-  "url": "https://sofi.com/careers/job/7570377003?gh_jid=7570377003",
+  "url": "https://sofi.com/careers/job/7701322003?gh_jid=7701322003",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7570377003",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7701322003",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "unclear",
     "cities_listed": [],
-    "remote_us_eligible": true,
+    "remote_us_eligible": null,
     "office_time_required": null,
     "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Generalist PM",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Technical PM (brokerage / fintech)",
+  "secondary_archetype": "Technical PM with people management / Group PM lead over brokerage/invest product suite",
   "seniority": {
-    "level": "Group PM / Director-level IC or people manager",
+    "level": "Staff / Principal / Director-level IC-to-manager (Group PM)",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
       "10+ years of product management experience",
       "3+ years directly leading and managing Product Managers",
-      "Leads multiple squads including Trading, Account Experience, and Growth",
-      "Described as Group Product Manager with coaching and hiring responsibilities"
+      "Leads multiple squads (Trading, Account Experience, Growth)",
+      "Responsible for hiring, coaching, and developing PM talent",
+      "Partners with engineering, risk, compliance, legal, operations, and analytics leadership"
     ]
   },
   "must_haves": [
@@ -69,9 +70,27 @@
     },
     {
       "id": "brokerage_product_experience",
+      "raw_text_from_jd": "Previous experience building world-class investing and brokerage products is a must.",
+      "skill_type": "domain_knowledge",
+      "domain": "investing_and_brokerage_products",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "brokerage",
+        "investing"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_brokerage_trading_track_record",
       "raw_text_from_jd": "Proven track record leading the development of advanced brokerage or trading capabilities that require deep integration with execution systems, risk engines, and account-level controls.",
       "skill_type": "outcome",
-      "domain": "brokerage_trading_products",
+      "domain": "brokerage_trading_product_development",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "no",
       "severity": "hard",
@@ -90,28 +109,10 @@
       "credentials_named": []
     },
     {
-      "id": "invest_brokerage_expertise_must",
-      "raw_text_from_jd": "Previous experience building world-class investing and brokerage products is a must.",
-      "skill_type": "domain_knowledge",
-      "domain": "investing_brokerage_products",
-      "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "no",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [
-        "brokerage",
-        "investing"
-      ],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
       "id": "hiring_developing_pm_talent",
       "raw_text_from_jd": "Track record of hiring, developing, and retaining high-performing PM talent.",
       "skill_type": "outcome",
-      "domain": "talent_management",
+      "domain": "people_management",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -127,7 +128,7 @@
       "raw_text_from_jd": "Experience defining and driving product strategy across multiple concurrent product areas.",
       "skill_type": "capability",
       "domain": "product_strategy",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -141,7 +142,7 @@
       "id": "pm_coaching",
       "raw_text_from_jd": "Demonstrated ability to coach PMs on craft, stakeholder management, and career development.",
       "skill_type": "capability",
-      "domain": "people_development",
+      "domain": "people_management",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -157,7 +158,7 @@
       "raw_text_from_jd": "Strong cross-functional collaboration skills, especially with engineering, risk, compliance, legal, operations, and analytics, to bring complex trading products to market.",
       "skill_type": "capability",
       "domain": "cross_functional_leadership",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -173,19 +174,20 @@
       "id": "real_time_decisioning_systems",
       "raw_text_from_jd": "Comfort working with systems involving real-time decisioning, account state, permissions, limits, and suitability controls, and understanding how these systems surface in customer-facing trading experiences.",
       "skill_type": "domain_knowledge",
-      "domain": "real_time_trading_systems",
-      "evidence_required": "work_history",
+      "domain": "brokerage_systems",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
         "real-time decisioning",
         "account state",
+        "permissions",
         "suitability controls"
       ],
       "industries_named": [
-        "brokerage",
-        "trading"
+        "trading",
+        "brokerage"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -243,11 +245,11 @@
   ],
   "nice_to_haves": [
     {
-      "id": "technical_fluency_apis_distributed",
+      "id": "technical_fluency_distributed_systems",
       "raw_text_from_jd": "Strong technical fluency with APIs, distributed systems, event-driven architectures, and data-intensive services, with the ability to reason about performance, scalability, and failure modes.",
       "skill_type": "domain_knowledge",
-      "domain": "technical_systems",
-      "evidence_required": "work_history",
+      "domain": "distributed_systems_architecture",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
@@ -263,7 +265,7 @@
       "credentials_named": []
     },
     {
-      "id": "brokerage_clearing_wealth",
+      "id": "brokerage_clearing_wealth_mgmt",
       "raw_text_from_jd": "Experience with brokerage clearing, self-directed trading, or wealth management products.",
       "skill_type": "domain_knowledge",
       "domain": "brokerage_clearing_wealth_management",
@@ -274,7 +276,8 @@
       "technologies_named": [],
       "industries_named": [
         "brokerage",
-        "wealth management"
+        "wealth management",
+        "trading"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -284,7 +287,7 @@
       "id": "sql_analytics_tooling",
       "raw_text_from_jd": "Experience with SQL, data exploration, product analytics tooling (e.g., Amplitude), and feature flagging / experimentation.",
       "skill_type": "tool_proficiency",
-      "domain": "data_analytics",
+      "domain": "product_analytics",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
@@ -324,7 +327,7 @@
       "id": "regulated_domain_experience",
       "raw_text_from_jd": "Experience building products in a highly regulated domain (e.g., fintech).",
       "skill_type": "domain_knowledge",
-      "domain": "regulated_products",
+      "domain": "regulated_product_development",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -338,7 +341,7 @@
       "credentials_named": []
     },
     {
-      "id": "cross_team_initiatives",
+      "id": "cross_team_initiatives_at_scale",
       "raw_text_from_jd": "Experience leading complex, cross-team initiatives from ideation to execution at scale.",
       "skill_type": "outcome",
       "domain": "program_leadership",
@@ -358,12 +361,12 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "SoFi Invest brokerage platform — self-directed trading, account experiences, new investing capabilities; squads include Trading, Account Experience, and Growth",
-    "business_model": "B2C fintech / national bank, investing and brokerage product",
+    "surface": "SoFi Invest brokerage platform — self-directed trading, account experience, and new investing capabilities; spans squads including Trading, Account Experience, and Growth",
+    "business_model": "B2C fintech / national bank, mobile-first personal finance and brokerage",
     "primary_metrics_inferred": [
-      "OKR attainment across Invest squads",
+      "OKRs tied to Invest product suite performance",
       "Member trading volume and engagement",
-      "Product launch quality and timeliness",
+      "Feature delivery quality and timeliness",
       "PM team performance and retention"
     ],
     "cross_functional_partners": [
@@ -376,15 +379,15 @@
       "Analytics"
     ],
     "core_responsibilities": [
-      "Own and drive the product vision and roadmap for Invest brokerage teams across Trading, Account Experience, and Growth squads",
+      "Own and drive the product vision and roadmap for Invest brokerage teams, spanning squads such as Trading, Account Experience, and Growth",
       "Hire, coach, and develop a team of Product Managers",
       "Translate company objectives into actionable team goals and OKRs",
       "Lead customer-focused product development from ideation to execution",
-      "Partner with engineering leadership on architectural decisions and technical trade-offs",
-      "Advocate for robust technical roadmaps balancing technical debt and future-flexible architectures",
+      "Partner deeply with engineering leadership to navigate architectural decisions and technical trade-offs",
       "Improve product performance by analyzing launch results and metrics",
-      "Communicate product status, timelines, and blockers to stakeholders and leadership",
-      "Develop and improve PM processes, frameworks, and standards across the broader product organization"
+      "Ensure products and features are delivered on time, within scope, and with high quality",
+      "Communicate effectively with stakeholders and leadership",
+      "Develop and improve PM processes, frameworks, and standards that benefit the broader product organization"
     ]
   },
   "compensation": {
@@ -396,50 +399,49 @@
     "source": "unknown"
   },
   "top_keywords": [
-    "brokerage",
-    "investing",
-    "trading",
     "Group Product Manager",
-    "people leadership",
+    "brokerage",
+    "self-directed trading",
+    "investing",
+    "product vision",
+    "people management",
+    "OKRs",
+    "real-time decisioning",
     "fintech",
     "regulated environment",
-    "real-time decisioning",
-    "product roadmap",
-    "OKRs",
-    "self-directed trading",
-    "account experience",
     "execution systems",
     "risk engines",
+    "distributed systems",
     "SoFi Invest"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear product ownership scope with named squads (Trading, Account Experience, Growth)",
-    "Explicit requirement for people leadership (not a hidden expectation)",
-    "Hard requirement for brokerage/investing experience signals a domain-serious team",
-    "SoFi is a national bank with scale — meaningful product impact",
-    "EEO and San Francisco Fair Chance Ordinance mentioned — inclusive hiring signals"
+    "Clear product surface with named squads (Trading, Account Experience, Growth)",
+    "Role explicitly describes people management responsibilities alongside IC work — realistic scope",
+    "Comprehensive list of cross-functional partners signals mature, established product org",
+    "JD distinguishes between must-haves and preferred qualifications clearly",
+    "SoFi is a nationally chartered bank with scale — meaningful brokerage product exposure"
   ],
   "red_flags": [
-    "Compensation range not disclosed despite JD mentioning 'base pay range for this role is listed below' — range appears missing from the posting",
-    "Location type is unclear — no explicit city, remote, or hybrid policy stated (Hawaii/Alaska exclusion is the only geographic signal)",
-    "Visa sponsorship status not mentioned anywhere in the JD",
-    "Preferred qualifications list overlaps significantly with must-haves, making hard vs. soft classification ambiguous for some items (e.g., regulated domain experience)"
+    "Base pay range referenced but not disclosed in the JD body — candidates cannot evaluate compensation without applying",
+    "Location type is entirely unclear — no city, no remote policy, no hybrid details stated (only Hawaii/Alaska remote exclusion mentioned)",
+    "Visa sponsorship status not mentioned anywhere",
+    "Broad scope (multiple squads, strategy + execution + people management) could signal under-resourced leadership layer",
+    "Hard requirement for brokerage product experience with no alternative pathway stated makes this a narrow hire"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years required, team scope, and Group PM title)",
-      "location.type (unclear; no explicit remote/hybrid/onsite policy stated beyond Hawaii/Alaska exclusion)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated in JD)",
-      "scope.business_model (inferred from SoFi's public profile as a B2C fintech/national bank)",
-      "compensation.location_pay_differential (inferred from JD language 'based on individual factors such as... location')",
-      "equity_mentioned set to false (no mention of equity in JD)"
+      "seniority.level (inferred from 10+ years PM + 3+ years people management + multi-squad ownership)",
+      "scope.business_model (inferred from JD company description — B2C fintech/national bank)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "compensation.location_pay_differential (inferred from JD language 'Final base pay offer will be determined based on individual factors such as the candidate's experience, skills, and location')",
+      "location.work_auth (inferred as 'open' from EEO language and no sponsorship restriction stated)"
     ],
     "ambiguities": [
-      "JD states 'The base pay range for this role is listed below' but no range appears in the provided JD content — compensation may have been omitted or rendered incorrectly.",
-      "Location policy is entirely unstated. The only geographic constraint is 'unable to accommodate remote work from Hawaii or Alaska,' implying remote eligibility elsewhere, but no explicit remote/hybrid/onsite designation is given.",
-      "Several preferred qualifications (e.g., 'Experience building products in a highly regulated domain') closely mirror must-have language and could reasonably be classified as hard requirements. Treated as soft given their placement under 'Preferred qualifications.'",
-      "'Bachelor's degree or higher, ideally in a technical, finance, or quantitative field' — 'ideally' softens the field preference but the degree itself reads as a hard requirement; classified severity as hard for the credential itself."
+      "Location type is completely unstated — no city, no remote/hybrid/onsite designation beyond a note that remote work from Hawaii or Alaska is not accommodated. Could be onsite, hybrid, or remote-US. Marked as 'unclear'.",
+      "Visa sponsorship is not mentioned anywhere in the JD. Marked as 'unclear'.",
+      "Compensation range is referenced ('The base pay range for this role is listed below') but the actual numbers are absent from the provided JD content — likely a rendering issue in the source page.",
+      "Equity is not mentioned despite SoFi being a public company where equity is common; cannot confirm inclusion."
     ]
   }
 }

@@ -1,0 +1,276 @@
+{
+  "company": "Airtable",
+  "role_title": "Program Manager, Professional Services - West",
+  "url": "https://job-boards.greenhouse.io/airtable/jobs/8586865002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8586865002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [
+      "San Francisco Bay Area",
+      "Seattle",
+      "Los Angeles",
+      "New York"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager (Professional Services / Customer-Facing Delivery)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years managing technical delivery in complex, multi-stakeholder environments",
+      "On-target earnings $179,500–$221,500 in major metros, consistent with Senior IC",
+      "Accountability for customer outcomes, steering committees, scope management"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_technical_delivery",
+      "raw_text_from_jd": "5+ years managing technical delivery in complex, multi-stakeholder environments, with accountability for outcomes across teams you don't directly control.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "professional_services_delivery",
+      "raw_text_from_jd": "You have delivered technical programs for external customers in a professional services or consulting context, not just managed internal projects. You've run steering committees, managed scope conversations, and owned customer outcomes with real accountability.",
+      "skill_type": "capability",
+      "domain": "professional_services_delivery",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "professional services",
+        "consulting"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_fluency",
+      "raw_text_from_jd": "You are genuinely fluent with AI tools, not aspirationally. You use AI in your daily delivery workflow, have an informed perspective on where agentic systems create leverage and where they introduce risk, and can help customers navigate both.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools",
+        "agentic systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "airtable_platform_fluency",
+      "raw_text_from_jd": "You have worked directly in Airtable or a comparable platform, not managed people who do. You understand how components interact, identify dependency and sequencing issues by looking at the system, and build the tools your team uses to run delivery operations.",
+      "skill_type": "tool_proficiency",
+      "domain": "no_code_platform",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Airtable"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pmp_certification",
+      "raw_text_from_jd": "PMP or equivalent PMO certification. You know formal project management methodology and apply it as the structure that keeps complex engagements from quietly going off course.",
+      "skill_type": "credential",
+      "domain": "project_management_certification",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP"
+      ]
+    },
+    {
+      "id": "agile_waterfall_fluency",
+      "raw_text_from_jd": "You operate fluidly across Agile and Waterfall. You know which model fits the engagement and can run both without defaulting to whichever is more comfortable.",
+      "skill_type": "capability",
+      "domain": "delivery_methodology",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_compliance_delivery",
+      "raw_text_from_jd": "Delivered in enterprise environments with real compliance, security, and access management requirements. You plan around constraints, not past them.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_compliance_security",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_org_coordination",
+      "raw_text_from_jd": "Track record of coordinating delivery across organizational boundaries: external partners, customer teams, or both.",
+      "skill_type": "outcome",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "You communicate across the full room: executive-ready updates for C-level stakeholders, direct technical direction for delivery teams, and clear framing for the business SMEs whose work is changing.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise professional services delivery; AI workflow transformation engagements",
+    "business_model": "B2B enterprise SaaS with professional services delivery arm",
+    "primary_metrics_inferred": [
+      "On-time go-live and delivery milestones",
+      "Scope and budget adherence across engagements",
+      "Customer satisfaction / outcome ownership",
+      "Change order management"
+    ],
+    "cross_functional_partners": [
+      "Internal Airtable PS team",
+      "External development partners",
+      "Enterprise customer stakeholders",
+      "C-level executives",
+      "Business SMEs"
+    ],
+    "core_responsibilities": [
+      "Serve as the primary delivery lead for enterprise customers, owning the relationship, the plan, and the outcome from kickoff through go-live and beyond.",
+      "Run delivery across all workstreams: internal team, external partners, customer stakeholders, managing progress, blockers, and alignment simultaneously.",
+      "Own the project plan end to end: scope, schedule, budget, risk register, and RAID log across the full engagement lifecycle.",
+      "Make technical sequencing decisions when platform constraints, compliance requirements, or partner dependencies force tradeoffs.",
+      "Guide customers through AI workflow transformation, helping them move from human-run processes to AI-augmented and agent-assisted operations.",
+      "Use AI tools actively in your own delivery operations: status reporting, risk synthesis, documentation, and stakeholder communication.",
+      "Manage scope formally: track change requests, assess impact on timeline and budget, and run the change order process when the engagement evolves beyond the original SOW.",
+      "Sequence work across Agile sprint cycles and Waterfall delivery milestones depending on what the engagement demands.",
+      "Hold external partners accountable across organizational boundaries.",
+      "Coordinate compliance, security, access management, and third-party approvals in regulated enterprise environments.",
+      "Keep executive stakeholders accurately informed without requiring them to understand the technical details.",
+      "Work directly in Airtable as an operational tool."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": [
+      162000,
+      221500
+    ],
+    "equity_mentioned": true,
+    "equity_form": "restricted stock units (RSUs)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Professional Services",
+    "enterprise delivery",
+    "Airtable",
+    "AI workflow transformation",
+    "agentic systems",
+    "Agile",
+    "Waterfall",
+    "RAID log",
+    "PMP",
+    "scope management",
+    "compliance",
+    "external partners",
+    "stakeholder management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges explicitly disclosed for both major metros and remote locations",
+    "RSU equity mentioned as part of total compensation package",
+    "Remote-eligible role (#LI-Remote) with geographic pay tiers",
+    "Clear, concrete scope of responsibilities — not a vague coordination role",
+    "Role explicitly states accountability for customer outcomes, signaling meaningful ownership",
+    "AI fluency requirement is substantive, not aspirational — role is genuinely forward-looking"
+  ],
+  "red_flags": [
+    "PMP or equivalent is listed as a hard requirement, which may exclude otherwise qualified candidates",
+    "Role title says 'Program Manager' but body uses 'Technical Project Manager' — minor inconsistency",
+    "No explicit mention of visa sponsorship — unclear for non-US applicants",
+    "On-target earnings range implies variable/incentive comp component, exact base not disclosed"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from OTE range and years_required_min)",
+      "scope.primary_metrics_inferred (not directly stated in JD)",
+      "scope.business_model (inferred from product and PS context)",
+      "compensation.total_comp_estimate_usd (stated as OTE, not split between base and incentive)",
+      "location.visa_sponsorship (not mentioned in JD body)"
+    ],
+    "ambiguities": [
+      "Role title is 'Program Manager, Professional Services - West' but the JD body refers to 'Technical Project Manager' — the two titles are used interchangeably in the JD.",
+      "Compensation is described as 'on-target earnings' (OTE), implying a variable/incentive component; the base salary split is not disclosed. base_range_usd is left null; total_comp_estimate_usd reflects the OTE ranges stated.",
+      "OTE has two tiers: $179,500–$221,500 for SF Bay Area, Seattle, LA, NYC; $162,000–$199,800 for all other/remote. total_comp_estimate_usd captures the full band across both."
+    ]
+  }
+}

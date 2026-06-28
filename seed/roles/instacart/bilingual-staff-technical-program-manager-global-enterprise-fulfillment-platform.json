@@ -4,36 +4,36 @@
   "url": "https://instacart.careers/job/?gh_jid=7826880",
   "ats_provider": "greenhouse",
   "ats_job_id": "7826880",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "remote-us",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "Flex First — no mandated office time; regular in-person events",
-    "work_auth": "unclear",
+    "office_time_required": "Flex First — employees choose where they work; regular in-person events",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Staff-level cross-functional integration TPM",
+  "secondary_archetype": "Platform / Integration TPM with cross-border focus",
   "seniority": {
-    "level": "Staff IC (equivalent to Staff TPM)",
+    "level": "Staff (IC6 equivalent)",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "10+ years of post-graduation experience",
-      "Title explicitly says 'Staff Technical Program Manager'",
+      "10+ years post-graduation experience required",
+      "Staff TPM title",
+      "VP/C-suite partnership and executive visibility scope",
       "Base pay range $202K–$255.5K depending on state, consistent with Staff-level IC",
-      "VP/C-suite engagement, org-leadership-level influence expectations",
       "Mentors and onboards TPMs at varying levels"
     ]
   },
   "must_haves": [
     {
-      "id": "years_experience_tpm_or_similar",
+      "id": "years_experience_tpm",
       "raw_text_from_jd": "10+ years of post-graduation experience in technology as a Technical Program Manager, Engineering Manager, Product Manager, or similar technical role",
       "skill_type": "years_of_experience",
       "domain": "technical_program_management",
@@ -54,7 +54,7 @@
       "id": "spanish_fluency",
       "raw_text_from_jd": "Fluency in Spanish",
       "skill_type": "capability",
-      "domain": "language_fluency",
+      "domain": "bilingual_communication",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -66,10 +66,10 @@
       "credentials_named": []
     },
     {
-      "id": "spanish_fluency_daily_collab",
+      "id": "spanish_fluency_detailed",
       "raw_text_from_jd": "Fluent in Spanish (spoken and written) with daily collaboration experience across Spanish-speaking engineering, product, and commercial teams.",
       "skill_type": "capability",
-      "domain": "language_fluency_applied",
+      "domain": "bilingual_communication",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -83,10 +83,10 @@
       "credentials_named": []
     },
     {
-      "id": "complex_program_leadership",
+      "id": "end_to_end_programs",
       "raw_text_from_jd": "Proven track record leading end-to-end, company-wide programs of high complexity and ambiguity across multiple engineering organizations and cross-functional partners.",
       "skill_type": "outcome",
-      "domain": "program_management",
+      "domain": "technical_program_management",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -98,10 +98,10 @@
       "credentials_named": []
     },
     {
-      "id": "program_structures_and_roadmaps",
+      "id": "program_structures_roadmaps",
       "raw_text_from_jd": "Demonstrated ability to create program structures and cross-program roadmaps; skilled at building execution plans and operating cadences tailored to program needs.",
       "skill_type": "capability",
-      "domain": "program_management",
+      "domain": "program_planning",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -146,7 +146,7 @@
       "id": "data_driven_strategic_mindset",
       "raw_text_from_jd": "Data-driven decision maker with a strong strategic mindset—able to define paths forward for ambiguous problems and identify new, high-impact problem areas.",
       "skill_type": "capability",
-      "domain": "strategic_thinking",
+      "domain": "strategy_and_analytics",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -163,7 +163,7 @@
       "skill_type": "outcome",
       "domain": "operational_excellence",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -211,7 +211,7 @@
       ]
     },
     {
-      "id": "vp_csuite_program_leadership",
+      "id": "vp_csuite_engagement",
       "raw_text_from_jd": "Experience leading programs with active VP/C-suite engagement where outcomes directly influence company strategy and business results.",
       "skill_type": "outcome",
       "domain": "executive_stakeholder_management",
@@ -226,10 +226,10 @@
       "credentials_named": []
     },
     {
-      "id": "reusable_program_frameworks",
+      "id": "foundational_frameworks",
       "raw_text_from_jd": "History of defining foundational, reusable program frameworks, tools, and processes adopted across large organizations.",
       "skill_type": "outcome",
-      "domain": "program_management",
+      "domain": "program_management_frameworks",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -241,7 +241,7 @@
       "credentials_named": []
     },
     {
-      "id": "ai_ml_program_experience",
+      "id": "ai_ml_programs",
       "raw_text_from_jd": "Experience with AI/ML programs or demonstrated fluency applying AI to program management and engineering workflows.",
       "skill_type": "domain_knowledge",
       "domain": "ai_ml",
@@ -258,12 +258,12 @@
       "credentials_named": []
     },
     {
-      "id": "marketplace_ecommerce_logistics_background",
+      "id": "marketplace_ecommerce_logistics",
       "raw_text_from_jd": "Background in marketplace, e-commerce, or logistics technology, with familiarity in fulfillment, picking, delivery orchestration, or last-mile logistics.",
       "skill_type": "domain_knowledge",
       "domain": "marketplace_ecommerce_logistics",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -297,14 +297,14 @@
   ],
   "explicitly_excluded": [],
   "scope": {
-    "team_size_estimate": "12 TPMs on immediate team within a broader 25-person TPM organization",
-    "surface": "Global Enterprise Fulfillment Platform — integrating Instaleap acquisition capabilities (fulfillment, picking, delivery orchestration, marketplace) into a unified international offering for retail partners across North America, Latin America, Europe, and the Middle East",
-    "business_model": "B2B2C SaaS/marketplace — enterprise fulfillment platform licensed to retailers, underpinning Instacart's 4-sided marketplace",
+    "team_size_estimate": "TPM team of 12 within a 25-person broader TPM organization",
+    "surface": "Global Enterprise Fulfillment Platform — integrating Instaleap acquisition capabilities across North America, Latin America, Europe, and the Middle East",
+    "business_model": "B2B SaaS + marketplace platform serving enterprise retail partners",
     "primary_metrics_inferred": [
-      "Zero disruption to ~100 existing international retail partner operations during integration",
-      "Cross-sell conversion from combined client base",
-      "Platform unification milestones across discovery, gap analysis, and evolution phases",
-      "Alignment and velocity across distributed NA and Bogotá engineering teams"
+      "Zero disruption to ~100 existing international retail partners during integration",
+      "Cross-sell conversion among existing partner base",
+      "Delivery alignment and integration milestone completion",
+      "Platform unification across fulfillment, picking, and delivery orchestration"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -312,20 +312,19 @@
       "Data Science",
       "Design",
       "Business",
-      "VP/C-suite leadership",
-      "Instaleap Bogotá-based teams",
-      "Commercial teams"
+      "VP/C-suite executives",
+      "Instaleap Bogotá-based teams"
     ],
     "core_responsibilities": [
-      "Lead the strategy, definition, and high-quality execution of company-wide programs with high ambiguity, complexity, risk, and executive visibility",
-      "Transform poorly understood problems into well-structured, cross-functional programs; architect scalable execution plans and operating mechanisms",
-      "Drive deep technical alignment across Engineering and Product at org leadership level",
-      "Generate and maintain cross-program roadmaps; proactively identify dependencies, risks, and tradeoffs",
-      "Partner closely with VPs and executive leadership to align program goals to business strategy",
-      "Establish and evolve program frameworks, processes, and evaluation criteria as reusable standards",
+      "Lead strategy, definition, and execution of company-wide programs with high ambiguity and executive visibility",
+      "Transform poorly understood problems into well-structured, cross-functional programs",
+      "Drive deep technical alignment across Engineering and Product on architectural decisions",
+      "Generate and maintain cross-program roadmaps coordinating multiple teams",
+      "Partner with VPs and executive leadership to align program goals to business strategy",
+      "Establish and evolve program frameworks adopted broadly across the organization",
       "Mentor and onboard TPMs at varying levels",
-      "Lead integration of enterprise fulfillment, picking, delivery orchestration, and marketplace capabilities into a cohesive global platform",
-      "Serve as connective tissue between Instacart's NA engineering org and Instaleap's Bogotá-based teams",
+      "Lead integration of enterprise fulfillment, picking, delivery orchestration, and marketplace capabilities into a global platform",
+      "Serve as connective tissue between North America and Bogotá-based Instaleap teams",
       "Ensure continuity for nearly 100 existing international retail partners during integration"
     ]
   },
@@ -341,50 +340,50 @@
     "source": "stated"
   },
   "top_keywords": [
-    "Staff TPM",
+    "Technical Program Manager",
     "bilingual",
-    "Spanish fluency",
+    "Spanish",
     "global enterprise fulfillment",
     "Instaleap",
     "platform integration",
+    "cross-functional",
     "distributed teams",
-    "cross-program roadmaps",
-    "executive alignment",
     "last-mile logistics",
-    "delivery orchestration",
+    "marketplace",
+    "executive visibility",
     "Latin America",
-    "operational excellence",
-    "ambiguity",
-    "4-sided marketplace"
+    "Staff TPM",
+    "delivery orchestration"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range fully disclosed across US state tiers ($202K–$255.5K base)",
+    "Compensation range fully disclosed across multiple US state tiers ($202K–$255.5K base)",
     "Equity (new hire + annual refresh) explicitly mentioned",
-    "Clear team context: 12-person immediate TPM team, 25-person broader org — strong peer support structure",
-    "Well-defined strategic scope: Instaleap integration with specific geographies and ~100 partner continuity goal",
-    "Flex First remote policy with no mandated in-office percentage",
-    "Mentorship and thought partnership culture explicitly called out"
+    "Fully remote-eligible (#LI-Remote) with Flex First policy",
+    "Very specific, concrete scope (Instaleap acquisition integration, ~100 retail partners) — not vague",
+    "Clear team structure disclosed (12 TPMs in immediate team, 25-person broader org)",
+    "Mentorship culture and thought partnership explicitly described"
   ],
   "red_flags": [
-    "Hard bilingual Spanish requirement significantly narrows candidate pool and may be an absolute filter",
-    "Dual fluency requirement appears twice in the JD (once as a standalone bullet, once with more detail) — could indicate elevated importance or editorial redundancy",
-    "Location pay differential is significant: CA/NY/CT/NJ candidates earn ~$42K–$42.5K more base than 'all other states' candidates for the same role",
-    "No visa sponsorship information provided despite international collaboration scope",
-    "High complexity expectations (VP/C-suite, cross-country, acquisition integration) with no stated team headcount reporting to this role — may indicate a high-leverage IC with limited direct authority"
+    "Hard bilingual Spanish requirement eliminates non-Spanish speakers entirely — highly specific filter",
+    "10+ years minimum is a strict floor with no stated equivalency exceptions",
+    "Cross-timezone coordination between US and Bogotá-based teams implies irregular working hours",
+    "Visa sponsorship status not stated — unclear for non-US candidates",
+    "Scope is extremely broad (global platform + acquisition integration + ~100 partners) for a single TPM role"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Staff' + comp range + 10+ years requirement)",
-      "scope.business_model (inferred from product description and marketplace language)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
-      "location.remote_us_eligible (inferred from #LI-Remote tag and Flex First policy language)",
-      "compensation.base_range_usd min/max (stated as ranges per state tier; $202K–$255.5K represents the full US spread)"
+      "seniority.level (inferred from 'Staff' title, comp range, and scope description)",
+      "scope.business_model (inferred from product description and enterprise retail partner context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated as KPIs)",
+      "compensation.base_range_usd reported as full range min/max across all state tiers; CA/NY/CT/NJ high is $255,500, all-other-states low is $202,000",
+      "location.work_auth set to open (not stated; inferred from absence of restriction)",
+      "location.visa_sponsorship set to unclear (not mentioned in JD)"
     ],
     "ambiguities": [
-      "Spanish fluency appears as two separate minimum-qualification bullets with slightly different wording ('Fluency in Spanish' standalone, and 'Fluent in Spanish (spoken and written) with daily collaboration experience...'). Both treated as hard requirements; may be editorial duplication.",
-      "JD is tagged #LI-Remote but Instacart describes itself as 'Flex First' with regular in-person events. No specific office time percentage is stated for this role. Treated as remote-us with optional in-person events.",
-      "Visa sponsorship not addressed; work_auth and visa_sponsorship set to 'unclear'."
+      "Spanish fluency appears twice in minimum qualifications (once as 'Fluency in Spanish' and once as 'Fluent in Spanish (spoken and written) with daily collaboration experience') — treated as one hard requirement with two entries to capture both phrasings",
+      "The role is tagged #LI-Remote and described as 'Flex First' with no city listed for this role specifically, but the company has offices; treated as remote-us-eligible",
+      "Compensation table covers US-based candidates only; international comp not stated despite global team collaboration scope"
     ]
   }
 }

@@ -1,0 +1,302 @@
+{
+  "company": "PolyAI",
+  "role_title": "Head of Growth",
+  "url": "https://job-boards.eu.greenhouse.io/polyai/jobs/4881649101",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4881649101",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Growth (non-PM) — Head of Growth / Demand Gen leader reporting to CMO",
+  "seniority": {
+    "level": "VP / Director-level Senior Leader",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "10 to 12+ years in B2B / B2C2B demand generation and growth",
+      "Org lead for Growth and Demand, reports to CMO",
+      "Hire, develop, and lead a strong team",
+      "Comp range $250K–$310K USD base consistent with senior leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_b2b_demand_gen",
+      "raw_text_from_jd": "10 to 12+ years in B2B / B2C2B demand generation and growth",
+      "skill_type": "years_of_experience",
+      "domain": "demand_generation_and_growth",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B",
+        "B2C2B"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "tier1_startup_experience",
+      "raw_text_from_jd": "Experience at a Tier-1 startup backed by Tier-1 VCs, helping take organizations from $100M to $200M+",
+      "skill_type": "domain_knowledge",
+      "domain": "high_growth_startup_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Tier-1 startup backed by Tier-1 VCs"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "plg_and_slg_experience",
+      "raw_text_from_jd": "Both PLG and sales-led (SLG) experience, including the transition from product-led to sales-led, and demand generation across multiple segments",
+      "skill_type": "domain_knowledge",
+      "domain": "product_led_and_sales_led_growth",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "named_account_abm_track_record",
+      "raw_text_from_jd": "A track record of named-account and precision-marketing programs that produced attributable pipeline",
+      "skill_type": "outcome",
+      "domain": "account_based_marketing",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "attribution_point_of_view",
+      "raw_text_from_jd": "A point of view on attribution that goes beyond last-touch",
+      "skill_type": "domain_knowledge",
+      "domain": "marketing_attribution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "lifecycle_program_build",
+      "raw_text_from_jd": "Experience building or rebuilding a lifecycle program end to end",
+      "skill_type": "capability",
+      "domain": "lifecycle_marketing",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "web_and_conversion_ownership",
+      "raw_text_from_jd": "Comfort owning web and conversion as your own surface",
+      "skill_type": "capability",
+      "domain": "web_strategy_and_conversion_optimization",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "channel_discipline",
+      "raw_text_from_jd": "The discipline to kill underperforming channels rather than hedge",
+      "skill_type": "cultural_fit",
+      "domain": "growth_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_credibility",
+      "raw_text_from_jd": "Strong cross-functional credibility with Sales, Product Marketing, and Finance",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_fluency_builder_mindset",
+      "raw_text_from_jd": "A builder's mindset: a desire to automate, to become AI-fluent on the edge of the market, and to ship leverage rather than delegate it",
+      "skill_type": "cultural_fit",
+      "domain": "ai_fluency_and_automation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI agents",
+        "automations"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "vertical_or_developer_marketing",
+      "raw_text_from_jd": "Experience with vertical campaigns or developer marketing is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "vertical_campaigns_and_developer_marketing",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear (early-stage function; first hires TBD)",
+    "surface": "Growth and Demand function — web, paid media, ABM, lifecycle, PLG activation",
+    "business_model": "B2B SaaS / voice AI platform, enterprise and builder segments",
+    "primary_metrics_inferred": [
+      "Marketing-sourced pipeline by stage, source, and segment",
+      "Pipeline-per-FTE",
+      "Paid media efficiency and ROAS",
+      "ABM-sourced enterprise pipeline share",
+      "Website conversion and qualified demand",
+      "Lifecycle program contribution to acquisition and expansion"
+    ],
+    "cross_functional_partners": [
+      "CMO",
+      "Product Marketing",
+      "Sales",
+      "Marketing Operations",
+      "Finance"
+    ],
+    "core_responsibilities": [
+      "Lead PolyAI's growth strategy across web, paid media, demand generation, lifecycle, and builder/PLG activation",
+      "Build and scale a high-performing growth engine that drives awareness, engagement, pipeline, and revenue",
+      "Own the website as a strategic growth asset: positioning, buyer journeys, conversion, and experimentation",
+      "Set the paid media strategy and investment model across channels, with clear accountability for performance and efficiency",
+      "Lead named-account ABM and precision-marketing programs with defined plays, signals, and orchestration, alongside Product Marketing and Sales",
+      "Build lifecycle and nurture programs that support acquisition and expansion",
+      "Establish a rigorous operating cadence, including pipeline reporting by stage, source, and segment",
+      "Use data to decide where to invest, where to improve, and where to stop",
+      "Hire, develop, and lead a strong team"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      250000,
+      310000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Employee share options plan; equity included in package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "demand generation",
+    "growth",
+    "ABM",
+    "PLG",
+    "SLG",
+    "paid media",
+    "lifecycle marketing",
+    "pipeline",
+    "AI fluency",
+    "web conversion",
+    "B2B",
+    "named-account marketing",
+    "attribution",
+    "voice AI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($250K–$310K USD base)",
+    "Equity participation explicitly mentioned",
+    "Clear ownership scope — org lead for Growth and Demand reporting to CMO",
+    "JD explicitly welcomes candidates without the exact title if they've done the work",
+    "Strong benefits package including sabbatical, fertility programs, parental leave, and L&D allowance",
+    "Company is VC-backed with leading enterprise logos as customers — meaningful scale signal"
+  ],
+  "red_flags": [
+    "Function is described as 'early' — significant building/ambiguity ahead with limited existing team or infrastructure",
+    "No explicit mention of visa sponsorship — unclear for non-US/Canada candidates",
+    "Location type is unclear — JD mentions WFH allowance and US/Canada comp ranges but does not specify remote/hybrid/onsite explicitly",
+    "Archetype is growth marketing leadership, not a traditional PM role — schema fit is approximate"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (inferred as remote-us/remote-canada from WFH allowance mention and dual USD/CAD comp ranges; no explicit office policy stated)",
+      "seniority.level (inferred from comp range, org lead title, and years requirement)",
+      "scope.team_size_estimate (not stated; function described as early-stage)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and success criteria sections; not listed as explicit KPIs)",
+      "scope.business_model (inferred from product description)",
+      "location.visa_sponsorship (not mentioned anywhere in JD)"
+    ],
+    "ambiguities": [
+      "Location policy not explicitly stated. The JD mentions a WFH allowance and gives both USD and CAD comp ranges suggesting US and Canada candidates are both eligible, but does not confirm remote, hybrid, or onsite. Treated as remote-us as best inference.",
+      "Archetype: this is a marketing leadership role (Head of Growth), not a product manager. Closest schema enum is 'Growth PM' or 'Growth (non-PM)'; classified as 'Growth PM' with secondary note clarifying it is non-PM growth leadership.",
+      "The JD lists both USD ($250K–$310K) and CAD ($270K–$330K) ranges; only USD range is captured in base_range_usd per schema convention."
+    ]
+  }
+}

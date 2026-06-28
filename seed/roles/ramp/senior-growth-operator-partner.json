@@ -1,0 +1,266 @@
+{
+  "company": "Ramp",
+  "role_title": "Senior Growth Operator, Partner",
+  "url": "https://jobs.ashbyhq.com/ramp/453fc2eb-3eba-42a1-8dd1-36689875b583",
+  "ats_provider": "ashby",
+  "ats_job_id": "453fc2eb-3eba-42a1-8dd1-36689875b583",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [
+      "New York, NY",
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth (non-PM)",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Technical PM / Growth Engineer hybrid",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 3,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "3+ years of experience in growth, product growth, or growth engineering",
+      "Senior in title",
+      "Expected to operate with high autonomy and own end-to-end product surface area"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "technical_education",
+      "raw_text_from_jd": "Bachelor's degree or higher in Computer Science, Engineering, or a related technical field",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree",
+        "Computer Science",
+        "Engineering"
+      ]
+    },
+    {
+      "id": "years_growth_experience",
+      "raw_text_from_jd": "3+ years of experience in growth, product growth, or growth engineering at a SaaS or fintech company",
+      "skill_type": "years_of_experience",
+      "domain": "growth_engineering",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "SaaS company",
+        "fintech company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "pm_brain_engineer_hands",
+      "raw_text_from_jd": "PM brain, engineer hands: You can mock up an MVP and then go build it yourself, scoping what matters, why, and shipping it without waiting for someone else to spec it",
+      "skill_type": "capability",
+      "domain": "product_and_engineering",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "production_ai_experience",
+      "raw_text_from_jd": "Production AI experience: You've built and shipped agents in production,not theoretical systems, but real ones that ran autonomously, handled edge cases, and got better over time",
+      "skill_type": "outcome",
+      "domain": "ai_agents",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI agents",
+        "autonomous agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builder_mentality",
+      "raw_text_from_jd": "Builder mentality: Demonstrated ability to spec, build, and ship product experiences, not just manage them; comfortable writing code, reviewing PRs, and working in a codebase alongside eng and product teams",
+      "skill_type": "capability",
+      "domain": "software_engineering",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "deep_ai_fluency",
+      "raw_text_from_jd": "Deep AI fluency: Hands-on experience with modern AI coding harnesses (Cursor, Claude Code, Codex); you've prototyped, shipped, and iterated on AI tools, agents, and workflows, not just managed roadmaps about them",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Cursor",
+        "Claude Code",
+        "Codex"
+      ],
+      "technologies_named": [
+        "AI agents",
+        "AI workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_empathy",
+      "raw_text_from_jd": "Operational empathy: You can partner with sales, finance, risk, and other business teams to deeply understand their challenges and deliver rapid AI-powered solutions",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_ownership",
+      "raw_text_from_jd": "High ownership: You communicate clearly, own your work completely, and don't wait to be told what to build next — comfortable with autonomy and ambiguity",
+      "skill_type": "cultural_fit",
+      "domain": "autonomy_and_ownership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Partner channel growth — partner-facing product experiences, PLG experiments, internal growth tooling, and AI agents for partner workflows",
+    "business_model": "B2B SaaS / fintech — channel partner-led growth contributing to enterprise revenue",
+    "primary_metrics_inferred": [
+      "Referral volume from partners",
+      "Partner-sourced lead conversion",
+      "Partner engagement and sell-through rates",
+      "Revenue attributed to partner channel"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Data",
+      "Finance",
+      "Engineering",
+      "Partnerships",
+      "Product",
+      "Risk"
+    ],
+    "core_responsibilities": [
+      "Deploy Product-Led Growth to the Partner Channel: Design and ship PLG experiments targeted at partner-sourced leads from banners to in-product referral triggers",
+      "Build Partner-Facing Product Experiences: Own the end-to-end deployment and iteration of partner experiences including incentives, landing pages, demos, badging, MDF, partner resources, and gamification mechanics that drive referral behavior from partners",
+      "Partner Sell-Through Experiences: Own the full suite of experiences that improve partners' ability to sell Ramp from discovery to referral.",
+      "Partner Assets: Ship products that enable partners to access marketing assets, product information, and co-branded materials",
+      "Partner Platform Growth Experiments: Design and ship new growth experiments to increase referral volume and deepen partner engagement.",
+      "Cross-Functional Partnership: Partner closely with sales, data, finance, and engineering teams to scope, prioritize, and ship partner growth features; serve as the product owner for the partner growth surface area",
+      "Build Growth Acceleration Tooling: Build partner-facing tools that make partner sellers more effective and internal-facing tooling to scale marketing campaigns faster",
+      "Build AI Agents from Scratch: Build autonomous agents that run partner workflows end-to-end."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Product-Led Growth",
+    "partner channel",
+    "AI agents",
+    "growth engineering",
+    "partner experiences",
+    "PLG experiments",
+    "autonomous agents",
+    "builder",
+    "fintech",
+    "Cursor",
+    "Claude Code",
+    "Codex",
+    "referral",
+    "SaaS"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Highly specific role surface area (partner growth) — not a vague generalist posting",
+    "Explicitly expects the hire to write code and work in codebases alongside engineers — signals genuine technical autonomy",
+    "AI-first mandate is clearly articulated with specific tools named (Cursor, Claude Code, Codex)",
+    "Relocation support to NYC or SF mentioned, signaling willingness to invest in the hire",
+    "Competitive benefits package including 401(k) match, full medical/dental/vision, and parental leave",
+    "Unlimited AI token usage as a perk aligns with the AI-first role mandate"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Location type is ambiguous — relocation to NYC or SF mentioned, but no explicit remote/hybrid/onsite policy stated in role body",
+    "Visa sponsorship status not mentioned",
+    "High bar: requires both engineering fluency (writing code, reviewing PRs) AND PM-level product ownership simultaneously — a rare combination",
+    "No explicit years threshold beyond the 3+ minimum despite 'Senior' title — seniority expectations may be higher in practice"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Senior' title and scope of responsibilities; no explicit level ladder stated)",
+      "location.type (inferred as unclear; relocation to NYC/SF mentioned but no explicit onsite/hybrid/remote policy in JD body)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated directly)",
+      "scope.business_model (inferred from company description and partner channel context)",
+      "equity_mentioned (not stated in JD; left false)"
+    ],
+    "ambiguities": [
+      "Location policy is not stated. The JD mentions 'Relocation support to NYC or SF (as needed)' in benefits, implying in-office presence may be expected, but no explicit onsite/hybrid/remote designation appears in the role body. Marked as 'unclear'.",
+      "The role archetype blends Growth PM, Growth Engineer, and Technical PM — 'Growth (non-PM)' selected as closest fit but the role has significant PM and engineering expectations."
+    ]
+  }
+}

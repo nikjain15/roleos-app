@@ -1,10 +1,10 @@
 {
   "company": "Airbnb",
   "role_title": "Programs and Business Operations Lead",
-  "url": "https://careers.airbnb.com/positions/7834481?gh_jid=7834481",
+  "url": "https://careers.airbnb.com/positions/8028783?gh_jid=8028783",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7834481",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "8028783",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -12,34 +12,33 @@
     "cities_listed": [],
     "remote_us_eligible": true,
     "office_time_required": "occasional work at an Airbnb office or attendance at offsites, as agreed to with your manager",
-    "work_auth": "no-sponsorship",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
   "secondary_archetype": "Program Manager",
   "seniority": {
-    "level": "Senior IC / Lead (likely Staff or Principal equivalent)",
-    "years_required_min": 10,
+    "level": "Senior IC / Staff (Principal-level BizOps Lead)",
+    "years_required_min": 12,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "10+ years of work experience required",
-      "Reports to Director, Programs and Business Operations",
-      "Owns cross-functional initiatives end-to-end",
-      "Presents to senior leaders in weekly/monthly/quarterly business reviews",
-      "Comp range $168K-$203K base consistent with senior IC at Airbnb"
+      "12+ years experience in consulting or strategy operations role",
+      "Works with Director of Services and Membership directly",
+      "Base pay range $168K-$203K consistent with senior IC at Airbnb",
+      "Expected to partner as a strategic peer with product and marketing leadership"
     ]
   },
   "must_haves": [
     {
-      "id": "years_experience",
-      "raw_text_from_jd": "Qualified candidates will ideally have a minimum of 10+ years of work experience, preferably with combined exposure to data-modeling, business analytics, and project management in a dynamic entrepreneurial environment.",
+      "id": "years_consulting_strategy_ops",
+      "raw_text_from_jd": "12+ years experience in consulting position, or strategy operations role and working across multiple geographies",
       "skill_type": "years_of_experience",
-      "domain": "business_operations_and_analytics",
-      "minimum_value": 10,
+      "domain": "consulting_or_strategy_operations",
+      "minimum_value": 12,
       "unit": "years",
-      "is_combined": true,
+      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -51,11 +50,78 @@
       "credentials_named": []
     },
     {
-      "id": "bias_to_action_ownership",
-      "raw_text_from_jd": "A proven bias to action and ability to own a project from conception through to post-mortem.",
-      "skill_type": "outcome",
+      "id": "data_driven_analysis",
+      "raw_text_from_jd": "Provide data driven insights quickly and accurately by leveraging tools such as SQL, excel and Tableau",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL",
+        "Excel",
+        "Tableau"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_excel_comfort",
+      "raw_text_from_jd": "Comfortable with Excel, SQL",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Excel",
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "supply_demand_dynamics",
+      "raw_text_from_jd": "Deep understanding of supply/demand dynamics, incentive design, and growth levers",
+      "skill_type": "domain_knowledge",
+      "domain": "marketplace_dynamics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_project_management",
+      "raw_text_from_jd": "Ability to manage complex projects and multi-task with excellent organization skills",
+      "skill_type": "capability",
       "domain": "project_management",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Leadership and ability to influence other stakeholders",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -67,9 +133,24 @@
     },
     {
       "id": "ambiguity_tolerance",
-      "raw_text_from_jd": "Ability to work in a world of uncertainty and ambiguity - to create clarity from chaos.",
+      "raw_text_from_jd": "Ability to flourish with minimal guidance, be proactive, and handle uncertainty and ambiguity",
+      "skill_type": "cultural_fit",
+      "domain": "autonomy_and_initiative",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_analysis",
+      "raw_text_from_jd": "Analysis and formulation of plans to address key business priorities or issues",
       "skill_type": "capability",
-      "domain": "strategic_thinking",
+      "domain": "business_strategy",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -82,56 +163,11 @@
     },
     {
       "id": "communication_skills",
-      "raw_text_from_jd": "A world class written and verbal communicator with the ability to present at all levels of an organization in a succinct, clear and eloquent manner.",
+      "raw_text_from_jd": "Seasoned internal and external communicator with strong interpersonal skills",
       "skill_type": "capability",
-      "domain": "executive_communication",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "storytelling_influence",
-      "raw_text_from_jd": "A proven track record of being able to storytell, influence and rally diverse cross-functional stakeholders against a common mission or goal using both qualitative and quantitative insights.",
-      "skill_type": "outcome",
-      "domain": "stakeholder_management",
-      "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "detail_and_strategy_balance",
-      "raw_text_from_jd": "Ability to not only dive into details to drive execution but also zoom out to contextualize specific recommendations/initiatives within the broader company strategy.",
-      "skill_type": "capability",
-      "domain": "strategic_execution",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "multitasking_prioritization",
-      "raw_text_from_jd": "Ability to multi-task by prioritizing work and coordinating required support across various functions to achieve project goals and objectives.",
-      "skill_type": "capability",
-      "domain": "project_management",
+      "domain": "communication",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -141,12 +177,12 @@
       "credentials_named": []
     },
     {
-      "id": "organizational_skills",
-      "raw_text_from_jd": "Impeccable organizational skills, attention to detail and ability to document processes & decisions made.",
+      "id": "verbal_written_communication",
+      "raw_text_from_jd": "Strong verbal and written communication skills",
       "skill_type": "capability",
-      "domain": "operations",
+      "domain": "communication",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -156,23 +192,8 @@
       "credentials_named": []
     },
     {
-      "id": "global_team_scaling",
-      "raw_text_from_jd": "Experience implementing and scaling initiatives across globally dispersed teams.",
-      "skill_type": "domain_knowledge",
-      "domain": "global_operations",
-      "evidence_required": "work_history",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "cross_functional_experience",
-      "raw_text_from_jd": "Experience working cross-functionally with multiple departments.",
+      "id": "product_marketing_partnership",
+      "raw_text_from_jd": "Partner with product and marketing teams to translate business goals into program requirements and go-to-market strategies—speaking their language and earning their trust as a strategic peer",
       "skill_type": "capability",
       "domain": "cross_functional_collaboration",
       "evidence_required": "work_history",
@@ -186,34 +207,15 @@
       "credentials_named": []
     },
     {
-      "id": "excel_large_datasets",
-      "raw_text_from_jd": "Comfort with manipulating large datasets in excel is a must.",
-      "skill_type": "tool_proficiency",
-      "domain": "data_analysis",
-      "evidence_required": "hands_on_use",
-      "bridgeable": "yes",
-      "severity": "hard",
-      "tools_named": [
-        "Excel"
-      ],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "sql_proficiency",
-      "raw_text_from_jd": "SQL proficiency strongly preferred.",
-      "skill_type": "tool_proficiency",
-      "domain": "data_analysis",
-      "evidence_required": "hands_on_use",
-      "bridgeable": "yes",
+      "id": "experimentation_and_scaling",
+      "raw_text_from_jd": "Identify new growth opportunities, design experiments to test hypotheses, and develop plans to scale proven levers",
+      "skill_type": "outcome",
+      "domain": "growth_and_experimentation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "SQL"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -222,48 +224,50 @@
   ],
   "nice_to_haves": [
     {
-      "id": "ai_familiarity",
-      "raw_text_from_jd": "A familiarity with AI, AI data analysis and AI tools would be considered an asset.",
+      "id": "loyalty_incentive_merchandising",
+      "raw_text_from_jd": "Background in loyalty programs, incentive programs, or merchandising strongly preferred",
       "skill_type": "domain_knowledge",
-      "domain": "artificial_intelligence",
-      "evidence_required": "hands_on_use",
-      "bridgeable": "yes",
+      "domain": "loyalty_and_incentive_programs",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
-      "technologies_named": [
-        "AI",
-        "AI data analysis"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     }
   ],
-  "explicitly_excluded": [],
+  "explicitly_excluded": [
+    "Candidates located in: Alaska, Indiana, Nebraska, North Dakota, Ohio, South Dakota, Wisconsin, Alabama, Mississippi, Oklahoma, Delaware, Rhode Island"
+  ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Americas regional business operations and growth programs within the Global Markets / Chief Business Officer organization",
-    "business_model": "marketplace (B2C and B2B), global travel and hospitality platform",
+    "surface": "Services & Membership team — programs driving growth levers for Airbnb guests and hosts",
+    "business_model": "B2C and B2B marketplace (host supply and guest demand)",
     "primary_metrics_inferred": [
-      "Americas regional business objectives (supply, demand, regulatory)",
-      "Key initiative progress tracked in weekly/monthly/quarterly business reviews",
-      "Host and guest community growth metrics"
+      "Program-driven growth in guest and host engagement",
+      "Supply growth and quality",
+      "Revenue impact from new programs and levers",
+      "Experiment conversion and scaling efficiency"
     ],
     "cross_functional_partners": [
-      "Field & online operations",
-      "Marketing",
       "Product",
-      "Legal",
-      "Regional leadership",
-      "Country leadership"
+      "Marketing",
+      "Data Science",
+      "Finance",
+      "Partnerships",
+      "Business Operations"
     ],
     "core_responsibilities": [
-      "Align all functions to achieve Americas's regional business objectives in partnership with the Director, Regional Business Operations and Growth",
-      "Own the conception, execution, and measurement of cross-functional initiatives end-to-end",
-      "Drive regular business operation meetings and initiate meaningful conversations - leading weekly meetings with cross-functional project teams",
-      "Use all available data sources and tools to analyze macro and micro trends and present analysis, insights, and actionable plans to leadership",
-      "Assist the Regional Director and Regional BizOps Director in owning the performance narrative for key metrics and deliver the story to senior leaders in weekly, monthly, and quarterly business reviews"
+      "Develop actionable business analysis to enable functional leads to provide consistent information",
+      "Provide data driven insights using SQL, Excel, and Tableau",
+      "Partner with product and marketing teams to translate business goals into program requirements and go-to-market strategies",
+      "Identify new growth opportunities and design experiments to test hypotheses",
+      "Build tools and equip teams with relevant data support to make actionable decisions",
+      "Create materials to communicate strategy and business performance to key stakeholders",
+      "Manage cross-functional workstreams across product, marketing, data science, finance, partnerships, and business operations"
     ]
   },
   "compensation": {
@@ -273,49 +277,53 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "eligible for bonus, equity, benefits, and Employee Travel Credits",
+    "equity_form": "bonus, equity, benefits, and Employee Travel Credits mentioned",
     "location_pay_differential": false,
     "source": "stated"
   },
   "top_keywords": [
     "business operations",
-    "cross-functional",
-    "Americas",
-    "data analysis",
+    "strategy",
+    "programs",
+    "growth levers",
+    "supply/demand dynamics",
     "SQL",
-    "program management",
-    "stakeholder management",
-    "storytelling",
-    "global markets",
-    "supply and demand",
-    "quarterly business reviews",
-    "AI tools"
+    "Tableau",
+    "Excel",
+    "cross-functional",
+    "incentive design",
+    "loyalty programs",
+    "marketplace",
+    "data analytics",
+    "go-to-market",
+    "zero to one"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($168K-$203K base) plus equity and travel credits",
-    "Remote-US eligible role with flexibility",
-    "Clear reporting line (Director, Programs and Business Operations)",
-    "Specific scope — Americas regional BizOps within a named org (CBO / Global Markets)",
-    "Explicit cross-functional partners named (field ops, marketing, product, legal)"
+    "Compensation range explicitly disclosed ($168K-$203K base)",
+    "Remote-US eligible with flexible office attendance",
+    "Clear scope of ownership — Services & Membership team with Director-level reporting relationship",
+    "Bonus and equity mentioned in addition to base",
+    "Role spans strategy and execution, offering breadth"
   ],
   "red_flags": [
-    "Must live in a US state where Airbnb has a registered entity — excluded states list is dynamic and not provided in-line",
-    "SQL listed as 'strongly preferred' but Excel is 'a must' — classification as must-have vs. nice-to-have is ambiguous for SQL",
-    "10+ years minimum experience is a high bar and the JD uses 'ideally' as a qualifier, creating slight ambiguity about hardness",
-    "No mention of visa sponsorship; work auth listed as unclear"
+    "12+ years of experience is a high bar that narrows the candidate pool significantly",
+    "Multiple states excluded from remote eligibility — list is noted as evolving, creating ongoing uncertainty",
+    "Visa sponsorship status not stated — unclear for non-citizen applicants",
+    "Posting first seen and last updated dates unavailable — freshness unclear"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range, years required, and reporting level)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed)",
-      "location.work_auth (inferred as no-sponsorship from US state residency requirement language, but not explicitly stated)"
+      "seniority.level (inferred from comp range + years + reporting relationship)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
+      "scope.business_model (inferred from Airbnb marketplace context)",
+      "location.visa_sponsorship (not stated; marked unclear)"
     ],
     "ambiguities": [
-      "SQL is described as 'strongly preferred' but given the data-heavy nature of the role and Excel being listed as 'a must' in the same sentence, SQL was classified as hard severity; could reasonably be soft",
-      "The years_experience requirement uses 'ideally have a minimum of 10+' — 'ideally' softens the language but the role context suggests this is a true floor; classified as hard",
-      "Visa sponsorship is not mentioned anywhere in the JD; work_auth set to no-sponsorship as inference from US state residency requirement, visa_sponsorship set to unclear"
+      "The JD says the role is 'US - Remote Eligible' but also notes occasional office work 'as agreed to with your manager' — treated as remote-us with optional office attendance rather than hybrid, since no minimum percentage is stated.",
+      "'Background in loyalty programs, incentive programs, or merchandising strongly preferred' uses the word 'strongly preferred' which could be interpreted as near-hard; classified as nice-to-have (soft) per instruction but flagged here.",
+      "manages_people: not explicitly stated; inferred as false from job description language, though the seniority and scope suggest possible informal people leadership"
     ]
   }
 }

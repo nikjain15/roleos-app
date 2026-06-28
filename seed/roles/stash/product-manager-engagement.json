@@ -1,0 +1,321 @@
+{
+  "company": "Stash",
+  "role_title": "Product Manager, Engagement",
+  "url": "https://ats.comparably.com/api/v2/stash/post/8028773:?gh_jid=8028773",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8028773",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "time together in the office to strengthen teamwork, innovation, and culture, while still allowing for work-from-home flexibility",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM (engagement/retention focus)",
+  "seniority": {
+    "level": "Mid-level IC (PM II / PM)",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2+ years in product management",
+      "Will receive direct mentorship from a Principal PM",
+      "Comp range $112K-$168K base, consistent with mid-level PM",
+      "Partners with a Principal PM rather than leading independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm",
+      "raw_text_from_jd": "2+ years in product management",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_d2c_shipped",
+      "raw_text_from_jd": "Shipped on a consumer (D2C) product; can speak to user and business impact",
+      "skill_type": "outcome",
+      "domain": "consumer_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_curiosity",
+      "raw_text_from_jd": "Genuinely curious about customers; you seek out support tickets, reviews, research, and real conversations to ground your instincts",
+      "skill_type": "capability",
+      "domain": "customer_research",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "metrics_and_analytics",
+      "raw_text_from_jd": "Comfortable defining success metrics, analyzing results, and adjusting when the data says so",
+      "skill_type": "capability",
+      "domain": "product_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "prioritization",
+      "raw_text_from_jd": "Can prioritize competing opportunities by weighing customer value, business impact, and effort, and explain the trade-offs clearly",
+      "skill_type": "capability",
+      "domain": "product_prioritization",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Clear written and verbal communication when scope is still fuzzy",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_partnership",
+      "raw_text_from_jd": "Strong cross-functional partner to engineering, design, and stakeholders",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_in_pm_workflow",
+      "raw_text_from_jd": "Uses AI in your PM workflow today, or excited to adopt it at Stash",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fintech_investing_banking_background",
+      "raw_text_from_jd": "Fintech, investing, or banking background",
+      "skill_type": "domain_knowledge",
+      "domain": "fintech_finance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "investing",
+        "banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "habits_automation_products",
+      "raw_text_from_jd": "Experience working on products built around habits or automation",
+      "skill_type": "domain_knowledge",
+      "domain": "habit_forming_products",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "regulated_consumer_environment",
+      "raw_text_from_jd": "Regulated consumer environment: worked with compliance and legal to ship responsibly",
+      "skill_type": "domain_knowledge",
+      "domain": "regulatory_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ab_testing_analytics_tools",
+      "raw_text_from_jd": "A/B testing and product analytics tools (Mixpanel, Looker, or similar)",
+      "skill_type": "tool_proficiency",
+      "domain": "product_analytics",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Mixpanel",
+        "Looker"
+      ],
+      "technologies_named": [
+        "A/B testing"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "recruiters"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "In-app engagement experiences across investing, banking, and financial guidance; subscription value, automation/habit-building, and customer support touchpoints",
+    "business_model": "B2C consumer fintech (subscription-based app)",
+    "primary_metrics_inferred": [
+      "Customer engagement and retention",
+      "Subscription value perception",
+      "Habit formation / automation adoption",
+      "Launch success metrics (user and business impact)"
+    ],
+    "cross_functional_partners": [
+      "Principal PM",
+      "Design",
+      "Engineering",
+      "Data Science",
+      "Marketing",
+      "Compliance",
+      "Legal"
+    ],
+    "core_responsibilities": [
+      "Drive delivery of key initiatives on the Engagement roadmap, including in-app product experiences across investing, banking, and financial guidance",
+      "Write PRDs Design and Engineering can build from; partner on flows, scope, and tradeoffs",
+      "Use data and customer feedback to define success metrics, evaluate launches, and iterate",
+      "Ship in a fast-paced, highly regulated consumer fintech environment; partner with compliance and legal to manage risk and move fast within guardrails",
+      "Use AI tools in day-to-day PM work (drafting PRDs, synthesizing feedback, exploring data and options)",
+      "Keep your manager, team, and stakeholders aligned on progress, risks, and decisions"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      112802,
+      167894
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Comprehensive total rewards package, comprising compensation (salary and equity)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "engagement",
+    "consumer fintech",
+    "D2C",
+    "PRD",
+    "product roadmap",
+    "habit formation",
+    "automation",
+    "A/B testing",
+    "Mixpanel",
+    "Looker",
+    "AI tools",
+    "compliance",
+    "investing",
+    "banking",
+    "subscription"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Salary range disclosed ($112,802 - $167,894)",
+    "Equity included in compensation package",
+    "Direct mentorship from a Principal PM explicitly called out",
+    "Clear product surface and ownership area (Engagement roadmap)",
+    "Hybrid flexibility acknowledged alongside in-office collaboration",
+    "AI tool adoption explicitly welcomed even if not yet practiced",
+    "Company has strong external recognition and awards in fintech"
+  ],
+  "red_flags": [
+    "NYC hybrid only — no fully remote option stated",
+    "Regulated fintech environment may slow iteration pace despite 'move fast' language",
+    "Work authorization and visa sponsorship not mentioned anywhere in JD",
+    "No mention of team size or direct reports structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, mentorship framing, and years requirement)",
+      "scope.business_model (inferred from product description and subscription mention)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.cities_listed (inferred as NYC from hybrid policy description referencing NYC)",
+      "location.remote_us_eligible (inferred false from hybrid NYC framing)"
+    ],
+    "ambiguities": [
+      "JD tag is #LI-Hybrid but specific office days per week are not stated — only described as 'prioritizes time together in the office'",
+      "AI tools requirement reads as 'Uses AI in your PM workflow today, OR excited to adopt it at Stash' — ambiguous whether current usage is required or aspirational; treated as hard given unconditional bullet placement but bridgeable=yes",
+      "Work authorization and visa sponsorship are entirely unaddressed"
+    ]
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "company": "Notion",
+  "role_title": "Customer Experience Strategy & Operations Lead",
+  "url": "https://jobs.ashbyhq.com/Notion/8bb5da67-0b4d-4894-83eb-56d31e9bc662",
+  "ats_provider": "ashby",
+  "ats_job_id": "8bb5da67-0b4d-4894-83eb-56d31e9bc662",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Customer Experience / CX Operations",
+  "seniority": {
+    "level": "Senior IC / Lead (Staff or Principal equivalent)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "8+ years of experience in customer support and success strategy and operations",
+      "3+ years of people leadership experience",
+      "Serve as a strategic trusted advisor to Head of CX and CX Leadership team",
+      "Comp range $230K-$260K base for SF/NYC, consistent with senior leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_cx_strategy_ops",
+      "raw_text_from_jd": "8+ years of experience in customer support and success strategy and operations.",
+      "skill_type": "years_of_experience",
+      "domain": "customer_experience_strategy_operations",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_people_leadership",
+      "raw_text_from_jd": "3+ years of people leadership experience",
+      "skill_type": "years_of_experience",
+      "domain": "people_management",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_cx",
+      "raw_text_from_jd": "Passion for improving the Customer Experience and Customer Value",
+      "skill_type": "cultural_fit",
+      "domain": "customer_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management",
+      "raw_text_from_jd": "Strong project management skills, with the ability to manage multiple projects simultaneously in a fast-paced, high-growth environment.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_xfn",
+      "raw_text_from_jd": "Excellent communication and interpersonal skills. You are a skilled dots-connector and expert in working collaboratively with cross-functional teams to get things done. You're experienced in communicating across levels and audiences, from technical ICs up to C-Suite and/or Board",
+      "skill_type": "capability",
+      "domain": "cross_functional_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_data_driven",
+      "raw_text_from_jd": "Strong analytical skills, with the ability to analyze data and make data-driven syntheses, diagnose and scope problems, inform and gain buy-in to recommendations, and track success.",
+      "skill_type": "capability",
+      "domain": "data_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_first_approach",
+      "raw_text_from_jd": "AI-first approach — Experience implementing digital and/or scaled programs to increase efficiency while improving customer outcomes. AI-first approach towards building and implementing RevOps methodologies",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_and_automation_in_cx_revops",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "Bachelor's degree in Business Administration, Marketing, or a related field.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    },
+    {
+      "id": "leading_cx_support_teams",
+      "raw_text_from_jd": "Experience leading customer support and success teams",
+      "skill_type": "capability",
+      "domain": "customer_support_team_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "leading_data_ai_automation_teams",
+      "raw_text_from_jd": "Experience leading data engineering, AI and automation teams",
+      "skill_type": "capability",
+      "domain": "data_engineering_ai_automation_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "data engineering",
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "positive_attitude",
+      "raw_text_from_jd": "Positive attitude and enthusiasm to make an impact!",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Customer Experience strategy and operations across all Notion users (digital and human support channels)",
+    "business_model": "B2B and B2C SaaS, AI-powered collaborative workspace",
+    "primary_metrics_inferred": [
+      "CSAT",
+      "First Response Time (FRT)",
+      "Churn",
+      "Ticket volume",
+      "Capacity utilization",
+      "Usage metrics",
+      "OKRs",
+      "OpEx / headcount efficiency"
+    ],
+    "cross_functional_partners": [
+      "CX Leadership",
+      "RevOps",
+      "GTM",
+      "Engineering (data/AI/automation)",
+      "C-Suite / Board"
+    ],
+    "core_responsibilities": [
+      "Own the execution of the customer support strategy to ensure that the company provides an exceptional customer experience at-scale for all Notion users.",
+      "Identify and implement operating frameworks to streamline customer support operations - including capacity planning, targeting setting, customer segmentation and targeted CX engagements, etc.",
+      "Refine and track key performance metrics (CSAT, FRT, Churn, Usage metrics, etc.) to measure the effectiveness of customer support initiatives.",
+      "Build a robust forecasting and analytics process to determine trends across demand, capacity, churn, ticket volume etc.",
+      "Help project manage enhancements/changes to tech stack for CX (including Zendesk, Gainsight, Decagon, etc.).",
+      "Continuously automate and scale our customer journey, touch-points, triggers, and playbooks.",
+      "Operate as both an extension of the CX and RevOps Leadership teams to ensure cross-functional alignment with broader GTM and Company strategy",
+      "Set annual and semi-annual plans that create customer value at-scale: Guide and define headcount, opex, and OKRs",
+      "Serve as a strategic trusted advisor to Head of CX and CX Leadership team"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      230000,
+      260000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as part of highly competitive compensation package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "customer experience",
+    "strategy and operations",
+    "CX",
+    "RevOps",
+    "customer support",
+    "CSAT",
+    "Zendesk",
+    "Gainsight",
+    "Decagon",
+    "AI-first",
+    "forecasting",
+    "capacity planning",
+    "OKRs",
+    "GTM",
+    "automation",
+    "people leadership"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($230K-$260K base for SF/NYC)",
+    "Equity explicitly mentioned as part of package",
+    "Clear scope of ownership and cross-functional mandate",
+    "Specific tech stack named (Zendesk, Gainsight, Decagon) signaling operational maturity",
+    "Encourages applications even from candidates who don't meet every bullet",
+    "Equal opportunity employer with accommodation support explicitly stated"
+  ],
+  "red_flags": [
+    "JD tagged #LI-Onsite but does not explicitly state remote ineligibility or office attendance requirements in the body — worth confirming",
+    "Compensation range only stated for SF/NYC; other locations unclear",
+    "Visa sponsorship policy not addressed",
+    "Role combines strategic advisor, forecasting analyst, project manager, and people leader — very broad scope that may indicate an under-resourced team"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp + years + advisory nature of role)",
+      "location.type set to 'onsite' based on #LI-Onsite tag; body does not explicitly state in-office requirement",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and JD context; partially quoted in JD)",
+      "compensation.equity_form (inferred from 'equity' mention without specifics)"
+    ],
+    "ambiguities": [
+      "JD footer tag is #LI-Onsite but the body does not explicitly state in-office attendance requirements or prohibit remote work. Treated as onsite here but worth confirming.",
+      "Compensation range explicitly stated only for San Francisco and New York City; range for other locations not provided.",
+      "People leadership under 'Nice to Haves' says 'Experience leading customer support and success teams' but 'Must Haves' already requires '3+ years of people leadership experience' — slight redundancy that could imply different scopes."
+    ]
+  }
+}

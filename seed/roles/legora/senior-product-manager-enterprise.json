@@ -1,0 +1,241 @@
+{
+  "company": "Legora",
+  "role_title": "Senior Product Manager - Enterprise",
+  "url": "https://jobs.ashbyhq.com/legora/ff561bd0-36a7-4471-8c79-3e2dc830854f",
+  "ats_provider": "ashby",
+  "ats_job_id": "ff561bd0-36a7-4471-8c79-3e2dc830854f",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "New York, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "In-person environment: Union Square office designed for ambitious builders",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Enterprise / Platform PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title explicitly states 'Senior Product Manager'",
+      "Direct engagement with CIOs, managing partners, general counsels at largest law firms",
+      "Owns strategy, roadmap, and execution independently",
+      "Background at 'high-growth B2B SaaS companies' (plural, experienced)"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "senior_pm_background",
+      "raw_text_from_jd": "An experienced, senior Product Manager with a strong background building products at high-growth B2B SaaS companies.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": null,
+      "unit": null,
+      "qualifier": "senior, experienced",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth B2B SaaS companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_features_ownership",
+      "raw_text_from_jd": "Direct experience owning enterprise features and functionality, such as data retention, audit logging, permissions, RBAC, ethical walls, APIs, or admin tooling, at another high-growth company.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "RBAC",
+        "audit logging",
+        "data retention",
+        "APIs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_buyer_engagement",
+      "raw_text_from_jd": "A track record of partnering with enterprise buyers and administrators, and comfort engaging senior stakeholders like CIOs, CISOs, and legal or compliance leaders.",
+      "skill_type": "capability",
+      "domain": "enterprise_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_judgment_security_governance",
+      "raw_text_from_jd": "Strong product judgment and the ability to balance the rigor that security and governance demand with the speed and ambition of a fast-moving startup.",
+      "skill_type": "capability",
+      "domain": "product_judgment",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Excellent collaboration skills, with a history of partnering tightly with design, engineering, security, and go-to-market functions to ship products.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mindset",
+      "raw_text_from_jd": "High standards, low ego, and a bias toward ownership and outcomes.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native_governance_interest",
+      "raw_text_from_jd": "A genuine interest in solving the new, unsolved problems of governing and operating AI-native software at enterprise scale.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_governance",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI-native software"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise surface area: data retention, audit logging, roles and permissions, ethical walls, metrics and ROI tracking, external-facing APIs, and admin controls",
+    "business_model": "B2B SaaS, AI-native legal platform, enterprise-focused",
+    "primary_metrics_inferred": [
+      "Enterprise deployment rate / unblocked deals",
+      "Admin satisfaction and adoption",
+      "ROI tracking accuracy and enterprise scrutiny resistance",
+      "Security and compliance certifications/audits passed"
+    ],
+    "cross_functional_partners": [
+      "Design",
+      "Engineering",
+      "Security",
+      "Sales",
+      "Go-to-market",
+      "CIOs / managing partners / general counsels (customer stakeholders)"
+    ],
+    "core_responsibilities": [
+      "Own the strategy, roadmap, and execution for the Enterprise surface area: data retention, audit logging, roles and permissions, ethical walls, metrics and ROI tracking, external-facing APIs, and the broader set of admin controls our customers depend on.",
+      "Rethink how governance works in an AI-native world, defining how a platform built around AI agents can be controlled, audited, and trusted by the most security-conscious organizations.",
+      "Build AI-native experiences for admin users, reimagining how administrators configure, monitor, and reason about their deployment rather than replicating legacy admin consoles.",
+      "Partner directly with CIOs, managing partners, and general counsels at some of the largest law firms and enterprises in the world to understand their requirements and turn them into product.",
+      "Work closely with design and engineering to ship secure, polished, high-quality capabilities with a strong bar for craft and reliability.",
+      "Help customers measure and articulate the value of Legora through metrics and ROI tracking that stand up to enterprise scrutiny.",
+      "Collaborate with sales, security, and the wider org to unblock enterprise deals and ensure a coherent experience as the platform grows."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "enterprise",
+    "audit logging",
+    "RBAC",
+    "data retention",
+    "ethical walls",
+    "admin tooling",
+    "AI-native governance",
+    "legal AI",
+    "B2B SaaS",
+    "permissions",
+    "external-facing APIs",
+    "ROI tracking",
+    "CIO",
+    "enterprise deployability"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Company has scaled to $100M+ ARR with 1,000+ customers across 50+ countries — strong signal of product-market fit",
+    "Clear product ownership area with specific, enumerable capabilities (not vague mandate)",
+    "High-visibility role with direct engagement with C-suite enterprise buyers",
+    "Genuinely novel problem space (AI-native governance) rather than incremental feature work",
+    "Comprehensive benefits package described in detail (medical, dental, vision, 401K match, unlimited PTO, parental leave)"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed",
+    "In-person (Union Square, NYC) with no mention of hybrid or remote flexibility — fully onsite requirement",
+    "Visa sponsorship status not mentioned",
+    "No minimum years of experience stated, making seniority bar ambiguous",
+    "No equity or stock compensation mentioned despite being a growth-stage startup"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior' and scope of responsibilities)",
+      "location.type (inferred as onsite from 'In-person environment: Union Square office designed for ambitious builders')",
+      "scope.business_model (inferred from product description and customer profile)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "equity_mentioned set to false (no explicit mention of equity or stock options)"
+    ],
+    "ambiguities": [
+      "Work authorization and visa sponsorship are not addressed anywhere in the JD; marked as 'unclear'",
+      "Office policy described only as 'In-person environment' — no explicit hybrid/remote policy stated; treated as onsite but could be hybrid in practice",
+      "No years of experience explicitly required; 'experienced, senior' is qualitative only"
+    ]
+  }
+}

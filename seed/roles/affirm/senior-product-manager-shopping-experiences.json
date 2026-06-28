@@ -1,0 +1,276 @@
+{
+  "company": "Affirm",
+  "role_title": "Senior Product Manager, Shopping Experiences",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7622734003",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7622734003",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (consumer fintech, DTC)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years in Product Management",
+      "Base pay range $173K–$255K depending on location, consistent with Senior PM",
+      "Role title: Senior Product Manager"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm",
+      "raw_text_from_jd": "4+ years in Product Management; Ideally with previous background owning growth/distribution channels",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_financial_regulated_products",
+      "raw_text_from_jd": "Track record shipping consumer financial or regulated products; comfort partnering with Risk/Credit, Legal, and Compliance.",
+      "skill_type": "outcome",
+      "domain": "consumer_fintech_regulated_products",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "consumer financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "experiment_design_incrementality_cac_ltv",
+      "raw_text_from_jd": "Deep fluency in experiment design, incrementality/attribution, and CAC→LTV optimization.",
+      "skill_type": "capability",
+      "domain": "growth_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ux_instincts_web_app",
+      "raw_text_from_jd": "Strong UX instincts for moment‑of‑intent surfaces; ability to work across web, app, and partner integrations.",
+      "skill_type": "capability",
+      "domain": "ux_product_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_usage",
+      "raw_text_from_jd": "AI tools like Claude Code, Cursor, and others to research, analyze, visualize experiences and help develop better product vision",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_assisted_product_work",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Claude Code",
+        "Cursor"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_chops_sql_amplitude",
+      "raw_text_from_jd": "Data chops (SQL/Amplitude‑level self‑serve) and a bias for shipping, learning, and iterating quickly.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Amplitude"
+      ],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Excellent cross‑functional leadership; experience leading embedded eng/design pods.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree in a related field or equivalent practical experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "growth_distribution_channels_background",
+      "raw_text_from_jd": "4+ years in Product Management; Ideally with previous background owning growth/distribution channels",
+      "skill_type": "domain_knowledge",
+      "domain": "growth_distribution_channels",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "DTC shopping and offers experience across Affirm App and Web (checkout flows, consumer shopping preferences, offers, acquisition programs)",
+    "business_model": "B2C consumer fintech, BNPL",
+    "primary_metrics_inferred": [
+      "CAC→LTV optimization",
+      "Weekly acquisitions",
+      "30-day activation rate",
+      "Funnel conversion / drop-off rates",
+      "Incrementality / attribution",
+      "Engagement and consumer usage"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Risk",
+      "Compliance",
+      "Marketing",
+      "Card Foundations team",
+      "Legal"
+    ],
+    "core_responsibilities": [
+      "Define and own the Shopping Experiences roadmap for new growth channels, setting clear hypotheses, success metrics, and sequencing",
+      "Launch and scale checkout flows, offers in app and web, consumer shopping preferences across app and web, partnering closely with Engineering and Design to deliver seamless, high-conversion onboarding experiences.",
+      "Design and execute acquisition programs (e.g., referrals, exploratory partner pilots) with measurable CAC→LTV impact.",
+      "Own funnel performance end-to-end: track weekly acquisitions, 30-day activation, drop-offs by step, and implement robust incrementality testing.",
+      "Collaborate cross-functionally with Risk, Compliance, Marketing, and the Card Foundations team to align dependencies and ensure safe, scalable growth.",
+      "Continuously experiment and iterate to unlock new conversion levers, maximize engagement, and expand card and consumer usage"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      173000,
+      255000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Equity Grade 9; ESPP (employee stock purchase plan at a discount); equity rewards mentioned as part of total compensation",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Shopping Experiences",
+    "DTC",
+    "growth channels",
+    "CAC→LTV",
+    "checkout flows",
+    "offers",
+    "consumer financial",
+    "incrementality testing",
+    "experiment design",
+    "funnel performance",
+    "BNPL",
+    "acquisition programs",
+    "SQL",
+    "Amplitude",
+    "AI tools"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges disclosed and competitive ($173K–$255K base depending on location)",
+    "Remote-first company; role eligible for most US states",
+    "Clear product surface with well-defined ownership (DTC shopping, offers, checkout)",
+    "Specific metrics called out (CAC→LTV, 30-day activation, weekly acquisitions) — signals data-driven culture",
+    "100% subsidized medical coverage for employee and dependents is a strong benefit",
+    "ESPP and equity rewards mentioned in addition to base"
+  ],
+  "red_flags": [
+    "AI tools requirement (Claude Code, Cursor) listed among unconditional 'What we look for' bullets — unusual and ambiguous whether this is truly hard or aspirational",
+    "Location pay differential is significant ($20K+ gap between high-cost states and others)",
+    "Visa sponsorship not mentioned — unclear for non-US-citizen applicants",
+    "No explicit mention of team size or reporting structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior PM' and comp range)",
+      "scope.business_model (inferred from company description: BNPL/consumer fintech)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not an explicit JD field)",
+      "location.work_auth (assumed open; not stated)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "compensation.base_range_usd set to [173000, 255000] as the full national range spanning both geo tiers"
+    ],
+    "ambiguities": [
+      "AI tools (Claude Code, Cursor) appear in an unconditional 'What we look for' bullet — could be hard requirement or aspirational; treated as hard here per rule but flagged as ambiguous",
+      "Growth/distribution channel background is labeled 'Ideally' in the same bullet as the hard 4+ years requirement — extracted as a soft nice-to-have separate from the hard years requirement",
+      "JD lists '#LI-Remote' tag and states remote-first, but does not explicitly confirm visa sponsorship; work_auth left as 'open' per absence of restriction language"
+    ]
+  }
+}

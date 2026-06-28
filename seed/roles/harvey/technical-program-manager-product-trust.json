@@ -1,0 +1,234 @@
+{
+  "company": "Harvey",
+  "role_title": "Technical Program Manager, Product Trust",
+  "url": "https://jobs.ashbyhq.com/harvey/49ffdd0c-ed1d-4965-aa60-b5bd8c128aae",
+  "ats_provider": "ashby",
+  "ats_job_id": "49ffdd0c-ed1d-4965-aa60-b5bd8c128aae",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Security / Compliance Program Manager",
+  "seniority": {
+    "level": "Senior IC / Staff-level TPM",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years in Information Security with significant program management experience",
+      "Expected to define and build programs, not just maintain them",
+      "Comp range $185,400–$278,000 USD consistent with senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_infosec_program_mgmt",
+      "raw_text_from_jd": "7+ years in Information Security, with significant program management experience in product or engineering contexts — ideally including roles where you defined and built programs, not just maintained them.",
+      "skill_type": "years_of_experience",
+      "domain": "information_security_program_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_governance_risk_safety",
+      "raw_text_from_jd": "A strong foundation across a broad range of AI Governance, Risk, and Safety (AI GRS) implications, security, and compliance topics.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_governance_risk_safety",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI Governance",
+        "Risk and Safety"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_model_program_efficiency",
+      "raw_text_from_jd": "1-2+ years experience leveraging AI models to drive program efficiencies (e.g., automating risk assessment or compliance gap analysis).",
+      "skill_type": "years_of_experience",
+      "domain": "ai_model_usage_for_program_efficiency",
+      "minimum_value": 1,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI models"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_regulatory_communication",
+      "raw_text_from_jd": "Proven ability to communicate complex technical and regulatory topics and write strong technical compliance requirements for diverse audiences (engineers, lawyers, customers, and GTM).",
+      "skill_type": "capability",
+      "domain": "technical_compliance_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_vendor_management",
+      "raw_text_from_jd": "Excellent organizational skills, including the ability to manage external contractors and vendors.",
+      "skill_type": "capability",
+      "domain": "vendor_and_contractor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_centric_process_simplification",
+      "raw_text_from_jd": "A customer-centric mindset with a drive for process simplification.",
+      "skill_type": "cultural_fit",
+      "domain": "customer_focus",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builders_mindset_ambiguity",
+      "raw_text_from_jd": "A builder's mindset and comfort with ambiguity — Harvey ships fast, the AI regulatory landscape is still being written, and this role requires both strong judgment and the ability to create structure where none yet exists.",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Product Trust — security and compliance review processes, AI risk governance, audit/certification readiness, customer-facing security enablement",
+    "business_model": "B2B enterprise SaaS, AI platform for legal and professional services",
+    "primary_metrics_inferred": [
+      "Security and compliance review cycle time and coverage",
+      "Audit and certification readiness milestones",
+      "Customer trust / retention (security escalation resolution)",
+      "Number of features reviewed and risk narratives delivered"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Product Security",
+      "Infrastructure Security",
+      "Product",
+      "Legal",
+      "Sales"
+    ],
+    "core_responsibilities": [
+      "Manage the end-to-end security and compliance review process for new features, including intake / planning, resource engagement, performing risk analysis, documenting trade-off decisions, and ensuring critical requirements for information security and AI risks (model behavior, safety, regulatory exposure) are addressed.",
+      "Act as a representative for the Security team to cross-functional teams and leadership, synthesizing risk reviews and threat models into formal security risk narratives, and reports before major launches.",
+      "Collaborate with Product Security and Infrastructure Security teams to integrate new Product Trust requirements and drive improvements into engineering, release, and change management processes.",
+      "Develop customer-facing security and privacy enablement content (e.g., materials, FAQs, positioning), attend customer security review calls, and manage technical security escalations from major customers.",
+      "Lead audit and certification readiness projects for key features and teams.",
+      "Support and address other priority Trust, Risk, and Compliance initiatives as they are prioritized."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      185400,
+      278000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": null,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Product Trust",
+    "Information Security",
+    "AI Governance",
+    "Risk and Safety",
+    "compliance",
+    "security review",
+    "audit readiness",
+    "AI regulatory",
+    "enterprise scale",
+    "legal AI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and wide ($185,400–$278,000 base)",
+    "Clear reporting structure (Head of Trust) and cross-functional scope described",
+    "Well-articulated role responsibilities with concrete examples (e.g., risk narratives, audit readiness)",
+    "Company has strong PMF signals: 1500+ customers in 60+ countries, world-class investors",
+    "Rare and high-impact domain at intersection of AI security, compliance, and product trust"
+  ],
+  "red_flags": [
+    "Location not specified — unclear if remote, hybrid, or onsite; no cities listed",
+    "Visa sponsorship and work authorization not addressed anywhere in the JD",
+    "No equity or benefits mentioned beyond base compensation range",
+    "AI regulatory landscape described as still being written — high ambiguity environment may not suit all candidates",
+    "No nice-to-haves listed, making it harder to assess flexibility in the ideal profile"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and 7+ years requirement)",
+      "scope.business_model (inferred from product description and customer references)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (not stated; marked unclear)",
+      "location.work_auth (not stated; marked unclear)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "equity_mentioned (inferred as false; not mentioned in JD)"
+    ],
+    "ambiguities": [
+      "The '1-2+ years experience leveraging AI models' requirement uses an unusual range format ('1-2+') that could mean anywhere from 1 to 2+ years minimum; treated as hard requirement with minimum_value of 1.",
+      "The phrase 'ideally including roles where you defined and built programs' in the 7+ years requirement reads as a strong preference embedded in a hard requirement; treated as part of the hard requirement rather than a separate nice-to-have.",
+      "No location information provided — could be remote, hybrid, or onsite; left as 'unclear'."
+    ]
+  }
+}

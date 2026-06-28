@@ -1,0 +1,254 @@
+{
+  "company": "Lyft",
+  "role_title": "Finance Business Operations Manager",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8574940002?gh_jid=8574940002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8574940002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Senior IC / Manager",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in BizOps, Finance Ops, Product Ops, or Consulting",
+      "Comp range $132,000–$165,000 base in SF, consistent with senior IC or manager-level",
+      "Executive presence and stakeholder leadership responsibilities implied"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_bizops_finance_consulting",
+      "raw_text_from_jd": "5+ years in BizOps, Finance Ops, Product Ops, or Consulting",
+      "skill_type": "years_of_experience",
+      "domain": "bizops_finance_consulting",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ma_integration_or_program_management",
+      "raw_text_from_jd": "Direct experience in M&A integration, large-scale program management, or product launches",
+      "skill_type": "domain_knowledge",
+      "domain": "ma_integration_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "finance_functions_knowledge",
+      "raw_text_from_jd": "Strong understanding of Finance functions (Accounting, FP&A, Treasury) and financial workflows (QTC, rev rec, billing)",
+      "skill_type": "domain_knowledge",
+      "domain": "finance_functions_workflows",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operate_in_ambiguity",
+      "raw_text_from_jd": "Ability to operate in ambiguity and drive clarity across senior stakeholders",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_execution",
+      "raw_text_from_jd": "Proven track record of driving execution across cross-functional teams, across Finance, Business, and Technical teams",
+      "skill_type": "outcome",
+      "domain": "cross_functional_program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "Strong systems thinking—understanding how processes, systems, and people connect",
+      "skill_type": "capability",
+      "domain": "systems_thinking_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Exceptional communication and executive presence",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "accounting_finance_degree",
+      "raw_text_from_jd": "BS in Accounting/Finance preferred",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "BS in Accounting",
+        "BS in Finance"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Finance Business Operations — M&A integration, new product initiatives (NPIs), and strategic programs (AVs, Luxury)",
+    "business_model": "marketplace / rideshare platform; B2C and B2B",
+    "primary_metrics_inferred": [
+      "Finance integration completeness and speed post-M&A close",
+      "NPI financial readiness and clean launch execution",
+      "Reduction of operational and technical debt",
+      "Synergy tracking and value realization"
+    ],
+    "cross_functional_partners": [
+      "Corp Dev IMO",
+      "Product",
+      "Engineering",
+      "GTM",
+      "Accounting",
+      "FP&A",
+      "Treasury",
+      "Tax",
+      "IT/Systems",
+      "HR",
+      "Legal"
+    ],
+    "core_responsibilities": [
+      "Act as the central Finance lead for new product initiatives and large strategic programs",
+      "Support end-to-end Finance integration across global acquisitions, from Finance integration strategy during diligence to post-close integration",
+      "Drive execution across multiple complex, cross-functional programs simultaneously",
+      "Build and manage integrated plans, milestones, and KPIs",
+      "Define criteria (impact, risk, effort, strategic alignment)",
+      "Help stand up and evolve the Finance bizops function and define best practices and processes",
+      "Codify repeatable finance integration playbooks to improve speed, quality, and predictability"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      132000,
+      165000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned but not detailed",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Finance BizOps",
+    "M&A integration",
+    "new product initiatives",
+    "NPI",
+    "strategic programs",
+    "cross-functional leadership",
+    "FP&A",
+    "program management",
+    "QTC",
+    "rev rec",
+    "Corp Dev IMO",
+    "operating model",
+    "integration playbook"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($132K–$165K base in SF)",
+    "Clearly scoped role with defined ownership areas (M&A integration, NPIs, strategic programs)",
+    "Role sits at center of high-visibility, high-impact work (M&A, AVs, Luxury)",
+    "Hybrid schedule with 4 weeks/year remote flexibility",
+    "Comprehensive benefits including 18 weeks parental leave and 401(k) match"
+  ],
+  "red_flags": [
+    "In-office 3 days per week required (Mon/Wed/Thu) — rigid schedule may deter some candidates",
+    "Role is new/being built out — 'stand up and evolve the Finance bizops function' implies limited existing structure or support",
+    "Visa sponsorship not addressed in JD",
+    "Geographic pay differential mentioned but only SF range disclosed"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and responsibilities; not explicitly stated)",
+      "seniority.manages_people (not stated; inferred as false — no direct reports mentioned)",
+      "scope.business_model (inferred from Lyft's known rideshare platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.visa_sponsorship (not mentioned; marked unclear)"
+    ],
+    "ambiguities": [
+      "JD lists multiple OR conditions for experience qualification ('M&A integration, large-scale program management, or product launches') — any one may suffice, but M&A integration is most emphasized throughout the body.",
+      "Finance functions knowledge requirement includes 'BS in Accounting/Finance preferred' as a subordinate clause — treated as nice-to-have (soft) rather than hard requirement given 'preferred' language.",
+      "Role title says 'Manager' but no direct reports are mentioned; may be an IC-level role with management scope over programs rather than people."
+    ]
+  }
+}

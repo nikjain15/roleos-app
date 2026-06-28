@@ -1,0 +1,299 @@
+{
+  "company": "Stripe",
+  "role_title": "Workplace Strategy & Operations Manager",
+  "url": "https://stripe.com/jobs/search?gh_jid=8016510",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8016510",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager with Workplace / Real Estate focus",
+  "seniority": {
+    "level": "Senior IC or Manager",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in strategy and operations, management consulting, corporate real estate strategy, or a data-driven operational role",
+      "Reports to Head of Workplace",
+      "Leads cross-functional projects and drives operating cadences and governance forums"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_strategy_ops",
+      "raw_text_from_jd": "5+ years of experience in strategy and operations, management consulting, corporate real estate strategy, or a data-driven operational role in a fast-growing environment",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "fast-growing environment",
+        "management consulting firm"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "quantitative_skills_data_driven",
+      "raw_text_from_jd": "Strong quantitative skills with a track record of using data to drive complex business cases and macro-level decisions",
+      "skill_type": "capability",
+      "domain": "quantitative_analysis",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_project_leadership",
+      "raw_text_from_jd": "Demonstrated experience leading large-scale, cross-functional projects from ambiguous conception to rigorous execution",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "workplace_real_estate_experience",
+      "raw_text_from_jd": "Experience working directly within or alongside Workplace or Real Estate teams",
+      "skill_type": "domain_knowledge",
+      "domain": "workplace_real_estate",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "corporate real estate"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "collaboration_people_skills",
+      "raw_text_from_jd": "Great collaboration and people skills, with the ability to build relationships with both leaders and individual contributors across the broader organization",
+      "skill_type": "cultural_fit",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_judgment_risk_balance",
+      "raw_text_from_jd": "High judgment with the ability to balance speed, risk, and organizational health",
+      "skill_type": "cultural_fit",
+      "domain": "decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systematic_problem_solving_automation",
+      "raw_text_from_jd": "An inclination to solve problems systematically via infrastructure and automation",
+      "skill_type": "capability",
+      "domain": "process_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_approach",
+      "raw_text_from_jd": "A clear willingness to take a hands-on approach and dive into the details",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "independent_work",
+      "raw_text_from_jd": "The ability to work independently or with a small team",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "flexibility_fast_paced",
+      "raw_text_from_jd": "Flexibility with changing requirements in an evolving and fast-paced environment",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_communication_cross_functional",
+      "raw_text_from_jd": "Strong communication skills and an ability to build and leverage cross-functional relationships",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_concept_communication",
+      "raw_text_from_jd": "Ability to capture complex concepts and communicate them succinctly to key stakeholders",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Workplace team — Real Estate Strategy & Transactions, Environments (design and construction), Experience (workplace services and programs)",
+    "business_model": "internal operations / corporate function at a B2B fintech",
+    "primary_metrics_inferred": [
+      "Space utilization efficiency",
+      "SOKR attainment across Workplace pillars",
+      "Operational process quality and velocity",
+      "Cross-functional initiative delivery"
+    ],
+    "cross_functional_partners": [
+      "Real Estate Strategy and Transactions",
+      "Environments (design and construction)",
+      "Experience (workplace services and programs)",
+      "IT Business Partner",
+      "M&A integration teams",
+      "Workplace Leadership Team"
+    ],
+    "core_responsibilities": [
+      "Assist the Head of Workplace in defining SOKRs and ensuring all pillars and cross-functional partners are aligned with the team's roadmap",
+      "Lead cross-functional projects that don't fit neatly into one department. Support M&A integrations",
+      "Identify bottlenecks in our current workflows and design scalable processes to remove them. Design and lead operating cadences and governance forums to ensure speed, clarity, and accountability",
+      "Conduct deep-dive analyses on business metrics to provide the Workplace Leadership Team with actionable recommendations for growth and efficiency. Drive the Workplace AI and data strategy in partnership with our IT Business Partner. Identify and implement innovative Workplace technologies and systems"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "strategy and operations",
+    "workplace",
+    "real estate",
+    "cross-functional",
+    "SOKRs",
+    "M&A integration",
+    "data strategy",
+    "AI",
+    "process design",
+    "governance",
+    "operational excellence",
+    "management consulting"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Reports directly to Head of Workplace — meaningful senior exposure and influence",
+    "Clear scope across three major Workplace pillars with high strategic visibility",
+    "Role has genuine cross-functional remit including M&A and AI/data strategy",
+    "JD distinguishes minimum requirements from preferred qualifications, encouraging applications from those who meet minimums"
+  ],
+  "red_flags": [
+    "No location, compensation, or visa/sponsorship information provided — candidates cannot assess fit on those dimensions",
+    "Role title says 'Manager' but JD does not explicitly state whether people management is expected — ambiguous",
+    "Preferred qualifications section is mostly soft/cultural traits, making it harder to self-assess differentiation"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirement, seniority of reporting line, and scope of responsibilities)",
+      "seniority.manages_people (inferred as false; no direct people management language, but not explicitly excluded)",
+      "scope.business_model (inferred from Stripe's product description and the internal corporate function context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (set to 'unclear'; no location or work model specified in JD)",
+      "location.remote_us_eligible (defaulted to false due to lack of any remote language)"
+    ],
+    "ambiguities": [
+      "No office location or city is mentioned anywhere in the JD — it is unclear where this role is based or whether remote work is permitted.",
+      "The word 'Manager' in the title could imply people management, but the JD body contains no mention of direct reports or team leadership. Treated as non-people-manager IC/senior IC here.",
+      "Visa sponsorship and work authorization are entirely unstated."
+    ]
+  }
+}

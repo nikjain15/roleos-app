@@ -1,0 +1,240 @@
+{
+  "company": "Clay Labs",
+  "role_title": "Manager, Enterprise Growth Customer Success",
+  "url": "https://jobs.ashbyhq.com/claylabs/f8e696cf-55b8-4c0e-80d3-2c03abaa09a4",
+  "ats_provider": "ashby",
+  "ats_job_id": "f8e696cf-55b8-4c0e-80d3-2c03abaa09a4",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Other",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Customer Success Manager (people manager / enterprise growth lead)",
+  "seniority": {
+    "level": "Manager / Team Lead",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "2+ years of experience leading teams in Customer Success, Account Management, or a similar customer growth function",
+      "5+ years in customer-facing roles at a B2B SaaS company",
+      "Hire, develop, and lead a team of Enterprise Growth Strategists"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_leading_cs_teams",
+      "raw_text_from_jd": "2+ years of experience leading teams in Customer Success, Account Management, or a similar customer growth function",
+      "skill_type": "years_of_experience",
+      "domain": "customer_success_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_customer_facing_b2b_saas",
+      "raw_text_from_jd": "5+ years in customer-facing roles (CSM, Account Manager, etc.) at a B2B SaaS company",
+      "skill_type": "years_of_experience",
+      "domain": "customer_success_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "B2B SaaS company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "revenue_growth_track_record",
+      "raw_text_from_jd": "A track record of driving revenue growth, expansion, and retention",
+      "skill_type": "outcome",
+      "domain": "revenue_growth",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "coaching_passion",
+      "raw_text_from_jd": "A passion for coaching and developing others — you get energy from seeing your team thrive",
+      "skill_type": "cultural_fit",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "relationship_and_communication",
+      "raw_text_from_jd": "Exceptional relationship-building and communication skills, across both customers and internal teams",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "simplify_complexity",
+      "raw_text_from_jd": "The ability to simplify complexity — finding creative solutions and guiding your team through ambiguity",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "A love of systems thinking — identifying bottlenecks, building scalable processes, and driving continuous improvement",
+      "skill_type": "capability",
+      "domain": "operations_and_process_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_mindset_fast_paced",
+      "raw_text_from_jd": "A growth mindset and comfort with fast-paced, entrepreneurial environments",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise Growth Strategy (Customer Success) team — helping enterprise customers unlock growth using Clay",
+    "business_model": "B2B SaaS, PLG + enterprise motion, $100M+ ARR",
+    "primary_metrics_inferred": [
+      "Net Revenue Retention (NRR)",
+      "Expansion revenue",
+      "Customer retention / churn",
+      "Customer health scores"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Product",
+      "Engineering",
+      "Marketing"
+    ],
+    "core_responsibilities": [
+      "Hire, develop, and lead a team of Enterprise Growth Strategists who embody Clay's values — curiosity, creativity, and customer obsession.",
+      "Foster a culture of learning, accountability, and excellence, where experimentation is encouraged and insights are shared freely.",
+      "Motivate your team to build deep, trusted partnerships with customers, helping them define success and deliver measurable value.",
+      "Own key customer relationships yourself — setting the bar for engagement, advocacy, and strategic influence.",
+      "Serve as an escalation point and problem-solver, helping turn challenges into opportunities for stronger collaboration.",
+      "Partner cross-functionally with Sales, Product, Engineering, and Marketing to represent the voice of the customer and shape our roadmap around their needs.",
+      "Forecast, track, and report on KPIs tied to expansion, retention, and customer health — using data to tell a story and guide decisions.",
+      "Identify opportunities to innovate and scale our approach to enterprise success — designing playbooks, frameworks, and strategies that amplify impact."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Customer Success",
+    "Enterprise",
+    "Growth Strategy",
+    "Account Management",
+    "B2B SaaS",
+    "people management",
+    "retention",
+    "expansion revenue",
+    "coaching",
+    "playbooks",
+    "cross-functional",
+    "KPIs",
+    "customer health"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Company has crossed $100M in ARR and raised a $100M Series C — strong financial foundation",
+    "Clay's $5B valuation with employee tender offers signals liquidity options for employees",
+    "Explicit mission and operating principles communicated — cultural transparency",
+    "Community of 11,000+ customers provides a large enterprise customer base to work with",
+    "Notable enterprise customers listed (Anthropic, Notion, Google, Ramp) — credibility signal"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location or remote/hybrid policy stated — candidates cannot assess fit without this",
+    "No visa sponsorship or work authorization information provided",
+    "No team size or org structure details given, making scope ambiguous"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from management requirements and years of experience thresholds)",
+      "scope.business_model (inferred from company description and product context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type set to 'unclear' — JD does not mention location, remote, or hybrid policy",
+      "compensation.source set to 'unknown' — no comp data stated or inferable"
+    ],
+    "ambiguities": [
+      "Location/work arrangement is entirely absent from the JD — could be remote, hybrid, or onsite; cannot determine without additional information.",
+      "The minimum years threshold: '5+ years in customer-facing roles' subsumes the '2+ years leading teams' — it is unclear if these are meant to be additive or overlapping.",
+      "All bullets in 'What You'll Bring' are phrased as 'you might be a great fit if you have:' which introduces softening language, yet they read as standard must-haves. Treated as hard requirements given unconditional phrasing within each bullet."
+    ]
+  }
+}

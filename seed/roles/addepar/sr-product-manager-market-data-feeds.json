@@ -1,0 +1,347 @@
+{
+  "company": "Addepar",
+  "role_title": "Sr. Product Manager - Market Data Feeds",
+  "url": "https://job-boards.greenhouse.io/addepar1/jobs/8575949002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8575949002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "United Kingdom"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "no"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Role title is 'Senior Data Product Manager'",
+      "Extensive relevant work experience required",
+      "End-to-end ownership of feed builds and product roadmap",
+      "Cross-functional leadership with engineering, GTM, sales, finance, licensing"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "pm_proficiency_experience",
+      "raw_text_from_jd": "Extensive relevant work experience and education that demonstrate proficiency in product management and user workflows",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": null,
+      "unit": "years",
+      "qualifier": "extensive",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "market_data_vendor_knowledge",
+      "raw_text_from_jd": "Deep understanding and familiarity with Market Data vendors (Bloomberg, LSEG, S&P, Morningstar, etc) and how to best source and implement their content",
+      "skill_type": "domain_knowledge",
+      "domain": "market_data_vendors",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [
+        "Bloomberg",
+        "LSEG",
+        "S&P",
+        "Morningstar"
+      ],
+      "technologies_named": [],
+      "industries_named": [
+        "financial data",
+        "market data"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "market_data_domain_expertise",
+      "raw_text_from_jd": "Domain expertise regarding market data processing and entitlement workflows, security mastering, and financial products as well as strong knowledge of the financial data ecosystem.",
+      "skill_type": "domain_knowledge",
+      "domain": "market_data_processing",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial data",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "commercial_data_products_experience",
+      "raw_text_from_jd": "Experience with building and launching commercial data products within financial services.  Understanding of data governance practices.",
+      "skill_type": "outcome",
+      "domain": "commercial_data_products",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Ability to work cross functionally, particularly with engineering, operations, and GTM.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agile_lean_practices",
+      "raw_text_from_jd": "Practical knowledge of agile thinking and lean practices; creative (non-dogmatic) with project approaches, willingness to experiment, and ability to guide teams toward activities and processes that best suit project goals",
+      "skill_type": "capability",
+      "domain": "agile_product_development",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_knowledge",
+      "raw_text_from_jd": "Knowledge of SQL and ability to query data to find answers to product questions.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_querying",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_for_pm",
+      "raw_text_from_jd": "Experience and ability using AI tools to drive outcomes as a PM.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_partnership",
+      "raw_text_from_jd": "Ability to partner with a variety of stakeholders (from highly technical to non-technical business colleagues) and work in a cross-functional setting",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "leadership_accountability",
+      "raw_text_from_jd": "Ability to set your team up for success through leadership, sense of urgency, accountability, and initiative",
+      "skill_type": "capability",
+      "domain": "leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_problem_solving",
+      "raw_text_from_jd": "A confident and positive attitude with low ego; high degree of ingenuity, resourcefulness, and problem-solving skills; ability to work within ambiguity",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "uk_right_to_work",
+      "raw_text_from_jd": "Applicants must have, and maintain, the right to work in the United Kingdom from the first day of employment. Please note that visa sponsorship is not available for this role.",
+      "skill_type": "credential",
+      "domain": "work_authorization",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "United Kingdom"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "python_databricks_experience",
+      "raw_text_from_jd": "Experience with Python and Databricks is a plus.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_engineering_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Databricks"
+      ],
+      "technologies_named": [
+        "Python"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Visa sponsorship for UK right to work"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Market Data Feeds product — feed quality, coverage, vendor sourcing, data modeling, production delivery, and Security Master integration",
+    "business_model": "B2B enterprise data platform serving wealth and investment management firms",
+    "primary_metrics_inferred": [
+      "Feed quality and coverage",
+      "Commercial ROI of market data feeds",
+      "Client experience and onboarding timelines",
+      "Data coverage gap closure"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "GTM",
+      "Sales",
+      "Support",
+      "Licensing",
+      "Finance",
+      "Data Operations",
+      "Solution teams"
+    ],
+    "core_responsibilities": [
+      "Define and own the product roadmap for Market Data Feeds — balancing feed quality, coverage, and commercial ROI — and set measurable success criteria that hold delivery teams accountable.",
+      "Own feed builds end-to-end: from vendor sourcing and data modeling through to production delivery, driving outcomes that directly support client goals.",
+      "Develop solutions to strengthen market data operations and deepen the integration of Market and Reference Data across Addepar's products and services.",
+      "Identify and close gaps in market data coverage, partnering with clients, sales, and data operations to surface high-impact sourcing opportunities.",
+      "Maintain working knowledge of vendor licensing terms and entitlement workflows, ensuring sourcing and onboarding decisions are made with clear visibility into contractual constraints and cost implications.",
+      "Partner with the licensing and finance functions to evaluate new data sourcing decisions against profitability, and provide product-level oversight on key licensing transitions (e.g., direct licensing migrations).",
+      "Contribute to the evolution of Addepar's Security Master, directly linking Market Data inputs into expanding the richness of information delivered to client and internal product teams.",
+      "Work closely with GTM, Sales, and Support to communicate Market Data changes proactively and serve as a product-informed partner on dataset capabilities, feed status, and onboarding timelines.",
+      "Understand Addepar's products and clients deeply, using those insights to drive new opportunities that improve client experience."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Market Data Feeds",
+    "Reference Data",
+    "Security Master",
+    "Bloomberg",
+    "LSEG",
+    "data governance",
+    "vendor licensing",
+    "entitlement workflows",
+    "financial data ecosystem",
+    "product roadmap",
+    "SQL",
+    "Databricks",
+    "AI tools"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific product surface (Market Data Feeds, Security Master)",
+    "Well-defined mission for the Reference Data and Data Enablement teams",
+    "Role has end-to-end ownership including vendor sourcing through production delivery",
+    "Addepar manages nearly $9 trillion in assets across 1,400+ firms — established platform with scale",
+    "Cross-functional breadth (GTM, Sales, Finance, Licensing, Engineering) suggests high visibility role"
+  ],
+  "red_flags": [
+    "Compensation not disclosed",
+    "No visa sponsorship available — limiting pool to those already authorized to work in UK",
+    "Location type not explicitly stated as hybrid or remote; office requirement ambiguous",
+    "Years of experience not specified — 'extensive' is subjective and could set unclear expectations"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Senior' title and scope of responsibilities; no explicit years stated)",
+      "scope.business_model (inferred from company description and product context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.type (inferred as onsite given UK right-to-work requirement and no mention of remote; ambiguity noted)",
+      "compensation (not stated anywhere in JD)"
+    ],
+    "ambiguities": [
+      "Location type is not explicitly stated as remote, hybrid, or onsite. The JD mentions UK right to work and lists global offices but does not specify this role's arrangement. Treated as onsite given the UK work authorization requirement and absence of any remote language.",
+      "The JD title says 'Sr. Product Manager' but the body refers to 'Senior Data Product Manager' — treated as the same role.",
+      "No minimum years of experience stated; 'Extensive relevant work experience' is left unquantified."
+    ]
+  }
+}

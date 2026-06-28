@@ -1,0 +1,199 @@
+{
+  "company": "Decagon",
+  "role_title": "Founder's Office, Founder Associate",
+  "url": "https://jobs.ashbyhq.com/decagon/c309c767-3553-42e1-81ec-73cc3b88c2ce",
+  "ats_provider": "ashby",
+  "ats_job_id": "c309c767-3553-42e1-81ec-73cc3b88c2ce",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "full in-office",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Chief of Staff",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Mid to Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Comp range $170K-$250K base, consistent with mid-to-senior IC",
+      "Works directly with Founders and Execs on highest-priority strategic and operational challenges",
+      "End-to-end ownership of projects including identifying problems and implementing scalable solutions"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "founder_or_future_founder",
+      "raw_text_from_jd": "Are a past founder, or have ambitions of becoming one in the future",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurship",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "killer_operator_high_ownership",
+      "raw_text_from_jd": "Are a killer operator who thrives in fast-paced environments, has extremely high ownership, and enjoys wearing multiple hats to take on new and ambiguous challenges",
+      "skill_type": "capability",
+      "domain": "operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_project_ownership",
+      "raw_text_from_jd": "Are comfortable owning projects end-to-end, from identifying the problem to implementing scalable solutions",
+      "skill_type": "outcome",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "first_principles_data_driven",
+      "raw_text_from_jd": "Believe in first-principles thinking: you're extremely good at analyzing problems and using data to inform decisions, optimize processes, and track performance",
+      "skill_type": "capability",
+      "domain": "analytical_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_stakeholder_influence",
+      "raw_text_from_jd": "Are an excellent communicator who can partner with cross-functional teams and influence stakeholders at all levels of the organization",
+      "skill_type": "capability",
+      "domain": "communication_and_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_toward_action",
+      "raw_text_from_jd": "Are passionate about building from the ground up, with a strong bias toward action and intensity",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Founder's Office — strategic and operational initiatives across the company",
+    "business_model": "B2B SaaS, conversational AI platform for enterprise customer experience",
+    "primary_metrics_inferred": [
+      "Strategic initiative completion and impact",
+      "Operational process improvements",
+      "Business growth metrics as directed by founders/execs"
+    ],
+    "cross_functional_partners": [
+      "Founders",
+      "Executives",
+      "Cross-functional teams across the company"
+    ],
+    "core_responsibilities": [
+      "Work directly with Founders and Execs to scale the business",
+      "Tackle highest-priority strategic and operational challenges",
+      "Drive strategic initiatives across the company",
+      "Identify key areas for improvement",
+      "Build processes and implement scalable solutions"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      170000,
+      250000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "founder's office",
+    "founder associate",
+    "strategic initiatives",
+    "operational excellence",
+    "first-principles thinking",
+    "high ownership",
+    "cross-functional",
+    "AI platform",
+    "conversational AI",
+    "fast-paced"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($170K-$250K base + equity)",
+    "Direct access to founders and executives — high visibility role",
+    "Broad mandate with high ownership and impact potential",
+    "Company is well-funded with top-tier investors (a16z, Accel, Bain Capital Ventures, Coatue, Index Ventures)",
+    "Strong customer roster (Cash App, Square, Chime, Oura Health)"
+  ],
+  "red_flags": [
+    "Full in-office requirement with no city specified — location ambiguity for candidates",
+    "Role is extremely broad and ambiguous, which may appeal to some but signals unclear day-to-day scope",
+    "No years of experience stated — hard to gauge seniority fit without more structure",
+    "Visa sponsorship and work authorization not mentioned"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and scope of responsibilities)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (inferred from 'We're an in-office company' statement)",
+      "location.remote_us_eligible (inferred as false from in-office policy)"
+    ],
+    "ambiguities": [
+      "No specific city listed for the role; company is described as in-office but headquarters/office location is not mentioned in the JD body",
+      "All requirements are listed under 'Your background looks something like this' which is somewhat informal phrasing — could be interpreted as aspirational rather than hard requirements, but treated as hard given the unconditional framing",
+      "Compensation range is wide ($170K-$250K), suggesting significant variation by experience level that is not clarified"
+    ]
+  }
+}

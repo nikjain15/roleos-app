@@ -1,0 +1,245 @@
+{
+  "company": "Affirm",
+  "role_title": "Senior Product Manager, Financial Platforms",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7605852003",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7605852003",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Platform PM / Infrastructure PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years of product management experience",
+      "Described as 'senior member of the Product Management team'",
+      "CAN base pay range $153,000–$213,000",
+      "Equity Grade - 6"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "4+ years of product management experience, preferably working on platform products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "qualifier": "preferably working on platform products",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_mindset",
+      "raw_text_from_jd": "Highly analytical mindset, able to balance strategic thinking with a strong bias for action and hands-on problem-solving.",
+      "skill_type": "capability",
+      "domain": "analytical_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "track_record_high_impact_products",
+      "raw_text_from_jd": "Proven track record of launching and managing high-impact products.",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Outstanding written and verbal communication with a diverse stakeholder audience.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_resolution",
+      "raw_text_from_jd": "The ability to turn incomplete, conflicting, or ambiguous inputs into solid action plans.",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "Solid technical chops that allow you to have in depth technical discussions and opinions.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs",
+        "data systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_or_experience",
+      "raw_text_from_jd": "This position requires either equivalent practical experience or a Bachelor's degree in a related field",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "platform_product_experience",
+      "raw_text_from_jd": "4+ years of product management experience, preferably working on platform products.",
+      "skill_type": "domain_knowledge",
+      "domain": "platform_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Affirm's backend financial systems and data infrastructure; foundational platform capabilities powering financial workflows and integrations",
+    "business_model": "B2C and B2B fintech / BNPL",
+    "primary_metrics_inferred": [
+      "System reliability and scalability",
+      "Operational efficiency of financial systems",
+      "Integration velocity across engineering and business systems"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data teams",
+      "Business stakeholders",
+      "Senior leadership"
+    ],
+    "core_responsibilities": [
+      "Solve complex and ambiguous platform problems, define execution strategies that balance short and long-term impact, and drive operational improvements across critical financial systems.",
+      "Define product objectives and own the roadmap for foundational platform capabilities, integrations, and shared services that support financial operations and reporting workflows.",
+      "Partner closely with Engineering and Data teams to define APIs, data contracts, platform interfaces, and migration strategies that improve scalability, reliability, and maintainability.",
+      "Define product objectives, partner with engineering and cross-functional partners to drive requirements, ultimately lead execution to launch key products and features.",
+      "Regularly communicate across product and engineering teams as well as cross-functional stakeholders, including frequently presenting to senior leadership."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      153000,
+      213000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Equity Grade - 6; ESPP (employee stock purchase plan)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "financial platforms",
+    "platform product management",
+    "APIs",
+    "data infrastructure",
+    "scalability",
+    "financial systems",
+    "backend",
+    "data contracts",
+    "integrations",
+    "fintech",
+    "BNPL",
+    "roadmap"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($153K–$213K CAN base)",
+    "Remote-first company; fully remote eligible",
+    "100% subsidized medical, dental, and vision coverage",
+    "Clearly scoped product surface (financial platforms / backend infrastructure)",
+    "Equity and ESPP mentioned as part of total compensation",
+    "Existing vacancy explicitly stated — active hiring need"
+  ],
+  "red_flags": [
+    "Compensation stated in CAN (Canadian dollars) — ambiguous whether this applies to US candidates or only Canadian; US base range not provided",
+    "Visa sponsorship and work authorization not mentioned anywhere in the JD",
+    "Pay grade ('N') and equity grade ('6') are internal Affirm classifications without external context"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required, 'senior member' language, and comp range)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)",
+      "compensation.location_pay_differential (inferred: JD mentions location is a factor in pay)"
+    ],
+    "ambiguities": [
+      "Compensation range is labeled 'CAN base pay range' — unclear if this is Canadian dollars for Canadian employees only, or if a US range was omitted. Treated as stated but flagged.",
+      "'4+ years of product management experience, preferably working on platform products' — 'preferably' qualifier makes the platform PM experience a soft preference, but the 4+ years PM is a hard requirement. Extracted as two separate items accordingly.",
+      "Location: JD footer says '#LI-Remote' and body describes remote-first, but also references proximal roles with occasional office requirements. Role appears fully remote based on context."
+    ]
+  }
+}

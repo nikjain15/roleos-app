@@ -1,0 +1,220 @@
+{
+  "company": "Notion",
+  "role_title": "Employee Experience Program Manager",
+  "url": "https://jobs.ashbyhq.com/Notion/c2299d80-c3a5-45fa-bf49-29372a4d9aec",
+  "ats_provider": "ashby",
+  "ats_job_id": "c2299d80-c3a5-45fa-bf49-29372a4d9aec",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Mondays, Tuesdays, and Thursdays (Anchor Days)",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Employee Experience / People Programs",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Comp range $195K-$210K base in SF, consistent with senior IC",
+      "Expected to lead programs end-to-end globally without a roadmap",
+      "Reports to Global Head of Notino Experience"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "global_onboarding_leadership",
+      "raw_text_from_jd": "You've led global new hire onboarding programs end to end.",
+      "skill_type": "outcome",
+      "domain": "employee_onboarding",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "craft_and_creativity",
+      "raw_text_from_jd": "Craft + creativity: You curate employee experiences that are bold and intentional. You have a clear point of view on what will create meaning for Notinos, and what won't resonate.",
+      "skill_type": "capability",
+      "domain": "employee_experience_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "outcomes_impact_driven",
+      "raw_text_from_jd": "Outcomes- and impact-driven: You're not attached to programs or policies. You aim to learn Notion's culture and product quickly, then use that context to (re)invent what comes next. You measure programs on impact, not participation.",
+      "skill_type": "capability",
+      "domain": "program_measurement_and_iteration",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "self_guided_motivated",
+      "raw_text_from_jd": "Self-guided and intrinsically motivated: You don't wait for a roadmap. You spot the biggest leverage points in the Notino journey, set direction, and build. You'd rather test an early prototype to get signals from your customer, than wait for all the kinks to be ironed out.",
+      "skill_type": "cultural_fit",
+      "domain": "autonomy_and_initiative",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agility_across_context",
+      "raw_text_from_jd": "Agility across context: You move from crafting a Day 1 moment, to debugging a broken workflow, to aligning global partners, without losing speed or taste.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_fluency",
+      "raw_text_from_jd": "AI fluency: You treat AI as a daily collaborator and you're eager to teach others to do the same.",
+      "skill_type": "capability",
+      "domain": "ai_tools_adoption",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_partnership",
+      "raw_text_from_jd": "Cross-functional partnership: You work with leaders and global partners to align on outcomes, understand trade-offs, and co-create solutions that scale.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Employee experience programs across the full Notino lifecycle, starting with New Hire Onboarding",
+    "business_model": "internal people/HR function at a B2B/B2C SaaS company",
+    "primary_metrics_inferred": [
+      "New hire sentiment and connection to mission (Day 1 experience quality)",
+      "Program impact (not participation)",
+      "Dogfooding adoption of Notion features by employees",
+      "Retention and identity signals tied to Notino programs"
+    ],
+    "cross_functional_partners": [
+      "People Operations",
+      "Workplace teams (local/global)",
+      "Global Head of Notino Experience"
+    ],
+    "core_responsibilities": [
+      "Redesign New Hire Onboarding as a fully immersive experience from Day 1",
+      "Build an AI-powered onboarding OS that makes a global process feel deeply personal",
+      "Build new rituals and rhythms that compel teams to dogfood Notion's newest features",
+      "Design and test new programs that connect Notinos to mission, customers, and product",
+      "Lead through influence with People Operations and local Workplace teams to create repeatable systems"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      195000,
+      210000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as part of compensation package (no specific form stated)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "new hire onboarding",
+    "employee experience",
+    "program manager",
+    "AI fluency",
+    "dogfooding",
+    "Notino identity",
+    "global programs",
+    "cross-functional partnership",
+    "people operations",
+    "knowledge work"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($195K-$210K base in SF)",
+    "Equity explicitly mentioned as part of package",
+    "Clear scope and ownership area (New Hire Onboarding and employee lifecycle programs)",
+    "Reports to Global Head of Notino Experience — clear reporting line",
+    "Notion encourages applications from candidates who don't meet every bullet",
+    "AI fluency integrated into culture, not just role requirement"
+  ],
+  "red_flags": [
+    "Onsite-only role (Mondays, Tuesdays, Thursdays as Anchor Days in San Francisco) — eliminates remote candidates",
+    "No visa sponsorship status mentioned — unclear for international candidates",
+    "No years of experience stated — seniority expectations unclear beyond comp signals",
+    "JD hashtag is #LI-Onsite but body describes a hybrid-style anchor day policy — could be interpreted as hybrid rather than fully onsite"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from base comp range $195K-$210K and scope of responsibilities)",
+      "scope.business_model (inferred from company description and internal function)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
+      "location.work_auth (not stated; defaulted to open)",
+      "location.visa_sponsorship (not stated; defaulted to unclear)"
+    ],
+    "ambiguities": [
+      "JD uses #LI-Onsite tag and says 'based in San Francisco, CA', but the anchor day policy (Mon/Tue/Thu in office) could imply hybrid rather than fully onsite. Treated as onsite given explicit tag and 'based in' language.",
+      "Equity form is not specified (options, RSUs, etc.) — only 'equity' is mentioned generically.",
+      "No years of experience stated anywhere in the JD; seniority inferred from compensation and program scope."
+    ]
+  }
+}

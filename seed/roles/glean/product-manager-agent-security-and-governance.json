@@ -1,34 +1,35 @@
 {
   "company": "Glean",
   "role_title": "Product Manager, Agent Security & Governance",
-  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4525297005",
+  "url": "https://job-boards.greenhouse.io/gleanwork/jobs/4694761005",
   "ats_provider": "greenhouse",
-  "ats_job_id": "4525297005",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "4694761005",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "hybrid",
     "cities_listed": [
-      "SF Bay Area"
+      "San Francisco, CA"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "4 days a week in one of our SF Bay Area offices",
-    "work_auth": "open",
+    "office_time_required": "4 days a week in San Francisco office",
+    "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
-  "archetype": "Technical PM",
+  "archetype": "AI Product Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "AI Product Manager",
+  "secondary_archetype": "Technical PM (security & governance focus)",
   "seniority": {
-    "level": "Senior IC / Principal PM",
+    "level": "Senior IC / Staff PM",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "8+ years of experience in product management at SaaS companies",
-      "Responsibilities spanning security, governance, trust, identity, data integrations",
-      "Comp range $160K-$240K base, consistent with senior IC PM at growth-stage startup"
+      "8+ years of experience in product management",
+      "Compensation range $160K-$280K base",
+      "Ownership over major product surface (Agent Security & Governance)",
+      "Expected to shape product roadmap and team itself"
     ]
   },
   "must_haves": [
@@ -39,14 +40,15 @@
       "domain": "product_management_saas_enterprise",
       "minimum_value": 8,
       "unit": "years",
-      "is_combined": false,
+      "qualifier": "primarily serving large enterprises with responsibilities spanning security, governance, trust, identity, data integrations",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "enterprise SaaS"
+        "SaaS",
+        "enterprise software"
       ],
       "geographies_named": [],
       "employer_types_named": [
@@ -64,7 +66,7 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
-        "API"
+        "APIs"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -72,7 +74,7 @@
       "credentials_named": []
     },
     {
-      "id": "communication",
+      "id": "written_verbal_communication",
       "raw_text_from_jd": "You are an excellent written and verbal communicator.",
       "skill_type": "capability",
       "domain": "communication",
@@ -87,10 +89,10 @@
       "credentials_named": []
     },
     {
-      "id": "ownership_and_results",
+      "id": "ownership_initiative_results",
       "raw_text_from_jd": "You have a proven track record of taking ownership, taking initiative, and delivering results.",
       "skill_type": "outcome",
-      "domain": "product_management",
+      "domain": "product_execution",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -151,12 +153,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Agent Security & Governance — explainable/transparent AI systems, AI risk identification and prevention, observability, security and privacy features around AI agents and underlying enterprise data",
-    "business_model": "B2B SaaS, enterprise",
+    "surface": "Agent Security & Governance — explainable/transparent AI systems, AI risk identification and prevention, observability, security, and privacy features around AI agents and underlying data",
+    "business_model": "B2B enterprise SaaS (Work AI platform)",
     "primary_metrics_inferred": [
-      "Enterprise adoption of security and governance features",
-      "Reduction of AI risk vectors for customers",
-      "Customer trust and compliance outcomes"
+      "Enterprise customer trust and adoption of AI agents",
+      "Reduction of AI risk vectors",
+      "Security and governance feature adoption",
+      "Data privacy compliance metrics"
     ],
     "cross_functional_partners": [
       "Design",
@@ -173,63 +176,66 @@
       "Empowering your team by giving context, setting direction, and building alignment",
       "Driving customer-focused decisions, clear prioritization, and efficient execution",
       "Coordinating cross-functionally with leadership, go-to-market teams, and other key stakeholders across the company",
-      "Building processes that will scale as our team and company go through rapid growth"
+      "Building processes that will scale as our team and company go through rapid growth",
+      "Developing new technologies and product features spanning explainable / transparent AI systems, identification and prevention of various vectors of AI risks, and the observability, security and privacy features around AI agents and underlying data"
     ]
   },
   "compensation": {
     "base_range_usd": [
       160000,
-      240000
+      280000
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "equity mentioned as potential eligibility alongside variable compensation",
+    "equity_form": "equity mentioned as possible for certain roles; form not specified",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
-    "agent security",
-    "AI governance",
-    "enterprise AI",
+    "Agent Security",
+    "Governance",
+    "AI agents",
     "explainable AI",
     "AI risk",
     "observability",
-    "data privacy",
-    "identity",
+    "privacy",
+    "enterprise search",
+    "Work AI",
     "SaaS",
+    "identity",
+    "data integrations",
     "agentic AI",
-    "product roadmap",
-    "security",
-    "trust"
+    "product roadmap"
   ],
   "buzzword_density": "high",
   "green_flags": [
-    "Compensation range explicitly disclosed ($160K-$240K base)",
-    "High-impact, differentiated product area (AI security and governance) with growing enterprise demand",
-    "Glean recognized by Fast Company, CNBC, Forbes AI 50 — strong company credibility signals",
-    "Lean product team implies high ownership and visibility for the PM",
-    "Clear product domain stated (agent security, explainable AI, observability, privacy)"
+    "Compensation range explicitly disclosed ($160K-$280K base)",
+    "Clear and specific product surface area (Agent Security & Governance)",
+    "Company is well-recognized (Fast Company Top 10, Forbes AI 50, CNBC Disruptor 50)",
+    "Lean product team signals high ownership and impact potential",
+    "Comprehensive benefits package including 401k, education, wellness, home office stipend"
   ],
   "red_flags": [
-    "Hybrid requirement of 4 days/week in SF Bay Area offices is very office-heavy and eliminates most remote candidates",
-    "No nice-to-haves listed — makes it harder to self-assess partial fit",
-    "Visa sponsorship not mentioned anywhere in the JD",
-    "Broad comp range ($160K-$240K) may indicate ambiguity in level targeting",
-    "8+ years requirement is high; combined with SF Bay Area 4-day hybrid, limits candidate pool significantly"
+    "Very wide compensation range ($160K-$280K) makes it difficult to assess target level without additional context",
+    "4 days/week in San Francisco office is near-onsite and eliminates most non-SF candidates",
+    "Work authorization and visa sponsorship not mentioned anywhere in the JD",
+    "No specific mention of team size or reporting structure",
+    "8+ year minimum is a high bar that may filter out strong mid-level candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years required + comp range)",
+      "seniority.level (inferred from 8+ years requirement and compensation range)",
+      "seniority.manages_people (not stated; inferred false as no people management mentioned)",
       "scope.team_size_estimate (not stated; left as 'unclear')",
       "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "scope.business_model (inferred from product description and customer references)",
-      "location.visa_sponsorship (not stated; marked unclear)",
-      "compensation.location_pay_differential (inferred from JD language 'factors such as location')"
+      "scope.business_model (inferred from product description)",
+      "compensation.location_pay_differential (inferred from 'factors such as location' language)",
+      "equity_form (stated equity is possible but form not specified)"
     ],
     "ambiguities": [
-      "JD hashtag is #LI-HYBRID and body confirms 4 days/week in SF Bay Area — no contradiction, consistently hybrid/onsite-heavy.",
-      "Variable compensation and equity mentioned as potential eligibility but not guaranteed — structure not specified.",
-      "No nice-to-haves are explicitly listed; all requirements appear in a single 'About you' section and are treated as hard requirements."
+      "Compensation range of $160K-$280K is unusually wide; may reflect multiple seniority levels or locations, making target level ambiguous.",
+      "Work authorization and visa sponsorship are not addressed anywhere in the JD; cannot determine policy.",
+      "Nice-to-haves section is absent — all listed requirements appear in an 'About you' section with unconditional language, so all are treated as hard must-haves."
     ]
   }
 }
