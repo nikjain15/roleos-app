@@ -2,6 +2,7 @@
 
 import { useRef, useState } from "react";
 import Link from "next/link";
+import { extractDocumentText, ACCEPTED_TYPES } from "@/lib/parse-document";
 
 /**
  * Value-first onboarding (journey.html §3 A→B→C). One input → watch RO reason
@@ -33,7 +34,34 @@ export default function Onboarding() {
   const [needsMore, setNeedsMore] = useState<string | null>(null);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [parsing, setParsing] = useState(false);
+  const [fileNote, setFileNote] = useState<string | null>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  async function onFile(file: File | undefined) {
+    if (!file) return;
+    setParsing(true);
+    setError(null);
+    setFileNote(null);
+    try {
+      const text = await extractDocumentText(file);
+      if (text.trim().length < 30) {
+        // likely an image-only / scanned PDF — be honest, don't pretend we read it
+        setError(
+          "I couldn't pull readable text from that — it may be a scanned image. Try the LinkedIn “Save to PDF” export, or paste your text.",
+        );
+      } else {
+        setProfile(text);
+        setFileNote(`Read ${file.name} — ${text.length.toLocaleString()} characters. Looks good? Show me what I see.`);
+      }
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "I couldn't read that file — try a PDF or paste the text.");
+    } finally {
+      setParsing(false);
+      if (fileRef.current) fileRef.current.value = "";
+    }
+  }
 
   async function run() {
     if (profile.trim().length < 30 || running) return;
@@ -97,25 +125,47 @@ export default function Onboarding() {
       <textarea
         value={profile}
         onChange={(e) => setProfile(e.target.value)}
-        placeholder="Paste your CV / LinkedIn, or just talk…"
+        placeholder="Paste your CV / LinkedIn text, or just talk… (or drop a PDF below)"
         rows={6}
         disabled={running}
         className="mt-6 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] leading-relaxed text-tx outline-none focus:border-info disabled:opacity-60"
       />
-      <div className="mt-3 flex items-center gap-3">
+
+      <input
+        ref={fileRef}
+        type="file"
+        accept={ACCEPTED_TYPES}
+        className="hidden"
+        onChange={(e) => onFile(e.target.files?.[0])}
+      />
+
+      <div className="mt-3 flex flex-wrap items-center gap-3">
         <button
           onClick={run}
-          disabled={running || profile.trim().length < 30}
+          disabled={running || parsing || profile.trim().length < 30}
           className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
         >
           {running ? "RO is working…" : "Show me what RO sees"}
         </button>
-        {!running && !matches && (
+        <button
+          onClick={() => fileRef.current?.click()}
+          disabled={running || parsing}
+          className="rounded-md border border-bd px-3 py-2 text-sm text-tx2 disabled:opacity-40"
+        >
+          {parsing ? "Reading your file…" : "Upload LinkedIn PDF or CV"}
+        </button>
+        {!running && !parsing && !matches && (
           <button onClick={() => setProfile(SAMPLE)} className="text-sm text-tx3 underline">
             or use a sample
           </button>
         )}
       </div>
+
+      <p className="mt-2 text-xs text-tx3">
+        Tip: on LinkedIn, open your profile → <span className="text-tx2">More → Save to PDF</span>, then drop it here.
+        Your file is read in your browser — it never leaves your device.
+      </p>
+      {fileNote && <p className="mt-2 text-sm text-suc">{fileNote}</p>}
 
       {/* Watch RO reason */}
       {status.length > 0 && (
