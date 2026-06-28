@@ -185,10 +185,14 @@ export const cfSandboxRuntime: SandboxRuntime = {
       };
     }
     const project = normalizeProject(files);
+    const secret = (env() as unknown as { SANDBOX_SECRET?: string }).SANDBOX_SECRET;
     try {
       const res = await fetch(`${base}/build`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          ...(secret ? { "x-sandbox-secret": secret } : {}),
+        },
         body: JSON.stringify({ sessionId, files: project, limits }),
         signal: AbortSignal.timeout(limits.timeoutMs + 30_000),
       });
