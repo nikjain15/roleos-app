@@ -23,6 +23,8 @@ export { Sandbox } from "@cloudflare/sandbox";
 
 interface Env {
   Sandbox: DurableObjectNamespace;
+  // Shared secret — only the main app may spin containers (they cost money).
+  SANDBOX_SECRET?: string;
 }
 
 interface BuildFile {
@@ -91,6 +93,10 @@ export default {
     const url = new URL(req.url);
 
     if (req.method === "POST" && url.pathname === "/build") {
+      // Gate: only the main app (with the shared secret) may spin containers.
+      if (env.SANDBOX_SECRET && req.headers.get("x-sandbox-secret") !== env.SANDBOX_SECRET) {
+        return Response.json({ error: "forbidden" }, { status: 403 });
+      }
       try {
         const body = (await req.json()) as BuildRequest;
         return await runBuild(env, url.host, body);
