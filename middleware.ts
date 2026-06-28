@@ -8,7 +8,7 @@ import { NextResponse, type NextRequest } from "next/server";
  * server-side in admin routes (RLS + server check, never UI alone) — this is
  * just the convenience redirect.
  */
-const PRIVATE = ["/feed", "/studio", "/admin"];
+const PRIVATE = ["/feed", "/studio", "/admin", "/settings"];
 
 export async function middleware(req: NextRequest) {
   let res = NextResponse.next({ request: req });

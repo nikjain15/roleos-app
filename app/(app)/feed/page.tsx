@@ -55,6 +55,9 @@ export default async function Feed() {
               Admin
             </Link>
           )}
+          <Link href="/settings" className="text-sm text-tx3 hover:text-info">
+            Settings
+          </Link>
           <SignOut />
         </div>
       </div>
