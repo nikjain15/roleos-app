@@ -26,6 +26,8 @@ export interface RoleOSEnv {
   // Public (safe) — also available as NEXT_PUBLIC_* at build for the client.
   NEXT_PUBLIC_SUPABASE_URL: string;
   NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
+  // Shared secret the cron worker presents to /api/cron/* (digest scheduler).
+  CRON_SECRET?: string;
   // Optional URL→profile scraper (lib/profile-fetcher) — none set = feature off.
   APIFY_TOKEN?: string;
   APIFY_LINKEDIN_ACTOR?: string; // actor slug, e.g. "owner~linkedin-profile-scraper"
