@@ -43,6 +43,15 @@ function LoginInner() {
     if (error) setErr("Couldn't reach Google just now. Try the email link instead?");
   }
 
+  async function linkedin() {
+    setErr(null);
+    const { error } = await supabaseBrowser().auth.signInWithOAuth({
+      provider: "linkedin_oidc",
+      options: { redirectTo },
+    });
+    if (error) setErr("Couldn't reach LinkedIn just now. Try the email link instead?");
+  }
+
   return (
     <main className="mx-auto max-w-md px-6 py-20">
       <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold">
@@ -66,6 +75,12 @@ function LoginInner() {
             className="w-full rounded-md border border-bd bg-surf px-4 py-2.5 text-sm font-medium text-tx"
           >
             Continue with Google
+          </button>
+          <button
+            onClick={linkedin}
+            className="w-full rounded-md border border-bd bg-surf px-4 py-2.5 text-sm font-medium text-tx"
+          >
+            Continue with LinkedIn
           </button>
           <div className="flex items-center gap-3 text-xs text-tx3">
             <span className="h-px flex-1 bg-bd" /> or <span className="h-px flex-1 bg-bd" />
