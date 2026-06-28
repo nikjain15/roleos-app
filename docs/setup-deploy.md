@@ -41,9 +41,14 @@ Only two server secrets are needed — the public `NEXT_PUBLIC_*` values are inl
 into the bundle at build time, and Workers AI is a binding, not a secret.
 
 ```bash
-# pulls each value from .dev.vars and pipes it to wrangler (no secret on a CLI arg)
-grep '^ANTHROPIC_API_KEY=' .dev.vars        | cut -d= -f2- | npx wrangler secret put ANTHROPIC_API_KEY
-grep '^SUPABASE_SERVICE_ROLE_KEY=' .dev.vars | cut -d= -f2- | npx wrangler secret put SUPABASE_SERVICE_ROLE_KEY
+# pulls each value from .dev.vars and pipes it to wrangler (no secret on a CLI arg).
+# IMPORTANT: .dev.vars values are DOUBLE-QUOTED — strip the quotes, or Supabase/
+# Anthropic get a key wrapped in literal quotes ("Invalid API key" at runtime).
+# printf (not echo) avoids a trailing newline in the secret.
+for S in ANTHROPIC_API_KEY SUPABASE_SERVICE_ROLE_KEY; do
+  v=$(grep "^$S=" .dev.vars | cut -d= -f2-); v="${v%\"}"; v="${v#\"}"
+  printf %s "$v" | npx wrangler secret put "$S"
+done
 ```
 
 `wrangler` is OAuth-authenticated (`wrangler whoami` → nikjain1588@gmail.com).
