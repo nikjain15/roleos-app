@@ -1,6 +1,7 @@
 import { matchProfile } from "@/lib/run-match";
 import { runSkill } from "@/agent/skills/run";
 import mirrorSkill from "@/agent/skills/mirror";
+import distillProfile from "@/agent/skills/distill_profile";
 import { parseModelJson } from "@/lib/json";
 import { assessProfileInput, thinInputMessage } from "@/lib/profile-input";
 import { normalizeProfileText } from "@/lib/normalize-profile";
@@ -8,6 +9,9 @@ import { extractLinkedInUrl, getProfileFetcher } from "@/lib/profile-fetcher";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
+
+/** Above this, distill the profile with Haiku before the Opus calls (~450+ tokens). */
+const DISTILL_OVER_CHARS = 1800;
 
 /**
  * Onboarding (journey.html §3 A→B→C): POST { profile } → STREAM RO working.
@@ -75,6 +79,23 @@ export async function POST(req: Request): Promise<Response> {
         // Strip extraction/boilerplate noise now — on the real content we match
         // on (the paste or the fetched profile) — for fewer tokens, same signal.
         profileText = normalizeProfileText(profileText);
+
+        // For LONG profiles, a cheap Haiku pass distills to a compact, faithful
+        // structured form before the expensive Opus calls (fewer input tokens,
+        // same facts). Short pastes skip it — not worth the extra call/latency.
+        if (profileText.length > DISTILL_OVER_CHARS) {
+          try {
+            const before = profileText.length;
+            const d = await runSkill(distillProfile, { userId: "anon", data: { profile: profileText } });
+            const distilled = d.verdict.finalOutput.trim();
+            // Safety: only adopt it if it's non-trivial AND actually smaller.
+            if (distilled.length > 100 && distilled.length < before) {
+              profileText = distilled;
+            }
+          } catch {
+            /* distillation is an optimization — fall back to the normalized text */
+          }
+        }
 
         // Mirror + full matching in parallel (both through the quality gate).
         // matchProfile = rank all 557 by similarity → reason over the closest.
