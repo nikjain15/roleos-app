@@ -1,0 +1,277 @@
+{
+  "company": "OpenAI",
+  "role_title": "Technical Program Manager, Data Acquisition",
+  "url": "https://jobs.ashbyhq.com/openai/71004494-9a55-4ed5-b458-2ff475f0d881",
+  "ats_provider": "ashby",
+  "ats_job_id": "71004494-9a55-4ed5-b458-2ff475f0d881",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time at San Francisco HQ",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Mid to Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Expected to operate with high autonomy and 'expansive ownership'",
+      "Partners with researchers and engineers to drive roadmaps",
+      "Described as needing 'ruthless prioritization' and frequent context switching across multiple projects"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "sql_python_proficiency",
+      "raw_text_from_jd": "Are proficient in SQL and Python for analysing datasets, querying databases, building dashboards, and generating actionable insights.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SQL",
+        "Python"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "api_automation_ai_tools",
+      "raw_text_from_jd": "Are comfortable using APIs, automation, and AI tools such as Codex to accelerate workflows, remove manual overhead, and upskill quickly in unfamiliar technical areas.",
+      "skill_type": "tool_proficiency",
+      "domain": "automation_and_ai_tooling",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Codex"
+      ],
+      "technologies_named": [
+        "APIs",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_research_technical_understanding",
+      "raw_text_from_jd": "Are excited to understand the technicalities of cutting-edge AI research and work alongside researchers from instantiation to launch.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_research",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "research_commercial_data_ops_fluidity",
+      "raw_text_from_jd": "Can move fluidly between research context, commercial execution, and data operations.",
+      "skill_type": "capability",
+      "domain": "cross_functional_execution",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "grit_creative_problem_solving",
+      "raw_text_from_jd": "Want to get your hands dirty; grit and creative problem solving will be required daily",
+      "skill_type": "cultural_fit",
+      "domain": "work_ethic",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_technical_learning",
+      "raw_text_from_jd": "Learn technical concepts exceptionally quickly, seeking out knowledge to become proficient in areas that are new to you",
+      "skill_type": "capability",
+      "domain": "technical_learning_agility",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_horsepower_multitasking",
+      "raw_text_from_jd": "Operate with high horsepower, are adept at frequent context switching and working on multiple projects at once with expansive ownership, and ruthless prioritization",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_navigation",
+      "raw_text_from_jd": "Thrive in dynamic environments and can navigate ambiguity with ease",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "startup_vendor_sourcing_experience",
+      "raw_text_from_jd": "Experience sourcing, evaluating, or working with startups, founder and vendors",
+      "skill_type": "domain_knowledge",
+      "domain": "vendor_and_startup_partnerships",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "startups"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Data acquisition pipeline for AI model training, evaluation, and safety; interface between research roadmap and external data offerings",
+    "business_model": "AI research and deployment company",
+    "primary_metrics_inferred": [
+      "Data acquisition pipeline throughput and quality",
+      "Research data needs fulfilled on time",
+      "Vendor performance and reliability",
+      "Dashboard/visibility coverage of blockers"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Engineering",
+      "Operations",
+      "External vendors"
+    ],
+    "core_responsibilities": [
+      "Partner with researchers to scope data needs, define success criteria, and translate priorities into clear execution plans",
+      "Identify, evaluate, and advance high impact data opportunities balancing research value, feasibility, quality, and responsible execution",
+      "Move work forward even when the path is unclear using technical judgement, creative problem solving, and scrappy execution",
+      "Use SQL, Python, dashboards, and simple tooling to track performance, quality, and blockers",
+      "Collaborate with engineers to enhance data platforms, resolve blockers, and ensure security best practices such as access management",
+      "Equip vendors and internal teams with context, standards, and operating rhythms needed to focus on the most important problems"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "data acquisition",
+    "technical program manager",
+    "SQL",
+    "Python",
+    "AI research",
+    "data pipeline",
+    "vendor management",
+    "research data",
+    "automation",
+    "Codex",
+    "APIs",
+    "dashboards",
+    "ambiguity",
+    "scrappy execution"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific role scope — data acquisition for AI model research at a frontier lab",
+    "Described as part of a team of TPMs, indicating established peer group",
+    "Explicitly values scrappy, hands-on problem solving rather than just process management",
+    "Role sits at intersection of research and commercial execution — broad exposure"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship status not mentioned",
+    "No years-of-experience requirement stated, making seniority expectations unclear",
+    "Nice-to-have for startup/vendor sourcing is embedded awkwardly mid-sentence in the must-have section, suggesting copy-editing issues in the JD",
+    "Fully onsite at San Francisco HQ — no remote or hybrid option mentioned"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from role responsibilities, autonomy signals, and peer team description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.office_time_required (inferred from 'based in our San Francisco HQ'; no hybrid language present)"
+    ],
+    "ambiguities": [
+      "The sentence 'Experience sourcing, evaluating, or working with startups, founder and vendors' appears mid-paragraph in the must-have 'You'll thrive in this role if you:' section but reads as a standalone fragment appended to the previous bullet. It is classified as a nice-to-have because it is a positive attribute rather than an unconditional requirement, but its placement is ambiguous.",
+      "Visa sponsorship is neither confirmed nor denied anywhere in the JD; marked as 'unclear'."
+    ]
+  }
+}

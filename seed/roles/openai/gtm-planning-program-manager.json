@@ -1,0 +1,257 @@
+{
+  "company": "OpenAI",
+  "role_title": "GTM Planning Program Manager",
+  "url": "https://jobs.ashbyhq.com/openai/c8b8c150-5175-4ead-b3c8-4226017d838c",
+  "ats_provider": "ashby",
+  "ats_job_id": "c8b8c150-5175-4ead-b3c8-4226017d838c",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years experience in revenue operations or strategy",
+      "Partners with executive leadership and sales leadership",
+      "Highly visible role driving transformational programs"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_rev_ops_strategy",
+      "raw_text_from_jd": "7+ years experience in revenue operations or strategy at a high-growth, technology company.",
+      "skill_type": "years_of_experience",
+      "domain": "revenue_operations_strategy",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth, technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "planning_process_experience",
+      "raw_text_from_jd": "Have experience supporting planning processes such as long range planning, segmentation, budget planning, quota setting and sales compensation.",
+      "skill_type": "domain_knowledge",
+      "domain": "gtm_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_problem_solving",
+      "raw_text_from_jd": "Structure complex problems, evaluate trade-offs, and synthesize recommendations that enable executive decision-making.",
+      "skill_type": "capability",
+      "domain": "analytical_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Build trust quickly and influence without direct authority across diverse stakeholder groups.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Communicate effectively with audiences ranging from frontline operators to executive leadership teams.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organized_high_leverage",
+      "raw_text_from_jd": "Are highly organized and capable of operating with high degrees of leverage while maintaining exceptional attention to detail.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomy_ambiguity",
+      "raw_text_from_jd": "Thrive in ambiguity and work autonomously.",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_judgment",
+      "raw_text_from_jd": "Demonstrate sound judgment and an ownership mindset, proactively identifying risks and driving resolution.",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "consumption_monetization_models",
+      "raw_text_from_jd": "Ideally bring experience with consumption-based, usage-based, or hybrid monetization models and understand the implications these models have on incentives, capacity planning, and go-to-market design.",
+      "skill_type": "domain_knowledge",
+      "domain": "monetization_models",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "GTM Strategy & Operations — revenue operating model, annual/quarterly planning cycles, segmentation, compensation design, and performance metrics",
+    "business_model": "enterprise AI sales with consumption/usage-based monetization elements",
+    "primary_metrics_inferred": [
+      "On-time delivery of planning cycles",
+      "Revenue plan quality and execution",
+      "GTM efficiency and growth at scale"
+    ],
+    "cross_functional_partners": [
+      "Sales Leadership",
+      "Finance",
+      "Compensation",
+      "Operations",
+      "Enablement",
+      "Revenue Operations",
+      "Executive stakeholders"
+    ],
+    "core_responsibilities": [
+      "Design and drive transformational programs that evolve revenue planning, compensation and operating model",
+      "Lead end-to-end execution of annual and quarterly go-to-market planning processes",
+      "Partner with Finance, Revenue Operations and business leaders to translate strategic objectives into executable plans",
+      "Develop and operationalize program frameworks across market segmentation, coverage, capacity, target setting, sales compensation, and performance metrics",
+      "Structure complex problems, evaluate trade-offs, and synthesize recommendations for executive decision-making",
+      "Build integrated planning timelines, governance mechanisms, and cross-functional operating rhythms",
+      "Identify process inefficiencies and opportunities for automation, simplification, and standardization",
+      "Develop executive-ready communications and materials",
+      "Partner with Enablement and change leaders on adoption",
+      "Monitor program outcomes and incorporate lessons learned"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "GTM planning",
+    "revenue operations",
+    "program management",
+    "annual planning",
+    "quota setting",
+    "sales compensation",
+    "market segmentation",
+    "capacity planning",
+    "go-to-market strategy",
+    "consumption-based monetization",
+    "cross-functional alignment",
+    "executive stakeholders"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Highly visible role with direct partnership with Sales Leadership and executive stakeholders",
+    "Clear articulation of scope and responsibilities",
+    "Encourages candidate self-selection with 'you might thrive if' framing rather than rigid requirements list",
+    "OpenAI's scale and mission provide significant program impact opportunity"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location or remote/hybrid policy stated — work arrangement is entirely unclear",
+    "No visa sponsorship information provided",
+    "Role title says 'Program Manager' but scope covers strategy, operations, and compensation design — potential title/scope mismatch",
+    "7+ year floor with transformational program ownership suggests high expectations not fully reflected in title"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required, program scope, and executive visibility)",
+      "scope.business_model (inferred from references to consumption-based models and GTM context)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "location.type set to 'unclear' — no location or work model mentioned in JD",
+      "location.work_auth set to 'open' — no restriction stated",
+      "location.visa_sponsorship set to 'unclear' — not mentioned"
+    ],
+    "ambiguities": [
+      "The JD references San Francisco and Los Angeles Fair Chance Ordinances in boilerplate, suggesting US-based roles in CA, but no explicit city or location requirement is stated for this role specifically.",
+      "The 'You might thrive in this role if' section lists items that function as requirements (e.g. 7+ years experience) but uses softer framing — treated as hard must-haves given the specificity and placement as primary qualifications."
+    ]
+  }
+}

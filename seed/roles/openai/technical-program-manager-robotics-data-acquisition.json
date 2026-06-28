@@ -1,0 +1,232 @@
+{
+  "company": "OpenAI",
+  "role_title": "Technical Program Manager, Robotics Data Acquisition",
+  "url": "https://jobs.ashbyhq.com/openai/7eb1ac08-5168-4eff-a96c-90ce0bfd3fde",
+  "ats_provider": "ashby",
+  "ats_job_id": "7eb1ac08-5168-4eff-a96c-90ce0bfd3fde",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Robotics / Hardware Infrastructure TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in technical program management, systems engineering, or operations",
+      "Owns and scales complex, cross-functional programs end-to-end",
+      "Leads roadmap and execution across multiple sites and stakeholder groups"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_systems_ops",
+      "raw_text_from_jd": "5+ years of experience in technical program management, systems engineering, or operations in hardware, robotics, or infrastructure-heavy environments",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware",
+        "robotics",
+        "infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_level_thinking",
+      "raw_text_from_jd": "Strong systems-level thinking across hardware, software, and operational workflows",
+      "skill_type": "capability",
+      "domain": "systems_engineering",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_leadership",
+      "raw_text_from_jd": "Proven ability to lead complex, cross-functional programs with high ambiguity",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "scaling_physical_systems",
+      "raw_text_from_jd": "Experience scaling physical systems (labs, factories, robotics fleets, or test infrastructure)",
+      "skill_type": "domain_knowledge",
+      "domain": "physical_systems_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "robotics",
+        "manufacturing"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_debugging",
+      "raw_text_from_jd": "Comfortable working close to hardware and debugging real-world system issues",
+      "skill_type": "capability",
+      "domain": "hardware_operations",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_capacity_modeling",
+      "raw_text_from_jd": "Strong analytical skills; able to model capacity, throughput, and system performance",
+      "skill_type": "capability",
+      "domain": "capacity_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "Excellent communication skills with the ability to align diverse stakeholders",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Robotic data acquisition systems across development and evaluation environments (DAQ stations, sensors, compute, operator interfaces, data pipelines)",
+    "business_model": "internal R&D / AI model training infrastructure",
+    "primary_metrics_inferred": [
+      "DAQ station uptime and reliability",
+      "Data quality and integrity for model training",
+      "Throughput and capacity utilization of DAQ stations",
+      "SLA adherence for data collection workflows"
+    ],
+    "cross_functional_partners": [
+      "Robotics Engineering",
+      "Operations",
+      "Infrastructure",
+      "Research",
+      "Data teams",
+      "Robotics hardware",
+      "Robotics software"
+    ],
+    "core_responsibilities": [
+      "Lead the roadmap, execution, and scaling of robotic DAQ systems, ensuring alignment with research, engineering, and operational priorities",
+      "Coordinate across robotics hardware, software, infrastructure, and operations teams to deliver tightly integrated, deployment-ready data collection systems",
+      "Translate experimental and research workflows into repeatable, scalable DAQ processes with clear SLAs, metrics, and reliability targets",
+      "Ensure DAQ stations (robots, sensors, compute, operator interfaces) are fully integrated, validated, and ready for production use across multiple sites",
+      "Build and manage detailed program plans, identify risks early, and drive mitigation across technical and operational domains",
+      "Model and plan DAQ capacity (stations, operators, uptime) to meet evolving data demands, balancing speed, cost, and quality",
+      "Partner with engineering and data teams to define and enforce data quality standards, ensuring consistency and usability for downstream model training",
+      "Drive improvements in system reliability, utilization, and efficiency through instrumentation, feedback loops, and process optimization"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "robotics",
+    "data acquisition",
+    "DAQ",
+    "technical program management",
+    "cross-functional",
+    "systems engineering",
+    "data pipelines",
+    "capacity planning",
+    "hardware",
+    "model training",
+    "SLA",
+    "operational rigor",
+    "AGI",
+    "sensing systems"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Role owns a clearly defined product area (robotic DAQ systems) with concrete scope",
+    "Sits at intersection of Robotics Engineering, Operations, and Infrastructure — broad exposure",
+    "OpenAI Robotics team working toward AGI-level intelligence — high-impact mission",
+    "Clear list of core responsibilities with specificity (SLAs, capacity modeling, multi-site deployment)"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location specified — city, remote eligibility, and visa sponsorship all unclear",
+    "No explicit nice-to-haves provided, making it harder to gauge relative competitiveness",
+    "Visa sponsorship policy not stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ years requirement and scope of ownership)",
+      "scope.business_model (inferred from context: internal R&D/model training infrastructure)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly in JD)",
+      "location.type (inferred as onsite based on references to 'multiple sites', 'physical systems', 'DAQ stations'; no remote or hybrid language present)",
+      "location.remote_us_eligible (inferred as false; no remote language present)"
+    ],
+    "ambiguities": [
+      "Location/city is not specified anywhere in the JD. The reference to 'multiple sites' and physical hardware implies onsite but no city is named.",
+      "Visa sponsorship is not mentioned at all; treated as unclear.",
+      "All requirements appear under 'You might thrive in this role if you:' which is softer language than 'Required' or 'Must have', but the items are substantive experience requirements. Treated as hard must-haves given the unconditional framing and 5+ year threshold."
+    ]
+  }
+}

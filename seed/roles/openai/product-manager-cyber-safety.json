@@ -1,0 +1,243 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, Cyber Safety",
+  "url": "https://jobs.ashbyhq.com/openai/f6494cf8-efbc-4dbe-ae76-662088b4f32c",
+  "ats_provider": "ashby",
+  "ats_job_id": "f6494cf8-efbc-4dbe-ae76-662088b4f32c",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time in San Francisco, CA",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (Trust & Safety / Cybersecurity)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of product management or related industry roles",
+      "Specific expertise in AI safety, trust & safety, integrity, or related domains required",
+      "Expected to define strategic priorities and product roadmaps independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "Have 6+ years of product management or related industry roles, with specific expertise in AI safety, trust & safety, integrity, or related domains.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "qualifier": "with specific expertise in AI safety, trust & safety, integrity, or related domains",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI safety",
+        "trust & safety",
+        "integrity"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cybersecurity_background",
+      "raw_text_from_jd": "Have a background in cybersecurity.",
+      "skill_type": "domain_knowledge",
+      "domain": "cybersecurity",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "cybersecurity"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "adversarial_thinking",
+      "raw_text_from_jd": "This role suits a proactive, technically skilled product manager adept at adversarial thinking and excited to tackle challenging, ambiguous problems through structured analysis and collaborative decision-making.",
+      "skill_type": "capability",
+      "domain": "adversarial_security_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consensus_ambiguous_spaces",
+      "raw_text_from_jd": "Have hands-on experience driving consensus and action in ambiguous spaces.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "assumption_challenging",
+      "raw_text_from_jd": "Excel at identifying and challenging underlying assumptions and constraints through insightful questioning.",
+      "skill_type": "capability",
+      "domain": "critical_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Are highly effective at cross-functional collaboration and communicating complex technical concepts clearly and persuasively.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "interdisciplinary_curiosity",
+      "raw_text_from_jd": "Are deeply curious and interested in interdisciplinary fields such as human-computer interaction, psychology, philosophy, or similar areas.",
+      "skill_type": "cultural_fit",
+      "domain": "interdisciplinary_interests",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_paced_environment",
+      "raw_text_from_jd": "Enjoy working in a fast-paced, high-growth environment.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Cybersecurity risk within Safety Systems — frontier model deployment safety, safeguards, red-teaming, and adversarial safety evaluations",
+    "business_model": "AI research and deployment company (B2B and B2C products)",
+    "primary_metrics_inferred": [
+      "Safety performance metrics at scale",
+      "Deployment safety risk reduction",
+      "Reliability and safety system improvements",
+      "Ecosystem uplift against adversaries"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Engineering",
+      "Data Science",
+      "Policy",
+      "AI researchers",
+      "Software engineers"
+    ],
+    "core_responsibilities": [
+      "Partner closely with research, engineering, data science, policy teams, and other stakeholders to embed safety throughout the development and deployment of frontier AI models.",
+      "Develop comprehensive frameworks for understanding and mitigating deployment safety risks, drawing on data analysis, expert consultation, and adversarial assessments.",
+      "Define strategic priorities and product roadmaps focused on improving deployment safety, enhancing reliability, and managing emerging AI capabilities.",
+      "Create scalable methodologies, tools, and processes for evaluating, refining, and continuously improving our safety systems.",
+      "Establish repeatable processes to integrate cutting-edge AI safety research into OpenAI's models and product offerings.",
+      "Develop and continuously refine clear, actionable metrics that effectively capture safety performance and user experience at scale."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "cybersecurity",
+    "AI safety",
+    "trust & safety",
+    "frontier models",
+    "adversarial thinking",
+    "safety systems",
+    "product roadmap",
+    "red-teaming",
+    "deployment safety",
+    "misuse mitigation",
+    "safety metrics",
+    "AGI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Role has a clearly defined domain (cybersecurity risk / AI safety) — not vague",
+    "Relocation assistance explicitly offered",
+    "Cross-functional scope well-described (research, engineering, data science, policy)",
+    "OpenAI is a marquee employer in the AI space with strong mission alignment for safety-focused PMs"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship status not mentioned",
+    "Role requires onsite presence in San Francisco — eliminates remote candidates",
+    "JD uses 'You might thrive if' framing for all requirements, making hard vs. soft classification ambiguous across the board"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 6+ years requirement and scope of responsibilities)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.type (inferred as onsite from 'This position is based in San Francisco, CA' with no hybrid/remote language)",
+      "location.work_auth (inferred as open from equal opportunity language; no explicit restriction stated)"
+    ],
+    "ambiguities": [
+      "All requirements appear under 'You might thrive in this role if you:' framing, which is technically conditional/preferred language. However, given the specificity (6+ years, cybersecurity background) and OpenAI's typical hiring standards, these are treated as hard requirements. Items with softer signals (interdisciplinary curiosity, fast-paced environment comfort) are classified as nice_to_haves.",
+      "Visa sponsorship is not mentioned anywhere in the JD; marked as 'unclear'."
+    ]
+  }
+}

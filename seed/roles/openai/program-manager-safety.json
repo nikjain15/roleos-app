@@ -1,0 +1,251 @@
+{
+  "company": "OpenAI",
+  "role_title": "Program Manager, Safety",
+  "url": "https://jobs.ashbyhq.com/openai/0166f2cc-763b-41d7-9843-e5bc2e9ea5ed",
+  "ats_provider": "ashby",
+  "ats_job_id": "0166f2cc-763b-41d7-9843-e5bc2e9ea5ed",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in the office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager with safety/integrity domain focus",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Compensation range $162K-$240K USD consistent with senior IC at OpenAI",
+      "Extensive track record of delivering high-profile, complex projects",
+      "Directly partners with engineering and fundamental research teams of the highest caliber",
+      "Graduate degree or equivalent experience required"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "graduate_degree",
+      "raw_text_from_jd": "Graduate degree in computer science, engineering, management or equivalent experience.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "masters",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Graduate degree",
+        "computer science",
+        "engineering",
+        "management"
+      ]
+    },
+    {
+      "id": "complex_project_delivery",
+      "raw_text_from_jd": "Have an extensive track record of successfully delivering high-profile, complex projects against tight deadlines.",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_partnership",
+      "raw_text_from_jd": "Are technically versed, and have effectively partnered with engineering and fundamental research teams of the highest caliber.",
+      "skill_type": "capability",
+      "domain": "technical_cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "scalable_process_design",
+      "raw_text_from_jd": "Have expertise in designing and implementing simple, scalable processes that solve complex problems.",
+      "skill_type": "capability",
+      "domain": "process_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_resourcefulness",
+      "raw_text_from_jd": "Are relentlessly resourceful and thrive in ambiguous, fast-paced environments.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "content_integrity_knowledge",
+      "raw_text_from_jd": "Have strong knowledge of content integrity and moderation, including industry best practices and regulatory guidelines.",
+      "skill_type": "domain_knowledge",
+      "domain": "content_integrity_and_moderation",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Have exceptional written and verbal communication skills.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agi_safety_care",
+      "raw_text_from_jd": "Care about AGI safety.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_safety",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AGI"
+      ],
+      "industries_named": [
+        "AI safety"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Safety Systems — safety review processes, model and product launch readiness, risk tables, incident management, safeguards tooling",
+    "business_model": "AI research and deployment company",
+    "primary_metrics_inferred": [
+      "Safety review completion rate across model/product launches",
+      "Risk table coverage and mitigation resolution rate",
+      "Incident response turnaround time",
+      "Scalability and repeatability of safety processes"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Engineering",
+      "Integrity",
+      "Product",
+      "Strategy",
+      "Legal",
+      "Policy",
+      "User Operations"
+    ],
+    "core_responsibilities": [
+      "Coordinate cross-functional safety launch readiness across model and product releases, ensuring risk tables, mitigations, monitoring plans, and decision points are clearly tracked from early scoping through post-launch review.",
+      "Build operating rhythms across Safety Systems, Integrity, Strategy, User Operations, and engineering teams so safety learnings from past launches translate into concrete improvements to automated safeguards, tooling, and review processes.",
+      "Design and run key internal programs, including incident management and processes for regularly updating our safety mitigations.",
+      "Work directly with technical stakeholders to create scalable, repeatable safety processes."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      162000,
+      240000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "safety program manager",
+    "safety review",
+    "risk tables",
+    "launch readiness",
+    "cross-functional",
+    "content integrity",
+    "moderation",
+    "incident management",
+    "safeguards",
+    "AGI safety",
+    "scalable processes",
+    "red teaming",
+    "evaluations"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($162K-$240K USD)",
+    "Clear mission-driven role with well-defined responsibilities",
+    "Relocation assistance offered to new employees",
+    "Role has concrete, well-scoped ownership (safety review process, launch readiness, incident management)",
+    "Cross-functional exposure across research, engineering, legal, policy, and product"
+  ],
+  "red_flags": [
+    "No visa sponsorship information explicitly stated — unclear for international candidates",
+    "Onsite requirement is 3 days/week in San Francisco — eliminates remote candidates",
+    "No equity or benefits details disclosed beyond base salary range",
+    "Graduate degree listed under 'you might thrive if' framing but is a substantive credential expectation — classification boundary is ambiguous"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from compensation range and seniority signals; not explicitly stated)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.work_auth (inferred as open from equal opportunity statement; not explicitly addressed for work auth)",
+      "location.visa_sponsorship (not mentioned in JD; marked unclear)"
+    ],
+    "ambiguities": [
+      "All qualifications are framed under 'You might thrive in this role if you:' which softens the language, but the items read as substantive requirements rather than preferences. Classified as must_haves (hard) given the unconditional, non-'preferred' framing and the operational criticality of the role.",
+      "Graduate degree requirement uses 'or equivalent experience' — treated as hard credential with accepts_equivalent_experience: true.",
+      "Equity not mentioned anywhere in the JD — equity_mentioned set to false, though it is standard at OpenAI."
+    ]
+  }
+}

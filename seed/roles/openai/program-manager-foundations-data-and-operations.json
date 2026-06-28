@@ -1,0 +1,242 @@
+{
+  "company": "OpenAI",
+  "role_title": "Program Manager, Foundations Data and Operations",
+  "url": "https://jobs.ashbyhq.com/openai/73c24685-3508-489d-aa92-203761e79f19",
+  "ats_provider": "ashby",
+  "ats_job_id": "73c24685-3508-489d-aa92-203761e79f19",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "some hybrid travel to San Francisco; may require living close to some physical operations across the US",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Lead (8+ years experience signal)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in operations, strategy, venture capital, private equity, or consulting",
+      "at least 5 years operating within a company",
+      "Direct experience engaging with executives and senior leaders",
+      "End-to-end ownership of large, ambiguous problems"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_operations_strategy",
+      "raw_text_from_jd": "Have 8+ years of experience in operations, strategy, venture capital, private equity, or consulting, with at least 5 years operating within a company.",
+      "skill_type": "years_of_experience",
+      "domain": "operations_and_strategy",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "operations, strategy, VC, PE, or consulting with 5+ years operating within a company",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "top companies",
+        "venture capital",
+        "private equity",
+        "consulting firm"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_ownership_ambiguous_problems",
+      "raw_text_from_jd": "Have experience taking end-to-end ownership of large, ambiguous problems, and breaking them down into clear, actionable plans.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_engagement",
+      "raw_text_from_jd": "Have direct experience engaging with executives and senior leaders to influence and drive strategic decisions.",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "performance_under_pressure",
+      "raw_text_from_jd": "Excel under pressure, bringing a high motor and exceptional adaptability and flexibility in a fast-paced, dynamic environment.",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_sophistication",
+      "raw_text_from_jd": "Are highly analytical - sophisticated in your understanding and approach to analyses; ability to ask and answer the most important questions, and present results clearly to leaders to influence decision making.",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "all_altitudes_operating",
+      "raw_text_from_jd": "Are comfortable operating at all altitudes – discussing strategy and vision with executives, and troubleshooting operations with individual contributors and external partners.",
+      "skill_type": "capability",
+      "domain": "cross_functional_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_collaboration",
+      "raw_text_from_jd": "Have excellent communication and cross-functional collaboration skills.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_for_ai",
+      "raw_text_from_jd": "Are passionate about technology and artificial intelligence, and interested in its impact on business and society.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_interest",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "artificial intelligence"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Foundations Data and Operations — training data acquisition programs (web crawler, data partnerships, training datasets)",
+    "business_model": "internal research enablement at frontier AI company",
+    "primary_metrics_inferred": [
+      "Data quality metrics",
+      "Data throughput and efficiency",
+      "Overall program performance",
+      "Alignment with research roadmap timelines"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Executives / Senior Leadership",
+      "Vendors and external partners",
+      "Individual contributors"
+    ],
+    "core_responsibilities": [
+      "Work closely with research to understand data needs and define acquisition priorities and timeline",
+      "Translate research objectives into clear technical requirements and operational plans",
+      "Lead vendor and partner engagements for data sourcing – including evaluating suppliers, negotiating agreements, and managing delivery",
+      "Establish and maintain metrics for data quality, throughput, efficiency, and overall program performance",
+      "Identify gaps in our data ecosystem and proactively drive initiatives to strengthen our data acquisition and creation capabilities over time"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "program management",
+    "training data",
+    "data acquisition",
+    "frontier AI",
+    "operations",
+    "data partnerships",
+    "web crawler",
+    "vendor management",
+    "cross-functional",
+    "research roadmap",
+    "data quality",
+    "strategic thinking"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear description of team mission and scope (Foundations Data and Operations)",
+    "Specific callout that high-trajectory candidates with fewer years may be considered, indicating flexibility",
+    "Role has broad ownership and strategic impact — directly advances model intelligence",
+    "Cross-functional exposure across research, executives, and external partners"
+  ],
+  "red_flags": [
+    "Compensation not disclosed",
+    "Role may require living near physical operations across the US and hybrid travel to San Francisco — location flexibility is limited but not fully defined",
+    "8+ years experience threshold is high; exact scope of physical operations not described",
+    "No explicit mention of visa sponsorship"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and executive engagement signals)",
+      "scope.business_model (inferred from team description as internal research enablement)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated as KPIs)",
+      "location.remote_us_eligible (inferred false from hybrid travel and physical operations language)",
+      "compensation.equity_mentioned (inferred false; not stated in JD)"
+    ],
+    "ambiguities": [
+      "Location is ambiguous: JD says 'some hybrid travel to San Francisco' and 'living close to some physical operations across the US' but does not name a primary base city or specify whether fully remote is permitted. Treated as hybrid with San Francisco as the named city.",
+      "Years of experience: JD states 8+ years overall but also says 'We will also consider high-trajectory candidates with fewer years of experience but at top companies with a clear track record of excellence' — making the 8-year floor soft in practice. Classified as hard severity per schema rules but flagged here.",
+      "Visa sponsorship is not mentioned anywhere in the JD body. Treated as unclear."
+    ]
+  }
+}

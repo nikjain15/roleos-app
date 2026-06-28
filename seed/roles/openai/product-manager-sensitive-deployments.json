@@ -1,0 +1,279 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, Sensitive Deployments",
+  "url": "https://jobs.ashbyhq.com/openai/05a8cae8-81bd-4f7b-bc48-41ef1bd67e5d",
+  "ats_provider": "ashby",
+  "ats_job_id": "05a8cae8-81bd-4f7b-bc48-41ef1bd67e5d",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (Trust & Safety / Integrity)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Expected to own full roadmap for sensitive deployment Integrity controls",
+      "Must turn ambiguous policy/threat-model questions into product requirements",
+      "High-consequence, cross-functional scope across Policy, Legal, Privacy, Safety Systems, Government"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "shipped_complex_product_systems",
+      "raw_text_from_jd": "Have shipped complex product systems in AI, integrity, trust and safety, security, privacy, risk, government, regulated enterprise, or AI safety.",
+      "skill_type": "outcome",
+      "domain": "product_management_complex_systems",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [
+        "integrity",
+        "trust and safety",
+        "security",
+        "privacy",
+        "risk",
+        "government",
+        "regulated enterprise",
+        "AI safety"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "policy_to_product_translation",
+      "raw_text_from_jd": "Can turn ambiguous policy and threat-model questions into product requirements, metrics, operational workflows, and tradeoff frameworks.",
+      "skill_type": "capability",
+      "domain": "policy_product_translation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agentic_ai_product_interest",
+      "raw_text_from_jd": "Are energized by agentic AI products and want to build the platform layer that makes them safer to deploy.",
+      "skill_type": "domain_knowledge",
+      "domain": "agentic_ai",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "agentic AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "security_privacy_responsible_deployment",
+      "raw_text_from_jd": "Care about security, privacy, and responsible deployment, while still wanting to build concrete product systems.",
+      "skill_type": "cultural_fit",
+      "domain": "security_privacy_responsible_ai",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "security",
+        "privacy"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "roadmap_ownership_integrity_controls",
+      "raw_text_from_jd": "Own the roadmap for sensitive deployment Integrity controls and readiness criteria.",
+      "skill_type": "capability",
+      "domain": "product_roadmap_integrity",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "integrity"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "residual_risk_metrics_definition",
+      "raw_text_from_jd": "Define how we measure residual risk, decision quality, review quality, and mitigation effectiveness.",
+      "skill_type": "capability",
+      "domain": "risk_measurement",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agentic_investigation_workflows",
+      "raw_text_from_jd": "Build agentic investigation and context-assembly workflows for complex, multi-step misuse patterns.",
+      "skill_type": "capability",
+      "domain": "agentic_workflows_trust_safety",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "agentic AI"
+      ],
+      "industries_named": [
+        "trust and safety"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_partnership",
+      "raw_text_from_jd": "Partner with Policy, Legal, Privacy, Safety Systems, User Ops, Government, and product teams to build shared capabilities.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "government"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "deployment_playbooks",
+      "raw_text_from_jd": "Create launch and deployment playbooks for sensitive customer, capability, and product contexts.",
+      "skill_type": "capability",
+      "domain": "go_to_market_launch_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Integrity controls for sensitive deployments: government, high-trust enterprise, privacy-constrained environments, agentic workflows",
+    "business_model": "B2B / enterprise including government; internal platform",
+    "primary_metrics_inferred": [
+      "Residual risk measurement",
+      "Decision quality and review quality",
+      "Mitigation effectiveness",
+      "Deployment readiness criteria"
+    ],
+    "cross_functional_partners": [
+      "Policy",
+      "Legal",
+      "Privacy",
+      "Safety Systems",
+      "User Operations",
+      "Security",
+      "OpenAI for Government",
+      "Research",
+      "Product"
+    ],
+    "core_responsibilities": [
+      "Own the roadmap for sensitive deployment Integrity controls and readiness criteria",
+      "Define how we measure residual risk, decision quality, review quality, and mitigation effectiveness",
+      "Build agentic investigation and context-assembly workflows for complex, multi-step misuse patterns",
+      "Partner with Policy, Legal, Privacy, Safety Systems, User Ops, Government, and product teams to build shared capabilities",
+      "Create launch and deployment playbooks for sensitive customer, capability, and product contexts"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "sensitive deployments",
+    "integrity",
+    "trust and safety",
+    "agentic AI",
+    "government",
+    "misuse",
+    "residual risk",
+    "zero data retention",
+    "privacy-constrained",
+    "deployment playbooks",
+    "threat model",
+    "regulated enterprise"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product ownership area with high-consequence, high-visibility scope",
+    "Relocation assistance offered explicitly",
+    "Broad cross-functional exposure across Policy, Legal, Privacy, Safety Systems, Government, Research",
+    "Timely domain — agentic AI safety and government deployments are rapidly growing areas",
+    "Role appears to be building new reusable platform capabilities, not just maintenance"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No years of experience stated, making seniority expectations opaque",
+    "Visa sponsorship and work authorization not mentioned",
+    "No explicit 'nice to have' section — all requirements are implicitly hard, raising the bar",
+    "Onsite in San Francisco only — no remote option mentioned, eliminates non-SF candidates",
+    "Highly niche domain intersection (government + agentic AI + integrity) significantly narrows qualified candidate pool"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from scope ownership, cross-functional leadership, and complexity of deliverables; no explicit seniority level stated)",
+      "seniority.manages_people (inferred as false; no people management mentioned)",
+      "scope.business_model (inferred from government/enterprise deployment context)",
+      "scope.primary_metrics_inferred (inferred from 'Define how we measure residual risk, decision quality, review quality, and mitigation effectiveness')",
+      "location.remote_us_eligible (inferred as false from 'This position is based in San Francisco, CA')",
+      "compensation.equity_mentioned (inferred as false; not mentioned in JD)"
+    ],
+    "ambiguities": [
+      "All requirements appear in a 'You might thrive in this role if you:' section, which is softer framing than 'Required', yet the items read as substantive hard requirements (shipped systems, domain expertise). Treated as hard per extraction rules.",
+      "Work authorization and visa sponsorship are not addressed anywhere in the JD body.",
+      "No explicit seniority label (Senior PM, Staff PM, etc.) is given; level inferred from scope alone."
+    ]
+  }
+}

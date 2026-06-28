@@ -1,0 +1,188 @@
+{
+  "company": "OpenAI",
+  "role_title": "Technical Program Manager – Adversarial Model Research",
+  "url": "https://jobs.ashbyhq.com/openai/65913e57-80e0-4a1a-bbc3-265ae8a1a41b",
+  "ats_provider": "ashby",
+  "ats_job_id": "65913e57-80e0-4a1a-bbc3-265ae8a1a41b",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in the office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Safety / Red-Teaming TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Lead programs across research and engineering teams",
+      "Shape programs from the ground up under high ambiguity",
+      "Strong experience in technical program management required"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "tpm_experience",
+      "raw_text_from_jd": "Have strong experience in technical program management, with excellent organizational and communication skills.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "llm_familiarity",
+      "raw_text_from_jd": "Are familiar with large language models, prompt engineering, or model evaluation techniques.",
+      "skill_type": "domain_knowledge",
+      "domain": "large_language_models",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "large language models",
+        "prompt engineering",
+        "model evaluation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_management",
+      "raw_text_from_jd": "Are comfortable managing fast-paced, high-uncertainty projects and shaping them from the ground up.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "creative_testing",
+      "raw_text_from_jd": "Are creative and resourceful in devising new methods for testing model behavior and performance.",
+      "skill_type": "capability",
+      "domain": "model_evaluation",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_coordination",
+      "raw_text_from_jd": "Can effectively coordinate across technical and non-technical stakeholders to drive alignment and execution.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Adversarial model research and red-teaming evaluations within the Human Data team",
+    "business_model": "AI research and deployment company",
+    "primary_metrics_inferred": [
+      "Model safety and robustness improvements",
+      "Identification and mitigation of failure modes",
+      "Velocity of red-teaming campaigns and evaluation cycles"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Engineering",
+      "Product",
+      "Deployment teams"
+    ],
+    "core_responsibilities": [
+      "Lead programs that explore unexpected model behaviors and identify failure modes.",
+      "Translate vague or emergent risk signals into clear priorities and actionable research plans.",
+      "Design and run creative evaluations, experiments, and red-teaming campaigns.",
+      "Collaborate with research, product, and deployment teams to integrate findings into model training and deployment cycles.",
+      "Develop repeatable systems for tracking model performance and understanding emerging behavior patterns."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "technical program management",
+    "adversarial model research",
+    "red-teaming",
+    "model evaluation",
+    "large language models",
+    "prompt engineering",
+    "AI safety",
+    "failure modes",
+    "human data",
+    "model robustness"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface and team mission (Human Data team focused on AI safety)",
+    "Relocation assistance offered",
+    "Hybrid policy explicitly stated (3 days/week)",
+    "Role sits at the intersection of safety research and program execution — high-impact work",
+    "OpenAI is a top-tier AI employer with significant resources and research credibility"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship status not mentioned — unclear for international applicants",
+    "All requirements framed as 'You might thrive if you...' making hard vs. soft classification ambiguous — all treated as hard given unconditional framing in context",
+    "No specific years of experience stated — seniority level difficult to calibrate"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from scope of responsibilities and 'strong experience' signal; not stated explicitly)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
+      "compensation.equity_mentioned (inferred as false; not mentioned)"
+    ],
+    "ambiguities": [
+      "All must_haves are drawn from the 'You might thrive in this role if you:' section. This phrasing could imply nice-to-haves, but the items read as baseline competency requirements for the role. Classified as hard severity. Flagged for recruiter confirmation.",
+      "Visa sponsorship is not mentioned anywhere in the JD; set to 'unclear'."
+    ]
+  }
+}

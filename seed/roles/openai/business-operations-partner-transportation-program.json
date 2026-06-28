@@ -1,0 +1,242 @@
+{
+  "company": "OpenAI",
+  "role_title": "Business Operations Partner, Transportation Program",
+  "url": "https://jobs.ashbyhq.com/openai/a4787fb2-94d7-4b8e-b82c-093663e4ee85",
+  "ats_provider": "ashby",
+  "ats_job_id": "a4787fb2-94d7-4b8e-b82c-093663e4ee85",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in the office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager (Workplace/Transportation)",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years of experience in business operations, workplace operations, program coordination, or similar roles"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_biz_ops_experience",
+      "raw_text_from_jd": "Have 4+ years of experience in business operations, workplace operations, program coordination, employee experience, or similar roles.",
+      "skill_type": "years_of_experience",
+      "domain": "business_operations_or_workplace_ops",
+      "minimum_value": 4,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Bring strong written and verbal communication skills, with the ability to summarize complex or nuanced topics clearly.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organization_and_detail_orientation",
+      "raw_text_from_jd": "Are highly organized, detail-oriented, and able to manage multiple priorities while following through reliably.",
+      "skill_type": "capability",
+      "domain": "organization_and_prioritization",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_trust_building",
+      "raw_text_from_jd": "Build trust across teams and are comfortable partnering with internal stakeholders in sensitive or nuanced situations.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "navigate_ambiguity",
+      "raw_text_from_jd": "Navigate ambiguity with sound judgment, curiosity, and a solutions-oriented mindset.",
+      "skill_type": "cultural_fit",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "workplace_or_ops_industry_experience",
+      "raw_text_from_jd": "Have experience working in workplace, hospitality, real estate, operations, internal service environments, or cross-functional programs.",
+      "skill_type": "domain_knowledge",
+      "domain": "workplace_or_real_estate_or_hospitality_ops",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "workplace",
+        "hospitality",
+        "real estate"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management_tools",
+      "raw_text_from_jd": "Are comfortable using project management tools, spreadsheets, and workflow systems to create clarity and momentum.",
+      "skill_type": "tool_proficiency",
+      "domain": "project_management_and_operations_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "travel_and_global_support",
+      "raw_text_from_jd": "Are able to travel at minimum 1-2 times per quarter and support transportation needs across APAC, LATAM, and EMEA.",
+      "skill_type": "capability",
+      "domain": "global_program_support",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "APAC",
+        "LATAM",
+        "EMEA"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Transportation Program within Real Estate & Workplace (REW) organization — employee transportation across offices and regions",
+    "business_model": "internal operations / employee services (non-revenue)",
+    "primary_metrics_inferred": [
+      "Employee transportation experience quality",
+      "Stakeholder follow-through and response rate",
+      "Operational readiness for office openings and moves"
+    ],
+    "cross_functional_partners": [
+      "Events",
+      "Design & Construction",
+      "Food",
+      "Security",
+      "Facilities",
+      "Workplace Operations"
+    ],
+    "core_responsibilities": [
+      "Build strong working relationships across REW, including Events, Design & Construction, Food, Security, Facilities, and Workplace Operations.",
+      "Partner with teams across the company to understand transportation-related needs, coordinate next steps, and ensure transportation considerations are reflected in broader workplace planning.",
+      "Represent the Transportation team in meetings, planning discussions, and cross-functional initiatives as needed.",
+      "Gather input, questions, and feedback from employees and internal partners, summarize nuanced issues clearly, and route requests to the appropriate owner, resource, or process.",
+      "Track open items and help ensure timely follow-up across stakeholders and team priorities.",
+      "Support internal team planning through trackers, documentation, notes, timelines, and action items.",
+      "Help organize recurring business rhythms, project milestones, operational priorities, and readiness activities tied to office openings, moves, or workplace changes.",
+      "Draft clear internal communications, updates, FAQs, and guidance materials that help partners understand available transportation programs, processes, and tools.",
+      "Improve internal processes that help the team stay organized, responsive, and able to support a smooth employee transportation experience as the company grows."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "business operations",
+    "transportation program",
+    "workplace operations",
+    "program coordination",
+    "cross-functional",
+    "stakeholder management",
+    "Real Estate & Workplace",
+    "employee experience",
+    "internal communications",
+    "process improvement",
+    "APAC LATAM EMEA"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Clear scope and ownership area within a named team (Transportation, part of REW)",
+    "Relocation assistance offered to new employees",
+    "Specific cross-functional partners named, signaling an organized team structure",
+    "Role responsibilities are detailed and concrete rather than vague"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship status not mentioned",
+    "Role is an internal ops support function with limited strategic or career-growth signals in the JD",
+    "Travel requirement (1-2x per quarter to APAC, LATAM, EMEA) may be a constraint not prominently flagged in the headline"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred as Mid-Senior IC from 4+ years requirement; no explicit level stated)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "scope.business_model (inferred as internal ops/employee services; not stated)",
+      "compensation.equity_mentioned (not mentioned; defaulted to false)"
+    ],
+    "ambiguities": [
+      "The 'You might thrive in this role if you:' framing is softer than 'Required', but all bullet points read as substantive qualifications expected of candidates. Classified as must_haves (hard) because they are unconditional bullets describing the expected candidate profile without 'preferred' or 'bonus' language.",
+      "Visa sponsorship is neither confirmed nor denied in the JD; set to 'unclear'."
+    ]
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "company": "Twilio",
+  "role_title": "Product Manager L3",
+  "url": "https://job-boards.greenhouse.io/twilio/jobs/7980740",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7980740",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-global",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "occasional travel for project or team in-person meetings",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM",
+  "seniority": {
+    "level": "Staff PM / Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Job title is 'Product Manager L3' but body refers to 'Staff Product Manager'",
+      "Minimum of 6 years of experience in product management",
+      "Owns cross-functional execution and roadmap planning independently",
+      "Compensation range CAD $120,640 - $150,800 consistent with senior/staff IC in Canada"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_saas_iaas_paas",
+      "raw_text_from_jd": "Minimum of 6 years of experience in product management in SaaS, IaaS or PaaS.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "qualifier": "SaaS, IaaS or PaaS",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SaaS",
+        "IaaS",
+        "PaaS"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_systems_state_management",
+      "raw_text_from_jd": "Proven track record managing complex systems: experience managing core workflows and complex state-management systems",
+      "skill_type": "capability",
+      "domain": "systems_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_acumen",
+      "raw_text_from_jd": "Technical Acumen: Ability to partner deeply with Engineering to understand technical requirements, navigate complex system architectures, and resolve cross-team dependencies",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_decision_making",
+      "raw_text_from_jd": "Data-Driven Decision Making: Command of analytical thinking skills with the ability to use product analytics and quantitative data to monitor metrics, drive decisions, and measure outcomes",
+      "skill_type": "capability",
+      "domain": "product_analytics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_management_collaboration",
+      "raw_text_from_jd": "Stakeholder Management & Collaboration: Excellent communication and cross-team collaboration skills, with a demonstrated ability to align and influence Engineering, Design, and compliance stakeholders",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "execution_ambiguity",
+      "raw_text_from_jd": "Execution & Dealing with Ambiguity: Initiative, ownership, and accountability to break down complex problems, build clear roadmaps, and ruthlessly prioritize competing features in a fast-paced environment",
+      "skill_type": "capability",
+      "domain": "product_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors_cs_eng",
+      "raw_text_from_jd": "Bachelor's in Computer Science, Engineering, or equivalent practical experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's in Computer Science",
+        "Bachelor's in Engineering"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "growth_plg_api_onboarding",
+      "raw_text_from_jd": "Experience building growth and PLG workflows for products/services related to APIs, developer experience, and onboarding",
+      "skill_type": "domain_knowledge",
+      "domain": "growth_plg_developer_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "telecom_kyc_regulated_ecosystems",
+      "raw_text_from_jd": "Experience working with telecommunications, KYC, or other highly regulated ecosystems",
+      "skill_type": "domain_knowledge",
+      "domain": "regulated_industries",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "telecommunications",
+        "KYC"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Sender Onboarding — sender administration, provisioning, compliance onboarding, and sender recommender experience",
+    "business_model": "B2B SaaS / CPaaS (developer and enterprise communications platform)",
+    "primary_metrics_inferred": [
+      "Funnel health and conversion through sender onboarding",
+      "Provisioning volume and auto-scaling throughput",
+      "Customer friction reduction (drop-off, error rates)",
+      "International sender expansion adoption"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "KYC Product Managers",
+      "Compliance stakeholders"
+    ],
+    "core_responsibilities": [
+      "Own and optimize core purchase workflows including sender recommendation experience, exclusive number provisioning, porting and hosting",
+      "Drive platform orchestration for unified experience via cross-console ingress/egress, checklist state management, and intent-based routing",
+      "Lead cross-functional execution with Engineering, Design, and KYC PMs to embed compliance and autoregistration into customer journey",
+      "Drive data-driven decision making using product analytics and dashboards to monitor funnel health and identify friction",
+      "Manage end-to-end roadmap planning, prioritization, dependency resolution, and stakeholder alignment"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "base_range_local": [
+      120640,
+      150800
+    ],
+    "local_currency": "CAD",
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants mentioned as possible additional compensation",
+    "bonus_mentioned": true,
+    "bonus_detail": "Target Bonus Percentage 12.5%",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "sender onboarding",
+    "provisioning",
+    "state management",
+    "intent-based routing",
+    "sender recommendation",
+    "KYC",
+    "compliance",
+    "PLG",
+    "product analytics",
+    "roadmap",
+    "cross-functional",
+    "telecommunications",
+    "SaaS",
+    "CPaaS",
+    "funnel health"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed (CAD $120,640 - $150,800) with bonus target specified (12.5%)",
+    "Remote-first company culture explicitly stated",
+    "Encourages non-traditional career paths to apply",
+    "Clear product surface and ownership area defined",
+    "Concrete responsibilities with specific workflows described"
+  ],
+  "red_flags": [
+    "Role title says 'Product Manager L3' but body refers to 'Staff Product Manager' — level labeling is inconsistent and worth clarifying",
+    "Restricted to Ontario, British Columbia, or Alberta, Canada — eliminates candidates outside these provinces",
+    "Visa sponsorship and work authorization not addressed in JD",
+    "Equity mentioned only as a possibility ('may also be eligible'), not guaranteed"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level inferred from years required (6+), role scope, and compensation range",
+      "scope.business_model inferred from product description and company context",
+      "scope.primary_metrics_inferred derived from responsibilities, not stated explicitly",
+      "location.remote_us_eligible inferred as false from explicit Canada-only province restriction",
+      "compensation.base_range_usd left null as compensation is stated in CAD only"
+    ],
+    "ambiguities": [
+      "Role title is 'Product Manager L3' in the metadata/header but the body intro reads 'Staff Product Manager - Sender Onboarding' — it is unclear whether L3 maps to Staff at Twilio or if these are different seniority signals",
+      "Work authorization and visa sponsorship are not mentioned at all in the JD; set to 'unclear'"
+    ]
+  }
+}

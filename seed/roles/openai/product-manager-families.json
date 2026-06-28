@@ -1,0 +1,214 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, Families",
+  "url": "https://jobs.ashbyhq.com/openai/11a61b5b-3c1f-472f-93ec-4cb3e37e5ae8",
+  "ats_provider": "ashby",
+  "ats_job_id": "11a61b5b-3c1f-472f-93ec-4cb3e37e5ae8",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager (consumer safety / families focus)",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of product management experience",
+      "Leading large-scale consumer or platform products",
+      "End-to-end product ownership from concept through launch and iteration"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "Have 7+ years of product management experience leading large-scale consumer or platform products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "qualifier": "leading large-scale consumer or platform products",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer",
+        "platform products"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "families_or_trust_experience",
+      "raw_text_from_jd": "Have experience building for parents, families, or in trust-sensitive products.",
+      "skill_type": "domain_knowledge",
+      "domain": "family_products_or_trust_sensitive",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_judgment",
+      "raw_text_from_jd": "Have strong product judgment and can simplify complex problems.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_collaboration_and_shipping",
+      "raw_text_from_jd": "Work effectively with technical teams and ship high-quality products.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_and_user_focused",
+      "raw_text_from_jd": "Are analytical, user-focused, and an excellent cross-functional communicator.",
+      "skill_type": "capability",
+      "domain": "analytics_and_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_mission_alignment",
+      "raw_text_from_jd": "Care deeply about using AI to improve everyday life.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_mission",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Family product experiences across OpenAI products, including ChatGPT and related AI tools for families, caregivers, and older adults",
+    "business_model": "B2C consumer AI products",
+    "primary_metrics_inferred": [
+      "Family and teen user safety and engagement",
+      "Adoption of family-oriented features (parental controls, age prediction, crisis support)",
+      "User trust and satisfaction among families and caregivers"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Research",
+      "Policy",
+      "Legal",
+      "Communications",
+      "Finance",
+      "Operations"
+    ],
+    "core_responsibilities": [
+      "Set the product strategy for Family experiences across OpenAI products.",
+      "Identify user needs and turn them into high-impact product opportunities, owning products end-to-end, from concept through launch and iteration.",
+      "Build experiences that balance usefulness, simplicity, trust, safety, and accessibility.",
+      "Define success metrics and use data and research to guide roadmap decisions.",
+      "Partner cross-functionally to execute quickly and effectively."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "families",
+    "parental controls",
+    "youth well-being",
+    "age prediction",
+    "ChatGPT",
+    "consumer product",
+    "safety",
+    "trust",
+    "cross-functional",
+    "AI",
+    "product strategy",
+    "roadmap"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "High-impact social mission: safety and well-being for teens and families",
+    "Relocation assistance explicitly offered",
+    "Broad cross-functional scope provides visibility and influence across policy, legal, research, and engineering",
+    "Clear product surface with meaningful differentiation (youth/family-specific AI safety work)",
+    "OpenAI brand and access to state-of-the-art AI models"
+  ],
+  "red_flags": [
+    "Compensation not disclosed in JD",
+    "Visa sponsorship not mentioned — unclear for international applicants",
+    "Role is onsite in San Francisco only; no remote or hybrid option stated",
+    "The JD conflates 'must have' and 'nice to have' language under 'You might thrive if you:' phrasing, making it difficult to distinguish hard requirements from preferences"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement and scope of responsibilities)",
+      "scope.business_model (inferred from product description: consumer AI products)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (inferred as onsite from 'This position is based in San Francisco, CA'; no hybrid or remote option stated)",
+      "compensation.equity_mentioned (not referenced anywhere in JD)"
+    ],
+    "ambiguities": [
+      "All requirements appear under 'You might thrive in this role if you:' which technically implies preferences, not hard requirements. However, the items listed (7+ years PM experience, building for families/trust, strong product judgment, shipping with technical teams, analytical ability) are substantive qualifications rather than soft cultural traits. Classified as hard must_haves per the 'unclear → prefer hard' rule, with this ambiguity noted.",
+      "Visa sponsorship is not addressed in the JD body, only equal opportunity employment is mentioned. Set to 'unclear'."
+    ]
+  }
+}

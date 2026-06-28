@@ -1,0 +1,360 @@
+{
+  "company": "OpenAI",
+  "role_title": "Supply Chain Program Manager SCPM - AI Infrastructure",
+  "url": "https://jobs.ashbyhq.com/openai/c3458423-2cd6-40c0-bb5d-a5c3726a1d08",
+  "ats_provider": "ashby",
+  "ats_job_id": "c3458423-2cd6-40c0-bb5d-a5c3726a1d08",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "us-person-required",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Supply Chain / Hardware Operations Program Manager",
+  "seniority": {
+    "level": "Senior IC (likely Senior or Staff TPM)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in Supply Chain Program Management or related roles",
+      "Compensation range $226K-$285K USD consistent with Senior/Staff IC at OpenAI",
+      "Expected to lead executive-level program updates and establish governance models"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree in Supply Chain, Engineering, Operations, Business, or related field.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree in Supply Chain",
+        "Bachelor's degree in Engineering",
+        "Bachelor's degree in Operations",
+        "Bachelor's degree in Business"
+      ]
+    },
+    {
+      "id": "years_supply_chain_pm",
+      "raw_text_from_jd": "8+ years of experience in Supply Chain Program Management, Material Program Management, Commodity Management, Strategic Sourcing, or related hardware supply chain roles.",
+      "skill_type": "years_of_experience",
+      "domain": "supply_chain_program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "npi_production_ramp_experience",
+      "raw_text_from_jd": "Experience supporting complex hardware products through NPI and production ramps.",
+      "skill_type": "domain_knowledge",
+      "domain": "NPI_and_production_ramp",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_supply_chain_knowledge",
+      "raw_text_from_jd": "Strong understanding of hardware supply chains, material planning, and supplier operations.",
+      "skill_type": "domain_knowledge",
+      "domain": "hardware_supply_chain",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "constrained_supply_management",
+      "raw_text_from_jd": "Experience managing constrained supply environments and long lead-time commodities.",
+      "skill_type": "domain_knowledge",
+      "domain": "supply_constraint_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "odm_cm_supplier_experience",
+      "raw_text_from_jd": "Experience working with ODMs, CMs, and global supplier ecosystems.",
+      "skill_type": "domain_knowledge",
+      "domain": "supplier_and_manufacturing_partner_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "ODMs",
+        "CMs"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_pm_communication_skills",
+      "raw_text_from_jd": "Strong analytical, program management, and executive communication skills.",
+      "skill_type": "capability",
+      "domain": "program_management_and_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_alignment",
+      "raw_text_from_jd": "Ability to drive cross-functional alignment in ambiguous and fast-moving environments.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_ml_infra_experience",
+      "raw_text_from_jd": "Experience supporting AI/ML infrastructure, servers, networking, storage, or custom silicon programs.",
+      "skill_type": "domain_knowledge",
+      "domain": "AI_ML_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML infrastructure",
+        "custom silicon"
+      ],
+      "industries_named": [
+        "AI",
+        "hyperscale infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "asic_hbm_memory_supply_chain",
+      "raw_text_from_jd": "Experience with ASIC supply chains, advanced packaging, HBM/DDR memory ecosystems, or hyperscale infrastructure deployments.",
+      "skill_type": "domain_knowledge",
+      "domain": "ASIC_and_memory_supply_chain",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ASIC",
+        "advanced packaging",
+        "HBM",
+        "DDR"
+      ],
+      "industries_named": [
+        "hyperscale infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "erp_mrp_plm_familiarity",
+      "raw_text_from_jd": "Familiarity with ERP/MRP/PLM systems, BOM structuring, and supply planning tools.",
+      "skill_type": "tool_proficiency",
+      "domain": "enterprise_supply_chain_systems",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "ERP",
+        "MRP",
+        "PLM"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "supply_resiliency_second_source",
+      "raw_text_from_jd": "Experience building supply resiliency and second-source strategies.",
+      "skill_type": "domain_knowledge",
+      "domain": "supply_resiliency",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "constrained_scaling_environments",
+      "raw_text_from_jd": "Experience operating in highly constrained and rapidly scaling environments.",
+      "skill_type": "domain_knowledge",
+      "domain": "operational_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Supply chain execution for AI infrastructure hardware programs including custom silicon, systems, memory, storage, networking, and rack infrastructure",
+    "business_model": "internal infrastructure / AI supercomputing platform",
+    "primary_metrics_inferred": [
+      "Material readiness against NPI and production schedules",
+      "Supply shortage and allocation risk reduction",
+      "Supply lead time and inventory health KPIs",
+      "On-time delivery for proto/EVT/DVT/PVT/mass production builds"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Strategic Sourcing",
+      "Manufacturing Operations",
+      "Finance",
+      "Planning",
+      "Quality",
+      "ODMs",
+      "CMs",
+      "External Suppliers",
+      "Commodity Management"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end material readiness across NPI and production phases, including building the necessary framework and processes for enablement",
+      "Drive supply planning and execution for long lead-time and constrained commodities including ASICs, HBM, DDR, SSDs, networking, optics, power, thermal, and mechanicals",
+      "Build and manage material readiness plans aligned to proto/pre-EVT, EVT, DVT, PVT, and mass production schedules",
+      "Monitor supply health, lead times, inventory positions, allocation risk, and capacity constraints",
+      "Drive shortage management, allocation mitigation, and recovery planning",
+      "Partner with Engineering to translate product requirements into executable supply chain strategies",
+      "Lead material reviews, supply risk assessments, and executive-level program updates",
+      "Establish governance models and operating cadences across internal and external stakeholders",
+      "Drive supplier accountability around lead times, commits, recovery plans, and escalation management",
+      "Build dashboards and KPI frameworks for supply readiness, shortages, inventory exposure, and operational health",
+      "Drive continuous improvement initiatives across supply chain execution and operational processes"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      226000,
+      285000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Supply Chain Program Management",
+    "Material Readiness",
+    "NPI",
+    "ASIC",
+    "HBM",
+    "DDR",
+    "Custom Silicon",
+    "AI Infrastructure",
+    "ODM",
+    "CM",
+    "Long Lead-Time Commodities",
+    "Supply Resiliency",
+    "Rack Infrastructure",
+    "Shortage Management",
+    "ERP/MRP/PLM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($226K-$285K base)",
+    "Clear scope and ownership area around AI infrastructure hardware supply chain",
+    "Detailed responsibilities indicate a well-defined role with executive visibility",
+    "Role tied to OpenAI's proprietary silicon program (Jalapeño and successors) — high-impact work"
+  ],
+  "red_flags": [
+    "Location not stated anywhere in the JD — work arrangement (remote/hybrid/onsite) and city are unclear",
+    "Export control language ('candidates for this role may need to meet certain legal status requirements') implies potential US-person requirement but is not explicitly stated — ambiguous work authorization requirements",
+    "Visa sponsorship status not mentioned",
+    "Equity not mentioned despite competitive base range — total comp picture incomplete"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and years requirement)",
+      "scope.business_model (inferred from team description — internal AI supercomputing platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not explicitly listed in JD)",
+      "location.type (not stated in JD; marked as unclear)",
+      "location.remote_us_eligible (not stated; defaulted to false given no remote mention)"
+    ],
+    "ambiguities": [
+      "Export control clause states candidates 'may need to meet certain legal status requirements' — this could imply US citizenship or US person status but is not explicit. Treated as 'us-person-required' with 'unclear' visa sponsorship.",
+      "No office location or city is specified in the JD, making it impossible to determine work arrangement type. Marked as 'unclear'.",
+      "Equity not mentioned despite comp range being at senior IC levels at OpenAI where equity is typical — omission may be an oversight in the JD."
+    ]
+  }
+}

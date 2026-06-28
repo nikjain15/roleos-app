@@ -1,0 +1,186 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, API Agents",
+  "url": "https://jobs.ashbyhq.com/openai/fc38c6bf-5330-435c-99b6-1bcf1f5829a8",
+  "ats_provider": "ashby",
+  "ats_job_id": "fc38c6bf-5330-435c-99b6-1bcf1f5829a8",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of product management or related industry experience",
+      "Proven track record of building for developers",
+      "Experience collaborating directly and deeply with high-growth tech companies"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "Have 5+ years of product management or related industry experience.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_building_track_record",
+      "raw_text_from_jd": "Proven track record of building for developers, with strong intuition for designing clear, flexible APIs and primitives that scale from early experimentation to production use.",
+      "skill_type": "outcome",
+      "domain": "developer_products",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_growth_tech_collaboration",
+      "raw_text_from_jd": "Have experience collaborating directly and deeply with high-growth tech companies.",
+      "skill_type": "domain_knowledge",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth tech companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_consensus_driving",
+      "raw_text_from_jd": "Have hands-on experience driving consensus and action in ambiguous spaces.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Excel at collaborating across diverse teams and communicating complex ideas clearly.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Agentic infrastructure and developer products for the OpenAI API (SDKs, APIs, primitives for building agent applications)",
+    "business_model": "developer-facing API platform, B2B and B2D",
+    "primary_metrics_inferred": [
+      "Developer adoption of agentic APIs and SDKs",
+      "Speed and reliability of agent builder workflows",
+      "Production usage at scale"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Engineering",
+      "Customers / developers"
+    ],
+    "core_responsibilities": [
+      "Deeply understand problems faced by agent builders and identify opportunities where products and models can make building agents faster, more intuitive, more reliable, and more powerful",
+      "Define strategic priorities and roadmap for improving agentic infrastructure for API users",
+      "Partner with research and engineering teams at a technical level to translate priorities into developer products and features (SDKs, APIs, and more)",
+      "Deliver quickly while maintaining a high bar for product quality and user experience"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "agentic applications",
+    "API",
+    "SDKs",
+    "developer tools",
+    "AI models",
+    "agent builders",
+    "agentic infrastructure",
+    "product management",
+    "technical PM",
+    "OpenAI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface with specific ownership (agentic infrastructure for API users)",
+    "Relocation assistance explicitly offered",
+    "High-visibility role at a leading AI company working directly on developer-facing agentic products",
+    "Close collaboration with research and engineering teams signals technical depth of role"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed",
+    "Visa sponsorship not mentioned; unclear for international candidates",
+    "Role is onsite in San Francisco only — no remote option indicated",
+    "JD requirements section uses 'You might thrive in this role if you:' framing, which makes hard vs. soft distinction ambiguous for all listed requirements"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ years requirement and role scope)",
+      "scope.business_model (inferred from API/developer platform description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (inferred as onsite from 'This position is based in San Francisco, CA'; no hybrid or remote language present)"
+    ],
+    "ambiguities": [
+      "All five requirements appear under 'You might thrive in this role if you:' framing, which could imply soft preferences rather than hard requirements. However, the first ('5+ years PM experience') is a common threshold requirement and the others describe core job competencies, so all five are classified as hard severity. Flagged for recruiter confirmation.",
+      "Visa sponsorship is not mentioned anywhere in the JD; work_auth set to 'open' per equal opportunity statement, but visa_sponsorship set to 'unclear'."
+    ]
+  }
+}

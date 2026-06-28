@@ -1,0 +1,398 @@
+{
+  "company": "OpenAI",
+  "role_title": "CPU/Storage/PoP-WAN Program Manager",
+  "url": "https://jobs.ashbyhq.com/openai/667c09e2-6efc-45dc-9714-078bedf17343",
+  "ats_provider": "ashby",
+  "ats_job_id": "667c09e2-6efc-45dc-9714-078bedf17343",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "based in San Francisco, CA, with travel as needed",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Infrastructure / Data Center Program Manager",
+  "seniority": {
+    "level": "Senior IC / Staff TPM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in technical program management, infrastructure deployment, network deployment, or data center operations",
+      "Executive communication skills with experience managing critical escalations and leadership updates",
+      "Cross-functional ownership across engineering, operations, supply chain, and external vendors"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_infra",
+      "raw_text_from_jd": "8+ years of experience in technical program management, infrastructure deployment, network deployment, or data center operations",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management_infrastructure",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "data center operations",
+        "network deployment"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "compute_storage_networking_programs",
+      "raw_text_from_jd": "Strong experience delivering programs involving compute, storage, networking, or large-scale infrastructure systems",
+      "skill_type": "capability",
+      "domain": "infrastructure_program_delivery",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "compute",
+        "storage",
+        "networking"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_working_knowledge",
+      "raw_text_from_jd": "Working knowledge of servers, clusters, storage arrays, routers, switches, optics, and structured cabling",
+      "skill_type": "domain_knowledge",
+      "domain": "data_center_hardware",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "servers",
+        "clusters",
+        "storage arrays",
+        "routers",
+        "switches",
+        "optics",
+        "structured cabling"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_ownership",
+      "raw_text_from_jd": "Experience owning cross-functional programs across engineering, operations, supply chain, and external vendors",
+      "skill_type": "capability",
+      "domain": "cross_functional_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "deployment_lifecycle_understanding",
+      "raw_text_from_jd": "Strong understanding of deployment lifecycles from planning and procurement through production handoff",
+      "skill_type": "domain_knowledge",
+      "domain": "infrastructure_deployment_lifecycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "physical_logical_reasoning",
+      "raw_text_from_jd": "Ability to reason across physical infrastructure execution and logical systems architecture dependencies",
+      "skill_type": "capability",
+      "domain": "systems_architecture",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "integrated_schedules_accountability",
+      "raw_text_from_jd": "Proven ability to build integrated schedules and drive accountability across multiple stakeholders",
+      "skill_type": "capability",
+      "domain": "program_scheduling",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Strong executive communication skills with experience managing critical escalations and leadership updates",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_moving_environments",
+      "raw_text_from_jd": "Comfortable operating in fast-moving environments with aggressive timelines and evolving priorities",
+      "skill_type": "cultural_fit",
+      "domain": "operational_agility",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving",
+      "raw_text_from_jd": "Highly analytical with strong problem-solving and execution instincts",
+      "skill_type": "capability",
+      "domain": "analytical_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "hyperscaler_experience",
+      "raw_text_from_jd": "Experience at a hyperscaler, cloud provider, AI infrastructure company, or global network operator",
+      "skill_type": "domain_knowledge",
+      "domain": "hyperscale_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "cloud",
+        "AI infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "hyperscaler",
+        "cloud provider",
+        "AI infrastructure company",
+        "global network operator"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "gpu_cluster_hpc_experience",
+      "raw_text_from_jd": "Experience deploying GPU clusters, HPC systems, or large training environments",
+      "skill_type": "capability",
+      "domain": "gpu_hpc_deployment",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "GPU clusters",
+        "HPC systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "distributed_storage_familiarity",
+      "raw_text_from_jd": "Familiarity with distributed storage systems and high-performance data infrastructure",
+      "skill_type": "domain_knowledge",
+      "domain": "distributed_storage",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed storage systems",
+        "high-performance data infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pop_wan_backbone_experience",
+      "raw_text_from_jd": "Experience with PoP deployments, WAN backbone expansion, or global network buildouts",
+      "skill_type": "capability",
+      "domain": "network_infrastructure_deployment",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "PoP deployments",
+        "WAN backbone expansion"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "first_party_colo_cloud_experience",
+      "raw_text_from_jd": "Experience working across first-party, colo, and cloud environments",
+      "skill_type": "domain_knowledge",
+      "domain": "multi_environment_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "colocation",
+        "cloud"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "repeatable_deployment_systems",
+      "raw_text_from_jd": "Experience building repeatable infrastructure deployment systems in high-growth environments",
+      "skill_type": "capability",
+      "domain": "deployment_systems_at_scale",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "CPU / Storage / PoP / WAN infrastructure — server and cluster activation, storage platforms, Points of Presence, backbone connectivity, and global network expansion across first-party, colo, and cloud environments",
+    "business_model": "internal infrastructure enabling AI training and inference capacity",
+    "primary_metrics_inferred": [
+      "Time to convert contracted infrastructure into live production clusters",
+      "On-time delivery of cluster activation, PoP bring-up, and backbone expansion milestones",
+      "Capacity forecast accuracy reported to senior leadership"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "Supply chain",
+      "External vendors",
+      "Azure and third-party cloud interconnect providers",
+      "Senior leadership"
+    ],
+    "core_responsibilities": [
+      "Lead end-to-end execution of CPU / GPU cluster activation programs across OpenAI's global infrastructure footprint",
+      "Drive readiness to convert contracted compute capacity into schedulable production clusters",
+      "Own deployment programs for new PoPs, backbone nodes, WAN expansion, and interconnection initiatives",
+      "Build integrated schedules spanning procurement, logistics, installation, storage readiness, network turn-up, testing, and production handoff",
+      "Coordinate BOM readiness, server delivery, racks, optics, cabling, storage hardware, and vendor milestones",
+      "Partner with engineering teams to align compute, storage, and networking dependencies before cluster activation",
+      "Manage deployment of storage systems supporting training and inference workloads",
+      "Coordinate backbone capacity expansion, cross-connects, inter-region pathing, and cloud interconnect readiness with Azure and third-party providers",
+      "Lead physical deployment execution including rack-and-stack, hardware bring-up, L1 validation, and site acceptance criteria",
+      "Build repeatable deployment playbooks, dashboards, governance cadences, and operating mechanisms for scale",
+      "Identify risks early and drive mitigation plans",
+      "Communicate milestones, escalations, and capacity forecasts to senior leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "CPU cluster activation",
+    "storage deployment",
+    "PoP bring-up",
+    "WAN backbone expansion",
+    "technical program manager",
+    "infrastructure deployment",
+    "GPU clusters",
+    "data center operations",
+    "cross-functional programs",
+    "supply chain",
+    "rack-and-stack",
+    "network turn-up",
+    "hyperscale infrastructure"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clearly scoped technical domain with specific infrastructure layers named (CPU, Storage, PoP, WAN)",
+    "Role directly tied to business-critical mission: unlocking next-gen compute capacity",
+    "Senior-level scope with executive visibility and high organizational importance",
+    "OpenAI is a highly visible, well-funded AI company with significant infrastructure investment"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Onsite-only in San Francisco with travel required — no remote option stated",
+    "Visa sponsorship policy not mentioned",
+    "Very broad technical scope across CPU, storage, networking, and WAN simultaneously — may indicate high execution pressure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and executive communication scope)",
+      "scope.business_model (inferred from JD context — internal infrastructure for AI training/inference)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
+      "location.remote_us_eligible (inferred as false from 'This role is based in San Francisco, CA')",
+      "compensation.equity_mentioned (inferred false; no equity language present)"
+    ],
+    "ambiguities": [
+      "Visa sponsorship is not mentioned anywhere in the JD; set to 'unclear'",
+      "The role is titled 'CPU/Storage/PoP-WAN Program Manager' but responsibilities include GPU cluster activation — GPU is listed as a preferred skill rather than a must-have, creating mild ambiguity about whether GPU experience is truly optional"
+    ]
+  }
+}

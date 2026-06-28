@@ -1,0 +1,317 @@
+{
+  "company": "OpenAI",
+  "role_title": "GRC Program Manager, Product and Customer Trust",
+  "url": "https://jobs.ashbyhq.com/openai/cf1e5c80-f42e-45ab-a937-2a4024b961e1",
+  "ats_provider": "ashby",
+  "ats_job_id": "cf1e5c80-f42e-45ab-a937-2a4024b961e1",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "BizOps / Strategy & Ops (GRC / compliance operational focus)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Role described as 'experienced Regulatory & Product Assurance IC'",
+      "'You have operated as a senior IC in GRC, product assurance, customer trust/assurance'",
+      "Highly cross-functional scope with ownership of operating models, metrics, escalation paths"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "product_assurance_experience",
+      "raw_text_from_jd": "Strong product assurance, product launch review, customer trust, security compliance, or enterprise trust experience in a technical environment.",
+      "skill_type": "domain_knowledge",
+      "domain": "product_assurance_and_security_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_security_compliance_narratives",
+      "raw_text_from_jd": "Ability to support GTM teams with accurate, approved, customer-facing security and compliance narratives.",
+      "skill_type": "capability",
+      "domain": "customer_trust_and_gtm_enablement",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "claims_judgment",
+      "raw_text_from_jd": "Judgment to distinguish what can be answered directly, what requires Product/Security/Legal review, and what should not be claimed externally.",
+      "skill_type": "capability",
+      "domain": "risk_and_compliance_judgment",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "scalable_operating_models",
+      "raw_text_from_jd": "Experience building scalable operating models, metrics, content systems, and automation for repeated assurance workflows.",
+      "skill_type": "capability",
+      "domain": "operational_program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_communication_translation",
+      "raw_text_from_jd": "Excellent written communication and comfort translating technical security concepts for customers, auditors, regulators, Sales, and Field Security.",
+      "skill_type": "capability",
+      "domain": "written_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "senior_ic_grc_background",
+      "raw_text_from_jd": "You have operated as a senior IC in GRC, product assurance, customer trust/assurance, security compliance, enterprise trust, product security assurance, or a closely related function.",
+      "skill_type": "domain_knowledge",
+      "domain": "GRC_and_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency_saas_cloud",
+      "raw_text_from_jd": "You have technical fluency across SaaS, cloud, security controls, product launches, and enterprise assurance workflows.",
+      "skill_type": "domain_knowledge",
+      "domain": "saas_cloud_security",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SaaS",
+        "cloud",
+        "security controls"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_launch_review_scaling",
+      "raw_text_from_jd": "You have experience in scaling product launch reviews.",
+      "skill_type": "capability",
+      "domain": "product_launch_reviews",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vertical_industry_experience",
+      "raw_text_from_jd": "You have vertical specific experience in Healthcare, Financial Services and Advertising.",
+      "skill_type": "domain_knowledge",
+      "domain": "regulated_industry_verticals",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "Healthcare",
+        "Financial Services",
+        "Advertising"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_field_security_support",
+      "raw_text_from_jd": "You have supported GTM, Field Security, Sales Engineering, Customer Success, or strategic enterprise customers.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_customer_support",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clear_precise_writing",
+      "raw_text_from_jd": "You write clearly, precisely, and with excellent judgment about external claims and evidence.",
+      "skill_type": "capability",
+      "domain": "written_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native_tools_codex",
+      "raw_text_from_jd": "You are excited to use Codex and other AI-native tools to reduce manual review, automate launch review processes, and keep approved content current.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_automation_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Codex"
+      ],
+      "technologies_named": [
+        "AI-native tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "This role is not about supporting SOC or ISO audits"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "GRC function covering product launches, regulatory readiness, and customer trust at OpenAI",
+    "business_model": "AI research and deployment, enterprise B2B and B2C SaaS",
+    "primary_metrics_inferred": [
+      "SLA adherence for customer trust intake/triage",
+      "Volume and quality of reusable trust content",
+      "Speed and coverage of product launch reviews",
+      "Customer and auditor satisfaction with trust materials"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Security",
+      "Legal",
+      "Privacy",
+      "GTM",
+      "Field Security",
+      "Sales Engineering",
+      "Customer Success"
+    ],
+    "core_responsibilities": [
+      "Own and improve the customer trust operating model including intake, triage, escalations, SLAs, metrics, and quality review",
+      "Support strategic customer trust needs including security questionnaires, customer calls, Trust Center updates, and high-priority deal support",
+      "Partner with Product, Security, Legal, Privacy, and GTM teams to prepare accurate, approved trust materials for launches and regulated product changes",
+      "Build reusable customer-facing narratives, FAQs, evidence paths, and whitepapers",
+      "Ensure external security and compliance claims are supported by internal processes and controls",
+      "Ensure product launches support external security and compliance narrative; scale launch reviews",
+      "Develop data handling guidance for product teams",
+      "Use automation and AI-native workflows including Codex to improve speed and consistency",
+      "Turn recurring customer discovery into reusable content, product feedback, evidence improvements, and control-gap signals"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "GRC",
+    "product assurance",
+    "customer trust",
+    "security compliance",
+    "product launch review",
+    "enterprise trust",
+    "regulatory readiness",
+    "Trust Center",
+    "security questionnaires",
+    "AI-native workflows",
+    "Codex",
+    "data handling",
+    "cross-functional",
+    "operating model",
+    "escalation paths"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Role has clear ownership over a distinct, high-visibility function (customer trust operating model)",
+    "Explicitly states what the role is NOT (SOC/ISO audit support), reducing ambiguity about scope",
+    "Cross-functional exposure across Product, Security, Legal, Privacy, GTM signals broad internal influence",
+    "Use of AI-native tooling (Codex) signals modern, forward-looking team culture",
+    "OpenAI is a marquee name in AI with significant enterprise customer growth, creating genuine impact potential"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location or remote/hybrid policy stated anywhere in the JD — unclear where candidate must be based",
+    "No visa sponsorship information provided",
+    "JD mixes 'must-have' and 'nice-to-have' language informally, making hard requirements somewhat ambiguous",
+    "High cross-functional scope with many stakeholders may create competing priorities and accountability gaps"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'senior IC' language in 'You might thrive' section and broad operating model ownership)",
+      "location.type (not stated; defaulted to 'unclear')",
+      "scope.business_model (inferred from company description and enterprise customer context)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "compensation.equity_mentioned (not stated; defaulted to false)"
+    ],
+    "ambiguities": [
+      "The 'We're looking for people who bring' section and 'You might thrive in this role if' section overlap in content, making hard vs. soft classification uncertain for several items. Items in 'We're looking for' were treated as must_haves (hard); items in 'You might thrive' were treated as nice_to_haves (soft), though the JD does not make this distinction explicit.",
+      "No location information is provided anywhere in the JD. The San Francisco Fair Chance Ordinance and Los Angeles County references in boilerplate suggest US-based hiring but do not confirm location requirements for this role.",
+      "Role title says 'Program Manager' but body describes an 'IC' (individual contributor) role — no people management implied."
+    ]
+  }
+}

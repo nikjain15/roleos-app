@@ -1,0 +1,217 @@
+{
+  "company": "OpenAI",
+  "role_title": "GTM Growth Product Manager, Agentic Systems",
+  "url": "https://jobs.ashbyhq.com/openai/73e59b84-2e87-4637-8c4a-d271784afb30",
+  "ats_provider": "ashby",
+  "ats_job_id": "73e59b84-2e87-4637-8c4a-d271784afb30",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in the office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Technical PM (GTM systems / AI workflow focus)",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management experience",
+      "Comp range $239K–$265K base consistent with Senior/Staff IC at OpenAI",
+      "Owns roadmap for a portfolio of GTM systems and AI-powered tools"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "Have 8+ years of product management experience across agentic systems, GTM systems, enterprise SaaS, revenue technology, or AI workflow products",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "agentic systems",
+        "AI workflow products"
+      ],
+      "industries_named": [
+        "enterprise SaaS",
+        "revenue technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_systems_fluency",
+      "raw_text_from_jd": "Have strong fluency in modern GTM systems such as Salesforce, marketing automation, lead-to-quote, enrichment, routing, attribution, billing, or customer lifecycle tools",
+      "skill_type": "tool_proficiency",
+      "domain": "gtm_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [
+        "marketing automation",
+        "lead-to-quote",
+        "enrichment",
+        "routing",
+        "attribution",
+        "billing",
+        "customer lifecycle tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Are strong at cross-functional influence, driving strategic alignment, and executive communication.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_kpi_experimentation",
+      "raw_text_from_jd": "Are highly analytical and comfortable defining KPIs, running experiments, and using data to prioritize product investments",
+      "skill_type": "capability",
+      "domain": "analytics_and_experimentation",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_speed",
+      "raw_text_from_jd": "Thrive in ambiguous, fast-moving environments where the first version of the strategy needs to be shaped, tested, and improved quickly",
+      "skill_type": "cultural_fit",
+      "domain": "operating_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "GTM AI systems portfolio spanning lead capture, prioritization, routing, attribution, sales productivity, data movement, and revenue workflows",
+    "business_model": "B2B enterprise SaaS / AI deployment",
+    "primary_metrics_inferred": [
+      "Pipeline quality",
+      "Conversion rates",
+      "Sales efficiency",
+      "Revenue execution",
+      "Seller productivity"
+    ],
+    "cross_functional_partners": [
+      "GTM leaders",
+      "operators",
+      "data teams",
+      "designers",
+      "engineering",
+      "vendors",
+      "systems owners",
+      "business stakeholders"
+    ],
+    "core_responsibilities": [
+      "Deeply understand problems faced by GTM teams and customers, and identify opportunities where AI systems can make buying and adopting our technology faster and more intuitive.",
+      "Define and drive the product vision and roadmap for a portfolio of GTM AI systems",
+      "Build AI-powered products that improve pipeline generation, seller productivity, account prioritization, routing, attribution, and GTM execution",
+      "Translate GTM strategy and operational needs into scalable product capabilities, PRDs, success metrics, and engineering priorities",
+      "Lead cross-functional execution across engineering, vendors, systems owners, and business stakeholders",
+      "Improve the data foundations behind GTM systems, including entity resolution, enrichment, scoring, and data movement.",
+      "Use experimentation, metrics, and customer feedback to measure impact on pipeline quality, conversion, sales efficiency, and revenue execution",
+      "Drive adoption and change management for new GTM capabilities across distributed teams"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      239000,
+      265000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "GTM growth",
+    "agentic systems",
+    "AI-powered products",
+    "Salesforce",
+    "pipeline generation",
+    "lead routing",
+    "attribution",
+    "revenue workflows",
+    "sales productivity",
+    "entity resolution",
+    "experimentation",
+    "enterprise SaaS",
+    "roadmap ownership"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($239K–$265K base)",
+    "Clear product surface and ownership area (not vague)",
+    "Relocation assistance offered",
+    "High-impact role with direct exposure to GTM leadership and executive stakeholders",
+    "OpenAI brand and mission provide strong career signal"
+  ],
+  "red_flags": [
+    "No equity or bonus details mentioned despite seniority level",
+    "Hybrid requirement (3 days/week in San Francisco) eliminates fully remote candidates",
+    "Visa sponsorship status not mentioned — unclear for international applicants",
+    "No nice-to-haves listed, making bar-setting entirely on the must-haves — less flexible on candidate fit"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and years requirement)",
+      "scope.business_model (inferred from product description and GTM context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly as KPIs)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD lists requirements under 'You might thrive in this role if you:' — language could imply preferred rather than required, but all items are unconditional bullets describing the expected candidate profile. Treated as hard must-haves given seniority and specificity.",
+      "No nice-to-haves section exists in the JD; all requirements collapsed into must-haves. This may under-represent flexibility in hiring."
+    ]
+  }
+}

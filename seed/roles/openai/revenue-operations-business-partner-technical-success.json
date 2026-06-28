@@ -1,0 +1,246 @@
+{
+  "company": "OpenAI",
+  "role_title": "Revenue Operations Business Partner - Technical Success",
+  "url": "https://jobs.ashbyhq.com/openai/d929aa17-a339-4b96-b0ee-b0fc0ed9218c",
+  "ats_provider": "ashby",
+  "ats_job_id": "d929aa17-a339-4b96-b0ee-b0fc0ed9218c",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Mid to Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title includes 'Manager' in role description body",
+      "Expected to lead cross-functional projects and present to leadership/executives",
+      "Requires executive presence and autonomous operation",
+      "Expansive ownership and ruthless prioritization signals mid-senior level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "revops_strategy_experience",
+      "raw_text_from_jd": "Experience in revenue operations or strategy at a high-growth, technology company",
+      "skill_type": "years_of_experience",
+      "domain": "revenue_operations",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth, technology company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_skills",
+      "raw_text_from_jd": "Strong analytical skills with a focus on attention to detail",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management",
+      "raw_text_from_jd": "Exceptional project management skills, with experience leading complex, cross-functional initiatives",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_executive_presence",
+      "raw_text_from_jd": "Strong communication skills and executive presence",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_landscape_understanding",
+      "raw_text_from_jd": "An understanding of the AI landscape, our applications, and the problems they solve for our customers.",
+      "skill_type": "domain_knowledge",
+      "domain": "artificial_intelligence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_autonomy",
+      "raw_text_from_jd": "The ability to thrive in ambiguity and work autonomously",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_skills",
+      "raw_text_from_jd": "Exceptional organizational skills",
+      "skill_type": "capability",
+      "domain": "organization",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_horsepower_multitasking",
+      "raw_text_from_jd": "The ability to operate with high horsepower, be adept at frequent context switching and working on multiple projects at once with expansive ownership, and ruthless prioritization",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Revenue Operations supporting the Technical Success team within OpenAI's GTM organization",
+    "business_model": "B2B enterprise AI products and APIs",
+    "primary_metrics_inferred": [
+      "Technical Success team KPIs and dashboards",
+      "Customer onboarding and lifecycle metrics",
+      "Capacity and coverage model effectiveness",
+      "Process optimization outcomes"
+    ],
+    "cross_functional_partners": [
+      "Technical Success team",
+      "Data team",
+      "Sales",
+      "Solutions",
+      "Support",
+      "Marketing",
+      "Partnerships",
+      "Leadership"
+    ],
+    "core_responsibilities": [
+      "Design and implement processes to support the OpenAI Technical Success team, ensuring seamless management of customer interactions throughout the lifecycle, from onboarding to ongoing technical support and services delivery.",
+      "Work closely with technical teams to ensure that operational processes are scalable and efficiently integrated into customer success workflows.",
+      "Define and track key performance indicators (KPIs) specific to technical success, developing and maintaining dashboards to provide actionable insights to stakeholders and leadership.",
+      "Manage capacity and coverage strategy for the Technical Success team, working with leadership to ensure alignment with business objectives and offering data-driven recommendations for improvements.",
+      "Partner with the data team to ensure the integrity and accuracy of data, enabling effective reporting and decision-making for revenue-generating activities.",
+      "Lead strategic analyses to identify trends, gaps, and opportunities for process optimization; lead cross-functional projects to drive those optimizations."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "revenue operations",
+    "technical success",
+    "GTM",
+    "KPIs",
+    "dashboards",
+    "capacity planning",
+    "customer lifecycle",
+    "cross-functional",
+    "data-driven",
+    "process optimization",
+    "AI",
+    "customer success"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear articulation of responsibilities and team context",
+    "OpenAI is a high-profile AI company with significant market presence",
+    "Role has broad ownership and strategic impact (capacity strategy, KPIs, cross-functional leadership)",
+    "Explicit equal opportunity employer statement and accommodation policy"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Location/remote policy not stated anywhere in the JD — unclear if remote, hybrid, or onsite",
+    "All requirements framed as 'you might thrive if you have' — ambiguous whether items are truly hard requirements or preferences",
+    "Title in identity fields is 'Revenue Operations Business Partner' but JD body repeatedly uses 'Revenue Operations Manager' — potential title inconsistency",
+    "No years of experience minimum stated, making seniority expectations opaque"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from leadership expectations, executive presence, autonomous operation, and cross-functional scope)",
+      "scope.business_model (inferred from product description and GTM team context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated as metrics in JD)",
+      "location.type (not stated; marked as unclear)",
+      "compensation (not stated)"
+    ],
+    "ambiguities": [
+      "All must-have requirements are introduced with 'You might thrive in this role if you have:' — this phrasing suggests soft preferences, but the items are unconditional and substantive, consistent with hard requirements. Treated as hard per schema rules; flagged here.",
+      "Role title in identity fields is 'Revenue Operations Business Partner - Technical Success' but the JD body uses 'Revenue Operations Manager' throughout — possible title mismatch between posting metadata and JD content.",
+      "Location is entirely unstated — no city, no remote/hybrid/onsite policy mentioned. Location type set to 'unclear'.",
+      "The San Francisco and Los Angeles county legal disclosures imply the role may be California-based or have California employees, but this is not a direct statement of work location."
+    ]
+  }
+}

@@ -1,0 +1,347 @@
+{
+  "company": "Twilio",
+  "role_title": "Partner Program Manager",
+  "url": "https://job-boards.greenhouse.io/twilio/jobs/8025913",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8025913",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional travel for project or team in-person meetings",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Partner/Channel Program Manager",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 5,
+    "years_required_max": 8,
+    "manages_people": false,
+    "level_signals": [
+      "5-8 years of experience in project or program management, customer success, or a similar role",
+      "Compensation range up to $171,900 base in highest-cost market"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree in Business, Marketing, Communications, or a related field; relevant experience may be considered.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree",
+        "Business",
+        "Marketing",
+        "Communications"
+      ]
+    },
+    {
+      "id": "years_program_management",
+      "raw_text_from_jd": "5-8 years of experience in project or program management, customer success, or a similar role focused on partner engagement and program operations.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management_skills",
+      "raw_text_from_jd": "Strong project management skills, with the ability to develop and execute project plans, track milestones, and work cross-functionally.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Excellent communication skills for delivering complex information clearly across various partner communications, including newsletters, webinars, and surveys.",
+      "skill_type": "capability",
+      "domain": "communications",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "documentation_content_creation",
+      "raw_text_from_jd": "Experience with documentation management and content creation for program guides and enablement resources.",
+      "skill_type": "capability",
+      "domain": "documentation_and_content",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_improvement_strategic_initiatives",
+      "raw_text_from_jd": "Demonstrated ability to drive process improvements and contribute to strategic initiatives within partner or program environments.",
+      "skill_type": "outcome",
+      "domain": "process_improvement",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "mba",
+      "raw_text_from_jd": "MBA is a plus",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    },
+    {
+      "id": "saas_cloud_experience",
+      "raw_text_from_jd": "Experience in SaaS or cloud-based technology environments.",
+      "skill_type": "domain_knowledge",
+      "domain": "saas_cloud_technology",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "SaaS",
+        "cloud"
+      ],
+      "industries_named": [
+        "SaaS",
+        "cloud technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_program_best_practices",
+      "raw_text_from_jd": "Demonstrated understanding of partner programs and partner experience best practices.",
+      "skill_type": "domain_knowledge",
+      "domain": "partner_programs",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_crm_tech_stack",
+      "raw_text_from_jd": "Hands-on experience with partner or CRM technology stacks, specifically with tools like Impartner, MindTickle, Crossbeam and Salesforce (SFDC).",
+      "skill_type": "tool_proficiency",
+      "domain": "partner_crm_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Impartner",
+        "MindTickle",
+        "Crossbeam",
+        "Salesforce"
+      ],
+      "technologies_named": [
+        "CRM"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_onboarding_support",
+      "raw_text_from_jd": "Proven expertise in partner onboarding, support management, and developing partner-focused workflows.",
+      "skill_type": "capability",
+      "domain": "partner_onboarding",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_ecosystem_familiarity",
+      "raw_text_from_jd": "Familiarity with partner ecosystems, particularly working with Systems Integrators (SIs), ISVs, Resell, and Technology partners.",
+      "skill_type": "domain_knowledge",
+      "domain": "partner_ecosystems",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Systems Integrators",
+        "ISVs",
+        "Resell partners",
+        "Technology partners"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_communications_events",
+      "raw_text_from_jd": "Experience in managing partner communications, tracking partner support tickets, and executing partner events.",
+      "skill_type": "capability",
+      "domain": "partner_communications",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Not eligible to be hired in CA, CT, NJ, NY, PA, WA (for remote hiring purposes)",
+    "Compensation details only provided for CO, HI, IL, MD, MA, MN, VT, DC, NY, NJ, WA, CA"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Partner ecosystem programs covering Systems Integrators (SIs), ISVs, Resell, and Technology partners",
+    "business_model": "B2B SaaS / communications platform with partner channel",
+    "primary_metrics_inferred": [
+      "Partner onboarding completion and quality",
+      "Partner engagement (newsletter open rates, webinar attendance, survey response)",
+      "Support ticket resolution and escalation rates",
+      "Program documentation accuracy and usage",
+      "Project milestone delivery timeliness"
+    ],
+    "cross_functional_partners": [
+      "Marketing",
+      "Product",
+      "Sales",
+      "Customer Success"
+    ],
+    "core_responsibilities": [
+      "Lead partner onboarding processes, optimize support workflows, and manage support ticket escalations",
+      "Serve as the primary point of contact for partner and internal inquiries related to Twilio's partner programs",
+      "Collaborate with marketing to drive engagement through partner events and certifications",
+      "Maintain and regularly update partner program documentation",
+      "Develop and manage partner communications, including monthly newsletters, quarterly product webinars, and feedback surveys",
+      "Contribute to strategic projects aimed at enhancing the partner experience and overall program impact",
+      "Identify areas for operational improvement and assist in implementing process enhancements",
+      "Develop and execute project plans for partner program initiatives",
+      "Track project progress, facilitate stakeholder updates, and ensure timely delivery of key milestones"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      116960,
+      171900
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity plan and corporate bonus plan",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "partner program management",
+    "Systems Integrators",
+    "ISVs",
+    "partner onboarding",
+    "partner communications",
+    "program operations",
+    "Salesforce",
+    "Impartner",
+    "Crossbeam",
+    "MindTickle",
+    "enablement",
+    "partner ecosystem",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges disclosed across multiple geographies",
+    "Explicit remote-first culture statement",
+    "Application deadline stated (July 24, 2026), signaling active and structured hiring",
+    "Role scope is clearly defined with specific partner types (SIs, ISVs, Resell, Technology)",
+    "Equity and bonus participation mentioned in addition to base",
+    "Encourages non-traditional career paths to apply"
+  ],
+  "red_flags": [
+    "Remote role but excluded from CA, CT, NJ, NY, PA, WA — eliminates a large share of the remote-eligible US workforce",
+    "Compensation section separately excludes CA, CT, NJ, NY, PA, WA from being hired at all, yet also provides NY/NJ/WA/CA pay ranges — creates apparent contradiction",
+    "Most 'Desired' qualifications (partner onboarding, SI/ISV ecosystem, CRM tools) are core to the role and may functionally be required",
+    "No visa sponsorship or work authorization information stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range and comp)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from company description and partner types)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)"
+    ],
+    "ambiguities": [
+      "The role says 'not eligible to be hired in CA, CT, NJ, NY, PA, WA' yet the compensation section provides pay ranges for CA, NY, NJ, and WA — likely a templated comp disclosure for legal compliance but the hiring exclusion takes precedence; both readings recorded.",
+      "The base_range_usd is set to the full spread across all disclosed geographies ($116,960 lowest to $171,900 highest); actual range for a given candidate depends on location.",
+      "Several 'Desired' qualifications (e.g., partner onboarding expertise, SI/ISV familiarity) are central to the role description and could be interpreted as functionally required; treated as soft per JD language."
+    ]
+  }
+}

@@ -1,0 +1,222 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, ChatGPT Healthcare",
+  "url": "https://jobs.ashbyhq.com/openai/e470ba2c-b649-4a43-8650-3210bd7ca4d3",
+  "ats_provider": "ashby",
+  "ats_job_id": "e470ba2c-b649-4a43-8650-3210bd7ca4d3",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "based in San Francisco, CA",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Compensation range $441K-$490K consistent with senior IC at OpenAI",
+      "Expected to own high-impact product areas from strategy through execution",
+      "'Have significant product management experience' signals seniority",
+      "Zero-to-one product development ownership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "pm_experience_healthcare_enterprise_ai",
+      "raw_text_from_jd": "Have significant product management experience, ideally in healthcare, enterprise software, AI, or other complex regulated environments.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": null,
+      "unit": "years",
+      "qualifier": "significant",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "healthcare",
+        "enterprise software",
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "zero_to_one_product_development",
+      "raw_text_from_jd": "Are excited about zero-to-one product development and know how to turn ambiguity into momentum.",
+      "skill_type": "capability",
+      "domain": "product_development",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategy_and_execution_range",
+      "raw_text_from_jd": "Can operate equally well at the strategy level and in day-to-day execution details.",
+      "skill_type": "capability",
+      "domain": "product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_partnerships",
+      "raw_text_from_jd": "Build strong cross-functional partnerships and communicate clearly with technical and non-technical stakeholders.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "trust_safety_privacy_judgment",
+      "raw_text_from_jd": "Have strong judgment about trust, safety, privacy, and quality in high-stakes user workflows.",
+      "skill_type": "domain_knowledge",
+      "domain": "trust_safety_privacy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_driven_healthcare",
+      "raw_text_from_jd": "Care deeply about improving healthcare through technology and are motivated by mission-driven product work.",
+      "skill_type": "cultural_fit",
+      "domain": "healthcare_mission",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "healthcare"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "ChatGPT Healthcare — products for clinicians, care teams, and healthcare organizations",
+    "business_model": "enterprise B2B / B2B2C, healthcare vertical",
+    "primary_metrics_inferred": [
+      "Product adoption by clinicians and health systems",
+      "Customer trust and safety outcomes",
+      "Healthcare workflow improvement impact",
+      "Business impact / revenue from healthcare segment"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Research",
+      "Design",
+      "Legal",
+      "Policy",
+      "Sales",
+      "GTM",
+      "Customer-facing teams"
+    ],
+    "core_responsibilities": [
+      "Define product strategy and roadmap for key ChatGPT Healthcare experiences and capabilities",
+      "Identify the highest-impact problems across clinicians, healthcare operators, and health systems, and turn them into clear product priorities",
+      "Partner closely with engineering, research, design, legal, policy, and GTM teams to ship products that are useful, safe, and scalable",
+      "Drive execution from early discovery and prototype through launch, adoption, and iteration",
+      "Translate customer needs, technical constraints, and regulatory considerations into strong product decisions and crisp requirements",
+      "Use data, customer feedback, and market insight to improve product quality, trust, and business impact"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      441000,
+      490000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "ChatGPT Healthcare",
+    "healthcare AI",
+    "clinicians",
+    "regulated environment",
+    "zero-to-one",
+    "product strategy",
+    "roadmap",
+    "trust and safety",
+    "enterprise healthcare",
+    "health systems",
+    "care teams",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($441K-$490K)",
+    "Clear product surface with meaningful mission (healthcare AI)",
+    "Relocation assistance explicitly offered",
+    "High-impact, zero-to-one product ownership at a leading AI company",
+    "Cross-functional scope is well-defined (engineering, research, design, legal, policy, GTM)"
+  ],
+  "red_flags": [
+    "Role is onsite in San Francisco — no remote or hybrid option stated, limiting geographic flexibility",
+    "No explicit years-of-experience requirement makes seniority bar ambiguous",
+    "Visa sponsorship not mentioned — unclear for international candidates",
+    "Regulatory and compliance complexity in healthcare may slow shipping pace",
+    "Compensation range may represent total cash or include equity — not explicitly clarified"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from compensation range and ownership expectations; not stated)",
+      "scope.business_model (inferred from product description targeting health systems and clinicians)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "location.type (stated as 'based in San Francisco, CA'; treated as onsite since no hybrid/remote mentioned)",
+      "compensation total_comp (unclear whether range is base only or total cash; left as base_range_usd)"
+    ],
+    "ambiguities": [
+      "Years of experience not quantified — 'significant product management experience' is subjective; severity treated as hard given unconditional bullet placement under 'You might thrive if you' which doubles as requirements language",
+      "Compensation range ($441K-$490K) not explicitly labeled as base salary vs. total cash; treated as base_range_usd given no equity or bonus mention",
+      "Visa sponsorship not addressed anywhere in the JD; set to 'unclear'",
+      "The 'You might thrive in this role if you' section is used as the requirements section — items treated as hard must-haves given no separate 'Preferred'/'Nice to have' section exists and all bullets are unconditional"
+    ]
+  }
+}

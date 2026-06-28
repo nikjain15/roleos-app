@@ -1,0 +1,242 @@
+{
+  "company": "OpenAI",
+  "role_title": "GTM Strategy & Operations, Digital Native",
+  "url": "https://jobs.ashbyhq.com/openai/e884c269-ec1a-4d12-9fcd-8f63f8100c2f",
+  "ats_provider": "ashby",
+  "ats_job_id": "e884c269-ec1a-4d12-9fcd-8f63f8100c2f",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in the office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Revenue Operations / GTM Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of experience in Strategy & Operations, Revenue Operations, Business Operations, Management Consulting, Investment Banking, Finance, or a related analytical role",
+      "Partners closely with Sales leadership and GTM Ops Enterprise Lead — peer-level, not junior",
+      "Expected to drive cross-functional initiatives and influence stakeholders independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_strategy_ops",
+      "raw_text_from_jd": "Have 6+ years of experience in Strategy & Operations, Revenue Operations, Business Operations, Management Consulting, Investment Banking, Finance, or a related analytical role.",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Management Consulting",
+        "Investment Banking"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_large_datasets",
+      "raw_text_from_jd": "Are highly analytical and comfortable working with large datasets to generate insights, identify trends, and inform business decisions.",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_operating_rhythms",
+      "raw_text_from_jd": "Have experience supporting forecasting, pipeline management, business reviews, performance reporting, or other GTM operating rhythms.",
+      "skill_type": "domain_knowledge",
+      "domain": "gtm_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_structuring",
+      "raw_text_from_jd": "Excel at structuring ambiguous problems, developing practical solutions, and driving execution in fast-paced environments.",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Are an effective cross-functional partner who can build relationships and influence stakeholders across Sales, Finance, Product, Data, and Operations teams.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Have strong communication and presentation skills, with the ability to create executive-ready materials and clearly articulate recommendations.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_oriented_multi_priority",
+      "raw_text_from_jd": "Are detail-oriented, organized, and able to manage multiple priorities while maintaining a high bar for quality and execution.",
+      "skill_type": "cultural_fit",
+      "domain": "operational_rigor",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "collaborative_growth_mindset",
+      "raw_text_from_jd": "Thrive in collaborative environments and are motivated by helping teams scale, operate more effectively, and achieve ambitious growth goals.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Digital Native segment within Enterprise GTM — sales cadences, forecasting, pipeline health, dashboards, and GTM growth strategy",
+    "business_model": "B2B Enterprise SaaS / AI platform",
+    "primary_metrics_inferred": [
+      "Enterprise revenue growth",
+      "Pipeline health and conversion",
+      "Sales funnel efficiency",
+      "Forecast accuracy"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Finance",
+      "Enablement",
+      "Data",
+      "Product",
+      "Growth Strategy",
+      "Systems"
+    ],
+    "core_responsibilities": [
+      "Partner closely with Digital Native Sales leadership to support strategic planning, territory and coverage models, growth initiatives, and GTM priorities",
+      "Analyze business performance, pipeline health, customer trends, and sales funnel metrics to identify opportunities and inform recommendations",
+      "Support forecasting, pipeline reviews, business reviews, and executive reporting",
+      "Develop and operationalize GTM growth strategies and strategic bets for new products, customer motions, capabilities, and market opportunities across Enterprise subsegments",
+      "Build and improve scalable processes, reporting frameworks, dashboards, and operating cadences",
+      "Partner cross-functionally with Sales, Finance, Enablement, Data, Product, Growth Strategy, and Systems teams",
+      "Translate complex data into clear business insights, executive-ready materials, and actionable recommendations",
+      "Communicate risks, opportunities, project updates, and key business insights"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "GTM Strategy & Operations",
+    "Digital Native",
+    "Revenue Operations",
+    "pipeline management",
+    "forecasting",
+    "business reviews",
+    "sales funnel",
+    "executive reporting",
+    "cross-functional",
+    "Enterprise",
+    "scalable processes",
+    "dashboards",
+    "data-driven"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clearly scoped role with explicit cross-functional partners and responsibilities listed",
+    "High-visibility company (OpenAI) with enterprise revenue growth focus",
+    "Relocation assistance offered to new employees",
+    "Hybrid policy explicitly stated (3 days/week in SF office)"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship policy not addressed in JD",
+    "Role requires on-site presence in San Francisco 3 days/week — eliminates remote candidates",
+    "All requirements appear under 'You might thrive in this role if you:' which is ambiguous language; treated as hard requirements given unconditional phrasing and years floor"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 6+ years requirement and peer-level partnership with Sales leadership)",
+      "scope.business_model (inferred from Enterprise GTM context and OpenAI product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "compensation.equity_mentioned (not stated; defaulted to false)"
+    ],
+    "ambiguities": [
+      "All requirements are listed under 'You might thrive in this role if you:' — this phrasing is softer than 'Required' but the items include hard minimums (6+ years) and unconditional capability statements. Classified as hard must_haves given the substance; flagged here for review.",
+      "Visa sponsorship is not mentioned anywhere in the JD body. work_auth set to 'open' and visa_sponsorship set to 'unclear' as defaults."
+    ]
+  }
+}

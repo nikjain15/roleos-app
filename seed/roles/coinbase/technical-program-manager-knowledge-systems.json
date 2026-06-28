@@ -1,0 +1,248 @@
+{
+  "company": "Coinbase",
+  "role_title": "Technical Program Manager, Knowledge Systems",
+  "url": "https://www.coinbase.com/careers/positions/8013892?gh_jid=8013892",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8013892",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "quarterly in-person working sessions ('surges')",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of technical program management, systems implementation, or operational program leadership",
+      "Base salary range $148,835–$175,100 USD consistent with senior IC",
+      "Leads ambiguous, multi-team initiatives from concept through launch"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_or_ops_leadership",
+      "raw_text_from_jd": "5+ years of technical program management, systems implementation, or operational program leadership in a complex cross-functional environment.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "information_retrieval_architectures",
+      "raw_text_from_jd": "Deep familiarity with modern information retrieval architectures (such as vector databases, RAG, and LLM orchestration tools like LangChain or LlamaIndex) alongside CMS platforms, structured content, and metadata models.",
+      "skill_type": "domain_knowledge",
+      "domain": "information_retrieval_and_knowledge_systems",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "LangChain",
+        "LlamaIndex"
+      ],
+      "technologies_named": [
+        "vector databases",
+        "RAG",
+        "LLM orchestration"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking_operational_judgment",
+      "raw_text_from_jd": "Strong systems thinking and operational judgment, with the ability to connect technical decisions to customer impact, specialist usability, compliance risk, and business performance.",
+      "skill_type": "capability",
+      "domain": "systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_strategy_to_technical_requirements",
+      "raw_text_from_jd": "Experience translating operational strategy into technical requirements, data schemas, and tooling investments.",
+      "skill_type": "capability",
+      "domain": "technical_requirements_and_data_schema",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "content_systems_knowledge_management",
+      "raw_text_from_jd": "Strong understanding of content systems, knowledge management, workflow automation, and internal tooling in operations or CX environments.",
+      "skill_type": "domain_knowledge",
+      "domain": "content_systems_and_knowledge_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_alignment",
+      "raw_text_from_jd": "Proven ability to drive alignment across technical and non-technical stakeholders, especially where ownership is distributed and tradeoffs must be actively managed.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_team_initiative_delivery",
+      "raw_text_from_jd": "Demonstrated experience leading ambiguous, multi-team initiatives from concept through launch with clear accountability, risk management, and measurable outcomes.",
+      "skill_type": "outcome",
+      "domain": "program_delivery",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "generative_ai_responsible_use",
+      "raw_text_from_jd": "Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality",
+      "skill_type": "capability",
+      "domain": "generative_ai_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Knowledge Systems — infrastructure powering customer self-service, internal tools, and AI-assisted support",
+    "business_model": "B2C and B2B crypto exchange / financial platform",
+    "primary_metrics_inferred": [
+      "Reduction in manual knowledge work",
+      "Support headcount scaling efficiency",
+      "Knowledge accuracy and launch-readiness",
+      "Workflow automation improvements"
+    ],
+    "cross_functional_partners": [
+      "Knowledge Systems",
+      "Engineering",
+      "Product",
+      "Partner teams",
+      "Compliance"
+    ],
+    "core_responsibilities": [
+      "Own technical programs that improve systems, tooling, and workflows behind customer self-service, internal support knowledge, and AI-assisted discovery (e.g., RAG pipelines, semantic search, and agentic workflows)",
+      "Drive cross-functional alignment across Knowledge Systems, engineering, product, and partner teams to translate complex knowledge taxonomies and unstructured data into clear technical specifications, APIs, schemas, and execution plans",
+      "Lead the planning and delivery of high-leverage initiatives such as workflow automation, knowledge system modernization, CMS improvements, metadata and structure enhancements, and launch-readiness tooling",
+      "Partner with Knowledge Systems leads to ensure knowledge is accurate, structured for machine-readability and actionability, ready ahead of launch, and governed appropriately",
+      "Build and run an operating cadence for technical initiatives, including roadmap tracking, dependency management, risk escalation, and delivery accountability",
+      "Identify opportunities to reduce manual work, improve scale, and prevent headcount from growing linearly with business complexity and launch volume"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      148835,
+      175100
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity eligibility mentioned alongside bonus and benefits",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "technical program management",
+    "knowledge systems",
+    "RAG pipelines",
+    "semantic search",
+    "agentic workflows",
+    "vector databases",
+    "LLM orchestration",
+    "CMS",
+    "workflow automation",
+    "knowledge management",
+    "metadata",
+    "information retrieval",
+    "cross-functional alignment"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($148,835–$175,100 base)",
+    "Clear product surface and ownership area (Knowledge Systems infrastructure)",
+    "Equity and bonus eligibility mentioned",
+    "Role description is specific and systems-focused, not vague",
+    "Remote-first company structure"
+  ],
+  "red_flags": [
+    "Quarterly mandatory in-person 'surges' may be incompatible with fully remote candidates depending on location",
+    "Visa sponsorship and work authorization not addressed in JD",
+    "No nice-to-haves listed, making it harder to assess flexibility on hard requirements",
+    "AI-assisted initial screening interviews disclosed — candidates should prepare for automated first-round interviews"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and years requirement)",
+      "scope.business_model (inferred from Coinbase's known product)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)",
+      "compensation.location_pay_differential (inferred from 'Base salary varies by location' note)"
+    ],
+    "ambiguities": [
+      "JD describes Coinbase as 'remote-first, but not remote-only' with quarterly in-person surges; location type treated as remote-us since no specific city is listed for this role but US-based presence is implied by USD pay and US applicant notices",
+      "No nice-to-have or preferred skills section exists; all listed requirements treated as hard must-haves"
+    ]
+  }
+}

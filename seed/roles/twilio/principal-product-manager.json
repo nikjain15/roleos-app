@@ -1,0 +1,273 @@
+{
+  "company": "Twilio",
+  "role_title": "Principal Product Manager",
+  "url": "https://job-boards.greenhouse.io/twilio/jobs/7837829",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7837829",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional travel for project or team in-person meetings",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM",
+  "seniority": {
+    "level": "Principal / Staff IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years (7+ preferred) experience in product management",
+      "Principal-level title",
+      "Mentor and influence teams across the org",
+      "Comp range up to $251,600 base consistent with Principal IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years (7+ preferred) experience in product management",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "qualifier": "7+ preferred",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_backwards_approach",
+      "raw_text_from_jd": "Proven ability to work backwards from customer needs, crystallizing problems that translate into impactful product decisions",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "b2b_enterprise_understanding",
+      "raw_text_from_jd": "Strong understanding of how B2B and large enterprises operate, including sales cycles and organizational dynamics",
+      "skill_type": "domain_knowledge",
+      "domain": "b2b_enterprise",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "api_platform_technical_skills",
+      "raw_text_from_jd": "Technical skills: experience in APIs or platform products, including designing for reliability, scale, and developer usability",
+      "skill_type": "capability",
+      "domain": "api_platform_products",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Soft Skills: Highly collaborative and excel in building cross-functional relationships in remote, global teams; able to mentor, inspire, and set vision for high-impact initiatives",
+      "skill_type": "cultural_fit",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_mindset",
+      "raw_text_from_jd": "Entrepreneurial: Scrappy and resourceful, comfortable rolling up your sleeves to get things done and drive impact",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurial_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bs_cs_or_equivalent",
+      "raw_text_from_jd": "BS in Computer Science, Engineering, or equivalent practical experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "BS in Computer Science",
+        "Engineering degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "zero_to_one_and_scaling",
+      "raw_text_from_jd": "Experience building and scaling products or businesses, driving both zero-to-one innovation and high growth.",
+      "skill_type": "outcome",
+      "domain": "product_growth",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_degree",
+      "raw_text_from_jd": "Advanced degree: MBA or Master's in CS or related discipline.",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA",
+        "Master's in CS"
+      ]
+    }
+  ],
+  "explicitly_excluded": [
+    "San Francisco, CA",
+    "Oakland, CA",
+    "San Jose, CA",
+    "surrounding areas of SF Bay Area"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Twilio SMS and RCS APIs — developer experience and growth for messaging platform",
+    "business_model": "B2B developer platform / API-as-a-service",
+    "primary_metrics_inferred": [
+      "Developer adoption and API usage growth",
+      "Product-market fit for conversational/RCS experiences",
+      "Reliability and scale of messaging platform",
+      "Growth from betas and A/B test iteration"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "GTM",
+      "Partner teams"
+    ],
+    "core_responsibilities": [
+      "Define and own the strategy, roadmap, and execution for Twilio's SMS and RCS APIs, driving innovation while simplifying the developer experience.",
+      "Lead the evolution of our messaging platform, including launching new cross-channel APIs and evolving our legacy APIs at global scale.",
+      "Work backwards from developers and enterprises to design intuitive, consistent APIs that power billions of customer interactions",
+      "Gather market intelligence, analyze usage patterns, and synthesize insights from prototypes to innovate",
+      "Partner closely with engineering, design, GTM, and partner teams to scope, build, and launch capabilities",
+      "Drive experimentation through betas and A/B tests, iterating quickly to achieve product–market fit for emerging conversational experiences.",
+      "Use data and metrics to identify growth opportunities, performance gaps, and areas to improve reliability.",
+      "Mentor and influence teams across the org, championing a developer-first culture in a distributed, remote-first environment."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      171120,
+      251600
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Twilio equity plan (options/RSUs implied)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "RCS",
+    "SMS",
+    "messaging platform",
+    "developer experience",
+    "APIs",
+    "platform products",
+    "B2B",
+    "enterprise",
+    "cross-channel",
+    "developer-first",
+    "conversational experiences",
+    "remote-first",
+    "Principal PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges disclosed across multiple states",
+    "Explicitly remote-first culture",
+    "Clear product surface and ownership area (SMS + RCS APIs)",
+    "Equity and bonus plan mentioned",
+    "Encourages applicants without traditional career paths",
+    "Application deadline stated (May 1, 2026)"
+  ],
+  "red_flags": [
+    "Role is not eligible to be hired in San Francisco, Oakland, San Jose, or surrounding Bay Area — unusual geographic exclusion for a remote role",
+    "Compensation note says info is provided 'for candidates hired in those locations only' while simultaneously excluding those locations — wording is contradictory and confusing",
+    "No visa sponsorship or work authorization information provided",
+    "7+ years preferred vs 5+ years required creates ambiguity about actual seniority bar"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Principal', comp range, and mentorship expectations)",
+      "scope.business_model (inferred from developer API platform description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)"
+    ],
+    "ambiguities": [
+      "Compensation note reads 'Please note this role is open to candidates outside of San Francisco, CA...' and then provides pay ranges 'for candidates hired in those locations only' — the Bay Area is both excluded for hiring and listed with a pay band, creating a contradiction. Interpreted as: role cannot be filled in Bay Area but pay bands are shown for reference/compliance.",
+      "5+ years required vs 7+ preferred creates ambiguity about hard floor; treated 5 as hard minimum per schema.",
+      "base_range_usd populated with full range across all listed geographies ($171,120–$251,600); actual range depends on candidate location."
+    ]
+  }
+}

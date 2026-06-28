@@ -1,0 +1,207 @@
+{
+  "company": "Coinbase",
+  "role_title": "Senior Product Manager, CX & AI Tooling",
+  "url": "https://www.coinbase.com/careers/positions/8008033?gh_jid=8008033",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8008033",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Charlotte, NC"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "quarterly in-person working sessions ('surges')",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of product management experience required",
+      "Title is explicitly 'Senior Product Manager'",
+      "Base salary $180,370 USD"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years of product management experience with a track record of shipping impactful internal tools, enterprise platforms, or operational tooling where internal users' work directly impacts external customers.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_ml_capabilities",
+      "raw_text_from_jd": "Demonstrated ability to leverage AI/ML capabilities (NLP, automation, intelligent workflows) to solve real user problems, with experience building or integrating AI-powered tooling into operational platforms.",
+      "skill_type": "capability",
+      "domain": "ai_ml_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "NLP",
+        "automation",
+        "intelligent workflows",
+        "AI-powered tooling"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "portfolio_management",
+      "raw_text_from_jd": "Experience managing a portfolio of products or features simultaneously, making disciplined prioritization tradeoffs in complex, cross-functional environments.",
+      "skill_type": "capability",
+      "domain": "portfolio_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "engineering_engagement",
+      "raw_text_from_jd": "Proven ability to engage meaningfully with engineers on system design, APIs, and data flows, and to communicate product vision and strategy to stakeholders at all levels including executive leadership.",
+      "skill_type": "capability",
+      "domain": "technical_collaboration_and_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs",
+        "data flows",
+        "system design"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "responsible_genai_use",
+      "raw_text_from_jd": "Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality.",
+      "skill_type": "capability",
+      "domain": "generative_ai",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "CX and AI tooling platform for Coinbase support specialists — intelligent case routing, AI-assisted responses, knowledge retrieval, workflow automation",
+    "business_model": "internal enterprise platform (B2B2C — internal tooling that impacts external retail customer experience)",
+    "primary_metrics_inferred": [
+      "Resolution time",
+      "CSAT",
+      "Specialist efficiency",
+      "Automation rate"
+    ],
+    "cross_functional_partners": [
+      "Design",
+      "Data Science",
+      "Compliance",
+      "EAA teams",
+      "Frontline CX specialists",
+      "Executive leadership"
+    ],
+    "core_responsibilities": [
+      "Own the product roadmap for a portfolio of CX and AI tooling, delivering end-to-end across discovery, requirements, launch, measurement, and iteration",
+      "Drive identification and prioritization of the highest-impact problems in the CX space by partnering with frontline specialists",
+      "Build AI-integrated features that augment human specialists capabilities, including intelligent case routing, AI-assisted responses, knowledge retrieval, and workflow automation",
+      "Define and own success metrics across the portfolio and use data to drive prioritization and measure impact",
+      "Execute cross-functional delivery with Design, Data Science, Compliance, and other EAA teams"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      180370,
+      180370
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity eligibility mentioned alongside bonus and benefits",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "CX tooling",
+    "AI tooling",
+    "intelligent routing",
+    "workflow automation",
+    "NLP",
+    "AI-assisted resolution",
+    "internal platforms",
+    "enterprise applications",
+    "CSAT",
+    "product roadmap",
+    "generative AI",
+    "operational tooling"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation explicitly disclosed ($180,370 base)",
+    "Equity and bonus eligibility mentioned",
+    "Relocation assistance available for Charlotte, NC",
+    "Clear product surface and ownership area with specific metrics named (resolution time, CSAT, specialist efficiency, automation rate)",
+    "Remote-first company culture with quarterly in-person surges — not fully office-bound",
+    "AI Disclosure section shows transparency about AI use in hiring process"
+  ],
+  "red_flags": [
+    "Base salary range is a single point ($180,370–$180,370) — no range, which is unusual and limits negotiation transparency",
+    "Role requires relocation to Greater Charlotte, NC area — eliminates fully remote candidates despite company being 'remote-first'",
+    "No nice-to-haves listed — unusually sparse JD may reflect incomplete requirements or high bar with little flexibility",
+    "Visa sponsorship status not stated",
+    "Application limit: maximum 3 applications within a 6-month period noted"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior Product Manager' and 5+ years requirement)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.business_model (inferred from product description as internal platform impacting external customers)",
+      "scope.primary_metrics_inferred (directly quoted from JD responsibilities section; labeled inferred because they are listed as metrics to define, not company KPIs)",
+      "location.type (JD says 'remote-first but not remote-only' and lists specific Charlotte, NC location with relocation assistance — treated as hybrid/onsite-required)"
+    ],
+    "ambiguities": [
+      "Compensation range shows $180,370–$180,370 (identical min and max) — may be a single pay band point or a data entry error; treated as stated but flagged as unusual",
+      "Location: JD describes Coinbase as 'remote-first, but not remote-only' but then lists 'Greater Charlotte, NC area' with relocation assistance, implying on-site or hybrid presence is expected. Treated as hybrid with onsite expectation.",
+      "Visa sponsorship not mentioned anywhere in the JD — marked as 'unclear'"
+    ]
+  }
+}

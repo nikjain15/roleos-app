@@ -1,0 +1,236 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, Shopping",
+  "url": "https://jobs.ashbyhq.com/openai/df8a1d73-58b9-4571-86f5-da9a12155fbb",
+  "ats_provider": "ashby",
+  "ats_job_id": "df8a1d73-58b9-4571-86f5-da9a12155fbb",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Staff / Principal PM (likely Director-adjacent given 10+ years requirement)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of product management experience",
+      "strong leadership, cross-functional collaboration, and communication skills",
+      "defining a new category at the intersection of AI and commerce"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "Have 10+ years of product management experience with strong leadership, cross-functional collaboration, and communication skills.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shopping_ecommerce_domain_experience",
+      "raw_text_from_jd": "Bring experience in shopping, e-commerce, marketplaces, search, recommendations, consumer growth, or related product areas.",
+      "skill_type": "domain_knowledge",
+      "domain": "shopping_ecommerce_marketplaces",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "e-commerce",
+        "marketplaces"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_product_scale",
+      "raw_text_from_jd": "Have built and scaled impactful consumer products serving large and diverse user bases.",
+      "skill_type": "outcome",
+      "domain": "consumer_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_navigation",
+      "raw_text_from_jd": "Are comfortable navigating ambiguity and excited about defining a new category at the intersection of AI, commerce, and consumer experiences.",
+      "skill_type": "capability",
+      "domain": "ambiguity_and_0_to_1_product",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [
+        "commerce"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Collaborate with cross-functional teams—including design, engineering, product, and go-to-market—to build and scale AI-native shopping experiences.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_and_user_feedback_driven",
+      "raw_text_from_jd": "Use both data and user feedback to identify opportunities, measure impact, and inform product strategy.",
+      "skill_type": "capability",
+      "domain": "data_driven_product_strategy",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "openai_mission_motivated",
+      "raw_text_from_jd": "Are motivated by OpenAI's mission and excited to shape how millions of people discover, evaluate, and purchase products with AI.",
+      "skill_type": "cultural_fit",
+      "domain": "mission_alignment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "AI-powered shopping experiences within ChatGPT, including product discovery, recommendations, personalization, and conversational commerce",
+    "business_model": "B2C consumer AI product with B2B merchant/brand ecosystem components",
+    "primary_metrics_inferred": [
+      "User adoption of shopping experiences in ChatGPT",
+      "Merchant engagement and ecosystem growth",
+      "Product discovery and purchase conversion rates",
+      "User trust and recommendation quality"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Research",
+      "Growth",
+      "GTM",
+      "Marketing",
+      "Business teams",
+      "Merchants",
+      "Brands",
+      "Retailers"
+    ],
+    "core_responsibilities": [
+      "Define and drive the product vision for shopping experiences in ChatGPT",
+      "Partner with research teams to explore how AI can help users discover, evaluate, and confidently purchase products",
+      "Collaborate with cross-functional teams to build and scale AI-native shopping experiences",
+      "Partner with growth, GTM, marketing, and business teams to drive user adoption, merchant engagement, and ecosystem growth",
+      "Work with merchants, brands, retailers, and external partners to improve product quality and user outcomes",
+      "Use data and user feedback to identify opportunities, measure impact, and inform product strategy"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "AI-powered shopping",
+    "ChatGPT",
+    "e-commerce",
+    "product discovery",
+    "recommendations",
+    "personalization",
+    "conversational commerce",
+    "merchant ecosystem",
+    "consumer product",
+    "search"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific product surface defined (shopping within ChatGPT)",
+    "High-impact, highly visible role at the intersection of AI and commerce",
+    "Relocation assistance explicitly offered",
+    "OpenAI is a category-defining AI company with significant resources",
+    "Broad cross-functional scope signals significant PM ownership and influence"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed",
+    "Visa sponsorship policy not stated",
+    "Role requires onsite presence in San Francisco with no remote option mentioned",
+    "10+ years requirement is a hard bar that eliminates most mid-level candidates",
+    "JD does not clarify whether this is an IC or people-management role — ambiguity for candidates with or without management aspirations"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 10+ years requirement and scope of responsibilities)",
+      "seniority.manages_people (not stated; defaulted to false, but ambiguous given 'strong leadership' requirement)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.remote_us_eligible (inferred as false from 'This position is based in San Francisco, CA' with no remote option mentioned)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD requires 'strong leadership' and mentions 'strong leadership, cross-functional collaboration' but does not clarify if people management is expected. This role could be a Staff/Principal IC PM or a PM manager.",
+      "The 'You might thrive in this role if you' framing for all requirements creates ambiguity about which are truly hard requirements vs. strong preferences. The 10+ years and domain experience bullets have been treated as hard given their specificity and seniority signal.",
+      "Visa sponsorship and work authorization policy are not mentioned in the JD body."
+    ]
+  }
+}

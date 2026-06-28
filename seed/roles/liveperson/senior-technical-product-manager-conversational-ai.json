@@ -1,0 +1,336 @@
+{
+  "company": "LivePerson",
+  "role_title": "Senior Technical Product Manager - Conversational AI",
+  "url": "https://job-boards.greenhouse.io/liveperson/jobs/8010762",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8010762",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of experience in product management",
+      "Track record of successfully launching and managing SaaS products or platforms",
+      "Comp range $130K-$150K base, consistent with Senior IC at a public enterprise SaaS company"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree in Computer Science, Engineering, Business, or a related field (MBA preferred).",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree in Computer Science",
+        "Bachelor's degree in Engineering",
+        "Bachelor's degree in Business"
+      ]
+    },
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7+ years of experience in product management, with a track record of successfully launching and managing SaaS products or platforms.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "saas_product_launch_track_record",
+      "raw_text_from_jd": "track record of successfully launching and managing SaaS products or platforms.",
+      "skill_type": "outcome",
+      "domain": "saas_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "conversational_ai_technical_knowledge",
+      "raw_text_from_jd": "Deep understanding of Conversational AI systems, including natural language processing (NLP), Large Language Models (LLMs), dialog management, and the underlying technical architecture.",
+      "skill_type": "domain_knowledge",
+      "domain": "conversational_ai",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Conversational AI",
+        "NLP",
+        "LLMs",
+        "dialog management"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_strategy_and_roadmap",
+      "raw_text_from_jd": "Proven ability to develop and execute product strategy, prioritize features, and drive product roadmap planning in a fast-paced, agile environment.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_skills",
+      "raw_text_from_jd": "Strong analytical skills, with the ability to gather and interpret data, identify trends, and make data-driven decisions",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_collaboration_leadership",
+      "raw_text_from_jd": "Excellent communication, collaboration, and leadership skills, with the ability to influence and inspire cross-functional teams.",
+      "skill_type": "capability",
+      "domain": "leadership_and_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_customer_experience",
+      "raw_text_from_jd": "Experience working with enterprise customers and a strong customer focus, with the ability to empathize with customer needs and pain points.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_customer_engagement",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_for_innovation",
+      "raw_text_from_jd": "Passion for innovation, creativity, and solving complex problems to deliver impactful solutions in the rapidly evolving Conversational AI industry.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Conversational AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "mba_preferred",
+      "raw_text_from_jd": "MBA preferred",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    },
+    {
+      "id": "ai_ml_saas_enterprise_experience",
+      "raw_text_from_jd": "Having experience in AI/ML-centric SaaS products or platforms in the enterprise space is plus",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_ml_saas",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML"
+      ],
+      "industries_named": [
+        "SaaS",
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_performance_metrics",
+      "raw_text_from_jd": "Having AI performance metrics (e.g., resolution rate, accuracy, latency) is plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_performance_metrics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI performance metrics"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Conversational AI platform including Conversational Builder, Agent Assist, KAI, and related AI infrastructure",
+    "business_model": "enterprise B2B SaaS, conversational AI platform",
+    "primary_metrics_inferred": [
+      "AI resolution rate and accuracy",
+      "System latency and scalability",
+      "Customer satisfaction metrics",
+      "Platform uptime / high availability",
+      "Message processing throughput"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data Science",
+      "Sales",
+      "Customer Success",
+      "Marketing",
+      "Infrastructure",
+      "Cloud",
+      "AI/ML teams"
+    ],
+    "core_responsibilities": [
+      "Develop and articulate a clear product vision and strategy for Conversational AI Teams",
+      "Define, review feature requests, and prioritize product features and enhancements",
+      "Create and maintain a detailed product roadmap with key milestones, dependencies, and timelines",
+      "Work closely with Engineering, Infrastructure, Cloud, AI/ML teams, Sales, and Customer Success",
+      "Champion a platform-first approach for high availability, low latency, and scalability",
+      "Conduct ongoing research and analysis on emerging trends in Conversational AI and LLMs",
+      "Engage with enterprise customers to gather insights and translate feedback into product improvements",
+      "Partner with Marketing, Sales, and Customer Success on go-to-market strategies",
+      "Define KPIs and metrics to measure effectiveness of Conversational AI platform capabilities",
+      "Stay informed about advancements in Conversational AI systems, LLMs, and high-scale AI infrastructure"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      130000,
+      150000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Employee Stock Purchase Program (ESPP) with discount on company shares",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Conversational AI",
+    "LLMs",
+    "NLP",
+    "product roadmap",
+    "SaaS",
+    "enterprise",
+    "Agent Assist",
+    "scalability",
+    "AI/ML",
+    "platform-first",
+    "dialog management",
+    "natural language processing",
+    "KPIs",
+    "technical product management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($130K-$150K base)",
+    "Fully remote role with clear LI-Remote tag",
+    "Company is publicly traded (NASDAQ: LPSN) with established enterprise product",
+    "Named as #1 Most Innovative AI Company by Fast Company — strong employer brand signal",
+    "Comprehensive benefits package including 401(k) match, ESPP, generous parental leave",
+    "Gartner recognized as a leader in Conversational AI space",
+    "Clear product surface and responsibilities outlined"
+  ],
+  "red_flags": [
+    "Location pay differential mentioned, which may reduce comp for non-high-cost-of-living areas",
+    "No explicit mention of visa sponsorship — unclear for non-US candidates despite 'USA Remote' listing",
+    "JD lists 'MBA preferred' alongside bachelor's as a soft requirement but places it in the hard-requirements section — may signal preference for overqualified candidates",
+    "Seven-plus years minimum is a high bar that may indicate a stretch role or position that has been open a while",
+    "Phishing warning included suggests active targeting of LivePerson applicants — candidates should exercise caution"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement and comp range)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as metrics)",
+      "scope.business_model (inferred from product description and enterprise customer references)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "location.work_auth (not stated in JD; marked unclear)",
+      "location.visa_sponsorship (not stated in JD; marked unclear)"
+    ],
+    "ambiguities": [
+      "MBA is listed as 'preferred' within the 'You Have: Required Skills & Qualifications' section — treated as nice_to_have (soft) despite its placement in the required section",
+      "'Having experience in AI/ML-centric SaaS products or platforms in the enterprise space is plus' and 'Having AI performance metrics is plus' are listed under required skills but explicitly marked as 'plus' — treated as nice_to_haves",
+      "Location says 'USA Remote' but no explicit work authorization or sponsorship information is provided — work_auth and visa_sponsorship left as unclear"
+    ]
+  }
+}

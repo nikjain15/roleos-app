@@ -1,0 +1,250 @@
+{
+  "company": "OpenAI",
+  "role_title": "Program Manager - Technology Capital Builds",
+  "url": "https://jobs.ashbyhq.com/openai/a7cec667-30be-464b-a2a8-3e390a066555",
+  "ats_provider": "ashby",
+  "ats_job_id": "a7cec667-30be-464b-a2a8-3e390a066555",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Facilities / Capital Builds Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Compensation range $216K-$252K base suggests senior-level IC",
+      "Portfolio-level program management responsibility across capital builds",
+      "Executive communications ownership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "project_program_management",
+      "raw_text_from_jd": "Strong project and program management capabilities",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "architectural_design_process",
+      "raw_text_from_jd": "Strong knowledge of the architectural design process (schematic design, design development, construction documents)",
+      "skill_type": "domain_knowledge",
+      "domain": "architectural_design",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "commercial real estate",
+        "construction"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "commercial_re_construction",
+      "raw_text_from_jd": "Strong knowledge of commercial real estate construction processes",
+      "skill_type": "domain_knowledge",
+      "domain": "commercial_real_estate_construction",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "commercial real estate",
+        "construction"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Excellent written and verbal communication skills",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vendor_management",
+      "raw_text_from_jd": "Vendor management experience (Vendor vetting, RFP and bid response, performance management, handover)",
+      "skill_type": "capability",
+      "domain": "vendor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mechanical_power_cooling",
+      "raw_text_from_jd": "Understanding of mechanical power, cooling systems and capacity planning",
+      "skill_type": "domain_knowledge",
+      "domain": "mechanical_power_and_cooling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "datacenter"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "read_construction_drawings",
+      "raw_text_from_jd": "Ability to read construction and engineering plan drawings",
+      "skill_type": "capability",
+      "domain": "construction_drawings",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pmp_certification",
+      "raw_text_from_jd": "PMP or equivalent project management certification",
+      "skill_type": "credential",
+      "domain": "project_management_certification",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP"
+      ]
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Technology Capital Builds — new office buildouts, remodels, industrial labs, datacenters, secured facilities; covering low voltage, ISP connectivity, network infrastructure, AV, physical security",
+    "business_model": "internal corporate infrastructure / facilities",
+    "primary_metrics_inferred": [
+      "On-time delivery of capital build projects",
+      "Budget adherence and cost management",
+      "Risk identification and mitigation across builds portfolio"
+    ],
+    "cross_functional_partners": [
+      "Real Estate and Workplace Services",
+      "Corporate IT",
+      "Corporate Security",
+      "ITAV team",
+      "FP&A",
+      "Construction trades and vendors"
+    ],
+    "core_responsibilities": [
+      "Cross-functional coordination between internal teams, construction and related trades and other vendors/service providers",
+      "Manage the design, bid, implementation, commissioning and handover process for ISP connectivity, low voltage cabling and network infrastructure (MDF/IDF, MPOEs, inside/outside cabling plant, etc.)",
+      "Partner with the ITAV team during the design, bid, implementation, commissioning and handover process for audio-visual/video-conference systems",
+      "Partner with the Corporate Security team to implement supporting infrastructure and network integration for access control, surveillance systems and intrusion detection",
+      "Manage project schedules, status updates, executive communications for the builds portfolio",
+      "Develop drawing packages and specification narratives in support of project design and execution",
+      "Manage procurement and provide guidance to FP&A on budget and cost management",
+      "Identify, categorize, mitigate and monitor project delivery risks"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      216000,
+      252000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "capital builds",
+    "low voltage",
+    "ISP connectivity",
+    "network infrastructure",
+    "MDF/IDF",
+    "audio visual",
+    "physical security",
+    "datacenter",
+    "construction documents",
+    "program management",
+    "PMP",
+    "vendor management",
+    "RFP",
+    "procurement",
+    "schematic design"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range disclosed ($216K-$252K base)",
+    "Clear, technically specific scope with well-defined deliverables",
+    "Concrete cross-functional partner list named in JD",
+    "Role sits at intersection of IT infrastructure and facilities — specialized and high-value at OpenAI scale"
+  ],
+  "red_flags": [
+    "No location specified — unclear if onsite is required for capital builds work (likely onsite given nature of role)",
+    "Visa sponsorship not mentioned",
+    "No years-of-experience requirement stated, making seniority expectations harder to assess",
+    "All requirements framed under 'you might thrive if you have' — hard vs soft classification is ambiguous throughout"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from compensation range and portfolio scope)",
+      "location.type (not stated; construction/facilities role likely requires onsite presence but JD does not specify)",
+      "scope.business_model (inferred as internal corporate infrastructure)",
+      "scope.primary_metrics_inferred (not stated in JD)",
+      "compensation.equity_mentioned (not mentioned; assumed false)"
+    ],
+    "ambiguities": [
+      "All requirements appear under 'You might thrive in this role if you have:' phrasing which is softer than 'Required', yet these are core technical competencies expected for a capital builds PM. Treated as hard severity given functional necessity and specificity.",
+      "PMP 'or equivalent' makes the certification requirement ambiguous — treated as hard with accepts_equivalent_experience=true.",
+      "Location not stated anywhere in the JD body despite the role almost certainly requiring physical presence at build sites."
+    ]
+  }
+}

@@ -165,9 +165,21 @@ function DemandView({ d }: { d: DemandStats }) {
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
         <Tile label="Watchers" value={d.watchers.toLocaleString()} hint="active 'keep me in the loop' intents" />
         <Tile label="Pushing hard" value={d.pushing.toLocaleString()} hint="in push mode" tone={d.pushing ? "good" : "neutral"} />
-        <Tile label="Distinct companies" value={String(d.topCompanies.length)} hint="wanted across users" />
-        <Tile label="Distinct roles" value={String(d.topRoles.length)} hint="targeted" />
+        <Tile label="Roles in corpus" value={d.corpusTotal.toLocaleString()} hint="seed + hunted" />
+        <Tile label="Hunted in (ATS)" value={d.ingestedTotal.toLocaleString()} hint="added by ingestion" tone={d.ingestedTotal ? "good" : "neutral"} />
       </div>
+      {d.recentIngested.length > 0 && (
+        <div className="mt-4">
+          <p className="mb-2 text-xs font-medium text-tx">Recently hunted in</p>
+          <div className="flex flex-wrap gap-2">
+            {d.recentIngested.map((r, i) => (
+              <span key={i} className="rounded-full bg-suc-bg px-2.5 py-1 text-xs text-suc">
+                {r.company} · {r.role_title}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
       <div className="mt-4 space-y-4">
         <div>
           <p className="mb-2 text-xs font-medium text-tx">Most-wanted companies</p>

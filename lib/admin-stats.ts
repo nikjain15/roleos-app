@@ -56,6 +56,10 @@ export interface DemandStats {
   topCompanies: { key: string; count: number }[];
   topKeywords: { key: string; count: number }[];
   topLocations: { key: string; count: number }[];
+  // Corpus / ingestion — how the demand-driven hunt is growing the role list.
+  corpusTotal: number;
+  ingestedTotal: number;
+  recentIngested: { company: string; role_title: string; created_at: string }[];
 }
 
 function rank(values: string[], limit = 12): { key: string; count: number }[] {
@@ -88,6 +92,17 @@ export async function getDemandStats(): Promise<DemandStats> {
     .limit(5000);
   const rows = (data ?? []) as IntentRow[];
 
+  const [{ count: corpusTotal }, { count: ingestedTotal }, recent] = await Promise.all([
+    db.from("roles").select("*", { count: "exact", head: true }),
+    db.from("roles").select("*", { count: "exact", head: true }).eq("source", "ats"),
+    db
+      .from("roles")
+      .select("company, role_title, created_at")
+      .eq("source", "ats")
+      .order("created_at", { ascending: false })
+      .limit(8),
+  ]);
+
   return {
     watchers: rows.length,
     pushing: rows.filter((r) => r.mode === "push").length,
@@ -95,6 +110,9 @@ export async function getDemandStats(): Promise<DemandStats> {
     topCompanies: rank(rows.flatMap((r) => r.companies ?? [])),
     topKeywords: rank(rows.flatMap((r) => r.keywords ?? [])),
     topLocations: rank(rows.map((r) => r.location ?? "").filter(Boolean)),
+    corpusTotal: corpusTotal ?? 0,
+    ingestedTotal: ingestedTotal ?? 0,
+    recentIngested: (recent.data ?? []) as DemandStats["recentIngested"],
   };
 }
 

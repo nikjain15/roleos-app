@@ -1,0 +1,337 @@
+{
+  "company": "OpenAI",
+  "role_title": "Revenue Strategy & Operations - Central Cadence",
+  "url": "https://jobs.ashbyhq.com/openai/cc843c56-fac0-4174-aad5-dee875f2d86f",
+  "ats_provider": "ashby",
+  "ats_job_id": "cc843c56-fac0-4174-aad5-dee875f2d86f",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in Revenue Operations, Sales Operations, or related roles",
+      "Expected to act as strategic thought partner to GTM leadership",
+      "Builds and deploys production systems independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_revops_or_related",
+      "raw_text_from_jd": "5+ years in Revenue Operations, Sales Operations, Business Systems, Workflow Engineering, Solutions Engineering, Product Operations, or related roles",
+      "skill_type": "years_of_experience",
+      "domain": "revenue_operations_or_related",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "build_internal_tools_and_automations",
+      "raw_text_from_jd": "Experience building internal tools, workflow automations, AI-powered systems, or operational infrastructure",
+      "skill_type": "capability",
+      "domain": "internal_tooling_and_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI-powered systems",
+        "workflow automations"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "api_automation_scripting_familiarity",
+      "raw_text_from_jd": "Familiarity with APIs, automation frameworks, lightweight scripting, or AI workflow tooling",
+      "skill_type": "tool_proficiency",
+      "domain": "technical_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs",
+        "automation frameworks",
+        "AI workflow tooling"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_systems_experience",
+      "raw_text_from_jd": "Experience working with GTM systems such as Salesforce, analytics tooling, forecasting systems, or workflow platforms",
+      "skill_type": "tool_proficiency",
+      "domain": "gtm_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [
+        "forecasting systems",
+        "workflow platforms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_and_operational_problem_solving",
+      "raw_text_from_jd": "Strong analytical and operational problem-solving skills",
+      "skill_type": "capability",
+      "domain": "analytics_and_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "production_system_deployment",
+      "raw_text_from_jd": "Experience deploying systems used by operators in production environments",
+      "skill_type": "outcome",
+      "domain": "systems_deployment",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "rapid_experimentation_vs_scalable_design",
+      "raw_text_from_jd": "Ability to balance rapid experimentation with scalable operational design",
+      "skill_type": "capability",
+      "domain": "product_and_systems_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "systems_and_product_mindset",
+      "raw_text_from_jd": "Have a strong systems and product mindset and enjoy turning ambiguous business problems into scalable solutions",
+      "skill_type": "cultural_fit",
+      "domain": "product_and_systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native_dev_tooling_experience",
+      "raw_text_from_jd": "Have experimented with AI-native development tooling such as Codex, agents, workflow orchestration tools, or automation platforms",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_native_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Codex"
+      ],
+      "technologies_named": [
+        "agents",
+        "workflow orchestration tools",
+        "automation platforms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "crm_revops_analytics_experience",
+      "raw_text_from_jd": "Have experience with CRM systems, RevOps workflows, forecasting processes, analytics tooling, or GTM operations",
+      "skill_type": "domain_knowledge",
+      "domain": "crm_and_revops",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "building_automations_and_ai_workflows",
+      "raw_text_from_jd": "Have experience building automations, internal tools, integrations, or AI workflows in production environments",
+      "skill_type": "capability",
+      "domain": "automation_and_ai_workflows",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "highly_analytical_data_driven",
+      "raw_text_from_jd": "Are highly analytical and comfortable using data to drive operational decisions",
+      "skill_type": "capability",
+      "domain": "data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "thrives_in_ambiguity",
+      "raw_text_from_jd": "Thrive in ambiguity and can prioritize high-impact opportunities across multiple stakeholders",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "GTM Strategy & Operations — AI-native internal tooling and workflows for Sales, Solutions, and Revenue Operations",
+    "business_model": "B2B enterprise SaaS / API (AI research and deployment company)",
+    "primary_metrics_inferred": [
+      "Field productivity improvements",
+      "Forecasting quality",
+      "Pipeline management effectiveness",
+      "Adoption of AI-native workflows across GTM organization"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Solutions",
+      "RevOps",
+      "Systems",
+      "Finance",
+      "Enablement",
+      "GTM Leadership"
+    ],
+    "core_responsibilities": [
+      "Identify opportunities where AI can improve the quality, speed, scale, and effectiveness of GTM operations and field execution",
+      "Design and deploy AI-native workflows that combine agents, automation, systems integrations, and human review",
+      "Build internal tooling and operational accelerators using OpenAI APIs, Codex, Salesforce, automation platforms, and lightweight applications",
+      "Rapidly prototype and iterate on solutions that improve forecasting, pipeline management, account planning, territory operations, deal execution, customer insights, and productivity",
+      "Partner directly with Sales, Solutions, RevOps, Systems, Finance, and Enablement teams to operationalize AI into day-to-day workflows",
+      "Build reusable 'golden workflows,' templates, and operational tooling that can scale across the GTM organization",
+      "Help define best practices, governance, and guardrails for deploying AI within GTM operational workflows",
+      "Drive adoption through hands-on training, pair building sessions, documentation, and direct collaboration with operators",
+      "Serve as a strategic thought partner to GTM leadership on how AI can reshape operational processes and field productivity"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Revenue Operations",
+    "GTM",
+    "AI-native workflows",
+    "Salesforce",
+    "OpenAI APIs",
+    "Codex",
+    "automation",
+    "workflow engineering",
+    "internal tooling",
+    "forecasting",
+    "pipeline management",
+    "agents",
+    "strategy and operations"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Role sits at OpenAI, a frontier AI company with direct access to cutting-edge models and APIs",
+    "Clear scope: builder+operator hybrid role with real production impact on GTM workflows",
+    "Explicit cross-functional partnership list provided",
+    "Encourages candidates who thrive in ambiguity — signals openness to varied backgrounds"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Location and remote eligibility not stated anywhere in the JD",
+    "Visa sponsorship and work authorization requirements not addressed",
+    "Buzzword-heavy framing may obscure day-to-day role clarity",
+    "Dual 'builder and operator' expectation is broad and may lead to role scope creep"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ years requirement and strategic thought partner language)",
+      "seniority.manages_people (not stated; assumed false based on IC framing)",
+      "scope.business_model (inferred from OpenAI's known B2B/API product offerings)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed in JD)",
+      "location.type (not stated in JD; marked unclear)",
+      "compensation.equity_mentioned (not stated; marked false)"
+    ],
+    "ambiguities": [
+      "The 'You might thrive in this role if you:' section uses soft language but lists items that closely overlap with the 'Experience' section's harder requirements (e.g., CRM experience, automation experience). Items in 'You might thrive' section treated as soft/nice-to-haves; items under 'Experience' treated as must-haves.",
+      "Location (city, remote eligibility, hybrid vs onsite) is entirely unstated in the JD body."
+    ]
+  }
+}
