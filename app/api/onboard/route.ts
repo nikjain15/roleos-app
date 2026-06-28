@@ -1,8 +1,8 @@
-import { recallRoles } from "@/lib/match";
 import { matchProfile } from "@/lib/run-match";
 import { runSkill } from "@/agent/skills/run";
 import mirrorSkill from "@/agent/skills/mirror";
 import { parseModelJson } from "@/lib/json";
+import { assessProfileInput, thinInputMessage } from "@/lib/profile-input";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -34,16 +34,20 @@ export async function POST(req: Request): Promise<Response> {
       try {
         send({ type: "status", text: "Reading what you sent…" });
 
-        // Recall first so we can narrate a real number.
-        const candidates = await recallRoles(profile, 6);
-        send({ type: "status", text: "Scanning 557 roles…" });
-        send({
-          type: "status",
-          text: `Ruled out ${557 - candidates.length} that are off your trajectory. ${candidates.length} worth a look.`,
-        });
+        // Honesty guard (ro-voice "thin input"): a bare URL / too-little text has
+        // no real signal to match on. Don't fabricate a shortlist off noise —
+        // ask for real content instead. (LinkedIn etc. can't be fetched here.)
+        const assess = assessProfileInput(profile);
+        if (!assess.ok) {
+          send({ type: "needs_more", text: thinInputMessage(assess) });
+          send({ type: "done" });
+          return;
+        }
 
-        // Mirror + full reasoning in parallel (both through the quality gate).
-        send({ type: "status", text: "Reading you back, and reasoning about the fits…" });
+        // Mirror + full matching in parallel (both through the quality gate).
+        // matchProfile = rank all 557 by similarity → reason over the closest.
+        send({ type: "status", text: "Comparing you against all 557 roles…" });
+        send({ type: "status", text: "Reading you back, and reasoning about the closest fits…" });
         const [mirrorRes, matchRes] = await Promise.all([
           runSkill(mirrorSkill, { userId: "anon", data: { profile } }),
           matchProfile(profile, 6),

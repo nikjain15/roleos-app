@@ -30,6 +30,7 @@ export default function Onboarding() {
   const [status, setStatus] = useState<string[]>([]);
   const [mirror, setMirror] = useState<Mirror | null>(null);
   const [matches, setMatches] = useState<Match[] | null>(null);
+  const [needsMore, setNeedsMore] = useState<string | null>(null);
   const [running, setRunning] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
@@ -40,6 +41,7 @@ export default function Onboarding() {
     setStatus([]);
     setMirror(null);
     setMatches(null);
+    setNeedsMore(null);
     setError(null);
 
     try {
@@ -64,6 +66,7 @@ export default function Onboarding() {
           if (!line) continue;
           const ev = JSON.parse(line);
           if (ev.type === "status") setStatus((s) => [...s, ev.text]);
+          else if (ev.type === "needs_more") setNeedsMore(ev.text);
           else if (ev.type === "mirror") setMirror({ statements: ev.statements, insight: ev.insight });
           else if (ev.type === "matches") setMatches(ev.matches);
           else if (ev.type === "error") setError(ev.text);
@@ -135,6 +138,13 @@ export default function Onboarding() {
 
       {error && <p className="mt-6 text-sm text-dng">{error}</p>}
 
+      {/* Honest thin-input recovery — RO asks for real content instead of faking matches */}
+      {needsMore && (
+        <div className="mt-8 rounded-xl border-l-[3px] border-warn bg-warn-bg p-4 text-[15px] leading-relaxed text-tx">
+          {needsMore}
+        </div>
+      )}
+
       <div ref={resultsRef}>
         {/* The mirror */}
         {mirror && (
@@ -162,7 +172,9 @@ export default function Onboarding() {
           <section className="mt-10">
             <h2 className="text-lg font-semibold">
               Roles worth your time{" "}
-              <span className="font-normal text-tx3">· I scanned 557, kept {matches.length}</span>
+              <span className="font-normal text-tx3">
+                · compared all 557, these {matches.length} are closest — reasoned through, not just ranked
+              </span>
             </h2>
             <div className="mt-4 space-y-3">
               {matches.map((m) => (
