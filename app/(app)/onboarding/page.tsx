@@ -208,6 +208,7 @@ export default function Onboarding() {
             onChange={(e) => setLinkedinUrl(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && pullLinkedIn()}
             placeholder="https://www.linkedin.com/in/your-handle/"
+            aria-label="Your LinkedIn profile URL"
             disabled={running || parsing}
             className="flex-1 rounded-md border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none focus:border-info disabled:opacity-60"
           />
@@ -232,6 +233,7 @@ export default function Onboarding() {
         value={profile}
         onChange={(e) => setProfile(e.target.value)}
         placeholder="Paste your CV / LinkedIn text, or just talk… (or drop a PDF below)"
+        aria-label="Your CV, LinkedIn text, or a few lines about your work"
         rows={6}
         disabled={running}
         className="mt-6 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] leading-relaxed text-tx outline-none focus:border-info disabled:opacity-60"

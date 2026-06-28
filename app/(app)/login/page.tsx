@@ -97,6 +97,7 @@ function LoginInner() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && magicLink()}
+            aria-label="Your email address"
             placeholder="you@email.com"
             className="w-full rounded-md border border-bd bg-surf px-4 py-2.5 text-[15px] text-tx outline-none focus:border-info"
           />
