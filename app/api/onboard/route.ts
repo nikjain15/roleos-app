@@ -3,6 +3,7 @@ import { runSkill } from "@/agent/skills/run";
 import mirrorSkill from "@/agent/skills/mirror";
 import { parseModelJson } from "@/lib/json";
 import { assessProfileInput, thinInputMessage } from "@/lib/profile-input";
+import { normalizeProfileText } from "@/lib/normalize-profile";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -17,7 +18,10 @@ export const maxDuration = 60;
  * No send capability (human-gated-outward holds).
  */
 export async function POST(req: Request): Promise<Response> {
-  const { profile } = (await req.json()) as { profile?: string };
+  const raw = (await req.json()) as { profile?: string };
+  // Strip extraction/boilerplate noise on EVERY input (paste + upload) before it
+  // hits any model — fewer tokens, cleaner signal, same content.
+  const profile = raw.profile ? normalizeProfileText(raw.profile) : raw.profile;
   if (!profile || profile.trim().length < 30) {
     return Response.json(
       { error: "Give RO a bit more to go on — paste your CV, LinkedIn, or a few lines about your work." },
