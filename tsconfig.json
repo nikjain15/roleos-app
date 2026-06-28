@@ -20,5 +20,5 @@
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "cloudflare-env.d.ts"],
-  "exclude": ["node_modules", ".open-next", "sandbox/spike/e2b", "sandbox/spike/cf-sandbox", "sandbox/studio"]
+  "exclude": ["node_modules", ".open-next", "sandbox/spike/e2b", "sandbox/spike/cf-sandbox", "sandbox/studio", "cron"]
 }

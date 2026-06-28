@@ -1,0 +1,13 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "roleos-cron",
+  "main": "worker.ts",
+  "compatibility_date": "2025-03-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // Hourly. Each user only gets a digest when their cadence interval has passed
+  // (the app's due-check), so this stays light — most runs build 0–few.
+  "triggers": { "crons": ["0 * * * *"] },
+  "observability": { "enabled": true },
+  // Public app origin the cron calls. CRON_SECRET is a secret (wrangler secret put).
+  "vars": { "APP_URL": "https://ro.roleos.fyi" }
+}
