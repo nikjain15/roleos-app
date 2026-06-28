@@ -38,7 +38,14 @@ function LoginInner() {
     setErr(null);
     const { error } = await supabaseBrowser().auth.signInWithOAuth({
       provider: "google",
-      options: { redirectTo },
+      options: {
+        redirectTo,
+        // Offline access → Google returns a refresh token we store for Gate 2
+        // (reading recruiter mail + calendar later). prompt=consent ensures it.
+        scopes:
+          "https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/calendar.readonly",
+        queryParams: { access_type: "offline", prompt: "consent" },
+      },
     });
     if (error) setErr("Couldn't reach Google just now. Try the email link instead?");
   }

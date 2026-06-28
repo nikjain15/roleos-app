@@ -69,6 +69,12 @@ export default async function Feed() {
         </span>
         <div className="flex gap-2">
           <Link
+            href="/studio/recruiter"
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
+          >
+            Recruiter desk →
+          </Link>
+          <Link
             href="/studio/negotiate"
             className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
           >
