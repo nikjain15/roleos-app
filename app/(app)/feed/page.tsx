@@ -4,6 +4,7 @@ import { supabaseServer } from "@/lib/supabase/server";
 import SaveOnboarding from "@/components/SaveOnboarding";
 import SignOut from "@/components/SignOut";
 import TailorButton from "@/components/TailorButton";
+import { isAdmin } from "@/lib/admin";
 
 /**
  * The decision feed — the home (journey.html §6). No tabs, no Kanban. What RO
@@ -37,6 +38,7 @@ export default async function Feed() {
 
   const pursue = (matches ?? []).filter((m) => m.recommendation === "pursue");
   const rest = (matches ?? []).filter((m) => m.recommendation !== "pursue");
+  const admin = await isAdmin();
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-12">
@@ -47,7 +49,14 @@ export default async function Feed() {
           <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">RO</span>
           RoleOS
         </span>
-        <SignOut />
+        <div className="flex items-center gap-3">
+          {admin && (
+            <Link href="/admin" className="text-sm text-tx3 hover:text-info">
+              Admin
+            </Link>
+          )}
+          <SignOut />
+        </div>
       </div>
 
       <div className="mt-8 flex items-center justify-between gap-2">
