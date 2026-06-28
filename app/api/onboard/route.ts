@@ -104,6 +104,12 @@ export async function POST(req: Request): Promise<Response> {
           }
         }
 
+        // Emit the RESOLVED profile (fetched + normalized) so the client saves
+        // the real content as the master_profile — not the URL the user typed.
+        // Without this, downstream gates (résumé truth-gate, screening) have no
+        // verifiable source of truth and correctly refuse to work.
+        send({ type: "resolved", profile: profileText });
+
         // Mirror + full matching in parallel (both through the quality gate).
         // matchProfile = rank all 557 by similarity → reason over the closest.
         send({ type: "status", text: "Comparing you against all 557 roles…" });

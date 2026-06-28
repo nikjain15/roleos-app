@@ -37,6 +37,9 @@ export default function Onboarding() {
   const [error, setError] = useState<string | null>(null);
   const [parsing, setParsing] = useState(false);
   const [fileNote, setFileNote] = useState<string | null>(null);
+  // The RESOLVED profile text (fetched/normalized) — what we save, so the
+  // master_profile is real content, not the URL the user typed.
+  const [resolvedProfile, setResolvedProfile] = useState<string | null>(null);
   const [firstName, setFirstName] = useState<string | null>(null);
   const [linkedinUrl, setLinkedinUrl] = useState("");
   const [signedIn, setSignedIn] = useState(false);
@@ -135,6 +138,7 @@ export default function Onboarding() {
       let buf = "";
       let gotMirror: Mirror | null = null;
       let gotMatches: Match[] | null = null;
+      let gotResolved: string | null = null;
       for (;;) {
         const { value, done } = await reader.read();
         if (done) break;
@@ -146,6 +150,7 @@ export default function Onboarding() {
           if (!line) continue;
           const ev = JSON.parse(line);
           if (ev.type === "status") setStatus((s) => [...s, ev.text]);
+          else if (ev.type === "resolved") { gotResolved = ev.profile; setResolvedProfile(ev.profile); }
           else if (ev.type === "needs_more") setNeedsMore(ev.text);
           else if (ev.type === "mirror") { gotMirror = { statements: ev.statements, insight: ev.insight }; setMirror(gotMirror); }
           else if (ev.type === "matches") { gotMatches = ev.matches; setMatches(ev.matches); }
@@ -161,7 +166,9 @@ export default function Onboarding() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              profile: p,
+              // Save the RESOLVED content (fetched profile), not the URL the
+              // user typed — so the master_profile is a real source of truth.
+              profile: gotResolved ?? p,
               mirror: gotMirror,
               matches: gotMatches,
               linkedin_url: isLinkedInUrl(p) ? p.trim() : undefined,
@@ -397,7 +404,7 @@ export default function Onboarding() {
                     onClick={() => {
                       sessionStorage.setItem(
                         "roleos.pending",
-                        JSON.stringify({ profile, mirror, matches }),
+                        JSON.stringify({ profile: resolvedProfile ?? profile, mirror, matches }),
                       );
                       window.location.href = "/login?next=/feed";
                     }}
