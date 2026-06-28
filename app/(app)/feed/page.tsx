@@ -121,7 +121,7 @@ export default async function Feed() {
               </p>
               <div className="space-y-3">
                 {pursue.map((m) => (
-                  <Card key={m.role_id} m={m} send />
+                  <Card key={m.role_id} m={m} />
                 ))}
               </div>
             </section>
@@ -130,8 +130,15 @@ export default async function Feed() {
           {rest.length > 0 && (
             <section className="mt-8">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-wide text-tx3">
-                Also tracking
+                {pursue.length > 0 ? "Also tracking" : "Worth a look — your call"}
               </p>
+              {pursue.length === 0 && (
+                <p className="mb-3 text-sm text-tx2">
+                  Nothing&apos;s a slam-dunk &ldquo;pursue&rdquo; against your profile this week, and I&apos;d
+                  rather say that than pad the list. But these are real maybes — open any one and I&apos;ll
+                  tailor your résumé to it, build a portfolio piece, or run a mock. Your move.
+                </p>
+              )}
               <div className="space-y-3">
                 {rest.map((m) => (
                   <Card key={m.role_id} m={m} />
@@ -145,7 +152,7 @@ export default async function Feed() {
   );
 }
 
-function Card({ m, send }: { m: MatchRow; send?: boolean }) {
+function Card({ m }: { m: MatchRow }) {
   const recColor =
     m.recommendation === "pursue"
       ? "bg-suc-bg text-suc"
@@ -163,28 +170,33 @@ function Card({ m, send }: { m: MatchRow; send?: boolean }) {
         </span>
       </div>
       {m.reasoning?.why && <p className="mt-2 text-[15px] leading-relaxed text-tx2">{m.reasoning.why}</p>}
-      {send && (
-        <div className="mt-3 flex gap-2">
-          {/* RO drafts; the you-send dispatch stays human-gated (Phase 3+). */}
-          <TailorButton roleId={m.role_id} />
-          <Link
-            href={`/studio/coach?role=${m.role_id}`}
-            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
+      {/* Actions on EVERY match — RO recommends, you decide (ro-voice: your */}
+      {/* judgment always overrides). Drafting is RO; sending stays human-gated. */}
+      <div className="mt-3 flex flex-wrap gap-2">
+        <TailorButton roleId={m.role_id} />
+        <Link
+          href={`/studio/build?role=${m.role_id}`}
+          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-info"
+        >
+          Build a piece →
+        </Link>
+        <Link
+          href={`/studio/coach?role=${m.role_id}`}
+          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-info"
+        >
+          Practice the interview →
+        </Link>
+        {m.roles?.url && (
+          <a
+            href={m.roles.url}
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-info"
           >
-            Practice the interview →
-          </Link>
-          {m.roles?.url && (
-            <a
-              href={m.roles.url}
-              target="_blank"
-              rel="noreferrer"
-              className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
-            >
-              View posting ↗
-            </a>
-          )}
-        </div>
-      )}
+            View posting ↗
+          </a>
+        )}
+      </div>
     </article>
   );
 }
