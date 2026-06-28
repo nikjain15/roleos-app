@@ -148,6 +148,7 @@ export default function RecruiterStudio() {
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
               rows={2}
+              aria-label="Application screening question"
               placeholder="e.g. Tell us about a time you shipped an AI product under ambiguity."
               className="mt-3 w-full rounded-lg border border-bd bg-surf2 p-3 text-sm text-tx outline-none focus:border-info"
             />
