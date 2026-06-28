@@ -198,9 +198,36 @@ function DemandView({ d }: { d: DemandStats }) {
           {chips(d.topLocations)}
         </div>
       </div>
+      {d.recentRuns.length > 0 && (
+        <div className="mt-4">
+          <p className="mb-2 text-xs font-medium text-tx">Recent ingestion runs</p>
+          <div className="space-y-1.5">
+            {d.recentRuns.map((r, i) => (
+              <div key={i} className="flex items-center justify-between rounded-lg bg-surf2 px-3 py-2 text-xs">
+                <span className="flex items-center gap-2">
+                  <span
+                    className={
+                      r.status === "done" ? "text-suc" : r.status === "error" ? "text-dng" : "text-warn"
+                    }
+                  >
+                    ●
+                  </span>
+                  <span className="text-tx">{r.status}</span>
+                  <span className="text-tx3">· {r.trigger}</span>
+                </span>
+                <span className="text-tx3">
+                  {r.scanned} scanned · <span className="text-suc">+{r.new_count}</span>
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <p className="mt-3 text-xs text-tx3">
         This is the demand signal the ingestion pipeline reads — we fetch the roles &amp; companies
-        people actually want, growing the corpus where it matters.
+        people actually want, growing the corpus where it matters. Admin Run controls + a Companies
+        manager land with the IngestWorkflow (docs/admin-ingestion.md).
       </p>
     </Section>
   );
