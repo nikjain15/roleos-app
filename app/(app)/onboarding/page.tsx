@@ -39,20 +39,32 @@ export default function Onboarding() {
   const [fileNote, setFileNote] = useState<string | null>(null);
   const [firstName, setFirstName] = useState<string | null>(null);
   const [linkedinUrl, setLinkedinUrl] = useState("");
+  const [signedIn, setSignedIn] = useState(false);
+  const [savedNote, setSavedNote] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    // Personalize for a signed-in user (LinkedIn / Google / magic-link give name).
-    supabaseBrowser()
-      .auth.getUser()
-      .then(({ data }) => {
-        const m = data.user?.user_metadata as Record<string, unknown> | undefined;
+    const sb = supabaseBrowser();
+    (async () => {
+      const { data } = await sb.auth.getUser();
+      if (data.user) {
+        setSignedIn(true);
+        const m = data.user.user_metadata as Record<string, unknown> | undefined;
         const name = (m?.name ?? m?.full_name ?? m?.given_name) as string | undefined;
         if (name) setFirstName(String(name).split(" ")[0]);
-      })
-      .catch(() => {});
-    // Remember the last LinkedIn URL on this device (one-time convenience).
+        // RO remembers: if we already saved their work, don't re-ask — send them
+        // to their feed (their saved profile + matches live there).
+        const { count } = await sb
+          .from("matches")
+          .select("role_id", { count: "exact", head: true });
+        if ((count ?? 0) > 0) {
+          window.location.replace("/feed");
+          return;
+        }
+      }
+    })().catch(() => {});
+    // Pre-fill the last LinkedIn URL on this device (one-time convenience).
     try {
       const saved = localStorage.getItem("roleos.linkedin_url");
       if (saved) setLinkedinUrl(saved);
@@ -108,6 +120,7 @@ export default function Onboarding() {
     setMatches(null);
     setNeedsMore(null);
     setError(null);
+    setSavedNote(false);
 
     try {
       const res = await fetch("/api/onboard", {
@@ -120,6 +133,8 @@ export default function Onboarding() {
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let buf = "";
+      let gotMirror: Mirror | null = null;
+      let gotMatches: Match[] | null = null;
       for (;;) {
         const { value, done } = await reader.read();
         if (done) break;
@@ -132,9 +147,29 @@ export default function Onboarding() {
           const ev = JSON.parse(line);
           if (ev.type === "status") setStatus((s) => [...s, ev.text]);
           else if (ev.type === "needs_more") setNeedsMore(ev.text);
-          else if (ev.type === "mirror") setMirror({ statements: ev.statements, insight: ev.insight });
-          else if (ev.type === "matches") setMatches(ev.matches);
+          else if (ev.type === "mirror") { gotMirror = { statements: ev.statements, insight: ev.insight }; setMirror(gotMirror); }
+          else if (ev.type === "matches") { gotMatches = ev.matches; setMatches(ev.matches); }
           else if (ev.type === "error") setError(ev.text);
+        }
+      }
+
+      // RO remembers: a signed-in user's work is saved automatically — no
+      // re-asking next time. (Anon users save via sign-in; see the CTA below.)
+      if (signedIn && gotMatches?.length) {
+        try {
+          await fetch("/api/save", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              profile: p,
+              mirror: gotMirror,
+              matches: gotMatches,
+              linkedin_url: isLinkedInUrl(p) ? p.trim() : undefined,
+            }),
+          });
+          setSavedNote(true);
+        } catch {
+          /* best-effort — the user can still save from the feed */
         }
       }
     } catch {
@@ -333,23 +368,43 @@ export default function Onboarding() {
             </div>
 
             <div className="mt-8 rounded-xl border border-bd bg-surf2 p-5">
-              <p className="text-[15px] text-tx">
-                This is what I found in seconds. Sign up and I&apos;ll keep going —
-                tailor your résumé to these, draft the applications, and learn your
-                taste as you react. You press send on anything that leaves the building.
-              </p>
-              <button
-                onClick={() => {
-                  sessionStorage.setItem(
-                    "roleos.pending",
-                    JSON.stringify({ profile, mirror, matches }),
-                  );
-                  window.location.href = "/login?next=/feed";
-                }}
-                className="mt-4 inline-block rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
-              >
-                Save what RO found
-              </button>
+              {signedIn ? (
+                <>
+                  <p className="text-[15px] text-tx">
+                    {savedNote
+                      ? "Saved to your hunt — I'll keep this and build on it. I won't ask you again."
+                      : "This is yours now — I'm holding onto it."}{" "}
+                    Next I&apos;ll tailor your résumé to these, draft the applications, and learn
+                    your taste as you react. You press send on anything that leaves the building.
+                  </p>
+                  <Link
+                    href="/feed"
+                    className="mt-4 inline-block rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+                  >
+                    Go to your feed →
+                  </Link>
+                </>
+              ) : (
+                <>
+                  <p className="text-[15px] text-tx">
+                    This is what I found in seconds. Sign up and I&apos;ll keep going — tailor your
+                    résumé to these, draft the applications, and learn your taste as you react. You
+                    press send on anything that leaves the building.
+                  </p>
+                  <button
+                    onClick={() => {
+                      sessionStorage.setItem(
+                        "roleos.pending",
+                        JSON.stringify({ profile, mirror, matches }),
+                      );
+                      window.location.href = "/login?next=/feed";
+                    }}
+                    className="mt-4 inline-block rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+                  >
+                    Save what RO found
+                  </button>
+                </>
+              )}
             </div>
           </section>
         )}
