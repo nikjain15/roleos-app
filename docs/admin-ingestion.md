@@ -1,7 +1,14 @@
 # Plan — admin-triggered ATS ingestion pipeline
 
-Status: **PLAN** (logic proven end-to-end locally on 2026-06-28; this is about
-moving it into the app, behind the admin view, on Cloudflare). Owner: Nik.
+Status: **FINALIZED — decisions locked 2026-06-28** (see "Locked decisions" +
+"Revised architecture" below). Logic proven end-to-end; this is productionizing
+it behind `/admin` on Cloudflare. Owner: Nik.
+
+> **Manual admin control — answer to "can I configure ingestion from /admin?":**
+> Not yet. What's live today is the hourly cron over a seed list (see "Shipped
+> baseline" below). This plan is exactly what adds the admin Run button, scope
+> pickers, live progress panel, and editable company list. Building it delivers
+> that control.
 
 Turns today's manual pipeline into a first-class, admin-triggered (and later
 ambient/cron) feature: **scan ATS boards → diff vs live roles → archive+remove
@@ -94,14 +101,77 @@ status column on `roles`; closed handling stays delete+archive.)
 4. **Ambient** — cron fires daily scan + weekly extract automatically (the
    `setup-role-refresh.md` cadence), so it's both admin-triggered and always-on.
 
-## Open decisions for Nik
-- **Queue vs cron-drain for the slow half** — start with the `ingest_queue` table +
-  cron-drain (no new binding, ships fastest), or go straight to a Cloudflare Queue/
-  Workflow (more robust, more setup)? Recommend table+cron MVP, Queue at Phase 3.
-- **Company list home** — keep YAML in repo (`config/companies.yml`, copied from the
-  pipeline) or a `companies` DB table editable from admin? DB table unlocks the
-  Phase-3 admin "enable candidate" UX but is more work.
-- **Extraction engine in-app** — Claude-only in the Worker (clean, ~$0.005/role), or
-  also support the local Ollama hybrid for bulk backfills (cheaper, local-only)?
-- **Trigger scope** — admin button runs a full scan, or lets you pick sectors/
-  companies (e.g. "just the AI labs", "just demand-wanted")?
+## Locked decisions (Nik, 2026-06-28)
+- **Slow half = Cloudflare Workflow.** Durable multi-step execution with built-in
+  retries/observability. Replaces the queue-table+cron-drain MVP — go straight to
+  the robust path. Adds a `workflows` binding in `wrangler.jsonc` + the Agents-SDK
+  Workflows runtime. `ingest_queue` becomes optional (the Workflow holds step
+  state); keep `ingestion_runs` as the admin-facing progress/audit record the
+  Workflow writes to.
+- **Companies live in a DB table** (`companies`), admin-editable. Seed once from
+  `pipeline/config/companies.yml`. Scan reads from the table; admin can enable/
+  disable/add and promote discovered candidates. Filters (`title`/`location`) also
+  move to a config row/table so they're tunable without redeploy.
+- **Hybrid extractor.** The Workflow's extract step uses **Claude Sonnet 4.6** in
+  cloud (unattended, ~$0.005/role). The **local Ollama** path stays as a separate
+  bulk-backfill script (cheap, local-only) — selectable via a run param
+  `engine: 'claude' | 'ollama'` (ollama only valid for local-triggered runs).
+- **Trigger = full + scoped.** `POST /api/admin/ingest` takes
+  `{ scope: 'all' | {sectors?[], companies?[]} | 'demand', engine }`. Admin UI
+  offers a "Run all" button **and** scoped pickers (sector / company / demand-wanted).
+
+## Revised architecture (reflecting the locks)
+- `wrangler.jsonc`: add a **Workflow** binding `INGEST` → class `IngestWorkflow`.
+- **`IngestWorkflow`** (durable steps, one instance per run, id == `ingestion_runs.id`):
+  1. `scan` — read enabled `companies`, fetch each board, filter → current-open set.
+  2. `diff` — join vs `public.roles` by board token → new[] / closed[].
+  3. `prune` — archive closed docs (→ `roles_archive` table / `archive/roles/`),
+     delete from `public.roles`. (Per hard-remove policy.)
+  4. `extract` (fan-out, one durable step per new role, Claude) — fetch JD →
+     structured JSON → upsert `roles` → embed via `AI` binding. Retries per role.
+  5. `finalize` — write counts to `ingestion_runs`, status `done`.
+  Each step updates `ingestion_runs` so `/admin` shows live progress.
+- **`POST /api/admin/ingest`** (`requireAdmin`): create `ingestion_runs`, start an
+  `INGEST` Workflow instance with `{scope, engine}`, return `{runId}` immediately.
+- **`/admin`**: "Run ingestion" (+ scoped pickers) → POST; an **Ingestion panel**
+  polling `ingestion_runs` (status, per-step counts, duration) + a **Companies**
+  manager (enable/disable/add, discovered candidates) reading/writing the new table.
+- Ambient: the `roleos-cron` worker starts the same Workflow on the daily-scan/
+  weekly-extract cadence.
+
+---
+
+## Shipped baseline (this repo, as of 2026-06-28) — what the Workflow replaces/wraps
+The interim, working pipeline already deployed in `roleos` (the MVP this plan
+upgrades to a Workflow):
+- **`lib/ats.ts`** — Greenhouse / Ashby / Lever fetchers (tries each per slug).
+  *(Workday is the 4th fetcher to add — 17 seed roles use it.)*
+- **`lib/ingest.ts`** — fetch → filter to PM/AI titles → dedupe by URL → embed
+  (in-Worker `AI` bge, same vector space) → insert (`source='ats'`, `doc` set,
+  `description`). **No Claude extract step yet** — that's locked decision #5 /
+  Workflow step 4, which gives ingested roles the seed's structured richness.
+- **`/api/cron/ingest`** (secret-gated) — reads `intents.companies`+`keywords`
+  (demand) then an in-code `SEED_COMPANIES` floor; capped 8 companies × 6 roles.
+  *(The `companies` DB table — decision #3 — replaces this hard-coded list.)*
+- **`roleos-cron`** worker fires `/api/cron/digests` + `/api/cron/ingest` hourly.
+- **Admin Demand view** shows `corpusTotal`, `ingestedTotal`, recently-hunted.
+- **Migration 0006** added `roles.description` + `roles.source`. *(0007 adds
+  `companies`, `ingestion_runs`, `roles_archive`.)*
+- Verified live: Ramp/Notion/Figma → 14 roles added + embedded.
+
+The richer `role-os-archive/pipeline` Node scripts (workday, `discover-disabled`,
+the gold extract prompt, 691-role run) are the **reference impl** to fold into
+`lib/ingest/` during Phase 1–2.
+
+## Correction — the migration is NOT blocked here
+Earlier notes flagged needing a DB password / `SUPABASE_ACCESS_TOKEN`. In this
+repo, migrations apply via the **Supabase Management API + PAT**
+(`db/seed/apply-migrations.mjs`) — **6 applied this way this session (0001–0006)**.
+So **migration 0007 can be applied now**; no DB password, no blocker.
+
+## One correction to the locks — Ollama
+Decision #6 keeps an `engine: 'claude' | 'ollama'` seam, with Ollama as a
+**local-only bulk-backfill** path. That's fine *as long as Ollama never enters
+the Workers runtime* — Flag A dropped Ollama from the deployed stack (one model,
+one vector space). Prod/ambient runs are **Claude (extract) + Workers AI bge
+(embed)** only. Keep Ollama strictly to local CLI backfills.
