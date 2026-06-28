@@ -4,7 +4,7 @@
   "url": "https://troweprice.wd5.myworkdayjobs.com/en-US/TROWEPRICE/job/Owings-Mills-MD/Advice-Growth--Senior-Manager_81388",
   "ats_provider": "workday",
   "ats_job_id": null,
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -13,7 +13,7 @@
       "Owings Mills, MD"
     ],
     "remote_us_eligible": true,
-    "office_time_required": "up to one day per week from home (predominantly in-office)",
+    "office_time_required": "up to one day per week from home (implying ~4 days in office)",
     "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
@@ -27,9 +27,8 @@
     "manages_people": false,
     "level_signals": [
       "8+ years of relevant work experience required",
-      "Senior Manager title",
-      "Leads complex, cross-functional strategic initiatives",
-      "Base salary range up to $209K–$261K depending on location"
+      "Base salary range $122,000–$261,000 depending on location, consistent with senior individual contributor or senior manager",
+      "'Senior Manager' in title"
     ]
   },
   "must_haves": [
@@ -41,7 +40,7 @@
       "minimum_value": "bachelors",
       "accepts_equivalent_experience": true,
       "evidence_required": "degree_or_work_history",
-      "bridgeable": "yes",
+      "bridgeable": "n/a",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -70,7 +69,7 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_strategic_initiatives",
+      "id": "cross_functional_initiative_leadership",
       "raw_text_from_jd": "Demonstrated success leading complex, cross-functional strategic initiatives from concept through implementation",
       "skill_type": "outcome",
       "domain": "strategic_initiative_management",
@@ -97,21 +96,20 @@
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "Wealth Management"
+        "wealth management",
+        "management consulting"
       ],
       "geographies_named": [],
-      "employer_types_named": [
-        "management consulting firm"
-      ],
+      "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "mba_advanced_degree",
+      "id": "mba_or_advanced_degree",
       "raw_text_from_jd": "MBA or advanced business degree",
       "skill_type": "credential",
       "domain": "education",
       "evidence_required": "verifiable_credential",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -139,7 +137,7 @@
       "credentials_named": []
     },
     {
-      "id": "data_driven_engagement_strategies",
+      "id": "data_driven_client_engagement",
       "raw_text_from_jd": "Experience developing and executing data-driven client engagement and conversion strategies",
       "skill_type": "capability",
       "domain": "client_engagement_and_conversion",
@@ -159,12 +157,13 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Advice & Client Product Marketing team; Individual Investors (II) Advice Strategy",
-    "business_model": "B2C / B2B asset management and financial advice services",
+    "surface": "Individual Investors (II) Advice Strategy — marketing and go-to-market of advice offers",
+    "business_model": "B2C and B2B asset management / wealth management advice offers",
     "primary_metrics_inferred": [
       "Client adoption of advice offers",
-      "Conversion into advice offers",
-      "Offer suite health and adoption trends"
+      "Conversion rates into advice products",
+      "Competitive positioning and market share",
+      "Offer suite health / adoption trends"
     ],
     "cross_functional_partners": [
       "Segment marketers",
@@ -202,39 +201,38 @@
     "client engagement",
     "conversion strategies",
     "cross-functional",
-    "individual investors",
+    "business requirements",
     "growth capabilities",
-    "business requirements"
+    "Individual Investors"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range explicitly disclosed across multiple geographies",
-    "Annual bonus eligibility mentioned in addition to base salary",
-    "Clear role scope tied to a defined strategy (Individual Investors Advice Strategy)",
-    "FINRA license requirements explicitly waived — lowers barrier to entry",
-    "Generous benefits package described including retirement plan and wellness",
-    "Posting expected to remain available until 08/30/2026 — not urgently expiring"
+    "Compensation range explicitly disclosed ($122K–$261K base depending on location)",
+    "Clear role scope within a named team (Advice & Client Product Marketing)",
+    "Posting end date provided (08/30/2026), indicating active search",
+    "Hybrid flexibility explicitly stated",
+    "Strong employer brand: 85+ years, global asset manager"
   ],
   "red_flags": [
-    "Hybrid policy allows only one day per week from home — heavily in-office; remote workers listed for compensation purposes but work flexibility section implies near-full in-office attendance",
-    "Location of role appears to be Owings Mills, MD (from URL) but compensation tiers include remote workers — ambiguity about whether the role is truly location-flexible",
-    "No visa sponsorship information provided",
-    "Manages people status unclear — title is 'Senior Manager' but no direct reports mentioned"
+    "Hybrid policy is heavily in-office — 'up to one day per week from home' means ~4 days in office; not truly flexible hybrid",
+    "Role listed under Owings Mills, MD but salary ranges suggest remote workers and other locations also eligible — location flexibility is ambiguous",
+    "No mention of visa sponsorship — unclear for international candidates",
+    "Manages people is not clearly stated; 'Senior Manager' title may imply people management but JD does not describe direct reports"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "archetype (inferred as Growth PM from responsibilities around go-to-market, adoption, and conversion; not explicitly titled PM)",
-      "seniority.level (inferred from years requirement, compensation, and title)",
-      "scope.business_model (inferred from company description and product context)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
-      "seniority.manages_people (not stated; left as false given no mention of direct reports)",
-      "location.remote_us_eligible (inferred from compensation tiers mentioning 'remote workers', despite hybrid language in Work Flexibility section)"
+      "archetype (inferred from growth strategy, go-to-market, and offer development focus)",
+      "seniority.level (inferred from title, comp range, and years required)",
+      "seniority.manages_people (not stated in JD; inferred as false given no mention of direct reports)",
+      "scope.business_model (inferred from company description and role context)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "location.remote_us_eligible (inferred from salary range mentioning 'remote workers')",
+      "compensation.base_range_usd (stated as ranges by geography; $122K–$261K used as full span)"
     ],
     "ambiguities": [
-      "Work Flexibility states 'up to one day per week from home' (predominantly in-office), but compensation ranges include 'remote workers' as a location tier — unclear if fully remote is truly available or if remote workers are a legacy/exception category.",
-      "Role URL references Owings Mills, MD, but compensation tiers include Maryland, Colorado, Washington, D.C., New York, California, and remote workers — primary location is ambiguous beyond Owings Mills.",
-      "Visa sponsorship not addressed anywhere in the JD — classified as 'unclear'.",
-      "Manages people is not mentioned despite 'Senior Manager' title — flagged as ambiguous."
+      "Role URL references Owings Mills, MD as location but salary tiers include Maryland/Colorado/Washington/remote, Washington D.C., and New York/California — actual eligible work locations are broader than the URL implies.",
+      "Title is 'Senior Manager' which typically implies people management in financial services, but the JD describes no direct reports. Could be an individual contributor senior manager role.",
+      "Visa sponsorship not mentioned anywhere; left as 'unclear'."
     ]
   }
 }

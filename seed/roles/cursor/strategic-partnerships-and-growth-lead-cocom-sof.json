@@ -1,0 +1,353 @@
+{
+  "company": "Cursor",
+  "role_title": "Strategic Partnerships & Growth Lead — COCOM / SOF",
+  "url": "https://jobs.ashbyhq.com/cursor/b16b81a8-a707-441d-b60e-db302274f887",
+  "ats_provider": "ashby",
+  "ats_job_id": "b16b81a8-a707-441d-b60e-db302274f887",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "us-citizenship-required",
+    "visa_sponsorship": "no"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "low",
+  "secondary_archetype": "Channel Sales / BD / Partnerships (Defense)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of channel sales, BD, or partnership management experience",
+      "Described as 'a senior individual contributor role with revenue ownership'",
+      "Reporting directly to sales leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "active_ts_sci",
+      "raw_text_from_jd": "Active TS/SCI — candidates without an active TS/SCI will not be considered",
+      "skill_type": "credential",
+      "domain": "security_clearance",
+      "minimum_value": "TS/SCI",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense",
+        "national security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "TS/SCI"
+      ]
+    },
+    {
+      "id": "years_channel_bd_partnerships_dib",
+      "raw_text_from_jd": "5+ years of channel sales, BD, or partnership management experience inside the defense industrial base with direct exposure to COCOM or SOF-aligned programs",
+      "skill_type": "years_of_experience",
+      "domain": "channel_sales_and_partnerships",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense industrial base"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "existing_prime_relationships",
+      "raw_text_from_jd": "Existing relationships at one or more prime contractors or technology companies active in the COCOM and SOF market at the BD, program management, or technical leadership level",
+      "skill_type": "capability",
+      "domain": "defense_relationships",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "prime contractors"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "socom_acquisition_knowledge",
+      "raw_text_from_jd": "Understanding of SOCOM's unique acquisition environment: MFP-11 budget authority, SOF AT&L, SOFWERX rapid prototyping, and OTA mechanisms specific to USSOCOM and the geographic COCOMs",
+      "skill_type": "domain_knowledge",
+      "domain": "defense_acquisition",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense",
+        "government acquisition"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "channel_revenue_track_record",
+      "raw_text_from_jd": "Track record of standing up or expanding channel and partner relationships that drove material software or technology revenue ($500K+) in the COCOM or SOF ecosystem",
+      "skill_type": "outcome",
+      "domain": "channel_revenue",
+      "minimum_value": 500000,
+      "unit": "usd_revenue",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "prime_and_enduser_navigation",
+      "raw_text_from_jd": "Comfortable navigating both the prime-facing channel layer (BD, program managers, contracting) and the end-user pull-through layer (SOF developers, J6 tech leads, command innovation offices)",
+      "skill_type": "capability",
+      "domain": "defense_sales_motion",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "polygraph",
+      "raw_text_from_jd": "Polygraph on file",
+      "skill_type": "credential",
+      "domain": "security_clearance",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Polygraph"
+      ]
+    },
+    {
+      "id": "prior_sof_service",
+      "raw_text_from_jd": "Prior active duty or civilian service in a SOF unit, JSOC, SOCOM, or geographic COCOM in a software, data, or technology capacity",
+      "skill_type": "domain_knowledge",
+      "domain": "special_operations_forces",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense",
+        "government"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "dev_tools_ai_sdlc_selling",
+      "raw_text_from_jd": "Experience selling developer tools, AI/ML platforms, or SDLC tooling through or alongside SOF-focused primes or technology companies",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_tools_sales",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML platforms",
+        "SDLC tooling"
+      ],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "existing_ussocom_relationships",
+      "raw_text_from_jd": "Existing relationships at USSOCOM (MacDill), JSOC (Fort Liberty), AFSOC (Hurlburt), or a geographic COCOM J6 or innovation office",
+      "skill_type": "capability",
+      "domain": "defense_relationships",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [
+        "MacDill AFB",
+        "Fort Liberty",
+        "Hurlburt Field"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "socom_tech_community_familiarity",
+      "raw_text_from_jd": "Familiarity with SOCOM's technical community: SOFWERX, NavalX portfolio, SOF innovation challenges, and rapid prototyping mechanisms",
+      "skill_type": "domain_knowledge",
+      "domain": "defense_innovation_ecosystem",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sof_prime_network",
+      "raw_text_from_jd": "Network within the SOF prime ecosystem: Booz Allen BSIM, Leidos National Security Sector, CACI Intelligence & Technology Solutions, L3Harris Communication Systems",
+      "skill_type": "capability",
+      "domain": "defense_partner_network",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Booz Allen Hamilton",
+        "Leidos",
+        "CACI",
+        "L3Harris"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Candidates without an active TS/SCI will not be considered"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "COCOM and SOF channel — prime contractor partnerships, end-user pull-through, and revenue ownership for Cursor's defense community motion",
+    "business_model": "B2B / channel sales into defense industrial base and government",
+    "primary_metrics_inferred": [
+      "COCOM and SOF channel revenue",
+      "Pipeline of prime contractor partnerships",
+      "Program-level co-sell opportunities",
+      "Channel revenue from $500K+ partner relationships"
+    ],
+    "cross_functional_partners": [
+      "Field Engineering",
+      "Legal and compliance teams",
+      "Roadmap / product team",
+      "Sales leadership"
+    ],
+    "core_responsibilities": [
+      "Own and grow Cursor's relationships with prime contractors and integrators focused on COCOM and SOF programs",
+      "Negotiate and close partnership agreements, reseller arrangements, teaming agreements, and approved vendor designations",
+      "Work with prime BD and program management teams to co-sell Cursor into new COCOM and SOF contract awards at the proposal stage",
+      "Build relationships inside USSOCOM, JSOC, AFSOC, MARSOC, NSWC, and the geographic COCOMs",
+      "Engage SOF AT&L, USSOCOM's acquisition community, and command innovation offices",
+      "Represent Cursor at SOF Week, SOFIC, AUSA Global Force Symposium, and AFCEA events",
+      "Own a revenue target for COCOM and SOF channel business",
+      "Build and manage a pipeline of prime contractor partnerships and program-level co-sell opportunities",
+      "Forecast and report on channel pipeline",
+      "Partner with Field Engineering on technical evaluations and POCs inside prime contractor and SOF developer environments",
+      "Channel SOF developer feedback and mission-critical product requirements back to Cursor's roadmap team"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "COCOM",
+    "SOF",
+    "USSOCOM",
+    "TS/SCI",
+    "channel sales",
+    "prime contractors",
+    "MFP-11",
+    "OTA mechanisms",
+    "SOFWERX",
+    "defense industrial base",
+    "AI code editor",
+    "SOF AT&L",
+    "rapid acquisition",
+    "developer tools"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Highly specific role with clear ownership — defined channel, defined partners, defined acquisition mechanisms",
+    "Senior IC role reporting directly to sales leadership — suggests real authority and access",
+    "SOF/COCOM procurement environment described as moving faster than conventional DoD acquisition — urgency signal",
+    "Cursor already has organic usage inside these communities — not a cold start",
+    "Compensation not stated but Cursor is a high-profile AI company likely offering competitive packages"
+  ],
+  "red_flags": [
+    "Active TS/SCI is a hard gate — eliminates the vast majority of candidates",
+    "No location or remote policy stated — unclear if role requires presence near MacDill, Fort Liberty, or elsewhere",
+    "No compensation range disclosed",
+    "Very narrow addressable candidate pool given the combination of TS/SCI + SOF/COCOM BD experience + tech sales background",
+    "Role sits at intersection of BD, government relations, and channel sales — archetype is non-standard and hard to classify"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (not stated; left as 'unclear' — no city or remote policy specified)",
+      "location.work_auth (inferred as us-citizenship-required due to mandatory active TS/SCI clearance)",
+      "location.visa_sponsorship (inferred as 'no' given TS/SCI hard requirement)",
+      "seniority.level (inferred from 'senior individual contributor role' language and years requirement)",
+      "scope.business_model (inferred from role description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs)",
+      "compensation.equity_mentioned (not mentioned at all in JD)"
+    ],
+    "ambiguities": [
+      "Archetype does not cleanly fit any defined enum — this is a defense-focused channel BD/partnerships role, not a traditional BizOps, Growth, or PM role. 'BizOps / Strategy & Ops' selected as closest approximation; archetype_confidence set to low.",
+      "Location is entirely unstated — the role references MacDill AFB, Fort Liberty, and Hurlburt Field as customer sites but does not specify where the employee would be based or whether remote is permitted.",
+      "Work authorization: TS/SCI strongly implies US citizenship is required, but the JD does not explicitly state citizenship as a requirement — only active clearance."
+    ]
+  }
+}

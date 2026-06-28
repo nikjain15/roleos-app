@@ -1,46 +1,68 @@
 {
   "company": "Cohere",
   "role_title": "Technical Program Manager, AI Delivery for Public Sector & Defence",
-  "url": "https://jobs.ashbyhq.com/cohere/f8e85a7c-1eb0-47f8-8140-1c4e7892f17d",
+  "url": "https://jobs.ashbyhq.com/cohere/01a34bc3-6421-4af2-bf5b-f42e98155dda",
   "ats_provider": "ashby",
-  "ats_job_id": "f8e85a7c-1eb0-47f8-8140-1c4e7892f17d",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "01a34bc3-6421-4af2-bf5b-f42e98155dda",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
-    "type": "hybrid",
+    "type": "onsite",
     "cities_listed": [
-      "Germany"
+      "Ottawa",
+      "Montreal",
+      "Toronto"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "unclear",
+    "office_time_required": "Ottawa (preferred) or Montreal or Toronto required (proximity to government customers)",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "AI delivery for government / defence accounts",
+  "secondary_archetype": "AI/ML enterprise delivery with government & defence focus",
   "seniority": {
-    "level": "Senior IC (7+ years TPM, customer-facing government/defence focus)",
-    "years_required_min": 7,
+    "level": "Senior IC / Staff TPM",
+    "years_required_min": 6,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "7+ years of experience as an Engineering or Technical Program Manager",
-      "At least 2 years in customer-facing technical delivery and operations",
-      "Trusted advisor and primary technical point of contact for senior government officials"
+      "6+ years of experience as a customer-facing Technical or Engineering Program Manager",
+      "Compensation range $160,000–$245,000 CAD, consistent with senior individual contributor",
+      "Expected to present to senior government officials and departmental executives independently",
+      "Serves as technical program lead and trusted advisor for most sensitive government engagements"
     ]
   },
   "must_haves": [
     {
-      "id": "years_tpm_experience",
-      "raw_text_from_jd": "7+ years of experience as an Engineering or Technical Program Manager",
+      "id": "years_customer_facing_tpm",
+      "raw_text_from_jd": "6+ years of experience as a customer-facing Technical or Engineering Program Manager in AI/ML consulting, technology transformation, or enterprise software delivery.",
       "skill_type": "years_of_experience",
       "domain": "technical_program_management",
-      "minimum_value": 7,
+      "minimum_value": 6,
       "unit": "years",
+      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI/ML consulting",
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Excellent executive communication and stakeholder management.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -50,31 +72,12 @@
       "credentials_named": []
     },
     {
-      "id": "customer_facing_delivery",
-      "raw_text_from_jd": "At least 2 years in customer-facing technical delivery and operations for enterprise-grade software or AI/ML solutions",
-      "skill_type": "years_of_experience",
-      "domain": "customer_facing_technical_delivery",
-      "minimum_value": 2,
-      "unit": "years",
-      "evidence_required": "work_history",
-      "bridgeable": "no",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [
-        "AI/ML"
-      ],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "government_defence_experience",
-      "raw_text_from_jd": "Experience working with government, defence, or heavily regulated customers (public sector, defence contractors)",
+      "id": "government_or_defence_experience",
+      "raw_text_from_jd": "Experience working with government, defence, or heavily regulated customers (public sector, defence contractors).",
       "skill_type": "domain_knowledge",
-      "domain": "public_sector_and_defence",
+      "domain": "government_and_defence",
       "evidence_required": "work_history",
-      "bridgeable": "no",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -90,7 +93,7 @@
     },
     {
       "id": "complex_multistakeholder_programs",
-      "raw_text_from_jd": "Proven track record managing complex, multi-stakeholder technical programs with stringent compliance requirements",
+      "raw_text_from_jd": "Proven track record managing complex, multi-stakeholder technical programs with stringent compliance requirements.",
       "skill_type": "outcome",
       "domain": "program_management",
       "evidence_required": "shipped_products_with_metrics",
@@ -104,11 +107,30 @@
       "credentials_named": []
     },
     {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "Bachelor's degree in a relevant field; advanced degree or technical certs a plus.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    },
+    {
       "id": "enterprise_deployment_architectures",
       "raw_text_from_jd": "Strong understanding of enterprise software deployment architectures (cloud, on-premises, hybrid, air-gapped)",
       "skill_type": "domain_knowledge",
-      "domain": "enterprise_software_deployment",
-      "evidence_required": "project_examples",
+      "domain": "enterprise_software_architecture",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -124,11 +146,11 @@
       "credentials_named": []
     },
     {
-      "id": "api_ml_technical_fluency",
-      "raw_text_from_jd": "Comfortable discussing API integrations, model inference, data pipelines, and ML operations with technical stakeholders",
+      "id": "ai_api_technical_fluency",
+      "raw_text_from_jd": "Comfortable discussing API integrations, model inference, data pipelines, and ML operations with technical stakeholders.",
       "skill_type": "capability",
-      "domain": "technical_communication_ml",
-      "evidence_required": "project_examples",
+      "domain": "ai_ml_technical_knowledge",
+      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
@@ -144,12 +166,12 @@
       "credentials_named": []
     },
     {
-      "id": "government_procurement_acumen",
+      "id": "government_procurement_knowledge",
       "raw_text_from_jd": "Deep understanding of how government organizations procure, evaluate, and deploy technology",
       "skill_type": "domain_knowledge",
       "domain": "government_procurement",
       "evidence_required": "work_history",
-      "bridgeable": "no",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -161,10 +183,10 @@
       "credentials_named": []
     },
     {
-      "id": "german_government_requirements",
-      "raw_text_from_jd": "Familiarity with German government requirements: data sovereignty, privacy laws (Privacy Act), accessibility standards, official languages obligations, security classifications",
+      "id": "canadian_government_requirements",
+      "raw_text_from_jd": "Familiarity with Canadian government requirements: data sovereignty, privacy laws (Privacy Act), accessibility standards, official languages obligations, security classifications",
       "skill_type": "domain_knowledge",
-      "domain": "german_government_compliance",
+      "domain": "canadian_government_compliance",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -174,23 +196,21 @@
         "public sector"
       ],
       "geographies_named": [
-        "Germany"
+        "Canada"
       ],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "defence_national_security_ai",
+      "id": "defence_national_security_understanding",
       "raw_text_from_jd": "Understanding of defence and national security considerations in AI deployment",
       "skill_type": "domain_knowledge",
-      "domain": "defence_national_security_ai",
+      "domain": "defence_and_national_security",
       "evidence_required": "work_history",
-      "bridgeable": "no",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "AI"
-      ],
+      "technologies_named": [],
       "industries_named": [
         "defence"
       ],
@@ -200,7 +220,7 @@
     },
     {
       "id": "security_clearance_eligibility",
-      "raw_text_from_jd": "Eligible to obtain German government security clearance (Top Secret preferred)",
+      "raw_text_from_jd": "Eligible to obtain Canadian government security clearance (Top Secret preferred)",
       "skill_type": "credential",
       "domain": "security_clearance",
       "evidence_required": "verifiable_credential",
@@ -209,11 +229,11 @@
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "defence",
-        "public sector"
+        "government",
+        "defence"
       ],
       "geographies_named": [
-        "Germany"
+        "Canada"
       ],
       "employer_types_named": [],
       "credentials_named": [
@@ -223,45 +243,8 @@
   ],
   "nice_to_haves": [
     {
-      "id": "llm_training_deployment",
-      "raw_text_from_jd": "Strong understanding and experience with LLM training, fine-tuning, or deployment would be a strong differentiator",
-      "skill_type": "domain_knowledge",
-      "domain": "llm_operations",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [
-        "LLM training",
-        "fine-tuning"
-      ],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "algorithmic_impact_assessments",
-      "raw_text_from_jd": "Experience with technical risk impact assessments (such as Algorithmic Impact Assessments) or AI ethics frameworks is a strong asset",
-      "skill_type": "domain_knowledge",
-      "domain": "ai_ethics_and_risk",
-      "evidence_required": "project_examples",
-      "bridgeable": "yes",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [
-        "Algorithmic Impact Assessments"
-      ],
-      "industries_named": [
-        "public sector"
-      ],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "active_top_secret_clearance",
-      "raw_text_from_jd": "Active German government security clearance (Secret or Top Secret) - strong preference for active Top Secret clearance",
+      "id": "active_security_clearance",
+      "raw_text_from_jd": "Active Canadian government security clearance (Secret or Top Secret) - strong preference for active Top Secret clearance",
       "skill_type": "credential",
       "domain": "security_clearance",
       "evidence_required": "verifiable_credential",
@@ -270,11 +253,11 @@
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "defence",
-        "public sector"
+        "government",
+        "defence"
       ],
       "geographies_named": [
-        "Germany"
+        "Canada"
       ],
       "employer_types_named": [],
       "credentials_named": [
@@ -283,8 +266,8 @@
       ]
     },
     {
-      "id": "bilingual_german_english",
-      "raw_text_from_jd": "Bilingual (German/English) proficiency",
+      "id": "bilingual_french_english",
+      "raw_text_from_jd": "Bilingual (English/French) proficiency",
       "skill_type": "capability",
       "domain": "language_proficiency",
       "evidence_required": "work_history",
@@ -294,26 +277,28 @@
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [
-        "Germany"
+        "Canada"
       ],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "german_defence_intelligence_background",
-      "raw_text_from_jd": "Background in or strong familiarity with German defence, intelligence, or critical infrastructure sectors",
+      "id": "canadian_defence_intelligence_background",
+      "raw_text_from_jd": "Background in or strong familiarity with Canadian defence, intelligence, or critical infrastructure sectors",
       "skill_type": "domain_knowledge",
-      "domain": "german_defence_intelligence",
+      "domain": "canadian_defence_intelligence",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "defence"
+        "defence",
+        "intelligence",
+        "critical infrastructure"
       ],
       "geographies_named": [
-        "Germany"
+        "Canada"
       ],
       "employer_types_named": [],
       "credentials_named": []
@@ -322,25 +307,29 @@
       "id": "gc_cloud_protected_environments",
       "raw_text_from_jd": "Experience with GC Cloud services (Azure, AWS GovCloud) or Protected B/C environments",
       "skill_type": "tool_proficiency",
-      "domain": "government_cloud_platforms",
-      "evidence_required": "project_examples",
+      "domain": "government_cloud_infrastructure",
+      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [
         "Azure",
         "AWS GovCloud"
       ],
-      "technologies_named": [],
+      "technologies_named": [
+        "Protected B/C environments"
+      ],
       "industries_named": [
         "public sector"
       ],
-      "geographies_named": [],
+      "geographies_named": [
+        "Canada"
+      ],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
       "id": "pm_certification",
-      "raw_text_from_jd": "Project management certification (PMP, PgMP) or government-specific methodologies",
+      "raw_text_from_jd": "Project management certification (PMP, PgMP) or government-specific methodologies.",
       "skill_type": "credential",
       "domain": "project_management_certification",
       "evidence_required": "verifiable_credential",
@@ -355,94 +344,153 @@
         "PMP",
         "PgMP"
       ]
+    },
+    {
+      "id": "ai_ml_working_knowledge",
+      "raw_text_from_jd": "Working knowledge of or experience with modern AI: LLMs, agentic systems, MCP, RAG, fine-tuning, evals, and responsible AI would be a strong differentiator",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_ml_technologies",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "agentic systems",
+        "MCP",
+        "RAG",
+        "fine-tuning",
+        "evals",
+        "responsible AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "algorithmic_impact_assessments",
+      "raw_text_from_jd": "Experience with Algorithmic Impact Assessments or AI ethics frameworks is a strong asset",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_ethics_and_governance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "public sector"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_degree_or_technical_certs",
+      "raw_text_from_jd": "Bachelor's degree in a relevant field; advanced degree or technical certs a plus.",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
     }
   ],
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Public sector and defence AI deployments in Germany/EMEA; end-to-end technical program delivery from initial deployment through production scaling",
-    "business_model": "B2G (business-to-government) / enterprise AI solutions",
+    "surface": "Canadian public sector and defence AI deployments — end-to-end technical program delivery from initial deployment through production scaling",
+    "business_model": "B2G (business-to-government), enterprise AI platform and services",
     "primary_metrics_inferred": [
-      "On-time delivery of AI solutions meeting government-grade security, privacy, and performance standards",
-      "Successful production scaling of AI deployments for government and defence customers",
-      "Customer satisfaction with departmental CIOs, IT directors, and technical leads"
+      "On-time delivery of AI solutions meeting government-grade security and compliance standards",
+      "Successful deployment and scaling of AI in government production environments",
+      "Customer satisfaction and trust with departmental CIOs, IT directors, and government stakeholders"
     ],
     "cross_functional_partners": [
       "Strategic Customer team",
-      "Applied ML (AML)",
-      "Engineering",
+      "Applied ML (AML) Engineering",
       "Forward Deployed Engineering (FDE)",
       "Platform",
       "Product",
       "Go-to-Market"
     ],
     "core_responsibilities": [
-      "Own end-to-end technical program delivery for public sector and defence customers, from initial deployment through production scaling",
-      "Serve as the primary technical program point of contact for government customers, building trusted relationships with departmental CIOs, IT directors, and technical teams",
-      "Translate complex government requirements (security, compliance, accessibility, bilingualism, data sovereignty) into actionable engineering plans",
+      "Own end-to-end technical program delivery for Canadian public sector and defence customers, from initial deployment through production scaling",
+      "Serve as the primary technical program point of contact for government customers",
+      "Translate complex government requirements into actionable engineering plans",
       "Navigate government procurement processes, RFP responses, and contractual technical obligations",
-      "Provide clear, timely, and objective communication across Cohere's engineering organization, customer stakeholders, and government leadership",
-      "Create and manage project schedules that account for government timelines, security review processes, and ministerial approval cycles",
+      "Create and manage project schedules accounting for government timelines, security review processes, and ministerial approval cycles",
       "Identify and manage dependencies across government departments, security authorities, cloud service providers, and internal Cohere teams",
-      "Ensure on-time delivery of AI solutions that meet government-grade security, privacy, accessibility, and performance standards"
+      "Navigate risks unique to government deployments: privacy compliance, Algorithmic Impact Assessments, Treasury Board submissions, security authorizations",
+      "Coordinate technical work across multiple teams: model customization, security hardening, integration with government systems, bilingual support",
+      "Problem-solve complex technical challenges in air-gapped, on-premises, or highly regulated environments"
     ]
   },
   "compensation": {
     "base_range_usd": null,
+    "base_range_cad": [
+      160000,
+      245000
+    ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": false,
     "equity_form": null,
     "location_pay_differential": false,
-    "source": "unknown"
+    "source": "stated"
   },
   "top_keywords": [
     "Technical Program Manager",
     "public sector",
     "defence",
-    "government AI deployment",
+    "Canadian government",
     "security clearance",
     "Top Secret",
-    "LLM",
+    "AI delivery",
+    "LLMs",
+    "RAG",
+    "agentic systems",
     "air-gapped",
     "data sovereignty",
-    "EMEA",
-    "Germany",
-    "compliance",
-    "Algorithmic Impact Assessment",
-    "frontier AI",
-    "enterprise deployment"
+    "privacy compliance",
+    "government procurement",
+    "enterprise AI"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Highly specialized niche role with a clear, differentiated mandate at the intersection of frontier AI and national security",
-    "Cohere is a top-tier frontier AI company with strong credibility in enterprise/government deployment",
-    "Candidates without active clearance are still considered while clearance is being obtained",
-    "Generous perks including 6 weeks vacation, full health/dental, 100% parental leave top-up",
-    "Explicitly encourages applicants who don't meet every qualification",
-    "Inclusive hiring language and accommodations process"
+    "Compensation range disclosed ($160,000–$245,000 CAD)",
+    "Highly specialized niche role with clear domain focus (Canadian public sector & defence AI)",
+    "Explicit clarity on security clearance requirements and what happens without active clearance (non-classified accounts while clearance is obtained)",
+    "Strong benefit package including 6 weeks paid vacation, 100% parental leave top-up, RRSP matching",
+    "Encourages applicants who don't meet every qualification",
+    "Explicit commitment to inclusive hiring and accommodations"
   ],
   "red_flags": [
-    "No compensation range disclosed",
-    "Security clearance requirement (Top Secret) is a hard constraint for most candidates and takes 12-18 months to obtain",
-    "Location is Germany only — eliminates candidates not based in or willing to relocate to Germany",
-    "JD references Canadian government context repeatedly (Treasury Board submissions, bilingualism obligations, Protected B/C environments, GC Cloud) despite stating location as Germany — likely a copy/paste inconsistency that creates ambiguity about the actual target market",
-    "Work authorization requirements not stated",
-    "Visa sponsorship policy not mentioned"
+    "Ottawa preferred — strong geographic constraint tied to proximity to government customers; limits candidate pool significantly",
+    "Top Secret clearance strongly preferred but 12-18 month wait for candidates without active clearance may create a slow ramp period",
+    "No equity mentioned explicitly despite senior scope — unclear if equity is part of total compensation",
+    "Currency is CAD, not USD — JD schema base_range_usd cannot be populated accurately without conversion",
+    "Highly regulated and security-sensitive environment may limit speed of onboarding and impact"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 7+ years requirement and seniority of stakeholders managed)",
-      "scope.business_model (inferred as B2G/enterprise from role description)",
+      "seniority.level (inferred from years required, comp range, and scope of responsibility)",
+      "scope.team_size_estimate (not stated)",
       "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
-      "location.type (inferred as hybrid from 'remote-flexible' perk language and stated Germany location)",
-      "compensation.source (unknown; no salary range provided)"
+      "scope.business_model (inferred from government customer focus)",
+      "compensation.base_range_usd (not provided; compensation stated in CAD only — field left null)",
+      "location.work_auth (not explicitly stated; left as unclear)",
+      "location.visa_sponsorship (not explicitly stated; left as unclear)",
+      "manages_people (not stated; inferred false from IC-style responsibilities)"
     ],
     "ambiguities": [
-      "JD states Location: Germany, but body repeatedly references Canadian government context (Treasury Board submissions, GC Cloud, bilingualism obligations, Protected B/C, Privacy Act) — likely a template reuse issue; unclear whether the actual target market is Germany, Canada, or both EMEA and Canada",
-      "Security clearance references 'German government security clearance' in some places and generic 'government security clearance' in others; the clearance requirements section is inconsistently described",
-      "Perks section mentions offices in Toronto, New York, San Francisco, London, and Paris but no Germany office — may indicate fully remote from Germany with co-working stipend, or that Germany is a new market without a local office",
-      "JD header notes 'Active Top Secret clearance strongly preferred; candidates eligible and willing to obtain clearance will also be considered' — classified as nice-to-have for active clearance but hard requirement for eligibility",
-      "Bilingualism references in the body text appear to refer to English/French (Canadian context) while the nice-to-have explicitly lists German/English — inconsistency suggesting template reuse"
+      "Security clearance requirement is described as 'strongly preferred' for active Top Secret but also states candidates eligible and willing to obtain clearance will be considered — creating ambiguity about whether clearance is a hard requirement or a strong preference. Treated as hard requirement (eligibility) with active TS as a nice-to-have.",
+      "JD does not specify equity or stock options in the compensation section, but the company is a venture-backed AI startup where equity is commonly included — cannot confirm without more information.",
+      "Location described as 'Ottawa (preferred) or Montreal or Toronto required' — onsite classification used since proximity to government customers is explicitly required, though exact office attendance policy is not defined."
     ]
   }
 }

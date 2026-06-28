@@ -4,7 +4,7 @@
   "url": "https://careers.airbnb.com/positions/6557174?gh_jid=6557174",
   "ats_provider": "greenhouse",
   "ats_job_id": "6557174",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -13,27 +13,27 @@
       "San Francisco-Bay Area, CA"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "full-time on-site in San Francisco Bay Area",
+    "office_time_required": "must be based in San Francisco-Bay Area, CA",
     "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Program Manager (product-focused)",
+  "secondary_archetype": "Generalist PM",
   "seniority": {
-    "level": "Senior IC / Staff",
+    "level": "Senior IC",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "8+ years of experience in program management, product management, or business operations",
       "Proven ability to build strong relationships with business leaders up to the executive level",
-      "Comp range $176K-$220K base, consistent with Senior/Staff IC at Airbnb"
+      "Base pay range $176,000–$220,000 USD consistent with Senior IC"
     ]
   },
   "must_haves": [
     {
-      "id": "years_combined_pm_pgm_biz_ops",
+      "id": "years_pm_program_ops",
       "raw_text_from_jd": "8+ years of  experience in a combination of program management, product management, or business operations managing sophisticated software product programs from end to end in a creative-led, fast paced environment",
       "skill_type": "years_of_experience",
       "domain": "program_management+product_management+business_operations",
@@ -68,10 +68,10 @@
       "credentials_named": []
     },
     {
-      "id": "shipping_at_global_scale",
+      "id": "shipped_global_software",
       "raw_text_from_jd": "Demonstrated ability of shipping software products at global scale having overcome a variety of challenges",
       "skill_type": "outcome",
-      "domain": "software_product_launches",
+      "domain": "software_product_delivery",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -85,7 +85,7 @@
       "credentials_named": []
     },
     {
-      "id": "critical_thinking_bespoke_programs",
+      "id": "critical_thinking_program_plans",
       "raw_text_from_jd": "Critical thinking skills to develop bespoke program plans that are custom to the needs of the specific program",
       "skill_type": "capability",
       "domain": "program_planning",
@@ -105,7 +105,7 @@
       "skill_type": "capability",
       "domain": "communication",
       "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -115,7 +115,7 @@
       "credentials_named": []
     },
     {
-      "id": "influencing_presentation_skills",
+      "id": "influencing_presentation",
       "raw_text_from_jd": "Exceptional influencing and presentation skills",
       "skill_type": "capability",
       "domain": "stakeholder_management",
@@ -130,7 +130,7 @@
       "credentials_named": []
     },
     {
-      "id": "exec_relationship_building",
+      "id": "executive_relationship_building",
       "raw_text_from_jd": "Proven ability to build strong relationships and be a trusted agent for change with business leaders (up to the executive level)",
       "skill_type": "capability",
       "domain": "executive_stakeholder_management",
@@ -145,7 +145,7 @@
       "credentials_named": []
     },
     {
-      "id": "complex_cross_functional_project_management",
+      "id": "complex_xfn_project_management",
       "raw_text_from_jd": "Track record for successfully managing ambitious and operationally complex projects with cross-functional teams across product development, product marketing, design, marketing, and operations",
       "skill_type": "outcome",
       "domain": "cross_functional_program_management",
@@ -163,7 +163,7 @@
       "id": "program_management_tools",
       "raw_text_from_jd": "Expertise in using program management tools such as Airtable, Asana, Jira, Smartsheets, etc.",
       "skill_type": "tool_proficiency",
-      "domain": "program_management_tools",
+      "domain": "program_management_tooling",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
@@ -180,7 +180,7 @@
       "credentials_named": []
     },
     {
-      "id": "thrives_in_ambiguity",
+      "id": "ambiguity_tolerance",
       "raw_text_from_jd": "Thrives in ambiguity in a fast-paced, hyper-growth organization",
       "skill_type": "cultural_fit",
       "domain": "team_culture",
@@ -212,22 +212,21 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Roadmap Planning & Program Management — company priority products, bi-annual releases",
-    "business_model": "consumer marketplace (short-term rental and experiences)",
+    "surface": "Company roadmap planning and product program management; bi-annual releases",
+    "business_model": "consumer marketplace (B2C and B2B), short-term rental and experiences platform",
     "primary_metrics_inferred": [
-      "On-time delivery of roadmap initiatives",
-      "Quality of product releases",
-      "Velocity of cross-functional work",
+      "On-time and quality delivery of roadmap initiatives",
+      "Velocity and quality of cross-functional product programs",
       "Executive visibility and stakeholder satisfaction"
     ],
     "cross_functional_partners": [
       "Engineering",
-      "Product Marketing",
       "Design",
+      "Product Marketing",
       "Marketing",
       "Operations",
-      "Community Support",
-      "Supply"
+      "Supply",
+      "Community Support"
     ],
     "core_responsibilities": [
       "Partners with engineering, product marketing, design, community support, and other cross functional teams to deliver software product programs with the highest quality and on schedule",
@@ -247,7 +246,7 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "equity mentioned as potential eligibility alongside bonus and Employee Travel Credits",
+    "equity_form": "equity mentioned as potential component alongside bonus and Employee Travel Credits",
     "location_pay_differential": false,
     "source": "stated"
   },
@@ -255,45 +254,40 @@
     "program management",
     "roadmap planning",
     "cross-functional",
-    "software product programs",
-    "stakeholder management",
-    "global scale",
+    "software product delivery",
+    "executive stakeholder",
     "Airtable",
     "Asana",
     "Jira",
-    "bi-annual releases",
-    "force multiplier",
-    "executive visibility",
     "risk mitigation",
-    "product mindset"
+    "product mindset",
+    "force multiplier",
+    "bi-annual releases"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed and competitive ($176K-$220K base)",
-    "Multiple positions available, suggesting active hiring",
-    "Clear team mission and scope described (Roadmap Planning & Program Management)",
-    "Named cross-functional partners and responsibilities are well-defined",
-    "Bonus, equity, and Employee Travel Credits mentioned as additional comp elements"
+    "Compensation range explicitly disclosed ($176,000–$220,000 USD base)",
+    "Clear team mission and role context provided (Roadmap Planning & Program Management)",
+    "Bonus, equity, and Employee Travel Credits mentioned as additional compensation components",
+    "Role sits at intersection of strategy and execution with high executive visibility",
+    "Inclusive hiring language and disability accommodation process explicitly described"
   ],
   "red_flags": [
-    "Requires on-site presence in San Francisco Bay Area — eliminates remote candidates",
-    "Significant list of excluded US states limits candidate pool even for those willing to relocate",
-    "Visa sponsorship not mentioned — unclear if available",
-    "No explicit mention of team size or reporting structure",
-    "JD does not clarify distinction between the 'multiple positions available' — unclear if roles differ in scope or seniority"
+    "Must be physically based in San Francisco-Bay Area, CA — no remote or other location options for this role",
+    "Long list of excluded states (Alaska, Indiana, Nebraska, North Dakota, Ohio, South Dakota, Wisconsin, Alabama, Mississippi, Oklahoma, Delaware, Rhode Island) limits candidate pool significantly",
+    "No visa sponsorship status mentioned; unclear for international candidates",
+    "Excluded states list described as 'continuously being updated' — creates ongoing uncertainty for candidates in other states"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range and years required)",
+      "seniority.level (inferred from comp range and years of experience requirement)",
       "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
-      "location.work_auth (not stated; defaulted to open)",
-      "location.visa_sponsorship (not mentioned; marked unclear)"
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.visa_sponsorship (not mentioned in JD; marked unclear)"
     ],
     "ambiguities": [
-      "JD states 'Multiple positions available' but provides no differentiation between them — unclear if seniority, team, or scope varies across positions.",
-      "Location section says applicants must be 'based in San Francisco-Bay Area, CA' but also lists states where employees cannot be located — implies some remote flexibility may exist for non-excluded states outside the Bay Area, but the primary instruction is Bay Area-based. Treated as onsite.",
-      "Pay range note says 'job titles may span more than one career level' — suggests the $176K-$220K range may cover multiple seniority bands across the multiple open positions."
+      "JD states the role requires being 'based in San Francisco-Bay Area, CA' but also references a list of excluded states rather than limiting purely to SF-Bay Area, suggesting some flexibility in location may exist for non-excluded states — treated as onsite/SF-required here.",
+      "Compensation note says 'job titles may span more than one career level' but no specific level is named — seniority inferred from comp range and experience requirement."
     ]
   }
 }

@@ -1,20 +1,16 @@
 {
   "company": "Contentful",
   "role_title": "Field Enablement Program Manager",
-  "url": "https://job-boards.greenhouse.io/contentful/jobs/7789210",
+  "url": "https://job-boards.greenhouse.io/contentful/jobs/7493807",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7789210",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7493807",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "hybrid",
     "cities_listed": [
-      "Berlin",
-      "Denver",
-      "San Francisco",
-      "London",
-      "New York"
+      "California"
     ],
     "remote_us_eligible": true,
     "office_time_required": "unclear",
@@ -23,7 +19,7 @@
   },
   "archetype": "Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Revenue / Field Enablement Program Manager",
+  "secondary_archetype": "Revenue / Sales Enablement Program Manager",
   "seniority": {
     "level": "Mid-level / Senior IC",
     "years_required_min": 3,
@@ -31,8 +27,8 @@
     "manages_people": false,
     "level_signals": [
       "3–5 years of experience in Enablement, Program Management, Sales, or Customer Experience roles",
-      "Colorado salary range $100,000–$136,000",
-      "Operates autonomously; owns cross-functional programs but no direct reports mentioned"
+      "California salary range $148,000–$170,000 consistent with mid-to-senior IC",
+      "Program owner and cross-functional collaborator, no direct reports mentioned"
     ]
   },
   "must_haves": [
@@ -40,10 +36,10 @@
       "id": "years_enablement_pm_sales_cx",
       "raw_text_from_jd": "3–5 years of experience in Enablement, Program Management, Sales, or Customer Experience roles",
       "skill_type": "years_of_experience",
-      "domain": "enablement_or_program_management",
+      "domain": "enablement_program_management_sales",
       "minimum_value": 3,
       "unit": "years",
-      "is_combined": false,
+      "is_combined": true,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -55,10 +51,10 @@
       "credentials_named": []
     },
     {
-      "id": "gtm_sales_process_knowledge",
+      "id": "gtm_sales_understanding",
       "raw_text_from_jd": "Understanding of key Sales roles, GTM processes, and measurement to effectively partner with Sales leadership on initiatives that strengthen core Sales capabilities and drive revenue growth.",
       "skill_type": "domain_knowledge",
-      "domain": "gtm_sales_processes",
+      "domain": "sales_gtm_processes",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -102,8 +98,8 @@
     {
       "id": "autonomous_remote_collaboration",
       "raw_text_from_jd": "Comfort operating autonomously, with experience collaborating across remote and in-office environments",
-      "skill_type": "capability",
-      "domain": "distributed_work_collaboration",
+      "skill_type": "cultural_fit",
+      "domain": "remote_distributed_work",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -148,7 +144,7 @@
       "id": "enablement_platform_proficiency",
       "raw_text_from_jd": "Proficiency with enablement platforms, Salesforce, LMS systems, and content management tools",
       "skill_type": "tool_proficiency",
-      "domain": "enablement_technology",
+      "domain": "enablement_tools",
       "evidence_required": "hands_on_use",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -176,11 +172,15 @@
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [
+      "technologies_named": [
         "SaaS",
         "Cloud Technology",
         "DXP"
+      ],
+      "industries_named": [
+        "SaaS",
+        "Cloud Technology",
+        "digital experience platform"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -192,17 +192,21 @@
       "skill_type": "outcome",
       "domain": "enablement_program_design",
       "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
-      "technologies_named": [],
+      "technologies_named": [
+        "gamification",
+        "role-based learning",
+        "performance tracking"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "emotional_intelligence_interpersonal",
+      "id": "emotional_intelligence",
       "raw_text_from_jd": "High emotional intelligence, interpersonal fluency, and the ability to build trust across diverse teams",
       "skill_type": "cultural_fit",
       "domain": "interpersonal_skills",
@@ -233,27 +237,28 @@
     }
   ],
   "explicitly_excluded": [
-    "Visa sponsorship — position is not eligible for visa sponsorship; applicants must be authorized to work without the need for visa sponsorship by the start date of employment"
+    "Visa sponsorship: 'this position is not eligible for visa sponsorship. Applicants must be authorized to work without the need for visa sponsorship by the start date of employment.'"
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Revenue Enablement programs for GTM teams (Sales, Solution Engineering, Customer Experience, Partner Manager)",
-    "business_model": "B2B SaaS / Digital Experience Platform (DXP)",
+    "surface": "Revenue Enablement programs across Sales, Solution Engineering, Customer Experience, and Partner Manager GTM teams",
+    "business_model": "B2B SaaS / digital experience platform (DXP)",
     "primary_metrics_inferred": [
-      "Field readiness and knowledge lift",
-      "KPIs and dashboards measuring enablement outcomes",
-      "Revenue growth supported by Sales capability initiatives",
-      "Onboarding effectiveness"
+      "Field readiness and knowledge scores",
+      "KPIs and dashboards tracking enablement outcomes",
+      "Onboarding integration effectiveness",
+      "Revenue growth tied to enablement programs"
     ],
     "cross_functional_partners": [
       "Sales",
       "Solution Engineering",
       "Customer Experience",
-      "Partner Manager",
+      "Partner Managers",
       "Marketing",
       "Finance",
       "People",
-      "Operations"
+      "Operations",
+      "Field Leadership"
     ],
     "core_responsibilities": [
       "Design and deliver structured enablement programs tailored to Sales, Solution Engineering, Customer Experience and Partner Manager roles",
@@ -266,60 +271,59 @@
   },
   "compensation": {
     "base_range_usd": [
-      100000,
-      136000
+      148000,
+      170000
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "Stock Options; position eligible for equity awards in accordance with Contentful's equity plans",
+    "equity_form": "Stock Options",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
-    "field enablement",
-    "revenue enablement",
+    "Revenue Enablement",
+    "Field Enablement",
+    "Program Management",
     "GTM",
-    "program management",
-    "sales readiness",
-    "LMS",
+    "Sales Enablement",
     "Salesforce",
-    "onboarding",
-    "training delivery",
-    "DXP",
-    "SaaS",
-    "cross-functional",
+    "LMS",
+    "Onboarding",
     "KPIs",
-    "gamification",
+    "SaaS",
+    "DXP",
+    "cross-functional",
+    "training delivery",
     "stakeholder management"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Salary range disclosed ($100K–$136K Colorado; likely higher in other markets)",
-    "Equity (stock options) explicitly mentioned",
-    "Comprehensive benefits package including 100% premium coverage for employees",
-    "Application deadline stated (06/07/26), suggesting active, not evergreen posting",
-    "Clear scope across named GTM teams and cross-functional partners",
-    "Company has global presence (Berlin, Denver, SF, London, NYC) with distributed workforce"
+    "Salary range explicitly disclosed ($148K–$170K California)",
+    "Equity (stock options) included in compensation",
+    "Comprehensive benefits package including 100% employee health premium coverage",
+    "Company paid parental leave and fertility benefits",
+    "Annual education budget and wellbeing stipend signal investment in employees",
+    "Clear scope: program owner with well-defined GTM stakeholder map",
+    "Global company with distributed workforce signals remote-friendly culture"
   ],
   "red_flags": [
-    "No visa sponsorship — hard cutoff for non-authorized workers",
-    "Salary range is only stated for Colorado; other market ranges not disclosed",
-    "Location type and exact office requirement are ambiguous — JD mentions hybrid/distributed but doesn't specify office days",
-    "Cities listed are all Contentful hubs but the role's specific required location is not definitively stated"
+    "No visa sponsorship available — eliminates candidates needing authorization",
+    "Salary range stated only for California; compensation for other states not disclosed",
+    "Location type is ambiguous — JD mentions 'hybrid or distributed employees' in benefits but does not clearly state the work arrangement for this role",
+    "No explicit mention of seniority title (e.g., Senior vs. Manager level) despite comp suggesting senior IC"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years range 3–5 and Colorado comp range)",
-      "scope.business_model (inferred from company description as B2B SaaS/DXP)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as metrics in JD)",
-      "location.type set to hybrid (JD mentions 'remote and in-office environments' and 'hybrid or distributed employees' but no explicit hybrid policy stated)",
-      "location.remote_us_eligible set to true (inferred from 'distributed worldwide' and 'hybrid or distributed employees' language)",
-      "location.cities_listed includes company hub cities; the specific primary city for this role is not stated"
+      "seniority.level (inferred from comp range and years of experience requirement)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed)",
+      "scope.business_model (inferred from company description)",
+      "location.type (inferred as hybrid from 'New hire office equipment stipend for hybrid or distributed employees' and in-person training responsibilities; not explicitly stated for this role)",
+      "location.remote_us_eligible (inferred from 'hybrid or distributed employees' benefit language and distributed workforce mention)"
     ],
     "ambiguities": [
-      "Location type: JD body mentions 'remote and in-office environments' and references 'hybrid or distributed employees' in benefits, but no explicit hybrid policy or required office percentage is stated. Treated as hybrid.",
-      "Compensation range is labeled as Colorado-specific; no other state ranges are given, making it unclear whether this is a national floor or Colorado-specific band.",
-      "Cities listed in 'Who are we?' section are company hubs (Berlin, Denver, SF, London, New York) — it is unclear which city or cities this specific role is tied to."
+      "Location type: JD references both in-person training delivery and 'hybrid or distributed employees' in benefits section, but does not explicitly label this role as remote, hybrid, or onsite. Treated as hybrid.",
+      "Salary range is stated only for California applicants; compensation for other US states is not disclosed, creating uncertainty for non-California candidates.",
+      "Years range is stated as '3–5 years' which is narrower than typical; the upper bound of 5 years could signal this is not intended for very senior candidates."
     ]
   }
 }

@@ -4,7 +4,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7417090",
   "ats_provider": "greenhouse",
   "ats_job_id": "7417090",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,7 +17,7 @@
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Security / IAM Program Manager",
+  "secondary_archetype": "Security-focused TPM",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 5,
@@ -25,13 +25,13 @@
     "manages_people": false,
     "level_signals": [
       "5+ years of technical program management experience",
-      "Drives large-scale technical programs across multiple teams",
-      "Influences decisions across teams without direct authority"
+      "Leading large-scale technical programs across multiple teams",
+      "Influencing decisions across teams without direct authority"
     ]
   },
   "must_haves": [
     {
-      "id": "years_tpm_experience",
+      "id": "years_tpm_security",
       "raw_text_from_jd": "5+ years of technical program management experience with demonstrated success in security-focused initiatives",
       "skill_type": "years_of_experience",
       "domain": "technical_program_management",
@@ -83,11 +83,11 @@
       "credentials_named": []
     },
     {
-      "id": "communication_skills",
+      "id": "communication_technical_translation",
       "raw_text_from_jd": "Excellent communication skills with the ability to translate complex technical concepts to various audiences",
       "skill_type": "capability",
       "domain": "communication",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
@@ -98,7 +98,7 @@
       "credentials_named": []
     },
     {
-      "id": "cross_team_influence",
+      "id": "influencing_without_authority",
       "raw_text_from_jd": "Proven track record of influencing decisions across teams without direct authority",
       "skill_type": "outcome",
       "domain": "stakeholder_management",
@@ -113,7 +113,7 @@
       "credentials_named": []
     },
     {
-      "id": "engineering_product_collaboration",
+      "id": "engineering_product_team_experience",
       "raw_text_from_jd": "Experience working with engineering and product teams in a fast-paced environment",
       "skill_type": "capability",
       "domain": "cross_functional_collaboration",
@@ -143,8 +143,9 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": [
-        "Bachelor's degree in Computer Science",
-        "Bachelor's degree in Engineering"
+        "Bachelor's degree",
+        "Computer Science",
+        "Engineering"
       ]
     }
   ],
@@ -153,7 +154,7 @@
       "id": "payments_fintech_saas_experience",
       "raw_text_from_jd": "Experience with payment systems, financial technology, or enterprise SaaS platforms",
       "skill_type": "domain_knowledge",
-      "domain": "payments_fintech_saas",
+      "domain": "payments_fintech",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -196,7 +197,7 @@
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
-        "identity and access management"
+        "identity and access management systems"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -222,10 +223,10 @@
       "credentials_named": []
     },
     {
-      "id": "developer_platforms_experience",
+      "id": "developer_platform_experience",
       "raw_text_from_jd": "Previous experience working on developer platforms or developer experience",
       "skill_type": "domain_knowledge",
-      "domain": "developer_experience",
+      "domain": "developer_platforms",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -240,12 +241,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Organization Access Platform (OAP) — API key security, Account Takeover (ATO) prevention, login access controls, risk/security/fraud prevention",
+    "surface": "Organization Access Platform (OAP) — API key security, Account Takeover (ATO) prevention, login access controls, and related risk, security, and fraud prevention measures",
     "business_model": "B2B financial infrastructure platform",
     "primary_metrics_inferred": [
-      "Security program delivery success rate",
-      "Reduction in ATO incidents",
-      "Program effectiveness metrics and security outcomes"
+      "Program delivery success and on-time execution",
+      "Security outcomes and risk reduction metrics",
+      "Cross-team dependency resolution"
     ],
     "cross_functional_partners": [
       "Security",
@@ -255,13 +256,13 @@
       "Leadership"
     ],
     "core_responsibilities": [
-      "Lead end-to-end program management for critical security initiatives including API key security, Account Takeover (ATO) prevention, login access controls, and other risk/security/fraud prevention measures",
+      "Lead end-to-end program management for critical security initiatives including API key security, Account Takeover (ATO) prevention, login access controls, and other risk, security, and fraud prevention measures",
       "Drive cross-team dependencies and collaboration between security, fraud operations, and product engineering teams",
       "Track, communicate, and resolve program blockers across multiple workstreams",
       "Develop implementation roadmaps and execution strategies for complex security features",
       "Partner with engineering managers to define technical requirements and prioritize security enhancements",
       "Establish metrics and reporting processes to measure program effectiveness and security outcomes",
-      "Facilitate decision-making processes when trade-offs are required between security, user experience, and development timelines",
+      "Facilitate decision-making processes when trade-offs arise between security, user experience, and development timelines",
       "Represent OAP security initiatives in cross-functional meetings and leadership reviews"
     ]
   },
@@ -277,36 +278,39 @@
     "Technical Program Manager",
     "Identity and Access Management",
     "API key security",
-    "Account Takeover",
-    "ATO prevention",
+    "Account Takeover prevention",
     "authentication systems",
     "access controls",
-    "Organization Access Platform",
     "security initiatives",
-    "cross-functional"
+    "Organization Access Platform",
+    "cross-functional",
+    "developer platform",
+    "SOC2",
+    "PCI"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clearly scoped security domain — OAP team with specific focus areas named (ATO, API key security, login controls)",
-    "JD explicitly states preferred qualifications are a bonus, not a requirement — inclusive application signal",
-    "Stripe is a well-known, high-scale financial infrastructure company with strong engineering culture"
+    "Clear and specific scope — OAP team with named security focus areas (ATO, API key security, login controls)",
+    "JD distinguishes minimum requirements from preferred qualifications explicitly",
+    "Encourages applicants who meet minimum requirements to apply",
+    "Role is part of a well-defined platform org (DEeP) with clear mission"
   ],
   "red_flags": [
+    "No location, remote eligibility, or work authorization information stated anywhere in the JD",
     "No compensation range disclosed",
-    "No location or remote/hybrid policy specified — candidates cannot assess work arrangement",
-    "No visa sponsorship or work authorization information provided"
+    "No visa sponsorship information provided"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
       "seniority.level (inferred from 5+ years requirement and scope of responsibilities)",
-      "scope.business_model (inferred from company description)",
+      "scope.business_model (inferred from company description as B2B financial infrastructure)",
       "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
-      "location.type (not stated in JD body; set to 'unclear')",
-      "compensation.equity_mentioned (not mentioned; set to false)"
+      "location.type (not stated; marked as unclear)",
+      "compensation.equity_mentioned (no mention of equity in JD)"
     ],
     "ambiguities": [
-      "Location type is not specified anywhere in the JD — could be remote, hybrid, or onsite. Set to 'unclear'.",
-      "Work authorization and visa sponsorship not mentioned anywhere in JD."
+      "Location and remote eligibility are entirely absent from the JD — could be onsite, hybrid, or remote; cannot determine without additional data",
+      "Work authorization and visa sponsorship not mentioned; marked as unclear"
     ]
   }
 }

@@ -1,0 +1,209 @@
+{
+  "company": "DoorDash",
+  "role_title": "Associate Manager, Strategy and Operations, Fraud",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7983403",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7983403",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Fraud Strategy & Operations",
+  "seniority": {
+    "level": "Mid-level / Associate Manager (IC or people manager not specified)",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": null,
+    "level_signals": [
+      "4+ years of experience in management consulting, strategy, bizops, investment banking, analytics or related experience",
+      "Title is 'Associate Manager'",
+      "Comp range $105,400–$155,000 consistent with mid-level at a large tech company"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_relevant_fields",
+      "raw_text_from_jd": "4+ years of experience in management consulting, strategy, bizops, investment banking, analytics or related experience; high-growth tech experience preferred",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 4,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "management consulting",
+        "investment banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "management consulting",
+        "investment banking"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "project_leadership_and_goal_delivery",
+      "raw_text_from_jd": "Experience leading large projects, hitting goals, and succeeding in a team environment",
+      "skill_type": "capability",
+      "domain": "project_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "problem_solving_and_analytical_skills",
+      "raw_text_from_jd": "Proven problem-solving and analytical skills; proficiency in SQL and Excel are required",
+      "skill_type": "capability",
+      "domain": "analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL",
+        "Excel"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor degree required",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "high_growth_tech_experience",
+      "raw_text_from_jd": "high-growth tech experience preferred",
+      "skill_type": "domain_knowledge",
+      "domain": "technology_industry",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth tech"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Fraud prevention across DoorDash's platform — Consumers, Dashers, and Merchants",
+    "business_model": "marketplace / gig economy platform",
+    "primary_metrics_inferred": [
+      "Fraud cost reduction",
+      "Platform protection (bad actor reduction)",
+      "User experience quality for good users",
+      "Growth acceleration"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Analytics",
+      "Cross-functional teams"
+    ],
+    "core_responsibilities": [
+      "Define and implement DoorDash's fraud strategy in new areas",
+      "Deliver direct business impact related to fraud reduction",
+      "Analyze fraud vectors across DoorDash's platform with end-to-end analysis",
+      "Identify bad actors and improve the experience of good users",
+      "Partner with product, engineering, and analytics teams to establish goals and build strategic programs",
+      "Use data-driven decision-making to run tests to reduce fraud while accelerating growth"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      105400,
+      155000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "fraud prevention",
+    "strategy and operations",
+    "SQL",
+    "analytics",
+    "data-driven",
+    "bizops",
+    "experimentation",
+    "DoorDash",
+    "fraud vectors",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($105,400–$155,000 base)",
+    "Equity grants mentioned",
+    "Clear problem space (fraud) and audience (Consumers, Dashers, Merchants)",
+    "Comprehensive benefits package described including parental leave, wellness, 401(k)",
+    "Application deadline stated (8/7/2026), suggesting active hiring"
+  ],
+  "red_flags": [
+    "Work location type not specified — remote, hybrid, or onsite is unclear from the JD body",
+    "Visa sponsorship not mentioned",
+    "Manages-people status unclear for an 'Associate Manager' title",
+    "Pay range is national and localized, meaning actual pay could fall below the stated floor in some markets"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Associate Manager', years required, and comp range)",
+      "seniority.manages_people (not stated; unclear whether this is a people manager or IC role)",
+      "location.type (not specified in JD body; left as 'unclear')",
+      "location.remote_us_eligible (not stated)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly in JD)",
+      "compensation.location_pay_differential (inferred from 'Base salary is localized according to an employee's work location')"
+    ],
+    "ambiguities": [
+      "Location type is not specified in the JD — no mention of remote, hybrid, or onsite requirement. Left as 'unclear'.",
+      "The '4+ years' requirement includes 'related experience' making the domain boundary fuzzy; treated as hard given unconditional phrasing.",
+      "The JD mentions cities (San Francisco, Los Angeles, NYC) only in legal/compliance context, not as role locations — excluded from cities_listed.",
+      "Manages_people is ambiguous: 'Associate Manager' title at DoorDash can be an IC-equivalent level; JD does not mention direct reports."
+    ]
+  }
+}

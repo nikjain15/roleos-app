@@ -1,0 +1,342 @@
+{
+  "company": "Wayve",
+  "role_title": "Technical Program Manager",
+  "url": "https://wayve.firststage.co/jobs?gh_jid=8602921002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8602921002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Sunnyvale, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "unclear",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Engineering Program Manager (AI/Robotics)",
+  "seniority": {
+    "level": "Senior IC / Staff TPM",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years leading complex, multi-team software or technology programs (hard requirement)",
+      "Desirable: ideally 8+ years as a Technical Program Manager",
+      "Comp range $171,600 to $274,000 base, consistent with Senior/Staff TPM in Silicon Valley"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "program_delivery_years",
+      "raw_text_from_jd": "5+ years leading complex, multi-team software or technology programs in fast-paced or early-stage environments. You get things done.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "early-stage environments"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_strength",
+      "raw_text_from_jd": "Technically strong: Comfortable working with engineers and reasoning about modern software, ML, and robotics stacks, even if you don't write code.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_ml_robotics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ML",
+        "robotics"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "Systems thinking: You reason about how the parts of a complex system fit together, and how a change in one area ripples into others.",
+      "skill_type": "capability",
+      "domain": "systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "composure_under_pressure",
+      "raw_text_from_jd": "Stays neutral and adapts under pressure: Effective in high-tension, ambiguous situations; you flex your style to keep people aligned and moving.",
+      "skill_type": "cultural_fit",
+      "domain": "leadership_under_ambiguity",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management_skills",
+      "raw_text_from_jd": "Strong project management: Skilled at planning, prioritising, managing risk and dependencies, and adapting as things change.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clear_communication",
+      "raw_text_from_jd": "Clear communicator: You explain complex ideas simply, surface risk early, listen well, and keep teams aligned.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "collaborative_leadership",
+      "raw_text_from_jd": "Collaborative leader: You bring people together, influence without authority, and create a positive team culture.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_problem_solving",
+      "raw_text_from_jd": "Strategic thinking & problem-solving: You keep the bigger picture in mind, stay calm under pressure, and find creative solutions.",
+      "skill_type": "capability",
+      "domain": "strategic_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_mindedness",
+      "raw_text_from_jd": "Product-minded: You focus on outcomes and the people your programs serve - prioritising by impact and defining what good looks like, not just tracking activity.",
+      "skill_type": "capability",
+      "domain": "product_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_mindset",
+      "raw_text_from_jd": "Growth mindset: Open to feedback and always looking to improve.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "tpm_years_preferred",
+      "raw_text_from_jd": "Ideally 8+ years as a Technical Program Manager.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "engineering_degree_or_background",
+      "raw_text_from_jd": "An engineering or computer science degree, or experience working as an engineer; excels in Jira (or similar).",
+      "skill_type": "credential",
+      "domain": "engineering_education",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Jira"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "engineering degree",
+        "computer science degree"
+      ]
+    },
+    {
+      "id": "domain_exposure",
+      "raw_text_from_jd": "Exposure to autonomous vehicles, robotics, ML, simulation / evaluation, or other safety-critical or compute-heavy domains.",
+      "skill_type": "domain_knowledge",
+      "domain": "autonomous_vehicles_robotics_ml",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ML",
+        "simulation",
+        "robotics"
+      ],
+      "industries_named": [
+        "autonomous vehicles",
+        "robotics",
+        "safety-critical systems"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Cross-functional engineering programs spanning AI, software, robotics, infrastructure, evaluation, validation, data, and product",
+    "business_model": "B2B — AI software and foundation models for automakers (automated driving systems)",
+    "primary_metrics_inferred": [
+      "Program delivery outcomes",
+      "Cross-team throughput and efficiency",
+      "Risk mitigation and timeline adherence",
+      "Stakeholder alignment and commitment delivery"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "AI",
+      "Software",
+      "Robotics",
+      "Infrastructure",
+      "Evaluation/Validation",
+      "Data",
+      "Product"
+    ],
+    "core_responsibilities": [
+      "Drive project delivery: Own the project lifecycle and improve delivery outcomes through structured execution and coordination.",
+      "Boost efficiency: Identify bottlenecks, streamline workflows, and improve tooling and resource allocation to increase throughput.",
+      "Enable cross-team collaboration: Improve alignment across teams through effective communication, shared goals, and faster decisions.",
+      "Manage risk proactively: Anticipate issues, develop mitigation plans, and minimise impact on timelines and quality.",
+      "Keep stakeholders aligned: Engage regularly with internal stakeholders, manage expectations, and deliver on commitments.",
+      "Align with business goals: Ensure programs directly support Wayve's strategic priorities by making smart scope and resource decisions.",
+      "Champion continuous improvement: Lead retros, encourage feedback, and implement changes to improve processes, team dynamics, and outcomes."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      171600,
+      274000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "competitive equity package",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "cross-functional programs",
+    "AI",
+    "robotics",
+    "autonomous vehicles",
+    "ML",
+    "systems thinking",
+    "risk management",
+    "program delivery",
+    "Jira",
+    "embodied AI",
+    "evaluation and validation",
+    "infrastructure"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($171,600–$274,000 base)",
+    "JD clearly identifies top 3 must-haves, reducing ambiguity for candidates",
+    "Multiple team placement options mentioned (robotics, evaluation & validation, AI platform, data operations)",
+    "Company explicitly encourages applications from candidates who don't meet every requirement",
+    "Strong mission clarity around embodied AI and autonomous driving"
+  ],
+  "red_flags": [
+    "Wide compensation range ($102,400 spread) may indicate significant variance in level or role scope",
+    "Visa sponsorship not mentioned; US-specific E-Verify notice linked, which may indicate no sponsorship",
+    "Office hybrid policy details not specified (no percentage or days-per-week stated)",
+    "Role placement into specific sub-team determined during process, creating some uncertainty about actual scope at application stage"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and years requirements)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
+      "location.office_time_required (hybrid stated but percentage/days not specified)",
+      "location.visa_sponsorship (not stated; E-Verify notice linked for US candidates only)"
+    ],
+    "ambiguities": [
+      "The JD lists 10 items under 'Essential' but explicitly states only the first three are must-haves ('The first three are our must-haves'). All 10 are treated as hard requirements here since they appear under 'Essential', but items 4-10 may be closer to strong preferences.",
+      "Visa sponsorship is neither confirmed nor denied; the E-Verify notice suggests US work authorization required but sponsorship status is unclear.",
+      "The role is described as having multiple possible team placements (robotics, evaluation & validation, AI platform, data operations); exact team determined during hiring process."
+    ]
+  }
+}

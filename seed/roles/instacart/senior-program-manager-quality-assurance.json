@@ -1,0 +1,476 @@
+{
+  "company": "Instacart",
+  "role_title": "Senior Program Manager, Quality Assurance",
+  "url": "https://instacart.careers/job/?gh_jid=7964683",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7964683",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-global",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": 8,
+    "manages_people": false,
+    "level_signals": [
+      "Minimum 6–8 years of combined program management and analytical experience",
+      "Title is Senior Program Manager",
+      "Reports to Sr. Manager, Quality Assurance",
+      "Base pay range $120,000–$126,500 CAD"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_combined_pm_analytics",
+      "raw_text_from_jd": "Minimum 6–8 years of combined program management and analytical experience, preferably in customer experience, contact center operations, trust and safety, or comparable operational functions.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management+analytics",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "customer experience",
+        "contact center operations",
+        "trust and safety"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cx_contact_center_qa_experience",
+      "raw_text_from_jd": "Experience in Customer Experience, contact center, quality assurance, or trust and safety operations.",
+      "skill_type": "domain_knowledge",
+      "domain": "customer_experience_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "customer experience",
+        "contact center",
+        "trust and safety"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "contact_center_metrics_knowledge",
+      "raw_text_from_jd": "Understanding of contact center metrics (quality scores, sentiment, first contact resolution, average handle time) and the operational levers that move them.",
+      "skill_type": "domain_knowledge",
+      "domain": "contact_center_metrics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "contact center"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ab_testing_statistical_analysis",
+      "raw_text_from_jd": "Understanding of A/B testing and other forms of statistical analysis.",
+      "skill_type": "capability",
+      "domain": "statistical_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "A/B testing"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_proficiency",
+      "raw_text_from_jd": "Proficiency with AI tools (e.g., Claude, ChatGPT, Copilot) and a demonstrated ability to integrate them into day-to-day workflows.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Claude",
+        "ChatGPT",
+        "Copilot"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "dual_pm_and_analyst",
+      "raw_text_from_jd": "Demonstrated experience as both a program manager and a hands-on data analyst — not one supported by the other.",
+      "skill_type": "capability",
+      "domain": "program_management+data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_proficiency",
+      "raw_text_from_jd": "High proficiency in SQL, with experience writing complex queries, joins, and optimizations against large datasets.",
+      "skill_type": "tool_proficiency",
+      "domain": "sql",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "dashboarding_visualization_tools",
+      "raw_text_from_jd": "Experience with analytical visualization tools such as Mode, Tableau, Looker, Sigma, or similar tools.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_visualization",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Mode",
+        "Tableau",
+        "Looker",
+        "Sigma"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_reporting_track_record",
+      "raw_text_from_jd": "Track record of building reporting and analytics that an executive audience actually uses to make decisions.",
+      "skill_type": "outcome",
+      "domain": "executive_reporting",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_management",
+      "raw_text_from_jd": "Proven ability to run cross-functional programs with named owners, published service-level agreements, and measurable outcomes.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "root_cause_analysis",
+      "raw_text_from_jd": "Ability to identify potential root causes contributing to changes in quality and efficiency metrics and provide recommendations on mitigation strategy.",
+      "skill_type": "capability",
+      "domain": "root_cause_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "verbal_written_communication",
+      "raw_text_from_jd": "Extremely strong verbal and written communication skills, including the ability to synthesize complex topics and create compelling narratives for various audiences.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "xfn_stakeholder_collaboration",
+      "raw_text_from_jd": "Ability to work effectively with internal stakeholders, including data scientists, data engineers, and operational leaders. Work cross-functionally with Product, Engineering, Operations, and L&D to drive change.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "accountability_ownership",
+      "raw_text_from_jd": "High level of accountability and ownership — driven and focused self-starter.",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_mindset",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_mindset",
+      "raw_text_from_jd": "Strategic mindset — the ability to think ahead of where the program is at now and help stand up a new operating model rather than maintain an established one.",
+      "skill_type": "cultural_fit",
+      "domain": "strategic_thinking",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "qa_operations_familiarity",
+      "raw_text_from_jd": "Familiarity with QA operations: rubric design and calibration, auditor variance management, dispute workflows, and core quality scoring methodologies.",
+      "skill_type": "domain_knowledge",
+      "domain": "quality_assurance_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "qa_platforms_knowledge",
+      "raw_text_from_jd": "Working knowledge of QA platforms such as Kaizo, MaestroQA, Playvox, or comparable tools.",
+      "skill_type": "tool_proficiency",
+      "domain": "qa_platforms",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Kaizo",
+        "MaestroQA",
+        "Playvox"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "llm_assisted_auditing",
+      "raw_text_from_jd": "Exposure to LLM-assisted auditing, automated quality scoring, or other applied AI tooling within a customer experience context.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_assisted_quality_assurance",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "LLM-assisted auditing",
+        "automated quality scoring"
+      ],
+      "industries_named": [
+        "customer experience"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "r_or_python",
+      "raw_text_from_jd": "Experience with R or Python (fluency in at least one preferred).",
+      "skill_type": "tool_proficiency",
+      "domain": "programming",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "R",
+        "Python"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "experimentation_data_modeling_etl",
+      "raw_text_from_jd": "Experience with experimentation, data modeling, ETL, and data pipeline development.",
+      "skill_type": "capability",
+      "domain": "data_engineering",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ETL",
+        "data pipeline"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Quality Assurance program within Instacart's global Customer Experience organization — covering customer, retailer, and shopper interaction channels",
+    "business_model": "marketplace / gig-economy grocery delivery (B2C and B2B)",
+    "primary_metrics_inferred": [
+      "Quality scores",
+      "Customer sentiment",
+      "First contact resolution (FCR)",
+      "Average handle time (AHT)",
+      "Audit coverage",
+      "Action SLA adherence (target ≥95%)",
+      "Escalation cycle times (target ≤7 days)",
+      "Signal-to-action lag (target ≤5 days)"
+    ],
+    "cross_functional_partners": [
+      "Performance Management",
+      "Learning & Development",
+      "Automation Engineering",
+      "Operations",
+      "Policy",
+      "Product",
+      "Engineering",
+      "Data Science",
+      "Analytics",
+      "Legal"
+    ],
+    "core_responsibilities": [
+      "Operate QA cadences end-to-end (daily anomaly standups, weekly quality reviews, monthly business reviews, quarterly rubric calibration sessions)",
+      "Manage central actions tracker routing quality signals to named owners across five action workstreams",
+      "Publish and enforce service-level agreements; surface adherence to leadership weekly",
+      "Build and maintain QA dashboards and reporting surfacing critical KPIs",
+      "Write SQL queries against contact and audit data to investigate spikes and answer ad-hoc business questions",
+      "Analyze audit data, customer sentiment, and contact-driver patterns to identify systemic issues",
+      "Partner with Data Science and Analytics to design SSOT dashboards and reporting models",
+      "Develop forward-looking glide-path and impact models for quarterly goal-setting",
+      "Build automated reporting systems to keep CX and operations leaders informed",
+      "Collaborate with Engineering, Product, L&D, Automation, and Operations on quality signal routing and outcomes measurement",
+      "Communicate outcomes and insights to cross-functional stakeholders including senior leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "base_range_cad": [
+      120000,
+      126500
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "new hire equity grant and annual refresh grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Quality Assurance",
+    "program management",
+    "SQL",
+    "data analytics",
+    "dashboarding",
+    "customer experience",
+    "contact center",
+    "SLA governance",
+    "audit data",
+    "cross-functional",
+    "LLM-assisted auditing",
+    "single source of truth",
+    "contact prevention",
+    "AI tools"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($120,000–$126,500 CAD)",
+    "Equity mentioned (new hire grant + annual refresh)",
+    "Flex First remote policy — fully remote eligible",
+    "Role has clear, concrete ownership with defined SLA targets and KPIs",
+    "Detailed JD with specific metrics targets (≥95% adherence, ≤7 days escalation cycle, ≤5 days signal-to-action lag) signals an operationally mature team",
+    "Role is building a new operating model, not just maintaining an existing one — suggests high-impact opportunity"
+  ],
+  "red_flags": [
+    "Hiring restricted to four Canadian provinces only (Ontario, Alberta, British Columbia, Nova Scotia) — eliminates candidates outside those regions",
+    "Compensation stated in CAD only; no USD range provided, suggesting this is a Canada-only remote role despite '#LI-Remote' tag",
+    "6–8 years minimum is a wide band that could indicate role level uncertainty",
+    "Dual requirement (program manager AND hands-on data analyst) is demanding and narrows the candidate pool significantly"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.remote_us_eligible (inferred as false from 'currently only hiring in Ontario, Alberta, British Columbia, and Nova Scotia')",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and SLA targets in JD body)",
+      "compensation.base_range_usd (not stated; CAD range captured as base_range_cad instead)",
+      "seniority.level (inferred from title, years required, and reporting structure)"
+    ],
+    "ambiguities": [
+      "The JD is tagged '#LI-Remote' suggesting remote-global, but the body explicitly restricts hiring to four Canadian provinces (Ontario, Alberta, British Columbia, Nova Scotia). Treated as remote-global with a Canada-only geographic restriction; location.remote_us_eligible set to false.",
+      "The years range '6–8 years' is stated as a minimum qualification, which is unusual (ranges typically denote preferred band not a floor). Captured minimum_value as 6 and maximum as 8 per the stated text.",
+      "work_auth and visa_sponsorship are not explicitly addressed in the JD body; left as 'unclear'."
+    ]
+  }
+}

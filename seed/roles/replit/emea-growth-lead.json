@@ -1,0 +1,342 @@
+{
+  "company": "Replit",
+  "role_title": "EMEA Growth Lead",
+  "url": "https://jobs.ashbyhq.com/replit/ff1bbbed-8506-4850-8d74-f2678c0da78e",
+  "ats_provider": "ashby",
+  "ats_job_id": "ff1bbbed-8506-4850-8d74-f2678c0da78e",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "London, UK"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time in London",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth (non-PM)",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Lead",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in partnerships, business development, enterprise sales, or growth",
+      "Expected to build market presence from the ground up in a new geography",
+      "Reports to International Partnerships Lead"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_partnerships_bizdev",
+      "raw_text_from_jd": "8+ years of experience in partnerships, business development, enterprise sales, or growth, ideally in a technology or SaaS environment",
+      "skill_type": "years_of_experience",
+      "domain": "partnerships_business_development",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "ideally in a technology or SaaS environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SaaS"
+      ],
+      "industries_named": [
+        "technology",
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "emea_business_landscape",
+      "raw_text_from_jd": "Deep familiarity with the EMEA's business landscape, including enterprise sales cycles, public sector procurement, and the broader London tech ecosystem",
+      "skill_type": "domain_knowledge",
+      "domain": "EMEA_market_knowledge",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "EMEA",
+        "London"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_gov_partnerships_track_record",
+      "raw_text_from_jd": "Proven track record sourcing, structuring, and closing enterprise or government partnerships in the EMEA",
+      "skill_type": "outcome",
+      "domain": "enterprise_government_partnerships",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "EMEA"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "public_sector_channel_experience",
+      "raw_text_from_jd": "Experience working with or selling to EMEA public sector institutions, large enterprises, or through channel/reseller networks",
+      "skill_type": "domain_knowledge",
+      "domain": "public_sector_and_channel_sales",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "EMEA"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "Strong communicator who can adapt messaging for technical developers, non-technical operators, C-suite executives, and government stakeholders alike",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "self_starter_bias_for_action",
+      "raw_text_from_jd": "Self-starter with a bias for action; comfortable with ambiguity and excited to build market presence from the ground up",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_mindset",
+      "raw_text_from_jd": "Data-driven mindset — you measure what matters and use insights to iterate quickly",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_software_democratization",
+      "raw_text_from_jd": "Genuine passion for the future of software creation and democratising access to building software",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "developer_tools_background",
+      "raw_text_from_jd": "Background in developer tools, coding education, SaaS platforms, or digital transformation consulting",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_tools_saas",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "developer tools",
+        "coding education",
+        "SaaS",
+        "digital transformation consulting"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "existing_european_relationships",
+      "raw_text_from_jd": "Existing enterprise, government, or channel partner relationships in Europe you'd bring to the role",
+      "skill_type": "capability",
+      "domain": "partner_network",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Europe"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_programs_at_scale",
+      "raw_text_from_jd": "Experience managing or building partner programs at scale, including reseller programs with tiered incentives",
+      "skill_type": "capability",
+      "domain": "partner_program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "european_gov_digital_initiatives",
+      "raw_text_from_jd": "Familiarity with European government digital initiatives",
+      "skill_type": "domain_knowledge",
+      "domain": "government_digital_policy",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Europe"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "european_market_expansion",
+      "raw_text_from_jd": "Experience expanding into or across broader European markets from a London base",
+      "skill_type": "domain_knowledge",
+      "domain": "international_market_expansion",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Europe",
+        "London"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "EMEA market — enterprise, government, channel, education, and developer community growth",
+    "business_model": "B2B and B2G enterprise/government SaaS; channel/reseller distribution; product-led growth in education and developer segments",
+    "primary_metrics_inferred": [
+      "Channel revenue from reseller/partner networks",
+      "Enterprise and government partnership pipeline and closed deals",
+      "EMEA developer and educational institution adoption",
+      "Partnership and growth metrics reported to leadership"
+    ],
+    "cross_functional_partners": [
+      "Global Partnerships team",
+      "Product",
+      "Marketing",
+      "Community",
+      "International Partnerships Lead"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end partnership development with enterprise accounts, government agencies, and public sector institutions in EMEA",
+      "Identify, recruit, and activate resellers, system integrators, and channel partners who can distribute Replit's products across EMEA",
+      "Build partnerships with EMEA universities, coding bootcamps, and educational institutions to drive adoption of Replit in learning environments",
+      "Drive bottom-up adoption among EMEA builders through community engagement, developer relations, and PLG initiatives",
+      "Represent Replit at major EMEA technology conferences, trade shows, and industry events",
+      "Build and manage a robust deal pipeline, tracking opportunities from prospecting through close",
+      "Report on partnership and growth metrics, ensuring activities convert to measurable business impact"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Competitive Salary & Equity",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "EMEA",
+    "enterprise partnerships",
+    "government partnerships",
+    "channel sales",
+    "reseller networks",
+    "product-led growth",
+    "developer tools",
+    "business development",
+    "London tech ecosystem",
+    "education partnerships",
+    "SaaS",
+    "public sector",
+    "go-to-market"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership scope — candidate owns EMEA market presence end-to-end",
+    "Covers multiple high-value partnership tracks: enterprise, government, channel, education, PLG",
+    "Reports to International Partnerships Lead — structured global team to support",
+    "Replit is an established platform with millions of users — not a pre-launch startup",
+    "Equity mentioned alongside competitive salary",
+    "Company explicitly encourages candidates from underrepresented and non-traditional backgrounds"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed despite role seniority (8+ years required)",
+    "Visa sponsorship and work authorisation requirements for UK/EMEA not stated",
+    "401(k) with US-only match listed in benefits — suggests US-centric benefits template applied to a London-based role; UK-specific benefits not detailed",
+    "No headcount or team context provided — unclear if this is a team of one or joining existing EMEA staff",
+    "Broad remit spanning enterprise, government, channel, education, and PLG simultaneously may indicate under-resourcing"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and build-from-scratch mandate)",
+      "seniority.manages_people (not stated; inferred false from JD language — no direct reports mentioned)",
+      "scope.business_model (inferred from product description and partnership tracks)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly quoted)",
+      "location.type (stated as 'full-time role based in London, UK'; treated as onsite)",
+      "compensation.source (no salary figures provided; marked unknown)"
+    ],
+    "ambiguities": [
+      "JD title references 'EMEA' broadly but body focuses heavily on United Kingdom and London specifically — unclear whether EMEA scope is aspirational or immediate",
+      "Benefits section lists '401(k) Program with a 4% match (US Only)' despite the role being London-based — may reflect a US-centric template; UK pension/benefits not described",
+      "Work authorisation requirements for UK employment not stated — unclear if sponsorship is available for non-UK residents"
+    ]
+  }
+}

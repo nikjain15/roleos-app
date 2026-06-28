@@ -1,10 +1,10 @@
 {
   "company": "DoorDash",
   "role_title": "Merchant Growth Executive",
-  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7518024",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7975028",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7518024",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7975028",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -33,7 +33,7 @@
   },
   "must_haves": [
     {
-      "id": "years_sales_relationship_closing",
+      "id": "years_sales_experience",
       "raw_text_from_jd": "You have 2+ years in a sales role focused on building relationships and closing deals",
       "skill_type": "years_of_experience",
       "domain": "sales",
@@ -50,7 +50,7 @@
       "credentials_named": []
     },
     {
-      "id": "years_outbound_sales_dtt",
+      "id": "years_outbound_sales",
       "raw_text_from_jd": "You have 1+ years of experience in Outbound Sales being held to DTT minimums",
       "skill_type": "years_of_experience",
       "domain": "outbound_sales",
@@ -67,7 +67,7 @@
       "credentials_named": []
     },
     {
-      "id": "sales_personality",
+      "id": "sales_motivation_personality",
       "raw_text_from_jd": "You are creative, motivated, and passionate about sales and have a dynamic personality",
       "skill_type": "cultural_fit",
       "domain": "sales_culture",
@@ -137,7 +137,7 @@
       "id": "franchise_accounts_experience",
       "raw_text_from_jd": "Have experience working with Franchise accounts (nice to have)",
       "skill_type": "domain_knowledge",
-      "domain": "franchise_accounts",
+      "domain": "franchise_sales",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -152,25 +152,25 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Inside Account Development — SMB merchant upsell (Ads, Loyalty & Promotions)",
-    "business_model": "B2B2C marketplace; upselling advertising and promotional products to existing restaurant/merchant partners",
+    "surface": "Inside Account Development — SMB merchant upsell (Ads, Loyalty & Promotions on DoorDash platform)",
+    "business_model": "B2B SaaS / marketplace upsell to SMB restaurant/merchant partners",
     "primary_metrics_inferred": [
-      "Revenue growth from upsells",
-      "Volume of outbound calls and emails (DTT minimums)",
-      "Merchant partner activation of incremental products",
-      "Retention and satisfaction of SMB partner base"
+      "Revenue growth from upselling existing merchants",
+      "High-volume call and email activity (DTT minimums)",
+      "Merchant adoption of Ads, Loyalty & Promotions products"
     ],
     "cross_functional_partners": [
       "Inside Account Management Team",
-      "Inside Sales Managers"
+      "Inside Sales Manager"
     ],
     "core_responsibilities": [
-      "Upsell incremental products and services (Ads, Loyalty & Promotions) to existing merchants",
-      "Make a high volume of calls and emails to existing partners daily",
-      "Collaborate with Inside Account Management Team to achieve goals of Managed Partners",
+      "Transform the way businesses capture the attention and attract new consumers",
+      "Connect and collaborate with our existing partners to understand their unique goals, priorities, and current challenges",
+      "Collaborate with our Inside Account Management Team in effort to achieve the goals of our Managed Partners",
       "Activate additional products on the DoorDash platform to empower merchant partner growth",
       "Cultivate unique solutions through data and analytical tools",
-      "Use email marketing automation tools to creatively engage partners"
+      "Become a pro using email marketing automation tools to creatively engage partners",
+      "Make a high volume of calls and emails to existing partners daily"
     ]
   },
   "compensation": {
@@ -182,44 +182,42 @@
     "source": "unknown"
   },
   "top_keywords": [
-    "inside sales",
-    "outbound sales",
-    "upsell",
+    "Inside Sales",
     "SMB",
-    "merchant partners",
+    "Merchant Growth",
+    "Upsell",
+    "Outbound Sales",
     "Ads",
     "Loyalty",
     "Promotions",
     "Salesforce",
-    "Outreach",
-    "Sales Navigator",
-    "high-volume calling",
-    "account development"
+    "DoorDash",
+    "High-volume calls",
+    "Account Development"
   ],
-  "buzzword_density": "low",
+  "buzzword_density": "medium",
   "green_flags": [
-    "Clearly defined product focus (Ads, Loyalty & Promotions) — not a vague generalist role",
-    "Hybrid/flexible work arrangement explicitly stated",
-    "Strong team culture signals (collaboration, partner-first mindset)",
-    "DoorDash is a large, established platform with significant SMB merchant base providing large addressable market for upsell"
+    "Clear product focus — Ads, Loyalty & Promotions — specific and queryable",
+    "Flexible hybrid arrangement explicitly stated",
+    "DoorDash is a well-known, scaled company with stated benefits (premium healthcare, wellness reimbursement, parental leave)",
+    "Strong D&I commitment with explicit encouragement of underrepresented groups to apply"
   ],
   "red_flags": [
-    "Compensation range not disclosed anywhere in the JD",
-    "DTT minimums mentioned but not defined — unclear performance bar",
-    "High-volume outbound calling role may have significant quota pressure not fully described",
-    "Visa sponsorship status not mentioned"
+    "No compensation range disclosed",
+    "High-volume call/email role held to DTT minimums — KPI-intensive environment",
+    "Visa sponsorship status not mentioned",
+    "Role is Phoenix, AZ area-centric but remote eligibility is ambiguous — JD says flexible remote/in-office but team is described as 'predominantly located in the Phoenix, AZ and surrounding areas'"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years required + reporting structure)",
-      "scope.business_model (inferred from product description and company context)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "seniority.level (inferred from years requirements and reporting structure)",
+      "scope.business_model (inferred from product description and merchant partner context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
       "location.remote_us_eligible (inferred from 'flexible in terms of time spent remote and in-office' language)"
     ],
     "ambiguities": [
-      "Location type: JD says team is 'predominantly located in Phoenix, AZ' but also says the role is 'flexible in terms of time spent remote and in-office' — could be interpreted as hybrid with Phoenix base or partially remote-eligible. Treated as hybrid with Phoenix as primary city.",
-      "DTT minimums mentioned as a hard metric ('being held to DTT minimums') but 'DTT' is never defined in the JD — likely an internal DoorDash metric acronym.",
-      "'You are creative, motivated, and passionate about sales' appears under 'We're excited about you because…' which is the required qualifications section, so treated as hard; however it reads as cultural fit language."
+      "Location is described as predominantly Phoenix, AZ but the JD also references 'remote Jobs Associated With Office in NYC Only' in compliance notices, creating ambiguity about whether remote is broadly permitted or NYC-specific. Treated as hybrid with Phoenix as primary location.",
+      "DTT minimums referenced but not defined in the JD — unclear exactly what activity thresholds are required."
     ]
   }
 }

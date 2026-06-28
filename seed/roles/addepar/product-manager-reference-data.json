@@ -1,0 +1,293 @@
+{
+  "company": "Addepar",
+  "role_title": "Product Manager - Reference Data",
+  "url": "https://job-boards.greenhouse.io/addepar1/jobs/8576368002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8576368002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Edinburgh"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "no"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Data/Analytics PM",
+  "seniority": {
+    "level": "Mid-level IC (likely PM or Senior PM)",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "No explicit years of experience stated",
+      "Role described as 'Product Manager' (not Senior or Principal)",
+      "Prior experience as data analyst, business analyst, or product analyst implied as entry point",
+      "Strong individual contributor responsibilities; no people management mentioned"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "prior_data_analyst_experience",
+      "raw_text_from_jd": "Prior experience as a data analyst, business analyst, or product analyst ideally in financial services or a data-intensive SaaS environment where data quality and rigour matter.",
+      "skill_type": "years_of_experience",
+      "domain": "data_analysis",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services",
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_sql_skills",
+      "raw_text_from_jd": "Strong SQL skills -  you can write complex queries confidently and use them as a primary tool for investigation, not just reporting.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_querying",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_assisted_tools",
+      "raw_text_from_jd": "Experienced with AI-assisted tools to facilitate getting work done, particularly applying them to real analytical tasks tied to business outcomes.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tooling",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI-assisted tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "python_for_data_work",
+      "raw_text_from_jd": "Experience with Python for data work: analysis, scripting, and automation; comfortable with pandas, Jupyter, or similar tools.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_engineering_and_analysis",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "pandas",
+        "Jupyter"
+      ],
+      "technologies_named": [
+        "Python"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_source_reporting",
+      "raw_text_from_jd": "Able to build reporting that spans multiple data sources with knowledge on how to join pieces of information like Salesforce data with finance data and operational data and produce something coherent and trustworthy.",
+      "skill_type": "capability",
+      "domain": "data_reporting",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builder_self_starter",
+      "raw_text_from_jd": "A builder and self-starter that is dependable in your work. Teammates trust what you produce.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clear_communicator",
+      "raw_text_from_jd": "A clear communicator who can write up findings, document processes, and present analysis to diverse audiences.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "uk_right_to_work",
+      "raw_text_from_jd": "Applicants must have, and maintain, the right to work in the United Kingdom from the first day of employment.",
+      "skill_type": "credential",
+      "domain": "work_authorization",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "United Kingdom"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "financial_data_concepts",
+      "raw_text_from_jd": "Ideal if knowledgeable in financial data concepts such as asset class and security level concepts, reference data, and pricing or the desire to learn more about these concepts.",
+      "skill_type": "domain_knowledge",
+      "domain": "financial_data",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "financial services"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Visa sponsorship candidates (not available for this role)"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Reference Data platform — Market Data Feeds and Addepar Security Master (ASM); data quality, reporting infrastructure, licensing inventory, and operational dashboards",
+    "business_model": "B2B SaaS, data platform for investment management firms",
+    "primary_metrics_inferred": [
+      "Dataset profitability",
+      "Vendor licensing costs vs. revenue",
+      "Pipeline health and feed coverage",
+      "Commercial activity and pipeline tracking",
+      "Data quality and anomaly rates"
+    ],
+    "cross_functional_partners": [
+      "Operations",
+      "R&D",
+      "Finance",
+      "Leadership"
+    ],
+    "core_responsibilities": [
+      "Run data investigations, ad hoc queries, and structured analyses to inform prioritisation, requirements, and decisions",
+      "Drive data quality analysis for Market Data Feed builds and security master",
+      "Build and maintain reporting infrastructure for dataset profitability, vendor licensing costs vs. revenue, pipeline health, feed coverage, and commercial activity",
+      "Query data systems to produce dashboarding on profitability, spend vs. budget, and commercial pipeline tracking",
+      "Support ASM operational workflows through reconciliation queries, node matching validation, and surfacing data quality issues",
+      "Productise monitoring of market data pipelines and operational dashboards",
+      "Apply AI-assisted tools to accelerate Reference Data product outcomes",
+      "Maintain licensing inventory including dashboards tracking spend, renewal timelines, and licensing events"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "reference data",
+    "market data feeds",
+    "security master",
+    "SQL",
+    "Python",
+    "data quality",
+    "data analysis",
+    "reporting infrastructure",
+    "vendor licensing",
+    "AI-assisted tools",
+    "financial data",
+    "dashboarding",
+    "pipeline monitoring"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Clear and specific product surface described (Market Data Feeds and ASM) — not vague",
+    "Role explicitly values builder mindset and autonomy",
+    "Company manages nearly $9 trillion in assets across 1,400+ firms — significant scale and product impact",
+    "AI tooling use explicitly encouraged as part of the workflow",
+    "Global company with Edinburgh office — established presence in the UK"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship explicitly not available — restricts candidate pool to those with existing UK right to work",
+    "Role title is 'Product Manager' but responsibilities read heavily as data analyst / analytics engineer; archetype ambiguity may signal the role is under-levelled or mislabelled",
+    "No explicit years of experience stated — seniority expectations are unclear"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from role title and responsibilities; no explicit level or years stated)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated as KPIs)",
+      "compensation.base_range_usd (not stated)",
+      "location.type (inferred as onsite from Edinburgh-based role with no remote language)"
+    ],
+    "ambiguities": [
+      "The role is titled 'Product Manager' but responsibilities are predominantly those of a data/analytics PM or even a data analyst; the JD explicitly states 'This role requires deep data skills' and lists SQL, Python, and dashboarding as primary tools, which is atypical for a generalist PM role. Archetype assigned as Technical PM with secondary 'Data/Analytics PM'.",
+      "The JD states 'ideally in financial services or a data-intensive SaaS environment' for prior experience — this was treated as a must-have with 'ideally' flagged as an industry preference rather than making it a nice-to-have, since the overall framing is part of a required experience bullet.",
+      "No explicit office attendance requirement stated beyond the Edinburgh base location; treated as onsite rather than hybrid due to absence of any remote or hybrid language."
+    ]
+  }
+}

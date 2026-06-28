@@ -1,0 +1,325 @@
+{
+  "company": "Abridge",
+  "role_title": "Product Lead, AI/ML",
+  "url": "https://jobs.ashbyhq.com/abridge/9c7ba6c3-7744-48b8-a5b3-dab55c22e4b3",
+  "ats_provider": "ashby",
+  "ats_job_id": "9c7ba6c3-7744-48b8-a5b3-dab55c22e4b3",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Monday, Wednesday, and Fridays in office",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 5,
+    "years_required_max": 8,
+    "manages_people": false,
+    "level_signals": [
+      "5 to 8 years of product management experience",
+      "Significant ownership of ML powered products or platform systems",
+      "Owns product strategy and roadmap for a core area"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5 to 8 years of product management experience with significant ownership of ML powered products or platform systems.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_ml",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "model_quality_evaluation",
+      "raw_text_from_jd": "Deep understanding of how to measure and improve model quality, including evaluation frameworks, annotation pipelines, and benchmark design.",
+      "skill_type": "domain_knowledge",
+      "domain": "ml_evaluation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "evaluation frameworks",
+        "annotation pipelines",
+        "benchmark design"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency_ml",
+      "raw_text_from_jd": "Strong technical fluency across ML, data pipelines, and distributed systems.",
+      "skill_type": "capability",
+      "domain": "machine_learning_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ML",
+        "data pipelines",
+        "distributed systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_researcher_collaboration",
+      "raw_text_from_jd": "Experience working closely with ML researchers and engineers to drive impact in production.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "balance_architecture_near_term",
+      "raw_text_from_jd": "Ability to balance long term architectural investments with near term quality improvements.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_technical_concepts",
+      "raw_text_from_jd": "Strong communication skills and the ability to translate complex technical concepts into clear decisions and narratives.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_accuracy_product_track_record",
+      "raw_text_from_jd": "A track record of delivering high quality products in domains where accuracy, reliability, and trust are paramount.",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "evaluation_platform_experience",
+      "raw_text_from_jd": "You have experience building evaluation platforms, ML observability systems, or quality measurement pipelines.",
+      "skill_type": "domain_knowledge",
+      "domain": "ml_evaluation_platforms",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ML observability systems",
+        "quality measurement pipelines"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "healthcare_regulated_experience",
+      "raw_text_from_jd": "You have worked in clinical, healthcare, or regulated environments with a high bar for accuracy and compliance.",
+      "skill_type": "domain_knowledge",
+      "domain": "healthcare_regulated",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "clinical",
+        "healthcare"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "specialty_model_adaptation",
+      "raw_text_from_jd": "You have worked on specialty specific or domain specific model adaptations.",
+      "skill_type": "domain_knowledge",
+      "domain": "domain_specific_ml",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "personalization_ambient_intelligence",
+      "raw_text_from_jd": "You have worked on personalization systems, context ingestion frameworks, or ambient intelligence products.",
+      "skill_type": "domain_knowledge",
+      "domain": "personalization_ambient_ai",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "personalization systems",
+        "context ingestion frameworks",
+        "ambient intelligence"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "human_in_loop_ml_products",
+      "raw_text_from_jd": "You have experience shipping large scale ML products with human in the loop workflows.",
+      "skill_type": "capability",
+      "domain": "human_in_the_loop_ml",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "human in the loop workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Note Generation within the Note Quality group — note models, evaluation systems, specialty and workflow engines",
+    "business_model": "enterprise B2B, healthcare AI platform",
+    "primary_metrics_inferred": [
+      "Note quality scores",
+      "Clinician trust and adoption",
+      "Evaluation benchmark performance",
+      "Specialty coverage and accuracy",
+      "Production quality analytics"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "ML",
+      "Design",
+      "Clinical leaders",
+      "Specialty councils",
+      "Customer-facing teams"
+    ],
+    "core_responsibilities": [
+      "Drive AI product strategy and execution within Note Generation",
+      "Shape the roadmap for a core area of Abridge's note models and evaluation stack",
+      "Help build a world class note quality evaluation system across human annotation, LLM judges, automated backtesting, and in production analytics",
+      "Own specialty priorities and ensure specialty notes reflect clinical expectations",
+      "Partner with clinical leaders to define gold standards",
+      "Work closely with engineering and ML to align on architecture, model iteration schedules, evaluation methodologies, and system reliability",
+      "Partner with product design to define user control surfaces",
+      "Translate real world feedback into the model development loop"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants for full time employees",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Note Generation",
+    "note quality",
+    "evaluation frameworks",
+    "LLM judges",
+    "annotation pipelines",
+    "ML observability",
+    "benchmark design",
+    "clinical documentation",
+    "specialty models",
+    "generative AI",
+    "healthcare AI",
+    "human in the loop",
+    "ambient intelligence"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product ownership area (Note Generation / Note Quality group)",
+    "Mission-driven company with a concrete product (clinical documentation AI)",
+    "Strong cross-functional collaboration scope including clinical leaders and specialty councils",
+    "Equity grants mentioned as part of compensation",
+    "Comprehensive benefits package described in detail",
+    "Explicit encouragement to apply if willing to relocate — signals openness to candidates outside SF"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed — no base salary stated",
+    "Hard hybrid requirement (Mon/Wed/Fri in San Francisco office) eliminates remote candidates",
+    "Visa sponsorship and work authorization not addressed in JD",
+    "No team size or headcount context provided",
+    "Title says 'Product Lead' but body consistently refers to the role as 'Product Manager' — possible scope ambiguity"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range 5-8 and scope of ownership)",
+      "scope.business_model (inferred from product description and enterprise integrations)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "compensation.equity_form (inferred from general benefits section, not a specific grant structure)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)"
+    ],
+    "ambiguities": [
+      "Role title in identity fields is 'Product Lead, AI/ML' but the JD body consistently uses 'Product Manager' — unclear if 'Lead' implies people management or is simply a seniority label. JD body states manages_people=false.",
+      "JD does not state compensation range despite mentioning 'Competitive compensation and equity grants' — no base salary can be inferred."
+    ]
+  }
+}

@@ -1,0 +1,206 @@
+{
+  "company": "DoorDash",
+  "role_title": "Senior Associate, Sales Strategy & Operations, Commerce Platform",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7980888",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7980888",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Sales Strategy & Operations",
+  "seniority": {
+    "level": "Mid-level / Senior Associate (IC2-IC3)",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2+ years of experience required",
+      "Title is 'Senior Associate' — below Manager level",
+      "Reports to a Sales Strategy & Operations Manager",
+      "Base pay range $88,400–$130,000 USD consistent with mid-level IC at DoorDash"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_sales_strategy_ops",
+      "raw_text_from_jd": "You have 2+ years of experience in any of the following fields: sales/business planning, strategy & operations, business consulting, analytics",
+      "skill_type": "years_of_experience",
+      "domain": "sales_strategy_operations_analytics",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_track_record",
+      "raw_text_from_jd": "You have a proven track record of driving cross-functional initiatives, hitting goals, and succeeding in a complex and fast moving environment",
+      "skill_type": "outcome",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bachelor_degree",
+      "raw_text_from_jd": "You have a bachelor's degree or higher",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "bachelor's degree"
+      ]
+    },
+    {
+      "id": "analytical_thinking_sql_excel",
+      "raw_text_from_jd": "You're an excellent analytical thinker who can deliver actionable recommendations out of complex datasets; SQL and Excel experience is required.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL",
+        "Excel"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "salesforce_experience",
+      "raw_text_from_jd": "Salesforce experience is strongly preferred",
+      "skill_type": "tool_proficiency",
+      "domain": "crm",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Digital Ordering (white-label commission-free ordering solution for SMB merchants); Commerce Platform sales org",
+    "business_model": "B2B SaaS / marketplace — DoorDash selling technology solutions to SMB restaurants",
+    "primary_metrics_inferred": [
+      "Quarterly sales targets attainment",
+      "Sales funnel conversion and efficiency",
+      "SMB merchant growth / new merchant acquisition",
+      "Sales productivity improvements via AI tooling"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Sales",
+      "Analytics"
+    ],
+    "core_responsibilities": [
+      "Translate high-level company objectives into actionable quarterly sales goals",
+      "Audit sales funnels and support buildout of new systems and processes",
+      "Run cadence of the business including Weekly Business Reviews",
+      "Ensure every lead, opportunity, and deal is tracked with precision",
+      "Implement tooling and systems updates to improve sales team efficiency",
+      "Optimize the sales funnel through meticulous measurement and inspection",
+      "Explore and pilot the latest AI tools and technologies to drive improvements in sales productivity and outreach effectiveness"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      88400,
+      130000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "sales strategy & operations",
+    "Digital Ordering",
+    "Commerce Platform",
+    "SMB restaurants",
+    "sales funnel",
+    "SQL",
+    "Excel",
+    "Salesforce",
+    "AI tools",
+    "quarterly sales targets",
+    "Weekly Business Reviews",
+    "white-label",
+    "cross-functional",
+    "analytics"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($88,400–$130,000 base)",
+    "Equity grants mentioned in addition to base salary",
+    "Clear reporting structure (reports to Sales Strategy & Operations Manager)",
+    "Specific product surface named (Digital Ordering white-label solution) — not vague",
+    "Comprehensive benefits package described in detail",
+    "Applications accepted on an ongoing basis — active role",
+    "Only one strongly preferred (not required) tool (Salesforce)"
+  ],
+  "red_flags": [
+    "Location not specified — work location type (remote, hybrid, onsite) is entirely unclear from the JD body; only pay range geography reference is 'national' including Illinois and Colorado",
+    "Visa sponsorship status not mentioned",
+    "NYC-specific AI hiring tool (Covey) disclosure suggests automated screening may be in use"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior Associate', reporting structure, years required, and comp range)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type set to 'unclear' — JD body does not specify remote/hybrid/onsite",
+      "location.work_auth set to 'open' — no sponsorship or work auth restriction stated"
+    ],
+    "ambiguities": [
+      "Work location type is not stated in the JD body. Pay range references 'national' rates including Illinois and Colorado but no explicit remote, hybrid, or onsite designation is given. Treated as 'unclear'.",
+      "Visa sponsorship is not mentioned anywhere in the JD — set to 'unclear' rather than assuming yes or no.",
+      "The pay range section says 'The national base pay range for this position within the United States, including Illinois and Colorado' which implies eligibility in multiple states but does not confirm remote eligibility."
+    ]
+  }
+}

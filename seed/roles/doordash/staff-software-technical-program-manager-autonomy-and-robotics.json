@@ -1,0 +1,263 @@
+{
+  "company": "DoorDash",
+  "role_title": "Staff Software Technical Program Manager - Autonomy & Robotics",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8008523",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8008523",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "some amount of travel to our different deployment areas",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Autonomy & Robotics Software TPM",
+  "seniority": {
+    "level": "Staff / Senior IC",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of industry experience working in engineering and/or program management",
+      "Staff-level title in role name",
+      "Comp range $193,800–$285,000 base consistent with Staff IC at DoorDash",
+      "Expected to interface with executive leadership for program status"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_industry_experience",
+      "raw_text_from_jd": "8+ years of industry experience working in engineering and/or program management",
+      "skill_type": "years_of_experience",
+      "domain": "engineering_and_or_program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomy_validation_knowledge",
+      "raw_text_from_jd": "In-depth understanding of autonomy and autonomy feature validation strategies in simulation, closed course testing, and on public roads",
+      "skill_type": "domain_knowledge",
+      "domain": "autonomy_and_robotics",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "simulation",
+        "closed course testing",
+        "public roads testing"
+      ],
+      "industries_named": [
+        "autonomous vehicles",
+        "robotics"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sdlc_experience",
+      "raw_text_from_jd": "In-depth experience with the software development life cycle",
+      "skill_type": "domain_knowledge",
+      "domain": "software_development_life_cycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "concept_to_production",
+      "raw_text_from_jd": "Demonstrated success taking software products or features from concept to production",
+      "skill_type": "outcome",
+      "domain": "software_product_delivery",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_cross_functional_programs",
+      "raw_text_from_jd": "A track record of managing complex, cross-functional programs with significant ambiguity",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_to_executive_communication",
+      "raw_text_from_jd": "The ability to operate from a deep technical level all the way up to providing comprehensive program status to executive leadership",
+      "skill_type": "capability",
+      "domain": "technical_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stem_degree",
+      "raw_text_from_jd": "A B.S., M.S., or Ph.D. in STEM",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "B.S.",
+        "M.S.",
+        "Ph.D."
+      ]
+    },
+    {
+      "id": "program_management_tools",
+      "raw_text_from_jd": "Working experience with program management tools, such as Jira, Confluence, Smartsheet/MS Project, Google Workspace applications",
+      "skill_type": "tool_proficiency",
+      "domain": "program_management_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Jira",
+        "Confluence",
+        "Smartsheet",
+        "MS Project",
+        "Google Workspace"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Autonomy software stack for autonomous delivery robots (Perception, Planning, Localization, System Safety, Simulation, Remote Assistance)",
+    "business_model": "last-mile autonomous delivery, B2C and B2B logistics platform",
+    "primary_metrics_inferred": [
+      "Autonomy feature delivery from concept to validated public-roads driving",
+      "Scale and optimization of last-mile deliveries using autonomy",
+      "Cross-functional program completion rates and issue resolution"
+    ],
+    "cross_functional_partners": [
+      "Autonomy teams",
+      "Software",
+      "Safety",
+      "Operations",
+      "Product",
+      "QA"
+    ],
+    "core_responsibilities": [
+      "Program manage and help lead development for software stack within Perception, Planning, Localization, System Safety, Simulation and Remote Assistance",
+      "Drive completion of autonomy features from requirements or engineering concept to validated public roads driving",
+      "Work with leaders and engineers across Autonomy, Software, Product, QA, and Ops to plan, track, follow up and resolve issues",
+      "Interface with autonomy teams, software, safety, and operations teams on a daily basis to drive autonomy stack capabilities forward",
+      "Provide comprehensive program status to executive leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      193800,
+      285000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "autonomy",
+    "robotics",
+    "autonomous delivery robot",
+    "last-mile delivery",
+    "perception",
+    "planning",
+    "localization",
+    "simulation",
+    "system safety",
+    "remote assistance",
+    "technical program manager",
+    "cross-functional",
+    "software development life cycle",
+    "public roads validation"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and wide ($193,800–$285,000 base)",
+    "Remote role with travel flexibility rather than strict on-site requirement",
+    "Clear product surface: autonomous delivery robots at DoorDash Labs",
+    "Equity grants mentioned as part of compensation",
+    "Comprehensive benefits package described in detail",
+    "Explicit D&I commitments and encouragement for diverse candidates"
+  ],
+  "red_flags": [
+    "Travel requirement to 'different deployment areas' not quantified — could be significant",
+    "No nice-to-haves listed, making the bar feel rigid with limited flexibility",
+    "STEM degree explicitly required with no equivalent-experience clause, which is a hard filter",
+    "Visa sponsorship not mentioned, leaving work authorization unclear",
+    "Wide comp range ($193K–$285K) suggests significant uncertainty in leveling"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Staff' title, 8+ years requirement, and comp range)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)"
+    ],
+    "ambiguities": [
+      "The role is described as 'remote, with some amount of travel to our different deployment areas' — travel frequency and extent are not quantified, making fully-remote classification approximate.",
+      "Compensation range is stated as a national US range including Illinois and Colorado but is also noted as 'localized according to an employee's work location' — actual pay for a given location may differ significantly from the stated range."
+    ],
+    "validation_issues": [
+      "must_have program_management_tools: raw_text_from_jd not found in JD even after bullet/whitespace normalization"
+    ]
+  }
+}

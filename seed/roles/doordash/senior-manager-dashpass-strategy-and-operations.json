@@ -1,10 +1,10 @@
 {
   "company": "DoorDash",
   "role_title": "Senior Manager, DashPass Strategy & Operations",
-  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7590188",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7990133",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7590188",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7990133",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,46 +17,46 @@
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
-  "secondary_archetype": "General Manager / Subscription Business Lead",
+  "secondary_archetype": "Growth PM (subscription/marketplace growth)",
   "seniority": {
-    "level": "Senior Manager / Director (people manager, leading a team)",
+    "level": "Senior Manager / Director-adjacent IC or people manager",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
       "8+ years of relevant management experience",
-      "Responsible for hiring, developing, and scaling a team",
-      "Expected to engage with most senior leaders at DoorDash",
-      "Comp range $170K-$250K base, consistent with Senior Manager / Director"
+      "Experience building teams: recruiting, mentoring, and developing team members",
+      "Executive communication and managing up to most senior leaders",
+      "Comp range $170K-$250K base consistent with Senior Manager level at DoorDash"
     ]
   },
   "must_haves": [
     {
       "id": "years_management_experience",
-      "raw_text_from_jd": "8+ years of relevant management experience, ideally within a Marketplace or Subscription-focused business and/or founder experience",
+      "raw_text_from_jd": "You have 8+ years of relevant management experience, ideally within a Marketplace or Subscription-focused business and/or founder experience",
       "skill_type": "years_of_experience",
       "domain": "management",
       "minimum_value": 8,
       "unit": "years",
-      "qualifier": "relevant management",
+      "qualifier": "relevant management experience",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "marketplace",
-        "subscription"
+        "Marketplace",
+        "Subscription"
       ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "track_record_of_impact",
-      "raw_text_from_jd": "Track record of impact – you've been in the trenches and have a proven track record of driving significant, company-wide impact.",
+      "id": "zero_to_one_builder",
+      "raw_text_from_jd": "You're a builder. You have experience scaling products and initiatives from 0 to 1 and are eager to have end to end ownership",
       "skill_type": "outcome",
-      "domain": "strategy_and_operations",
+      "domain": "product_and_initiative_scaling",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -68,10 +68,25 @@
       "credentials_named": []
     },
     {
-      "id": "bias_to_action_agility",
-      "raw_text_from_jd": "Bias to action and agility – you move quickly and thrive in a fast-paced environment. No job is beneath you and you lead from the front.",
+      "id": "track_record_of_impact",
+      "raw_text_from_jd": "You have a track record of impact . You've been in the trenches and have a proven track record of driving significant, company-wide impact.",
+      "skill_type": "outcome",
+      "domain": "business_impact",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_to_action_fast_paced",
+      "raw_text_from_jd": "You have a bias to action. You move quickly and thrive in a fast-paced environment. No job is beneath you and you lead from the front.",
       "skill_type": "cultural_fit",
-      "domain": "team_culture",
+      "domain": "execution_culture",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -83,38 +98,8 @@
       "credentials_named": []
     },
     {
-      "id": "breakthrough_walls_mentality",
-      "raw_text_from_jd": "\"Breakthrough walls\" mentality – you are constantly pushing the envelope of what is possible and can figure out a way to make almost anything happen. You're a playmaker.",
-      "skill_type": "cultural_fit",
-      "domain": "team_culture",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "clarity_of_thought",
-      "raw_text_from_jd": "Clarity of thought – you can articulate a clear vision to cross-functional partners.",
-      "skill_type": "capability",
-      "domain": "executive_communication",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "executive_management_communication",
-      "raw_text_from_jd": "Skilled executive management and communication, especially at managing up and across DoorDash and going toe to toe with our most senior leaders.",
+      "id": "executive_communication",
+      "raw_text_from_jd": "You are skilled in executive management and communication, especially at managing up and across DoorDash and going toe to toe with our most senior leaders.",
       "skill_type": "capability",
       "domain": "executive_communication",
       "evidence_required": "work_history",
@@ -128,8 +113,23 @@
       "credentials_named": []
     },
     {
-      "id": "leadership_team_building",
-      "raw_text_from_jd": "Strong leadership and maturity to build (attract, hire, retain) and scale a world-class organization.",
+      "id": "ambiguity_tolerance",
+      "raw_text_from_jd": "You're unafraid of ambiguity. Rapid change and learning is exciting to you, and you thrive in ambiguous, startup environments.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "team_building",
+      "raw_text_from_jd": "You have demonstrated experience in building the team necessary to fulfill the strategy. Proactively involved in recruiting, mentoring, and developing team members.",
       "skill_type": "capability",
       "domain": "people_management",
       "evidence_required": "work_history",
@@ -143,42 +143,27 @@
       "credentials_named": []
     },
     {
-      "id": "ambiguity_prioritization",
-      "raw_text_from_jd": "Proven ability to create clarity and focus in complex and ambiguous problem spaces; prioritization and pragmatism.",
+      "id": "cross_functional_partnership",
+      "raw_text_from_jd": "Partner closely with cross-functional teams on product, engineering, data science and marketing",
       "skill_type": "capability",
-      "domain": "strategy_and_operations",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "experimentation_and_operations",
+      "raw_text_from_jd": "Experiment. You'll transform strategies into operational experiments that create measurable and actionable outcomes, informing your larger initiative implementation plans.",
+      "skill_type": "capability",
+      "domain": "experimentation_and_operations",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "recruiting_mentoring_developing",
-      "raw_text_from_jd": "Demonstrated experience in building the team necessary to fulfill the strategy. Proactively involved in recruiting, mentoring, and developing team members.",
-      "skill_type": "capability",
-      "domain": "people_management",
-      "evidence_required": "work_history",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "customer_experience_orientation",
-      "raw_text_from_jd": "Customer and experience orientation.",
-      "skill_type": "cultural_fit",
-      "domain": "customer_focus",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -191,18 +176,33 @@
   "nice_to_haves": [
     {
       "id": "marketplace_or_subscription_experience",
-      "raw_text_from_jd": "8+ years of relevant management experience, ideally within a Marketplace or Subscription-focused business and/or founder experience",
+      "raw_text_from_jd": "You have 8+ years of relevant management experience, ideally within a Marketplace or Subscription-focused business and/or founder experience",
       "skill_type": "domain_knowledge",
-      "domain": "marketplace_or_subscription",
+      "domain": "marketplace_or_subscription_business",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "marketplace",
-        "subscription"
+        "Marketplace",
+        "Subscription"
       ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "founder_experience",
+      "raw_text_from_jd": "You have 8+ years of relevant management experience, ideally within a Marketplace or Subscription-focused business and/or founder experience",
+      "skill_type": "domain_knowledge",
+      "domain": "entrepreneurship",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -211,29 +211,27 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "DashPass — DoorDash's global subscription program within the Marketplace team",
-    "business_model": "B2C subscription / marketplace, consumer-facing",
+    "surface": "DashPass — DoorDash's global subscription program; focus on new benefit incubation, user engagement and retention",
+    "business_model": "B2C subscription (DashPass) within marketplace / on-demand delivery platform",
     "primary_metrics_inferred": [
       "DashPass subscriber acquisition",
-      "Customer lifetime value / retention",
+      "Customer retention / engagement",
       "Subscription profitability",
-      "Customer experience quality"
+      "Benefit adoption and incremental GMV"
     ],
     "cross_functional_partners": [
-      "Marketing",
       "Product",
       "Engineering",
-      "Finance",
-      "Operations",
-      "Senior leadership"
+      "Data Science",
+      "Marketing"
     ],
     "core_responsibilities": [
-      "Drive DashPass' definition, strategy, and long-term vision",
-      "Lead customer acquisition initiatives",
-      "Increase customer value and profitability",
-      "Manage, develop, and hire a team",
-      "Partner closely with cross-functional teams",
-      "Communicate strategy and results to all audiences including management team"
+      "Lead strategy and execution for DashPass marketplace business",
+      "Own new benefit incubation to drive user engagement and retention",
+      "Drive 0 to 1 initiatives: experimentation, launch, and scaling of net new benefits",
+      "Transform strategies into operational experiments with measurable outcomes",
+      "Partner with cross-functional teams on product, engineering, data science, and marketing",
+      "Communicate strategy and results to all audiences including senior leadership"
     ]
   },
   "compensation": {
@@ -251,39 +249,44 @@
     "DashPass",
     "subscription",
     "marketplace",
+    "0 to 1",
+    "benefit incubation",
+    "user engagement",
+    "retention",
     "strategy and operations",
-    "customer acquisition",
-    "team leadership",
+    "experimentation",
     "executive communication",
-    "local commerce",
-    "consumer business",
-    "people management"
+    "cross-functional",
+    "local commerce"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($170K-$250K base) with equity on top",
-    "Clear ownership of a high-priority business unit (DashPass)",
-    "Explicit people management scope — role has meaningful organizational authority",
-    "DoorDash is a scaled, public company with a recognizable consumer product"
+    "Compensation range explicitly disclosed ($170K-$250K base)",
+    "High-visibility role owning a flagship product (DashPass) with clear scope",
+    "End-to-end ownership of 0-to-1 initiatives described clearly",
+    "Equity grants included in compensation package",
+    "Comprehensive benefits package disclosed (parental leave, 401k match, wellness)"
   ],
   "red_flags": [
-    "Location type is not specified in the JD body — remote eligibility and office expectations are unclear",
-    "Visa sponsorship status not mentioned anywhere in the JD",
-    "Several requirements are vague cultural/behavioral attributes ('breakthrough walls mentality', 'clarity of thought') with no concrete operationalization, making it hard to self-assess fit",
-    "Wide comp band ($80K spread) suggests significant variance based on seniority tier or location, but the JD does not clarify which level within 'Senior Manager' this targets"
+    "Location/work arrangement is not stated in the JD body — unclear if remote, hybrid, or onsite",
+    "Visa sponsorship policy not stated",
+    "The JD references NYC-specific AEDT (Covey) tool disclosures but does not clarify if the role is NYC-based or remote-NYC-associated, creating location ambiguity",
+    "Many requirements are written as cultural/personality traits ('breakthrough walls mentality', 'bias to action') rather than concrete, verifiable skills — assessment criteria may be subjective"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range + 8+ years management + people management signals)",
-      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
-      "scope.business_model (inferred from product description)",
-      "scope.cross_functional_partners (partially inferred from context)",
-      "location.type set to 'unclear' — no explicit location or remote policy stated in JD body",
-      "location.visa_sponsorship set to 'unclear' — not mentioned"
+      "seniority.level (inferred from years requirement, comp range, and people management signals)",
+      "seniority.manages_people (inferred from 'building the team' and 'recruiting, mentoring, developing team members')",
+      "scope.business_model (inferred from DashPass subscription product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type (not stated; marked unclear)",
+      "location.remote_us_eligible (not stated)",
+      "location.visa_sponsorship (not stated)"
     ],
     "ambiguities": [
-      "JD mentions 'Remote Jobs Associated With Office in NYC' in the legal notice, suggesting some remote eligibility may exist, but the role location is not explicitly stated as remote, hybrid, or onsite anywhere in the JD body.",
-      "The 8+ years requirement says 'ideally within a Marketplace or Subscription-focused business and/or founder experience' — the word 'ideally' makes marketplace/subscription experience a nice-to-have, but the 8+ years management experience itself is treated as a hard requirement. Both interpretations are captured."
+      "Location is entirely unstated in the role body. The JD includes NYC AEDT (Covey) notices for 'NYC or Remote Jobs Associated With Office in NYC Only', which could imply the role is NYC-based or NYC-remote-associated, but this is not confirmed.",
+      "The years requirement ('8+ years of relevant management experience') is in a section labeled 'We're excited about you because…' alongside softer traits — treated as hard given the unconditional phrasing and specificity of the year threshold.",
+      "Marketplace/Subscription background and founder experience are framed as 'ideally' which signals nice-to-have, but the broader 8+ years clause is hard — extracted as two separate items accordingly."
     ]
   }
 }

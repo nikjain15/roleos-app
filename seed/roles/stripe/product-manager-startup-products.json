@@ -4,7 +4,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7901987",
   "ats_provider": "greenhouse",
   "ats_job_id": "7901987",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -16,8 +16,8 @@
     "visa_sponsorship": "unclear"
   },
   "archetype": "Generalist PM",
-  "archetype_confidence": "medium",
-  "secondary_archetype": "Technical PM (API/infrastructure products, early-stage startup context)",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 6,
@@ -25,8 +25,8 @@
     "manages_people": false,
     "level_signals": [
       "6+ years of product management or product-focused founder experience",
-      "Expected to set product strategy, own business metrics, and represent externally with VCs/partners",
-      "Drive execution, own delivery of product and business metrics"
+      "Expected to own product strategy, roadmap, and business metrics",
+      "External representation with VCs, accelerators, and partners"
     ]
   },
   "must_haves": [
@@ -52,9 +52,9 @@
       "id": "shipped_user_or_api_products",
       "raw_text_from_jd": "Shipped user-facing or API products, built on complex technical systems running at scale.",
       "skill_type": "outcome",
-      "domain": "product_development",
+      "domain": "product_delivery",
       "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "maybe",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
@@ -68,13 +68,15 @@
     {
       "id": "ai_enthusiast_experimenter",
       "raw_text_from_jd": "An AI enthusiast and experimenter. Someone who is willing to upend their workflows for something that works 2x better.",
-      "skill_type": "domain_knowledge",
-      "domain": "artificial_intelligence",
+      "skill_type": "cultural_fit",
+      "domain": "ai_adoption",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [],
+      "technologies_named": [
+        "AI"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -90,7 +92,9 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [],
+      "industries_named": [
+        "startups"
+      ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -111,12 +115,12 @@
       "credentials_named": []
     },
     {
-      "id": "strong_communication",
+      "id": "communication_skills",
       "raw_text_from_jd": "Strong written and verbal communication skills with a talent for precise articulations of customer problems.",
       "skill_type": "capability",
       "domain": "communication",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -130,7 +134,7 @@
       "raw_text_from_jd": "Adept with data and confident in how best to measure user impact.",
       "skill_type": "capability",
       "domain": "data_analysis",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -143,16 +147,18 @@
   ],
   "nice_to_haves": [
     {
-      "id": "founder_background",
+      "id": "founder_or_early_stage_experience",
       "raw_text_from_jd": "Founder background, or experience in a very early stage company environment.",
       "skill_type": "domain_knowledge",
-      "domain": "entrepreneurship",
+      "domain": "startup_founding",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [],
+      "industries_named": [
+        "startups"
+      ],
       "geographies_named": [],
       "employer_types_named": [
         "early stage company"
@@ -163,8 +169,7 @@
       "id": "software_engineering_or_cs_degree",
       "raw_text_from_jd": "Software engineering experience, a computer science or engineering degree, or similar technical experience.",
       "skill_type": "credential",
-      "domain": "software_engineering",
-      "accepts_equivalent_experience": true,
+      "domain": "technical_background",
       "evidence_required": "degree_or_work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -182,29 +187,29 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Stripe Atlas and other startup products helping founders form companies, raise capital, execute legal agreements, access tools, and automate operations",
-    "business_model": "B2B / B2B2C fintech platform — startup-focused product within Stripe's financial infrastructure",
+    "surface": "Stripe Atlas and other startup products helping founders start and run a company globally",
+    "business_model": "B2B, serving early-stage startup founders and companies",
     "primary_metrics_inferred": [
-      "Number of startups formed / reaching product-market fit",
-      "Atlas user activation and retention",
-      "Product and business metrics for startup products"
+      "Product and business metrics for Atlas",
+      "User experience quality (founders reaching product-market fit)",
+      "Partnership and go-to-market success"
     ],
     "cross_functional_partners": [
       "Engineering",
       "Design",
       "Product Marketing",
       "Support",
-      "External partners (VCs, accelerators, founders)"
+      "External partners (VCs, accelerators)"
     ],
     "core_responsibilities": [
       "Deeply understand the needs of startup founders and learn how they use Atlas and other startup products",
-      "Stay at the front of the ever changing technology landscape",
-      "Drive product development in collaboration with engineering counterparts",
-      "Craft product experiences that are both simple and powerful",
-      "Contribute to product strategy and own delivery of product and business metrics",
-      "Work collaboratively with internal stakeholders and deliver clear communication",
+      "Stay at the front of the ever changing technology landscape, ensuring we are building where founders are and with tools they want to use",
+      "Drive product development in collaboration with engineering counterparts by setting the pace, prioritizing ruthlessly, and unblocking execution",
+      "Craft product experiences that are both simple and powerful, with surprisingly great details",
+      "Contribute to our product strategy and own delivery of product and business metrics",
+      "Work collaboratively with internal stakeholders and deliver clear communication on statuses, priorities, and landed impact",
       "Represent Atlas externally with founders, venture capitalists, accelerators, and partners",
-      "Develop and maintain metrics to help understand product performance",
+      "Develop and maintain metrics to help us understand product performance",
       "Ensure that every user has a great experience with Atlas"
     ]
   },
@@ -220,38 +225,42 @@
     "Stripe Atlas",
     "startup products",
     "founders",
-    "API products",
+    "product management",
     "AI",
-    "product strategy",
-    "product-market fit",
+    "API products",
     "go-to-market",
-    "technical systems at scale",
-    "early-stage startups"
+    "product strategy",
+    "venture capitalists",
+    "accelerators",
+    "product-market fit",
+    "data"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear product surface with concrete product name (Stripe Atlas) and real user base",
-    "Mission-driven team with explicit focus on helping founders globally",
-    "High ownership and high-agency team culture explicitly stated",
-    "Encourages candidates who meet only minimum requirements to apply",
-    "External-facing role with exposure to VCs, accelerators, and startup ecosystem"
+    "Clear product surface and mission — Stripe Atlas with explicit founder-focused impact",
+    "JD encourages application if minimum requirements are met even without preferred qualifications",
+    "High-agency, high-ownership culture described explicitly",
+    "External-facing role with meaningful ecosystem partnerships (VCs, accelerators)",
+    "Strong company brand and mission ('increase the GDP of the internet')"
   ],
   "red_flags": [
-    "No location information provided — work arrangement (remote/hybrid/onsite), cities, and visa sponsorship are all unclear",
+    "No location or remote eligibility stated — unclear where this role is based",
     "No compensation range disclosed",
-    "Posting dates not available — unclear how fresh the role is"
+    "Visa sponsorship and work authorization not mentioned",
+    "Posting first seen and last updated dates unavailable — unclear how fresh this role is"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 6+ years requirement and scope of responsibilities; not explicitly labeled)",
-      "scope.business_model (inferred from product description and Stripe's known business)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
-      "location.type (not stated anywhere in JD; set to 'unclear')",
-      "compensation (not mentioned at all)"
+      "seniority.level (inferred from 6+ years requirement and scope of responsibilities)",
+      "scope.business_model (inferred from product description targeting startup founders)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type (marked unclear; no location information provided in JD)",
+      "compensation.equity_mentioned (false; no mention in JD)"
     ],
     "ambiguities": [
-      "'6+ years of product management or product-focused founder experience' — 'product-focused founder' is somewhat ambiguous; treated as equivalent pathway to PM experience rather than a separate credential requirement",
-      "Location, remote eligibility, and visa sponsorship are entirely absent from the JD body; could not be inferred"
+      "The JD does not specify a location, remote eligibility, or office policy — location.type is set to 'unclear'",
+      "'6+ years of product management or product-focused founder experience' — the 'or founder experience' clause makes this hard to classify purely as PM tenure; treated as a single combined requirement",
+      "AI enthusiast requirement appears under minimum requirements but reads more like a cultural fit / disposition than a hard measurable skill — classified as hard per JD section placement"
     ]
   }
 }

@@ -1,0 +1,381 @@
+{
+  "company": "Notion",
+  "role_title": "Customer Success Strategy & Operations Manager",
+  "url": "https://jobs.ashbyhq.com/Notion/cfacf665-602d-43b2-9d92-7dfda3bb19a2",
+  "ats_provider": "ashby",
+  "ats_job_id": "cfacf665-602d-43b2-9d92-7dfda3bb19a2",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Mondays, Tuesdays and Thursdays (Anchor Days); certain teams may require additional in-office workdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Customer Success Operations",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years working in Customer Operations and/or Strategy",
+      "Senior presence -- can convey complex information to executives clearly and concisely",
+      "Ownership -- high ownership mentality demonstrated by developing projects of >6-12 months length",
+      "Base salary range $205,000 - $230,000 consistent with Senior IC in San Francisco"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_cs_ops_strategy",
+      "raw_text_from_jd": "5+ years working in Customer Operations and/or Strategy in a high growth SaaS model",
+      "skill_type": "years_of_experience",
+      "domain": "customer_operations_strategy",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_skills_modeling",
+      "raw_text_from_jd": "Strong analytical skills -- can model any operational question full cycle (develop assumptions and output)",
+      "skill_type": "capability",
+      "domain": "analytics_and_modeling",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native_workflows",
+      "raw_text_from_jd": "AI-native approach to building workflows, insights, and end-to-end systems between humans & agents",
+      "skill_type": "capability",
+      "domain": "ai_workflows",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI agents",
+        "AI workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_eq_stakeholder_management",
+      "raw_text_from_jd": "High EQ -- works well with stakeholders, gains trust, enjoys working with people",
+      "skill_type": "cultural_fit",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "senior_executive_presence",
+      "raw_text_from_jd": "Senior presence -- can convey complex information to executives clearly and concisely; can resolve tradeoffs. Effective communicator across levels and audiences",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "first_principles_problem_solving",
+      "raw_text_from_jd": "First principles problem solver -- dimensionalizes problems, demonstrates history of lateral thinking",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_building_from_scratch",
+      "raw_text_from_jd": "Hands on -- extensive experience and interest in building from scratch",
+      "skill_type": "capability",
+      "domain": "operational_build_out",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mentality",
+      "raw_text_from_jd": "Ownership -- high ownership mentality demonstrated by developing projects of >6-12 months length",
+      "skill_type": "outcome",
+      "domain": "project_ownership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "notion_power_user_or_desire",
+      "raw_text_from_jd": "Notion power user or desire to learn -- prior Notion experience is not required, but you have the ability and desire to become a pro",
+      "skill_type": "tool_proficiency",
+      "domain": "productivity_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Notion"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "BA / BS required",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "BA",
+        "BS"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "customer_facing_account_experience",
+      "raw_text_from_jd": "Customer-facing experience on an account team (Onboarding, CS, Account Management, etc.)",
+      "skill_type": "domain_knowledge",
+      "domain": "customer_success_account_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_analytics_sql_python",
+      "raw_text_from_jd": "Experience with statistical methods, SQL, Tableau, Python and/or other advanced analytics and BI/Dashboarding",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Tableau"
+      ],
+      "technologies_named": [
+        "SQL",
+        "Python",
+        "statistical methods"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "zendesk_gainsight_salesforce_experience",
+      "raw_text_from_jd": "Experience using Zendesk, Gainsight and Salesforce",
+      "skill_type": "tool_proficiency",
+      "domain": "cs_and_crm_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Zendesk",
+        "Gainsight",
+        "Salesforce"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "notion_experience",
+      "raw_text_from_jd": "Experience using Notion",
+      "skill_type": "tool_proficiency",
+      "domain": "productivity_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Notion"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "progressive_career_growth",
+      "raw_text_from_jd": "History of promotions or progressive responsibilities at work",
+      "skill_type": "outcome",
+      "domain": "career_trajectory",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Customer Success team operations, covering onboarding, adoption, retention, and growth phases of the customer journey globally",
+    "business_model": "B2B SaaS (PLG + enterprise), collaborative AI workspace",
+    "primary_metrics_inferred": [
+      "Customer retention and renewal rates",
+      "Net Revenue Retention (NRR)",
+      "CS team productivity and capacity utilization",
+      "Customer health scores and leading risk indicators",
+      "Segment performance reporting"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Marketing",
+      "Customer Support",
+      "Professional Services",
+      "RevOps",
+      "GTM Leadership",
+      "BizTech",
+      "Data",
+      "Finance"
+    ],
+    "core_responsibilities": [
+      "Design and optimize the end-to-end customer journey including milestones, success metrics, and playbooks",
+      "Develop analyses that help design, set and measure strategy for global Customer Success and Customer Experience",
+      "Design, build and manage resource allocation model globally by segment",
+      "Develop and mature a rigorous, consistent, predictable operating rhythm and KPI reviews",
+      "Design and maintain core processes (attainment reporting, forecast vs. actuals, At Risk Account Reviews)",
+      "Partner with Data and BizTech to streamline daily team operations and build AI workflows"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      205000,
+      230000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned generically alongside cash compensation and benefits",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Customer Success Operations",
+    "Strategy & Operations",
+    "SaaS",
+    "customer journey",
+    "AI-native",
+    "Gainsight",
+    "Salesforce",
+    "Zendesk",
+    "Tableau",
+    "RevOps",
+    "segmentation",
+    "operating cadence",
+    "KPI",
+    "cross-functional",
+    "GTM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($205K-$230K base for SF)",
+    "Equity and benefits mentioned alongside cash compensation",
+    "Clear scope of ownership and responsibilities described in detail",
+    "Encourages applications from candidates who don't meet every bullet",
+    "Role sits at the strategic core of a high-growth, well-known SaaS company"
+  ],
+  "red_flags": [
+    "Hybrid policy requires in-office presence Monday, Tuesday, Thursday every week — significant time commitment and SF-only",
+    "Role title says 'Manager' but no people management signals are present — seniority level may be ambiguous",
+    "Visa sponsorship is not addressed in the JD",
+    "BA/BS listed as 'required' with no equivalency clause, which may unnecessarily filter candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, scope, and 'senior presence' language)",
+      "seniority.manages_people (not stated; inferred as false based on absence of any people management language)",
+      "scope.team_size_estimate (not stated)",
+      "scope.business_model (inferred from product description and customer references)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.remote_us_eligible (inferred as false from anchor day policy and #LI-Onsite tag)",
+      "compensation.location_pay_differential (inferred; JD states range is 'for roles based in San Francisco')"
+    ],
+    "ambiguities": [
+      "Role title uses 'Manager' but the JD body refers to the role as 'CS Operations Lead' — these may not be equivalent and exact seniority/people-management expectations are unclear.",
+      "Visa sponsorship is not mentioned anywhere in the JD; treated as 'unclear'.",
+      "The 'BA / BS required' line has no 'or equivalent experience' caveat, unlike other requirements — treated as hard, but the general encouragement to apply may imply some flexibility."
+    ]
+  }
+}

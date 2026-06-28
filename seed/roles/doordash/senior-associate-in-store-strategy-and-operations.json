@@ -1,10 +1,10 @@
 {
   "company": "DoorDash",
-  "role_title": "Senior Associate, In-Store - Strategy & Operations",
-  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7819679",
+  "role_title": "Senior Associate, In-Store, Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7980668",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7819679",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7980668",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,61 +17,65 @@
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
-  "secondary_archetype": "Technical Program Manager",
+  "secondary_archetype": "Growth PM-adjacent (GTM strategy, merchant ops)",
   "seniority": {
-    "level": "Mid-Senior IC",
-    "years_required_min": 3,
-    "years_required_max": 4,
+    "level": "Mid-level / Associate (2+ years)",
+    "years_required_min": 2,
+    "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "3-4 years of experience in project management, consulting, strategy & operations",
-      "Base range $87K-$128K nationally",
-      "Senior Associate title with cross-functional influence but no direct reports mentioned"
+      "2+ years of experience required",
+      "Title is 'Senior Associate'",
+      "Comp range $87K-$128K base consistent with mid-level individual contributor",
+      "Reports to S&O lead"
     ]
   },
   "must_haves": [
     {
-      "id": "years_strategy_ops",
-      "raw_text_from_jd": "3-4 years of experience in project management, consulting, strategy & operations, preferably within a high-growth technology, SaaS, or hospitality environment.",
+      "id": "years_experience_relevant_field",
+      "raw_text_from_jd": "You have 2+ years of experience in management consulting / tech / design / investment banking / corporate strategy / business development / business operations or related experience",
       "skill_type": "years_of_experience",
-      "domain": "strategy_and_operations",
-      "minimum_value": 3,
+      "domain": "strategy_operations_or_related",
+      "minimum_value": 2,
       "unit": "years",
-      "qualifier": "project management, consulting, or strategy & operations",
+      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "high-growth technology",
-        "SaaS",
-        "hospitality"
+        "management consulting",
+        "investment banking"
       ],
       "geographies_named": [],
-      "employer_types_named": [],
+      "employer_types_named": [
+        "management consulting",
+        "tech",
+        "investment banking"
+      ],
       "credentials_named": []
     },
     {
-      "id": "autonomous_ownership",
-      "raw_text_from_jd": "You take ownership of projects, work autonomously, and demonstrate initiative to drive change. You are skilled at identifying issues, assessing risks, and finding creative, pragmatic solutions. You complete day-to-day tasks without instruction and require only general guidance on new or more complex types of work.",
-      "skill_type": "cultural_fit",
-      "domain": "ownership_and_initiative",
-      "evidence_required": "work_history",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "project_management_track_record",
-      "raw_text_from_jd": "Proven track record of managing initiatives of medium complexity that require a high level of accuracy and dependability. You can manage multiple priorities simultaneously in a fast-paced environment.",
+      "id": "track_record_tangible_outcomes",
+      "raw_text_from_jd": "You have an established track record of achieving tangible outcomes and moving needles",
       "skill_type": "outcome",
-      "domain": "project_management",
+      "domain": "business_impact",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_leadership_cross_functional",
+      "raw_text_from_jd": "You have experience leading projects, working in a team, and motivating people at all levels across a variety of job responsibilities",
+      "skill_type": "capability",
+      "domain": "project_leadership",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -83,11 +87,11 @@
       "credentials_named": []
     },
     {
-      "id": "stakeholder_influence",
-      "raw_text_from_jd": "You come to meetings with a clear point of view and feel comfortable pushing back and asking hard questions. You are personable, capable of influencing others, and skilled at bringing people together to drive results.",
+      "id": "strategy_to_execution",
+      "raw_text_from_jd": "You can translate high-level goals into applicable plans & action items",
       "skill_type": "capability",
-      "domain": "stakeholder_management",
-      "evidence_required": "work_history",
+      "domain": "strategic_planning",
+      "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
@@ -98,154 +102,55 @@
       "credentials_named": []
     },
     {
-      "id": "data_analysis",
-      "raw_text_from_jd": "An analytical mindset with proven experience in data analysis and financial modeling. You can translate raw data into actionable insights and strategic recommendations.",
-      "skill_type": "capability",
-      "domain": "data_analysis",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "financial_modeling",
-      "raw_text_from_jd": "Financial Modeling Experience: The ability to create financial models to evaluate potential opportunities.",
-      "skill_type": "capability",
-      "domain": "financial_modeling",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "communication_and_stakeholder_management",
-      "raw_text_from_jd": "Excellent communication and stakeholder management skills, with the ability to influence and align cross-functional teams without direct authority.",
-      "skill_type": "capability",
-      "domain": "communication",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "spreadsheet_and_analytics_tools",
-      "raw_text_from_jd": "You have strong data analysis skills and high spreadsheet comfort. Experience with Salesforce, Looker, and Gong is highly preferred.",
+      "id": "excel_proficiency",
+      "raw_text_from_jd": "You have excellent Excel skills (can perform complex functions)",
       "skill_type": "tool_proficiency",
-      "domain": "data_analytics",
+      "domain": "data_analysis",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [
-        "Salesforce",
-        "Looker",
-        "Gong"
+        "Excel"
       ],
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
-    },
-    {
-      "id": "customer_centricity",
-      "raw_text_from_jd": "Customer Centric: Deep sense of empathy for user challenges and pain points.",
-      "skill_type": "cultural_fit",
-      "domain": "customer_empathy",
-      "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "bachelors_degree",
-      "raw_text_from_jd": "You have a Bachelor's Degree in a related field; Masters Degree preferred but not required.",
-      "skill_type": "credential",
-      "domain": "education",
-      "minimum_value": "bachelors",
-      "accepts_equivalent_experience": false,
-      "evidence_required": "verifiable_credential",
-      "bridgeable": "n/a",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": [
-        "Bachelor's Degree"
-      ]
     }
   ],
   "nice_to_haves": [
     {
-      "id": "hospitality_tech_experience",
-      "raw_text_from_jd": "Industry Enthusiast: Experience in hospitality tech, a consumer-facing app, or a B2B2C environment is a nice-to-have.",
+      "id": "startup_experience",
+      "raw_text_from_jd": "high-growth or early-stage startup experience strongly preferred",
       "skill_type": "domain_knowledge",
-      "domain": "hospitality_tech",
+      "domain": "startup_operations",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [
-        "hospitality tech",
-        "B2B2C"
-      ],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "masters_degree",
-      "raw_text_from_jd": "You have a Bachelor's Degree in a related field; Masters Degree preferred but not required.",
-      "skill_type": "credential",
-      "domain": "education",
-      "evidence_required": "verifiable_credential",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": [
-        "Masters Degree"
-      ]
+      "employer_types_named": [
+        "high-growth startup",
+        "early-stage startup"
+      ],
+      "credentials_named": []
     },
     {
-      "id": "saas_or_hospitality_background",
-      "raw_text_from_jd": "3-4 years of experience in project management, consulting, strategy & operations, preferably within a high-growth technology, SaaS, or hospitality environment.",
-      "skill_type": "domain_knowledge",
-      "domain": "saas_or_hospitality",
-      "evidence_required": "work_history",
+      "id": "sql_knowledge",
+      "raw_text_from_jd": "SQL knowledge a bonus",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [
-        "SaaS",
-        "hospitality"
+      "tools_named": [
+        "SQL"
       ],
+      "technologies_named": [],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -254,31 +159,31 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "In-Store business line (SevenRooms); new add-on product commercialization (Events, Lite) from MVP through global GTM launch",
-    "business_model": "B2B SaaS (hospitality tech / restaurant management platform)",
+    "surface": "Going Out product — driving DoorDash customers into physical partner stores; includes in-store discounts, VIP experiences, reservations, payments",
+    "business_model": "B2B2C marketplace; merchant partnerships driving in-store consumer traffic",
     "primary_metrics_inferred": [
-      "Sustainable revenue growth",
-      "Product adoption rates",
-      "Sales pilot conversion",
-      "Global GTM launch success",
-      "KPIs and dashboards tracking competitive dynamics"
+      "Merchant volume and value",
+      "Merchant activation and onboarding rates",
+      "Customer engagement with Going Out product",
+      "In-store sales driven to merchant partners"
     ],
     "cross_functional_partners": [
       "Product",
+      "Engineering",
+      "Operations",
       "Sales",
-      "Marketing",
-      "Legal",
-      "Leadership / Executives"
+      "Marketing"
     ],
     "core_responsibilities": [
-      "Own end-to-end commercialization of new add-on products globally (MVP to full GTM launch)",
-      "Act as cross-functional 'train conductor' across Product, Sales, Marketing, and Legal",
-      "Size market opportunities and conduct competitive research",
-      "Dive deep into data to uncover trends, analyze product adoption, and monitor competitive dynamics",
-      "Develop dashboards, KPIs, and reports translating data into actionable recommendations",
-      "Translate ambiguous project scopes into structured, actionable plans and communicate to senior leadership",
-      "Anticipate and proactively manage risks and obstacles to strategic projects",
-      "Manage legal terms, product naming, FAQs, sales positioning, pricing and packaging strategies"
+      "Own merchant go-to-market strategy including sales GTM",
+      "Drive in-product reporting and insights",
+      "Develop strategies to drive merchant volume and value",
+      "Own merchant sales and onboarding and merchant experience",
+      "Design and execute experiments from activation to optimization",
+      "Execute marketing and comms plans to grow customer base",
+      "Build models to evaluate success and set new goals",
+      "Conduct regular customer research",
+      "Collaborate with Product, Engineering, Operations, and Sales to scale Going Out"
     ]
   },
   "compensation": {
@@ -293,53 +198,48 @@
     "source": "stated"
   },
   "top_keywords": [
+    "Going Out",
     "Strategy & Operations",
-    "In-Store",
-    "SevenRooms",
-    "0-to-1 product commercialization",
-    "GTM",
-    "B2B SaaS",
-    "cross-functional",
-    "data-driven",
-    "financial modeling",
-    "competitive research",
-    "pricing and packaging",
-    "MVP",
-    "Salesforce",
-    "Looker",
-    "Gong"
+    "merchant GTM",
+    "in-store",
+    "go-to-market",
+    "experiments",
+    "merchant onboarding",
+    "Excel",
+    "SQL",
+    "DoorDash",
+    "startup within big company",
+    "in-product reporting"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($87K-$128K base nationally)",
-    "Equity grants explicitly mentioned",
-    "Comprehensive benefits package detailed (401k, parental leave, healthcare)",
-    "High executive visibility role with clear scope and ownership",
-    "Clear product surface (SevenRooms In-Store) rather than vague mandate",
-    "Encourages diverse candidates to apply"
+    "Compensation range disclosed ($87K-$128K base)",
+    "Equity grants mentioned",
+    "Clear ownership of high-visibility new product ('Going Out')",
+    "Explicitly described as startup-like culture within a large company — good signal for autonomy",
+    "Position fill date disclosed (8/7/2026), suggesting active and time-bound hiring",
+    "Comprehensive benefits package described including 401(k), parental leave, wellness"
   ],
   "red_flags": [
-    "Work location type not specified — unclear if remote, hybrid, or onsite",
-    "Visa sponsorship policy not stated",
-    "Pay range is broad ($87K-$128K), suggesting significant location-based variation without clarity on how it applies",
-    "JD lists 'Product' twice in the cross-functional partners list ('Product, Sales, Marketing, Product, Sales, and Legal') — minor inconsistency suggesting JD may not have been carefully proofread",
-    "Role requires managing global GTM launches with regional nuance but no mention of international experience as a requirement"
+    "Work location/remote policy is not stated in the JD — unclear if remote, hybrid, or onsite",
+    "Visa sponsorship not mentioned",
+    "Role scope is broad (GTM, reporting, experiments, marketing, customer research) which may indicate under-staffed team",
+    "Pay range is wide ($41K spread) which may indicate flexibility but also ambiguity in leveling"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title, years, and comp range)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
-      "scope.business_model (inferred from SevenRooms context and B2B SaaS mention in JD)",
-      "location.type (not stated; marked unclear)",
-      "location.visa_sponsorship (not stated; marked unclear)"
+      "location.type (not stated in JD body; marked as 'unclear')",
+      "location.remote_us_eligible (not stated)",
+      "location.visa_sponsorship (not stated)",
+      "seniority.level (inferred from title 'Senior Associate', years requirement, and comp range)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated in JD)",
+      "compensation.location_pay_differential (inferred from 'Base salary is localized according to an employee's work location')"
     ],
     "ambiguities": [
-      "Work location is not specified anywhere in the JD body — could be onsite, hybrid, or remote; marked as 'unclear'",
-      "The 'Salesforce, Looker, and Gong' requirement is described as 'highly preferred' which could be either hard or soft; treated as hard given the phrasing 'highly preferred' in an otherwise unconditional bullet",
-      "The SaaS/hospitality industry preference appears both in the hard experience bullet (3-4 years 'preferably within') and is partially captured as a nice-to-have; dual-captured to reflect the JD's mixed signaling"
-    ],
-    "validation_issues": [
-      "must_have autonomous_ownership: raw_text_from_jd not found in JD even after bullet/whitespace normalization"
+      "No work location type specified (no mention of remote, hybrid, or onsite in the JD body); location.type set to 'unclear'",
+      "The JD references San Francisco Fair Chance Ordinance and Los Angeles Fair Chance Initiative suggesting offices in those cities, but no specific city is named as the role's location",
+      "The national pay range includes Illinois and Colorado callouts but does not clarify if the role is open in all US locations"
     ]
   }
 }

@@ -1,34 +1,34 @@
 {
   "company": "Affirm",
   "role_title": "Staff Technical Program Manager",
-  "url": "https://job-boards.greenhouse.io/affirm/jobs/7728591003",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7728589003",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7728591003",
-  "fetched_at": "2026-05-25",
+  "ats_job_id": "7728589003",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "remote-us",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "occasionally for proximal roles",
-    "work_auth": "unclear",
+    "office_time_required": "occasionally required to work out of assigned Affirm office for proximal roles",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Platform/Infrastructure TPM with FinTech focus",
+  "secondary_archetype": null,
   "seniority": {
-    "level": "Staff IC (senior individual contributor)",
+    "level": "Staff (Senior IC)",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "8 years of proven experience managing technical programs",
-      "Staff-level title",
-      "Comp range $150K-$200K CAD base",
+      "Staff title in role name",
       "Actively mentors and levels up team members",
-      "Leads complex, multi-disciplinary, high-visibility programs"
+      "Pay Grade - N, Equity Grade - 10",
+      "Base pay range $195K-$255K (CA/WA/NY/NJ/CT) consistent with Staff IC"
     ]
   },
   "must_haves": [
@@ -49,7 +49,7 @@
       "employer_types_named": [],
       "credentials_named": [
         "Bachelor's degree in Computer Science",
-        "Electrical Engineering"
+        "Bachelor's degree in Electrical Engineering"
       ]
     },
     {
@@ -102,10 +102,10 @@
       "credentials_named": []
     },
     {
-      "id": "detail_oriented_shipping",
+      "id": "detail_and_shipping",
       "raw_text_from_jd": "Obsesses over getting the details right but knows how to ship on time.",
-      "skill_type": "cultural_fit",
-      "domain": "execution_discipline",
+      "skill_type": "capability",
+      "domain": "execution",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "yes",
       "severity": "hard",
@@ -117,10 +117,10 @@
       "credentials_named": []
     },
     {
-      "id": "remote_friendly_culture",
+      "id": "strategic_programs_remote_culture",
       "raw_text_from_jd": "Working and driving strategic programs and building a remote friendly culture.",
       "skill_type": "capability",
-      "domain": "remote_program_management",
+      "domain": "program_management",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -135,7 +135,7 @@
       "id": "mentorship",
       "raw_text_from_jd": "Actively mentors and levels up team members.",
       "skill_type": "capability",
-      "domain": "people_development",
+      "domain": "mentorship",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -147,7 +147,7 @@
       "credentials_named": []
     },
     {
-      "id": "complex_distributed_systems",
+      "id": "complex_distributed_systems_track_record",
       "raw_text_from_jd": "Track record of successfully driving complex large technology applications and geographically distributed backend systems.",
       "skill_type": "outcome",
       "domain": "distributed_systems_program_management",
@@ -156,7 +156,7 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
-        "geographically distributed backend systems"
+        "distributed backend systems"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -164,7 +164,7 @@
       "credentials_named": []
     },
     {
-      "id": "stakeholder_management",
+      "id": "stakeholder_management_track_record",
       "raw_text_from_jd": "Track record of strong stakeholder management with Engineering, Product, Design, Analytics, and other cross-functional teams.",
       "skill_type": "outcome",
       "domain": "stakeholder_management",
@@ -181,7 +181,7 @@
   ],
   "nice_to_haves": [
     {
-      "id": "fintech_payments_commerce",
+      "id": "fintech_payments_experience",
       "raw_text_from_jd": "Prior experience in FinTech, Payments or Commerce is a plus.",
       "skill_type": "domain_knowledge",
       "domain": "fintech_payments_commerce",
@@ -203,13 +203,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Consumer product suite and platform capabilities across engineering and product teams",
-    "business_model": "B2C and B2B BNPL / consumer credit platform",
+    "surface": "Consumer product suite and platform capabilities across Engineering and Product teams",
+    "business_model": "B2C and B2B buy-now-pay-later consumer credit",
     "primary_metrics_inferred": [
       "Program delivery on schedule",
-      "Risk mitigation and dependency resolution",
-      "Cross-functional alignment and stakeholder satisfaction",
-      "Consumer product suite expansion"
+      "Risk identification and mitigation",
+      "Cross-functional alignment and stakeholder satisfaction"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -218,23 +217,21 @@
       "Analytics"
     ],
     "core_responsibilities": [
-      "Drive complex, multi-disciplinary, and highly visible technical programs in service of expanding the consumer product suite and platform capabilities",
+      "Drive complex, multi-disciplinary, and highly visible technical programs in service of expanding consumer product suite and platform capabilities",
       "Coordinate across engineering teams and non-engineering stakeholders through the full program lifecycle to plan requirements, identify risks, manage program schedules, and communicate clearly with cross-functional partners",
       "Understand technical implementation at the architecture level and propose technical alternatives, ask questions that clarify priorities and push the team to be effective, and develop domain and technical knowledge",
-      "Partner with Product and Engineering to plan requirements, identify risks, manage program schedules, and communicate clearly with cross-functional partners",
-      "Track progress, resolve dependencies, evaluate risks, and communicate status to upper management and program stakeholders"
+      "Partner with Product and Engineering to plan requirements, identify risks, manage program schedules, and communicate clearly with cross-functional partners across the company",
+      "Track progress, resolve dependencies, evaluate risks, and communicate status to upper management and program stakeholders, and engage the program teams to achieve goals"
     ]
   },
   "compensation": {
-    "base_range_usd": null,
-    "base_range_local": [
-      150000,
-      200000
+    "base_range_usd": [
+      195000,
+      255000
     ],
-    "base_range_currency": "CAD",
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "Equity Grade 5; ESPP (employee stock purchase plan allowing shares at a discount); equity rewards",
+    "equity_form": "Equity Grade - 10; ESPP (employee stock purchase plan enabling you to buy shares of Affirm at a discount); equity rewards mentioned as part of total compensation",
     "location_pay_differential": true,
     "source": "stated"
   },
@@ -242,44 +239,41 @@
     "Technical Program Manager",
     "Staff TPM",
     "consumer finance",
-    "BNPL",
-    "distributed backend systems",
-    "cross-functional",
-    "program lifecycle",
+    "distributed systems",
     "stakeholder management",
-    "remote-first",
+    "cross-functional",
+    "buy now pay later",
     "FinTech",
-    "platform capabilities",
+    "remote-first",
+    "program lifecycle",
     "risk management"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($150K-$200K CAD base)",
-    "Remote-first company with explicit #LI-Remote tag",
-    "Equity mentioned with specific equity grade (Grade 5) providing some transparency",
-    "100% subsidized medical coverage for employee and dependents is a standout benefit",
-    "Clear articulation of responsibilities and what success looks like",
-    "Explicitly states this posting is for an existing vacancy (not pipeline building)"
+    "Compensation range explicitly disclosed and competitive ($195K-$255K base for high-cost states)",
+    "Remote-first company with majority of roles remote",
+    "100% subsidized medical coverage for employee and dependents",
+    "Transparent pay structure explained in JD",
+    "ESPP and equity rewards included in total compensation",
+    "Flexible spending wallets for tech, food, lifestyle, and family forming expenses"
   ],
   "red_flags": [
-    "Compensation stated in CAD, suggesting this may be a Canadian role or the range is non-USD — USD equivalent not provided, making comparison to US-market roles difficult",
-    "Pay Grade N and Equity Grade 5 labels are internal and opaque without Affirm's internal pay band reference",
-    "Visa sponsorship status not mentioned",
-    "8-year minimum is a hard requirement that may be difficult to bridge"
+    "Visa sponsorship status not stated — unclear for non-citizens",
+    "Proximal role holders may occasionally be required to work from an Affirm office — role location flexibility could vary",
+    "Pay Grade - N and Equity Grade - 10 labels are internal identifiers with no external benchmark provided"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Staff', comp range, and years requirement)",
-      "scope.business_model (inferred from product description — BNPL/consumer credit)",
-      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
-      "compensation.base_range_usd set to null because range is stated in CAD, not USD",
-      "location.work_auth (not stated in JD)",
-      "location.visa_sponsorship (not stated in JD)"
+      "seniority.level (inferred from 'Staff' title, 8+ years requirement, and comp range)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "compensation.base_range_usd uses CA/WA/NY/NJ/CT tier as primary range since it is the higher and more commonly referenced tier"
     ],
     "ambiguities": [
-      "Compensation range ($150,000-$200,000) is labeled 'CAN base pay range' suggesting Canadian dollars, but the role is tagged #LI-Remote with no explicit country restriction. It is unclear whether this posting targets Canada specifically or globally, and whether a separate USD range exists.",
-      "JD says 'remote-first' and 'work almost anywhere within the country of employment' but does not specify which country this role is open to. Could be Canada-only given the CAD range.",
-      "Location type is treated as remote-us based on #LI-Remote and general Affirm remote-first policy, but the CAD range suggests the role may be Canada-specific (remote-global or remote-canada)."
+      "The JD is tagged #LI-Remote and describes Affirm as remote-first, but also notes proximal roles may occasionally require office attendance. It is not specified whether this Staff TPM role is remote or proximal — treated as remote-us based on #LI-Remote tag and remote-first framing.",
+      "Two pay ranges are stated: $195K-$255K (CA, WA, NY, NJ, CT) and $173K-$233K (all other U.S. states). The higher range is used as the primary value in compensation.base_range_usd."
     ]
   }
 }

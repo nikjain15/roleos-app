@@ -1,0 +1,214 @@
+{
+  "company": "DoorDash",
+  "role_title": "Associate Manager, Sales Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7983274",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7983274",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Sales Strategy & Operations",
+  "seniority": {
+    "level": "Mid-Senior IC (Associate Manager)",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in operations, technology, banking, analytics or related experience",
+      "Associate Manager title",
+      "Base pay range $105,400–$155,000"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_ops_tech",
+      "raw_text_from_jd": "You have 5+ years of experience in operations, technology, banking, analytics or related experience with a track record of leading initiatives and hitting goals",
+      "skill_type": "years_of_experience",
+      "domain": "operations_or_analytics",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "operations",
+        "technology",
+        "banking",
+        "analytics"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_project_management",
+      "raw_text_from_jd": "You have strong cross functional business experience, project management, and communication skills",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_modeling_excel_sheets",
+      "raw_text_from_jd": "You are comfortable working with large data sets + modeling in Excel / Google Sheets, proficiency in SQL, and well-versed in data visualization tools (e.g. Sigma, Tableau) to help solve ambiguous problems",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Excel",
+        "Google Sheets",
+        "SQL",
+        "Sigma",
+        "Tableau"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "humble_doer",
+      "raw_text_from_jd": "You are willing to roll up their sleeves and flex up or down as needed - \"humble doer\"",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "You have a Bachelor's degree or higher",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Post-Sales SMB Account Management — sales strategy and operations supporting SMB restaurant partners",
+    "business_model": "B2B marketplace (DoorDash merchant partnerships with SMB restaurants, grocers, convenience stores, retailers)",
+    "primary_metrics_inferred": [
+      "Sales productivity",
+      "Pipeline tracking / conversion",
+      "SMB merchant revenue growth",
+      "Operational efficiency metrics",
+      "Centralized sales metrics"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Partner Management",
+      "Operations",
+      "Product",
+      "Analytics"
+    ],
+    "core_responsibilities": [
+      "Partner with post-sales SMB team to accelerate growth for SMB restaurants",
+      "Drive operational excellence in reporting cadences, pipeline tracking, and sales productivity",
+      "Lead end-to-end ideation to execution through data-driven insights",
+      "Partner with cross-functional teams to expand and elevate DoorDash's offering for SMBs",
+      "Ensure GTM processes across products and initiatives are effective and efficient for sales teams",
+      "Shepherd Account Management team into the future leveraging AI tooling",
+      "Make efficient, data-driven decisions and optimize SMB Account Management operational processes",
+      "Centralize key metrics"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      105400,
+      155000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Sales Strategy & Operations",
+    "SMB Account Management",
+    "post-sales",
+    "SQL",
+    "Tableau",
+    "Sigma",
+    "data-driven",
+    "pipeline tracking",
+    "AI tooling",
+    "cross-functional",
+    "GTM",
+    "operational excellence",
+    "restaurant partners"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($105,400–$155,000 base)",
+    "Equity grants included in compensation",
+    "Comprehensive benefits package described (401k, parental leave, wellness, medical/dental/vision)",
+    "Clear team surface and responsibilities described",
+    "Applications accepted on an ongoing basis — not time-pressured",
+    "Explicit diversity and inclusion commitment"
+  ],
+  "red_flags": [
+    "Work location type is not specified in the JD body (remote, hybrid, or onsite unclear)",
+    "No cities listed for this role specifically — location pay differential mentioned but no city-level ranges provided",
+    "Visa sponsorship not mentioned",
+    "No mention of manages_people but title is 'Associate Manager' — could create expectation mismatch"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Associate Manager' and comp range)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned in JD)",
+      "scope.business_model (inferred from product description and merchant partner context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.work_auth (inferred as open; no restrictions stated)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Work location type (remote/hybrid/onsite) is never specified in the JD body. The national pay range mentions Illinois and Colorado, and the NYC AEDT notice is included, suggesting the role may be open in multiple locations or remote — but this is not confirmed.",
+      "The 'Associate Manager' title typically implies people management in some organizations, but the JD describes no direct reports or people management responsibilities. Treated as individual contributor here.",
+      "'Bachelor's degree or higher' is phrased as a requirement under 'We're excited about you because…' which could be read as a soft signal, but the phrasing is unconditional, so classified as hard severity."
+    ]
+  }
+}

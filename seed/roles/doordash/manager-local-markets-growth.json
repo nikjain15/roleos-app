@@ -1,10 +1,10 @@
 {
   "company": "DoorDash",
   "role_title": "Manager, Local Markets Growth",
-  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7762905",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8024820",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7762905",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "8024820",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -23,16 +23,18 @@
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
-  "secondary_archetype": "General Manager / Regional Growth Lead",
+  "secondary_archetype": "Growth PM (local markets operator with people management)",
   "seniority": {
-    "level": "Manager / Senior Manager",
+    "level": "Manager / Senior IC (people manager)",
     "years_required_min": 6,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
       "6+ years of experience required",
-      "Must have led and motivated a team before",
-      "Reports to General Manager and manages a Strategy + Operations team"
+      "Manages a Strategy + Operations team in-market",
+      "Reports to General Manager",
+      "Comp range $136K-$200K base consistent with manager level",
+      "Explicitly required to have led and motivated a team before"
     ]
   },
   "must_haves": [
@@ -40,7 +42,7 @@
       "id": "years_experience",
       "raw_text_from_jd": "You have 6+ years of experience. You've succeeded in high-performance cultures (whether in tech, operations, strategy, consulting, banking, or a related experience).",
       "skill_type": "years_of_experience",
-      "domain": "strategy_operations_or_related",
+      "domain": "strategy_operations_or_adjacent",
       "minimum_value": 6,
       "unit": "years",
       "evidence_required": "work_history",
@@ -50,17 +52,17 @@
       "technologies_named": [],
       "industries_named": [
         "tech",
-        "operations",
-        "strategy",
         "consulting",
         "banking"
       ],
       "geographies_named": [],
-      "employer_types_named": [],
+      "employer_types_named": [
+        "high-performance cultures"
+      ],
       "credentials_named": []
     },
     {
-      "id": "team_leadership",
+      "id": "people_management",
       "raw_text_from_jd": "You have led and motivated a team before",
       "skill_type": "capability",
       "domain": "people_management",
@@ -75,10 +77,10 @@
       "credentials_named": []
     },
     {
-      "id": "complex_problem_synthesis",
+      "id": "complex_problem_communication",
       "raw_text_from_jd": "You have a talent for summarizing complex problems, can translate high-level goals into relevant plans",
       "skill_type": "capability",
-      "domain": "strategic_planning",
+      "domain": "strategic_communication",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -90,12 +92,12 @@
       "credentials_named": []
     },
     {
-      "id": "bias_towards_action",
+      "id": "bias_towards_action_ambiguity",
       "raw_text_from_jd": "You have a bias towards action and can thrive in a fast-paced, ambiguous environment",
       "skill_type": "cultural_fit",
-      "domain": "operating_style",
+      "domain": "team_culture",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -105,7 +107,7 @@
       "credentials_named": []
     },
     {
-      "id": "openness_to_feedback",
+      "id": "hands_dirty_feedback",
       "raw_text_from_jd": "You're willing to get your hands dirty and you're open to feedback",
       "skill_type": "cultural_fit",
       "domain": "team_culture",
@@ -123,7 +125,7 @@
       "id": "ownership_mindset",
       "raw_text_from_jd": "You crave responsibility and want to shape the direction of the market",
       "skill_type": "cultural_fit",
-      "domain": "ownership_mindset",
+      "domain": "team_culture",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -135,7 +137,7 @@
       "credentials_named": []
     },
     {
-      "id": "high_growth_environment",
+      "id": "complex_or_high_growth_environment",
       "raw_text_from_jd": "You have experience in a complex or high-growth environment",
       "skill_type": "domain_knowledge",
       "domain": "high_growth_operations",
@@ -171,7 +173,7 @@
   ],
   "nice_to_haves": [
     {
-      "id": "early_stage_startup_experience",
+      "id": "early_stage_startup",
       "raw_text_from_jd": "Early stage startup experience a plus",
       "skill_type": "domain_knowledge",
       "domain": "startup_operations",
@@ -188,7 +190,7 @@
       "credentials_named": []
     },
     {
-      "id": "advanced_degree",
+      "id": "mba_or_masters",
       "raw_text_from_jd": "Bachelor's degree required, MBA or Masters Degree a plus",
       "skill_type": "credential",
       "domain": "education",
@@ -206,10 +208,10 @@
       ]
     },
     {
-      "id": "logistics_product_biz_ops_partnerships",
+      "id": "logistics_pm_biz_ops_partnerships",
       "raw_text_from_jd": "Logistics, Product Management, Business Operations and/or Partnerships experience a plus",
       "skill_type": "domain_knowledge",
-      "domain": "logistics_product_bizops_partnerships",
+      "domain": "logistics_product_management_biz_ops_partnerships",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -226,12 +228,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Southeast & Texas regional growth (Atlanta, Charlotte, Nashville, Austin, Houston) — all three sides of the Marketplace (customer, merchant, Dasher)",
-    "business_model": "marketplace / on-demand delivery platform (B2C + B2B)",
+    "surface": "Southeast & Texas regional markets (Atlanta, Charlotte, Nashville, Austin, Houston); all three sides of the Marketplace — customer, merchant, Dasher",
+    "business_model": "marketplace / on-demand delivery, B2C and B2B",
     "primary_metrics_inferred": [
       "Regional growth targets",
       "Regional profitability",
-      "Marketplace health across customer, merchant, and Dasher sides"
+      "Market share in Southeast and Texas"
     ],
     "cross_functional_partners": [
       "Ops",
@@ -245,56 +247,64 @@
     "core_responsibilities": [
       "Set and drive towards regional targets for growth and profitability",
       "Recruit, lead, and develop high-performing candidates on the US Local Markets team",
-      "Work cross-functionally with Ops, Product, Finance, Analytics, Sales, Marketing, & Dasher & Logistics partners to support strategic projects and unlock opportunities to grow region",
-      "Figure out how to get from A to B–then actually make it happen",
-      "Run tests and scale insights"
+      "Work cross-functionally to support strategic projects and unlock opportunities to grow region",
+      "Figure out how to get from A to B and make it happen",
+      "Run tests and scale insights; embrace ambiguity and multiple paths forward"
     ]
   },
   "compensation": {
-    "base_range_usd": null,
+    "base_range_usd": [
+      136000,
+      200000
+    ],
     "total_comp_estimate_usd": null,
-    "equity_mentioned": false,
-    "equity_form": null,
-    "location_pay_differential": false,
-    "source": "unknown"
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
   },
   "top_keywords": [
     "local markets",
-    "strategy and operations",
-    "regional growth",
-    "marketplace",
+    "strategy & operations",
     "Southeast",
     "Texas",
+    "regional growth",
+    "profitability",
+    "marketplace",
     "people management",
-    "high-growth environment",
     "cross-functional",
+    "high-growth",
+    "analytics",
     "experimentation"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear geographic scope with specific cities named for the role",
-    "Reports to General Manager — high visibility role",
-    "Explicitly manages a team — clear people leadership scope",
-    "Broad cross-functional exposure (Ops, Product, Finance, Analytics, Sales, Marketing, Logistics)",
-    "Encourages diverse backgrounds (tech, operations, consulting, banking all acceptable)"
+    "Compensation range disclosed ($136K-$200K base)",
+    "Equity grants explicitly mentioned",
+    "Clear regional ownership and accountability",
+    "People management role with direct reports",
+    "Comprehensive benefits package including 16 weeks paid parental leave, 401(k) with employer match",
+    "Applications accepted on ongoing basis — likely active hire",
+    "Multiple city options offered across two regions"
   ],
   "red_flags": [
-    "Compensation not disclosed",
-    "Visa sponsorship status not mentioned",
-    "Hybrid policy vaguely described as 'some time in-office and some time remote' — no specific percentage",
-    "Role spans two distinct regions (Southeast and Texas) without clarity on whether candidates apply to one or both"
+    "Hybrid requirement in specific cities (Atlanta, Charlotte, Nashville, Austin, Houston) — not remote-eligible",
+    "Visa sponsorship not addressed in the JD",
+    "Salary range is wide ($64K spread), suggesting leveling flexibility that could indicate uncertainty about seniority"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years required, team management, and reporting structure)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
-      "location.visa_sponsorship (not mentioned in JD; marked unclear)",
-      "compensation.equity_mentioned (no mention of equity in JD)"
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly in JD)",
+      "scope.business_model (inferred from company description and marketplace context)",
+      "seniority.level (inferred from years required, compensation, and people management requirement)",
+      "location.visa_sponsorship (not stated; marked as unclear)",
+      "location.work_auth (not stated; marked as open — no restrictions mentioned)"
     ],
     "ambiguities": [
-      "The JD lists two regions (Southeast: Atlanta/Charlotte/Nashville and Texas: Austin/Houston) under one role posting — unclear if a single hire covers both regions or if these are parallel openings",
-      "Bachelor's degree is listed as 'required' in the same bullet as 'MBA or Masters Degree a plus' — treated as hard requirement for bachelor's and soft for advanced degree"
+      "The JD uses 'Bachelor's degree required' in the same bullet as 'MBA or Masters Degree a plus' — extracted bachelor's as hard must-have and advanced degree as soft nice-to-have.",
+      "Role title includes 'Growth' but responsibilities are primarily strategy & operations / general management; archetype set to BizOps / Strategy & Ops with secondary note on growth.",
+      "Location pay differential is implied by 'Base salary is localized according to an employee's work location' but specific city differentials are not stated."
     ]
   }
 }

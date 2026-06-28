@@ -1,0 +1,239 @@
+{
+  "company": "Instacart",
+  "role_title": "Senior Product Manager, In-Store Tasks",
+  "url": "https://instacart.careers/job/?gh_jid=7963724",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7963724",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "no mandatory office time; Flex First policy with regular in-person events",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Technical PM (operational/physical-environment focus)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years of product management experience minimum",
+      "Base pay range $184K–$233K depending on state, consistent with Senior PM at a tech company",
+      "Owns vision, strategy, and execution for a product area",
+      "Interfaces with senior stakeholders and external partners"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "You have 4+ years of product management experience, ideally within operationally complex physical environments",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "qualifier": "ideally within operationally complex physical environments",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_product_delivery",
+      "raw_text_from_jd": "You've built products end-to-end and know how to drive initiatives from early concept through scaled delivery.",
+      "skill_type": "outcome",
+      "domain": "product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_literacy_and_analytical_rigor",
+      "raw_text_from_jd": "You're highly data-literate and comfortable navigating ambiguity with analytical rigor, using data to prioritize ruthlessly and make sound tradeoffs.",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_influence",
+      "raw_text_from_jd": "You communicate complex ideas with clarity and influence — aligning cross-functional teams and senior stakeholders around shared goals without direct authority.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shopper_and_retailer_experience_understanding",
+      "raw_text_from_jd": "You understand the shopper and retailer experience deeply, and you hold yourself accountable to meaningful customer and commercial outcomes.",
+      "skill_type": "domain_knowledge",
+      "domain": "shopper_and_retailer_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "grocery",
+        "retail"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_mindset",
+      "raw_text_from_jd": "You operate with an entrepreneurial mindset, comfortable moving fast in evolving environments while maintaining high standards.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "operationally_complex_physical_environments",
+      "raw_text_from_jd": "You have 4+ years of product management experience, ideally within operationally complex physical environments",
+      "skill_type": "domain_knowledge",
+      "domain": "physical_environment_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "retail",
+        "grocery",
+        "logistics"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "In-Store Tasks product — shopper in-store data collection experiences powering inventory intelligence and store maps",
+    "business_model": "marketplace / platform (B2B2C: serving retailers, CPGs, shoppers, and end customers)",
+    "primary_metrics_inferred": [
+      "Shopper scanning accuracy and speed",
+      "Inventory intelligence signal quality",
+      "Shopper, customer, and retailer NPS",
+      "Retailer adoption and retention",
+      "Fulfillment accuracy at scale"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Shopper and Logistics teams",
+      "Enterprise Sales",
+      "Retailer Success",
+      "Retail Partners"
+    ],
+    "core_responsibilities": [
+      "Own the vision, strategy, and execution for the In Store Tasks product",
+      "Define and deliver the roadmap for shoppers doing in-store tasks to build in-store intelligence",
+      "Own data collection experiences from shopper task receipt through inventory and store map data collection",
+      "Build deep understanding of shopper workflows and operational pain points to design tools improving scanning accuracy, speed, and satisfaction",
+      "Work closely with retail partners to ensure tooling integrates into in-store environments",
+      "Partner with enterprise sales and retailer success teams to support partner onboarding and drive feature adoption",
+      "Define platform solutions that scale across retailer sizes and store formats",
+      "Represent the in-store task roadmap with internal stakeholders and external partners"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      184000,
+      233000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "new hire equity grant plus annual refresh grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "in-store tasks",
+    "inventory intelligence",
+    "shopper experience",
+    "computer vision",
+    "data collection",
+    "fulfillment quality",
+    "retailer enablement",
+    "CPG",
+    "scanning accuracy",
+    "store maps",
+    "operational complexity",
+    "platform scaling"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range fully disclosed across all US geographies",
+    "Equity grant (new hire + annual refresh) explicitly mentioned",
+    "Fully remote role (Flex First policy) with no mandatory office percentage",
+    "Clear product surface and team context (Inventory Intelligence team)",
+    "High-impact, foundational product area with explicit 2-year scale ambition",
+    "Cross-functional scope clearly described (engineering, design, data science, sales, retailers)"
+  ],
+  "red_flags": [
+    "Work authorization and visa sponsorship status not mentioned anywhere in the JD",
+    "'Ideally within operationally complex physical environments' is listed under Minimum Qualifications but uses hedging language — classification as nice-to-have is an inference",
+    "Team size not disclosed",
+    "No mention of reporting structure or career ladder context"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and scope of ownership)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from product and customer description)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)",
+      "compensation.base_range_usd min/max (taken as lowest-state floor and highest-state ceiling across all bands)"
+    ],
+    "ambiguities": [
+      "'ideally within operationally complex physical environments' appears as a qualifier on the 4+ years minimum qualification bullet — it could be a soft preference or a strong preference. Treated as nice-to-have (soft) due to the word 'ideally', but also captured in the must-have for completeness with a qualifier field.",
+      "The JD is tagged #LI-Remote and describes Flex First policy, but no explicit statement is made about US-only remote eligibility. Treated as remote-us given pay bands are US-state-specific."
+    ]
+  }
+}

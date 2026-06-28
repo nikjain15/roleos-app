@@ -1,0 +1,191 @@
+{
+  "company": "Cursor",
+  "role_title": "Technical Program Manager TPM, Infrastructure",
+  "url": "https://jobs.ashbyhq.com/cursor/1910bd0e-806c-4e60-bfd6-157e369d6d02",
+  "ats_provider": "ashby",
+  "ats_job_id": "1910bd0e-806c-4e60-bfd6-157e369d6d02",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in Technical Program Management or similar roles",
+      "Partners with engineering leaders and executives as a strategic thought partner",
+      "Owns cross-functional programs spanning GPU allocation, inference cost, and R&D spend"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_experience",
+      "raw_text_from_jd": "5+ years in Technical Program Management or similar roles in highly technical environments.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cloud_infra_cost_experience",
+      "raw_text_from_jd": "Experience with cloud infrastructure costs, GPU/compute capacity planning, or COGs/R&D attribution.",
+      "skill_type": "domain_knowledge",
+      "domain": "cloud_infrastructure_costs_and_capacity_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "GPU/compute capacity planning",
+        "COGs/R&D attribution"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_skills",
+      "raw_text_from_jd": "Strong analytical skills; comfortable with cost data, utilization metrics, and financial models.",
+      "skill_type": "capability",
+      "domain": "financial_and_cost_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_drive",
+      "raw_text_from_jd": "Proven ability to drive cross-functional programs across Engineering, ML, and Finance without direct authority.",
+      "skill_type": "capability",
+      "domain": "cross_functional_program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_toward_action",
+      "raw_text_from_jd": "Bias toward action and outcomes over process and ceremony.",
+      "skill_type": "cultural_fit",
+      "domain": "execution_orientation",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Infrastructure cost attribution, GPU/compute capacity planning, and R&D spend efficiency across ML and Infrastructure teams",
+    "business_model": "B2B/B2C AI coding tool (developer-facing SaaS)",
+    "primary_metrics_inferred": [
+      "COGS attribution clarity and actionability",
+      "R&D spend efficiency",
+      "GPU and infrastructure allocation aligned to business priorities",
+      "Cost optimization program outcomes on predictable cadence"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "ML",
+      "Infrastructure",
+      "Finance",
+      "Data",
+      "Executive/Engineering sponsors"
+    ],
+    "core_responsibilities": [
+      "Own COGs and R&D attribution programs across inference, compute, and infrastructure workloads",
+      "Drive GPU and infrastructure resource allocation frameworks and recurring reviews",
+      "Manage technical programs in cost optimization, capacity planning, reliability, and migration",
+      "Partner strategically with engineering leaders on resource tradeoffs and investment prioritization",
+      "Dig into dashboards, data, and systems; write docs, build models, run analyses"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Infrastructure",
+    "COGs attribution",
+    "R&D spend efficiency",
+    "GPU allocation",
+    "capacity planning",
+    "inference cost",
+    "cross-functional",
+    "ML",
+    "cloud infrastructure costs",
+    "financial models",
+    "cost optimization"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Very specific scope (COGs, GPU allocation, R&D efficiency) — not a vague TPM role",
+    "Small, flat, talent-dense organization signals high individual impact",
+    "Sample projects section gives concrete examples of what success looks like",
+    "Role has clear executive/engineering sponsor model indicating organizational support"
+  ],
+  "red_flags": [
+    "No location, compensation, or visa sponsorship information provided anywhere in the JD",
+    "No mention of remote eligibility or office requirements — unclear work arrangement",
+    "No equity or benefits details disclosed"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ years requirement and executive partnership signals)",
+      "scope.business_model (inferred from company mission description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as metrics)",
+      "location.type set to 'unclear' — no location or work arrangement stated in JD",
+      "compensation.source set to 'unknown' — no compensation data in JD"
+    ],
+    "ambiguities": [
+      "No location information provided; it is unclear whether this role is remote, hybrid, or onsite and in which city",
+      "Nice-to-haves section does not exist in the JD; all stated requirements are treated as must-haves",
+      "The requirement for 'Experience with cloud infrastructure costs, GPU/compute capacity planning, or COGs/R&D attribution' uses 'or' — any one of these may suffice, but it is listed under required qualifications, so treated as hard"
+    ]
+  }
+}

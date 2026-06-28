@@ -1,0 +1,297 @@
+{
+  "company": "Anthropic",
+  "role_title": "Research Product Manager, Model Behaviors",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5247407008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5247407008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% in office",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (alignment / model behavior focus)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in product management leading scaled conversational AI products",
+      "Comp range $385K-$460K base, consistent with Senior IC at Anthropic",
+      "Expected to operate with autonomy across Research, Product, and Safeguards teams"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "passion_for_ai_llms",
+      "raw_text_from_jd": "Have a deep passion and curiosity for AI and LLMs. Use AI regularly.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_and_llms",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_pm_conversational_ai",
+      "raw_text_from_jd": "Have 5+ years in product management leading scaled conversational AI products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_conversational_ai",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "conversational AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "first_principles_thinking",
+      "raw_text_from_jd": "Are a first-principles thinker with the ability to navigate and execute amidst ambiguity, flexing into different domains based on the business problem at hand and finding simple, easy-to-understand solutions",
+      "skill_type": "capability",
+      "domain": "strategic_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "delivery_track_record",
+      "raw_text_from_jd": "Have a track record of delivering products and features to end-users (consumer or end-user b2b focus)",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "user_empathy_synthesis",
+      "raw_text_from_jd": "Have strong user empathy and the ability to synthesize vague or contradictory feedback into actionable priorities",
+      "skill_type": "capability",
+      "domain": "user_research_and_prioritization",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_judgment_model_taste",
+      "raw_text_from_jd": "Have strong judgment and model taste, with the ability to make tradeoffs when there is no clear right answer",
+      "skill_type": "capability",
+      "domain": "product_judgment",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_concepts_grasp",
+      "raw_text_from_jd": "Have a strong grasp of ML concepts and are willing to go deep on technical solutions",
+      "skill_type": "domain_knowledge",
+      "domain": "machine_learning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "intellectual_curiosity",
+      "raw_text_from_jd": "Have intellectual curiosity without ego—comfortable asking questions and learning independently",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "creative_risk_thinking",
+      "raw_text_from_jd": "Think creatively about the risks and benefits of new technologies, moving beyond past checklists and playbooks",
+      "skill_type": "capability",
+      "domain": "technology_risk_assessment",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hacker_spirit",
+      "raw_text_from_jd": "Have a creative, hacker spirit and love solving puzzles",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Claude's character, behaviors, and reinforcement signals; Alignment Finetuning team partnership",
+    "business_model": "consumer and B2B AI product (Claude)",
+    "primary_metrics_inferred": [
+      "Alignment progress (evals)",
+      "Volume and quality of behavioral improvements shipped",
+      "Speed of alignment research translation to product",
+      "Claude helpfulness and safety improvements"
+    ],
+    "cross_functional_partners": [
+      "Research",
+      "Product",
+      "Safeguards",
+      "Alignment Finetuning team",
+      "Users"
+    ],
+    "core_responsibilities": [
+      "Define behavioral defaults and steerability constraints",
+      "Develop and maintain taxonomies of model behaviors across capabilities",
+      "Identify, triage, and prioritize behavior issues and opportunities, coordinating input from Users, Research, Product, and Safeguards teams",
+      "Amplify alignment research breakthroughs, translating them into product, process, and model improvements",
+      "Deeply understand user interaction patterns to identify behavior improvements that make Claude more helpful and safe",
+      "Contribute to evals that measure alignment progress",
+      "Identify and scale initiatives and tools that help researchers ship alignment improvements faster"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      385000,
+      460000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "model behaviors",
+    "alignment finetuning",
+    "conversational AI",
+    "LLMs",
+    "behavioral defaults",
+    "steerability",
+    "evals",
+    "alignment research",
+    "reinforcement signals",
+    "user empathy",
+    "ML concepts",
+    "Claude"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($385K-$460K base)",
+    "Visa sponsorship explicitly offered with immigration lawyer retained",
+    "Clear product surface with direct mission impact (shaping Claude's behaviors for millions of users)",
+    "Encourages applications from candidates who don't meet every qualification",
+    "Explicit commitment to diversity and representation",
+    "Hybrid policy stated clearly (25% in-office minimum)"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "'Hacker spirit' and 'creative' cultural fit requirements are hard to assess objectively and may introduce subjectivity in hiring",
+    "5+ years specifically in scaled conversational AI products is a narrow and hard-to-substitute requirement",
+    "Role sits at intersection of research and product — scope could expand significantly depending on team structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years required)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "scope.business_model (inferred from product description)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "location.cities_listed (inferred as San Francisco from HQ reference; role-specific city not explicitly named)"
+    ],
+    "ambiguities": [
+      "The JD lists all requirements under 'Minimum Qualifications' including the hacker spirit / creative cultural fit items, making them technically hard requirements; however, cultural fit items are often soft in practice. Treated as hard per schema rules but flagged here.",
+      "Nice-to-haves section is entirely absent from the JD; no explicit preferred/bonus qualifications listed.",
+      "Required field of study is stated as 'A field relevant to the role as demonstrated through coursework, training, or professional experience' — highly ambiguous and effectively open."
+    ]
+  }
+}

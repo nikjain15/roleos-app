@@ -1,33 +1,33 @@
 {
   "company": "Instacart",
   "role_title": "Senior Product Manager, Fraud & Trust",
-  "url": "https://instacart.careers/job/?gh_jid=7769924",
+  "url": "https://instacart.careers/job/?gh_jid=7769926",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7769924",
-  "fetched_at": "2026-05-25",
+  "ats_job_id": "7769926",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
-    "type": "remote-us",
+    "type": "remote-global",
     "cities_listed": [],
-    "remote_us_eligible": true,
-    "office_time_required": "Flex First — employees choose where they work; regular in-person events",
+    "remote_us_eligible": false,
+    "office_time_required": null,
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Platform / Risk & Fraud PM",
+  "secondary_archetype": "Platform PM (Fraud & Trust)",
   "seniority": {
-    "level": "Senior IC (Senior PM)",
+    "level": "Senior IC",
     "years_required_min": 6,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "6+ years of product management experience",
-      "3+ years in fraud, trust & safety, risk, or related domain",
-      "Expected to set independent product vision and multi-year roadmap",
-      "Base pay range starts at $184K and goes up to $233K depending on location, consistent with Senior PM band"
+      "3+ years focused on fraud, trust & safety, risk, identity, or a related high-stakes platform domain",
+      "Expected to set product vision and strategy independently and build conviction with leadership",
+      "Comp range $194,000–$204,500 CAD, consistent with Senior IC"
     ]
   },
   "must_haves": [
@@ -58,7 +58,7 @@
       "id": "years_fraud_trust_domain",
       "raw_text_from_jd": "including 3+ years focused on fraud, trust & safety, risk, identity, or a related high-stakes platform domain.",
       "skill_type": "years_of_experience",
-      "domain": "fraud_trust_risk_identity",
+      "domain": "fraud_trust_safety_risk_identity",
       "minimum_value": 3,
       "unit": "years",
       "is_combined": false,
@@ -78,11 +78,11 @@
       "credentials_named": []
     },
     {
-      "id": "independent_product_vision",
+      "id": "product_vision_strategy_independence",
       "raw_text_from_jd": "Demonstrated ability to set product vision and strategy independently - not just execute on a defined roadmap, but define the north star, build conviction with leadership, and drive a multi-year narrative with measurable goals.",
       "skill_type": "capability",
       "domain": "product_strategy",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -93,12 +93,12 @@
       "credentials_named": []
     },
     {
-      "id": "fraud_outcomes_track_record",
+      "id": "measurable_fraud_outcomes",
       "raw_text_from_jd": "Proven track record driving measurable business outcomes in fraud prevention or risk management - such as reducing fraud losses, improving authorization/approval rates, lowering false positive rates, or optimizing cost per order.",
       "skill_type": "outcome",
       "domain": "fraud_prevention_risk_management",
       "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "maybe",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -114,7 +114,7 @@
       "id": "ml_data_science_collaboration",
       "raw_text_from_jd": "Strong experience working with ML/data science teams on fraud detection models, risk scoring, or decisioning platforms. Comfort with data and experimentation (SQL, analytics tools, A/B testing) to size opportunities, validate hypotheses, and measure impact rigorously.",
       "skill_type": "capability",
-      "domain": "ml_data_science_collaboration",
+      "domain": "ml_and_data_science",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -128,9 +128,7 @@
         "decisioning platforms",
         "A/B testing"
       ],
-      "industries_named": [
-        "fraud"
-      ],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -141,7 +139,7 @@
       "skill_type": "capability",
       "domain": "cross_functional_leadership",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -158,7 +156,7 @@
       "minimum_value": "bachelors",
       "accepts_equivalent_experience": true,
       "evidence_required": "degree_or_work_history",
-      "bridgeable": "n/a",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -166,13 +164,16 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": [
-        "Bachelor's degree"
+        "Bachelor's degree",
+        "business degree",
+        "engineering degree",
+        "computer science degree"
       ]
     }
   ],
   "nice_to_haves": [
     {
-      "id": "ai_ml_fraud_experience",
+      "id": "ai_ml_fraud_identity",
       "raw_text_from_jd": "Experience applying AI/ML innovations to fraud, identity, or trust & safety - such as shipping GenAI/LLM-powered products, building AI-native detection/decisioning systems, or leveraging graph neural networks and multimodal analysis. Strong preference for candidates who think AI-first, not rule-first.",
       "skill_type": "domain_knowledge",
       "domain": "ai_ml_fraud_trust",
@@ -201,7 +202,7 @@
       "id": "multi_sided_marketplace_experience",
       "raw_text_from_jd": "Experience building for multi-sided marketplaces and/or enterprise/white-label platforms, with an understanding of how fraud controls need to adapt for different partner models and user types (customers, shoppers, merchants, advertisers).",
       "skill_type": "domain_knowledge",
-      "domain": "multi_sided_marketplace_platform",
+      "domain": "marketplace_platform",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -216,10 +217,10 @@
       "credentials_named": []
     },
     {
-      "id": "fraud_ops_influence_without_authority",
+      "id": "influencing_fraud_ops",
       "raw_text_from_jd": "Experience leading or influencing without direct authority in an operational environment (e.g., working with Fraud Ops, Trust & Safety Ops, or Risk Operations teams).",
       "skill_type": "capability",
-      "domain": "operational_influence",
+      "domain": "influence_without_authority",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -228,25 +229,26 @@
       "industries_named": [
         "fraud",
         "trust & safety",
-        "risk"
+        "risk operations"
       ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     }
   ],
-  "explicitly_excluded": [],
+  "explicitly_excluded": [
+    "Currently only hiring in the following Canadian provinces: Ontario, Alberta, British Columbia, and Nova Scotia (US candidates excluded for this posting)"
+  ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Fraud detection, identity verification, and appeasements platforms across Instacart's four-sided marketplace (customers, shoppers, retailers, advertisers) and Storefront Pro",
-    "business_model": "B2C and B2B marketplace + enterprise/white-label SaaS",
+    "surface": "Fraud detection, identity verification, and appeasements platforms across Instacart's four-sided marketplace and Storefront Pro",
+    "business_model": "multi-sided marketplace (B2C + B2B/enterprise) — grocery delivery platform",
     "primary_metrics_inferred": [
-      "Fraud losses reduction",
+      "Fraud losses",
       "Cost per order",
       "False positive rates",
-      "Authorization/approval rates",
-      "Customer experience scores",
-      "Appeasement cost efficiency"
+      "Customer experience (CSAT / trust)",
+      "Authorization/approval rates"
     ],
     "cross_functional_partners": [
       "Data Science",
@@ -258,8 +260,8 @@
       "Shopper",
       "Legal",
       "CX",
-      "Finance",
       "Order Quality",
+      "Finance",
       "Compliance"
     ],
     "core_responsibilities": [
@@ -267,67 +269,68 @@
       "Drive the evolution of Instacart's real-time fraud detection and identity platform including ML model strategy, decisioning, identity verification, and account integrity",
       "Champion an AI-native, AI-first approach to fraud and trust",
       "Lead the appeasements and order-issue resolution strategy - defining policies, guardrails, and product capabilities",
-      "Proactively identify new opportunities and define the strategic direction",
-      "Partner with Data Science, ML Engineering, and Fraud Operations to define PRDs and scope ML model improvements",
-      "Collaborate across Platform, Payments, Order Management, Shopper, Legal, and CX teams"
+      "Partner closely with Data Science, ML Engineering, and Fraud Operations to define PRDs and scope ML model improvements",
+      "Collaborate across Platform, Payments, Order Management, Shopper, Legal, and CX teams",
+      "Stay ahead of the evolving fraud landscape including organized fraud-as-a-service, AI-generated abuse, and emerging attack vectors"
     ]
   },
   "compensation": {
-    "base_range_usd": [
-      184000,
-      233000
+    "base_range_usd": null,
+    "base_range_local": [
+      194000,
+      204500
     ],
+    "base_range_currency": "CAD",
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "New hire equity grant plus annual refresh grants",
+    "equity_form": "new hire equity grant as well as annual refresh grants",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
-    "fraud prevention",
+    "fraud detection",
     "trust & safety",
     "identity verification",
-    "ML-driven fraud models",
-    "real-time decisioning",
     "appeasements",
+    "real-time ML",
     "AI-native",
+    "decisioning platform",
     "multi-sided marketplace",
     "risk management",
-    "ATO prevention",
-    "cost per order",
     "false positive rates",
-    "Storefront Pro",
-    "platform infrastructure"
+    "cost per order",
+    "fraud losses",
+    "ATO prevention",
+    "Storefront Pro"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation ranges explicitly disclosed across multiple US geographies ($184K–$233K base)",
-    "Equity (new hire + annual refresh grants) explicitly mentioned",
-    "Fully remote eligible (#LI-Remote)",
-    "Clear product surface and measurable success metrics defined in JD",
-    "Role owns both strategy and execution with genuine leadership scope",
-    "Flex First policy provides genuine location flexibility",
-    "Equivalent practical experience accepted in lieu of bachelor's degree"
+    "Compensation range disclosed ($194,000–$204,500 CAD)",
+    "Equity (new hire + annual refresh) explicitly mentioned",
+    "Clear product ownership area with well-defined metrics (fraud losses, cost per order, false positive rates)",
+    "Flex First remote policy with no required in-office days",
+    "Role is at the intersection of infrastructure and real-world commerce — strong strategic scope",
+    "Equivalent practical experience accepted in lieu of degree"
   ],
   "red_flags": [
-    "No visa sponsorship information provided — unclear for international candidates",
-    "High bar: 6+ years PM experience including 3+ in fraud/trust/risk is a narrow funnel",
-    "Hard requirement for proven ML/data science collaboration may exclude PMs without technical backgrounds",
-    "Role sits at intersection of multiple complex domains (fraud, identity, appeasements, ML) — scope may be very broad for one PM"
+    "Only hiring in specific Canadian provinces (Ontario, Alberta, British Columbia, Nova Scotia) — eliminates US-based and other international candidates",
+    "Compensation stated in CAD only; USD equivalent not provided",
+    "High domain specificity (3+ years in fraud/trust/identity) is a narrow filter",
+    "JD says '#LI-Remote' but then restricts hiring to four Canadian provinces — remote is geographically constrained"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp band and years requirements)",
+      "seniority.level (inferred from years required and comp range)",
       "scope.team_size_estimate (not stated; left as 'unclear')",
-      "scope.primary_metrics_inferred (inferred from responsibilities and job description context)",
-      "scope.business_model (inferred from product and marketplace description)",
-      "location.work_auth (not stated)",
-      "location.visa_sponsorship (not stated)",
-      "compensation.base_range_usd lower bound uses 'All other states' minimum; upper bound uses CA/NY/CT/NJ maximum"
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed as a discrete metrics section)",
+      "scope.business_model (inferred from product description)",
+      "location.remote_us_eligible (inferred as false from 'only hiring in the following provinces' language)",
+      "compensation.base_range_usd (not provided; CAD only)"
     ],
     "ambiguities": [
-      "The JD is tagged #LI-Remote and says 'Flex First' allowing employees to choose where they work, but also mentions 'regular in-person events' — treated as remote-us with occasional in-person gatherings rather than strict hybrid.",
-      "Equivalent practical experience is accepted for the bachelor's degree requirement, making severity classification borderline; kept as 'hard' per schema rules since it appears in Minimum Qualifications but flagged here."
+      "JD uses '#LI-Remote' tag and describes a Flex First policy with flexibility to work from home, but the body states 'currently, we are only hiring in the following provinces: Ontario, Alberta, British Columbia, and Nova Scotia' — role is remote but geographically restricted to Canada (specific provinces).",
+      "location.work_auth and visa_sponsorship are not addressed in the JD body; left as 'unclear'.",
+      "The JD notes 'base pay range for a successful candidate is dependent on their permanent work location' but only provides a single CAD range — no tiered ranges by province are given."
     ]
   }
 }

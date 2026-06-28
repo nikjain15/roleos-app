@@ -1,0 +1,202 @@
+{
+  "company": "Lovable",
+  "role_title": "Community Growth Manager, Ambassador & Partnerships",
+  "url": "https://jobs.ashbyhq.com/lovable/6e0dd94f-a852-4ce9-8fe8-c6a0ca800901",
+  "ats_provider": "ashby",
+  "ats_job_id": "6e0dd94f-a852-4ce9-8fe8-c6a0ca800901",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [
+      "Stockholm"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth (non-PM)",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Community & Partnerships Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": 10,
+    "manages_people": false,
+    "level_signals": [
+      "6–10 years of experience in community-led growth, partnerships, developer advocacy, influencer marketing, or startup growth",
+      "Owns program design and external relationship tracks independently",
+      "No mention of direct reports"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_community_growth",
+      "raw_text_from_jd": "6–10 years of experience in community-led growth, partnerships, developer advocacy, influencer marketing, or startup growth",
+      "skill_type": "years_of_experience",
+      "domain": "community_growth_partnerships",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambassador_program_experience",
+      "raw_text_from_jd": "You've run an ambassador or advocate program before, or you've been an ambassador yourself and understand what actually makes them feel valued and excited",
+      "skill_type": "capability",
+      "domain": "ambassador_programs",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "network_instincts",
+      "raw_text_from_jd": "Strong network instincts: you know how to identify who's credible in a community before everyone else does, and you know how to build a relationship that lasts longer than a campaign",
+      "skill_type": "capability",
+      "domain": "community_relationship_building",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "external_eq",
+      "raw_text_from_jd": "High external EQ — you're genuinely energized by other people's success and know how to celebrate it without making it about the company",
+      "skill_type": "cultural_fit",
+      "domain": "community_engagement",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_relationship_management",
+      "raw_text_from_jd": "Comfortable managing multiple external relationships simultaneously across different geographies, time zones, and community types",
+      "skill_type": "capability",
+      "domain": "relationship_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "partnership_structures",
+      "raw_text_from_jd": "Experience with partnership structures, sponsorships, or co-marketing agreements is a strong plus",
+      "skill_type": "domain_knowledge",
+      "domain": "partnerships_sponsorships_comarketing",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Lovable Ambassador Program and Community Partnership tracks",
+    "business_model": "PLG / developer-facing SaaS, B2C and B2B (solopreneurs to Fortune 100)",
+    "primary_metrics_inferred": [
+      "Ambassador program health and activation rate",
+      "Number and quality of community partnerships established",
+      "Ecosystem credibility and brand reach"
+    ],
+    "cross_functional_partners": [
+      "PM team",
+      "internal crossfunctional teams"
+    ],
+    "core_responsibilities": [
+      "Own the design and structure of the Lovable Ambassador Program",
+      "Lead outbound sourcing and ambassador relationship building",
+      "Run the 1:1 intake process for each new ambassador",
+      "Build and manage the ambassador toolkit to ensure high quality activations and brand representation",
+      "Own and design Lovable's community partnership tracks",
+      "Identify and establish strategic partnerships with aligned communities or education providers",
+      "Surface product feedback from ambassadors and partners to the PM team on a regular cadence",
+      "Track and report on program health across internal crossfunctional teams and initiatives"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "ambassador program",
+    "community-led growth",
+    "partnerships",
+    "developer advocacy",
+    "influencer marketing",
+    "ecosystem",
+    "co-marketing",
+    "sponsorships",
+    "Lovable",
+    "builder community"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership of a high-impact, nascent program with room to shape it from scratch",
+    "Company explicitly values 'extreme ownership, high velocity, and low-ego collaboration' — cultural signal for autonomy",
+    "Lovable has strong product traction (hundreds of millions of monthly visits mentioned)",
+    "Role is well-scoped with distinct workstreams: ambassador program, community partnerships, ecosystem health"
+  ],
+  "red_flags": [
+    "Compensation not disclosed",
+    "Location not explicitly stated for this role — Stockholm office mentioned but remote eligibility is unclear",
+    "Visa sponsorship and work authorization not addressed",
+    "No mention of team size or who this role reports to"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range and scope of ownership)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (not stated in JD)",
+      "location.type (unclear — Stockholm mentioned as company base but role location not specified for this position)",
+      "location.remote_us_eligible (inferred as false given Stockholm HQ, but not explicitly stated)"
+    ],
+    "ambiguities": [
+      "Location: JD mentions the company is based in Stockholm but does not explicitly state whether this role is onsite in Stockholm, hybrid, or remote-eligible. Treated as 'unclear'.",
+      "Years range of 6–10 listed as a single bracket rather than a hard floor — could be interpreted as a guideline rather than a strict cutoff, but classified as hard given unconditional bullet placement."
+    ]
+  }
+}

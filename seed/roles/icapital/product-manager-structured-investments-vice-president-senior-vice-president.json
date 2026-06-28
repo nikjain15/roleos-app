@@ -1,0 +1,325 @@
+{
+  "company": "iCapital",
+  "role_title": "Product Manager, Structured Investments - Vice President / Senior Vice President",
+  "url": "https://job-boards.greenhouse.io/icapitalnetwork/jobs/8564849002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8564849002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "Monday-Thursday in office, Friday remote",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM with people management and platform leadership",
+  "seniority": {
+    "level": "Senior IC / Manager (VP to SVP)",
+    "years_required_min": 9,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "9+ years of product management experience",
+      "Experience managing and developing product managers",
+      "VP / Senior Vice President title range",
+      "Base salary range $160,000-$230,000",
+      "Mentoring and developing product managers"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "9+ years of product management experience, preferably within fintech, wealth management, capital markets, or related industries",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 9,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech",
+        "wealth management",
+        "capital markets"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_product_domains",
+      "raw_text_from_jd": "Demonstrated success owning and scaling complex product domains in fast-paced, high-growth, or highly ambiguous environments",
+      "skill_type": "outcome",
+      "domain": "product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Proven ability to independently drive strategy, prioritization, and execution across large cross-functional organizations",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "people_management_pm",
+      "raw_text_from_jd": "Experience managing and developing product managers, including delegation, prioritization, and organizational leadership",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "Strong systems thinking and product judgment, with the ability to balance strategic vision, operational realities, and business impact",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_investments_domain",
+      "raw_text_from_jd": "Willingness and initiative to become a deep expert in the structured investments space, understanding both the product intricacies and broader industry dynamics",
+      "skill_type": "domain_knowledge",
+      "domain": "structured_investments",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "structured investments"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "Excellent communication and stakeholder management skills, including experience influencing senior business and engineering leaders",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving",
+      "raw_text_from_jd": "Strong analytical and problem-solving skills, with a track record of navigating complex and unfamiliar challenges effectively",
+      "skill_type": "capability",
+      "domain": "analytical_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_acumen_engineering",
+      "raw_text_from_jd": "Technical acumen and comfortable partnering closely with engineering organizations to drive scalable platform solutions",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agile_and_tools",
+      "raw_text_from_jd": "Experience with agile methodologies and tools such as JIRA, Confluence, Figma, analytics dashboards, Postman, and modern AI productivity tools",
+      "skill_type": "tool_proficiency",
+      "domain": "product_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "JIRA",
+        "Confluence",
+        "Figma",
+        "Postman"
+      ],
+      "technologies_named": [
+        "agile methodologies",
+        "analytics dashboards",
+        "AI productivity tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomy_ownership",
+      "raw_text_from_jd": "Comfortable operating with a high degree of ownership, autonomy, and accountability",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_execution_balance",
+      "raw_text_from_jd": "Able to balance strategic leadership with pragmatic execution in rapidly evolving environments",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Structured investments platform — end-to-end product domains covering strategy, execution, and operational scaling",
+    "business_model": "B2B fintech platform serving wealth management firms, financial advisors, structured investment issuers, and wholesalers",
+    "primary_metrics_inferred": [
+      "Platform scalability and operational efficiency",
+      "User experience improvements post-launch",
+      "Cross-functional execution velocity",
+      "Business impact of product domains owned"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "Sales",
+      "Marketing",
+      "Senior Business Leaders",
+      "Executive Stakeholders",
+      "Wealth management firms",
+      "Financial advisors",
+      "Issuers",
+      "Wholesalers"
+    ],
+    "core_responsibilities": [
+      "Engage with wealth management firms, financial advisors, structured investments issuers, wholesalers, and executive stakeholders to identify strategic opportunities and shape the future direction of the structured investments platform",
+      "Own and lead major product domains and strategic initiatives across the platform, ensuring strong execution, scalability, and alignment with long-term business objectives",
+      "Drive product strategy, prioritization, roadmap planning, and cross-functional alignment across engineering, operations, sales, marketing, and other product organizations",
+      "Lead the end-to-end lifecycle of product development from conception through launch, iteration, and operational scaling",
+      "Mentor and develop product managers while fostering a culture of ownership, accountability, excellence, and continuous learning",
+      "Partner closely with engineering leadership to ensure strong execution, operational continuity, and effective prioritization across multiple concurrent workstreams",
+      "Communicate effectively with senior stakeholders and executive leadership regarding product strategy, prioritization, execution risks, and business impact",
+      "Leverage AI-powered tools and workflows to improve productivity, analysis, communication quality, and organizational effectiveness",
+      "Monitor the performance of product areas post-launch and continuously seek opportunities to improve user experience, scalability, and operational efficiency"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      160000,
+      230000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity for all full-time employees",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "structured investments",
+    "product manager",
+    "wealth management",
+    "fintech",
+    "platform scalability",
+    "cross-functional leadership",
+    "roadmap planning",
+    "people management",
+    "stakeholder management",
+    "agile",
+    "capital markets",
+    "AI productivity tools",
+    "Vice President"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($160,000-$230,000 base)",
+    "Equity included for all full-time employees",
+    "Comprehensive benefits package including 100% employer paid dental, vision, telemedicine, and virtual mental health counseling",
+    "Unlimited PTO",
+    "Clearly defined responsibilities and qualifications",
+    "Highly visible leadership role within a strategically important business unit",
+    "Hybrid schedule with Friday remote flexibility"
+  ],
+  "red_flags": [
+    "No specific city listed for the role despite a mandatory in-office Mon-Thu requirement — candidates must verify location",
+    "Wide title range (VP to SVP) with corresponding wide comp range ($160K-$230K) suggests significant ambiguity in actual seniority and compensation outcome",
+    "No visa sponsorship information provided",
+    "Fintech/wealth management domain experience listed as 'preferable' in language but treated as effectively required given structured investments context"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title range VP/SVP, years requirement, comp range, and people management scope)",
+      "scope.business_model (inferred from product and customer descriptions)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.cities_listed (no city specified in JD body; left empty)",
+      "location.remote_us_eligible (inferred from Mon-Thu in-office requirement; Friday remote only)"
+    ],
+    "ambiguities": [
+      "Industry experience in fintech/wealth management/capital markets is listed as 'preferably' in the qualifications, but the core role context (structured investments platform) makes domain familiarity effectively required. Classified as hard given overall JD context.",
+      "No city or office location is mentioned in the JD body; the in-office requirement is stated but location is unknown — candidates should confirm with recruiter.",
+      "Title range spans VP to SVP with a $70K base salary spread, creating ambiguity about how the level will be determined and what the final offer will look like."
+    ]
+  }
+}

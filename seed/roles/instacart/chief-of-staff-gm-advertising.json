@@ -1,0 +1,263 @@
+{
+  "company": "Instacart",
+  "role_title": "Chief of Staff, GM Advertising",
+  "url": "https://instacart.careers/job/?gh_jid=7998350",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7998350",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-global",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Chief of Staff",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Director-equivalent",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of experience required",
+      "Trusted thought partner to a GM of a billion-dollar advertising business",
+      "Comp range $203K–$214K CAD, consistent with senior individual contributor"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_consulting_tech_advertising",
+      "raw_text_from_jd": "10+ years of experience in consulting, corporate tech, or advertising/media, with meaningful exposure to executive audiences.",
+      "skill_type": "years_of_experience",
+      "domain": "consulting_or_tech_or_advertising",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consulting",
+        "corporate tech",
+        "advertising",
+        "media"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "digital_advertising_domain_knowledge",
+      "raw_text_from_jd": "Strong grounding in digital advertising, retail media, or adjacent businesses—enough to engage credibly on the substance, not just the process.",
+      "skill_type": "domain_knowledge",
+      "domain": "digital_advertising_retail_media",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "digital advertising",
+        "retail media"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_eq_trusted_advisor",
+      "raw_text_from_jd": "High EQ and a track record of building trusted advisor relationships with senior leaders; known for being the person who can say the hard thing and still move the room forward.",
+      "skill_type": "capability",
+      "domain": "executive_relationship_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_ability_structured_plans",
+      "raw_text_from_jd": "Exceptional analytical ability—comfortable taking complex, ambiguous challenges and turning them into structured, actionable plans.",
+      "skill_type": "capability",
+      "domain": "analytical_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management_chops",
+      "raw_text_from_jd": "Demonstrated project management chops: managing multiple high-stakes workstreams simultaneously, under tight deadlines, without dropping balls.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Outstanding written and verbal communication skills—able to produce crisp executive-ready materials and represent the GM's voice with fidelity.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "high_growth_tech_company_experience",
+      "raw_text_from_jd": "Experience in high-growth, technology-driven companies where ambiguity is the norm and the playbook is still being written.",
+      "skill_type": "domain_knowledge",
+      "domain": "high_growth_tech_environments",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth, technology-driven companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_process_building",
+      "raw_text_from_jd": "Comfort building structured processes from scratch to deliver on complex, cross-functional objectives at scale.",
+      "skill_type": "capability",
+      "domain": "process_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "finance_partnership_budget",
+      "raw_text_from_jd": "Direct experience partnering with Finance on budget management and annual business planning.",
+      "skill_type": "capability",
+      "domain": "financial_planning_and_budget_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Only hiring in the following Canadian provinces: Ontario, Alberta, British Columbia, and Nova Scotia — US candidates not eligible per posting"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Advertising business — retail media platform across Instacart Marketplace, off-platform partnerships, and in-store touchpoints",
+    "business_model": "B2B retail media / advertising platform (billion-dollar scale)",
+    "primary_metrics_inferred": [
+      "Operating rhythm efficiency (meeting cadence, leadership alignment)",
+      "On-time delivery of priority initiatives",
+      "Budget accuracy and defensibility heading into annual planning",
+      "GM effectiveness and strategic leverage"
+    ],
+    "cross_functional_partners": [
+      "Finance",
+      "Engineering (implied)",
+      "Sales (implied)",
+      "Marketing (implied)",
+      "External partners"
+    ],
+    "core_responsibilities": [
+      "Design and execute the Ads organization's operating rhythm (team meetings, leadership cadences, organizational communications)",
+      "Prepare crisp briefings, talking points, and research for major meetings and external partners",
+      "Track deliverables across priority initiatives, surface blockers, and maintain stakeholder alignment",
+      "Maintain budget visibility across workforce and non-workforce spend in partnership with Finance",
+      "Serve as strategic thought partner and trusted advisor to the GM of Advertising"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "base_range_cad": [
+      203000,
+      214000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "new hire equity grant and annual refresh grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Chief of Staff",
+    "retail media",
+    "digital advertising",
+    "operating rhythm",
+    "executive communications",
+    "budget management",
+    "annual planning",
+    "cross-functional alignment",
+    "GM partnership",
+    "Instacart Advertising"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($203K–$214K CAD)",
+    "Equity grant included (new hire + annual refresh)",
+    "Clear articulation of what success looks like after 12 months",
+    "Flex First remote policy explicitly stated",
+    "Role has well-defined scope tied to a billion-dollar business"
+  ],
+  "red_flags": [
+    "Only open to candidates in four Canadian provinces (Ontario, Alberta, British Columbia, Nova Scotia) — very narrow geography for a remote role",
+    "No US hiring for this role, which may limit applicant pool significantly",
+    "Compensation stated in CAD only; USD equivalent not provided",
+    "No visa sponsorship information provided"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years of experience, scope, and comp range)",
+      "seniority.manages_people (inferred; no direct reports mentioned in JD)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly in JD)",
+      "scope.business_model (inferred from product description)",
+      "location.remote_us_eligible (inferred from explicit Canadian-provinces-only hiring statement)",
+      "compensation.base_range_usd (not stated; only CAD provided)"
+    ],
+    "ambiguities": [
+      "JD is tagged #LI-Remote and describes a Flex First policy globally, but the body explicitly states hiring is only in Ontario, Alberta, British Columbia, and Nova Scotia (Canada). This makes it 'remote' but Canada-only — classified as remote-global with the caveat captured in explicitly_excluded.",
+      "work_auth and visa_sponsorship not addressed in the JD body."
+    ]
+  }
+}

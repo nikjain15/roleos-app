@@ -1,0 +1,216 @@
+{
+  "company": "Harvey",
+  "role_title": "Technical Program Manager, Incident Response",
+  "url": "https://jobs.ashbyhq.com/harvey/76d7a078-01c9-48d1-8481-3bfb728b657e",
+  "ats_provider": "ashby",
+  "ats_job_id": "76d7a078-01c9-48d1-8481-3bfb728b657e",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Security / Incident Response TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in incident management, technical program management, or a related coordination-heavy role",
+      "Described as 'a senior cross-functional operator'",
+      "First dedicated incident response program hire with direct partnership with executive leadership",
+      "Comp range $150,900 - $226,300 USD"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_incident_or_tpm",
+      "raw_text_from_jd": "5+ years of experience in incident management, technical program management, or a related coordination-heavy role within a software or security organization.",
+      "skill_type": "years_of_experience",
+      "domain": "incident_management_or_technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "software",
+        "security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "lead_xfn_high_pressure",
+      "raw_text_from_jd": "Demonstrated ability to lead cross-functional teams through high-pressure situations with composure, clarity, and strong interpersonal judgment.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth_distributed_cloud_security",
+      "raw_text_from_jd": "Sufficient technical depth to understand distributed systems, cloud infrastructure, and security concepts at a level that enables effective triage and stakeholder translation.",
+      "skill_type": "domain_knowledge",
+      "domain": "distributed_systems_cloud_security",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems",
+        "cloud infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_skills_multi_workstream",
+      "raw_text_from_jd": "Exceptional organizational skills — able to manage multiple concurrent workstreams, track dependencies, and drive accountability without direct authority.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "build_ir_programs_from_scratch",
+      "raw_text_from_jd": "Experience building incident response or operational programs from scratch, including defining processes, documentation, and success metrics in ambiguous environments.",
+      "skill_type": "outcome",
+      "domain": "incident_response_program_building",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "emotional_intelligence_communication",
+      "raw_text_from_jd": "High emotional intelligence and the communication skills to operate credibly with engineers, executives, legal counsel, and external stakeholders alike.",
+      "skill_type": "cultural_fit",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Detection & Response function within Harvey's Information Security organization; security and reliability incident management across the AI-native SaaS platform",
+    "business_model": "enterprise SaaS, B2B, AI-native platform for legal and professional services",
+    "primary_metrics_inferred": [
+      "Incident resolution time",
+      "Post-incident remediation completion rate",
+      "Incident readiness (tabletop exercise outcomes, on-call improvements)",
+      "Stakeholder communication fidelity during incidents"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Security",
+      "Legal",
+      "Customer Success",
+      "Product",
+      "Executive Leadership"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end coordination of security and reliability incidents — from initial triage through resolution — ensuring clear roles, rapid decision-making, and structured communication across engineering, security, legal, and customer-facing teams.",
+      "Design and implement incident management processes, runbooks, and escalation frameworks that scale with Harvey's growth and reflect the realities of operating AI-native SaaS infrastructure.",
+      "Lead post-incident reviews and drive remediation programs to completion, tracking follow-up items across teams and holding stakeholders accountable to timelines.",
+      "Build and maintain incident readiness — including tabletop exercises, on-call coordination improvements, and tooling for real-time situational awareness.",
+      "Serve as the communication hub during active incidents, translating technical status into clear updates for executives, legal, and customer success without losing fidelity."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      150900,
+      226300
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "incident response",
+    "technical program manager",
+    "security",
+    "incident management",
+    "cross-functional",
+    "runbooks",
+    "post-incident review",
+    "distributed systems",
+    "cloud infrastructure",
+    "tabletop exercises",
+    "SaaS",
+    "AI",
+    "legal"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($150,900 - $226,300 USD)",
+    "First dedicated hire in the role — high visibility and ownership opportunity",
+    "Direct partnership with security engineering, product, and executive leadership",
+    "Clear mission and responsibilities described for the role",
+    "Harvey has strong product-market fit with 1500+ customers in 60+ countries"
+  ],
+  "red_flags": [
+    "Location type not specified — remote eligibility, hybrid expectations, and cities are all unclear",
+    "Visa sponsorship and work authorization not addressed",
+    "No equity or benefits details mentioned beyond base comp range",
+    "Equity not mentioned despite being a growth-stage AI company where equity is typically a major component"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'senior cross-functional operator' description + comp range + years required)",
+      "scope.business_model (inferred from product description — AI SaaS for legal/professional services)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.type (not stated; set to 'unclear')",
+      "compensation.location_pay_differential (inferred from 'Depending on your location' language in privacy notice context, though the comp range may also vary by location)"
+    ],
+    "ambiguities": [
+      "Location/work arrangement is entirely unstated — no city, no remote/hybrid/onsite designation provided in the JD body or metadata.",
+      "Equity is not mentioned despite this being a VC-backed AI startup where equity is commonly a major component; it is unclear whether equity is part of the package.",
+      "The compensation note 'Depending on your location' may imply geographic pay banding but no explicit tiers are given."
+    ]
+  }
+}

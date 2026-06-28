@@ -1,0 +1,292 @@
+{
+  "company": "Lyft",
+  "role_title": "Staff Technical Program Manager, Product & Rider Loyalty",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8433701002?gh_jid=8433701002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8433701002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week (Mondays, Wednesdays, and Thursdays); flexibility to work from anywhere up to 4 weeks per year",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Product-Embedded TPM (Loyalty & Payments focus)",
+  "seniority": {
+    "level": "Staff / Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title says 'Staff Technical Program Manager'",
+      "5-10+ years of experience required",
+      "Operates autonomously with only high-level direction",
+      "Expected base pay $176K-$220K in SF, consistent with Staff/Senior IC at a major tech company",
+      "JD body references 'Senior Technical Program Manager' in description text despite title being 'Staff'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_product_environment",
+      "raw_text_from_jd": "5-10+ years of experience in a customer-facing product environment, leading cross-functional teams to deliver complex product and platform initiatives iteratively, with multiple dependencies and constraints, in a highly dynamic and agile environment.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomous_operation_ambiguity",
+      "raw_text_from_jd": "Proven ability to operate effectively and autonomously across multiple teams in situations of extreme ambiguity, with only high-level direction.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "embedded_tpm_product_eng",
+      "raw_text_from_jd": "Experience as an embedded TPM partnering within product engineering teams, with the flexibility to shift into generalist capacity supporting multiple teams concurrently.",
+      "skill_type": "capability",
+      "domain": "technical_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "roadmaps_release_plans",
+      "raw_text_from_jd": "Experience building roadmaps, release plans, and program plans with a thorough understanding of dependency management.",
+      "skill_type": "capability",
+      "domain": "roadmap_and_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_communication_all_levels",
+      "raw_text_from_jd": "Able to communicate highly technical problems and solutions at all levels — from individual contributors to C-level executives.",
+      "skill_type": "capability",
+      "domain": "technical_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_options_presentation",
+      "raw_text_from_jd": "Experience compiling and presenting business and technology options, backed by data and experimentation, to decision makers.",
+      "skill_type": "capability",
+      "domain": "data_driven_decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Lead cross-functional product initiatives from ideation through planning, execution, launch, and post-launch — ensuring alignment, accountability, and measurable outcomes at every phase.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sdlc_hands_on",
+      "raw_text_from_jd": "Provide hands-on support across all phases of the software development lifecycle, including project planning, resource allocation, progress tracking, risk mitigation, KPI ownership and measurement, and leadership communications.",
+      "skill_type": "capability",
+      "domain": "software_development_lifecycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "loyalty_retention_programs",
+      "raw_text_from_jd": "Drive loyalty and retention product programs, working closely with product and engineering to define success metrics, prioritize roadmap investments, and accelerate delivery of features that deepen customer engagement and lifetime value.",
+      "skill_type": "outcome",
+      "domain": "loyalty_and_retention",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "regulatory_compliance_initiatives",
+      "raw_text_from_jd": "Lead regulatory and compliance-driven product initiatives, navigating ambiguity and coordinating across legal, policy, product, and engineering stakeholders.",
+      "skill_type": "capability",
+      "domain": "regulatory_and_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "loyalty_partnerships_pricing_experience",
+      "raw_text_from_jd": "Nice to Have: Experience with loyalty programs, partnerships, pricing models and other key strategic elements that drive product stickiness.",
+      "skill_type": "domain_knowledge",
+      "domain": "loyalty_partnerships_pricing",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Rideshare Partnerships, Loyalty, and Payments — building a singular loyalty offering for riders and drivers",
+    "business_model": "B2C rideshare platform (consumer loyalty and retention)",
+    "primary_metrics_inferred": [
+      "Customer engagement and lifetime value",
+      "Loyalty program adoption and stickiness",
+      "Rider and driver retention rates",
+      "KPI ownership and measurement across product initiatives"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Product",
+      "Data Science",
+      "Design",
+      "Analytics",
+      "Operations",
+      "Legal",
+      "Policy"
+    ],
+    "core_responsibilities": [
+      "Lead cross-functional product initiatives from ideation through planning, execution, launch, and post-launch",
+      "Provide hands-on support across all phases of the software development lifecycle including planning, resource allocation, progress tracking, risk mitigation, KPI ownership, and leadership communications",
+      "Partner with engineering, product, data science, design, operations, and other business functions",
+      "Drive loyalty and retention product programs, define success metrics, prioritize roadmap investments",
+      "Lead regulatory and compliance-driven product initiatives"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      176000,
+      220000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned but not detailed",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "TPM",
+    "loyalty programs",
+    "cross-functional",
+    "product initiatives",
+    "rideshare",
+    "partnerships",
+    "payments",
+    "roadmap",
+    "SDLC",
+    "retention",
+    "compliance",
+    "agile",
+    "dependency management",
+    "KPI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($176K-$220K base in SF)",
+    "Clear product surface and organizational focus (Partnerships, Loyalty and Payments)",
+    "Hybrid schedule is well-defined (3 specific days per week specified)",
+    "Generous benefits package including 18 weeks parental leave, 401(k) match, and mental health benefits",
+    "Only one item explicitly labeled 'Nice to Have,' so must-haves are well-defined"
+  ],
+  "red_flags": [
+    "JD title says 'Staff Technical Program Manager' but body copy refers to 'Senior Technical Program Manager' — possible title inconsistency worth clarifying",
+    "Role requires in-office 3 days/week in San Francisco only — no remote option for candidates outside SF area",
+    "Visa sponsorship status not mentioned anywhere in the JD",
+    "Compensation range is for SF area only; other locations not specified"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Staff' + comp range + autonomy signals; JD body inconsistently says 'Senior')",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not directly stated)",
+      "location.visa_sponsorship set to 'unclear' — not mentioned in JD",
+      "posting_first_seen and posting_last_updated (not available in provided data)"
+    ],
+    "ambiguities": [
+      "Role title is 'Staff Technical Program Manager' but the JD body says 'We are looking for a Senior Technical Program Manager' — may reflect a title inconsistency or copy-paste error; treated as Staff level per official title",
+      "Compensation stated as specific to San Francisco area; no ranges provided for other geographies, though hybrid schedule implies SF-based"
+    ]
+  }
+}

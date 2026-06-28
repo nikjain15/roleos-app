@@ -1,0 +1,284 @@
+{
+  "company": "Spotify",
+  "role_title": "Senior Product Manager - Core Experience",
+  "url": "https://jobs.lever.co/spotify/01afc9d0-ca8d-494f-a0c9-e95dc7c9e555",
+  "ats_provider": "lever",
+  "ats_job_id": "01afc9d0-ca8d-494f-a0c9-e95dc7c9e555",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "some in-person meetings, with flexibility to work from home",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (consumer at scale)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title is 'Senior Product Manager'",
+      "Comp range $147,595–$210,850 base, consistent with Senior PM at a large tech company",
+      "Expected to own product vision, strategy, and roadmap independently",
+      "Expected to influence senior stakeholders across teams"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "consumer_product_at_scale",
+      "raw_text_from_jd": "You have significant experience building and scaling consumer-facing digital products used by large audiences",
+      "skill_type": "years_of_experience",
+      "domain": "consumer_product_management",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_strategy_ownership",
+      "raw_text_from_jd": "You have a strong track record of owning product strategy, vision, and roadmaps for complex consumer products",
+      "skill_type": "outcome",
+      "domain": "product_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "concept_to_launch",
+      "raw_text_from_jd": "You have successfully led products from concept through launch, delivering meaningful customer and business outcomes",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "simplifying_complexity",
+      "raw_text_from_jd": "Skilled at distilling complex problems into simple, intuitive experiences",
+      "skill_type": "capability",
+      "domain": "ux_product_design_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_conversational_experience",
+      "raw_text_from_jd": "You have experience building AI-powered, conversational, search, recommendation, discovery, or personalization experiences and understand how to translate emerging technologies into meaningful customer value",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_and_conversational_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "conversational AI",
+        "search",
+        "recommendation",
+        "discovery",
+        "personalization"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "An excellent communicator, able to align stakeholders and influence decisions",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_and_experimentation",
+      "raw_text_from_jd": "Comfortable using data and experimentation to inform decisions",
+      "skill_type": "capability",
+      "domain": "data_driven_decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_judgment_ambiguity",
+      "raw_text_from_jd": "You have strong product judgment and are comfortable making strategic decisions and trade-offs in ambiguous environments",
+      "skill_type": "capability",
+      "domain": "strategic_decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_pov_long_term",
+      "raw_text_from_jd": "You bring a clear point of view on product strategy and can connect day-to-day product decisions to long-term customer and business outcomes",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "consumer_experience_passion",
+      "raw_text_from_jd": "You care deeply about creating exceptional consumer experiences and have a passion for understanding what drives user engagement, satisfaction, and loyalty",
+      "skill_type": "cultural_fit",
+      "domain": "consumer_experience",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Core Experience — conversational and AI-powered experiences for Spotify listeners across devices, apps, and platforms",
+    "business_model": "B2C consumer subscription / freemium audio streaming",
+    "primary_metrics_inferred": [
+      "User engagement and retention",
+      "Discovery and navigation success rates",
+      "Customer satisfaction / NPS",
+      "Business impact from AI-powered features"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Machine Learning",
+      "AI teams",
+      "Senior stakeholders"
+    ],
+    "core_responsibilities": [
+      "Define and drive product vision and strategy for conversational and AI-powered experiences that serve millions of Spotify listeners globally",
+      "Own and prioritize a long-term roadmap, making strategic trade-offs that balance customer needs, business impact, and technical opportunities",
+      "Identify customer needs, market opportunities, and emerging consumer behaviors to shape future product direction",
+      "Define intuitive user experiences that combine direct responses with seamless navigation across the app",
+      "Partner with engineering, design, and AI teams to deliver high-quality, scalable solutions",
+      "Use data, insights, and experimentation to inform decisions and improve user experience",
+      "Work in a cross-functional team to bring ideas from concept to launch",
+      "Shape product direction and influence decisions across teams and senior stakeholders to deliver meaningful outcomes for millions of Spotify listeners",
+      "Help drive alignment across the broader Spotify experience, ensuring consistency, quality, and impact across multiple user journeys and surfaces"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      147595,
+      210850
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "conversational AI",
+    "AI-powered experiences",
+    "consumer products",
+    "product strategy",
+    "roadmap",
+    "discovery",
+    "personalization",
+    "search",
+    "recommendation",
+    "experimentation",
+    "core experience",
+    "Spotify",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($147,595–$210,850 base) plus equity",
+    "Generous benefits: six months paid parental leave, 23 paid days off, monthly meal allowance",
+    "Hybrid flexibility explicitly offered — 'work where you work best'",
+    "Clear product surface and ownership area (conversational/AI experiences for Spotify listeners)",
+    "Role is at a globally recognized consumer tech brand with massive user scale",
+    "Explicit equal opportunity and inclusivity commitments"
+  ],
+  "red_flags": [
+    "No years-of-experience minimum stated, making seniority expectations ambiguous",
+    "Role is New York-based only; no remote option indicated for US candidates outside NY",
+    "Visa sponsorship status not mentioned anywhere in the JD",
+    "No mention of team size or reporting structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior PM' and comp range)",
+      "scope.business_model (inferred from Spotify's well-known B2C freemium audio streaming model)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.work_auth (not stated; defaulted to 'open')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
+    ],
+    "ambiguities": [
+      "No explicit years-of-experience number is given; 'significant experience' is the only qualifier — seniority is inferred from title and compensation.",
+      "Hybrid policy is described as 'some in-person meetings' with 'flexibility to work from home' but no percentage or day-count is specified.",
+      "Visa sponsorship is entirely unaddressed in the JD."
+    ]
+  }
+}

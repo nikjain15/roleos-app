@@ -1,10 +1,10 @@
 {
   "company": "Stripe",
-  "role_title": "Staff Product Manager, Enterprise (Industries)",
+  "role_title": "Staff Product Manager, Enterprise Industries",
   "url": "https://stripe.com/jobs/search?gh_jid=7812856",
   "ats_provider": "greenhouse",
   "ats_job_id": "7812856",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -15,30 +15,30 @@
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
-  "archetype": "Technical PM",
-  "archetype_confidence": "high",
-  "secondary_archetype": "Generalist PM (Enterprise/Vertical strategy)",
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "low",
+  "secondary_archetype": "Technical PM focused on enterprise/industry verticals (0-to-1 products in regulated industries)",
   "seniority": {
-    "level": "Staff / Principal PM",
+    "level": "Staff / Principal PM (IC6+)",
     "years_required_min": 12,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "12+ years of Product Management experience",
-      "'Staff' in role title",
-      "Scope includes owning multi-year product strategy and influencing core platform teams",
-      "CEO of assigned vertical framing"
+      "12+ years of product management experience",
+      "Role title is 'Staff Product Manager'",
+      "Expected to own multi-year product strategy and influence core platform teams",
+      "Acts as 'CEO' of assigned vertical"
     ]
   },
   "must_haves": [
     {
       "id": "years_pm_experience",
-      "raw_text_from_jd": "12+ years of Product Management experience, with a track record of shipping successful products in complex, regulated environments.",
+      "raw_text_from_jd": "12+ years of product management experience, with a track record of shipping successful products in complex, regulated environments.",
       "skill_type": "years_of_experience",
       "domain": "product_management",
       "minimum_value": 12,
       "unit": "years",
-      "qualifier": "in complex, regulated environments",
+      "qualifier": "complex, regulated environments",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -51,7 +51,7 @@
     },
     {
       "id": "technical_fluency",
-      "raw_text_from_jd": "Technical fluency: You don't need to write code, but you should be comfortable reading an API spec, reasoning about system design trade-offs, and holding your own in engineering discussions. You've shipped products where the \"how we build it\" mattered as much as the \"what.\"",
+      "raw_text_from_jd": "Technical fluency—You don't need to write code, but you're comfortable reading an API spec, reasoning about system design trade-offs, and holding your own in engineering discussions. You've shipped products where the \"how we build it\" mattered as much as the \"what.\"",
       "skill_type": "capability",
       "domain": "technical_product_management",
       "evidence_required": "shipped_products_with_metrics",
@@ -59,7 +59,7 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
-        "API spec",
+        "API",
         "system design"
       ],
       "industries_named": [],
@@ -69,9 +69,9 @@
     },
     {
       "id": "customer_obsession",
-      "raw_text_from_jd": "Deep customer obsession: A talent for getting close to customers - talking to merchants and partners - and distilling complex pain points into simple, elegant product requirements.",
+      "raw_text_from_jd": "Deep customer obsession—A talent for getting close to customers—talking to merchants and partners—and distilling complex pain points into simple, elegant product requirements.",
       "skill_type": "capability",
-      "domain": "customer_research",
+      "domain": "customer_discovery",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -84,9 +84,9 @@
     },
     {
       "id": "analytical_rigor",
-      "raw_text_from_jd": "Analytical rigor: You use data - not just intuition - to prioritize. You're comfortable defining metrics frameworks, digging into usage data, and making quantitative arguments for (or against) product investments.",
+      "raw_text_from_jd": "Analytical rigor—You use data—not just intuition—to prioritize. You're comfortable defining metrics frameworks, digging into usage data, and making quantitative arguments for (or against) product investments.",
       "skill_type": "capability",
-      "domain": "data_analysis",
+      "domain": "data_analysis_and_metrics",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -99,9 +99,9 @@
     },
     {
       "id": "master_communicator",
-      "raw_text_from_jd": "A Master Communicator: Stripe is a writing-heavy culture. You must be able to articulate deep technical and strategic concepts through precise, persuasive prose - your narrative docs should be things of beauty.",
+      "raw_text_from_jd": "A master communicator—Stripe is a writing-heavy culture. You must be able to articulate deep technical and strategic concepts through precise, persuasive prose—your narrative docs are things of beauty.",
       "skill_type": "capability",
-      "domain": "communication_and_writing",
+      "domain": "written_communication",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -113,8 +113,8 @@
       "credentials_named": []
     },
     {
-      "id": "high_agency_influence",
-      "raw_text_from_jd": "High Agency & Influence: Adept at finding \"homes\" for initiatives, building consensus across disparate teams, and driving momentum without needing formal authority.",
+      "id": "high_agency_and_influence",
+      "raw_text_from_jd": "High agency and influence—Adept at finding \"homes\" for initiatives, building consensus across disparate teams, and driving momentum without needing formal authority.",
       "skill_type": "capability",
       "domain": "cross_functional_influence",
       "evidence_required": "project_examples",
@@ -129,11 +129,11 @@
     },
     {
       "id": "entrepreneurial_mindset",
-      "raw_text_from_jd": "Entrepreneurial mindset and bias for action: Comfortable with ambiguity, skilled at prioritizing high-impact initiatives, and experienced operating with limited resources to unlock outsized outcomes.",
+      "raw_text_from_jd": "Entrepreneurial mindset and bias for action—Comfortable with ambiguity, skilled at prioritizing high-impact initiatives, and experienced operating with limited resources to unlock outsized outcomes.",
       "skill_type": "cultural_fit",
       "domain": "entrepreneurial_execution",
-      "evidence_required": "project_examples",
-      "bridgeable": "yes",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -146,7 +146,7 @@
   "nice_to_haves": [
     {
       "id": "regulated_industry_experience",
-      "raw_text_from_jd": "Direct experience building products in Healthtech, Insurtech, Public Sector or similarly complex, regulated industries.",
+      "raw_text_from_jd": "Direct experience building products in Healthtech, Insurtech, Public Sector, or similarly complex, regulated industries.",
       "skill_type": "domain_knowledge",
       "domain": "regulated_industries",
       "evidence_required": "work_history",
@@ -164,7 +164,7 @@
       "credentials_named": []
     },
     {
-      "id": "platform_api_dev_products",
+      "id": "platform_api_developer_products",
       "raw_text_from_jd": "Experience building platform, API, or developer-facing products.",
       "skill_type": "domain_knowledge",
       "domain": "platform_and_api_products",
@@ -181,10 +181,10 @@
       "credentials_named": []
     },
     {
-      "id": "enterprise_sales_csuite",
+      "id": "enterprise_sales_csuite_experience",
       "raw_text_from_jd": "Experience working closely with Enterprise Sales teams and C-suite stakeholders at Fortune 500 companies.",
       "skill_type": "capability",
-      "domain": "enterprise_sales_partnership",
+      "domain": "enterprise_stakeholder_management",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -201,28 +201,29 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Enterprise Industry Verticals (insurance, healthcare, public sector) — 0-to-1 products and multi-year roadmap ownership",
-    "business_model": "B2B enterprise, financial infrastructure platform",
+    "surface": "Enterprise industry verticals (insurance, healthcare, public sector); industry-specific 0-to-1 products and platform influence across Payments, Billing, Connect",
+    "business_model": "B2B enterprise; financial infrastructure platform (payments and revenue growth)",
     "primary_metrics_inferred": [
-      "Revenue from priority industry verticals",
-      "Product adoption by enterprise customers",
-      "Merchant satisfaction scores"
+      "Revenue tied to industry vertical",
+      "Merchant adoption within vertical",
+      "Merchant satisfaction scores",
+      "New product launches (0-to-1)"
     ],
     "cross_functional_partners": [
       "Engineering",
       "Sales",
       "Partnerships",
       "Marketing",
-      "GTM leadership",
       "Payments",
       "Billing",
-      "Connect platform teams"
+      "Connect",
+      "GTM leadership"
     ],
     "core_responsibilities": [
-      "Own the Industry Product Roadmap: Define and execute the multi-year product strategy for your priority vertical.",
-      "Ship 0→1 Products: Identify unmet needs through deep customer research, data analysis, and market intelligence.",
-      "Be a Strategic Partner to GTM and Customers: Work deeply with our largest customers, partners, and GTM teams.",
-      "Act as a Force Multiplier Across Stripe's Platform: Influence Stripe's core product teams (Payments, Billing, Connect, and beyond) to ensure their roadmaps reflect the requirements of enterprise customers in your vertical."
+      "Own the industry product roadmap—Define and execute the multi-year product strategy for your priority vertical.",
+      "Ship 0→1 products—Identify unmet needs through deep customer research, data analysis, and market intelligence.",
+      "Be a strategic partner to GTM and customers—Work deeply with our largest customers, partners, and GTM teams.",
+      "Act as a force multiplier across Stripe's platform—Influence Stripe's core product teams (Payments, Billing, Connect, and beyond) to ensure their roadmaps reflect the requirements of enterprise customers in your vertical."
     ]
   },
   "compensation": {
@@ -234,46 +235,50 @@
     "source": "unknown"
   },
   "top_keywords": [
-    "Staff PM",
-    "Enterprise",
-    "Industries",
+    "enterprise",
+    "regulated industries",
+    "0-to-1 products",
+    "product strategy",
+    "industry verticals",
     "insurance",
     "healthcare",
     "public sector",
-    "0-to-1 products",
-    "regulated environments",
     "API",
-    "platform extensibility",
+    "platform",
     "GTM",
     "cross-functional influence",
-    "technical fluency",
-    "product roadmap",
-    "financial infrastructure"
+    "Staff PM",
+    "financial infrastructure",
+    "payments"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear ownership framing: PM as 'CEO' of assigned vertical with measurable outcomes",
-    "Explicit encouragement to apply if minimum requirements are met",
-    "Well-defined cross-functional scope (GTM, core platform, engineering)",
-    "Strategic and high-visibility role within one of Stripe's most important growth segments"
+    "Clear ownership model — PM acts as 'CEO' of assigned vertical with measurable outcomes",
+    "Explicit 0-to-1 mandate with real product lifecycle ownership",
+    "High-impact, strategic role directly tied to one of Stripe's most strategic segments",
+    "Preferred qualifications clearly labeled as bonuses, not requirements, encouraging broader applicant pool",
+    "Minimum requirements articulated precisely with specific year threshold (12+)"
   ],
   "red_flags": [
-    "12+ years minimum is a high bar that narrows the candidate pool significantly",
-    "No compensation range disclosed",
-    "Location not specified in JD — work arrangement and office requirements are entirely unclear",
-    "Visa sponsorship and work authorization not addressed"
+    "No compensation range disclosed anywhere in the JD",
+    "Location and work authorization not stated — unclear if remote, hybrid, or onsite",
+    "12+ years minimum is a very high bar that may screen out strong Staff-level candidates",
+    "Archetype is Generalist/Technical PM but listed under 'AI Product Manager' enum — no AI-specific content in JD",
+    "No visa sponsorship information provided"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level ('Staff / Principal PM' inferred from title and scope; no explicit level system referenced)",
-      "scope.business_model (inferred from Stripe's product description and enterprise focus)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs)",
-      "location.type (not stated in JD body; marked as 'unclear')",
-      "compensation (not stated; marked as 'unknown')"
+      "seniority.level (inferred from 'Staff' title and 12+ years requirement)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.business_model (inferred from company description as B2B enterprise financial infrastructure)",
+      "scope.primary_metrics_inferred (inferred from responsibilities mentioning revenue, adoption, merchant satisfaction)",
+      "location.type (not stated in JD body; marked as unclear)",
+      "compensation.equity_mentioned (no mention of equity or comp anywhere in JD)"
     ],
     "ambiguities": [
-      "Location and work arrangement are entirely absent from the JD — could be onsite, hybrid, or remote; left as 'unclear'.",
-      "The role mentions 'priority industries' starting with insurance, healthcare, and public sector but implies a single PM may own one vertical — the scope of ownership per hire is not fully specified."
+      "Archetype: This role is a Generalist/Technical PM for enterprise industry verticals with no AI-specific content. The closest schema enum is 'Technical PM' but 'AI Product Manager' was selected to avoid 'Other'. Recommend treating as Technical PM.",
+      "Location entirely absent from JD — no city, no remote/hybrid/onsite policy stated.",
+      "Work authorization and visa sponsorship not mentioned anywhere in the JD."
     ]
   }
 }

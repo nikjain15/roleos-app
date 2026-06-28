@@ -1,0 +1,278 @@
+{
+  "company": "DoorDash",
+  "role_title": "Director, Customer Experience Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7983379",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7983379",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Customer Experience / CX Operations Director",
+  "seniority": {
+    "level": "Director (Senior People Leader)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "10+ years of experience required",
+      "Title is Director",
+      "'Lead a high-performing S&O team' implies direct people management",
+      "Comp range $170K-$250K base consistent with Director-level at DoorDash",
+      "Partners with senior business leaders and sets executive-level direction"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_strategy_ops",
+      "raw_text_from_jd": "You have 10+ years of experience solving complex problems in strategy, operations, product operations, customer experience, marketplace operations, consulting, or a similarly analytical operating role.",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "marketplace operations",
+        "consulting"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native_operator",
+      "raw_text_from_jd": "You are an AI-native operator - you have solved productivity problems and are able to dig into data quickly, and surface insights to translate to action",
+      "skill_type": "capability",
+      "domain": "ai_and_data_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "global_ops_scale",
+      "raw_text_from_jd": "You are energized by working within a 24/7 global operations organization to scale new processes and initiatives",
+      "skill_type": "cultural_fit",
+      "domain": "global_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_versatility",
+      "raw_text_from_jd": "You are comfortable with ambiguity and can scale yourself to work on different types of problems - from case reviews to setting high level vision and strategy",
+      "skill_type": "capability",
+      "domain": "strategic_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "You have experience collaborating with multiple different types of stakeholders - from Product to Operations to Analytics",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "team_building_leadership",
+      "raw_text_from_jd": "You have built, developed, and raised the bar for high-performing teams.",
+      "skill_type": "outcome",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "Bachelor's Degree required, MBA or Master's Degree a plus",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's Degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "mba_or_masters",
+      "raw_text_from_jd": "Bachelor's Degree required, MBA or Master's Degree a plus",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA",
+        "Master's Degree"
+      ]
+    },
+    {
+      "id": "ai_native_mindset_builder",
+      "raw_text_from_jd": "We are especially excited about leaders who bring an AI-native operating mindset: people who have used AI, automation, lightweight tooling, or internal apps to solve real problems, improve team productivity, and redesign manual workflows.",
+      "skill_type": "capability",
+      "domain": "ai_tooling_and_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Customer experience strategy and operations across consumers, Dashers, New Verticals, International, Marketplace, and DashPass",
+    "business_model": "marketplace / on-demand delivery platform (B2C and B2B)",
+    "primary_metrics_inferred": [
+      "Customer satisfaction / CSAT across consumer and Dasher journeys",
+      "Support contact resolution quality and efficiency",
+      "Friction reduction in last-mile experience",
+      "Team productivity and operational throughput",
+      "Scale of support infrastructure vs cost"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Analytics",
+      "Fraud",
+      "Operations",
+      "Marketplace",
+      "New Verticals",
+      "International",
+      "Dasher",
+      "DashPass"
+    ],
+    "core_responsibilities": [
+      "Define the vision, metrics, and operating principles for a best-in-class customer experience across consumers, Dashers, and emerging business lines",
+      "Lead a high-impact S&O team responsible for turning defining the customer experience using a multitude of inputs",
+      "Redesign how CX work gets done by combining people, process, product, data, and AI-enabled workflows",
+      "Partner with Product, Engineering, Analytics, Fraud, Marketplace, New Verticals, International, Dasher, and DashPass teams",
+      "Operate from strategy to lowest-level detail: setting executive-level direction while staying close to data, user journeys, case reviews, and frontline operational reality",
+      "Build and scale new processes, tools, and mechanisms that improve quality, reduce friction, and help teams move faster"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      170000,
+      250000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Customer Experience",
+    "Strategy & Operations",
+    "AI-native",
+    "marketplace operations",
+    "Dashers",
+    "support operations",
+    "cross-functional",
+    "global operations",
+    "process redesign",
+    "Director"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($170K-$250K base) with equity upside",
+    "Broad ownership scope across major DoorDash business lines (high impact / visibility)",
+    "Explicit AI-native mindset call-out signals progressive, modern operating culture",
+    "Comprehensive benefits package including 16 weeks paid parental leave",
+    "Role spans strategy to execution — high growth and learning opportunity"
+  ],
+  "red_flags": [
+    "Location/work arrangement not specified in the JD body — remote eligibility and office requirements are unclear",
+    "Pay range is wide ($80K spread) suggesting significant variation by location or experience, making comp expectations uncertain",
+    "No visa sponsorship information provided",
+    "Posting dates not available — unclear how fresh this role is"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (set to 'unclear' — no explicit remote/hybrid/onsite policy stated in JD body)",
+      "location.remote_us_eligible (not stated)",
+      "location.visa_sponsorship (not stated)",
+      "seniority.level (inferred from title 'Director', comp range, and people management signals)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from company description)",
+      "compensation.location_pay_differential (inferred from 'Base salary is localized according to an employee's work location')"
+    ],
+    "ambiguities": [
+      "The AI-native mindset requirement appears in the 'About the Role' section as an aspiration ('We are especially excited about') rather than a hard requirement in the 'We're excited about you because' section — treated as nice-to-have, though a related data/AI capability requirement in the must-haves section captures the harder version",
+      "Work location not specified — the national pay range notice mentions Illinois and Colorado which implies US-remote or multi-city eligibility, but no explicit location policy is stated",
+      "It is unclear whether the role is based in a specific city or is fully remote within the US"
+    ]
+  }
+}

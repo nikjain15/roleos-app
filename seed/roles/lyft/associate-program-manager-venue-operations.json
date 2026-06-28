@@ -1,0 +1,269 @@
+{
+  "company": "Lyft",
+  "role_title": "Associate Program Manager, Venue Operations",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8608888002?gh_jid=8608888002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8608888002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Toronto"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 3 days per week, including Mondays, Wednesdays, and Thursdays",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Venue / Field Operations PM",
+  "seniority": {
+    "level": "Associate / Junior IC",
+    "years_required_min": 2,
+    "years_required_max": 4,
+    "manages_people": false,
+    "level_signals": [
+      "2–4 years of experience in program management, operations, or a related field",
+      "Role title is 'Associate Program Manager'",
+      "Works with oversight from senior team members",
+      "Base pay range CAD $71,200 - CAD $89,000 consistent with associate/junior level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_pm_ops",
+      "raw_text_from_jd": "2–4 years of experience in program management, operations, or a related field",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_or_operations",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_proficiency",
+      "raw_text_from_jd": "SQL proficiency (basic to intermediate) — comfortable querying datasets, interpreting dashboards, and doing ad-hoc analysis in tools like Mode",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Mode"
+      ],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_oriented_follow_through",
+      "raw_text_from_jd": "Detail-oriented with strong follow-through; you complete what you start and document what you did",
+      "skill_type": "capability",
+      "domain": "execution_discipline",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "proactive_communicator",
+      "raw_text_from_jd": "Clear, proactive communicator who keeps stakeholders informed without being prompted",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "reprioritization_fast_paced",
+      "raw_text_from_jd": "Comfortable reprioritizing in a fast-paced environment based on urgency and business need",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_tracking_tools",
+      "raw_text_from_jd": "Familiarity with project tracking tools (e.g., Jira) and Google Suite",
+      "skill_type": "tool_proficiency",
+      "domain": "project_management",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Jira",
+        "Google Suite"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "toronto_based",
+      "raw_text_from_jd": "Based in or able to work from Toronto",
+      "skill_type": "capability",
+      "domain": "location_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Toronto"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "travel_and_passport",
+      "raw_text_from_jd": "Willingness to travel up to 25% of the time and have a valid passport. Nights and/or weekends are occasionally required for event support.",
+      "skill_type": "capability",
+      "domain": "travel_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "toronto_local_market_knowledge",
+      "raw_text_from_jd": "Based in or able to work from Toronto; knowledge of local market context a plus",
+      "skill_type": "domain_knowledge",
+      "domain": "local_market_context",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Toronto"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Venue Operations — managing Lyft's presence at thousands of venue locations including sports stadiums, concert venues, conventions, and festivals",
+    "business_model": "marketplace / rideshare platform, B2C",
+    "primary_metrics_inferred": [
+      "Venue configuration accuracy",
+      "Partner request SLA adherence",
+      "Venue performance trends and anomaly detection"
+    ],
+    "cross_functional_partners": [
+      "BD",
+      "Legal",
+      "Product",
+      "Mapping",
+      "Engineering",
+      "Data teams"
+    ],
+    "core_responsibilities": [
+      "Execute and maintain venue configurations in Scope Studio, including event scheduling, venue pins, road closures, and pickup/drop-off zones",
+      "Support new venue launches and configuration updates, ensuring accuracy against physical ground conditions",
+      "Participate in venue audits — reviewing existing configurations, identifying gaps, and documenting corrective action",
+      "Monitor venue performance using dashboards and analytics tools; surface trends and flag anomalies with context",
+      "Manage inbound partner requests through the team's email alias and Jira board, responding within SLA targets",
+      "Coordinate with non-contractual partners (NCPs) and internal teams (BD, Legal, Product) to resolve operational issues and fulfill requests",
+      "Own execution of assigned workstreams end-to-end, along with special projects",
+      "Identify opportunities to improve repetitive processes and document improvements for team use",
+      "Provide proactive status updates to stakeholders; escalate blockers with relevant context before they become issues"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned alongside base pay",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "venue operations",
+    "program management",
+    "Scope Studio",
+    "venue configuration",
+    "Jira",
+    "SQL",
+    "partner operations",
+    "SLA",
+    "cross-functional",
+    "events",
+    "pickup/drop-off zones",
+    "dashboards",
+    "process improvement"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range explicitly stated (CAD $71,200 - $89,000)",
+    "Hybrid schedule clearly defined (3 days/week in office with specific days named)",
+    "Role fills an existing vacancy — not a speculative hire",
+    "Clear ownership and scope described for an associate-level role",
+    "Benefits package is detailed and comprehensive (RRSP match, 18 weeks parental leave, etc.)",
+    "Cross-functional exposure to engineering, mapping, data, legal, and BD teams"
+  ],
+  "red_flags": [
+    "Toronto presence required — eliminates remote candidates outside commuting range",
+    "Up to 25% travel required plus occasional nights/weekends for event support — schedule flexibility is a real constraint",
+    "Compensation stated in CAD, not USD — role is Canada-based only",
+    "Visa sponsorship and work authorization not addressed in the JD"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Associate', years range 2-4, and oversight structure)",
+      "scope.business_model (inferred from Lyft's rideshare platform description)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "compensation.base_range_usd set to null — compensation stated in CAD, not USD",
+      "location.work_auth and location.visa_sponsorship (not addressed in JD)"
+    ],
+    "ambiguities": [
+      "Compensation is stated in CAD ($71,200 - $89,000); base_range_usd left null as no USD equivalent is provided",
+      "'Based in or able to work from Toronto' is listed under Experience section — treated as hard requirement given hybrid mandate, with local market knowledge as the soft add-on",
+      "Scope Studio is listed as a tool the candidate will use — it is unclear if prior familiarity is required or if on-the-job training is assumed; treated as not a must-have since the JD frames it as something the candidate will 'develop deep expertise in'"
+    ]
+  }
+}

@@ -1,0 +1,309 @@
+{
+  "company": "Legora",
+  "role_title": "Revenue Operations Senior Analyst",
+  "url": "https://jobs.ashbyhq.com/legora/281afaa4-d4e6-446a-8826-c2e4ddbc6685",
+  "ats_provider": "ashby",
+  "ats_job_id": "281afaa4-d4e6-446a-8826-c2e4ddbc6685",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "New York, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "5 days per week onsite",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Revenue Operations / Quote-to-Cash Analyst",
+  "seniority": {
+    "level": "Mid-level IC (Senior Analyst)",
+    "years_required_min": 2,
+    "years_required_max": 5,
+    "manages_people": false,
+    "level_signals": [
+      "2–5+ years in revenue operations, billing operations, finance operations, business operations, deal desk, or SaaS operations",
+      "Title is Senior Analyst, not Manager",
+      "Reports to / works closely with a Quote-to-Cash lead",
+      "JD mentions growth path 'into broader RevOps, Q2C, or systems roles over time'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_revops_billing_ops",
+      "raw_text_from_jd": "2–5+ years in revenue operations, billing operations, finance operations, business operations, deal desk, or SaaS operations",
+      "skill_type": "years_of_experience",
+      "domain": "revenue_operations_or_billing_operations",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving",
+      "raw_text_from_jd": "Strong analytical and problem-solving skills",
+      "skill_type": "capability",
+      "domain": "analytics_and_problem_solving",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "attention_to_detail",
+      "raw_text_from_jd": "Exceptional attention to detail and operational rigor",
+      "skill_type": "capability",
+      "domain": "operational_excellence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "salesforce_familiarity",
+      "raw_text_from_jd": "Familiarity with Salesforce or similar business systems",
+      "skill_type": "tool_proficiency",
+      "domain": "crm_systems",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "excel_google_sheets",
+      "raw_text_from_jd": "Strong Excel / Google Sheets skills",
+      "skill_type": "tool_proficiency",
+      "domain": "spreadsheet_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Excel",
+        "Google Sheets"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_workflow_management",
+      "raw_text_from_jd": "Ability to manage multiple workflows in a fast-paced environment",
+      "skill_type": "capability",
+      "domain": "workflow_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Strong communication and cross-functional collaboration skills",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "saas_quote_to_cash",
+      "raw_text_from_jd": "Experience supporting SaaS quote-to-cash or billing workflows",
+      "skill_type": "domain_knowledge",
+      "domain": "quote_to_cash",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cpq_billing_subscription_systems",
+      "raw_text_from_jd": "Experience working with CPQ, billing, or subscription systems",
+      "skill_type": "tool_proficiency",
+      "domain": "cpq_and_billing_systems",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [
+        "Nue"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_growth_b2b_saas_ai",
+      "raw_text_from_jd": "Experience in high-growth B2B SaaS or AI companies",
+      "skill_type": "domain_knowledge",
+      "domain": "high_growth_company_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS",
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth B2B SaaS",
+        "AI companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "subscription_billing_recurring_revenue",
+      "raw_text_from_jd": "Familiarity with subscription billing and recurring revenue models",
+      "skill_type": "domain_knowledge",
+      "domain": "subscription_billing_and_recurring_revenue",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Quote-to-cash operations, billing, renewals, invoicing, and commercial infrastructure",
+    "business_model": "B2B SaaS, subscription-based, $100M+ ARR",
+    "primary_metrics_inferred": [
+      "Accuracy and scalability of quote-to-cash operations",
+      "Billing reconciliation and invoice QA quality",
+      "Data quality and process consistency across systems",
+      "Operational efficiency across billing and commercial workflows"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Finance",
+      "Customer Success",
+      "Legal",
+      "RevOps"
+    ],
+    "core_responsibilities": [
+      "Support day-to-day quote-to-cash workflows across quoting, billing, invoicing, renewals, and amendments",
+      "Help ensure accuracy and operational integrity across commercial processes",
+      "Review and validate order, subscription, and billing data",
+      "Assist with invoice QA and billing reconciliation",
+      "Support subscription and contract audits",
+      "Partner closely with Finance on operational billing processes and reporting",
+      "Help identify operational inefficiencies and areas for automation",
+      "Work closely with the Quote-to-Cash lead on process improvements and workflow optimization",
+      "Support operational workflows across Salesforce, Nue, billing systems, and related tooling",
+      "Help maintain data quality and process consistency across systems"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "revenue operations",
+    "quote-to-cash",
+    "billing operations",
+    "Salesforce",
+    "Nue",
+    "invoicing",
+    "renewals",
+    "SaaS",
+    "subscription billing",
+    "CPQ",
+    "operational excellence",
+    "cross-functional collaboration",
+    "data quality",
+    "finance operations"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Company has reached $100M+ ARR — strong product-market fit signal",
+    "Clear reporting structure with a Quote-to-Cash lead",
+    "Explicit growth path mentioned ('broader RevOps, Q2C, or systems roles over time')",
+    "Comprehensive benefits package disclosed in detail (medical, dental, vision, 401K match, unlimited PTO)",
+    "Company-provided daily lunch and in-person environment",
+    "Real customer logos disclosed (Cleary Gottlieb, Linklaters, Barclays, etc.)"
+  ],
+  "red_flags": [
+    "5 days per week onsite requirement in NYC Union Square — no remote or hybrid flexibility",
+    "Compensation range not disclosed",
+    "Visa sponsorship status not stated",
+    "Years range '2–5+' is ambiguous — unclear whether 2 years is truly sufficient or whether 5+ is preferred"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior Analyst', years range, and reporting relationship to Q2C lead)",
+      "scope.business_model (inferred from '$100M+ ARR' and SaaS context in JD)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated as KPIs)",
+      "compensation.equity_mentioned (no equity mentioned anywhere in JD)",
+      "nice_to_haves id cpq_billing_subscription_systems: Nue named because it appears in the responsibilities section as a specific tool, though the nice-to-have text does not name it explicitly"
+    ],
+    "ambiguities": [
+      "Years range '2–5+' is ambiguous — the '+' after 5 suggests 5+ is acceptable but the range starts at 2; it is unclear if 2 years is the true floor or if this is aspirational",
+      "Visa sponsorship is not addressed anywhere in the JD; marked as 'unclear'"
+    ]
+  }
+}

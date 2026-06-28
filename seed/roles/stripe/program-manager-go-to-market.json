@@ -4,19 +4,19 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7922532",
   "ats_provider": "greenhouse",
   "ats_job_id": "7922532",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "unclear",
     "cities_listed": [],
-    "remote_us_eligible": false,
+    "remote_us_eligible": null,
     "office_time_required": null,
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
-  "archetype": "Technical Program Manager",
-  "archetype_confidence": "medium",
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
   "secondary_archetype": "BizOps / Strategy & Ops",
   "seniority": {
     "level": "Mid-Senior IC",
@@ -24,17 +24,17 @@
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "4+ years of experience in program management, GTM strategy/operations, business operations, management consulting, or a related discipline",
-      "Influencing across all levels from front lines to C-Suite",
-      "Executive reporting and business reviews responsibility"
+      "4+ years of experience in program management, GTM strategy and operations, business operations, management consulting, or a related discipline",
+      "Accountability for large-scale GTM programs end-to-end",
+      "Executive reporting and influencing C-Suite"
     ]
   },
   "must_haves": [
     {
-      "id": "years_program_management",
-      "raw_text_from_jd": "4+ years of experience in program management, GTM strategy/operations, business operations, management consulting, or a related discipline.",
+      "id": "years_pm_gtm_ops",
+      "raw_text_from_jd": "4+ years of experience in program management, GTM strategy and operations, business operations, management consulting, or a related discipline",
       "skill_type": "years_of_experience",
-      "domain": "program_management_or_gtm_operations",
+      "domain": "program_management_or_gtm_strategy",
       "minimum_value": 4,
       "unit": "years",
       "is_combined": false,
@@ -45,16 +45,14 @@
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
-      "employer_types_named": [
-        "management consulting"
-      ],
+      "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "cross_functional_program_delivery",
-      "raw_text_from_jd": "A strong track record of delivering complex, cross-functional programs in a changing, ambiguous environment end-to-end (from problem definition through rollout and adoption).",
+      "id": "complex_cross_functional_programs",
+      "raw_text_from_jd": "A strong track record of delivering complex, cross-functional programs in a changing, ambiguous environment end-to-end (from problem definition through rollout and adoption)",
       "skill_type": "outcome",
-      "domain": "cross_functional_program_management",
+      "domain": "program_delivery",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -66,8 +64,8 @@
       "credentials_named": []
     },
     {
-      "id": "problem_solving_analysis",
-      "raw_text_from_jd": "Deep problem solving and analysis experience (solving business problems—commercial, operational, financial) in a Sales-oriented environment. You must have the ability to diagnose, simplify, and structure problems and solutions while having command of \"the details\".",
+      "id": "problem_solving_analysis_sales",
+      "raw_text_from_jd": "Deep problem-solving and analysis experience (solving business problems—commercial, operational, financial) in a Sales-oriented environment. You must have the ability to diagnose, simplify, and structure problems and solutions while having command of \"the details\".",
       "skill_type": "capability",
       "domain": "business_analysis_and_problem_solving",
       "evidence_required": "project_examples",
@@ -81,10 +79,10 @@
       "credentials_named": []
     },
     {
-      "id": "communication_and_influence",
+      "id": "analytical_communication_influence",
       "raw_text_from_jd": "Excellent analytical, presentation, and communication experience, influencing across all levels from front lines to C-Suite. You set a high-bar in terms of communication effectiveness.",
       "skill_type": "capability",
-      "domain": "executive_communication_and_influence",
+      "domain": "communication_and_stakeholder_influence",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -96,9 +94,9 @@
       "credentials_named": []
     },
     {
-      "id": "adaptability_high_growth",
-      "raw_text_from_jd": "The ability to seamlessly transition from strategy, high level to very detailed, and a willingness to \"roll up your sleeves\". You work well under pressure, with a high degree of adaptability and flexibility in a fast-paced, rapidly changing environment.",
-      "skill_type": "cultural_fit",
+      "id": "strategy_to_detail_adaptability",
+      "raw_text_from_jd": "The ability to seamlessly transition from strategy, high-level to very detailed, and a willingness to \"roll up your sleeves.\" You work well under pressure, with a high degree of adaptability and flexibility in a fast-paced, rapidly changing environment.",
+      "skill_type": "capability",
       "domain": "adaptability_and_execution",
       "evidence_required": "work_history",
       "bridgeable": "yes",
@@ -111,12 +109,12 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_stakeholder_influence",
-      "raw_text_from_jd": "Ability to influence cross functional stakeholders to align and execute on common objectives.",
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Ability to influence cross-functional stakeholders to align and execute on common objectives",
       "skill_type": "capability",
       "domain": "stakeholder_management",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -129,9 +127,9 @@
   "nice_to_haves": [
     {
       "id": "incomplete_data_reprioritization",
-      "raw_text_from_jd": "Experience operating with incomplete data and reprioritizing as business needs change.",
+      "raw_text_from_jd": "Experience operating with incomplete data and reprioritizing as business needs change",
       "skill_type": "capability",
-      "domain": "ambiguity_and_prioritization",
+      "domain": "decision_making_under_ambiguity",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -143,10 +141,10 @@
       "credentials_named": []
     },
     {
-      "id": "enterprise_gtm_experience",
-      "raw_text_from_jd": "Prior experience supporting enterprise GTM motions (Sales-led and/or partner-led) and partnering with senior stakeholders through executive-facing cadences (QBRs, exec briefings, account/territory planning).",
+      "id": "enterprise_gtm_exec_cadences",
+      "raw_text_from_jd": "Prior experience supporting enterprise GTM motions (Sales-led and partner-led) and partnering with senior stakeholders through executive-facing cadences (QBRs, exec briefings, and account and territory planning)",
       "skill_type": "domain_knowledge",
-      "domain": "enterprise_gtm_and_partner_sales",
+      "domain": "enterprise_gtm_and_executive_cadences",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -158,10 +156,10 @@
       "credentials_named": []
     },
     {
-      "id": "field_execution_programs",
-      "raw_text_from_jd": "Background in GTM programs that improve field execution—such as sales plays, partner co-sell motions, enablement rollouts, pipeline discipline, or launch/readiness programs across Sales, Marketing, and Product.",
+      "id": "gtm_field_execution_programs",
+      "raw_text_from_jd": "Background in GTM programs that improve field execution—such as sales plays, partner co-sell motions, enablement rollouts, pipeline discipline, or launch and readiness programs across Sales, Marketing, and Product",
       "skill_type": "domain_knowledge",
-      "domain": "gtm_field_execution_programs",
+      "domain": "gtm_field_execution",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -174,17 +172,14 @@
     },
     {
       "id": "data_science_dashboards_automation",
-      "raw_text_from_jd": "Experience partnering with Data Science or building dashboards/automation for program observability.",
+      "raw_text_from_jd": "Experience partnering with Data Science or building dashboards and automation for program observability",
       "skill_type": "capability",
-      "domain": "data_analytics_and_dashboards",
+      "domain": "data_and_analytics",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
-      "technologies_named": [
-        "dashboards",
-        "automation"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -192,9 +187,9 @@
     },
     {
       "id": "pipeline_forecasting_rhythms",
-      "raw_text_from_jd": "Familiarity with pipeline and forecasting operating rhythms (e.g., weekly forecast, MBR/QBR inputs) and improving pipeline hygiene at scale.",
+      "raw_text_from_jd": "Familiarity with pipeline and forecasting operating rhythms (e.g., weekly forecast, MBR and QBR inputs) and improving pipeline hygiene at scale",
       "skill_type": "domain_knowledge",
-      "domain": "pipeline_management_and_forecasting",
+      "domain": "pipeline_and_forecasting_operations",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -206,15 +201,16 @@
       "credentials_named": []
     },
     {
-      "id": "sales_ops_process_tooling",
-      "raw_text_from_jd": "Experience partnering closely with Sales Strategy and Operations on process and tooling improvements (e.g., dashboards, workflow automation, data quality initiatives).",
+      "id": "sales_strategy_ops_tooling",
+      "raw_text_from_jd": "Experience partnering closely with Sales Strategy and Operations on process and tooling improvements (e.g., dashboards, workflow automation, data quality initiatives)",
       "skill_type": "capability",
-      "domain": "sales_operations_process_improvement",
+      "domain": "sales_strategy_and_operations",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
+        "dashboards",
         "workflow automation"
       ],
       "industries_named": [],
@@ -224,9 +220,9 @@
     },
     {
       "id": "sql_analytics_tools",
-      "raw_text_from_jd": "Comfort with SQL or analytics tools to interrogate program and user data.",
+      "raw_text_from_jd": "Comfort with SQL or analytics tools to interrogate program and user data",
       "skill_type": "tool_proficiency",
-      "domain": "data_querying_and_analytics",
+      "domain": "data_analysis",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
@@ -241,7 +237,7 @@
     },
     {
       "id": "payments_fintech_experience",
-      "raw_text_from_jd": "Prior payments or fintech experience.",
+      "raw_text_from_jd": "Prior payments or fintech experience",
       "skill_type": "domain_knowledge",
       "domain": "payments_or_fintech",
       "evidence_required": "work_history",
@@ -261,19 +257,18 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "GTM programs across Americas Sales org and Global Product Sales, Alliances and Channels organization (platform partners, SIs/consultancies)",
-    "business_model": "B2B enterprise sales, partner/channel sales",
+    "surface": "Sales Strategy and Operations — GTM programs for Americas Sales org, Global Product Sales, and Alliances/Channels (platform partners, SIs, consultancies)",
+    "business_model": "B2B financial infrastructure / payments platform",
     "primary_metrics_inferred": [
       "Pipeline created",
-      "Conversion rate",
-      "Win rate",
+      "Conversion and win rate",
       "Sales cycle time",
-      "Partner-influenced growth",
-      "Pipeline hygiene and forecast consistency"
+      "Partner-influenced revenue",
+      "Forecast accuracy and pipeline hygiene"
     ],
     "cross_functional_partners": [
-      "Sales leadership",
-      "Partner teams",
+      "Sales Leadership",
+      "Partner Teams",
       "Marketing",
       "Product",
       "Sales Enablement",
@@ -283,13 +278,13 @@
     ],
     "core_responsibilities": [
       "Build and drive large-scale GTM programs end-to-end—aligning stakeholders, defining the plan and operating model, and ensuring measurable outcomes",
-      "Drive the full-stack of change management (stakeholder engagement, champions, communications, and enablement)",
+      "Drive the 'full-stack' of change management (stakeholder engagement, champions, communications, and enablement) so programs land successfully with Sales and Partners",
       "Support operating rhythms that improve pipeline quality, stage discipline, and forecast consistency",
-      "Provide central project management support on high-priority global initiatives",
-      "Support partner-inclusive motions that embed partners into the selling process",
-      "Build concise exec-ready readouts and drive decisions in WBR/MBR/QBR forums",
+      "Provide central project management support on high-priority global initiatives ('Big Rocks' workstreams)",
+      "Support partner-inclusive motions that embed partners into the selling process from opportunity identification through close and expansion",
+      "Build concise exec-ready readouts connecting program activity to outcomes and drive decisions in WBR, MBR, and QBR forums",
       "Develop a roadmap for foundational requirements to operate the program efficiently and at scale",
-      "Set goals and targets for programs, run key forums/updates, and keep executives and cross-functional partners informed"
+      "Set goals and targets for programs, run key forums and updates, and keep executives and cross-functional partners informed on progress, risks, and decisions"
     ]
   },
   "compensation": {
@@ -301,48 +296,47 @@
     "source": "unknown"
   },
   "top_keywords": [
-    "GTM programs",
-    "program management",
-    "sales operations",
-    "partner and channel",
+    "GTM program management",
+    "Sales Strategy and Operations",
     "pipeline hygiene",
     "forecasting",
-    "cross-functional",
-    "executive reporting",
-    "QBR/MBR",
+    "partner co-sell",
+    "channel GTM",
     "change management",
-    "co-sell",
+    "executive reporting",
+    "QBR",
+    "cross-functional",
     "Americas Sales",
     "alliances",
-    "scalability",
-    "fintech"
+    "enablement"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear scope of responsibility and ownership described in detail",
-    "Cross-functional partners explicitly named (Sales, Marketing, Product, Enablement, RevOps, Finance)",
-    "Preferred qualifications are explicitly labeled as a bonus, not a requirement—low bar to apply",
-    "High-visibility role with executive-facing deliverables (WBR/MBR/QBR)",
-    "Stripe's scale and mission provide strong career signal"
+    "Clear scope and responsibilities laid out with specificity",
+    "Explicit minimum vs. preferred qualifications distinction reduces ambiguity",
+    "High-visibility role with C-Suite exposure and exec reporting",
+    "Cross-functional breadth (Sales, Marketing, Product, Finance, RevOps, Data Science) offers broad career development",
+    "Stripe's scale and mission ('increase the GDP of the internet') are compelling draws",
+    "Candidates explicitly encouraged to apply if they meet minimum requirements"
   ],
   "red_flags": [
-    "No location, compensation, or visa/sponsorship information disclosed anywhere in the JD",
-    "Role title is 'Program Manager' but scope is closer to BizOps/Sales Strategy—may attract wrong candidates",
-    "No posting date provided; staleness of listing is unknown"
+    "No location, work authorization, or visa sponsorship information provided in the JD",
+    "No compensation range disclosed",
+    "Role demands simultaneously high-level strategic thinking and granular operational detail — may be a wide scope for one person",
+    "Payments/fintech domain experience listed as 'nice to have' but Stripe is deeply specialized — may carry more weight in practice"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years requirement, exec exposure, and scope complexity)",
-      "seniority.manages_people (inferred as false; no management language in JD)",
-      "scope.business_model (inferred from GTM context and partner/channel language)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs)",
-      "location.type (set to 'unclear' — no location information anywhere in JD)",
-      "location.work_auth and visa_sponsorship (set to 'unclear' — not mentioned)",
-      "compensation.source (set to 'unknown' — no comp data provided)"
+      "seniority.level (inferred from years requirement and scope of responsibilities)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.business_model (inferred from company description as B2B payments platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities section; not explicitly stated as KPIs)",
+      "location.type set to 'unclear' — no location or remote/hybrid policy stated in JD",
+      "compensation.source set to 'unknown' — no comp data in JD"
     ],
     "ambiguities": [
-      "The first preferred qualification ('Experience operating with incomplete data and reprioritizing as business needs change') appears as a standalone line before the bulleted list — it is treated as a preferred qualification based on context under the 'Preferred qualifications' header.",
-      "Archetype is 'Technical Program Manager' by schema but the role is non-technical GTM ops; 'Program Manager' with BizOps flavor is the best available fit."
+      "Location and remote eligibility are entirely absent from the JD — impossible to determine whether this is remote, hybrid, or onsite",
+      "Visa sponsorship and work authorization status are not mentioned anywhere in the JD"
     ]
   }
 }

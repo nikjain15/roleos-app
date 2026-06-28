@@ -1,0 +1,319 @@
+{
+  "company": "Airbnb",
+  "role_title": "Strategic Business Operations Manager - Community Support",
+  "url": "https://careers.airbnb.com/positions/8001769?gh_jid=8001769",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8001769",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional work at an Airbnb office or attendance at offsites, as agreed to with your manager",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Program Manager",
+  "seniority": {
+    "level": "Senior Manager / Principal IC",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years experience managing large scale operations and strategy in roles with increasing responsibility",
+      "Reports to Director of Global Community Support Business Operations",
+      "Base pay range $168K-$210K USD consistent with senior individual contributor or manager level",
+      "Engagement with senior and executive stakeholders"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_ops_strategy",
+      "raw_text_from_jd": "10+ years experience managing large scale operations and strategy in roles with increasing responsibility.",
+      "skill_type": "years_of_experience",
+      "domain": "operations_and_strategy",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_design_optimization",
+      "raw_text_from_jd": "Experience with process design and optimization, strategic operations and customer support strategies.",
+      "skill_type": "capability",
+      "domain": "process_design_and_customer_support_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "global_matrixed_environment",
+      "raw_text_from_jd": "Experience working in global/matrixed environment with the ability to solve problems and influence cross-functional teams.",
+      "skill_type": "capability",
+      "domain": "global_operations_cross_functional_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_presentation_skills",
+      "raw_text_from_jd": "Executive presentation skills with the ability to develop a strategy, communicate it clearly and get buy-in and support to execute.",
+      "skill_type": "capability",
+      "domain": "executive_communication_and_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "senior_stakeholder_management",
+      "raw_text_from_jd": "Excellent stakeholder management skills - including proven experience working with senior leaders on global programs.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Outstanding written and verbal communication and presentation skills; ability to articulate a vision, strategy, ideas and decisions clearly and succinctly.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "attention_to_detail_results_at_scale",
+      "raw_text_from_jd": "Proven experience in a role requiring high-attention to detail and organization skills with a proven track record of leading/driving results at scale.",
+      "skill_type": "outcome",
+      "domain": "operational_excellence",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_fast_paced",
+      "raw_text_from_jd": "Ability to thrive in ambiguity in a fast-paced, hyper-growth organization.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_data_driven",
+      "raw_text_from_jd": "Strong analytical and problem-solving skills with a proven track record for using data to develop and implement strategic initiatives and drive key business decisions.",
+      "skill_type": "capability",
+      "domain": "data_driven_decision_making",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_proficiency",
+      "raw_text_from_jd": "Proficiency in leveraging AI tools and technologies to drive operational efficiency, enhance decision-making and scale program outcomes.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools_for_operations",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools and technologies"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "sql_python_tableau",
+      "raw_text_from_jd": "Experience using SQL, Python and/or Tableau is preferred.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "SQL",
+        "Python",
+        "Tableau"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ops_consulting_finance_background",
+      "raw_text_from_jd": "Operations, Management Consulting or Financial/analytics background preferred.",
+      "skill_type": "domain_knowledge",
+      "domain": "operations_consulting_finance_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Management Consulting firm"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Global Goodwill Program within Community Support — covering tens of millions of customer interactions yearly across phone, messaging, chat, and social media",
+    "business_model": "marketplace / consumer platform (B2C and B2B2C)",
+    "primary_metrics_inferred": [
+      "Goodwill budget adherence and operational expense targets",
+      "Customer satisfaction (CSAT) metrics tied to goodwill initiatives",
+      "Program operational effectiveness and usage audit results",
+      "Global rollout completion and governance adherence"
+    ],
+    "cross_functional_partners": [
+      "Service Delivery",
+      "Partner Strategy",
+      "Trust",
+      "Legal",
+      "Product Management",
+      "Finance",
+      "Analytics"
+    ],
+    "core_responsibilities": [
+      "Design and lead the global goodwill program strategy, operational design, and implementation frameworks",
+      "Be the main point of contact driving core product and policy initiatives related to goodwill extension",
+      "Define and lead strategy and roadmap for the CS Goodwill Program balancing priorities against business and financial goals",
+      "Build an operating management system to track program performance across a global network of partner sites",
+      "Drive continuous improvement and innovation in goodwill program initiatives",
+      "Establish metrics to measure the success of goodwill initiatives and tune to improve customer satisfaction",
+      "Drive the Goodwill budget targeting process in partnership with finance",
+      "Report on operational effectiveness of Goodwill programs using data-driven insights",
+      "Assess and mitigate risks associated with goodwill practices and compliance with business policies",
+      "Liaise with Community Support teams to implement and monitor goodwill programs and provide leadership readouts",
+      "Manage programs across outsourced partnerships through cross-functional collaboration",
+      "Collaborate on communication and rollout plans globally"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      168000,
+      210000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "eligible for bonus, equity, benefits, and Employee Travel Credits",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "goodwill program",
+    "global operations",
+    "community support",
+    "business operations",
+    "strategic operations",
+    "budget management",
+    "stakeholder management",
+    "cross-functional collaboration",
+    "data-driven",
+    "customer experience",
+    "continuous improvement",
+    "outsourced partnerships",
+    "risk management",
+    "AI tools"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($168K-$210K base)",
+    "Remote-US eligible role with flexibility",
+    "Clear program ownership with high strategic visibility (reports to Director)",
+    "Equity and bonus mentioned in addition to base",
+    "Broad and well-defined cross-functional scope signals organizational importance of the role",
+    "Program has real commercial and human impact at scale (2B+ guest arrivals globally)"
+  ],
+  "red_flags": [
+    "Must reside in a state where Airbnb has a registered entity — excluded states list is evolving and could limit remote candidates",
+    "Visa sponsorship status not explicitly addressed — unclear for non-US candidates",
+    "Role requires managing a global goodwill budget; financial accountability is high-stakes without explicit finance team support clarity",
+    "'Job titles may span more than one career level' language suggests comp and leveling may be negotiated downward"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, years required, and reporting structure)",
+      "seniority.manages_people (not stated; assumed false as no direct reports mentioned)",
+      "scope.business_model (inferred from Airbnb platform description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs)",
+      "location.work_auth (inferred as no-sponsorship based on state registration restriction language and no mention of sponsorship)",
+      "location.visa_sponsorship (unclear; not stated in JD)"
+    ],
+    "ambiguities": [
+      "Work authorization and visa sponsorship are not explicitly addressed; the state-registration restriction implies US-only eligibility but sponsorship is not mentioned — treated as 'unclear' for visa_sponsorship and 'no-sponsorship' for work_auth",
+      "Role described as 'Business Operations Manager' but responsibilities are more akin to a Senior Program Manager or Strategy & Ops lead — archetype defaulted to BizOps / Strategy & Ops with secondary Program Manager",
+      "manages_people is not stated; the role has a broad span of influence across global partner sites and cross-functional teams but no explicit mention of direct reports"
+    ]
+  }
+}

@@ -1,0 +1,316 @@
+{
+  "company": "Asana",
+  "role_title": "Enterprise Product Manager",
+  "url": "https://www.asana.com/jobs/apply/7863427?gh_jid=7863427",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7863427",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Vancouver"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Monday, Tuesday, and Thursday in-office; Wednesday optional WFH; Friday depends on work type",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Enterprise / Revenue Technology Product Manager (internal IT/systems PM)",
+  "seniority": {
+    "level": "Senior IC / Lead PM (Director-adjacent)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "10+ years of experience in Product Management, Revenue Technology, Business Systems, or related GTM technology domains",
+      "Lead a team of Product Owners",
+      "Experience mentoring product managers or product owners",
+      "Proven ability to lead large-scale cross-functional initiatives and influence executive stakeholders",
+      "Comp range CAD 178,000–209,000 consistent with senior individual contributor / lead level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_pm_revtech",
+      "raw_text_from_jd": "10+ years of experience in Product Management, Revenue Technology, Business Systems, or related GTM technology domains in high-growth SaaS or enterprise environments.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_revenue_technology",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS",
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth SaaS",
+        "enterprise"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "salesforce_crm_expertise",
+      "raw_text_from_jd": "Deep expertise with Salesforce CRM and adjacent revenue platforms supporting sales and quote-to-cash operations.",
+      "skill_type": "tool_proficiency",
+      "domain": "crm_revenue_platforms",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce CRM"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "domain_expertise_revenue_ops",
+      "raw_text_from_jd": "Strong understanding of enterprise sales processes and revenue operations, including Revenue Planning, Account & Contact Management, Opportunity Management, Forecasting, Territory Management, Sales Compensation, CPQ and Quote-to-Cash processes, Contract Lifecycle Management, Billing and Provisioning workflows.",
+      "skill_type": "domain_knowledge",
+      "domain": "revenue_operations_enterprise_sales",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "CPQ",
+        "Quote-to-Cash",
+        "Contract Lifecycle Management"
+      ],
+      "industries_named": [
+        "enterprise"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership_influence",
+      "raw_text_from_jd": "Proven ability to lead large-scale cross-functional initiatives and influence executive stakeholders, business leaders, and technical teams.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mentoring_product_managers",
+      "raw_text_from_jd": "Experience mentoring product managers or product owners in fast-paced and evolving environments.",
+      "skill_type": "capability",
+      "domain": "people_leadership_mentoring",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_technical_acumen",
+      "raw_text_from_jd": "Strong strategic thinking, problem-solving, and analytical capabilities with the ability to translate business needs into scalable system and process solutions. Comfortable working across technical architecture, integrations, data models, and operational processes.",
+      "skill_type": "capability",
+      "domain": "business_and_technical_acumen",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "integrations",
+        "data models"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_engineering_partnership",
+      "raw_text_from_jd": "Experience partnering with Engineering, Data, RevOps, and Business Systems teams to design and implement enterprise-grade solutions. Ability to leverage analytics, user research, and operational data to drive prioritization and product decisions.",
+      "skill_type": "capability",
+      "domain": "data_driven_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_stakeholder_management",
+      "raw_text_from_jd": "Excellent communication, stakeholder management, and organizational skills with a proven ability to manage multiple priorities and deliver results in complex environments.",
+      "skill_type": "capability",
+      "domain": "communication_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_degree",
+      "raw_text_from_jd": "Degree in Computer Science, Business Management, or a related field.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "degree in Computer Science",
+        "degree in Business Management"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_tools_curiosity",
+      "raw_text_from_jd": "Demonstrates curiosity about AI tools and emerging technologies, with a willingness to learn and leverage them to enhance productivity, collaboration, or decision-making",
+      "skill_type": "cultural_fit",
+      "domain": "ai_emerging_technology",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "leads a team of Product Owners (size not specified)",
+    "surface": "Revenue Technology (RevTech) ecosystem — CRM, CPQ, forecasting, territory management, compensation, contract lifecycle management, billing, and provisioning systems",
+    "business_model": "internal enterprise technology / IT product management within a SaaS company (B2B SaaS)",
+    "primary_metrics_inferred": [
+      "Product adoption",
+      "Process efficiency",
+      "Forecast accuracy",
+      "Revenue impact",
+      "User experience",
+      "Sales productivity"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "RevOps",
+      "Finance",
+      "CX",
+      "Channel",
+      "Engineering",
+      "Legal",
+      "Data",
+      "Business Systems"
+    ],
+    "core_responsibilities": [
+      "Define and drive the product vision and strategy for Asana's Revenue Technology ecosystem",
+      "Develop and maintain a multi-year product roadmap across CRM, forecasting, territory management, compensation, CPQ, contracting, billing, and provisioning systems",
+      "Lead modernization and optimization of core revenue workflows and systems",
+      "Drive adoption of AI-powered and automation-first capabilities across the revenue technology stack",
+      "Establish KPIs, operational metrics, and reporting frameworks to measure product adoption and revenue impact",
+      "Serve as the connective layer across Sales, RevOps, Finance, Channel, Legal, CX, Data, and Engineering teams",
+      "Evaluate and manage strategic technology platforms and vendor partnerships",
+      "Lead a team of Product Owners and drive Core pillar capability development"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "base_range_local": [
+      178000,
+      209000
+    ],
+    "base_range_currency": "CAD",
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as additional component of compensation package",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Revenue Technology",
+    "Salesforce CRM",
+    "Quote-to-Cash",
+    "CPQ",
+    "revenue operations",
+    "enterprise product management",
+    "sales technology",
+    "AI automation",
+    "cross-functional leadership",
+    "roadmap",
+    "forecasting",
+    "Contract Lifecycle Management",
+    "GTM technology",
+    "RevTech",
+    "SaaS"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range explicitly stated in CAD (178,000–209,000)",
+    "Equity mentioned as part of compensation package",
+    "Clear product surface and ownership area (Revenue Technology ecosystem)",
+    "Encourages applications from candidates who don't meet every listed requirement",
+    "Asana recognized as Fortune Best Workplaces 7+ years — culture signal",
+    "Specific office days stated upfront (Mon/Tue/Thu), reducing ambiguity about hybrid expectations"
+  ],
+  "red_flags": [
+    "Role is Vancouver-office-centric hybrid (Mon/Tue/Thu in office) — eliminates remote candidates outside Vancouver",
+    "Compensation stated in CAD only; USD equivalent not provided, limiting easy comparison for US-based candidates",
+    "High buzzword density makes it harder to identify the true scope and differentiation of the role",
+    "The 'Enterprise Product Manager' title is atypical — this role functions more like a Director-level internal systems/IT PM managing Product Owners, which may not match standard PM career path expectations",
+    "10+ years hard requirement with deep Salesforce and QTC expertise narrows the candidate pool significantly",
+    "Work authorization and visa sponsorship not addressed anywhere in the JD"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 10+ years requirement, team management, and comp range)",
+      "seniority.manages_people (inferred from 'lead a team of Product Owners')",
+      "scope.business_model (inferred from company description and internal RevTech context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not a direct quote)",
+      "compensation.base_range_usd (null — only CAD range stated; not converted to USD)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)"
+    ],
+    "ambiguities": [
+      "The role title 'Enterprise Product Manager' typically implies an external-facing product role, but the JD describes an internal IT/Enterprise Technology systems PM managing Revenue Technology platforms — more akin to a Director of Revenue Technology or Enterprise Systems PM.",
+      "Friday work-from-home is conditional ('depends on the type of work you do and the teams with which you partner') — actual in-office requirement is ambiguous for Fridays.",
+      "Education requirement says 'Degree' without specifying bachelor's vs. master's; treated as bachelor's-level minimum but could be interpreted more broadly.",
+      "The JD does not state whether the role manages direct reports beyond Product Owners or if it has people management (performance review) responsibilities — inferred as yes based on 'lead a team of Product Owners' and mentoring language."
+    ]
+  }
+}

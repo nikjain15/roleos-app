@@ -1,0 +1,265 @@
+{
+  "company": "Stripe",
+  "role_title": "People Solutions Program Manager",
+  "url": "https://stripe.com/jobs/search?gh_jid=7594208",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7594208",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in product development, technical program management, or internal systems design",
+      "Expected to advise leaders and own multi-quarter roadmaps",
+      "Consultant and strategist role with domain expertise"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_internal_systems",
+      "raw_text_from_jd": "5+ years of experience in product development, technical program management, or internal systems design in an internal HR business function, including experience in global mobility technology, within high-growth or technology companies",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management_hr_systems",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "HR",
+        "global mobility technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth companies",
+        "technology companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_llm_fluency",
+      "raw_text_from_jd": "AI and LLM fluency, including practical experience using LLM-based tools",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_llm_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "LLMs",
+        "LLM-based tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_requirements_mapping",
+      "raw_text_from_jd": "Superior ability to understand and map out system-agnostic business requirements across complex, interconnected systems and support their translation to technology",
+      "skill_type": "capability",
+      "domain": "business_requirements_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Strong communication and collaboration skills, with experience partnering with a broad set of cross-functional stakeholders at all levels",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_acumen_ambiguity",
+      "raw_text_from_jd": "Acute business acumen with a demonstrated ability to operate effectively in ambiguous, dynamic, high-velocity situations, and to manage and draw insights from data while navigating complexity",
+      "skill_type": "capability",
+      "domain": "business_acumen_data_driven_decision_making",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "Bachelor's degree in business administration, human resources, technology or a related field.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    },
+    {
+      "id": "software_engineering_team_experience",
+      "raw_text_from_jd": "Experience working in a software engineering team or organization.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "internal_systems_knowledge",
+      "raw_text_from_jd": "Basic understanding of core internal systems (ex. HRIS, ATS, CRM, LMS, Ticketing, Finance systems).",
+      "skill_type": "domain_knowledge",
+      "domain": "internal_enterprise_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "HRIS",
+        "ATS",
+        "CRM",
+        "LMS"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Employee Experience technology design, implementation, and enhancement across Stripe's People Team",
+    "business_model": "internal platform / HR technology enablement",
+    "primary_metrics_inferred": [
+      "Solution adoption rates",
+      "ROI of technology investments",
+      "Employee experience quality metrics",
+      "On-time delivery of technology roadmap milestones"
+    ],
+    "cross_functional_partners": [
+      "People Team",
+      "Finance",
+      "Corporate Technology",
+      "Workplace",
+      "Engineers",
+      "Designers",
+      "Systems Analysts",
+      "Product Managers",
+      "Communications",
+      "Legal",
+      "PMO",
+      "Operations"
+    ],
+    "core_responsibilities": [
+      "Partner with stakeholders to define multi-quarter technology roadmaps and articulate ROI",
+      "Act as a product leader by understanding employee experience needs and creating mockups to drive alignment",
+      "Conduct third-party vendor analyses and deliver build-or-buy recommendations",
+      "Collaborate with engineers, designers, systems analysts, and PMs to translate requirements into technical designs",
+      "Use data, storytelling, and KPIs to support prioritization decisions and monitor solution adoption",
+      "Apply structured project management practices to deliver solutions on time",
+      "Partner with PMO, Systems, Operations, and Communications teams to launch new solutions and facilitate approval processes"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "technical program management",
+    "employee experience",
+    "HR technology",
+    "LLM",
+    "AI fluency",
+    "roadmap",
+    "vendor evaluation",
+    "build vs buy",
+    "cross-functional",
+    "global mobility",
+    "HRIS",
+    "internal systems",
+    "KPI",
+    "ROI",
+    "stakeholder management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear scope of responsibilities covering strategic and execution dimensions",
+    "Explicitly states preferred qualifications are a bonus, not a requirement, encouraging broader applicants",
+    "Cross-functional visibility with senior stakeholders at Stripe",
+    "Stripe's stated mission and scale offer significant impact and growth potential"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Location and remote/hybrid/onsite policy not stated anywhere in the JD",
+    "Work authorization and visa sponsorship not mentioned",
+    "Requirement for 'global mobility technology' experience is a specific niche that may narrow the pool significantly"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and scope of responsibilities; not explicitly stated)",
+      "scope.business_model (inferred from team description as internal platform/HR tech enablement)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed in JD)",
+      "location.type (not stated; defaulted to 'unclear')",
+      "location.work_auth (not stated; defaulted to 'unclear')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
+    ],
+    "ambiguities": [
+      "The JD does not specify location, city, remote eligibility, or office time requirements. Location type left as 'unclear'.",
+      "The 'global mobility technology' sub-requirement within the 5+ years requirement is a specific domain; it is ambiguous whether candidates need deep expertise or general familiarity within the broader 5+ year context."
+    ]
+  }
+}

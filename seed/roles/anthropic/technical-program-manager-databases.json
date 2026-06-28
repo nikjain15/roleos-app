@@ -1,0 +1,270 @@
+{
+  "company": "Anthropic",
+  "role_title": "Technical Program Manager, Databases",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5251612008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5251612008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% of the time",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Infrastructure / Platform TPM",
+  "seniority": {
+    "level": "Senior IC (likely Staff / Senior TPM)",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Comp range $365K-$435K base, consistent with senior IC at Anthropic",
+      "'Several years of experience in technical program management' — vague but implies seasoned professional",
+      "Mandate spans cross-region, multi-cloud, and hybrid cloud strategies for critical infrastructure",
+      "External vendor and hyperscaler relationship ownership at working level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "tpm_experience",
+      "raw_text_from_jd": "Have several years of experience in technical program management, with a track record of successfully delivering complex, cross-functional programs",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": null,
+      "unit": "years",
+      "qualifier": "several",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "database_infra_experience",
+      "raw_text_from_jd": "Have experience with database, storage, or core infrastructure programs and can engage meaningfully with the engineers who design and operate them",
+      "skill_type": "domain_knowledge",
+      "domain": "database_and_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "database",
+        "storage",
+        "core infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vendor_cloud_relationship_management",
+      "raw_text_from_jd": "Have managed external vendor or cloud provider relationships at the working level, including commitments, escalations, and joint roadmaps",
+      "skill_type": "capability",
+      "domain": "vendor_and_partner_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "database vendors",
+        "hyperscalers"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "organization_parallel_workstreams",
+      "raw_text_from_jd": "Are highly organized and can manage multiple parallel workstreams effectively across distributed teams",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_tolerance",
+      "raw_text_from_jd": "Thrive in unstructured environments with a knack for bringing order to chaos and creating clarity in ambiguous situations",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_influence",
+      "raw_text_from_jd": "Have excellent written and verbal communication skills, with the ability to influence without authority",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_alignment",
+      "raw_text_from_jd": "Are passionate about Anthropic's mission and interested in the challenges of operating AI infrastructure safely and reliably",
+      "skill_type": "cultural_fit",
+      "domain": "ai_safety_mission",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Minimum education: Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cross_region_multi_cloud_experience",
+      "raw_text_from_jd": "Have experience with cross-region, multi-cloud, or hybrid cloud infrastructure (preferred but not required)",
+      "skill_type": "domain_knowledge",
+      "domain": "cloud_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "cross-region",
+        "multi-cloud",
+        "hybrid cloud"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Database infrastructure underpinning Claude, Anthropic APIs, and internal systems — spanning cross-region resilience, multi-cloud operations, and private/public/hybrid cloud footprint",
+    "business_model": "internal platform / infrastructure (supports B2C and B2B products)",
+    "primary_metrics_inferred": [
+      "Database availability (24x7x365)",
+      "Successful delivery of cross-region, multi-cloud, and hybrid cloud programs",
+      "Vendor and hyperscaler commitment adherence",
+      "Risk mitigation across critical infrastructure"
+    ],
+    "cross_functional_partners": [
+      "Database vendors",
+      "Hyperscalers",
+      "Internal platform teams",
+      "Infrastructure teams"
+    ],
+    "core_responsibilities": [
+      "Own the roadmap and execution across cross-region, multi-cloud, and private/public/hybrid cloud strategy pillars",
+      "Coordinate across database vendors, hyperscalers, internal platform teams, and infrastructure teams",
+      "Manage external vendor and hyperscaler relationships at the working level: commitments, escalations, and joint roadmaps",
+      "Drive dependencies, risks, and tradeoffs for databases as critical infrastructure",
+      "Create program documentation including roadmaps, status reports, risk assessments, and communication plans",
+      "Facilitate technical decision-making by bringing together stakeholders, driving consensus, and ensuring timely resolution of blocking issues"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      365000,
+      435000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned (suggests options/RSUs are part of package)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "databases",
+    "cross-region",
+    "multi-cloud",
+    "hybrid cloud",
+    "infrastructure",
+    "hyperscalers",
+    "vendor management",
+    "availability",
+    "AI infrastructure"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($365K-$435K base)",
+    "Visa sponsorship explicitly offered (with caveats)",
+    "Clear mandate and three concrete strategy pillars — not vague",
+    "Explicitly encourages applications from candidates who don't meet every qualification",
+    "Cross-region/multi-cloud experience listed as preferred, not required — lowers barrier to entry"
+  ],
+  "red_flags": [
+    "Years of experience not quantified ('several years') — internal leveling may be opaque to candidates",
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "Very broad coordination scope (database vendors, hyperscalers, internal platform, infrastructure) suggests high complexity and potential for stakeholder overload"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and program scope; not stated explicitly)",
+      "seniority.years_required_min (JD says 'several years' but gives no numeric floor; left null)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and success definition; not stated verbatim)",
+      "scope.business_model (inferred from product context)",
+      "location.cities_listed (inferred from HQ reference; no explicit city stated in role section)"
+    ],
+    "ambiguities": [
+      "'Several years of experience' is intentionally vague; no numeric minimum is provided, making it difficult to assess hard vs. soft threshold.",
+      "Cross-region/multi-cloud experience is explicitly called 'preferred but not required' — classified as nice_to_have despite appearing in the 'You may be a good fit if you' section alongside apparent hard requirements.",
+      "Location cities not explicitly named for this role; San Francisco inferred from company HQ reference in JD footer."
+    ]
+  }
+}

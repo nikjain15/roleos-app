@@ -1,0 +1,434 @@
+{
+  "company": "Anthropic",
+  "role_title": "Web Product Manager",
+  "url": "https://job-boards.greenhouse.io/anthropic/jobs/5281348008",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5281348008",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "at least 25% in office",
+    "work_auth": "open",
+    "visa_sponsorship": "yes-conditional"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (web experimentation and analytics focus)",
+  "seniority": {
+    "level": "Senior / Staff IC (implied by comp range and first-PM-in-function scope)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of experience listed under preferred qualifications",
+      "First web PM in function — expected to shape strategy and roadmap without existing playbook",
+      "Comp range $305K-$385K base consistent with Staff/Senior PM at Anthropic",
+      "Presenting strategy and results to executive audiences"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "strategic_thinking_web_roadmap",
+      "raw_text_from_jd": "Strong strategic thinking abilities, with the ability to translate Anthropic's business goals into a clear, prioritized web roadmap that aligns with broader marketing and product strategy",
+      "skill_type": "capability",
+      "domain": "web_product_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "measurable_web_results",
+      "raw_text_from_jd": "Track record of driving measurable business results through the web in competitive, fast-moving markets",
+      "skill_type": "outcome",
+      "domain": "web_growth",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "web_as_category_channel_pov",
+      "raw_text_from_jd": "A strong point of view on what makes the web a category-defining channel for a technology company",
+      "skill_type": "domain_knowledge",
+      "domain": "web_channel_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "experimentation_program_track_record",
+      "raw_text_from_jd": "A track record of running experimentation programs that moved meaningful business metrics, with a clear ROI story rather than just a backlog of A/B tests",
+      "skill_type": "outcome",
+      "domain": "web_experimentation",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "localization_strategy",
+      "raw_text_from_jd": "Setting strategy for localized web experiences and workflows across various regions and languages",
+      "skill_type": "domain_knowledge",
+      "domain": "web_localization",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytics_quantitative_fluency",
+      "raw_text_from_jd": "Strong quantitative instincts and fluency with analytics tools, funnel modeling, and experimentation design",
+      "skill_type": "tool_proficiency",
+      "domain": "web_analytics_and_experimentation",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_marketing_design_eng",
+      "raw_text_from_jd": "Experience operating at the seam between Marketing, Design, and Engineering, with the ability to influence without owning and say no to requests that won't move the needle",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "prioritization_and_stakeholder_alignment",
+      "raw_text_from_jd": "Excellent prioritization judgment and cross-functional gravity — you can walk into a room of competing stakeholders and leave it aligned on what's shipping and why",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "collaborative_low_ego_style",
+      "raw_text_from_jd": "A collaborative, low-ego operating style that treats design craft and growth performance as compatible rather than opposing goals",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Strong written and verbal communication skills, with comfort presenting strategy and results to executive audiences",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_interest",
+      "raw_text_from_jd": "Deep interest in AI and its potential to positively impact how people work, learn, and create",
+      "skill_type": "cultural_fit",
+      "domain": "AI_domain_interest",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree or an equivalent combination of education, training, and/or experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "years_web_pm_experience",
+      "raw_text_from_jd": "10+ years of experience in web product management, web growth, digital strategy, CRO, or web experimentation at consumer or B2B technology companies",
+      "skill_type": "years_of_experience",
+      "domain": "web_product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "consumer technology companies",
+        "B2B technology companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_seo_knowledge",
+      "raw_text_from_jd": "In-depth knowledge of technical SEO and site architecture",
+      "skill_type": "domain_knowledge",
+      "domain": "technical_SEO",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_developer_technical_product_marketing_bg",
+      "raw_text_from_jd": "A background marketing AI, developer, or other technical products to both consumer and enterprise audiences",
+      "skill_type": "domain_knowledge",
+      "domain": "technical_product_marketing",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "international_localization_fluency",
+      "raw_text_from_jd": "Fluency shipping and optimizing localized web experiences across international markets",
+      "skill_type": "capability",
+      "domain": "web_localization",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "in_house_brand_design_partnership",
+      "raw_text_from_jd": "A history of partnering closely with in-house brand and design teams on high-craft marketing sites",
+      "skill_type": "capability",
+      "domain": "brand_and_design_collaboration",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_focused_web_surfaces",
+      "raw_text_from_jd": "Familiarity with developer-focused web surfaces",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_web_surfaces",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "led_large_xfn_web_initiatives",
+      "raw_text_from_jd": "Led large, cross-functional web initiatives with measurable impact on conversion and brand perception",
+      "skill_type": "outcome",
+      "domain": "cross_functional_web_leadership",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "claude.com marketing and acquisition web properties",
+    "business_model": "B2C and B2B SaaS (prosumer and enterprise Claude subscriptions)",
+    "primary_metrics_inferred": [
+      "Conversion rate across acquisition, signup, and checkout funnels",
+      "Experimentation velocity and rigor",
+      "Funnel reporting and growth decisions speed",
+      "International/localized web performance by market",
+      "ROI of web experimentation program"
+    ],
+    "cross_functional_partners": [
+      "Web Design",
+      "Growth Product",
+      "Data Science",
+      "Enterprise Marketing",
+      "Regional Marketing",
+      "Localization teams",
+      "SEO",
+      "Paid channel owners",
+      "Product Marketing",
+      "Sales Ops",
+      "Engineering",
+      "Executive leadership"
+    ],
+    "core_responsibilities": [
+      "Own the web experience strategy for claude.com, setting the vision for how marketing surfaces work together as a portfolio",
+      "Stand up and lead the web experimentation program across claude.com",
+      "Drive conversion rate optimization across acquisition, signup, and checkout funnels",
+      "Establish web analytics foundation with Data Science, ensuring instrumentation, dashboards, and funnel reporting",
+      "Lead international and localization strategy for the web",
+      "Partner with Growth Product, Data, and Enterprise Marketing to build tooling, instrumentation, and funnel infrastructure",
+      "Collaborate with SEO and paid channel owners on on-page requirements and landing page experiments",
+      "Coordinate and prioritize inbound web requests from stakeholders against growth impact",
+      "Build and communicate a durable measurement story for the web to marketing and executive leadership"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      305000,
+      385000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "optional equity donation matching mentioned (suggests options/RSUs are part of package)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "claude.com",
+    "web product management",
+    "conversion rate optimization",
+    "CRO",
+    "web experimentation",
+    "A/B testing",
+    "funnel optimization",
+    "localization",
+    "SEO",
+    "web analytics",
+    "acquisition",
+    "growth",
+    "marketing surfaces",
+    "prosumer",
+    "enterprise"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and highly competitive ($305K-$385K base)",
+    "Visa sponsorship explicitly offered (with reasonable caveats)",
+    "First-in-function role with clear ownership of a high-impact surface (claude.com)",
+    "Encourages applications even from candidates who don't meet every qualification",
+    "Broad cross-functional mandate gives PM significant visibility and influence",
+    "Clear articulation of responsibilities and success metrics"
+  ],
+  "red_flags": [
+    "Hybrid policy requires at least 25% office time in San Francisco — eliminates fully-remote candidates",
+    "First web PM in function means no existing playbook, processes, or team infrastructure — high ambiguity",
+    "10+ years of experience listed under 'preferred' but the scope and comp strongly imply it is effectively required",
+    "Very broad remit (strategy, experimentation, analytics, localization, SEO, CRO, stakeholder management) may indicate under-resourcing or unclear team structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + first-PM-in-function context)",
+      "scope.business_model (inferred from product description and target audiences)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed as KPIs in JD)",
+      "location.cities_listed (San Francisco inferred from HQ reference; no city explicitly named for this role)",
+      "compensation.equity_form (inferred from 'optional equity donation matching' language in benefits section)"
+    ],
+    "ambiguities": [
+      "10+ years of experience appears only under 'Preferred qualifications' but the scope, compensation ($305K-$385K), and first-in-function positioning strongly suggest it is effectively a hard requirement. Classified as soft per JD section but flagged here.",
+      "No specific cities are named for this role in the body; San Francisco inferred from HQ location. Role may be open to other Anthropic office locations — worth confirming with recruiter.",
+      "The JD says 'Minimum years of experience: Years of experience required will correlate with the internal job level requirements for the position' — this is non-committal and does not confirm or deny the 10+ years preferred figure."
+    ]
+  }
+}

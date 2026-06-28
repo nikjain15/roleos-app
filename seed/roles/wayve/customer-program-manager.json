@@ -4,7 +4,7 @@
   "url": "https://wayve.firststage.co/jobs?gh_jid=8515998002",
   "ats_provider": "greenhouse",
   "ats_job_id": "8515998002",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -14,7 +14,7 @@
       "Tokyo"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "hybrid — combines time in office and time working from home; specific ratio not stated",
+    "office_time_required": "hybrid — combination of office and home working",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
@@ -22,22 +22,22 @@
   "archetype_confidence": "high",
   "secondary_archetype": "Customer-facing Program Manager (OEM / Automotive)",
   "seniority": {
-    "level": "Senior IC / Staff (experienced program manager leading complex OEM programs)",
+    "level": "Senior IC / Senior Program Manager",
     "years_required_min": null,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "Described as 'Extensive program management experience in complex automotive software development'",
-      "Responsible for leading cross-functional teams and full-scale production programs with OEM customers",
-      "Provides first-level customer support and owns risk/change management"
+      "Extensive program management experience required",
+      "Leads and oversees programs with OEM customers from early-stage through production",
+      "Expected to establish comprehensive project management frameworks"
     ]
   },
   "must_haves": [
     {
-      "id": "automotive_software_program_management",
+      "id": "automotive_program_management_experience",
       "raw_text_from_jd": "Extensive program management experience in complex automotive software development.",
       "skill_type": "years_of_experience",
-      "domain": "automotive_software_program_management",
+      "domain": "automotive_program_management",
       "minimum_value": null,
       "unit": "years",
       "qualifier": "extensive",
@@ -57,7 +57,7 @@
       "id": "program_management_tools",
       "raw_text_from_jd": "Proficient in utilising program management tools (e.g., Jira) to optimise workflow efficiency and ensure seamless project execution.",
       "skill_type": "tool_proficiency",
-      "domain": "program_management",
+      "domain": "project_management_software",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
@@ -103,7 +103,7 @@
       "credentials_named": []
     },
     {
-      "id": "communication_interpersonal_skills",
+      "id": "communication_and_interpersonal_skills",
       "raw_text_from_jd": "Exceptional communication and interpersonal skills.",
       "skill_type": "capability",
       "domain": "communication",
@@ -123,7 +123,7 @@
       "skill_type": "capability",
       "domain": "cross_functional_collaboration",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -135,7 +135,7 @@
     {
       "id": "willingness_to_travel",
       "raw_text_from_jd": "Willingness to travel as needed.",
-      "skill_type": "cultural_fit",
+      "skill_type": "capability",
       "domain": "travel",
       "evidence_required": "work_history",
       "bridgeable": "n/a",
@@ -148,7 +148,7 @@
       "credentials_named": []
     },
     {
-      "id": "fluent_japanese_business_english",
+      "id": "japanese_and_english_fluency",
       "raw_text_from_jd": "Fluent Japanese and business-level English are required for collaboration with international teams and stakeholders",
       "skill_type": "capability",
       "domain": "language_proficiency",
@@ -199,7 +199,7 @@
       "credentials_named": []
     },
     {
-      "id": "masters_engineering_cs",
+      "id": "masters_degree_engineering_cs",
       "raw_text_from_jd": "A Master's degree in Engineering or Computer Science.",
       "skill_type": "credential",
       "domain": "education",
@@ -222,18 +222,18 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "OEM customer programs — from early-stage advanced development to full-scale production programs for automated/assisted driving AI software",
-    "business_model": "B2B, automotive OEM partnerships (AI software / foundation models for automakers)",
+    "surface": "OEM customer programs spanning advanced development to full-scale production (autonomous / assisted driving)",
+    "business_model": "B2B — AI software and foundation models sold to automakers (OEM customers)",
     "primary_metrics_inferred": [
-      "On-time delivery of program milestones",
-      "Customer satisfaction and requirement fulfilment",
-      "Risk identification and mitigation effectiveness",
-      "Change management adherence"
+      "On-time delivery of customer program milestones",
+      "Customer satisfaction and first-level support responsiveness",
+      "Risk identification and mitigation success",
+      "Alignment of customer requirements with internal development pipeline"
     ],
     "cross_functional_partners": [
       "Product",
       "R&D",
-      "Internal development teams",
+      "Engineering / Internal development teams",
       "OEM customers"
     ],
     "core_responsibilities": [
@@ -259,40 +259,41 @@
     "OEM customers",
     "automotive software",
     "embodied AI",
-    "automated driving",
-    "cross-functional",
+    "autonomous driving",
     "risk management",
     "change management",
-    "Japanese language",
     "Jira",
+    "Japanese",
+    "cross-functional",
     "AV 2.0",
-    "LLMs"
+    "LLMs",
+    "Generative AI"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear and specific language requirements stated (fluent Japanese + business English) — signals genuine customer-facing Japan-market role",
-    "Role is described as full-time with hybrid flexibility in Yokohama or Tokyo",
-    "Explicit encouragement to apply even if not meeting all requirements",
-    "Strong product focus (Embodied AI, foundation models) with real-world customer impact",
-    "Inclusive hiring commitments and DEI monitoring process disclosed"
+    "Role has clear scope — customer-facing program management for OEM automotive programs",
+    "Hybrid working policy explicitly stated with core hours flexibility",
+    "Company explicitly encourages applicants who don't meet every requirement",
+    "Inclusion and accommodation commitments stated"
   ],
   "red_flags": [
-    "No compensation or salary range disclosed",
-    "No specific years of experience defined despite requiring 'extensive' program management experience — ambiguous seniority bar",
-    "Visa sponsorship and work authorisation not addressed anywhere in the JD",
-    "Office location depends on 'candidate's place of residence' — lack of clarity on what that means for relocation or remote eligibility"
+    "No compensation range disclosed",
+    "Fluent Japanese is a hard requirement — significantly narrows eligible candidate pool",
+    "Role location is Japan (Yokohama or Tokyo) but JD includes US-specific E-Verify and right-to-work references — possible copy-paste inconsistency worth clarifying",
+    "Visa sponsorship and work authorization not addressed",
+    "Posting date not available — recency of opening unclear"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 'extensive' experience language and scope of OEM program leadership)",
-      "scope.business_model (inferred from product description — B2B automaker partnerships)",
+      "seniority.level (inferred from 'extensive' experience language and scope of responsibilities; no explicit title band or years stated)",
+      "scope.business_model (inferred from company description — AI software sold to automakers)",
       "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "compensation.source set to 'unknown' — no compensation data anywhere in JD"
+      "compensation.source (unknown — no compensation data provided)"
     ],
     "ambiguities": [
-      "Location: JD says 'office-based role located in Yokohama or Tokyo, depending on the candidate's place of residence' then also references a hybrid working policy — unclear how much office time is expected vs. remote",
-      "Years of experience: 'Extensive program management experience' used without quantification — no minimum year count given",
-      "Work authorisation and visa sponsorship: not mentioned anywhere in the JD; left as 'unclear'"
+      "The JD body states this is a Japan-based role (Yokohama or Tokyo) but the JD footer references US-specific documents (E-Verify Notice, Right to Work) typically included only for US postings. This may be a template copy-paste error or the role may have a dual-country component — worth confirming with recruiter.",
+      "Work authorization and visa sponsorship for Japan are not mentioned anywhere in the JD.",
+      "'Extensive program management experience' is not quantified in years — classified as hard due to unconditional placement under 'Essential'."
     ]
   }
 }

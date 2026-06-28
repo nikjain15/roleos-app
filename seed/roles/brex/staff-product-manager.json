@@ -1,10 +1,10 @@
 {
   "company": "Brex",
   "role_title": "Staff Product Manager",
-  "url": "https://www.brex.com/careers/8432703002?gh_jid=8432703002",
+  "url": "https://www.brex.com/careers/8432702002?gh_jid=8432702002",
   "ats_provider": "greenhouse",
-  "ats_job_id": "8432703002",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "8432702002",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -15,24 +15,24 @@
       "New York City, NY"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "at least 3 days per week on Monday, Wednesday and Thursday; remote up to 4 weeks per year",
-    "work_auth": "unclear",
+    "office_time_required": "at least 3 days per week on Monday, Wednesday and Thursday",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Generalist PM with fintech/platform focus",
+  "secondary_archetype": "Generalist PM",
   "seniority": {
-    "level": "Staff PM (IC6 equivalent)",
+    "level": "Staff PM (IC6 or equivalent)",
     "years_required_min": 7,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "7–10+ years of product management experience",
-      "Expected to mentor PMs and elevate org-wide standards",
-      "Comp range $240K-$300K consistent with Staff-level IC at a growth-stage fintech",
-      "Influences senior leaders and executives",
-      "Defines multi-quarter product vision and strategy"
+      "Staff Product Manager title",
+      "Expected salary range $240,000 - $300,000",
+      "Mentoring PMs and elevating how we build",
+      "Influence decisions beyond immediate team"
     ]
   },
   "must_haves": [
@@ -54,7 +54,8 @@
       ],
       "geographies_named": [],
       "employer_types_named": [
-        "high-growth"
+        "high-growth B2B",
+        "fintech"
       ],
       "credentials_named": []
     },
@@ -77,7 +78,7 @@
       "id": "technical_depth",
       "raw_text_from_jd": "Strong fluency in technical systems and architecture. You are comfortable discussing APIs, data models, experimentation frameworks, and system tradeoffs with engineers.",
       "skill_type": "capability",
-      "domain": "technical_systems",
+      "domain": "technical_systems_architecture",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -98,7 +99,7 @@
       "skill_type": "tool_proficiency",
       "domain": "data_analytics",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [
         "SQL"
@@ -144,21 +145,6 @@
       "raw_text_from_jd": "Demonstrated ability to raise the quality bar — for product thinking, execution, and customer experience.",
       "skill_type": "outcome",
       "domain": "product_quality",
-      "evidence_required": "work_history",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "multi_quarter_strategy",
-      "raw_text_from_jd": "Define and own a multi-quarter product vision and strategy aligned to Brex's highest company priorities.",
-      "skill_type": "capability",
-      "domain": "product_strategy",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -170,12 +156,12 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_leadership",
-      "raw_text_from_jd": "Lead complex, cross-functional initiatives that span multiple teams, systems, and stakeholder groups.",
-      "skill_type": "capability",
-      "domain": "cross_functional_leadership",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "id": "hybrid_office_presence",
+      "raw_text_from_jd": "You must be willing to work in the office at least 3 days per week on Monday, Wednesday and Thursday.",
+      "skill_type": "cultural_fit",
+      "domain": "workplace_policy",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -183,33 +169,14 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
-    },
-    {
-      "id": "hybrid_office_commitment",
-      "raw_text_from_jd": "You must be willing to work in the office at least 3 days per week on Monday, Wednesday and Thursday.",
-      "skill_type": "cultural_fit",
-      "domain": "work_location",
-      "evidence_required": "work_history",
-      "bridgeable": "no",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [
-        "San Francisco, CA",
-        "Seattle, WA",
-        "New York City, NY"
-      ],
-      "employer_types_named": [],
-      "credentials_named": []
     }
   ],
   "nice_to_haves": [
     {
-      "id": "platform_financial_infra_experience",
+      "id": "platform_financial_infrastructure",
       "raw_text_from_jd": "Experience building platform or financial infrastructure products is strongly preferred.",
       "skill_type": "domain_knowledge",
-      "domain": "financial_infrastructure",
+      "domain": "platform_financial_infrastructure",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -227,12 +194,12 @@
   "scope": {
     "team_size_estimate": "unclear",
     "surface": "One of Brex's most critical product domains (e.g., financial infrastructure, risk systems, growth systems, payables ecosystem)",
-    "business_model": "B2B SaaS — corporate cards, banking, spend management, bill pay, travel software",
+    "business_model": "B2B SaaS — corporate cards, banking, spend management, bill pay, and travel software",
     "primary_metrics_inferred": [
       "Customer value (step-function improvements)",
-      "Revenue growth",
-      "Operational efficiency",
-      "Distribution/adoption"
+      "Revenue impact",
+      "Efficiency gains",
+      "Distribution metrics"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -246,15 +213,15 @@
       "Product"
     ],
     "core_responsibilities": [
-      "Define and own a multi-quarter product vision and strategy aligned to Brex's highest company priorities",
-      "Identify high-leverage opportunities that create durable competitive advantage",
-      "Lead complex, cross-functional initiatives that span multiple teams, systems, and stakeholder groups",
-      "Develop deep domain expertise and use it to inform product direction",
-      "Partner closely with Engineering to design scalable technical systems",
-      "Set clear success metrics tied to company-level outcomes",
-      "Drive structured decision-making in ambiguous environments",
-      "Influence senior leaders and executives through clear thinking, strong written narratives, and data-backed recommendations",
-      "Improve product craft and operating standards across the organization, mentoring PMs"
+      "Define and own a multi-quarter product vision and strategy aligned to Brex's highest company priorities.",
+      "Identify high-leverage opportunities that create durable competitive advantage, not just incremental improvements.",
+      "Lead complex, cross-functional initiatives that span multiple teams, systems, and stakeholder groups.",
+      "Develop deep domain expertise in your area (e.g., financial infrastructure, risk systems, growth systems, payables ecosystem, etc.) and use it to inform product direction.",
+      "Partner closely with Engineering to design scalable technical systems, engaging meaningfully in architectural discussions and tradeoffs.",
+      "Set clear success metrics tied to company-level outcomes and hold teams accountable to measurable impact.",
+      "Drive structured decision-making in ambiguous environments, balancing speed with rigor.",
+      "Influence senior leaders and executives through clear thinking, strong written narratives, and data-backed recommendations.",
+      "Improve product craft and operating standards across the organization, mentoring PMs and elevating how we build."
     ]
   },
   "compensation": {
@@ -264,54 +231,53 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "equity mentioned as part of total compensation package",
+    "equity_form": "equity and other forms of compensation may be provided as part of a total compensation package",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
     "Staff PM",
-    "fintech",
+    "product strategy",
     "financial infrastructure",
-    "platform products",
-    "multi-quarter strategy",
-    "technical depth",
-    "SQL",
-    "APIs",
-    "data models",
-    "cross-functional",
     "B2B",
+    "fintech",
+    "technical depth",
+    "APIs",
+    "SQL",
+    "cross-functional",
     "executive communication",
     "spend management",
-    "corporate cards"
+    "multi-quarter roadmap",
+    "systems mindset",
+    "high-growth"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range explicitly disclosed and highly competitive ($240K-$300K base)",
-    "Clear product surface descriptions (financial infrastructure, risk systems, growth systems, payables ecosystem)",
-    "Explicit listing of cross-functional partners indicating organizational maturity",
-    "Brex has a well-known customer list and operates in 200+ markets — strong market signal",
-    "Role has genuine org-level influence — 'elevate standards of product thinking across the organization'",
-    "Responsibilities are specific and concrete rather than generic"
+    "Compensation range disclosed and competitive ($240K-$300K base)",
+    "Clear product surface examples provided (financial infrastructure, risk systems, growth systems, payables ecosystem)",
+    "Explicit office days named (Mon/Wed/Thu), reducing ambiguity about hybrid expectations",
+    "Strong brand with well-known enterprise customers (DoorDash, Coinbase, Robinhood, Zoom, Reddit)",
+    "Mentorship responsibility signals meaningful organizational influence for the right candidate"
   ],
   "red_flags": [
-    "Hybrid policy requires 3 specific days/week (Mon, Wed, Thu) in SF, Seattle, or NYC — fully remote candidates ineligible",
-    "Remote allowed only up to 4 weeks/year minimum one week at a time — very restrictive",
-    "Visa sponsorship and work authorization requirements not stated anywhere in the JD",
-    "'Strongly preferred' for platform/financial infrastructure is near-hard given the domain specificity of the role",
-    "7-10+ years range is wide; '10+' signal suggests ceiling expectations may be higher than floor"
+    "Visa sponsorship status not stated anywhere in the JD",
+    "Hybrid policy requires in-office 3 specific days per week in SF, Seattle, or NYC — fully remote candidates ineligible",
+    "Remote work capped at 4 weeks per year with a minimum of one week at a time, which is restrictive",
+    "Domain area for this specific role not named (JD gives examples but no single assigned area), making scope unclear"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range, years required, and org influence signals; 'Staff' is in job title)",
-      "seniority.manages_people (inferred as false — role mentors PMs but no direct reports stated)",
+      "seniority.level (inferred from title 'Staff', comp range, and experience requirements)",
       "scope.business_model (inferred from product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
-      "compensation.location_pay_differential (inferred from 'starting base pay will depend on a number of factors including the candidate's location')"
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
+      "location.visa_sponsorship (not mentioned; set to unclear)",
+      "location.work_auth (not mentioned; set to open)",
+      "compensation.location_pay_differential (inferred from 'starting base pay will depend on... the candidate's location')"
     ],
     "ambiguities": [
-      "Years range stated as '7–10+' which is unusual — could imply preference for 10+ years at Staff level; minimum treated as 7",
-      "Work authorization and visa sponsorship are not mentioned anywhere in the JD; left as 'unclear'",
-      "Platform/financial infrastructure experience is labeled 'strongly preferred' which sits between hard and soft; classified as nice_to_have (soft) but is close to a hard requirement given the role's domain"
+      "The JD lists a $240K-$300K salary range but notes 'the starting base pay will depend on a number of factors including the candidate's location,' implying possible location-based pay differential, though no explicit tiers are defined.",
+      "The product domain for this specific role is not fixed — JD gives examples (financial infrastructure, risk systems, growth systems, payables ecosystem) but does not specify which area this hire will own.",
+      "No mention of visa sponsorship or work authorization requirements anywhere in the JD."
     ]
   }
 }

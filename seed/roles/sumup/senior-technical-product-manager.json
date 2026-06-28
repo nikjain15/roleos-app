@@ -4,7 +4,7 @@
   "url": "https://sumup.com/careers/positions/8558272002?gh_jid=8558272002",
   "ats_provider": "greenhouse",
   "ats_job_id": "8558272002",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -26,30 +26,25 @@
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "Title is 'Senior Technical Product Manager'",
-      "Expected to set product direction autonomously for a legally complex domain",
-      "Co-leads squad alongside Engineering Manager",
-      "Expected to arrive at planning conversations with evidence-backed proposals and defend them"
+      "Title is explicitly 'Senior Technical Product Manager'",
+      "Expected to set product direction, co-lead squad alongside Engineering Manager",
+      "High ownership framing: 'this isn't a coordination role'",
+      "Expected to 'arrive at planning conversations with evidence-backed proposals and organisational confidence to defend them'"
     ]
   },
   "must_haves": [
     {
       "id": "regulated_fintech_pm_experience",
       "raw_text_from_jd": "Proven experience as a product manager in a regulated fintech or financial services environment, with direct ownership of KYC, KYB, or identity verification products across multiple markets",
-      "skill_type": "years_of_experience",
-      "domain": "regulated_fintech_product_management",
+      "skill_type": "domain_knowledge",
+      "domain": "regulated_fintech_identity_verification",
       "minimum_value": null,
       "unit": null,
-      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "KYC",
-        "KYB",
-        "identity verification"
-      ],
+      "technologies_named": [],
       "industries_named": [
         "fintech",
         "financial services"
@@ -63,13 +58,13 @@
       "raw_text_from_jd": "Strong ability to manage complex, multi-stakeholder environments — including Legal, AML, Compliance, Risk, and Operations — negotiating scope with credibility and care, and holding the line when it matters",
       "skill_type": "capability",
       "domain": "stakeholder_management",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "AML"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -80,6 +75,8 @@
       "raw_text_from_jd": "Technical depth to interrogate backend architecture decisions, API design trade-offs, and third-party vendor capabilities, and to make coherent product calls across the full stack",
       "skill_type": "capability",
       "domain": "technical_product_management",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -97,7 +94,9 @@
       "id": "data_fluency",
       "raw_text_from_jd": "Data fluency: comfortable defining metrics, interrogating dashboards, and using quantitative signals to inform prioritisation and planning",
       "skill_type": "capability",
-      "domain": "data_analysis",
+      "domain": "data_analytics",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -112,7 +111,9 @@
       "id": "evidence_backed_proposals",
       "raw_text_from_jd": "Track record of arriving at planning conversations with evidence-backed proposals and the organisational confidence to defend them",
       "skill_type": "outcome",
-      "domain": "product_planning",
+      "domain": "product_strategy",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -122,44 +123,22 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
-    },
-    {
-      "id": "regulatory_surface_ownership",
-      "raw_text_from_jd": "Own the regulatory surface across multiple markets — monitoring evolving KYC/KYB, AML, and eIDAS requirements and converting them into structured, buildable scope before they become blockers",
-      "skill_type": "domain_knowledge",
-      "domain": "regulatory_compliance",
-      "evidence_required": "work_history",
-      "bridgeable": "no",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [
-        "KYC",
-        "KYB",
-        "AML",
-        "eIDAS"
-      ],
-      "industries_named": [
-        "fintech"
-      ],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
     }
   ],
   "nice_to_haves": [],
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Verification platform — merchant identity verification, regulatory compliance across 37 markets, auditable decision-making systems",
-    "business_model": "B2B fintech — SaaS/payments platform for small businesses",
+    "surface": "Verification platform — merchant identity verification, KYC/KYB/AML compliance, eIDAS, regulatory decisioning across 37 markets",
+    "business_model": "B2SMB fintech platform (payments, finance, customer relationships for small businesses)",
     "primary_metrics_inferred": [
-      "Merchant verification pass rates",
+      "Verification pass/fail rates and merchant conversion through KYC flows",
       "Regulatory compliance coverage across markets",
-      "Platform modernisation / technical debt reduction",
-      "Auditability and defensibility of verification decisions"
+      "Auditability and defensibility of verification decisions",
+      "Technical debt reduction in verification platform"
     ],
     "cross_functional_partners": [
-      "Engineering Manager",
+      "Engineering",
       "Legal",
       "AML",
       "Compliance",
@@ -189,40 +168,40 @@
     "eIDAS",
     "identity verification",
     "regulated fintech",
-    "verification platform",
     "compliance",
-    "backend architecture",
-    "API design",
+    "verification platform",
+    "technical PM",
     "multi-market",
     "platform modernisation",
     "technical debt",
-    "data fluency"
+    "regulatory"
   ],
-  "buzzword_density": "low",
+  "buzzword_density": "medium",
   "green_flags": [
-    "High-ownership, non-coordination role with clear product surface and domain",
-    "Explicit regulatory and compliance scope across 37 markets — strong signal of strategic importance",
-    "Virtual Stock Option programme offered",
-    "Generous L&D budget (€2000) and 10 paid educational leave days",
-    "Sabbatical benefit (1 month after 3 years)",
-    "JD explicitly encourages candidates who don't meet 100% of criteria to apply"
+    "High-ownership framing explicitly stated: 'This isn't a coordination role'",
+    "Clear squad structure with co-leadership alongside Engineering Manager",
+    "Defined product surface with real regulatory complexity — not a vague 'platform' role",
+    "Generous L&D budget (€2000/year) and 10 paid educational leave days",
+    "Virtual Stock Option programme provides equity upside",
+    "Company explicitly encourages applications from candidates who don't meet 100% of criteria"
   ],
   "red_flags": [
-    "Office-first setup in Sofia — eliminates remote and hybrid candidates outside Bulgaria",
+    "Office-first in Sofia — eliminates remote and non-Sofia candidates",
     "No compensation range disclosed",
-    "Visa sponsorship not mentioned — unclear for international applicants",
-    "No minimum years of experience stated, making seniority expectations harder to calibrate"
+    "Visa sponsorship and work authorisation requirements not stated",
+    "No minimum years of experience explicitly quantified, making seniority expectations opaque"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Senior' and autonomy signals in JD; no explicit years stated)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
-      "compensation.source set to 'unknown' as no salary data provided"
+      "seniority.level (inferred from title 'Senior', squad co-leadership framing, and high-ownership language)",
+      "scope.business_model (inferred from company description and product context)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.cities_listed=['Sofia'] (inferred from 'our modern Sofia office' in benefits section)"
     ],
     "ambiguities": [
-      "The JD states 'office-first setup' in Sofia but does not specify exact days in-office per week — treated as onsite rather than hybrid",
-      "Work authorisation requirements and visa sponsorship are not mentioned anywhere in the JD — left as 'unclear'"
+      "Years of experience not explicitly stated anywhere in the JD; all must-haves are capability/outcome-based rather than year-quantified",
+      "Work authorisation and visa sponsorship are entirely unaddressed in the JD",
+      "Compensation is not disclosed; only non-cash benefits are mentioned"
     ]
   }
 }

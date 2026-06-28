@@ -1,0 +1,268 @@
+{
+  "company": "DoorDash",
+  "role_title": "Product Manager, In-Store",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/7993015",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7993015",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "low",
+  "secondary_archetype": "Data / Analytics PM (SevenRooms / hospitality SaaS context)",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years of product management experience required",
+      "2+ years of experience building data products, analytics features, or AI/ML solutions",
+      "Comp range $159,800–$235,000 base, consistent with mid-to-senior IC PM"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "You have 4+ years of product management experience, ideally within a SaaS or B2C environment",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "qualifier": "ideally within a SaaS or B2C environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS",
+        "B2C"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_data_products",
+      "raw_text_from_jd": "You have 2+ years of experience building data products, analytics features, or AI/ML solutions, ideally within a SaaS environment",
+      "skill_type": "years_of_experience",
+      "domain": "data_products_and_analytics",
+      "minimum_value": 2,
+      "unit": "years",
+      "qualifier": "ideally within a SaaS environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML"
+      ],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_to_customer_value",
+      "raw_text_from_jd": "You have a strong ability to connect complex technical features directly to customer value and business outcomes (like ROI, adoption, and retention)",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_delivery_track_record",
+      "raw_text_from_jd": "You have a track record of owning and delivering product features or initiatives end-to-end with measurable impact",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "independent_execution",
+      "raw_text_from_jd": "You are comfortable operating independently on product execution while collaborating across teams",
+      "skill_type": "capability",
+      "domain": "product_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_data_driven",
+      "raw_text_from_jd": "You are highly analytical and use data to inform decisions and measure success",
+      "skill_type": "capability",
+      "domain": "data_driven_decision_making",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "agile_eng_design_collaboration",
+      "raw_text_from_jd": "You have experience working in Agile environments and partnering closely with Engineering and Design",
+      "skill_type": "capability",
+      "domain": "agile_product_development",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_communication",
+      "raw_text_from_jd": "You are an effective communicator who can align stakeholders and drive clarity across cross-functional teams",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_curiosity",
+      "raw_text_from_jd": "You are naturally curious, customer-focused, and continuously seek to improve products and processes",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Reporting, analytics, and restaurant insights infrastructure for SevenRooms (hospitality SaaS platform)",
+    "business_model": "B2B SaaS (hospitality operators)",
+    "primary_metrics_inferred": [
+      "ROI",
+      "Product adoption",
+      "Retention",
+      "OKR attainment"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Marketing",
+      "Sales",
+      "Customer Success",
+      "Data"
+    ],
+    "core_responsibilities": [
+      "Own the strategic roadmap for reporting, analytics, and restaurant insights infrastructure",
+      "Partner with engineering teams to unlock the ability to use data in new ways to help restaurants make better decisions",
+      "Own the end-to-end lifecycle of product features and initiatives, from problem definition through launch and iteration",
+      "Write clear product requirements and partner with Engineering and Design to deliver high-quality solutions",
+      "Contribute to product roadmap development by identifying opportunities, defining scope, and prioritizing work that aligns with team OKRs and business impact",
+      "Work closely with Engineering, Design, Marketing, Sales, and Customer Success to align on priorities",
+      "Conduct user research, analyze customer feedback, and leverage data to deeply understand customer needs",
+      "Define success metrics, monitor product performance, and use insights to inform decisions",
+      "Manage timelines, anticipate risks, and navigate trade-offs between business needs and technical constraints"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      159800,
+      235000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "data products",
+    "analytics",
+    "reporting infrastructure",
+    "restaurant insights",
+    "SaaS",
+    "AI/ML",
+    "roadmap",
+    "OKRs",
+    "cross-functional",
+    "hospitality",
+    "SevenRooms",
+    "data-driven"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and reasonably wide ($159,800–$235,000 base)",
+    "Equity grants mentioned as part of compensation",
+    "Comprehensive benefits package described (401k match, 16 weeks parental leave, wellness, medical/dental/vision)",
+    "Clear ownership area: data and insights infrastructure for SevenRooms",
+    "Collaborative team culture described with strong cross-functional emphasis"
+  ],
+  "red_flags": [
+    "Role title is 'Product Manager, In-Store' but the JD body describes a 'Data and Insights' PM at SevenRooms — significant mismatch suggesting the wrong JD body was associated with this posting",
+    "Location/work arrangement is completely unstated — no city, no remote/hybrid/onsite designation provided",
+    "Work authorization and visa sponsorship not mentioned",
+    "No explicit posting date provided"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and years of experience requirements)",
+      "scope.business_model (inferred from 'SaaS' and hospitality operator context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and requirement text; not explicitly listed as metrics)",
+      "location.type (not stated; marked unclear)",
+      "location.work_auth (not stated; marked unclear)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Role title is 'Product Manager, In-Store' but the entire JD body describes a 'Product Manager focusing on Data and Insights' at SevenRooms — this is likely a content/template mismatch in the ATS. The structured extraction reflects the JD body content, not the title.",
+      "The JD is branded as DoorDash but the team described is SevenRooms (a DoorDash subsidiary/acquisition). It is unclear whether the employer of record is DoorDash or SevenRooms.",
+      "Location type cannot be determined — no city, office, or remote policy is mentioned in the JD body."
+    ]
+  }
+}

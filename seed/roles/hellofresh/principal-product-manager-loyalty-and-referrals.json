@@ -1,0 +1,231 @@
+{
+  "company": "HelloFresh",
+  "role_title": "Principal Product Manager, Loyalty & Referrals",
+  "url": "https://careers.hellofresh.com/global/en/job/7916922?gh_jid=7916922",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7916922",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "minimum of 2 days in office per week, with most teams in office between 2-3 days a week",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM (loyalty, referrals, virality)",
+  "seniority": {
+    "level": "Principal / Staff IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title is Principal Product Manager",
+      "Engages directly with C-level and senior leadership",
+      "'Significant experience as a product leader at a large-scale B2C company'",
+      "Expected to 'anchor' the loyalty program and partner across the tribe"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "b2c_product_leadership",
+      "raw_text_from_jd": "Significant experience as a product leader at a large-scale B2C company — you've built consumer products at scale and have strong intuition for customer behavior and emotional drivers",
+      "skill_type": "years_of_experience",
+      "domain": "b2c_product_management",
+      "minimum_value": null,
+      "unit": "years",
+      "qualifier": "significant, at large-scale B2C company",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2C"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "large-scale B2C company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ux_instincts",
+      "raw_text_from_jd": "Strong UX instincts and genuine opinions about what makes a great customer experience",
+      "skill_type": "capability",
+      "domain": "ux_product_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_commercial_mindset",
+      "raw_text_from_jd": "A data-driven, commercial mindset — programs that are too generous become liabilities, programs that are too stingy don't move customers, and you know how to find the right balance",
+      "skill_type": "capability",
+      "domain": "commercial_strategy_and_analytics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_presence",
+      "raw_text_from_jd": "Executive presence: you're comfortable presenting to C-level stakeholders, defending strategic tradeoffs, and working at that level of visibility",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "marketing_crm_collaboration",
+      "raw_text_from_jd": "Experience working with marketing and CRM counterparts as close collaborators",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_driver",
+      "raw_text_from_jd": "A driver of how we use AI — both in the products we ship to customers and in how we do the job of product management. We're looking for someone who pushes the team further on this, not someone who keeps up",
+      "skill_type": "capability",
+      "domain": "ai_integration",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "loyalty_rewards_experience",
+      "raw_text_from_jd": "Experience with loyalty, rewards, or engagement programs is a plus but not a requirement",
+      "skill_type": "domain_knowledge",
+      "domain": "loyalty_rewards_engagement",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Loyalty & Referrals tribe — points-based loyalty program, referral program, and virality mechanics",
+    "business_model": "B2C subscription meal kit",
+    "primary_metrics_inferred": [
+      "Customer retention and engagement",
+      "Loyalty program participation and reward redemption",
+      "Referral acquisition volume",
+      "Program economics (reward cost vs. commercial return)",
+      "Customer behavior tied to points and rewards"
+    ],
+    "cross_functional_partners": [
+      "Marketing",
+      "CRM",
+      "C-level / senior leadership",
+      "External vendors",
+      "Referrals and virality team"
+    ],
+    "core_responsibilities": [
+      "Own the vision, roadmap, and strategic direction for the loyalty program",
+      "Ship the milestones that move the business near-term, and balance them against bets that pay off over a longer horizon",
+      "Build the metric framework that connects customer behavior to program performance to commercial outcomes",
+      "Partner closely with marketing and CRM counterparts on program communications, reward economics, and commercial strategy",
+      "Manage external vendor relationships where they exist, evaluating partnerships continuously, and identifying where we build versus buy",
+      "Engage directly with C-level and senior leadership to communicate program direction, decisions, and results",
+      "Partner closely with the team leading referrals and virality — loyalty and referrals are closely related, and the strongest ideas span both"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "loyalty program",
+    "referrals",
+    "virality",
+    "points-based rewards",
+    "B2C",
+    "customer behavior",
+    "commercial strategy",
+    "CRM",
+    "executive presence",
+    "AI",
+    "reward economics",
+    "engagement"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product ownership — loyalty program explicitly named as 'one of HelloFresh's most strategically important products'",
+    "Explicitly states loyalty experience is a plus but not a requirement, signaling openness in candidate pool",
+    "Flexible hybrid model described with transparency (2–3 days/week in office)",
+    "Active vacancy explicitly stated: 'This is a posting for an existing vacancy'",
+    "Broad scope with strategic visibility (C-level engagement, cross-tribe influence)"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Location/city not explicitly stated in the JD body — unclear which office this role is tied to",
+    "Visa sponsorship and work authorization requirements are not mentioned",
+    "Seniority requirements are vague ('significant experience') — no minimum years stated",
+    "AI integrated screening tools disclosed, which may affect application evaluation transparency"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Principal' and C-level engagement expectations, not stated explicitly)",
+      "scope.business_model (inferred from HelloFresh's known B2C meal kit subscription model)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed in JD)",
+      "location.cities_listed (Canada implied by 'HelloFresh Canada' mention in AI disclosure but no city explicitly named for this role)",
+      "location.remote_us_eligible (inferred as false given Canada context and hybrid requirement)"
+    ],
+    "ambiguities": [
+      "Location city is not stated in the JD body; 'HelloFresh Canada' is mentioned only in the AI screening disclosure, suggesting this is a Canadian role but no city is confirmed",
+      "Role scope includes possible ownership of referrals initiatives: 'Depending on where the greater need is when you join, you may also take ownership of specific initiatives in this space' — actual ownership scope is conditional",
+      "The JD does not specify whether 'Principal PM' manages people; treated as individual contributor based on lack of people-management language, but this is inferred"
+    ]
+  }
+}

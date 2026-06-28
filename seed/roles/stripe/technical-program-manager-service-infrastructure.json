@@ -1,0 +1,350 @@
+{
+  "company": "Stripe",
+  "role_title": "Technical Program Manager, Service Infrastructure",
+  "url": "https://stripe.com/jobs/search?gh_jid=7985196",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7985196",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Infrastructure / Platform TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of software engineering, systems engineering, or technical program management experience",
+      "Leading large-scale efforts across multiple teams and functions",
+      "Driving strategic decisions at an engineering leadership level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_eng_or_tpm",
+      "raw_text_from_jd": "7+ years of software engineering, systems engineering, or technical program management experience.",
+      "skill_type": "years_of_experience",
+      "domain": "software_engineering_or_tpm",
+      "minimum_value": 7,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_products_or_oss",
+      "raw_text_from_jd": "Experience with developer products or open-source projects.",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_products",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "distributed_systems_knowledge",
+      "raw_text_from_jd": "Experience in distributed systems, software libraries and frameworks, and service-oriented architectures.",
+      "skill_type": "domain_knowledge",
+      "domain": "distributed_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems",
+        "service-oriented architectures"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "problem_solving",
+      "raw_text_from_jd": "Excellent problem-solving skills. You digest complex information, distill it, and make recommendations and proposals.",
+      "skill_type": "capability",
+      "domain": "analytical_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "full_sdlc_program_management",
+      "raw_text_from_jd": "You have a track record of providing program management during all phases of software development from kickoff to launch, demonstrating critical thinking, challenging the norms, and thought leadership.",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "You have very strong written and verbal communication skills, building strong relationships with stakeholders, teams, and senior leaders around the organization.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_improvement",
+      "raw_text_from_jd": "You drive internal and external process improvements across multiple teams and functions and bring a wealth of experience, opinions, proposals, and best practices.",
+      "skill_type": "capability",
+      "domain": "process_improvement",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomous_large_scale_leadership",
+      "raw_text_from_jd": "Experience operating autonomously and rapidly and leading large-scale efforts across multiple teams and functions, with stakeholders in different disciplines across time zones.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_toolchain_comfort",
+      "raw_text_from_jd": "You're comfortable working in a fast-changing environment as the AI tool chain continues to evolve.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_tools",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "core_infrastructure_experience",
+      "raw_text_from_jd": "Experience in core infrastructure such as database, cloud compute, networking, and services.",
+      "skill_type": "domain_knowledge",
+      "domain": "infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "database",
+        "cloud compute",
+        "networking"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "tpm_flexibility",
+      "raw_text_from_jd": "You're flexible in your approach to technical program management and adapt to what your customers need.",
+      "skill_type": "cultural_fit",
+      "domain": "program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "software_infrastructure_tpm_background",
+      "raw_text_from_jd": "Background in technical program management, specifically working in software infrastructure",
+      "skill_type": "domain_knowledge",
+      "domain": "software_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "distributed_teams",
+      "raw_text_from_jd": "You're comfortable working with geographically distributed teams.",
+      "skill_type": "cultural_fit",
+      "domain": "remote_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_empathy_visionary",
+      "raw_text_from_jd": "You're empathetic to customer needs but visionary enough to not just deliver a faster horse.",
+      "skill_type": "cultural_fit",
+      "domain": "product_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_org_collaboration",
+      "raw_text_from_jd": "You're excited about collaborating with teammates across Stripe's organization.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Service Infrastructure — frameworks, async platforms, and tooling used to write and operate all Stripe products; company-wide refactoring and architectural improvements",
+    "business_model": "B2B financial infrastructure platform",
+    "primary_metrics_inferred": [
+      "KPIs for large migration programs",
+      "Engineering team delivery velocity",
+      "Platform reliability and performance",
+      "Adoption of internal frameworks and tooling"
+    ],
+    "cross_functional_partners": [
+      "Engineering Managers",
+      "Tech Leads",
+      "Engineers",
+      "Technical Program Managers",
+      "Product Management leaders"
+    ],
+    "core_responsibilities": [
+      "Work with teams across the organization to understand pain points in their infrastructure usage to find common ideas and work to create solutions that span multiple domains.",
+      "Define and produce high-quality written proposals, communications, and documentation.",
+      "Help define the frameworks, async platforms, and tooling used to write and operate all Stripe products.",
+      "Partner with Engineering Managers, Tech Leads, Engineers, and other Technical Program Managers to define, scope, and drive large migration programs to conclusion.",
+      "Play a key part in shaping the technical design, predicting technical roadblocks by collaborating with engineers, and identifying trade-offs.",
+      "Develop, implement, and iterate on program management techniques, frameworks, and KPIs to achieve goals with well-defined success criteria.",
+      "Elevate the execution muscle of engineering teams around you. Train them to be better at delivery where needed.",
+      "Help influence peers and stakeholders and build consensus while dealing with ambiguity.",
+      "Leverage data and acquired knowledge to drive strategic decisions at an engineering leadership level.",
+      "Create widely circulated plans, driving consistency, clarity, and building alignment across teams.",
+      "Operationalize and execute critical cross-functional programs spanning Stripe engineering organizations."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Service Infrastructure",
+    "distributed systems",
+    "large-scale programs",
+    "software infrastructure",
+    "migration programs",
+    "frameworks",
+    "async platforms",
+    "cross-functional",
+    "engineering leadership"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear scope and ownership area (Service Infrastructure, frameworks, async platforms, and tooling)",
+    "JD explicitly encourages candidates who meet minimum requirements to apply even without preferred qualifications",
+    "Role sits at the intersection of engineering strategy and execution — high visibility",
+    "Stripe's scale provides significant impact opportunity ('millions of companies')"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location information stated — remote, hybrid, or onsite status is entirely unclear",
+    "No visa sponsorship or work authorization information provided",
+    "Posting dates not available — unclear how recent this opening is"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement and scope of leadership responsibilities)",
+      "seniority.manages_people (inferred as false — no mention of people management; TPM role focused on influence without authority)",
+      "scope.business_model (inferred from company description as B2B financial infrastructure)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.type (not stated anywhere in JD; marked as unclear)",
+      "compensation.equity_mentioned (no equity or benefits language in JD body)"
+    ],
+    "ambiguities": [
+      "Location type is completely unstated — the JD does not mention city, remote eligibility, or hybrid policy. Marked as 'unclear'.",
+      "The preferred qualifications section mixes soft cultural traits (e.g. 'excited about collaborating') with substantive domain qualifications (e.g. 'core infrastructure such as database, cloud compute'). All have been treated as soft/nice-to-have per JD framing."
+    ]
+  }
+}

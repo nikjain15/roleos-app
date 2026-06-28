@@ -1,0 +1,273 @@
+{
+  "company": "Scale AI",
+  "role_title": "Senior AI Product Manager, Healthcare Agents",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4709281005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4709281005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY",
+      "Seattle, WA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Domain Expert PM (Healthcare vertical)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 2,
+    "years_required_max": 4,
+    "manages_people": false,
+    "level_signals": [
+      "2–4 years of direct experience in the Healthcare industry required",
+      "Base salary range $205,600–$257,000 consistent with Senior IC",
+      "Role titled 'Senior AI Product Manager'",
+      "Expected to own roadmap, set product direction, and build partnerships independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "healthcare_industry_experience",
+      "raw_text_from_jd": "2–4 years of direct experience in the Healthcare industry in one or more of: healthcare research, clinicians & clinical staff using EHRs daily, revenue cycle management, or a healthtech product role, with real depth in how the work gets done.",
+      "skill_type": "years_of_experience",
+      "domain": "healthcare",
+      "minimum_value": 2,
+      "unit": "years",
+      "qualifier": "direct experience in healthcare industry",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [
+        "EHRs"
+      ],
+      "technologies_named": [],
+      "industries_named": [
+        "healthcare",
+        "healthtech",
+        "revenue cycle management"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_forward_thinking",
+      "raw_text_from_jd": "AI-Forward Thinking: Quick to adopt AI solutions to streamline your day-to-day workflows and an ability to understand and articulate how it's transforming your industry.",
+      "skill_type": "domain_knowledge",
+      "domain": "artificial_intelligence",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builders_mindset",
+      "raw_text_from_jd": "A builder's mindset: excited by ambiguity and motivated to create new products from the ground up.",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurship",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_or_customer_facing_experience",
+      "raw_text_from_jd": "Product or customer-facing experience: A track record of owning outcomes, shaping roadmaps, or working closely with technical stakeholders (formal PM experience is a plus but not required if domain depth is strong).",
+      "skill_type": "capability",
+      "domain": "product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_intuition_technical_fluency",
+      "raw_text_from_jd": "ML Intuition & Technical Fluency: Enough intuition around how model training and evaluation works and what a Reinforcement Learning environment looks like.",
+      "skill_type": "domain_knowledge",
+      "domain": "machine_learning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "model training",
+        "Reinforcement Learning"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_for_action",
+      "raw_text_from_jd": "Bias for action: Comfort wearing multiple hats and operating in fast-moving environments.",
+      "skill_type": "cultural_fit",
+      "domain": "operational_agility",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "formal_pm_experience",
+      "raw_text_from_jd": "formal PM experience is a plus but not required if domain depth is strong",
+      "skill_type": "capability",
+      "domain": "product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "software_background",
+      "raw_text_from_jd": "A software background is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "software_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_gtm_mindset",
+      "raw_text_from_jd": "A strong entrepreneurial & go-to-market mindset will be necessary.",
+      "skill_type": "cultural_fit",
+      "domain": "go_to_market",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Healthcare vertical within Agents Data & Reinforcement Learning Environments team — RL environments and data-as-a-product strategy for healthcare AI agent training",
+    "business_model": "B2B — AI data foundry selling training environments and datasets to frontier AI labs and enterprise customers",
+    "primary_metrics_inferred": [
+      "Quality and breadth of Healthcare RL environments",
+      "Adoption by frontier AI labs and researchers",
+      "Healthcare agent benchmark performance",
+      "Revenue from Healthcare vertical data products"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "ML",
+      "Go-to-market",
+      "Frontier AI lab researchers",
+      "AI startups",
+      "Healthcare industry leaders"
+    ],
+    "core_responsibilities": [
+      "Own the Healthcare AI roadmap & data strategy",
+      "Build partnerships with research teams at frontier labs",
+      "Design and scale Healthcare-specific environments (RL simulations of healthcare workflows)",
+      "Collaborate cross-functionally to deliver mission-critical outcomes",
+      "Launch joint benchmarks and build Scale's brand in Healthcare"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      205600,
+      257000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grant (subject to Board of Director approval)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Healthcare AI",
+    "Reinforcement Learning environments",
+    "AI agents",
+    "data strategy",
+    "EHR",
+    "healthcare workflows",
+    "frontier labs",
+    "agent training",
+    "domain expert",
+    "go-to-market",
+    "clinical workflows",
+    "revenue cycle management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($205,600–$257,000 base)",
+    "Equity compensation mentioned as part of package",
+    "Clear vertical ownership (Healthcare) within a defined team (Agents Data & RL Environments)",
+    "Formal PM experience explicitly stated as not required if domain depth is strong — lowers barrier for healthcare experts",
+    "High-profile customers named (Mayo Clinic, Meta, US Army/Air Force) indicating real enterprise impact",
+    "Role sits at intersection of AI research and healthcare domain — differentiated and growing space"
+  ],
+  "red_flags": [
+    "Role appears onsite in SF/NYC/Seattle only — no mention of remote eligibility",
+    "JD blends 'Ideally, You'd Have' framing for all requirements making hard vs. soft distinction ambiguous throughout",
+    "90-day waiting period before reconsidering for same role — limits flexibility if timing doesn't work",
+    "Visa sponsorship not mentioned — unclear for international candidates",
+    "Years of experience requirement (2–4) is relatively low for a 'Senior' title — may indicate seniority is tied to domain expertise rather than PM tenure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior' and comp range)",
+      "location.type (inferred as onsite from pay transparency section listing specific cities; no remote option stated in body)",
+      "location.remote_us_eligible (inferred as false; not stated explicitly)",
+      "scope.business_model (inferred from company description and product context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "compensation.location_pay_differential (inferred from statement that range is for SF/NY/Seattle specifically)"
+    ],
+    "ambiguities": [
+      "All requirements are listed under 'Ideally, You'd Have' which implies preferred/soft, but several (e.g. healthcare industry experience, AI-forward thinking) read as effectively required given the role's core purpose. Treated healthcare experience and core capabilities as hard based on JD language ('The ideal candidate has lived inside the Healthcare industry') and overall framing.",
+      "entrepreneurial & go-to-market mindset is described as 'will be necessary' in the body (suggesting hard) but listed under the 'Ideally, You'd Have' section (suggesting soft). Classified as soft/nice-to-have to reflect section placement, flagged here.",
+      "Visa sponsorship is not mentioned anywhere in the JD; classified as 'unclear'.",
+      "Location type: The JD only specifies pay transparency for SF, New York, and Seattle but does not explicitly say remote is unavailable. Treated as onsite based on available information."
+    ]
+  }
+}

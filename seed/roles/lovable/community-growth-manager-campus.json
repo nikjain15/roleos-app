@@ -1,0 +1,213 @@
+{
+  "company": "Lovable",
+  "role_title": "Community Growth Manager,  Campus",
+  "url": "https://jobs.ashbyhq.com/lovable/b71bc543-b2c9-49a8-acd1-df59f6c8abfb",
+  "ats_provider": "ashby",
+  "ats_job_id": "b71bc543-b2c9-49a8-acd1-df59f6c8abfb",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Stockholm"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth (non-PM)",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Community / Developer Relations",
+  "seniority": {
+    "level": "Mid-level / Senior IC",
+    "years_required_min": 3,
+    "years_required_max": 6,
+    "manages_people": false,
+    "level_signals": [
+      "3–6 years of experience in community-led growth, campus programs, developer relations, student marketing, or a startup role where you owned end-to-end programs",
+      "End-to-end program ownership expected",
+      "Expected to define the role as much as fill it"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_community_growth_campus",
+      "raw_text_from_jd": "3–6 years of experience in community-led growth, campus programs, developer relations, student marketing, or a startup role where you owned end-to-end programs",
+      "skill_type": "years_of_experience",
+      "domain": "community_growth_or_campus_programs",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "startup"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "university_ecosystem_familiarity",
+      "raw_text_from_jd": "Deep familiarity with university ecosystems (entrepreneurship clubs, CS programs, design schools, hackathon culture) from having operated inside them, not just adjacent to them",
+      "skill_type": "domain_knowledge",
+      "domain": "university_ecosystems",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "education",
+        "entrepreneurship"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builder_instincts",
+      "raw_text_from_jd": "Builder instincts: you've shipped something yourself, or you're obsessed with people who do",
+      "skill_type": "cultural_fit",
+      "domain": "builder_mindset",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_operator_bias_toward_doing",
+      "raw_text_from_jd": "Strong operator with bias toward doing: you'd rather run the first event imperfectly than wait for the perfect playbook",
+      "skill_type": "cultural_fit",
+      "domain": "execution_mindset",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "comfortable_with_ambiguity",
+      "raw_text_from_jd": "Comfortable with ambiguity and excited to define the role as much as fill it",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "event_logistics_cohort_ambassador_experience",
+      "raw_text_from_jd": "Experience with event logistics, cohort programs, or ambassador-style communities is a strong plus",
+      "skill_type": "capability",
+      "domain": "event_logistics_and_community_programs",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Lovable Campus Leads Program — student champion recruitment, onboarding, activation, retention, and on-campus events",
+    "business_model": "PLG / community-led growth, B2C and prosumer / SMB",
+    "primary_metrics_inferred": [
+      "Number of campus leads recruited and retained",
+      "On-campus events run and quality",
+      "Expansion to new schools / self-sustaining event cohorts",
+      "Product feedback pipeline from campus leads"
+    ],
+    "cross_functional_partners": [
+      "broader ambassador program",
+      "faculty",
+      "club leads",
+      "accelerator staff"
+    ],
+    "core_responsibilities": [
+      "Own the Lovable Campus Leads Program end-to-end: recruiting, onboarding, activation, and retention of student champions",
+      "Identify and hand-pick campus leads",
+      "Design and run the on-campus event playbook",
+      "Set expectations, keep leads activated, collect product feedback, and celebrate wins loudly",
+      "Be the person who knows each campus lead and their administration champions personally",
+      "Build the pipeline between campus leads and the broader ambassador program",
+      "Launch and grow with the right schools first",
+      "Build relationships with faculty, club leads, and accelerator staff at target schools",
+      "Own the roadmap for expanding once the first cohort produces repeatable, self-sustaining events"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "campus programs",
+    "community-led growth",
+    "campus leads",
+    "developer relations",
+    "student marketing",
+    "ambassador program",
+    "hackathon",
+    "university ecosystems",
+    "event logistics",
+    "cohort programs",
+    "entrepreneurship",
+    "Lovable"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific program ownership (end-to-end Campus Leads Program)",
+    "Small, talent-dense team signals high individual impact",
+    "Role scope is explicitly defined with concrete responsibilities",
+    "JD is candid about stage ('excited to define the role as much as fill it')"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship and work authorization not mentioned — unclear for international candidates applying to Stockholm-based role",
+    "Location type not explicitly stated in JD body; Stockholm inferred from company description",
+    "Early-stage program with no existing playbook may mean high ambiguity and undefined success metrics"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (inferred as onsite; Stockholm mentioned in company description but not explicitly tied to this role's work arrangement)",
+      "location.cities_listed (Stockholm inferred from 'building a generation-defining company from Stockholm')",
+      "seniority.level (inferred from years range and program ownership scope)",
+      "scope.business_model (inferred from product description and community-led growth framing)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)"
+    ],
+    "ambiguities": [
+      "The JD does not specify whether this role is onsite in Stockholm, hybrid, or remote-eligible. Stockholm is mentioned only in the company description. Location type treated as onsite pending confirmation.",
+      "Work authorization and visa sponsorship are entirely unmentioned; marked as unclear."
+    ]
+  }
+}

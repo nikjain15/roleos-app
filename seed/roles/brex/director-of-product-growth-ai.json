@@ -4,7 +4,7 @@
   "url": "https://www.brex.com/careers/8433461002?gh_jid=8433461002",
   "ats_provider": "greenhouse",
   "ats_job_id": "8433461002",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -15,7 +15,7 @@
       "New York City, NY"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "at least 3 days per week (Monday, Wednesday, Thursday); up to 4 weeks remote per year",
+    "office_time_required": "at least 3 days per week on Monday, Wednesday and Thursday",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
@@ -23,14 +23,15 @@
   "archetype_confidence": "high",
   "secondary_archetype": "AI Product Manager",
   "seniority": {
-    "level": "Director (people manager, senior IC-equivalent or above)",
+    "level": "Director (people manager, senior leadership)",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": true,
     "level_signals": [
       "10+ years of experience in product management or management consulting",
       "Manage and develop a team of Product Managers",
-      "Comp range $340K-$425K base, consistent with Director-level at a late-stage fintech"
+      "Compensation range $340K-$425K base, consistent with Director-level",
+      "Align stakeholders around aspirational 6-12 month roadmap"
     ]
   },
   "must_haves": [
@@ -60,7 +61,7 @@
       "skill_type": "capability",
       "domain": "data_analysis",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
@@ -72,7 +73,7 @@
       "credentials_named": []
     },
     {
-      "id": "executive_communication",
+      "id": "executive_communication_and_influence",
       "raw_text_from_jd": "You have proven experience working and communicating effectively with senior leaders and executives, and influencing stakeholders across departments and functions, including Engineering, Design, Marketing, Sales, CRMX/Business Systems, IT, Legal, and more. You excel at building trust and working relationships.",
       "skill_type": "capability",
       "domain": "executive_communication_and_stakeholder_management",
@@ -87,7 +88,7 @@
       "credentials_named": []
     },
     {
-      "id": "systems_thinking",
+      "id": "systems_thinker",
       "raw_text_from_jd": "You are a systems thinker, capable of thinking holistically across product, technical, and people systems to identify bottlenecks and opportunities for efficiency, automation, fraud prevention, and product growth within the payables ecosystem.",
       "skill_type": "capability",
       "domain": "systems_thinking",
@@ -97,25 +98,8 @@
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "payments",
-        "fintech"
-      ],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "gtm_product_ownership",
-      "raw_text_from_jd": "Drive product and systems investments that improve GTM metrics such as CAC payback, pipeline conversion, and efficiency.",
-      "skill_type": "outcome",
-      "domain": "gtm_product_management",
-      "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [
-        "B2B"
+        "fintech",
+        "payments"
       ],
       "geographies_named": [],
       "employer_types_named": [],
@@ -137,12 +121,27 @@
       "credentials_named": []
     },
     {
-      "id": "multi_quarter_strategy",
+      "id": "gtm_growth_strategy",
       "raw_text_from_jd": "Define and execute a multi-quarter Growth strategy in partnership with Engineering, Design, GTM, Marketing, Ops, and Data to deliver high-impact, scalable products with measurable business impact.",
-      "skill_type": "capability",
-      "domain": "product_strategy",
-      "evidence_required": "project_examples",
+      "skill_type": "outcome",
+      "domain": "growth_strategy",
+      "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "office_presence",
+      "raw_text_from_jd": "You must be willing to work in the office at least 3 days per week on Monday, Wednesday and Thursday.",
+      "skill_type": "cultural_fit",
+      "domain": "in_office_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -171,10 +170,10 @@
       "credentials_named": []
     },
     {
-      "id": "b2b_gtm_scaling",
+      "id": "b2b_gtm_systems_experience",
       "raw_text_from_jd": "ideally with direct responsibility for or experience scaling B2B products and GTM systems",
       "skill_type": "domain_knowledge",
-      "domain": "b2b_product_scaling",
+      "domain": "B2B_product_and_GTM_systems",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -191,13 +190,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Growth Product — customer acquisition, onboarding, GTM tooling and automation, account scoring, TAM data, outbound automation",
-    "business_model": "B2B SaaS / fintech, enterprise and mid-market spend management",
+    "surface": "Growth Product team — customer acquisition, onboarding, GTM tooling, account scoring, TAM data, outbound automation",
+    "business_model": "B2B SaaS / fintech — corporate cards, banking, spend management platform",
     "primary_metrics_inferred": [
       "CAC payback",
       "Pipeline conversion",
       "GTM efficiency",
-      "Time-to-value for new customers",
+      "Activation and time-to-value",
       "Sustainable adoption"
     ],
     "cross_functional_partners": [
@@ -205,24 +204,26 @@
       "Design",
       "GTM",
       "Marketing",
-      "Sales",
-      "Customer Success",
       "Ops",
       "Data",
-      "Legal",
+      "Sales",
+      "Customer Success",
       "CRMX/Business Systems",
-      "IT"
+      "IT",
+      "Legal",
+      "Compliance"
     ],
     "core_responsibilities": [
-      "Drive product and systems investments that improve GTM metrics such as CAC payback, pipeline conversion, and efficiency",
-      "Define and execute a multi-quarter Growth strategy in partnership with Engineering, Design, GTM, Marketing, Ops, and Data",
-      "Embed within Sales, Marketing, and Customer Success to identify workflow bottlenecks and lead automation and optimization initiatives",
-      "Analyze GTM funnel and conversion metrics to uncover insights and guide product priorities and roadmap decisions",
-      "Set clear goals, metrics, and success criteria for the Growth team",
-      "Manage and develop a team of Product Managers",
-      "Oversee core Growth Product and Engineering domains, including account scoring, TAM data, outbound automation, and GTM tooling",
-      "Align stakeholders around an aspirational 6–12 month roadmap",
-      "Ensure successful activation and implementation of customer initiatives by partnering with GTM and Customer Success"
+      "Drive product and systems investments that improve GTM metrics such as CAC payback, pipeline conversion, and efficiency.",
+      "Define and execute a multi-quarter Growth strategy in partnership with Engineering, Design, GTM, Marketing, Ops, and Data to deliver high-impact, scalable products with measurable business impact.",
+      "Embed within Sales, Marketing, and Customer Success to identify workflow bottlenecks and lead automation and optimization initiatives.",
+      "Analyze GTM funnel and conversion metrics to uncover insights and guide product priorities and roadmap decisions.",
+      "Set clear goals, metrics, and success criteria for the Growth team, driving accountability to measurable outcomes.",
+      "Manage and develop a team of Product Managers, fostering clarity, ownership, and a culture of high performance.",
+      "Oversee core Growth Product and Engineering domains, including account scoring, TAM data, outbound automation, and GTM tooling.",
+      "Align stakeholders around an aspirational 6–12 month roadmap that advances GTM efficiency and business growth.",
+      "Ensure successful activation and implementation of customers initiatives by partnering with GTM and Customer Success to operationalize tooling and automations.",
+      "Continuously refine activation based on feedback and performance data to drive faster time-to-value and sustainable adoption."
     ]
   },
   "compensation": {
@@ -237,48 +238,49 @@
     "source": "stated"
   },
   "top_keywords": [
-    "Growth Product",
+    "Growth product",
     "GTM",
     "AI agents",
-    "account scoring",
-    "outbound automation",
-    "CAC payback",
-    "pipeline conversion",
     "B2B",
-    "ML models",
-    "TAM data",
-    "GTM tooling",
     "customer acquisition",
     "onboarding",
-    "fintech"
+    "account scoring",
+    "outbound automation",
+    "ML models",
+    "CAC payback",
+    "pipeline conversion",
+    "SQL",
+    "fintech",
+    "product director"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed and highly competitive ($340K-$425K base)",
-    "Clear product surface and ownership area (Growth, GTM tooling, AI agents)",
-    "Concrete past examples of work provided (AI agents for GTM workflows, ML models for account prioritization)",
-    "Global company with tens of thousands of customers including well-known brands",
-    "Explicit 6-12 month roadmap alignment mentioned — signals strategic clarity"
+    "Compensation range explicitly disclosed and highly competitive ($340K-$425K base)",
+    "Clear product surface and ownership area (Growth Product team with specific domains named)",
+    "Concrete examples of past work shared (AI agents for GTM, ML account prioritization, prospect AI classification)",
+    "Well-defined hybrid policy with specific days stated (Mon/Wed/Thu)",
+    "Equity mentioned as part of total comp package"
   ],
   "red_flags": [
-    "Requires in-office 3 days per week (Mon/Wed/Thu) in SF, Seattle, or NYC — no full-remote option",
-    "Very high years-of-experience bar (10+) at Director level may narrow the pool significantly",
-    "Visa sponsorship and work authorization not mentioned — unclear for international candidates",
-    "Role title includes 'AI' but responsibilities lean more heavily GTM/Growth automation; AI is secondary"
+    "Strict in-office requirement 3 days/week (Mon, Wed, Thu) in SF, Seattle, or NYC — eliminates remote candidates",
+    "Very broad role spanning AI, growth, GTM tooling, and people management simultaneously — scope may be overwhelming",
+    "Work authorization and visa sponsorship not mentioned — unclear for international candidates",
+    "10+ year requirement with Director-level expectations is a high bar that may limit candidate pool"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range, people management responsibility, and 10+ years requirement)",
-      "scope.business_model (inferred from product description and customer examples)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not exhaustively listed in JD)",
-      "scope.team_size_estimate (not stated)",
-      "location.work_auth (not stated; defaulted to unclear)",
-      "location.visa_sponsorship (not stated; defaulted to unclear)",
-      "compensation.location_pay_differential (inferred from 'starting base pay will depend on a number of factors including the candidate's location')"
+      "seniority.level (inferred from comp range, years requirement, people management, and Director title)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed directly in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.work_auth (not stated; marked unclear)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "location.pay_differential (inferred from JD statement 'starting base pay will depend on a number of factors including the candidate's location')"
     ],
     "ambiguities": [
-      "SQL proficiency is listed under Requirements section but qualified as 'strongly preferred' — treated as nice_to_have (soft) despite being in Requirements, since 'strongly preferred' signals preference not a hard gate. Also captured separately as a must_have note within the analytical_sense requirement.",
-      "Role title is 'Director of Product, Growth/AI' but JD body describes the role primarily as a Growth Product leader with AI as a tool/method rather than a dedicated AI product discipline — archetype classified as Growth PM with AI PM as secondary."
+      "SQL proficiency is described as 'strongly preferred' under the Analytical sense requirement, which sits in the Requirements section — treated as nice-to-have (soft) rather than hard given the 'preferred' qualifier, though its placement in Requirements could imply hard. Flagged here for review.",
+      "Role title includes 'AI' but the JD body emphasizes growth/GTM tooling and AI agents for GTM workflows — archetype is Growth PM with AI secondary, though AI Product Manager could also apply.",
+      "Remote eligibility: JD states employees can work remotely 'up to 4 weeks per year' suggesting the role is not remote-eligible beyond this limited allowance — treated as hybrid/onsite."
     ]
   }
 }

@@ -1,0 +1,269 @@
+{
+  "company": "Figma",
+  "role_title": "Technical Program Manager, Data",
+  "url": "https://boards.greenhouse.io/figma/jobs/6009613004?gh_jid=6009613004",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "6009613004",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": "unclear",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Data / Analytics Platform TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of technical program management experience required",
+      "First dedicated TPM for Data Science at Figma — high-ownership, scoped program lead",
+      "Base salary range $185K–$317K USD consistent with Senior IC at a major tech company"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_data",
+      "raw_text_from_jd": "5+ years of technical program management experience (or equivalent) driving data infrastructure, analytics platform, or data democratization programs",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "qualifier": "data infrastructure, analytics platform, or data democratization programs",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "modern_data_stack_knowledge",
+      "raw_text_from_jd": "Hands-on experience with modern data stacks: you're comfortable discussing semantic layers, data catalogs, BI tooling (Hex, Sigma), and AI-powered query interfaces (Cortex Analyst, RAG) at a program level",
+      "skill_type": "domain_knowledge",
+      "domain": "modern_data_stack",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Hex",
+        "Sigma",
+        "Cortex Analyst"
+      ],
+      "technologies_named": [
+        "semantic layers",
+        "data catalogs",
+        "RAG"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "adoption_track_record",
+      "raw_text_from_jd": "A track record of driving adoption — not just shipping internal tools, but changing behavior across technical and non-technical audiences through change management, enablement, and champion programs",
+      "skill_type": "outcome",
+      "domain": "change_management_and_adoption",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_delivery",
+      "raw_text_from_jd": "Strong cross-functional program delivery: planning, dependency management, stakeholder alignment across deeply distributed teams",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "data_engineering_tooling",
+      "raw_text_from_jd": "Hands-on familiarity with dbt, Snowflake Semantic Views, Acryl, Dagster, or similar data engineering tooling",
+      "skill_type": "tool_proficiency",
+      "domain": "data_engineering",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "dbt",
+        "Snowflake Semantic Views",
+        "Acryl",
+        "Dagster"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_eval_frameworks",
+      "raw_text_from_jd": "Experience building or scaling eval frameworks for AI-generated outputs (golden SQL, accuracy dashboards, regression detection)",
+      "skill_type": "capability",
+      "domain": "ai_evaluation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "golden SQL",
+        "accuracy dashboards",
+        "regression detection"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_product_analytics_background",
+      "raw_text_from_jd": "Background in data-driven product analytics or developer tools — understanding of how DS ICs work with PMs and EMs and driving alignment on requirements",
+      "skill_type": "domain_knowledge",
+      "domain": "product_analytics_or_developer_tools",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "developer tools"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_to_action_culture_fit",
+      "raw_text_from_jd": "Strong bias to action, self-motivation and curiosity, with a desire to bring people together in a fast-paced environment",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Self-Serve Analytics program for Figma's Data Science org — semantic layer expansion, Slack bot, automated eval framework, Figma Data Assistant",
+    "business_model": "B2B SaaS / design platform",
+    "primary_metrics_inferred": [
+      "% of data questions answered via self-serve",
+      "Time-to-insight",
+      "DS ad-hoc request volume reduction"
+    ],
+    "cross_functional_partners": [
+      "Data Engineering",
+      "Data Science ICs",
+      "Security",
+      "IT",
+      "Sales",
+      "Product",
+      "Finance",
+      "Research",
+      "Peer TPMs"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end program delivery for Figma's Self-Serve Analytics initiative",
+      "Coordinate delivery across Data Engineering, DS ICs, Security, IT, and business stakeholders",
+      "Lead governance and security work stream including LLM data access policies, PII guardrails, access controls, and LLM provider approvals",
+      "Drive adoption and change management through champion networks, training programs, and enablement",
+      "Build and maintain DS org operations: planning cycles, headcount tracking, onboarding programs, and team rhythms",
+      "Own program-level success metrics",
+      "Coordinate with peer TPMs and Data Scientists on overlapping platform programs and shared data infrastructure"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      185000,
+      317000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified; RSUs implied)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "Data Science",
+    "Self-Serve Analytics",
+    "semantic layer",
+    "data democratization",
+    "Figma Data Assistant",
+    "LLM",
+    "RAG",
+    "change management",
+    "data stack",
+    "Snowflake",
+    "dbt"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and wide ($185K–$317K base) for flexibility across seniority",
+    "First dedicated TPM for Data Science — high visibility, greenfield ownership",
+    "Explicitly encourages applicants whose experience doesn't perfectly match the JD",
+    "Remote-US eligible in addition to SF and NYC hubs",
+    "Competitive benefits package explicitly described",
+    "Clear, concrete program scope (Self-Serve Analytics initiative) with named deliverables"
+  ],
+  "red_flags": [
+    "Very wide base salary range ($185K–$317K) makes leveling and actual offer difficult to predict",
+    "Remote pay is localized at 80–100% of hub range — remote candidates may receive significantly less",
+    "Visa sponsorship status not mentioned anywhere in JD",
+    "In-person onboarding required even for remote hires — travel burden not quantified"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and greenfield scope; not explicitly stated)",
+      "scope.business_model (inferred from Figma product description)",
+      "scope.primary_metrics_inferred (inferred from JD responsibilities text — not framed as 'metrics' per se)",
+      "location.work_auth (not stated; defaulted to open)",
+      "location.visa_sponsorship (not stated; defaulted to unclear)",
+      "equity_form (equity mentioned but form not specified)"
+    ],
+    "ambiguities": [
+      "Role is described as 'can be held from one of our US hubs or remotely in the United States' — treated as hybrid for hub-based employees and remote-us for others; location.type set to hybrid as hub presence is implied for SF/NY candidates",
+      "Pay range $185K–$317K is very wide; could span multiple levels; seniority inferred as Senior IC based on years requirement and scope but not confirmed",
+      "The JD lists Slack and Notion as platforms where the TPM will meet Figmates — unclear if these are required tool proficiencies or just environmental context; not elevated to must-haves"
+    ]
+  }
+}

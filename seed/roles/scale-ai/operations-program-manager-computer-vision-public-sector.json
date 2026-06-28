@@ -1,0 +1,331 @@
+{
+  "company": "Scale AI",
+  "role_title": "Operations Program Manager Computer Vision, Public Sector",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4704555005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4704555005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Saint Louis, MO",
+      "Washington, D.C."
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "regularly work onsite in both unclassified and secure facilities",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Manager-track",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "5+ years of experience in a general manager / program manager position or a similar leadership role in operations",
+      "Team and project-level ownership",
+      "Collaborating with a team of high performing operations managers and subject matter experts",
+      "Base salary range up to $212,000 in DC/Hawaii"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_gm_pm_ops",
+      "raw_text_from_jd": "5+ years of experience in a general manager / program manager position or a similar leadership role in operations",
+      "skill_type": "years_of_experience",
+      "domain": "operations_program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "onsite_requirement",
+      "raw_text_from_jd": "The ability to regularly work onsite in both unclassified and secure facilities in either downtown Saint Louis, MO or the Washington D.C. area",
+      "skill_type": "capability",
+      "domain": "physical_presence_secure_facilities",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense",
+        "national security"
+      ],
+      "geographies_named": [
+        "Saint Louis, MO",
+        "Washington, D.C."
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_automation_mindset",
+      "raw_text_from_jd": "An analytical, automation-focused mindset, able to analyze provable and traceable data to develop robust, flexible integrations and workflows with metrics-led results",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_workflow_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_paced_experience",
+      "raw_text_from_jd": "Experience working in a fast-paced environment",
+      "skill_type": "cultural_fit",
+      "domain": "work_environment_adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "low_ego_team_sharing",
+      "raw_text_from_jd": "Low ego and a proven pattern of sharing wins with your team",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_management_comfort_ambiguity",
+      "raw_text_from_jd": "A history of successful project management and comfort in ambiguity",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "travel_willingness",
+      "raw_text_from_jd": "Willingness to travel up to 25% of the time based on customer + mission needs",
+      "skill_type": "capability",
+      "domain": "travel_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ts_sci_clearance",
+      "raw_text_from_jd": "An active TS-SCI security clearance",
+      "skill_type": "credential",
+      "domain": "security_clearance",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "defense",
+        "national security"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "TS-SCI"
+      ]
+    },
+    {
+      "id": "technical_background",
+      "raw_text_from_jd": "A technical background (education or professional experience with economics, statistics, computer science, or engineering)",
+      "skill_type": "domain_knowledge",
+      "domain": "technical_quantitative_disciplines",
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "us_government_experience",
+      "raw_text_from_jd": "Experience working in and / or with the U.S. government",
+      "skill_type": "domain_knowledge",
+      "domain": "government_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "government",
+        "public sector",
+        "defense"
+      ],
+      "geographies_named": [
+        "U.S."
+      ],
+      "employer_types_named": [
+        "U.S. government"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_ops_cv_genai",
+      "raw_text_from_jd": "A deep understanding of ML operations for Computer Vision and Generative AI workflows / products",
+      "skill_type": "domain_knowledge",
+      "domain": "ml_operations_computer_vision_genai",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "ML operations",
+        "Computer Vision",
+        "Generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mba_or_technical_degree",
+      "raw_text_from_jd": "MBA or relevant technical degree",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Public Sector Computer Vision team — data annotation and labeling operations for DoD and national security customers",
+    "business_model": "B2G (government contracts) — data labeling and AI/ML enablement for DoD and national security",
+    "primary_metrics_inferred": [
+      "On-time data delivery",
+      "Data quality across diverse modalities",
+      "Operational throughput and efficiency",
+      "ML outcome optimization for government customers"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Product",
+      "Analytics",
+      "Delivery",
+      "Geospatial experts",
+      "Engagement managers",
+      "Public Sector customers"
+    ],
+    "core_responsibilities": [
+      "Design and lead cross-functional initiatives with engineering, product, analytics, and delivery teams (as well as relevant geospatial experts) to achieve project outcomes",
+      "Innovate on complex computer vision workflows and evaluation of data quality",
+      "Communicate and own the execution of multiple data annotation workflows across diverse data types (geospatial imagery, video, etc)",
+      "Optimize data annotation workflows with systems analysis to improve data quality and throughput with a goal achieving optimized machine learning outcomes",
+      "Outline and deliver on data-driven operational efficiencies on these workflows to achieve business outcomes",
+      "Partner with an engagement managers to communicate with and shape outcomes for Scale's Public Sector customers"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      116000,
+      212000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grant (subject to Board of Director approval)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "computer vision",
+    "data annotation",
+    "program manager",
+    "public sector",
+    "DoD",
+    "national security",
+    "ML operations",
+    "geospatial imagery",
+    "TS-SCI",
+    "data labeling",
+    "operational efficiency",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges explicitly disclosed for two locations (DC/Hawaii: $139,200-$212,000; St. Louis/Suffolk: $116,000-$177,000)",
+    "Equity mentioned as part of compensation package",
+    "Clear product surface and ownership area (Public Sector CV team)",
+    "TS-SCI clearance is nice-to-have, not hard required — lowers barrier to entry",
+    "Comprehensive benefits including health, dental, vision, retirement, L&D stipend, and generous PTO mentioned"
+  ],
+  "red_flags": [
+    "Role requires regular onsite presence in classified/secure facilities — eliminates remote candidates entirely",
+    "Work authorization and visa sponsorship status not mentioned — unclear for non-citizens given national security context",
+    "DoD/national security context likely implies de facto US citizenship requirement even if not stated",
+    "90-day waiting period policy noted for reconsideration of same-role candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years + compensation + team ownership signals)",
+      "seniority.manages_people (inferred from 'team-level ownership' and 'operations managers' language)",
+      "scope.business_model (inferred from DoD/government customer description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.work_auth (not stated; likely us-citizenship-required given DoD context but not explicitly confirmed)",
+      "location.visa_sponsorship (not stated)"
+    ],
+    "ambiguities": [
+      "Work authorization is not explicitly stated but national security / DoD context strongly implies US citizenship may be required; treated as 'unclear' pending confirmation",
+      "Compensation range is listed separately for two location tiers (DC/Hawaii vs St. Louis/Suffolk); base_range_usd reflects the combined span across all stated locations",
+      "The JD says 'team and project-level ownership' and references managing 'operations managers', suggesting people management, but no direct 'you will manage X reports' language exists"
+    ]
+  }
+}

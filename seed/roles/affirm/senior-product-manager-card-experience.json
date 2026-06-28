@@ -1,38 +1,38 @@
 {
   "company": "Affirm",
   "role_title": "Senior Product Manager, Card Experience",
-  "url": "https://job-boards.greenhouse.io/affirm/jobs/7620527003",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7620529003",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7620527003",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7620529003",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "remote-us",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "occasionally required to work out of assigned Affirm office for proximal roles",
-    "work_auth": "unclear",
+    "office_time_required": null,
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Growth PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Generalist PM (consumer fintech card)",
+  "secondary_archetype": "Technical PM",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 4,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "4+ years in Product Management required",
-      "Base pay range $169K–$240K depending on location, consistent with Senior IC",
-      "Title is Senior Product Manager",
-      "Equity Grade - 8"
+      "4+ years in Product Management",
+      "Role title is 'Senior Product Manager'",
+      "CAN base pay range $153,000–$213,000 consistent with Senior PM level",
+      "Direct ownership over measurable acquisition and activation outcomes"
     ]
   },
   "must_haves": [
     {
-      "id": "years_pm_experience",
+      "id": "years_pm",
       "raw_text_from_jd": "4+ years in Product Management; Ideally with previous background owning growth/distribution channels",
       "skill_type": "years_of_experience",
       "domain": "product_management",
@@ -67,7 +67,7 @@
       "credentials_named": []
     },
     {
-      "id": "experiment_design_incrementality_cac_ltv",
+      "id": "experiment_design_cac_ltv",
       "raw_text_from_jd": "Deep fluency in experiment design, incrementality/attribution, and CAC→LTV optimization.",
       "skill_type": "capability",
       "domain": "growth_analytics",
@@ -82,7 +82,7 @@
       "credentials_named": []
     },
     {
-      "id": "ux_instincts_multiplatform",
+      "id": "ux_instincts_multi_surface",
       "raw_text_from_jd": "Strong UX instincts for moment‑of‑intent surfaces; ability to work across web, app, and partner integrations.",
       "skill_type": "capability",
       "domain": "ux_product_design",
@@ -102,7 +102,7 @@
       "skill_type": "tool_proficiency",
       "domain": "data_analytics",
       "evidence_required": "hands_on_use",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [
         "SQL",
@@ -153,8 +153,8 @@
   ],
   "nice_to_haves": [
     {
-      "id": "growth_distribution_channels_background",
-      "raw_text_from_jd": "4+ years in Product Management; Ideally with previous background owning growth/distribution channels",
+      "id": "growth_distribution_channel_background",
+      "raw_text_from_jd": "Ideally with previous background owning growth/distribution channels",
       "skill_type": "domain_knowledge",
       "domain": "growth_distribution_channels",
       "evidence_required": "work_history",
@@ -172,13 +172,13 @@
   "scope": {
     "team_size_estimate": "unclear",
     "surface": "Affirm Card acquisition — new growth channels (referrals, partner pilots, web/app onboarding surfaces)",
-    "business_model": "B2C consumer fintech, card product",
+    "business_model": "B2C consumer fintech — debit/credit card product with CAC→LTV growth model",
     "primary_metrics_inferred": [
       "Weekly card acquisitions",
       "30-day activation rate",
-      "CAC→LTV",
       "Funnel drop-off by step",
-      "Incrementality testing results"
+      "CAC→LTV ratio",
+      "Incrementality / attribution"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -201,57 +201,59 @@
   },
   "compensation": {
     "base_range_usd": [
-      169000,
-      240000
+      153000,
+      213000
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "Equity Grade - 8; ESPP (employee stock purchase plan at a discount); equity rewards mentioned as part of total compensation",
-    "location_pay_differential": true,
+    "equity_form": "Equity Grade 6; ESPP — employee stock purchase plan enabling purchase of shares at a discount; equity rewards mentioned as part of total compensation",
+    "location_pay_differential": false,
     "source": "stated"
   },
   "top_keywords": [
-    "Card acquisition",
+    "card acquisition",
     "growth channels",
     "CAC→LTV",
     "incrementality testing",
     "funnel optimization",
-    "referrals",
-    "partner integrations",
     "consumer financial products",
+    "experiment design",
+    "referrals",
+    "partner pilots",
     "SQL",
     "Amplitude",
-    "experimentation",
+    "cardholder growth",
     "Affirm Card"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range fully disclosed with geographic tiers ($169K–$240K base)",
-    "Remote-first company with broad US remote eligibility",
-    "Highly visible role with direct ownership over acquisition and activation metrics",
-    "100% subsidized medical coverage for employee and dependents",
-    "Flexible spending wallets and ESPP offered",
-    "Clear product surface and measurable outcome ownership"
+    "Compensation range disclosed ($153K–$213K CAN base)",
+    "Remote-first company; fully remote eligible",
+    "Clear ownership and measurable outcomes defined in JD",
+    "100% subsidized medical, dental and vision coverage mentioned",
+    "Encourages applications from people with equivalent practical experience (education requirement)",
+    "Explicitly states this is for an existing vacancy"
   ],
   "red_flags": [
-    "Visa sponsorship not mentioned — unclear for non-US-authorized candidates",
-    "Role title in identity fields is 'Card Experience' but JD body describes 'Card Acquisition (New Channels)' — possible mismatch or umbrella title",
-    "Pay grade listed as 'N' without explanation — internal grade system not transparent externally",
-    "Proximal role employees may occasionally be required in office — not fully clear whether this role is proximal or fully remote"
+    "Compensation range is stated in CAN (Canadian dollars), not USD — total US comp is not explicitly stated, creating ambiguity for US-based candidates",
+    "Role title in identity field ('Card Experience') differs from JD body title ('Card Acquisition (New Channels)') — possible mismatch worth confirming",
+    "Visa sponsorship status not mentioned in JD",
+    "No explicit equity value or range stated beyond 'Equity Grade 6'"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title, comp range, and years required)",
+      "seniority.level (inferred from role title and comp range)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not explicitly listed as metrics)",
       "scope.business_model (inferred from product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not listed as discrete metrics in JD)",
-      "location.work_auth (not stated)",
-      "location.visa_sponsorship (not stated)",
-      "compensation.base_range_usd set to the full combined range [$169K, $240K] across both geographic tiers"
+      "location.work_auth (not stated; defaulted to open)",
+      "location.visa_sponsorship (not stated; defaulted to unclear)"
     ],
     "ambiguities": [
-      "Role title in identity fields is 'Senior Product Manager, Card Experience' but the JD body refers to 'Senior Product Manager, Card Acquisition (New Channels)' — may be a broader team umbrella title vs. specific sub-role title.",
-      "The JD says '#LI-Remote' and 'remote-first' but also notes proximal roles may need occasional office attendance — unclear if this specific role is classified as fully remote or proximal.",
-      "Education requirement lists Bachelor's or Master's in CS 'or other related fields; or equivalent practical experience' — treated as hard requirement given unconditional bullet placement, but equivalent experience acceptance softens it."
+      "Compensation range is labeled CAN (Canadian dollars) but role may also have US applicants; no USD equivalent stated in JD. Extracted as-is at face value.",
+      "Role title in identity fields is 'Senior Product Manager, Card Experience' but JD body title is 'Senior Product Manager, Card Acquisition (New Channels)' — possible metadata vs. actual role mismatch.",
+      "The 4+ year requirement reads 'Ideally with previous background owning growth/distribution channels' — the growth/distribution qualifier appears soft/ideal, but the 4+ years PM itself is hard. Extracted accordingly with growth channel background as a nice-to-have.",
+      "Posting hashtag is '#LI-Remote' suggesting fully remote, and body says 'remote-first'; treated as remote-us given the Canada pay range implies also hiring in Canada, but role location type is ambiguous between remote-us and remote-global."
     ]
   }
 }

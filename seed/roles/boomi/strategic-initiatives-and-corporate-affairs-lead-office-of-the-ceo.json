@@ -4,7 +4,7 @@
   "url": "https://boomi.com/boomi-jobs/?gh_jid=5990025004",
   "ats_provider": "greenhouse",
   "ats_job_id": "5990025004",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -21,23 +21,24 @@
   "archetype_confidence": "high",
   "secondary_archetype": "BizOps / Strategy & Ops",
   "seniority": {
-    "level": "Mid-Senior IC",
-    "years_required_min": 5,
-    "years_required_max": 8,
+    "level": "Senior IC / Staff",
+    "years_required_min": 6,
+    "years_required_max": 10,
     "manages_people": false,
     "level_signals": [
-      "5–8 years of experience in strategy, operations, corporate affairs, or related roles",
-      "Comp range $105K–$145K base",
-      "Reports to VP, Office of the CEO & Corporate Affairs — not a people manager role"
+      "6-10 years of experience in strategy, operations, corporate affairs, or related roles",
+      "Reports to VP, Office of the CEO & Corporate Affairs",
+      "Comp range $126K-$173K base consistent with Senior IC at a mid-size SaaS company",
+      "High level of discretion and professionalism expected"
     ]
   },
   "must_haves": [
     {
       "id": "years_strategy_ops_corp_affairs",
-      "raw_text_from_jd": "5–8 years of experience in strategy, operations, corporate affairs, or related roles within a high-growth SaaS or technology company.",
+      "raw_text_from_jd": "6 -10 years of experience in strategy, operations, corporate affairs, or related roles within a high-growth SaaS or technology company.",
       "skill_type": "years_of_experience",
       "domain": "strategy_operations_corporate_affairs",
-      "minimum_value": 5,
+      "minimum_value": 6,
       "unit": "years",
       "is_combined": false,
       "evidence_required": "work_history",
@@ -60,7 +61,7 @@
       "raw_text_from_jd": "Experience working on cross-functional projects and supporting initiatives that span multiple teams.",
       "skill_type": "capability",
       "domain": "cross_functional_collaboration",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -75,7 +76,7 @@
       "raw_text_from_jd": "Strong communication skills, with experience developing content for senior leaders or executive audiences.",
       "skill_type": "capability",
       "domain": "executive_communications",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -118,7 +119,7 @@
       "credentials_named": []
     },
     {
-      "id": "organizational_multi_priority",
+      "id": "organizational_priority_management",
       "raw_text_from_jd": "Strong organizational skills and ability to manage multiple priorities at once.",
       "skill_type": "capability",
       "domain": "organizational_effectiveness",
@@ -136,9 +137,9 @@
       "id": "discretion_professionalism",
       "raw_text_from_jd": "High level of discretion and professionalism in handling sensitive information.",
       "skill_type": "cultural_fit",
-      "domain": "confidentiality_judgment",
+      "domain": "executive_operations",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -151,7 +152,7 @@
       "id": "ownership_fast_paced",
       "raw_text_from_jd": "Willingness to learn, take ownership, and operate in a fast-paced environment.",
       "skill_type": "cultural_fit",
-      "domain": "growth_mindset_ownership",
+      "domain": "team_culture",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -167,6 +168,8 @@
       "raw_text_from_jd": "Willingness to travel up to 10% of the time.",
       "skill_type": "capability",
       "domain": "travel_availability",
+      "minimum_value": 10,
+      "unit": "percent_travel",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -182,19 +185,19 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Office of the CEO — strategy, corporate affairs, executive effectiveness, cross-functional initiative execution",
-    "business_model": "B2B SaaS — integration and automation platform",
+    "surface": "Office of the CEO — strategy coordination, corporate affairs, executive effectiveness, cross-functional initiatives",
+    "business_model": "B2B SaaS / integration and automation platform",
     "primary_metrics_inferred": [
-      "CEO and executive team effectiveness",
-      "Clarity and consistency of company narrative externally and internally",
-      "Progress and completion of high-priority cross-functional initiatives"
+      "Executive team alignment and operating cadence quality",
+      "Clarity and consistency of Boomi's external narrative",
+      "On-time execution of cross-functional strategic initiatives"
     ],
     "cross_functional_partners": [
       "Executive Leadership Team",
       "CEO",
       "VP Office of the CEO & Corporate Affairs",
-      "customers",
-      "partners"
+      "Customers",
+      "Partners"
     ],
     "core_responsibilities": [
       "Drive day-to-day coordination across priorities, support executive workflows, and ensure key initiatives, meetings, and follow-ups are well-structured and moving forward.",
@@ -208,8 +211,8 @@
   },
   "compensation": {
     "base_range_usd": [
-      105000,
-      145000
+      126000,
+      173000
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": false,
@@ -221,38 +224,39 @@
     "Office of the CEO",
     "strategic initiatives",
     "corporate affairs",
-    "cross-functional",
     "executive communications",
-    "company narrative",
-    "B2B SaaS",
-    "stakeholder management",
+    "cross-functional",
+    "SaaS",
+    "B2B technology",
+    "narrative and positioning",
     "operating rhythm",
-    "high-growth"
+    "Chief of Staff"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($105K–$145K base)",
-    "Remote-US eligible with Denver preferred — flexible for most US-based candidates",
-    "Explicit acknowledgment of impostor syndrome and encouragement to apply even without perfect fit",
-    "High-visibility role reporting directly to VP, Office of the CEO — strong career growth potential",
-    "Clear description of responsibilities across multiple core areas"
+    "Compensation range disclosed ($126K-$173K base)",
+    "Role has clear scope tied to CEO office with defined responsibility areas",
+    "Denver preferred but US remote also eligible — good location flexibility",
+    "Encourages candidates with impostor syndrome to apply",
+    "High-visibility role reporting to VP with direct CEO-adjacent exposure"
   ],
   "red_flags": [
-    "No equity mentioned despite being a SaaS company — total compensation picture unclear",
-    "Role responsibilities described as 'flex based on business needs' — scope may shift unpredictably",
-    "Visa sponsorship and work authorization not addressed anywhere in the JD",
-    "Location listed as 'hybrid' inferred — JD says 'Denver, CO (preferred) or US Remote' which is ambiguous about actual hybrid requirements for Denver-based employees"
+    "Responsibilities described as 'flex based on business needs' — scope may be undefined or shifting",
+    "No equity or bonus mentioned in compensation section, which is unusual for a senior strategic role",
+    "Work authorization and visa sponsorship not addressed",
+    "Role title and archetype (Chief of Staff flavor) may not match internal leveling or title, leading to ambiguity about career progression"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range and years required)",
-      "scope.business_model (inferred from company description: B2B SaaS integration/automation)",
+      "seniority.level (inferred from comp range + years + reporting level)",
+      "scope.business_model (inferred from company description as B2B SaaS integration platform)",
       "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
-      "location.type set to 'hybrid' — JD says 'Denver, CO (preferred) or US Remote'; unclear if Denver presence involves in-office days"
+      "location.work_auth and location.visa_sponsorship (not mentioned in JD; marked unclear)",
+      "location.type set to 'hybrid' — JD says 'Denver, CO (preferred) or US Remote'; treated as hybrid with remote option since Denver preference implies in-office expectation is possible"
     ],
     "ambiguities": [
-      "Location: JD states 'Denver, CO (preferred) or US Remote' — unclear whether Denver-based employees are expected to be on-site or fully remote. Classified as hybrid due to the city preference signal, but could be interpreted as fully remote-US.",
-      "No nice-to-haves are explicitly enumerated in the JD — all listed requirements appear under a single 'The Experience You Bring' section without preferred/required differentiation beyond the implied must-have framing."
+      "Location: JD states 'Denver, CO (preferred) or US Remote' — unclear whether Denver-based candidates are expected in-office regularly or if 'preferred' is just geographic preference. Classified as hybrid given the preference language, but could also be remote-us.",
+      "No explicit mention of bonus, equity, or total comp beyond base — unclear if this is intentional omission or an all-base structure."
     ]
   }
 }

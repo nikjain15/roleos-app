@@ -1,0 +1,330 @@
+{
+  "company": "Airbnb",
+  "role_title": "Staff Technical Program Manager, Guest & Host Tech",
+  "url": "https://careers.airbnb.com/positions/7972969?gh_jid=7972969",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7972969",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional work at an Airbnb office or attendance at offsites, as agreed to with your manager",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": null,
+  "seniority": {
+    "level": "Staff TPM (IC6 equivalent)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of experience in the software development industry",
+      "at least 7 years as a TPM or relevant experience",
+      "'Staff' in title",
+      "Comp range $200K-$248K base, consistent with Staff-level IC at Airbnb",
+      "Expected to work independently with stakeholders and cross-functional leadership with little supervision"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_software_industry",
+      "raw_text_from_jd": "10+ years of experience in the software development industry, with at least 7 years as a TPM or relevant experience .",
+      "skill_type": "years_of_experience",
+      "domain": "software_development",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_as_tpm",
+      "raw_text_from_jd": "with at least 7 years as a TPM or relevant experience .",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_complex_programs",
+      "raw_text_from_jd": "Experience scaling yourself to effectively run complex, highly cross-functional projects where communication and influence with multiple teams and stakeholders inside and outside of engineering is imperative.",
+      "skill_type": "capability",
+      "domain": "cross_functional_program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "c_suite_scrutiny",
+      "raw_text_from_jd": "Experience managing software projects with a high degree of scrutiny from C-suite execs.",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_domain_expert",
+      "raw_text_from_jd": "Proven technical domain expert for your projects.  Able to effectively represent engineering decisions/solutions to other teams.",
+      "skill_type": "capability",
+      "domain": "technical_expertise",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "thought_partner_eng_leadership",
+      "raw_text_from_jd": "Proven thought partner to Engineering Management or Eng Leads for your domain.",
+      "skill_type": "capability",
+      "domain": "engineering_partnership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_data_science_experience",
+      "raw_text_from_jd": "Machine Learning, Data Science experience including creating unique data sets, managing evolving, real-time pipeline architecture.",
+      "skill_type": "domain_knowledge",
+      "domain": "machine_learning_data_science",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Machine Learning",
+        "Data Science",
+        "real-time pipeline architecture"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_to_solutions",
+      "raw_text_from_jd": "Demonstrated ability to work through ambiguity to detailed solutions. You can take a vague problem, crisply frame the challenge, identify a path forward, and drive an initiative over the finish-line.",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "self_motivated_independent",
+      "raw_text_from_jd": "Self-motivated, proactive and ability to work independently with minimal oversight.",
+      "skill_type": "cultural_fit",
+      "domain": "work_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_oriented_big_picture",
+      "raw_text_from_jd": "Detail-oriented and able to understand the bigger picture by using your technical expertise and problem solving abilities to prioritize and manage blocking issues.",
+      "skill_type": "capability",
+      "domain": "prioritization_and_risk_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "quick_ramp_new_tech",
+      "raw_text_from_jd": "Ability to ramp up quickly and learn new technologies with minimal lag time.",
+      "skill_type": "capability",
+      "domain": "learning_agility",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "task_management_tooling",
+      "raw_text_from_jd": "Exhibit knowledge of Asana, Jira, Airtable or other equivalent task management tooling.",
+      "skill_type": "tool_proficiency",
+      "domain": "project_management_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Asana",
+        "Jira",
+        "Airtable"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_automation_experience",
+      "raw_text_from_jd": "Experience leveraging AI to automate processes and scale yourself to cover a larger project domain",
+      "skill_type": "capability",
+      "domain": "ai_tooling_and_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Guest & Host Tech — homepage, search, booking, planning, pre-trip/on-trip/post-trip guest experience, host tools; Homes, Experiences, multiple Homes, Hotels verticals",
+    "business_model": "two-sided marketplace (guests and hosts), consumer-facing and host-facing product surfaces",
+    "primary_metrics_inferred": [
+      "Key performance indicators for program health",
+      "Project timeline and milestone adherence",
+      "Cross-functional delivery velocity"
+    ],
+    "cross_functional_partners": [
+      "Payments",
+      "Trust Eng",
+      "Design",
+      "Product",
+      "Engineering Management",
+      "C-suite executives"
+    ],
+    "core_responsibilities": [
+      "Develop program scope and objectives, collaborate with all relevant stakeholders, ensure technical feasibility and drive projects end-to-end",
+      "Aligning on staffing, priorities and technical dependencies within Guest & Host Tech and cross-functional teams like Payments, Trust Eng, Design and Product",
+      "Manage Technical Design diligence process for large programs aligning design backlog w/ project plan, scheduling reviews and pre-reviews, engaging the right stakeholders across teams, and managing meeting quality and efficiency",
+      "Manage effective communications to leadership and across teams on key decisions, status, and risks to ensure accountability and timeline management",
+      "Understand best practices, drive for process improvements, and find new ways of operating, with a focus on simplification and productivity",
+      "Provide visibility into key performance indicators so leaders are aware of risks and opportunities",
+      "Work independently with stakeholders and cross-functional leadership with little supervision from management"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      200000,
+      248000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "bonus, equity, benefits, and Employee Travel Credits mentioned",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "TPM",
+    "cross-functional",
+    "Guest & Host Tech",
+    "machine learning",
+    "data science",
+    "pipeline architecture",
+    "C-suite",
+    "program management",
+    "AI automation",
+    "Jira",
+    "Asana",
+    "Airtable",
+    "force multiplier",
+    "Staff"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated and competitive ($200K-$248K base)",
+    "Fully remote-US eligible role",
+    "Clear product surface area described (Guest & Host Tech with named verticals)",
+    "Bonus, equity, and Employee Travel Credits mentioned as additional compensation",
+    "Inclusive hiring language and disability accommodation process explicitly stated"
+  ],
+  "red_flags": [
+    "ML/Data Science is listed as a hard requirement ('Machine Learning, Data Science experience including creating unique data sets, managing evolving, real-time pipeline architecture'), which is atypical for TPM roles and may exclude strong PM/TPM generalists",
+    "Must reside in a US state where Airbnb has a registered entity; excluded states list is evolving — candidates must verify eligibility",
+    "Visa sponsorship status not mentioned; work auth left unclear",
+    "10+ years total + 7+ years as TPM is a narrow bar that limits candidate pool significantly"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'Staff' title, years requirements, and comp range)",
+      "scope.business_model (inferred from product description as two-sided marketplace)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly named in JD)",
+      "location.work_auth (inferred as no-sponsorship; not explicitly stated but no sponsorship mentioned)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "ML/Data Science experience is listed in the 'Your Expertise' required section without 'preferred' or 'nice to have' qualifier — treated as hard requirement, but it is unusually technical for a TPM role and may be aspirational",
+      "Visa sponsorship is never mentioned; work_auth set to 'no-sponsorship' is inferred from absence of any sponsorship language, which may not be accurate",
+      "The JD says 'must live in a state where Airbnb, Inc. has a registered entity' but does not list excluded states inline — eligibility is contingent on an external link"
+    ]
+  }
+}

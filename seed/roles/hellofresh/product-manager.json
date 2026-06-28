@@ -1,0 +1,273 @@
+{
+  "company": "HelloFresh",
+  "role_title": "Product Manager",
+  "url": "https://careers.hellofresh.com/global/en/job/8018870?gh_jid=8018870",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8018870",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Toronto, ON"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days on-site",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Physical Product / Consumer PM (food/D2C)",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of progressive experience in Product Management or Product Development",
+      "Compensation range $90,000–$100,000 CAD, consistent with mid-senior IC",
+      "Reports to Director of Product"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years of progressive experience in Product Management or Product Development, ideally within a food manufacturing, D2C subscription, or FMCG environment.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "food manufacturing",
+        "D2C subscription",
+        "FMCG"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_centric_mindset",
+      "raw_text_from_jd": "A customer-centric mindset: you have the ability to identify unmet customer needs and pain points; a knack for creative thinking to develop solutions that solve our customers' challenges.",
+      "skill_type": "capability",
+      "domain": "customer_insights",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_influence_communication",
+      "raw_text_from_jd": "Outstanding ability to manage meetings, present to diverse audiences, and shift perspectives to negotiate and secure genuine buy-in for strategic initiatives across international teams and cross-functional departments.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_reasoning",
+      "raw_text_from_jd": "Exceptional ability to break down complex, ambiguous problems into manageable focus areas and build data-driven business cases.",
+      "skill_type": "capability",
+      "domain": "analytical_reasoning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "physical_product_fluency",
+      "raw_text_from_jd": "Deep understanding of product discovery and delivery frameworks with a proven track record of applying them to a physical supply chain.",
+      "skill_type": "domain_knowledge",
+      "domain": "physical_product_supply_chain",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_mindset",
+      "raw_text_from_jd": "A strong entrepreneurial streak and a desire to excel in a high-growth, unstructured, and fast-paced environment. You are passionate about creating the future and shaping the ready-to-heat category in Canada.",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurial_mindset",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Canada"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree in Engineering, Business, or a related technical field (e.g., Food Science).",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    },
+    {
+      "id": "travel_willingness",
+      "raw_text_from_jd": "A willingness to travel occasionally.",
+      "skill_type": "capability",
+      "domain": "travel",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "industry_background_preferred",
+      "raw_text_from_jd": "5+ years of progressive experience in Product Management or Product Development, ideally within a food manufacturing, D2C subscription, or FMCG environment.",
+      "skill_type": "domain_knowledge",
+      "domain": "food_manufacturing_d2c_fmcg",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "food manufacturing",
+        "D2C subscription",
+        "FMCG"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Factor Canada product portfolio — menu assortment, positioning, pricing, and ready-to-heat meal category",
+    "business_model": "D2C subscription (meal kits / ready-to-heat)",
+    "primary_metrics_inferred": [
+      "Customer retention",
+      "Brand loyalty",
+      "Commercial viability / portfolio margin",
+      "New product launch success"
+    ],
+    "cross_functional_partners": [
+      "Culinary",
+      "Operations",
+      "International brand counterparts",
+      "Executive leadership",
+      "Production floor stakeholders"
+    ],
+    "core_responsibilities": [
+      "Define and own key aspects of the product roadmap",
+      "Serve as the definitive authority on the customer using quantitative and qualitative insights",
+      "Act as primary champion for the customer across trade-off decisions",
+      "Lead product discovery for new concepts",
+      "Partner with Culinary, Operations, and other stakeholders in co-creating solutions",
+      "Digest and summarize product launches, A/B tests, or other data sets into actionable insights",
+      "Manage commercial viability of the portfolio (quality, cost trade-offs)",
+      "Collaborate with international brand counterparts to share best practices",
+      "Take a rapid testing approach to learn and pivot quickly"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "base_range_cad": [
+      90000,
+      100000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "product roadmap",
+    "customer-centric",
+    "product discovery",
+    "D2C subscription",
+    "FMCG",
+    "food manufacturing",
+    "physical supply chain",
+    "commercial ownership",
+    "A/B testing",
+    "Factor Canada",
+    "ready-to-heat",
+    "stakeholder management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($90,000–$100,000 CAD)",
+    "Clear product ownership area — Factor Canada menu portfolio",
+    "Explicit hybrid policy (3 days on-site) stated upfront",
+    "Role reports directly to Director of Product — clear reporting line",
+    "Benefits package detailed and competitive (health from day 1, RRSP matching, generous PTO)"
+  ],
+  "red_flags": [
+    "Compensation stated in CAD only — no USD equivalent; role is Canada-based and likely not open to US candidates",
+    "Work authorization and visa sponsorship not mentioned — unclear for international applicants",
+    "Physical product / food manufacturing domain is niche — limits applicant pool from pure software PM backgrounds",
+    "Disclosure that allergens are present in the workplace may be a concern for some candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and comp range)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
+      "scope.business_model (inferred from 'D2C subscription' and Factor Canada product description)",
+      "compensation.base_range_usd (not stated; range is in CAD — field left null, custom base_range_cad added for accuracy)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)"
+    ],
+    "ambiguities": [
+      "The 'ideally within a food manufacturing, D2C subscription, or FMCG environment' qualifier on the 5+ years requirement is ambiguous — the industry context reads as preferred ('ideally') but the years of experience itself is unconditional. Industry background captured as a separate nice-to-have; years of experience treated as hard.",
+      "Compensation is listed in CAD; schema expects USD. base_range_usd left null; a non-schema field base_range_cad [90000, 100000] noted in this field."
+    ]
+  }
+}

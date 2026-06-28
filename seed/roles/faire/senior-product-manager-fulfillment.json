@@ -1,0 +1,243 @@
+{
+  "company": "Faire",
+  "role_title": "Senior Product Manager, Fulfillment",
+  "url": "https://boards.greenhouse.io/faire/jobs/8603632002?gh_jid=8603632002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8603632002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week (Tuesdays, Thursdays, and one flex day); up to 4 weeks remote per year",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Marketplace / Operations PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Role title is 'Senior Product Manager'",
+      "Comp range $188K–$258.5K base, consistent with Senior IC at a late-stage startup",
+      "Expected to lead end-to-end strategy and execution across complex workstreams without explicit people management mention"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "business_empathy",
+      "raw_text_from_jd": "You understand how your customers' businesses actually work, not just their user flows. Fulfillment asks brands and retailers to make fundamental operational changes; you grasp those stakes and can navigate the marketplace tradeoffs when their interests intersect.",
+      "skill_type": "domain_knowledge",
+      "domain": "wholesale_marketplace_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "wholesale",
+        "retail"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_execution",
+      "raw_text_from_jd": "You relentlessly chase down problems across eng, ops, design, analytics, and GTM. You earn trust quickly, lead without authority, and work in lockstep with a fast-moving team.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "You understand how your work fits into the broader puzzle. You don't build shopping experiences without thinking about unit economics, or build brand tooling without thinking about ops partnership.",
+      "skill_type": "capability",
+      "domain": "systems_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_problem_solving",
+      "raw_text_from_jd": "You systematically break down hard problems and bring creativity and resourcefulness to finding durable solutions.",
+      "skill_type": "capability",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_depth",
+      "raw_text_from_jd": "You're fluent in business equations and experimental data. You go deeper than the first answer, whether that's \"what's the best way to rank products on this page\" or \"what's preventing brands from sending inventory correctly.\"",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_experimentation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "learning_velocity",
+      "raw_text_from_jd": "You thrive in fast-paced, 0→1 environments where the problem space is evolving. You get meaningfully better each month and grow alongside the problem space. You don't need to be told twice.",
+      "skill_type": "cultural_fit",
+      "domain": "zero_to_one_product_development",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication",
+      "raw_text_from_jd": "You synthesize complex tradeoffs clearly for stakeholders. You write well. You keep the team informed and aligned.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mission_alignment",
+      "raw_text_from_jd": "Alignment with Faire's mission and core values.",
+      "skill_type": "cultural_fit",
+      "domain": "company_values",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Faire Fulfillment — brand supply, retailer demand, fulfillment experience, and unit economics across the wholesale marketplace",
+    "business_model": "B2B wholesale marketplace (brands and independent retailers)",
+    "primary_metrics_inferred": [
+      "Fulfillment GMV share (scaling from ~1% to 20%+)",
+      "50%+ growth in participating brands through Faire Source",
+      "90%+ of Faire-fulfilled orders perfectly delivered",
+      "Halving cost of fulfillment as volume scales"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Operations",
+      "GTM",
+      "Finance",
+      "Data Science",
+      "Strategy & Analytics (S&A)"
+    ],
+    "core_responsibilities": [
+      "Build onboarding, sales enablement, and operational tooling for brands to fulfill through Faire",
+      "Drive 50%+ growth to participating brands through Faire Source by closing discovery, conversion, and cart experience gaps",
+      "Build toward 90%+ of Faire-fulfilled orders being perfectly delivered",
+      "Partner with S&A and operations to halve the cost of fulfillment through order batching, 3PL collaboration, and brand consolidation",
+      "Work cross-functionally with engineering, design, operations, GTM, finance, and data science to ship end-to-end",
+      "Define success metrics and communicate progress, tradeoffs, and decisions across the org"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      188000,
+      258500
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (form not specified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "fulfillment",
+    "wholesale marketplace",
+    "brand supply",
+    "retailer demand",
+    "unit economics",
+    "0→1",
+    "GMV",
+    "3PL",
+    "Faire Source",
+    "cross-functional execution",
+    "marketplace dynamics",
+    "operational systems"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and wide ($188K–$258.5K base)",
+    "Explicit quantitative targets in the JD (50%+ brand growth, 90%+ perfect delivery, halving fulfillment cost, 1%→20%+ GMV) — signals clarity of vision",
+    "Described as one of Faire's 'top long-term strategic bets' — high visibility role",
+    "Backed by top-tier investors (Sequoia, Founders Fund, Y Combinator, etc.) — financial stability",
+    "Role owns a broad, end-to-end problem space (brand supply, retailer demand, experience, economics)"
+  ],
+  "red_flags": [
+    "No minimum years of experience stated — seniority expectations are implicit, not explicit",
+    "Hybrid requirement is 3 days/week in San Francisco — eliminates remote candidates",
+    "No specific fulfillment, logistics, or marketplace background explicitly required, creating ambiguity about what background actually signals success",
+    "Visa sponsorship and work authorization not addressed in the JD"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior PM' and comp range)",
+      "seniority.years_required_min (not stated)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not labeled as metrics in JD)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)"
+    ],
+    "ambiguities": [
+      "The JD lists only San Francisco salary range but Faire has offices in Kitchener-Waterloo, Toronto, London, and New York — it is unclear whether this role is exclusively San Francisco-based or if other office locations are eligible.",
+      "No years-of-experience requirement is stated anywhere in the JD; seniority is inferred solely from the title and comp range.",
+      "Nice-to-haves section is entirely absent; all qualifications are listed under a single 'Qualifications' heading with no preferred/bonus distinction."
+    ]
+  }
+}

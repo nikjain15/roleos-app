@@ -1,0 +1,318 @@
+{
+  "company": "Lyft",
+  "role_title": "Program Manager, AV Technical Operations",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8525455002?gh_jid=8525455002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8525455002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Nashville, TN"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week (Mondays, Wednesdays, and Thursdays); hybrid roles have flexibility to work from anywhere for up to 4 weeks per year",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Lead Program Manager",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of program management or operational leadership required",
+      "0-to-1 build-out ownership and strategic structuring responsibilities",
+      "Base comp range $108,240 - $135,300 consistent with senior individual contributor"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_or_ops_av_ev",
+      "raw_text_from_jd": "5+ years of program management or operational leadership within the Autonomous Vehicle (AV), Electric Vehicle (EV), or Advanced Mobility sectors.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_or_operational_leadership",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "Autonomous Vehicle",
+        "Electric Vehicle",
+        "Advanced Mobility"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builder_mindset_service_centers",
+      "raw_text_from_jd": "Proven experience launching new service centers from scratch. Must possess deep expertise in managing complex launch timelines, facility layouts, permitting, and equipment procurement.",
+      "skill_type": "outcome",
+      "domain": "facility_launch_operations",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth_av_ev",
+      "raw_text_from_jd": "Solid understanding of AV sensor systems (lidar, radar, cameras), EV high-voltage systems, and automotive service operations to effectively build technical frameworks.",
+      "skill_type": "domain_knowledge",
+      "domain": "av_ev_technical_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "lidar",
+        "radar",
+        "cameras",
+        "EV high-voltage systems"
+      ],
+      "industries_named": [
+        "Autonomous Vehicle",
+        "Electric Vehicle"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_rigor_data_tools",
+      "raw_text_from_jd": "Proficiency managing high-velocity operations using data, Fleet Management Systems (FMS), ticketing systems, and data visualization (Tableau/Excel).",
+      "skill_type": "tool_proficiency",
+      "domain": "operations_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Tableau",
+        "Excel"
+      ],
+      "technologies_named": [
+        "Fleet Management Systems",
+        "ticketing systems",
+        "data visualization"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "travel_requirement",
+      "raw_text_from_jd": "Ability to travel up to 50% of the time, particularly during peak depot launch phases.",
+      "skill_type": "capability",
+      "domain": "travel_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "program_governance",
+      "raw_text_from_jd": "Establish rigorous project management organization, operating rhythms, and cross-functional stakeholder reporting. Own master launch timelines, critical path dependencies, and risk mitigation strategies for all new depot build-outs.",
+      "skill_type": "capability",
+      "domain": "program_governance",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sop_development",
+      "raw_text_from_jd": "Develop, document, and continuously optimize Standard Operating Procedures (SOPs). Translate AV/EV and OEM technical requirements into streamlined, highly efficient repair workflows for the shop floor.",
+      "skill_type": "capability",
+      "domain": "process_documentation_and_sop",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "Autonomous Vehicle",
+        "Electric Vehicle"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_finance_biz_ops",
+      "raw_text_from_jd": "Collaborate tightly with Biz Ops and Finance to develop strategic financial models for facility stand-ups. Forecast CapEx/OpEx, model ROI for tooling investments, and build foundational reporting dashboards to track operational efficiency (FTFR, Cycle Time) during the launch phase.",
+      "skill_type": "capability",
+      "domain": "strategic_finance_and_biz_ops",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "safety_compliance",
+      "raw_text_from_jd": "Partner with Regulatory and EHS teams to ensure 100% compliance with AV technical standards, overseeing High Voltage (HV) safety protocols (NFPA 70E, LOTO) and hazardous waste management.",
+      "skill_type": "domain_knowledge",
+      "domain": "safety_and_regulatory_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "NFPA 70E",
+        "LOTO"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "certifications_pmp_agile_lean_icar",
+      "raw_text_from_jd": "Certifications: PMP, Agile, Six Sigma/Lean, or I-Car Certification.",
+      "skill_type": "credential",
+      "domain": "professional_certifications",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP",
+        "Agile",
+        "Six Sigma",
+        "Lean",
+        "I-Car Certification"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "AV service depot build-out, technical operations infrastructure, technician workforce establishment for autonomous vehicle fleet",
+    "business_model": "B2B fleet management / AV fleet operations (subsidiary of Lyft)",
+    "primary_metrics_inferred": [
+      "First Time Fix Rate (FTFR)",
+      "Cycle Time",
+      "Operational readiness / go-live criteria for depot launches",
+      "CapEx/OpEx forecast accuracy",
+      "ROI on tooling investments"
+    ],
+    "cross_functional_partners": [
+      "Fleet Repair Ops",
+      "Recruiting",
+      "People team",
+      "IT",
+      "Tech teams",
+      "Real Estate",
+      "Procurement",
+      "Biz Ops",
+      "Finance",
+      "Regulatory",
+      "EHS"
+    ],
+    "core_responsibilities": [
+      "Establish program governance, operating rhythms, and cross-functional stakeholder reporting",
+      "Own master launch timelines, critical path dependencies, and risk mitigation for depot build-outs",
+      "Define operational readiness criteria and lead handoff to Fleet Repair Ops team",
+      "Partner with Recruiting to define AV technician hiring profile and competency benchmarks",
+      "Design, build, and implement technical training and certification program for technicians",
+      "Develop and optimize SOPs and repair workflows for AV/EV systems",
+      "Collaborate with Real Estate and Procurement on maintenance bay design, tooling sourcing, and SLA negotiation",
+      "Architect parts management software and inventory control system integrated with Fleet Management Systems",
+      "Develop strategic financial models, forecast CapEx/OpEx, model ROI, and build reporting dashboards",
+      "Develop scalable launch playbook for future market expansion",
+      "Ensure compliance with AV technical standards, HV safety protocols, and hazardous waste management"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      108240,
+      135300
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned; details not specified",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Autonomous Vehicle",
+    "AV fleet",
+    "Electric Vehicle",
+    "program management",
+    "depot launch",
+    "0-to-1",
+    "Fleet Management Systems",
+    "high-voltage safety",
+    "SOPs",
+    "technician training",
+    "CapEx/OpEx",
+    "operational readiness",
+    "scalable playbook",
+    "NFPA 70E",
+    "LOTO"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($108,240 - $135,300 base)",
+    "Clear 0-to-1 ownership scope with defined handoff criteria — not a vague role",
+    "Flexdrive is a Lyft subsidiary giving stability of a larger parent company",
+    "Hybrid schedule clearly defined (3 days/week, specific days named)",
+    "Up to 4 weeks/year flexibility to work from anywhere",
+    "Cross-functional scope is broad and well-articulated — high visibility role"
+  ],
+  "red_flags": [
+    "Up to 50% travel required, particularly during peak depot launch phases — significant lifestyle constraint",
+    "Office not yet established in Nashville — hybrid schedule contingent on 'establishment of a Lyft office in Nashville', timing unclear",
+    "Visa sponsorship not mentioned — unclear for international candidates",
+    "Role is a 0-to-1 builder position with eventual handoff to another team, which may limit long-term ownership satisfaction"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required + comp range + scope)",
+      "scope.business_model (inferred from JD description of Flexdrive as fleet management subsidiary entering AV space)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; FTFR and Cycle Time mentioned in JD body)",
+      "location.work_auth (inferred as open; not explicitly stated)",
+      "location.visa_sponsorship (not mentioned; marked unclear)",
+      "compensation.equity_form (mentioned as 'potential equity offering' without further detail)"
+    ],
+    "ambiguities": [
+      "Nashville office has not yet been established per the JD body ('following the establishment of a Lyft office in Nashville') — the hybrid schedule is contingent on future office availability; exact start timing of in-office requirement is unclear",
+      "Role title in the posting header is 'Program Manager, AV Fleet Technical Services' while the identity fields use 'Program Manager, AV Technical Operations' — treated identity fields as authoritative per instructions"
+    ]
+  }
+}

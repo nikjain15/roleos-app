@@ -1,0 +1,262 @@
+{
+  "company": "Decagon",
+  "role_title": "Senior Agent Product Manager - Germany",
+  "url": "https://jobs.ashbyhq.com/decagon/4ef4e97e-43b3-420f-be6f-1d0aab181149",
+  "ats_provider": "ashby",
+  "ats_job_id": "4ef4e97e-43b3-420f-be6f-1d0aab181149",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Germany"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "in-office (We're an in-office company)",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "AI Product Manager / Forward-Deployed Enterprise PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of experience owning ambiguous, high-stakes outcomes",
+      "Senior individual contributor role",
+      "Directs forward deployed engineers and partner teams without formal people management",
+      "OTE €145K–€180K consistent with senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_high_stakes_ownership",
+      "raw_text_from_jd": "6+ years of experience owning ambiguous, high-stakes outcomes and earning the trust of senior executives. This includes engagement managers, project leaders, and senior managers from top consulting firms, as well as product managers, founders, and forward-deployed or solutions roles at high-growth technology companies.",
+      "skill_type": "years_of_experience",
+      "domain": "enterprise_strategy_or_product_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "top consulting firms",
+        "high-growth technology companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "builders_instinct",
+      "raw_text_from_jd": "A builder's instinct. You want to design and build the actual solution, not just diagnose the problem or manage someone else who builds it.",
+      "skill_type": "capability",
+      "domain": "solution_design_and_delivery",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_acumen_ai_agents",
+      "raw_text_from_jd": "Strong technical acumen. You can understand and shape AI agent designs and hold your own in a technical conversation with both engineers and executives.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_agents_and_technical_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_presence_trusted_advisor",
+      "raw_text_from_jd": "Executive presence and a track record of becoming a trusted advisor to senior decision-makers at large, complex organizations.",
+      "skill_type": "outcome",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_comfort",
+      "raw_text_from_jd": "Comfort operating in fast-moving, ambiguous environments where you shape the solution as much as you implement it.",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_and_fast_paced_environments",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cs_engineering_math_degree",
+      "raw_text_from_jd": "A Computer Science, Engineering, or Math degree, or equivalent hands-on technical experience.",
+      "skill_type": "credential",
+      "domain": "technical_education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Computer Science degree",
+        "Engineering degree",
+        "Math degree"
+      ]
+    },
+    {
+      "id": "mba_or_equivalent",
+      "raw_text_from_jd": "An MBA, or equivalent experience at the intersection of business strategy and technology, is a plus.",
+      "skill_type": "credential",
+      "domain": "business_strategy_and_technology",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    },
+    {
+      "id": "enterprise_software_fortune500_experience",
+      "raw_text_from_jd": "Experience selling, deploying, or advising on enterprise software or transformation programs at the Fortune 500 level.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_software_and_transformation",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Fortune 500"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise AI agent deployments for Fortune 500 customers; end-to-end ownership of AI agents across voice, chat, email, SMS, and other channels",
+    "business_model": "B2B enterprise SaaS / conversational AI platform",
+    "primary_metrics_inferred": [
+      "Successful delivery and adoption of AI agents",
+      "Account expansion",
+      "Customer transformation outcomes (resolution rates, customer satisfaction)",
+      "Reusable playbooks and frameworks feeding product roadmap"
+    ],
+    "cross_functional_partners": [
+      "Strategic Account Directors",
+      "Agent Strategy Managers",
+      "Forward Deployed Engineers",
+      "Sales",
+      "Solutions Engineers",
+      "Product",
+      "Engineering"
+    ],
+    "core_responsibilities": [
+      "Own the technical win on Decagon's largest strategic opportunities, partnering with Sales, Solutions Engineers and Forward-deployed engineers to build working AI agents that turn sophisticated, skeptical buyers into signed customers.",
+      "Serve as the executive partner to the C-suite of Fortune 500 companies, defining and driving their AI transformation roadmap and owning the relationship from first conversation through production and expansion.",
+      "Design, build, and optimize enterprise-grade AI agents in production, going deep on each customer's workflows, pain points, and goals.",
+      "Turn the frameworks and playbooks you develop into reusable assets that scale across accounts and feed directly into Decagon's product roadmap.",
+      "Direct Forward-deployed engineers and partner teams to deliver at scale while you stay accountable for the outcome.",
+      "Run tight feedback loops into Product and Engineering, shaping the product based on what you learn on the front lines of our most demanding deployments."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity (unspecified form)",
+    "location_pay_differential": false,
+    "source": "stated",
+    "raw_comp_text": "€145k – 180K OTE + Offers Equity"
+  },
+  "top_keywords": [
+    "AI agents",
+    "enterprise",
+    "Fortune 500",
+    "conversational AI",
+    "customer experience",
+    "C-suite",
+    "AI transformation",
+    "forward-deployed",
+    "product roadmap",
+    "executive presence",
+    "technical acumen",
+    "consulting"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range disclosed as OTE (€145K–€180K) with equity",
+    "Role has clear ownership scope — end-to-end accountability for AI agent deployments",
+    "Cross-functional leverage with Forward Deployed Engineers, Solutions Engineers, and Strategic Account Directors",
+    "Explicitly a senior IC role, not requiring people management",
+    "Company backed by a16z, Accel, Bain Capital Ventures, Coatue, Index Ventures — strong investor signal",
+    "Named enterprise customers (Avis Budget Group, Cash App, Square, Chime, Oura Health) provide credibility"
+  ],
+  "red_flags": [
+    "In-office policy explicitly stated ('We're an in-office company') but no specific German city is named, making office location unclear",
+    "Compensation stated in EUR OTE only — no base/variable split provided; total comp structure is ambiguous",
+    "Role blends PM, strategy consulting, implementation, and technical build work — extremely broad scope may indicate role clarity issues",
+    "Work authorization requirements and visa sponsorship for Germany not addressed",
+    "Role title says 'Germany' but JD body does not specify any German city — geographic ambiguity"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 6+ years requirement, senior IC language, and comp range)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly in JD)",
+      "scope.business_model (inferred from product description)",
+      "location.cities_listed populated as 'Germany' from role title; no specific city named in JD body",
+      "compensation.base_range_usd left null — only EUR OTE range stated, no USD equivalent or base/variable split"
+    ],
+    "ambiguities": [
+      "Compensation is stated in EUR (€145K–€180K OTE) not USD; base_range_usd left null; no base vs. variable split disclosed.",
+      "Role is titled 'Germany' but no specific German city is mentioned in the JD body. Location type is inferred as onsite based on company-wide policy statement ('We're an in-office company').",
+      "The archetype is ambiguous: the role combines forward-deployed PM, strategy consulting, technical implementation, and account ownership. Classified as Technical Program Manager with AI Product Manager secondary archetype; could also be 'Other'.",
+      "Visa sponsorship and work authorization for Germany not mentioned anywhere in the JD."
+    ]
+  }
+}

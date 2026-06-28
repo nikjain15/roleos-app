@@ -1,0 +1,281 @@
+{
+  "company": "Abridge",
+  "role_title": "Founding Forward Deployed Product Manager",
+  "url": "https://jobs.ashbyhq.com/abridge/aef83f6a-0bc8-4d6a-b310-24415918ee3c",
+  "ats_provider": "ashby",
+  "ats_job_id": "aef83f6a-0bc8-4d6a-b310-24415918ee3c",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "in-person Monday, Wednesday, and Friday",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Forward Deployed / Customer-Facing PM",
+  "seniority": {
+    "level": "Senior IC / Lead (founding role, 7+ years)",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "7+ years of product management experience",
+      "Lead a small pod through focused, sprint-style engagements",
+      "Earn trust of CMOs, CMIOs, CIOs, and operational leaders",
+      "Founding Forward Deployed PM — sets the tone for what forward deployed means at Abridge"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7+ years of product management experience shipping products that users love, with a track record of owning product areas end-to-end.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builder_mentality",
+      "raw_text_from_jd": "Builder mentality. You've personally driven products from discovery through launch and iteration. You care about craft and quality in what you ship.",
+      "skill_type": "outcome",
+      "domain": "product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "user_empathy_product_taste",
+      "raw_text_from_jd": "Strong user empathy and product taste. You instinctively know the difference between a product that works and one that delights.",
+      "skill_type": "capability",
+      "domain": "product_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "comfort_with_ambiguity",
+      "raw_text_from_jd": "Comfort with ambiguity. You can take a messy problem space and create a clear roadmap without waiting for perfect information.",
+      "skill_type": "capability",
+      "domain": "strategic_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_credibility",
+      "raw_text_from_jd": "Cross-functional credibility. You can go deep with engineers on technical tradeoffs, partner with design on interaction details, and operate as the senior product voice in front of CMOs, CMIOs, CIOs, and CFOs.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "outcome_oriented_engagements",
+      "raw_text_from_jd": "Track record of running time-bound, outcome-oriented engagements where the deliverable was a live system, not a document.",
+      "skill_type": "outcome",
+      "domain": "enterprise_deployments",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "travel_willingness",
+      "raw_text_from_jd": "Willingness to travel ~20% on average, with surge periods around engagement kickoff and go-live.",
+      "skill_type": "cultural_fit",
+      "domain": "travel_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sf_hybrid_relocation",
+      "raw_text_from_jd": "Please only apply if you are open to relocation and our hybrid in-person model in San Francisco.",
+      "skill_type": "cultural_fit",
+      "domain": "location_availability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "San Francisco"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "healthcare_clinical_workflow",
+      "raw_text_from_jd": "Healthcare or clinical workflow experience, or familiarity with Epic or other EHR platforms.",
+      "skill_type": "domain_knowledge",
+      "domain": "healthcare_clinical_workflow",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [
+        "Epic"
+      ],
+      "technologies_named": [],
+      "industries_named": [
+        "healthcare"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "forward_deployed_enterprise_ai_experience",
+      "raw_text_from_jd": "Prior experience in a forward deployed, solutions engineering, or customer-facing product role at an enterprise AI company.",
+      "skill_type": "domain_knowledge",
+      "domain": "forward_deployed_enterprise_ai",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "enterprise AI company"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "small pod (size unspecified)",
+    "surface": "Forward Deployed PM motion with health system partners; feeds back into core Abridge product suite",
+    "business_model": "enterprise B2B, AI-powered clinical documentation platform sold to health systems",
+    "primary_metrics_inferred": [
+      "Successful go-live of partner engagements",
+      "Partner outcomes and satisfaction (CMO/CMIO/CIO trust)",
+      "Core product improvements surfaced from field engagements"
+    ],
+    "cross_functional_partners": [
+      "Partner Success",
+      "Internal Product and Engineering teams",
+      "Integration teams",
+      "Executive sponsors (CMOs, CMIOs, CIOs, CFOs) at health system partners",
+      "Clinicians"
+    ],
+    "core_responsibilities": [
+      "Run discovery on-site at partner accounts; meet with executive sponsors, clinicians, and integration teams",
+      "Lead a small pod through focused, sprint-style engagements",
+      "Own the product and feature answer for each engagement",
+      "Decide what gets built, what gets declined, and what gets routed to the core roadmap",
+      "Partner with internal product and engineering teams on net-new product builds",
+      "Feed field learnings directly back into the core Abridge product"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants for full-time employees",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "forward deployed",
+    "health systems",
+    "clinical workflow",
+    "EHR",
+    "Epic",
+    "generative AI",
+    "clinical documentation",
+    "enterprise AI",
+    "CMO",
+    "CMIO",
+    "sprint-style engagements",
+    "pod leadership",
+    "product roadmap",
+    "EMR integrations"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Founding role — high impact and visibility at a growing AI healthcare company",
+    "Clear and specific role description with well-defined responsibilities",
+    "Company has a differentiated technical claim (maps AI-generated summaries to ground truth via Linked Evidence)",
+    "Strong benefits package including sabbatical, lifestyle wallet, parental leave, and HSA contributions",
+    "Office locations in major tech hubs (SF, NYC, Pittsburgh)"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed",
+    "Visa sponsorship status not mentioned",
+    "Requires relocation to San Francisco with mandatory hybrid in-person Mon/Wed/Fri — highly restrictive for non-local candidates",
+    "Travel ~20% with unspecified surge periods adds unpredictability",
+    "Role scope is broad and founding — high ambiguity for someone without prior forward deployed experience"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement, founding/senior framing, and pod leadership)",
+      "seniority.manages_people (inferred from 'Lead a small pod' language)",
+      "scope.team_size_estimate (not stated; described only as 'small pod')",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "scope.business_model (inferred from product description)",
+      "compensation.source (unknown; no base range stated)"
+    ],
+    "ambiguities": [
+      "Archetype is ambiguous: role blends Technical PM, customer-facing/solutions PM, and potentially Program Manager. Classified as Technical PM with secondary archetype note given emphasis on technical tradeoffs and pod ownership.",
+      "manages_people: JD says 'Lead a small pod' which implies people leadership, but the pod may be a cross-functional team rather than direct reports — set to true but ambiguous.",
+      "Visa sponsorship: not mentioned anywhere in the JD; marked as unclear."
+    ]
+  }
+}

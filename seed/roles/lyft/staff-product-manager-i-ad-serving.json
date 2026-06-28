@@ -1,0 +1,378 @@
+{
+  "company": "Lyft",
+  "role_title": "Staff Product Manager I, Ad Serving",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8594167002?gh_jid=8594167002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8594167002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York City, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM with adtech platform focus",
+  "seniority": {
+    "level": "Staff IC (Staff PM I)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management required",
+      "Staff PM I title signals senior IC level above Senior PM",
+      "Comp range $176K-$220K base consistent with Staff-level IC in NYC at Lyft",
+      "Expected to set team goals, roadmap, and lead engineers and data scientists",
+      "Cross-functional executive communication expected"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "8+ years of product management with a record of launching and scaling ad platforms from 0 to 1.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "advertising",
+        "ad platforms"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "zero_to_one_ad_platform",
+      "raw_text_from_jd": "a record of launching and scaling ad platforms from 0 to 1.",
+      "skill_type": "outcome",
+      "domain": "ad_platform_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "advertising"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "rtb_or_adserving_expertise",
+      "raw_text_from_jd": "Deep expertise in either real-time bidding or ad serving domains, with experience working on one or more of the following: ad decisioning logic, targeting systems, scoring, ranking, advertiser optimization (e.g. impressions, clicks, engagements, conversions), yield optimization, integrations with SSPs and DSPs.",
+      "skill_type": "domain_knowledge",
+      "domain": "real_time_bidding_or_ad_serving",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "real-time bidding",
+        "ad decisioning logic",
+        "targeting systems",
+        "scoring",
+        "ranking",
+        "yield optimization",
+        "SSP integrations",
+        "DSP integrations"
+      ],
+      "industries_named": [
+        "advertising",
+        "adtech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "roadmap_and_team_leadership",
+      "raw_text_from_jd": "Build a roadmap and lead a core team of engineers and data scientists to achieve it.",
+      "skill_type": "capability",
+      "domain": "product_roadmap_and_team_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_alignment",
+      "raw_text_from_jd": "Align cross functional partners and teams beyond your immediate development team to drive a shared vision. For example, Sales, Legal, Finance, Operations, and internal marketing teams.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "yield_management",
+      "raw_text_from_jd": "Take a holistic yield management approach across direct demand and external supply channels.",
+      "skill_type": "domain_knowledge",
+      "domain": "yield_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "advertising",
+        "adtech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Clearly communicate priorities, problems, experiments, and decisions across a wide spectrum of audiences, from partner teams to executives.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "full_product_ownership",
+      "raw_text_from_jd": "Completely own your team's products, existing or new, from ideation through development, launch, growth, and maintenance.",
+      "skill_type": "capability",
+      "domain": "end_to_end_product_ownership",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "metrics_and_data_analysis",
+      "raw_text_from_jd": "Be able to define and analyze metrics that inform the success of products.",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_metrics",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "post_launch_optimization",
+      "raw_text_from_jd": "Experience leading post-launch optimizations, including developing testing strategies.",
+      "skill_type": "capability",
+      "domain": "post_launch_optimization_and_testing",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "project_ambiguity_management",
+      "raw_text_from_jd": "Natural ability to make things happen around you. You manage project ambiguity, complexity and interdependencies in an organized and structured way.",
+      "skill_type": "capability",
+      "domain": "project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_communication_strategy",
+      "raw_text_from_jd": "Strong communication skills and intuition for communication strategy at every level — within teams, within the company, to users, to press, and other audiences.",
+      "skill_type": "capability",
+      "domain": "communication_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_project_prioritization",
+      "raw_text_from_jd": "Ability to conceptualize, manage and prioritize multiple projects for stakeholders.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_oriented_organization",
+      "raw_text_from_jd": "Detail oriented with superior organizational skills — balancing multiple projects, deadlines, and requests should be second nature to you.",
+      "skill_type": "capability",
+      "domain": "organizational_skills",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "passion_for_lyft_mission",
+      "raw_text_from_jd": "Passion for Lyft and what we are trying to achieve in sustainable urban transportation.",
+      "skill_type": "cultural_fit",
+      "domain": "company_mission_alignment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "transportation",
+        "mobility"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Ad Serving platform powering delivery of ads to riders before, during, and after rides within Lyft's mobility advertising network",
+    "business_model": "B2B2C advertising network; brand advertisers targeting riders via Lyft's platform",
+    "primary_metrics_inferred": [
+      "Impressions, clicks, engagements, conversions",
+      "Yield optimization across direct and programmatic demand",
+      "Advertiser ROI and campaign performance",
+      "Ad platform scale and revenue growth"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data Science",
+      "Sales",
+      "Legal",
+      "Finance",
+      "Operations",
+      "Internal Marketing"
+    ],
+    "core_responsibilities": [
+      "Develop strategy and objectives for the Ad Serving platform and build roadmap",
+      "Lead a core team of engineers and data scientists",
+      "Align cross-functional partners across Sales, Legal, Finance, Operations, and marketing teams",
+      "Take a holistic yield management approach across direct demand and external supply channels",
+      "Communicate priorities, problems, experiments, and decisions to partner teams and executives",
+      "Own team's products from ideation through development, launch, growth, and maintenance",
+      "Set team goals, success metrics, and roadmap aligned with Lyft's mission",
+      "Serve as champion of advertisers and advocate for their needs at all levels"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      176000,
+      220000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned but not detailed",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "ad serving",
+    "real-time bidding",
+    "yield optimization",
+    "ad decisioning",
+    "targeting systems",
+    "SSP",
+    "DSP",
+    "Lyft Ads",
+    "mobility advertising",
+    "advertiser optimization",
+    "0 to 1",
+    "staff product manager",
+    "ad platform"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range clearly disclosed ($176K-$220K base) plus equity and bonus",
+    "Well-defined product surface with clear ownership (Ad Serving platform)",
+    "Growing business unit (Lyft Ads described as rapidly growing)",
+    "Hybrid schedule with specific days called out (Mondays, Wednesdays, Thursdays) — predictable",
+    "Up to 4 weeks per year work-from-anywhere flexibility stated",
+    "Generous parental leave (18 weeks) and comprehensive benefits described"
+  ],
+  "red_flags": [
+    "Role requires in-office presence in NYC 3 days/week — eliminates remote candidates",
+    "Very specific domain requirement (RTB or ad serving expertise) makes this a narrow search",
+    "Visa sponsorship status not addressed anywhere in the JD",
+    "8+ years minimum is a hard bar with no stated flexibility or 'equivalent experience' language"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Staff PM I', comp range, and years requirement)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities and domain context; not listed explicitly as KPIs in JD)",
+      "scope.business_model (inferred from product description)",
+      "location.visa_sponsorship (not mentioned; marked 'unclear')",
+      "compensation.equity_form (mentioned in passing without detail)"
+    ],
+    "ambiguities": [
+      "'Passion for Lyft and what we are trying to achieve in sustainable urban transportation' is listed under the 'Experience' section alongside hard requirements but reads as a cultural/motivational qualifier; classified as nice-to-have soft.",
+      "Bonus is mentioned as excluded from the base range ('not inclusive of potential equity offering, bonus or benefits') but no bonus range or structure is provided.",
+      "The JD does not clarify whether the Staff PM I will formally manage people or only lead cross-functional influence — classified as manages_people: false based on language used."
+    ]
+  }
+}

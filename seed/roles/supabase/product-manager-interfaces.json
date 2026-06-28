@@ -1,0 +1,291 @@
+{
+  "company": "Supabase",
+  "role_title": "Product Manager - Interfaces",
+  "url": "https://jobs.ashbyhq.com/supabase/184c3ad5-5d5f-44a1-98f7-65ff6f287b2f",
+  "ats_provider": "ashby",
+  "ats_job_id": "184c3ad5-5d5f-44a1-98f7-65ff6f287b2f",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-global",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "none",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Developer Tools PM",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of product management experience on developer tools",
+      "ex-founder with strong product instincts also acceptable",
+      "Owns full surfaces (SDK, CLI, dashboard, API) end-to-end"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_dev_tools",
+      "raw_text_from_jd": "7+ years of product management experience on developer tools, or an ex-founder with strong product instincts.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_developer_tools",
+      "minimum_value": 7,
+      "unit": "years",
+      "qualifier": "developer tools PM or ex-founder equivalent",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "developer tools"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shipped_developer_surface",
+      "raw_text_from_jd": "You've shipped a public SDK, CLI, dashboard, or API that external developers depend on. Not features that happened to touch an SDK; you owned the surface.",
+      "skill_type": "outcome",
+      "domain": "developer_interface_ownership",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SDK",
+        "CLI",
+        "API"
+      ],
+      "industries_named": [
+        "developer tools"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "api_design_docs_dashboard_breadth",
+      "raw_text_from_jd": "You're equally adept at API design, docs IA, and dashboard flows, and you've made the trade-offs between them in production.",
+      "skill_type": "capability",
+      "domain": "developer_interface_design",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "API"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth",
+      "raw_text_from_jd": "You're technical enough to read an architecture doc, follow a design discussion, and ask the right questions.",
+      "skill_type": "capability",
+      "domain": "technical_acuity",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_agent_landscape_familiarity",
+      "raw_text_from_jd": "You're familiar with how coding agents (such as Claude, Codex and Cursor) consume SDKs, docs, and APIs, and how to optimize for developers using them.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_coding_agents",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Claude",
+        "Codex",
+        "Cursor"
+      ],
+      "technologies_named": [
+        "SDK",
+        "API",
+        "coding agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_toward_speed",
+      "raw_text_from_jd": "You're biased toward speed. You'd rather ship something imperfect and learn than spend another sprint refining a spec.",
+      "skill_type": "cultural_fit",
+      "domain": "execution_velocity",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_product_use",
+      "raw_text_from_jd": "You build with what you own. You install the CLI, call the Management API, read the docs end-to-end, and write real code against supabase-js.",
+      "skill_type": "capability",
+      "domain": "hands_on_developer_use",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "supabase-js"
+      ],
+      "technologies_named": [
+        "CLI",
+        "Management API"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_usage",
+      "raw_text_from_jd": "You use AI tools to compress the slow parts of the job (research, drafting, synthesizing feedback) so you spend more time on judgment calls, and you've built enough with agents to have real opinions on what makes an interface agent-friendly.",
+      "skill_type": "capability",
+      "domain": "ai_tooling_proficiency",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools",
+        "coding agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "async_work_default",
+      "raw_text_from_jd": "You work async by default. Supabase is fully remote. You make decisions in writing and move work forward without meetings.",
+      "skill_type": "cultural_fit",
+      "domain": "async_remote_work",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "metrics_before_launch",
+      "raw_text_from_jd": "Define how each launch is measured before it ships. You will set clear goals that measure how a change actually moves developer activation, docs comprehension, agent task success, or API adoption—and you'll use that insight to guide what we do next.",
+      "skill_type": "capability",
+      "domain": "metrics_and_goal_setting",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "280+ company; team size for this role unclear",
+    "surface": "Supabase developer interfaces: SDKs, docs, dashboard, Management API, CLI — for both human developers and coding agents",
+    "business_model": "open-source developer platform, B2D (business-to-developer), enterprise and self-serve",
+    "primary_metrics_inferred": [
+      "Developer activation",
+      "Docs comprehension",
+      "Agent task success",
+      "API adoption"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Leadership"
+    ],
+    "core_responsibilities": [
+      "Talk to customers across the full spectrum — indie developers, AI-native platforms, enterprise teams",
+      "Own the problem statement and requirements behind every interface bet",
+      "Set the bar for what 'agent-friendly' means on Supabase",
+      "Define how each launch is measured before it ships",
+      "Keep engineering, design, and leadership aligned"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "ESOP (equity ownership)",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "developer tools",
+    "SDK",
+    "CLI",
+    "Management API",
+    "docs",
+    "dashboard",
+    "agent-friendly",
+    "coding agents",
+    "open-source",
+    "Postgres",
+    "async",
+    "developer experience",
+    "API design"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Fully remote with global hiring — no geographic restrictions",
+    "Equity (ESOP) offered to every team member",
+    "100% health insurance coverage for employees",
+    "Concrete product ownership over a clearly defined set of surfaces (not vague scope)",
+    "Company has strong traction: 7M+ developers, $500M raised, 500K+ community members",
+    "Ex-founder path explicitly accepted as equivalent to 7+ years PM experience",
+    "Async-first culture explicitly stated and practiced"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship not mentioned — unclear for international candidates outside existing countries",
+    "Very high bar: must have owned a full public SDK/CLI/API surface, not just touched one",
+    "Broad scope (five major surfaces) with expectation to keep all cross-functional teams aligned may indicate under-staffed or high-pressure role"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement and surface ownership expectations)",
+      "scope.primary_metrics_inferred (derived from responsibilities, not stated as KPIs)",
+      "scope.business_model (inferred from product description)",
+      "location.remote_us_eligible (inferred from 'We hire globally' and no restrictions stated)",
+      "compensation.location_pay_differential (inferred as false from global hiring language with no mention of geo-based pay)"
+    ],
+    "ambiguities": [
+      "The JD lists no nice-to-haves explicitly. All 'Who you are' bullets are stated as unconditional expectations and have been classified as must_haves.",
+      "Visa sponsorship is never mentioned — set to 'unclear'.",
+      "The ex-founder equivalency ('or an ex-founder with strong product instincts') creates ambiguity about whether the 7-year minimum is truly hard; treated as hard with ex-founder as an accepted substitute path."
+    ]
+  }
+}

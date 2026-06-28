@@ -1,0 +1,282 @@
+{
+  "company": "Instacart",
+  "role_title": "People Experience Program Manager - San Francisco",
+  "url": "https://instacart.careers/job/?gh_jid=7985466",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7985466",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "in-person orientation components required; Flex First policy otherwise",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "People / HR Program Manager",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years in program management or related HR function",
+      "Base pay range $141K-$149K consistent with mid-senior IC",
+      "Expected to independently manage vendor relationships and cross-functional programs end-to-end"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management_hr",
+      "raw_text_from_jd": "5+ years in program management, learning & development, talent development, or a related people/HR function",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_or_HR",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_professional_use",
+      "raw_text_from_jd": "Hands-on experience using AI tools in a professional context (we'll ask you about this!)",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_project_management",
+      "raw_text_from_jd": "Demonstrated ability to manage cross-functional projects from inception to completion — including when the problem or solution isn't fully defined at the outset",
+      "skill_type": "capability",
+      "domain": "cross_functional_project_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "facilitation_experience",
+      "raw_text_from_jd": "Proven experience facilitating learning or orientation content for diverse audiences",
+      "skill_type": "capability",
+      "domain": "facilitation_and_learning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vendor_relationship_management",
+      "raw_text_from_jd": "Track record of managing vendor relationships end-to-end: procurement, contract renewals, and ongoing partnership management",
+      "skill_type": "capability",
+      "domain": "vendor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sf_bay_area_location",
+      "raw_text_from_jd": "Located in the SF Bay Area with ability to support in-person orientation components in our San Francisco office",
+      "skill_type": "capability",
+      "domain": "location_requirement",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "SF Bay Area",
+        "San Francisco"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "Bachelor's degree or equivalent professional experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    },
+    {
+      "id": "instructional_design_lms",
+      "raw_text_from_jd": "Experience with instructional design tools and/or learning management systems",
+      "skill_type": "tool_proficiency",
+      "domain": "instructional_design",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pm_certification",
+      "raw_text_from_jd": "Certification in project management (PMP, CAPM, or equivalent)",
+      "skill_type": "credential",
+      "domain": "project_management_certification",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP",
+        "CAPM"
+      ]
+    },
+    {
+      "id": "ai_automation_people_programs",
+      "raw_text_from_jd": "Experience applying AI to automate or redesign people programs at scale",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_automation_hr",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "New hire orientation and performance review cycle programs within the People Experience team",
+    "business_model": "Internal HR/People function at a grocery delivery marketplace (B2C/B2B)",
+    "primary_metrics_inferred": [
+      "Orientation session operational quality and new hire satisfaction",
+      "Performance review cycle on-time completion and stakeholder alignment",
+      "Reduction in manual operational bottlenecks",
+      "Vendor contract and budget accuracy"
+    ],
+    "cross_functional_partners": [
+      "Comms",
+      "Legal",
+      "People Leadership"
+    ],
+    "core_responsibilities": [
+      "Run new hire orientation logistics end-to-end with vendor management and continuous improvement",
+      "Execute performance review cycles with timeline management and stakeholder communications",
+      "Document, optimize, and automate manual processes across high-visibility people programs",
+      "Manage vendor relationships including procurement, contracts, SOWs, and budget tracking",
+      "Facilitate virtual and in-person orientation components and contribute to content iteration"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      141000,
+      149000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "new hire equity grant and annual refresh grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "program manager",
+    "people experience",
+    "new hire orientation",
+    "performance review cycle",
+    "operational excellence",
+    "process automation",
+    "vendor management",
+    "facilitation",
+    "learning & development",
+    "AI tools",
+    "Flex First"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($141K-$149K base) and competitive for SF",
+    "Equity grant (new hire and annual refresh) explicitly mentioned",
+    "Clear scope and first-year deliverables articulated in concrete terms",
+    "Flex First policy allows flexible work arrangement with in-person as needed",
+    "Role has direct, visible impact on two high-profile employee lifecycle moments",
+    "AI tool fluency explicitly valued — signals a forward-thinking team"
+  ],
+  "red_flags": [
+    "Hard requirement to be located in SF Bay Area with in-person obligations — eliminates remote candidates",
+    "Visa sponsorship status not stated",
+    "Role scope is operationally heavy with facilitation expectations that may expand over time ('increasingly contributing to content iteration') without clear career ladder described",
+    "Compensation range is narrow ($8K spread) leaving little room for negotiation"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and compensation range)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from first-year deliverables; not explicitly stated as metrics)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "posting_first_seen (not available)",
+      "posting_last_updated (not available)"
+    ],
+    "ambiguities": [
+      "JD describes the company as 'Flex First' (work from anywhere) but the role requires SF Bay Area location and in-person orientation support — effectively hybrid/onsite for this role. Treated as hybrid.",
+      "The role title includes 'San Francisco' which implies onsite obligation, but Flex First policy language suggests flexibility outside of orientation days. The degree of in-office requirement beyond orientation is unspecified."
+    ]
+  }
+}

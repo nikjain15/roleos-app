@@ -43,6 +43,61 @@ function isSubCall(skill: string | null): boolean {
   return !!skill && skill.includes(":");
 }
 
+/**
+ * Demand signal (the "keep me in the loop" intents). What roles / companies /
+ * locations users are actually hunting for — the input to demand-driven
+ * ingestion (we fetch what people want, growing the corpus). Admin-only; the
+ * route already re-checked admin. Aggregated in JS over active intents.
+ */
+export interface DemandStats {
+  watchers: number;
+  pushing: number; // intents in push mode
+  topRoles: { key: string; count: number }[];
+  topCompanies: { key: string; count: number }[];
+  topKeywords: { key: string; count: number }[];
+  topLocations: { key: string; count: number }[];
+}
+
+function rank(values: string[], limit = 12): { key: string; count: number }[] {
+  const m = new Map<string, number>();
+  for (const raw of values) {
+    const k = raw.trim();
+    if (!k) continue;
+    m.set(k.toLowerCase(), (m.get(k.toLowerCase()) ?? 0) + 1);
+  }
+  return [...m.entries()]
+    .map(([key, count]) => ({ key, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, limit);
+}
+
+interface IntentRow {
+  target_role: string | null;
+  keywords: string[] | null;
+  companies: string[] | null;
+  location: string | null;
+  mode: string | null;
+}
+
+export async function getDemandStats(): Promise<DemandStats> {
+  const db = supabaseService();
+  const { data } = await db
+    .from("intents")
+    .select("target_role, keywords, companies, location, mode")
+    .eq("status", "active")
+    .limit(5000);
+  const rows = (data ?? []) as IntentRow[];
+
+  return {
+    watchers: rows.length,
+    pushing: rows.filter((r) => r.mode === "push").length,
+    topRoles: rank(rows.map((r) => r.target_role ?? "").filter(Boolean)),
+    topCompanies: rank(rows.flatMap((r) => r.companies ?? [])),
+    topKeywords: rank(rows.flatMap((r) => r.keywords ?? [])),
+    topLocations: rank(rows.map((r) => r.location ?? "").filter(Boolean)),
+  };
+}
+
 export async function getAdminStats(): Promise<AdminStats> {
   const db = supabaseService();
   const { data } = await db

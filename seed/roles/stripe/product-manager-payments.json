@@ -4,7 +4,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7176530",
   "ats_provider": "greenhouse",
   "ats_job_id": "7176530",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -16,28 +16,29 @@
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical PM",
-  "archetype_confidence": "high",
-  "secondary_archetype": "Generalist PM (Payments Platform)",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM with payments/fintech focus",
   "seniority": {
     "level": "Senior IC / Staff PM",
     "years_required_min": 7,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "7-12+ years of industry product management experience",
-      "Background delivering successfully on multi-quarter roadmaps",
-      "Significant autonomy and responsibility signals senior-level scope"
+      "7–12+ years of industry product management experience",
+      "Multi-quarter roadmap ownership",
+      "Significant autonomy and responsibility",
+      "Aligning and influencing diverse stakeholders"
     ]
   },
   "must_haves": [
     {
       "id": "years_pm_experience",
-      "raw_text_from_jd": "7-12+ years of industry product management experience (does not include internships nor includes co-ops)",
+      "raw_text_from_jd": "7–12+ years of industry product management experience (does not include internships or co-ops)",
       "skill_type": "years_of_experience",
       "domain": "product_management",
       "minimum_value": 7,
       "unit": "years",
-      "qualifier": "excludes internships and co-ops",
+      "qualifier": "excludes internships or co-ops",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -49,12 +50,12 @@
       "credentials_named": []
     },
     {
-      "id": "payments_domain_experience",
-      "raw_text_from_jd": "Experience in payments, fintech, financial infrastructure, or a closely adjacent domain (e.g., commerce platforms, banking, payment networks) and a track record of building highly impactful products",
+      "id": "payments_fintech_domain",
+      "raw_text_from_jd": "Experience in payments, fintech, financial infrastructure, or a closely adjacent domain (e.g., commerce platforms, banking, and payment networks) and a track record of building highly impactful products",
       "skill_type": "domain_knowledge",
       "domain": "payments_fintech",
       "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "no",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -91,7 +92,7 @@
       "skill_type": "capability",
       "domain": "communication",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -104,7 +105,7 @@
       "id": "analytical_capabilities",
       "raw_text_from_jd": "Strong analytical capabilities with experience defining and tracking success metrics, running experiments (e.g., holdback tests), and using data to measure product impact on revenue, conversion, and margins",
       "skill_type": "capability",
-      "domain": "data_analytics_and_experimentation",
+      "domain": "analytics_and_experimentation",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -120,7 +121,7 @@
       "raw_text_from_jd": "Experience working on products that require aligning multiple stakeholders, developing joint roadmaps, and navigating competing priorities between internal goals and external partner objectives",
       "skill_type": "capability",
       "domain": "stakeholder_management",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -131,7 +132,7 @@
       "credentials_named": []
     },
     {
-      "id": "autonomy_in_fast_paced_env",
+      "id": "autonomy_fast_paced",
       "raw_text_from_jd": "Ability to thrive in a dynamic and fast-paced environment with significant autonomy and responsibility",
       "skill_type": "cultural_fit",
       "domain": "work_style",
@@ -146,10 +147,10 @@
       "credentials_named": []
     },
     {
-      "id": "multi_quarter_roadmap_delivery",
+      "id": "multi_quarter_roadmap",
       "raw_text_from_jd": "Background delivering successfully on multi-quarter roadmaps and aligning and influencing diverse stakeholders to achieve shared goals",
       "skill_type": "outcome",
-      "domain": "roadmap_execution",
+      "domain": "product_roadmap_execution",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -164,7 +165,7 @@
       "id": "business_acumen_platform",
       "raw_text_from_jd": "Strong business acumen and comfort with complex ecosystem and platform-level problems",
       "skill_type": "domain_knowledge",
-      "domain": "platform_strategy_business_acumen",
+      "domain": "platform_and_ecosystem_strategy",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -178,8 +179,8 @@
   ],
   "nice_to_haves": [
     {
-      "id": "stem_degree",
-      "raw_text_from_jd": "Bachelor's degree (or relevant degree equivalent): Computer Science, Engineering, Information Systems, Analytics, Mathematics, Physics, Applied Sciences",
+      "id": "bachelors_stem",
+      "raw_text_from_jd": "Bachelor's degree (or relevant degree equivalent)—Computer Science, Engineering, Information Systems, Analytics, Mathematics, Physics, or Applied Sciences",
       "skill_type": "credential",
       "domain": "education",
       "minimum_value": "bachelors",
@@ -207,7 +208,7 @@
       "id": "payment_products_execution",
       "raw_text_from_jd": "Demonstrated success and strong execution track record in building payment products",
       "skill_type": "outcome",
-      "domain": "payments_product_delivery",
+      "domain": "payment_products",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -221,36 +222,32 @@
       "credentials_named": []
     },
     {
-      "id": "high_scale_product_experience",
-      "raw_text_from_jd": "Experience working at scale — you've managed products handling high transaction volumes where availability, latency, and marginal basis points matter",
+      "id": "scale_high_volume",
+      "raw_text_from_jd": "Experience working at scale—you've managed products handling high transaction volumes where availability, latency, and marginal basis points matter",
       "skill_type": "domain_knowledge",
-      "domain": "high_scale_infrastructure_products",
-      "evidence_required": "work_history",
+      "domain": "high_scale_infrastructure",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [
-        "payments"
-      ],
+      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     }
   ],
-  "explicitly_excluded": [
-    "Internships and co-ops do not count toward the 7-12+ years of PM experience requirement"
-  ],
+  "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Payments organization — including APIs for processing payments, regional/non-card payment options, in-person payments, Optimized Checkout, and Link (checkout experiences)",
-    "business_model": "B2B financial infrastructure platform (API-first, merchant-facing)",
+    "surface": "Payments organization — subteams include payment APIs, regional/non-card payment options, in-person payments, Optimized Checkout, and Link",
+    "business_model": "B2B financial infrastructure platform (API-first, serving merchants and enterprises)",
     "primary_metrics_inferred": [
       "Revenue impact",
       "Merchant conversion rates",
       "Payment acceptance rates",
-      "System reliability / availability / latency",
-      "Margin improvement"
+      "System availability and latency",
+      "Marginal basis points"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -261,7 +258,7 @@
     ],
     "core_responsibilities": [
       "Develop the long-term vision and strategy for your pillar and create and execute on a compelling roadmap",
-      "Build deep user empathy with both Stripe's merchants and financial partners, understanding global payment industry trends and competitors' offerings to influence Stripe's roadmap effectively",
+      "Build deep user empathy with both Stripe's merchants and financial partners, understanding global payment industry trends and competitors' offerings to influence the Stripe roadmap effectively",
       "Collaborate with engineering, design, legal, and other teams to jointly shape product experiences that delight Stripe's users",
       "Ensure we are building a reliable, performant platform, including system reliability, API extensibility, and latency",
       "Use metrics to inform your point of view and leverage analytics to measure success"
@@ -272,50 +269,51 @@
     "total_comp_estimate_usd": null,
     "equity_mentioned": false,
     "equity_form": null,
-    "location_pay_differential": null,
+    "location_pay_differential": false,
     "source": "unknown"
   },
   "top_keywords": [
     "payments",
     "fintech",
     "financial infrastructure",
-    "API",
-    "checkout",
     "product strategy",
     "roadmap",
+    "APIs",
+    "checkout",
     "merchant conversion",
+    "analytics",
     "holdback tests",
     "platform",
-    "in-person payments",
     "global payments",
-    "payment networks"
+    "stakeholder alignment"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear product surface with named sub-teams (Optimized Checkout, Link, regional payment options, in-person payments)",
-    "Team matching process described — candidates can be considered for multiple orgs based on fit",
-    "Preferred qualifications explicitly labeled as 'a bonus, not a requirement' — encourages broad applicants",
-    "Mission-driven context (increase GDP of the internet) with meaningful scope — millions of businesses impacted"
+    "Clear ownership statement: 'own a critical piece of the Stripe payments stack'",
+    "Explicit team matching process described, with transparency about how it works",
+    "Candidates encouraged to apply if meeting minimum requirements",
+    "High-impact scope: products that directly affect Stripe revenue and millions of businesses",
+    "Well-scoped preferred qualifications are clearly labeled as bonus, not required"
   ],
   "red_flags": [
+    "No location or remote/hybrid policy stated anywhere in the JD — unclear where role is based",
     "No compensation range disclosed",
-    "Location and remote eligibility not stated in the JD body — work arrangement is unclear",
-    "No visa sponsorship information provided",
-    "7-12+ years minimum is a wide and high bar that may screen out strong mid-level PMs",
-    "Team matching deferred to final stages — candidates may not know which specific sub-team they are interviewing for"
+    "Visa sponsorship and work authorization not mentioned",
+    "Team matching is deferred to final stages, meaning candidates may not know their exact team until late in the process",
+    "7–12+ years range is broad and the '+' qualifier makes the ceiling undefined"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from 7-12+ years requirement and scope signals)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly in JD)",
-      "location.type (not stated; marked unclear)",
-      "compensation.base_range_usd (not stated)"
+      "seniority.level (inferred from 7–12+ years requirement and scope of responsibilities)",
+      "scope.business_model (inferred from company description as API-first B2B platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type set to 'unclear' — no location, remote, or hybrid policy stated in JD",
+      "compensation.equity_mentioned set to false — no mention found in JD body"
     ],
     "ambiguities": [
-      "The JD states '7-12+ years' which could mean 7 to 12 years OR 12+ years; treated minimum as 7 and maximum as null since the '+' implies open-ended.",
-      "Location/remote eligibility is entirely absent from the JD body; work_auth and visa_sponsorship are also unstated.",
-      "Team matching note indicates candidate may be placed in a different org — scope described is the Payments org broadly, not a single guaranteed team."
+      "Years range stated as '7–12+' — lower bound is clear (7) but upper bound is open-ended; minimum_value set to 7",
+      "Team matching deferred to final stages — candidates apply to the Payments org broadly and are matched to a subteam later; exact scope may vary",
+      "JD mentions possibility of being considered for 'different orgs based on your experience, location, etc.' — role placement is not guaranteed to be within Payments org"
     ]
   }
 }

@@ -1,33 +1,33 @@
 {
   "company": "Perplexity",
-  "role_title": "Member of Technical Staff (AI Policy and Strategic Initiatives)",
-  "url": "https://jobs.ashbyhq.com/perplexity/0359ebb4-7cbd-4641-a6d1-1127823e2fd5",
+  "role_title": "Member of Technical Staff AI Policy and Strategic Initiatives",
+  "url": "https://jobs.ashbyhq.com/perplexity/91b941ae-0bd0-4322-8c0e-491abacdc33a",
   "ats_provider": "ashby",
-  "ats_job_id": "0359ebb4-7cbd-4641-a6d1-1127823e2fd5",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "91b941ae-0bd0-4322-8c0e-491abacdc33a",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "unclear",
     "cities_listed": [],
-    "remote_us_eligible": false,
+    "remote_us_eligible": null,
     "office_time_required": null,
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
-  "archetype": "Technical Program Manager",
+  "archetype": "Other",
   "archetype_confidence": "low",
-  "secondary_archetype": "BizOps / Strategy & Ops with engineering focus (AI policy, legal, corporate affairs)",
+  "secondary_archetype": "Technical Staff / AI Policy & Strategic Initiatives hybrid (engineering + policy + legal + ops)",
   "seniority": {
-    "level": "Early-career to mid-level IC (new grads to experienced engineers both welcome)",
+    "level": "Early-career to Experienced IC (new grads to experienced engineers)",
     "years_required_min": null,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "new grads welcome",
-      "minimum 2-year commitment requested for candidates planning law school or PhD",
-      "experienced engineers at top tech companies also welcome",
-      "reports to VP Global Affairs & Deputy CTO"
+      "Exceptionally talented early-career engineers (new grads welcome)",
+      "Experienced engineers at top tech companies who wish to develop policy, business, and operations chops",
+      "Lawyers or economists (new JD or PhD grads welcome) who've kept their engineering skills sharp",
+      "Minimum 2-year commitment mentioned for those planning future graduate school"
     ]
   },
   "must_haves": [
@@ -37,7 +37,7 @@
       "skill_type": "cultural_fit",
       "domain": "general_excellence",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -52,15 +52,13 @@
       "skill_type": "capability",
       "domain": "software_engineering",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
-      "employer_types_named": [
-        "top tech companies"
-      ],
+      "employer_types_named": [],
       "credentials_named": []
     },
     {
@@ -75,8 +73,7 @@
         "Perplexity Computer"
       ],
       "technologies_named": [
-        "AI agents",
-        "frontier AI"
+        "frontier AI tools"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -84,7 +81,7 @@
       "credentials_named": []
     },
     {
-      "id": "high_craft_standards",
+      "id": "high_craft_quality_standards",
       "raw_text_from_jd": "High intrinsically-enforced standards for the craft and quality of your work.",
       "skill_type": "cultural_fit",
       "domain": "work_quality",
@@ -102,9 +99,9 @@
       "id": "communication_writing_skills",
       "raw_text_from_jd": "Strong communication and writing skills, ideally demonstrated via samples of past written work product.",
       "skill_type": "capability",
-      "domain": "written_communication",
+      "domain": "communication_and_writing",
       "evidence_required": "project_examples",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -129,11 +126,11 @@
       "credentials_named": []
     },
     {
-      "id": "rapid_domain_mastery",
+      "id": "rapid_deep_mastery",
       "raw_text_from_jd": "Ability to quickly dive deep in any given field and develop mastery rivaling that of domain experts.",
       "skill_type": "capability",
-      "domain": "cross_domain_learning",
-      "evidence_required": "project_examples",
+      "domain": "learning_agility",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -149,7 +146,7 @@
       "skill_type": "cultural_fit",
       "domain": "ethics_and_integrity",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "no",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -174,10 +171,10 @@
       "credentials_named": []
     },
     {
-      "id": "two_year_commitment",
-      "raw_text_from_jd": "We ask for a minimum 2-year commitment (i.e., you would apply for the entering class of 2028 or later).",
+      "id": "two_year_minimum_commitment",
+      "raw_text_from_jd": "we ask for a minimum 2-year commitment (i.e., you would apply for the entering class of 2028 or later).",
       "skill_type": "cultural_fit",
-      "domain": "employment_commitment",
+      "domain": "retention_commitment",
       "evidence_required": "work_history",
       "bridgeable": "n/a",
       "severity": "hard",
@@ -191,10 +188,10 @@
   ],
   "nice_to_haves": [
     {
-      "id": "law_tech_policy_economics_background",
-      "raw_text_from_jd": "Exceptionally talented early-career engineers (new grads welcome) who are (1) well-read in law, tech policy, or economics, and (2) wish to grow in both technical and non-technical disciplines.",
+      "id": "law_tech_policy_economics_reading",
+      "raw_text_from_jd": "well-read in law, tech policy, or economics, and (2) wish to grow in both technical and non-technical disciplines.",
       "skill_type": "domain_knowledge",
-      "domain": "law_policy_economics",
+      "domain": "law_tech_policy_economics",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -202,22 +199,20 @@
       "technologies_named": [],
       "industries_named": [
         "tech policy",
+        "law",
         "economics"
       ],
       "geographies_named": [],
       "employer_types_named": [],
-      "credentials_named": [
-        "JD",
-        "PhD"
-      ]
+      "credentials_named": []
     },
     {
-      "id": "experienced_top_tech_engineer",
+      "id": "experienced_engineer_top_tech",
       "raw_text_from_jd": "Experienced engineers at top tech companies who wish to develop policy, business, and operations chops.",
       "skill_type": "domain_knowledge",
-      "domain": "policy_business_operations",
+      "domain": "software_engineering",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -229,16 +224,19 @@
       "credentials_named": []
     },
     {
-      "id": "legal_or_economics_advanced_degree",
+      "id": "jd_or_phd_with_engineering",
       "raw_text_from_jd": "Lawyers or economists (new JD or PhD grads welcome) who've kept their engineering skills sharp and are excited to reimagine their fields in the age of AI.",
       "skill_type": "credential",
-      "domain": "law_or_economics",
+      "domain": "law_or_economics_with_engineering",
       "evidence_required": "degree_or_work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [],
+      "industries_named": [
+        "law",
+        "economics"
+      ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": [
@@ -250,35 +248,34 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "AI policy, law, operations, corporate affairs, and strategic technology initiatives across all of Perplexity",
-    "business_model": "frontier AI consumer and enterprise search/assistant product (B2C and B2B)",
+    "surface": "AI policy, law, operations, corporate affairs, intellectual property, privacy/compliance, litigation support, regulatory filings, recruiting/HR systems",
+    "business_model": "frontier AI consumer/B2B product company",
     "primary_metrics_inferred": [
-      "Quality of regulatory filings and policy contributions",
-      "Efficiency of compliance and privacy systems",
-      "Volume and quality of patents filed",
-      "Operational effectiveness of implemented software solutions"
+      "Quality and impact of regulatory and policy contributions",
+      "Efficiency of automated patent/invention platforms",
+      "Scale and compliance of privacy systems",
+      "Support outcomes for high-tech litigation matters"
     ],
     "cross_functional_partners": [
-      "Senior leadership",
       "VP Global Affairs & Deputy CTO",
-      "AI researchers",
-      "Intellectual property attorneys",
+      "Senior leadership",
       "Legal team",
       "Outside counsel",
+      "AI researchers",
+      "Intellectual property attorneys",
       "People team",
-      "Capitol Hill officials",
-      "Executive branch officials",
+      "Capitol Hill and executive branch officials",
       "International partners",
       "Civil society"
     ],
     "core_responsibilities": [
-      "Harness AI agents to research high-stakes policy and regulatory issues pertaining to Perplexity.",
-      "Build automated platforms for harvesting, prioritizing, and patenting Perplexity's inventions, in collaboration with our AI researchers and intellectual property attorneys.",
-      "Work hands-on with our Legal team and outside counsel in support of high-tech litigation matters in U.S. federal court.",
-      "Engineer privacy and compliance systems that efficiently scale with our growing portfolio of frontier AI products (such as Comet and Computer).",
-      "Contribute to regulatory filings and responses that require impeccable command of AI technology, Perplexity's own systems, and the broader policy landscape.",
-      "Embed with our People team to implement first-party software solutions for recruiting, labor compliance, and performance management.",
-      "Participate in meetings with Capitol Hill, executive branch officials, international partners, and civil society as a subject-matter expert on both AI technology and policy."
+      "Harness AI agents to research high-stakes policy and regulatory issues pertaining to Perplexity",
+      "Build automated platforms for harvesting, prioritizing, and patenting Perplexity's inventions",
+      "Work hands-on with our Legal team and outside counsel in support of high-tech litigation matters in U.S. federal court",
+      "Engineer privacy and compliance systems that efficiently scale with our growing portfolio of frontier AI products",
+      "Contribute to regulatory filings and responses that require impeccable command of AI technology",
+      "Embed with our People team to implement first-party software solutions for recruiting, labor compliance, and performance management",
+      "Participate in meetings with Capitol Hill, executive branch officials, international partners, and civil society as a subject-matter expert"
     ]
   },
   "compensation": {
@@ -292,51 +289,50 @@
   "top_keywords": [
     "AI policy",
     "strategic initiatives",
-    "regulatory filings",
-    "privacy and compliance",
+    "Member of Technical Staff",
+    "interdisciplinary",
+    "regulatory",
     "intellectual property",
-    "AI agents",
+    "privacy and compliance",
+    "litigation",
     "frontier AI",
-    "legal",
-    "policy",
-    "polymathic",
     "Perplexity Computer",
-    "Comet",
-    "software engineering",
-    "corporate affairs"
+    "law",
+    "corporate affairs",
+    "polymathic",
+    "AI agents"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Highly unusual and interdisciplinary role for engineers interested in law, policy, and operations",
-    "Direct reporting line to VP Global Affairs & Deputy CTO — high visibility",
-    "Explicitly welcoming to new grads across multiple profiles (engineering, law, economics)",
-    "Mentorship explicitly promised ('a bench of mentors who will push you to learn and grow')",
-    "Role spans frontier AI issues including regulatory, litigation, privacy, and IP — broad learning opportunity"
+    "Explicitly welcomes new grads and early-career candidates",
+    "Welcomes diverse profiles including lawyers, economists, and engineers",
+    "Reports to senior leadership (VP Global Affairs & Deputy CTO) — high visibility role",
+    "Described as uniquely interdisciplinary with broad growth opportunities",
+    "Mentions explicit mentorship: 'a bench of mentors who will push you to learn and grow day after day'",
+    "Accommodates candidates planning future law school or PhD (2-year minimum commitment)"
   ],
   "red_flags": [
     "No compensation range disclosed",
-    "No location or remote/hybrid policy stated anywhere in the JD",
-    "Extremely broad scope ('no two days will be the same') may indicate role is loosely defined or subject to significant scope creep",
-    "Minimum 2-year commitment constraint may conflict with candidates planning near-term graduate school",
-    "Work auth and visa sponsorship entirely unstated"
+    "No location or remote policy mentioned anywhere in the JD",
+    "Role is extremely broad and ill-defined — 'no two days will be the same' may indicate unclear scope or shifting priorities",
+    "Archetype is genuinely novel and hard to classify — candidates may struggle to evaluate fit",
+    "2-year minimum commitment requirement may limit flexibility for candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
       "location.type (not stated; marked as 'unclear')",
       "location.work_auth (not stated; marked as 'unclear')",
       "location.visa_sponsorship (not stated; marked as 'unclear')",
-      "seniority.level (inferred from JD text describing new grads through experienced engineers)",
-      "scope.business_model (inferred from Perplexity's known product)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
-      "compensation.equity_mentioned (not stated; defaulted to false)"
+      "seniority.level (inferred from candidate profile descriptions; no explicit level stated)",
+      "scope.business_model (inferred from product descriptions: Comet, Computer)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "compensation (no compensation data anywhere in JD)"
     ],
     "ambiguities": [
-      "Role title is 'Member of Technical Staff' but the scope is heavily non-engineering (policy, legal, corporate affairs). Archetype is difficult to classify; 'Technical Program Manager' is the closest fit but does not fully capture the role. 'Other' was considered but TPM better reflects the cross-functional coordination and technical rigor.",
-      "Ideal candidate profiles are described as non-exhaustive examples rather than firm requirements, making it difficult to classify must-haves vs nice-to-haves for candidate profiles. Law/economics backgrounds are framed as optional profiles rather than requirements.",
-      "2-year commitment clause is directed only at candidates planning to attend law school or PhD programs, but is worded ambiguously as a general requirement."
-    ],
-    "validation_issues": [
-      "must_have two_year_commitment: raw_text_from_jd not found in JD even after bullet/whitespace normalization"
+      "The role is described as 'Member of Technical Staff' but encompasses policy, legal, operations, and corporate affairs — not a conventional engineering or PM role; archetype set to 'Other' accordingly.",
+      "The candidate profiles described are highly varied (new grad engineers, experienced engineers, JDs, PhDs, economists) making seniority level ambiguous.",
+      "The 'ideally demonstrated via samples of past written work product' qualifier on communication/writing skills is borderline hard/soft; treated as hard given overall framing.",
+      "It is unclear whether the 2-year commitment requirement applies only to candidates planning graduate school or to all candidates; raw text suggests it applies to the former subset only."
     ]
   }
 }

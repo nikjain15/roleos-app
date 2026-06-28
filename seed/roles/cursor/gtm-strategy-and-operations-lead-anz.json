@@ -1,0 +1,238 @@
+{
+  "company": "Cursor",
+  "role_title": "GTM Strategy & Operations Lead - ANZ",
+  "url": "https://jobs.ashbyhq.com/cursor/d44a113a-b83e-4c2c-950d-85a45154cd48",
+  "ats_provider": "ashby",
+  "ats_job_id": "d44a113a-b83e-4c2c-950d-85a45154cd48",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Senior IC / Lead",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7–10+ years in revenue operations or GTM strategy",
+      "First and only GTM Ops leader on the ground in ANZ — high-ownership, greenfield role",
+      "Partners directly with GTM leadership and acts as trusted advisor"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_rev_ops_gtm_strategy",
+      "raw_text_from_jd": "You have 7–10+ years in revenue operations or GTM strategy at a high-growth technology company, with meaningful depth in sales operations — not just analytical support",
+      "skill_type": "years_of_experience",
+      "domain": "revenue_operations_gtm_strategy",
+      "minimum_value": 7,
+      "unit": "years",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "high-growth technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company"
+      ],
+      "credentials_named": [],
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard"
+    },
+    {
+      "id": "gtm_business_partner",
+      "raw_text_from_jd": "You've operated as a true business partner to GTM leadership, not just a data provider — you shape priorities, influence decisions, and earn credibility in the room",
+      "skill_type": "capability",
+      "domain": "gtm_partnership_leadership_influence",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [],
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard"
+    },
+    {
+      "id": "greenfield_operational_infrastructure",
+      "raw_text_from_jd": "You've built operational infrastructure in an early-stage or rapidly scaling environment — you know what good looks like and can get there from zero",
+      "skill_type": "outcome",
+      "domain": "operational_infrastructure_buildout",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "early-stage",
+        "rapidly scaling environment"
+      ],
+      "credentials_named": [],
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard"
+    },
+    {
+      "id": "saas_consumption_model_experience",
+      "raw_text_from_jd": "You have experience at a SaaS or consumption-based company and understand how that model shapes forecasting, metrics, and territory design",
+      "skill_type": "domain_knowledge",
+      "domain": "saas_consumption_business_models",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "SaaS or consumption-based company"
+      ],
+      "credentials_named": [],
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard"
+    },
+    {
+      "id": "ambiguity_comfort",
+      "raw_text_from_jd": "You're comfortable with ambiguity — this role involves real open questions about how a region builds and scales, and you'll help answer them",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [],
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard"
+    },
+    {
+      "id": "analytical_and_communication_skills",
+      "raw_text_from_jd": "You're strong analytically, with the organizational rigor to manage multiple priorities and the communication skills to influence senior stakeholders",
+      "skill_type": "capability",
+      "domain": "analytics_communication_stakeholder_management",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [],
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard"
+    },
+    {
+      "id": "territory_comp_quota_salesforce",
+      "raw_text_from_jd": "You have experience building territories, comp plans, and quotas for GTM teams and are fluent in Salesforce",
+      "skill_type": "tool_proficiency",
+      "domain": "territory_design_comp_quota_salesforce",
+      "tools_named": [
+        "Salesforce"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [],
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard"
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "ANZ GTM Strategy & Operations — greenfield regional buildout; also covering APJ over time",
+    "business_model": "SaaS / consumption-based developer tooling (B2B)",
+    "primary_metrics_inferred": [
+      "Forecast accuracy",
+      "Pipeline health and coverage",
+      "Sales team performance vs. quota",
+      "Regional revenue growth in ANZ and APJ"
+    ],
+    "cross_functional_partners": [
+      "Finance",
+      "Enablement",
+      "Data",
+      "Global Rev Ops",
+      "GTM leadership"
+    ],
+    "core_responsibilities": [
+      "Serve as the embedded GTM strategy and operations partner for the ANZ sales and GTM team, acting as a trusted advisor and operator to regional leadership",
+      "Build the core operating infrastructure from scratch — forecasting cadences, pipeline review processes, territory design, quota frameworks, and performance visibility",
+      "Drive regional business reviews and strategic analyses to identify trends, surface opportunities, and inform GTM decisions at the leadership level",
+      "Partner with GTM leadership and cross-functional stakeholders (Finance, Enablement, Data) to develop go-to-market strategy and resource plans for ANZ and APJ",
+      "Design and manage territory allocation to optimize sales team performance; provide data-driven recommendations that align with broader business objectives",
+      "Lead high-impact regional projects that improve efficiency and effectiveness across the ANZ revenue organization",
+      "Serve as the connective tissue between the ANZ GTM team and the global rev ops and strategy function — ensuring alignment, sharing what's working, and advocating for what the region needs"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "GTM strategy",
+    "revenue operations",
+    "sales operations",
+    "ANZ",
+    "APJ",
+    "territory design",
+    "quota",
+    "forecasting",
+    "Salesforce",
+    "greenfield",
+    "high-growth",
+    "SaaS",
+    "consumption-based",
+    "business partner",
+    "pipeline"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Explicitly greenfield, high-ownership role with real regional influence from day one",
+    "Direct partnership with GTM leadership — not a support function",
+    "Flat organization and small, talent-dense team signals meaningful autonomy",
+    "Scope extends beyond ANZ to APJ over time, offering career growth",
+    "JD is unusually candid about what isn't built yet ('there isn't much yet'), reducing expectation mismatch"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No specific city listed for the ANZ role — office location and hybrid/remote expectations unclear",
+    "Visa sponsorship and work authorization requirements not stated",
+    "No mention of team growth or headcount reporting to this role — scope of influence may be limited initially",
+    "Cursor is a fast-growing startup; greenfield regional role may have limited internal support structures"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range and greenfield leadership framing; not explicitly titled)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.business_model (inferred from 'SaaS or consumption-based company' language in requirements and Cursor's known product)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (inferred as onsite given ANZ-specific regional presence requirement; not explicitly stated)",
+      "location.remote_us_eligible (inferred as false given ANZ on-the-ground requirement)"
+    ],
+    "ambiguities": [
+      "Location type not explicitly stated — 'first and only GTM Ops leader on the ground in ANZ' implies physical presence in the region, but no city or hybrid/remote policy is specified. Treated as onsite.",
+      "Years range stated as '7–10+' — minimum treated as 7 years but the '+' after 10 suggests preference for even more senior candidates.",
+      "Work authorization and visa sponsorship for ANZ not addressed anywhere in the JD."
+    ]
+  }
+}

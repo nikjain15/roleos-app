@@ -1,0 +1,287 @@
+{
+  "company": "Affirm",
+  "role_title": "GTM Strategy & Operations Manager",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7758902003",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7758902003",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasionally required to work out of assigned Affirm office (proximal roles only; this role appears fully remote)",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "GTM Strategy & Operations",
+  "seniority": {
+    "level": "Senior IC / Manager",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience required",
+      "Base pay range $164K–$245K depending on location",
+      "Pay Grade M / Equity Grade 8 signals senior individual contributor or manager level"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_gtm_strategy",
+      "raw_text_from_jd": "8+ years of experience in product marketing, go-to-market strategy, enablement, consulting, or a related role, ideally in FinTech, payments, SaaS, or another high-growth environment.",
+      "skill_type": "years_of_experience",
+      "domain": "go_to_market_strategy",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "FinTech",
+        "payments",
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth environment"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "gtm_plan_translation",
+      "raw_text_from_jd": "Proven success translating product strategy into field-ready go-to-market plans that improved launch adoption, execution quality, or commercial outcomes.",
+      "skill_type": "outcome",
+      "domain": "go_to_market_execution",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_experience",
+      "raw_text_from_jd": "Strong experience working cross-functionally with Product, Product Marketing, Sales leadership, Analytics, Legal, Pricing, and Enablement.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategy_to_execution",
+      "raw_text_from_jd": "Ability to connect high-level product strategy to practical frontline execution across sales, partnerships, and customer-facing teams.",
+      "skill_type": "capability",
+      "domain": "strategy_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clarity_and_influence",
+      "raw_text_from_jd": "Demonstrated strength in asking sharp questions, driving clarity, and influencing decisions in ambiguous or rapidly evolving environments.",
+      "skill_type": "capability",
+      "domain": "stakeholder_influence",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_thinking_operating_rigor",
+      "raw_text_from_jd": "Strong strategic thinking and operating rigor, with experience leading complex launches, readiness efforts, or go-to-market motions end to end.",
+      "skill_type": "capability",
+      "domain": "go_to_market_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "feedback_loops",
+      "raw_text_from_jd": "Experience building feedback loops between frontline teams and Product or Marketing to improve positioning, packaging, and execution.",
+      "skill_type": "capability",
+      "domain": "product_marketing_feedback",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_skills",
+      "raw_text_from_jd": "Strong analytical skills, with the ability to use data and field insight to shape recommendations and measure success.",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Excellent written and verbal communication skills, with the ability to influence stakeholders across functions and seniority levels.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "merchant_payments_fintech_familiarity",
+      "raw_text_from_jd": "Familiarity with merchant, payments, or fintech ecosystems is strongly preferred.",
+      "skill_type": "domain_knowledge",
+      "domain": "fintech_payments",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "GTM strategy and operations across Revenue, Product, Pricing, Risk, and Legal teams; focus on product launches and merchant partnerships",
+    "business_model": "B2B2C — BNPL platform connecting merchants and consumers",
+    "primary_metrics_inferred": [
+      "Launch adoption rates",
+      "Execution quality of go-to-market plans",
+      "Commercial outcomes from merchant partnerships",
+      "Field readiness effectiveness"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Revenue",
+      "Pricing",
+      "Risk",
+      "Legal",
+      "Product Marketing",
+      "Sales leadership",
+      "Analytics",
+      "GTM Enablement"
+    ],
+    "core_responsibilities": [
+      "Support product go-to-market execution for Revenue teams by helping translate product strategy into actionable plans",
+      "Partner with Product, Product Marketing, Legal, Pricing, and Revenue teams to support alignment on go-to-market execution",
+      "Support field and launch readiness efforts, ensuring materials and processes are aligned with go-to-market plans",
+      "Assist in translating product and marketing inputs into go-to-market plans for Revenue teams",
+      "Gather and share field feedback with Product and Marketing teams to help improve positioning and execution",
+      "Partner with GTM Enablement to ensure launch strategy is translated into effective readiness plans, field communications, and execution support",
+      "Monitor for gaps and risks and escalate issues to stakeholders to support timely resolution",
+      "Contribute input to prioritization discussions based on field insights and data",
+      "Analyze data and provide insights to support go-to-market decisions",
+      "Support cross-functional coordination to ensure alignment during product launches"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      164000,
+      245000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Equity Grade 8; ESPP (employee stock purchase plan); equity rewards mentioned as part of total compensation",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "go-to-market strategy",
+    "GTM operations",
+    "product launches",
+    "cross-functional",
+    "Revenue team",
+    "merchant partnerships",
+    "field readiness",
+    "FinTech",
+    "payments",
+    "BNPL",
+    "enablement",
+    "product marketing",
+    "launch adoption"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges disclosed and competitive ($164K–$245K base depending on state)",
+    "Remote-first company with broad US remote eligibility",
+    "Clear description of cross-functional scope and responsibilities",
+    "Pay Grade M / Equity Grade 8 provides transparency on internal leveling",
+    "Equity and comprehensive benefits package explicitly described",
+    "Fair chance hiring policy stated for LA and SF applicants"
+  ],
+  "red_flags": [
+    "Role responsibilities are described with hedging language ('support', 'assist', 'contribute') which may indicate a more junior execution role despite 8+ years requirement",
+    "Visa sponsorship not mentioned — unclear for non-US-citizen candidates",
+    "Posting date not available; recency of opportunity unknown"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirement, pay grade M, and comp range)",
+      "seniority.manages_people (not stated; defaulted to false as no direct reports mentioned)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.visa_sponsorship (not stated; marked unclear)",
+      "compensation.base_range_usd lower bound uses 'all other U.S. states' range; upper bound uses CA/WA/NY/NJ/CT range"
+    ],
+    "ambiguities": [
+      "The JD states '#LI-Remote' and 'remote-first company' suggesting fully remote eligibility, but also mentions 'proximal roles' may need occasional office time. It is unclear whether this specific role is proximal or fully remote.",
+      "The years requirement says 'ideally in FinTech, payments, SaaS' which could be read as hard or soft; classified as hard since it is in the main 'What We Look For' unconditional bullets, but the word 'ideally' introduces softness. Flagged here.",
+      "Compensation range spans two tiers ($164K–$224K for most states; $185K–$245K for CA/WA/NY/NJ/CT). The base_range_usd captures the full span across both tiers."
+    ]
+  }
+}

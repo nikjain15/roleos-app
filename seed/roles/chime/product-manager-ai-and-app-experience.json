@@ -1,10 +1,10 @@
 {
   "company": "Chime",
   "role_title": "Product Manager, AI & App Experience",
-  "url": "https://boards.greenhouse.io/chime/jobs/8530421002?gh_jid=8530421002",
+  "url": "https://boards.greenhouse.io/chime/jobs/8478204002?gh_jid=8478204002",
   "ats_provider": "greenhouse",
-  "ats_job_id": "8530421002",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "8478204002",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -19,16 +19,16 @@
   },
   "archetype": "AI Product Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Generalist PM (consumer app focus)",
+  "secondary_archetype": "Generalist PM",
   "seniority": {
-    "level": "Senior IC",
+    "level": "Senior IC (likely Senior PM)",
     "years_required_min": 5,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "5+ years of experience building and shipping consumer-facing product experiences",
-      "Base salary range $176,000–$244,000 consistent with Senior PM at a growth-stage fintech",
-      "0→1 ownership scope and cross-functional leadership expectations"
+      "0→1 product management role with full strategy and roadmap ownership",
+      "Base salary $176,000–$244,000 consistent with Senior PM level at a growth-stage FinTech"
     ]
   },
   "must_haves": [
@@ -39,7 +39,7 @@
       "domain": "consumer_product_management",
       "minimum_value": 5,
       "unit": "years",
-      "qualifier": "consumer-facing mobile or web apps",
+      "qualifier": "consumer-facing mobile or web apps, 0→1",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -53,9 +53,9 @@
     {
       "id": "ai_ml_product_experience",
       "raw_text_from_jd": "Hands-on experience working with AI/ML-powered products or features (e.g., personalization, recommendations, automation)",
-      "skill_type": "domain_knowledge",
-      "domain": "ai_ml_product_development",
-      "evidence_required": "work_history",
+      "skill_type": "capability",
+      "domain": "ai_ml_product_management",
+      "evidence_required": "hands_on_use",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -71,11 +71,11 @@
       "credentials_named": []
     },
     {
-      "id": "strong_product_sense",
+      "id": "product_sense_technical_translation",
       "raw_text_from_jd": "Strong product sense with the ability to translate complex technical concepts into intuitive user experiences",
       "skill_type": "capability",
-      "domain": "product_design_and_ux",
-      "evidence_required": "shipped_products_with_metrics",
+      "domain": "product_design_thinking",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -86,7 +86,7 @@
       "credentials_named": []
     },
     {
-      "id": "product_strategy_and_outcomes",
+      "id": "strategy_and_outcomes",
       "raw_text_from_jd": "Track record of defining product strategy and delivering measurable outcomes",
       "skill_type": "outcome",
       "domain": "product_strategy",
@@ -134,7 +134,7 @@
       "id": "experimentation_and_analytics",
       "raw_text_from_jd": "Experience using experimentation, analytics, and user insights to inform decisions",
       "skill_type": "capability",
-      "domain": "data_analytics_and_experimentation",
+      "domain": "data_driven_product_management",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -150,13 +150,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "AI-powered consumer app experiences across core Chime app (personalized insights, proactive recommendations, ambient AI integration)",
-    "business_model": "B2C fintech / financial technology platform",
+    "surface": "AI-powered experiences across Chime's core consumer mobile/web app",
+    "business_model": "B2C fintech / financial technology platform serving everyday Americans",
     "primary_metrics_inferred": [
-      "Product-market fit for AI features",
-      "Member engagement and retention with AI-powered experiences",
-      "Measurable improvement in financial outcomes for members",
-      "Experiment success rates and conversion metrics"
+      "Product-market fit for AI-powered features",
+      "Member engagement with AI-driven insights",
+      "Measurable financial progress outcomes for members",
+      "Experiment-driven improvement metrics"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -187,44 +187,45 @@
   },
   "top_keywords": [
     "AI-powered experiences",
-    "consumer app",
     "0→1 product management",
+    "consumer app",
     "personalization",
     "fintech",
-    "mobile",
-    "experimentation",
     "product strategy",
+    "roadmap",
     "data science",
-    "trust and transparency"
+    "experimentation",
+    "trust and transparency",
+    "mobile",
+    "financial progress"
   ],
   "buzzword_density": "medium",
   "green_flags": [
     "Compensation range disclosed and competitive ($176K–$244K base)",
-    "Clear 0→1 ownership scope with explicit product surface described",
-    "Bonus and equity mentioned in addition to base",
-    "Generous benefits including 24 weeks paid parental leave and wellness stipend",
-    "Fully remote program available for candidates not near an office",
-    "Well-established fintech company (Chime) with millions of members and mission-driven culture"
+    "Clear 0→1 ownership scope with defined success criteria (product-market fit then ambient integration)",
+    "Chime is a well-known, scaled FinTech with millions of members — strong product surface",
+    "Equity and bonus explicitly mentioned alongside base salary",
+    "Generous parental leave (up to 24 weeks for birthing parents)",
+    "Fully remote program noted as an option for those not near an office"
   ],
   "red_flags": [
-    "Hashtag #LI-Onsite in the JD body conflicts with mention of a 'fully remote program' in benefits — location policy is ambiguous",
-    "No nice-to-haves listed, making it harder to gauge flexibility on must-have requirements",
-    "Visa sponsorship status not stated — unclear for international candidates",
-    "Role requires both deep AI/ML product experience AND 0→1 consumer product expertise, which is a narrow combination"
+    "JD hashtag #LI-Onsite suggests onsite classification in metadata, but the benefits section describes a hybrid model (4 days in office) and a 'fully remote program' — contradictory signals on work arrangement",
+    "No preferred/nice-to-have section — all requirements framed as hard, making it difficult to assess floor vs. ceiling expectations",
+    "No visa sponsorship language anywhere in the JD — unclear stance"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range + years + scope)",
-      "scope.team_size_estimate (not stated; left as 'unclear')",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly in JD)",
+      "seniority.level (inferred from comp range and years requirement)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
       "scope.business_model (inferred from company description)",
-      "location.cities_listed (San Francisco inferred from mention of San Francisco Fair Chance Ordinance and known HQ; not explicitly named as role location)",
+      "location.cities_listed (San Francisco inferred from reference to SF Fair Chance Ordinance and company HQ; no specific city named for this role)",
       "compensation.location_pay_differential (inferred from 'The actual base salary offered may be higher, depending on your location')"
     ],
     "ambiguities": [
-      "JD body contains '#LI-Onsite' hashtag suggesting onsite classification, but benefits section explicitly mentions a 'fully remote program' for those not near an office. Treated as hybrid here, with remote-eligible flagged true.",
-      "Visa sponsorship is not mentioned anywhere in the JD. Marked as 'unclear'.",
-      "No explicit office city is named for this role in the JD body; San Francisco inferred from company HQ and legal boilerplate references."
+      "Work arrangement is ambiguous: JD hashtag #LI-Onsite implies onsite classification, but the benefits section describes a hybrid model (4 days/week in office, Fridays remote) AND mentions a 'fully remote program' for those not near an office. Treated as hybrid with remote option.",
+      "No cities explicitly tied to this specific role; San Francisco inferred from company HQ and regulatory references (SF Fair Chance Ordinance).",
+      "Visa sponsorship not mentioned anywhere — marked as 'unclear'.",
+      "No nice-to-haves explicitly labeled in the JD; the 'To thrive in this role, you have' section contains all requirements treated as hard."
     ]
   }
 }

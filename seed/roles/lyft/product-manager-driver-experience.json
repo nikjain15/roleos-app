@@ -4,14 +4,14 @@
   "url": "https://app.careerpuck.com/job-board/lyft/job/8525086002?gh_jid=8525086002",
   "ats_provider": "greenhouse",
   "ats_job_id": "8525086002",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "hybrid",
     "cities_listed": [
-      "New York City, NY",
-      "San Francisco, CA"
+      "New York City",
+      "San Francisco"
     ],
     "remote_us_eligible": false,
     "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
@@ -22,14 +22,14 @@
   "archetype_confidence": "high",
   "secondary_archetype": "Consumer PM (two-sided marketplace)",
   "seniority": {
-    "level": "Mid-level IC (PM II / Senior PM)",
+    "level": "Mid-Senior IC",
     "years_required_min": 3,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "3+ years in product management or equivalent",
-      "Base pay range $128,000–$160,000 in NYC or SF, consistent with mid-to-senior IC",
-      "Expected to own products end-to-end and communicate with executive levels"
+      "Expected base pay $128,000–$160,000 in NYC/SF",
+      "Expected to own products end-to-end and communicate to executive levels"
     ]
   },
   "must_haves": [
@@ -40,7 +40,7 @@
       "domain": "product_management",
       "minimum_value": 3,
       "unit": "years",
-      "qualifier": "consumer facing products",
+      "qualifier": "consumer-facing products",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -52,11 +52,11 @@
       "credentials_named": []
     },
     {
-      "id": "project_ambiguity_management",
+      "id": "manage_ambiguity",
       "raw_text_from_jd": "You manage project ambiguity, complexity, and interdependencies in an organized and structured way, and you are able to define and analyze metrics that inform the success of your products",
       "skill_type": "capability",
       "domain": "project_management_and_analytics",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -72,7 +72,7 @@
       "skill_type": "capability",
       "domain": "user_research_and_discovery",
       "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -91,13 +91,15 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [],
+      "industries_named": [
+        "two-sided marketplace"
+      ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "communication_skills",
+      "id": "strong_communication",
       "raw_text_from_jd": "Skills and intuition for communication strategy at every level -- within teams, within the company, to users, and other audiences",
       "skill_type": "capability",
       "domain": "communication",
@@ -112,10 +114,10 @@
       "credentials_named": []
     },
     {
-      "id": "detail_orientation",
+      "id": "detail_oriented",
       "raw_text_from_jd": "Balancing multiple projects, deadlines, and requests should be second nature to you",
-      "skill_type": "capability",
-      "domain": "execution_and_prioritization",
+      "skill_type": "cultural_fit",
+      "domain": "organizational_effectiveness",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -131,12 +133,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Driver Experience platform — reducing friction, streamlining key interactions, and building intuitive/fair systems for drivers",
-    "business_model": "two-sided marketplace (rideshare), B2C",
+    "surface": "Driver Experience — platform features empowering drivers, reducing friction, and improving service quality",
+    "business_model": "two-sided marketplace (rideshare)",
     "primary_metrics_inferred": [
-      "Driver satisfaction and engagement",
-      "Friction reduction in driver interactions",
-      "Platform quality and service reliability"
+      "Driver satisfaction and retention",
+      "Reduction in driver friction/pain points",
+      "Service quality metrics"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -144,12 +146,12 @@
       "Design",
       "Marketing",
       "Partner teams",
-      "Executive leadership"
+      "Senior Leadership"
     ],
     "core_responsibilities": [
       "Deeply understand driver and business needs to set an ambitious product vision that motivates and inspires your team, peers and leadership",
       "Set your team's goals and success metrics that align with Lyft's mission and drive maximum impact based on data analysis, market research and user research",
-      "Build a product roadmap to achieve your goals and lead a core team of engineers, designers, data scientists, and marketers to execute on it.",
+      "Build a product roadmap to achieve your goals and lead a core team of engineers, designers, data scientists, and marketers to execute on it",
       "Build alignment and collaborate with partner teams on shared goals and initiatives",
       "Communicate roadmaps, priorities, experiments and decisions across a broad set of audiences from partner teams to executive levels",
       "Completely own your team's products, existing or new, from ideation, through development, to launch, growth and maintenance"
@@ -169,39 +171,39 @@
   "top_keywords": [
     "driver experience",
     "two-sided marketplace",
-    "consumer facing products",
+    "consumer product",
     "product roadmap",
     "user empathy",
-    "data analysis",
+    "metrics",
+    "cross-functional collaboration",
+    "executive communication",
     "friction reduction",
-    "cross-functional",
-    "rideshare",
-    "product vision"
+    "rideshare"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($128K–$160K base in NYC/SF)",
-    "Clear product surface and ownership (Driver Experience)",
-    "Equity and bonus upside mentioned in addition to base",
-    "Generous benefits package including 18 weeks parental leave and mental health benefits",
-    "Hybrid flexibility including up to 4 weeks per year work-from-anywhere"
+    "Compensation range explicitly stated ($128K–$160K base in NYC/SF)",
+    "Clear product surface and ownership area (Driver Experience)",
+    "Hybrid schedule is specific and predictable (Mon, Wed, Thu in-office)",
+    "Flexibility to work remotely up to 4 weeks per year",
+    "Comprehensive benefits package including parental leave (18 weeks), mental health benefits, and 401(k) match"
   ],
   "red_flags": [
-    "Hybrid role requires 3 specific days in office (Mon, Wed, Thu) — limited schedule flexibility",
-    "Salary range applies to NYC or SF only; other location pay not disclosed",
-    "Visa sponsorship status not mentioned at all",
-    "No mention of leveling (PM I, PM II, Senior PM) making it harder to gauge career stage fit"
+    "Visa sponsorship not mentioned — unclear for international candidates",
+    "No minimum education requirement stated — potential ambiguity in screening",
+    "Role requires physical presence in NYC or SF 3 days/week, eliminating fully remote candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years requirement and comp range)",
-      "scope.business_model (inferred from Lyft's rideshare product and 'two sided marketplace' mention)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly)",
-      "location.visa_sponsorship (not mentioned; marked unclear)"
+      "seniority.level (inferred from comp range and years of experience requirement)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from rideshare/two-sided marketplace context)",
+      "location.visa_sponsorship (not mentioned anywhere in JD; left as 'unclear')"
     ],
     "ambiguities": [
-      "The JD mentions '3+ years in product management, product design or equivalent consultant experience' — product design and consulting are listed as equivalent paths, which broadens the candidate pool beyond pure PM backgrounds. Treated as a single hard requirement.",
-      "Compensation range is stated only for NYC and SF; roles in other locations may have different ranges per the JD, but no other ranges are given."
+      "Salary range is stated only for NYC and SF areas; JD does not specify whether the role is exclusively based in those cities or if other locations are considered with different pay ranges.",
+      "The JD mentions 'equivalent consultant experience' as an alternative to PM experience — it is unclear how strictly this equivalence is evaluated in practice."
     ]
   }
 }

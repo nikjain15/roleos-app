@@ -1,10 +1,10 @@
 {
   "company": "Klaviyo",
   "role_title": "Senior Lead Program Manager, Technical Programs",
-  "url": "https://www.klaviyo.com/careers/jobs?gh_jid=7453469003",
+  "url": "https://www.klaviyo.com/careers/jobs/7453469003?gh_jid=7453469003",
   "ats_provider": "greenhouse",
   "ats_job_id": "7453469003",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,17 +17,17 @@
   },
   "archetype": "Technical Program Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "Program Manager",
+  "secondary_archetype": "Platform Program Management",
   "seniority": {
-    "level": "Staff / Principal TPM (Senior Lead IC)",
+    "level": "Senior Lead / Staff TPM (likely L6+)",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "10+ years of experience in technical program management",
-      "Senior Lead title with multi-year strategy ownership",
-      "Comp range $172K-$258K base, consistent with senior IC at a late-stage SaaS company",
-      "Expected to define frameworks, drive executive communication, and own perpetual programs"
+      "Comp range $192K-$288K base, consistent with senior/staff IC",
+      "'Senior Lead' in title",
+      "Multi-year platform strategy ownership, cross-functional leadership"
     ]
   },
   "must_haves": [
@@ -55,7 +55,7 @@
     {
       "id": "perpetual_program_management",
       "raw_text_from_jd": "Proven ability to successfully manage a perpetual program with a rolling roadmap",
-      "skill_type": "capability",
+      "skill_type": "outcome",
       "domain": "program_management",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
@@ -68,7 +68,7 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_program_delivery",
+      "id": "complex_cross_functional_programs",
       "raw_text_from_jd": "Demonstrated ability to manage multiple priorities and deliver results across complex, cross-functional programs.",
       "skill_type": "capability",
       "domain": "cross_functional_program_management",
@@ -107,14 +107,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Critical, core technology platform supporting a key customer vertical (enterprise-facing platform programs)",
-    "business_model": "B2B SaaS (ecommerce marketing automation platform)",
+    "surface": "Core technology platform supporting a key customer vertical (enterprise-facing SaaS platform)",
+    "business_model": "B2B SaaS, ecommerce marketing / first-party data platform",
     "primary_metrics_inferred": [
-      "Platform stability and uptime",
-      "Roadmap delivery predictability",
+      "Platform stability and system uptime",
       "Technical debt reduction",
-      "Architecture scalability milestones",
-      "Enterprise initiative completion"
+      "Roadmap delivery predictability",
+      "Enterprise customer scalability"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -127,13 +126,13 @@
       "Oversee the full lifecycle of platform features, from technical design to implementation",
       "Define clear ways of working, create frameworks for cross-team collaboration, establish content repositories",
       "Serve as the primary communication leader, tailoring information to secure buy-in and consensus across engineering and business leadership",
-      "Drive a mindset of operational excellence, prioritizing automation over manual efforts"
+      "Drive a mindset of operational excellence, challenging existing processes and implementing solutions that prioritize automation over manual efforts"
     ]
   },
   "compensation": {
     "base_range_usd": [
-      172000,
-      258000
+      192000,
+      288000
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
@@ -144,44 +143,44 @@
   "top_keywords": [
     "technical program management",
     "platform strategy",
-    "multi-year roadmap",
+    "rolling roadmap",
     "technical debt",
     "capacity planning",
     "architecture scaling",
-    "enterprise initiatives",
-    "operational excellence",
     "cross-functional",
+    "operational excellence",
+    "enterprise",
     "SaaS",
-    "non-functional programs",
-    "automation"
+    "Jira",
+    "Asana"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($172K-$258K base) and competitive for a senior IC TPM",
+    "Compensation range disclosed ($192K-$288K base) and competitive for TPM level",
+    "Clear product surface: core technology platform with enterprise focus",
     "Explicit encouragement to apply even if not an exact match",
-    "Clear ownership scope: long-term health and strategy of a core technology platform",
-    "Role has strategic gravitas: multi-year roadmap, executive communication, enterprise narrative",
-    "AI fluency and responsible AI use are explicitly valued and supported"
+    "AI fluency and responsible AI use are part of company culture",
+    "Role has strategic authority including multi-year roadmap ownership"
   ],
   "red_flags": [
-    "No visa sponsorship information stated — unclear for international applicants",
-    "Location type not explicitly stated in JD body; 'hybrid' inferred from 10% travel requirement and US-wide salary range",
-    "Nice-to-haves section is entirely absent — makes differentiation harder for candidates",
-    "10+ years hard floor is a significant bar; no equivalent experience path mentioned for this requirement"
+    "No preferred/nice-to-have qualifications listed — hard to differentiate what makes a standout candidate",
+    "Location type is ambiguous: no specific city listed, but travel requirement implies some in-person expectation; work_auth and visa sponsorship not addressed",
+    "Wide comp range ($96K spread) may indicate significant location or level variability",
+    "No people management component stated but 'Senior Lead' title may carry implicit leadership expectations not articulated"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Senior Lead', comp range, and 10+ years requirement)",
-      "location.type (inferred as hybrid/flexible from '10% travel' and US-wide salary range; not explicitly stated)",
-      "location.remote_us_eligible (inferred from 'cost of labor across various U.S. geographic markets' and no city listed)",
-      "scope.business_model (inferred from company description: B2B SaaS ecommerce marketing platform)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "compensation.location_pay_differential (inferred from 'cost of labor across various U.S. geographic markets')"
+      "seniority.level (inferred from comp range, years, and title)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "scope.business_model (inferred from company description and platform context)",
+      "location.type (inferred as hybrid/distributed; no city listed, travel mentioned, US geo pay mentioned)",
+      "location.remote_us_eligible (inferred from 'various U.S. geographic markets' comp language)"
     ],
     "ambiguities": [
-      "Location type is not explicitly stated. The JD mentions up to 10% travel and a US-wide salary range suggesting flexible/remote-eligible, but no explicit remote/hybrid/onsite designation is given. Treated as hybrid here.",
-      "The '(ideally SaaS or high-growth tech)' qualifier on the 10+ years requirement is parenthetical — could be read as a strong preference (soft) or an implicit hard requirement. Treated as hard with a soft qualifier per JD language.",
-      "Visa sponsorship is not mentioned anywhere in the JD. Treated as unclear."
+      "Location type is unclear: no office or city is specified for this role, but 'up to 10% travel' and US geographic pay bands imply a distributed/US-remote setup with occasional travel — treated as hybrid.",
+      "Visa sponsorship is not mentioned anywhere in the JD; left as 'unclear'.",
+      "The word 'ideally' before 'SaaS or high-growth tech' could indicate that industry background is preferred rather than required; classified as hard given it appears in the 'You Have' section.",
+      "No nice-to-haves are explicitly listed in the JD; nice_to_haves left empty."
     ]
   }
 }

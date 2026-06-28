@@ -1,32 +1,33 @@
 {
   "company": "Affirm",
   "role_title": "Revenue Operations Lead",
-  "url": "https://job-boards.greenhouse.io/affirm/jobs/7686481003",
+  "url": "https://job-boards.greenhouse.io/affirm/jobs/7686483003",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7686481003",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7686483003",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
-    "type": "remote-us",
+    "type": "remote-global",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "occasional in-office for proximal roles",
-    "work_auth": "open",
+    "office_time_required": "occasionally required to work out of assigned Affirm office for proximal roles",
+    "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
-  "secondary_archetype": "Revenue / Sales Operations",
+  "secondary_archetype": "Revenue / Sales Operations Lead",
   "seniority": {
-    "level": "Senior IC / Lead",
+    "level": "Mid-Senior IC",
     "years_required_min": 4,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "4+ years of revenue operations or sales operations experience",
-      "Pay Grade J with base range up to $170K in high-cost states",
-      "Title is 'Lead', implying senior individual contributor ownership without direct reports stated"
+      "Pay Grade J with CAN base range $101,000–$151,000",
+      "Expected to operate with minimal oversight on cross-functional governance",
+      "'Lead' title implies senior IC contributor, not manager"
     ]
   },
   "must_haves": [
@@ -51,7 +52,7 @@
       ]
     },
     {
-      "id": "years_revops_salesops",
+      "id": "years_rev_ops_sales_ops",
       "raw_text_from_jd": "4+ years of revenue operations or sales operations experience with exposure to pipeline management, forecasting, and territory planning",
       "skill_type": "years_of_experience",
       "domain": "revenue_operations",
@@ -100,10 +101,10 @@
       "credentials_named": []
     },
     {
-      "id": "sales_process_design_documentation",
+      "id": "sales_process_documentation",
       "raw_text_from_jd": "Experience designing and documenting end-to-end sales processes — stage definitions, SLAs, territory rules, and operating cadences",
       "skill_type": "capability",
-      "domain": "sales_process_management",
+      "domain": "sales_process_design",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -137,13 +138,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Mid-funnel sales lifecycle, territory planning, and partnership process governance across Sales, ISV, Strategic Partnerships, and Marketplace teams",
-    "business_model": "B2B merchant partnerships and B2C consumer lending (buy now, pay later)",
+    "surface": "Mid-funnel sales lifecycle (Discovery → Close), territory planning and governance, ISV / Strategic Partnerships / Marketplace motion support",
+    "business_model": "B2B go-to-market (merchant partnerships in BNPL / fintech)",
     "primary_metrics_inferred": [
       "Pipeline health and hygiene",
       "Forecasting accuracy",
-      "Territory coverage efficiency",
-      "Cross-functional process adoption"
+      "Territory coverage and segmentation quality",
+      "Process adoption rates"
     ],
     "cross_functional_partners": [
       "Sales Leadership",
@@ -154,9 +155,8 @@
       "RevOps",
       "Business Systems",
       "Revenue Enablement",
-      "ISV",
-      "Strategic Partnerships",
-      "Marketplace"
+      "ISV teams",
+      "Marketplace teams"
     ],
     "core_responsibilities": [
       "Own mid-funnel sales lifecycle processes (Discovery → Close), including stage definitions, pipeline hygiene, forecasting inputs, and opportunity management standards",
@@ -170,56 +170,58 @@
     ]
   },
   "compensation": {
-    "base_range_usd": [
-      115000,
-      170000
-    ],
+    "base_range_usd": null,
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "Equity Grade 5; ESPP (employee stock purchase plan at a discount)",
+    "equity_form": "Equity Grade 4; eligible for equity rewards from Affirm Holdings, Inc.; ESPP (employee stock purchase plan at a discount)",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
-    "Revenue Operations",
-    "Sales Operations",
+    "revenue operations",
+    "sales operations",
     "mid-funnel",
     "territory planning",
     "pipeline hygiene",
     "forecasting",
     "Salesforce",
-    "GTM",
     "ISV",
     "Strategic Partnerships",
+    "Marketplace",
     "segmentation",
     "process documentation",
-    "change management"
+    "GTM",
+    "go-to-market",
+    "cross-functional governance"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range explicitly disclosed (two-tier by geography)",
-    "Remote-first company with broad US remote eligibility",
-    "Clear ownership scope and well-defined mid-funnel responsibilities",
-    "Equity and strong benefits package (100% medical premium coverage) disclosed"
+    "Remote-first company with broad geographic flexibility",
+    "CAN compensation range disclosed ($101,000–$151,000 CAD base)",
+    "100% subsidized medical, dental, and vision coverage",
+    "ESPP offered in addition to equity",
+    "Generous flexible spending stipends for tech, food, and lifestyle",
+    "Clear ownership area and well-defined responsibilities"
   ],
   "red_flags": [
-    "Visa sponsorship not mentioned — unclear for international candidates",
-    "No explicit mention of direct reports or team size",
-    "Salesforce admin listed as 'a plus' within the same bullet as a hard requirement, creating mild ambiguity about how critical admin-level skills are"
+    "US base pay range not disclosed — only CAN range stated, limiting transparency for US-based candidates",
+    "Role tagged #LI-Remote but body notes proximal roles may occasionally need to attend assigned office — minor ambiguity on true remote vs hybrid",
+    "Visa sponsorship and work authorization requirements not addressed"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Lead', years requirement, and comp range — not explicitly stated as senior IC)",
-      "seniority.manages_people (not stated; assumed false as no direct reports mentioned)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated in JD)",
-      "scope.business_model (inferred from company description and revenue team context)",
-      "compensation.base_range_usd (stated as two-tier geographic ranges; reported as overall min/max spanning both bands)",
-      "location.work_auth (not stated; defaulted to open)"
+      "seniority.level (inferred from Pay Grade J, years required, and 'Lead' title)",
+      "seniority.manages_people (inferred from absence of any management language)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, not directly stated)",
+      "scope.business_model (inferred from product description of merchant BNPL partnerships)",
+      "compensation.base_range_usd (left null — only CAN range stated, not USD)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)"
     ],
     "ambiguities": [
-      "Salesforce proficiency is listed as a must-have, but 'experience as an administrator is a plus' is embedded in the same bullet — treated proficiency as hard and admin experience as soft.",
-      "Compensation has two geographic tiers: $130K-$170K (CA, WA, NY, NJ, CT) and $115K-$155K (all other US states). base_range_usd reflects the full span ($115K-$170K).",
-      "Location metadata tag is #LI-Remote and JD body confirms remote-first; treated as remote-us. No cities tied to this role specifically."
+      "Compensation range provided is CAN (Canadian dollars: $101,000–$151,000), not USD. US base pay range is not disclosed. Field base_range_usd left null.",
+      "Role is tagged #LI-Remote and described as remote-first, but the JD notes 'proximal roles' may occasionally be required to work from an assigned Affirm office — unclear whether this role is proximal or fully remote.",
+      "Salesforce proficiency is listed as a requirement but admin experience is described as 'a plus' — the base proficiency is treated as hard, admin as soft."
     ]
   }
 }

@@ -1,0 +1,232 @@
+{
+  "company": "DoorDash",
+  "role_title": "Sr. Associate, GTM Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8017176",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8017176",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "GTM / Revenue Operations",
+  "seniority": {
+    "level": "Mid-level / Senior Associate (IC2–IC3)",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2+ years of experience in strategy, operations, consulting, analytics, or GTM/revenue operations",
+      "Comp range $87K–$128K base consistent with mid-level associate role",
+      "Title is 'Senior Associate' reporting to a Sr. Manager"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_strategy_ops_analytics",
+      "raw_text_from_jd": "You have 2+ years of experience in strategy, operations, consulting, analytics, or GTM/revenue operations",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_operations_analytics",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_proficiency",
+      "raw_text_from_jd": "You have strong analytical skills with proficiency in SQL and advanced Excel skills",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL",
+        "Excel"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_experience",
+      "raw_text_from_jd": "You have experience working with AI tools such as Claude, Cursor, GitHub, etc. and know how to scale your impact through the use of AI powered tools, skills, and processes",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Claude",
+        "Cursor",
+        "GitHub"
+      ],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_mindset_zero_to_one",
+      "raw_text_from_jd": "You have an entrepreneurial mindset with a bias for action — comfortable building from zero to one in an unstructured environment",
+      "skill_type": "cultural_fit",
+      "domain": "startup_operating_style",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "work_ethic_high_growth",
+      "raw_text_from_jd": "You have a strong work ethic and are willing to put in the effort required to move fast and deliver results in a high-growth, fast-paced setting",
+      "skill_type": "cultural_fit",
+      "domain": "work_ethic",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "You communicate clearly across audiences and collaborate effectively with cross-functional partners",
+      "skill_type": "capability",
+      "domain": "communication_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fast_moving_resource_constrained_environment",
+      "raw_text_from_jd": "We are especially excited about candidates who have worked in fast-moving or resource-constrained environments - those who see lack of structure as an opportunity to build.",
+      "skill_type": "cultural_fit",
+      "domain": "startup_operating_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "small team",
+    "surface": "GTM Strategy & Operations for DoorDash Commerce Platform (B2B SaaS for restaurants)",
+    "business_model": "B2B SaaS targeting restaurant merchants",
+    "primary_metrics_inferred": [
+      "Pipeline conversion rates",
+      "Sales velocity",
+      "Lead prioritization effectiveness",
+      "Merchant growth and retention"
+    ],
+    "cross_functional_partners": [
+      "Frontline sales",
+      "Product teams"
+    ],
+    "core_responsibilities": [
+      "Own the intelligence layer behind the GTM engine - analyzing conversion patterns, lead attributes, and pipeline performance",
+      "Build prioritization frameworks that help sales reps focus on highest-value accounts",
+      "Partner with sales team to identify opportunities that exponentially increase velocity",
+      "Design, build, and maintain AI-powered tools that improve GTM efficiency",
+      "Support the design and buildout of a scalable inbound funnel",
+      "Create and maintain systems, infrastructure, and processes that enable a high-performing sales organization"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      87000,
+      128000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "GTM strategy",
+    "revenue operations",
+    "sales enablement",
+    "SQL",
+    "AI tools",
+    "B2B SaaS",
+    "pipeline performance",
+    "lead prioritization",
+    "inbound funnel",
+    "merchant growth",
+    "zero to one",
+    "analytics"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($87K–$128K base)",
+    "Equity explicitly included in compensation",
+    "High-visibility initiative backed directly by senior leadership",
+    "Early-stage-startup autonomy with public company resources",
+    "Clear reporting structure (GTM Sr. Manager) and team context (DoorDash Commerce Platform)",
+    "Broad scope across GTM strategy, analytics, AI tools, and sales enablement — strong learning opportunity"
+  ],
+  "red_flags": [
+    "Location and remote eligibility are not stated anywhere in the JD body — unclear whether this is hybrid, onsite, or remote",
+    "Visa sponsorship not addressed",
+    "Role requires wearing many hats simultaneously (analyst, builder, operator, GTM partner) which may indicate under-staffing",
+    "Posting does not specify office location(s) despite base salary being 'localized according to an employee's work location'"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior Associate', comp range, and years required)",
+      "scope.team_size_estimate (described as 'small' in JD body; exact number not stated)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from product description as B2B SaaS)",
+      "location.type (not stated; marked as unclear)",
+      "location.remote_us_eligible (not stated; left null)"
+    ],
+    "ambiguities": [
+      "Location/work model is never specified in the JD body. The pay section references national range plus Illinois and Colorado, suggesting some remote eligibility, but no explicit remote/hybrid/onsite designation is given.",
+      "The 'nice to have' for fast-moving/resource-constrained environments is framed as 'especially excited about' rather than a formal preferred qualifier — could be interpreted as a soft must-have. Treated as nice-to-have here.",
+      "All six bullets under 'We're excited about you because...' are written as unconditional statements, suggesting hard requirements; however, only 2+ years experience and SQL/Excel are clearly hard skills — cultural fit items classified as hard per JD language but flagged here."
+    ]
+  }
+}

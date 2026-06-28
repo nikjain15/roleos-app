@@ -1,0 +1,236 @@
+{
+  "company": "ElevenLabs",
+  "role_title": "Lead Generation Strategy and Operations",
+  "url": "https://jobs.ashbyhq.com/elevenlabs/65f83bd7-70da-4a31-a364-28fd0f361ea9",
+  "ats_provider": "ashby",
+  "ats_job_id": "65f83bd7-70da-4a31-a364-28fd0f361ea9",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-global",
+    "cities_listed": [
+      "New York",
+      "London",
+      "Warsaw"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Revenue Operations / GTM Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years of Revenue Operations at high-growth technology companies",
+      "Serves as trusted partner to leadership",
+      "Leads design and management of dashboards, reports, and KPIs"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "revops_experience",
+      "raw_text_from_jd": "4+ years of Revenue Operations at high-growth technology companies",
+      "skill_type": "years_of_experience",
+      "domain": "revenue_operations",
+      "minimum_value": 4,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "e2e_solutions_track_record",
+      "raw_text_from_jd": "Proven track record of developing and implementing end-to-end solutions, from data collection and analysis to execution.",
+      "skill_type": "outcome",
+      "domain": "operations_and_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_problem_decomposition",
+      "raw_text_from_jd": "Can break complex problems into smaller, actionable solution steps",
+      "skill_type": "capability",
+      "domain": "analytical_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_and_bi_analytics",
+      "raw_text_from_jd": "Strong analytical skills, with proven expertise in SQL and data visualization using BI tools (e.g. Sigma)",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Sigma"
+      ],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Excellent communication and collaboration skills, with the ability to work effectively with cross-functional teams.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "adaptability_and_proactivity",
+      "raw_text_from_jd": "Highly adaptable, with a proactive approach to problem-solving and process improvement.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "coachability_and_learning",
+      "raw_text_from_jd": "Strong coachability and willingness to learn and adapt to new challenges.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Lead Generation / GTM Strategy & Operations within the Revenue Operations team, covering pre-sales functions",
+    "business_model": "B2B SaaS / AI platform (enterprise and SMB customers)",
+    "primary_metrics_inferred": [
+      "Pipeline / lead generation volume",
+      "Sales process efficiency metrics",
+      "KPI dashboards for pre-sales functions",
+      "Revenue acceleration indicators"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Marketing",
+      "Events",
+      "Partner",
+      "Data",
+      "Product",
+      "Leadership"
+    ],
+    "core_responsibilities": [
+      "Build and maintain strategic automations and standardized processes that support cross-functional teams and promote consistency and adoption.",
+      "Collaborate with cross-functional teams (Marketing, Events, Partner) to drive initiatives that enhance revenue generation and operational effectiveness.",
+      "Serve as a trusted partner to leadership, providing strategic insights, actionable recommendations, and performance reporting.",
+      "Develop and test new ideas, workflows, and sources that improve critical levers within each functional area.",
+      "Oversee analytics and performance analyses across pre-sales functions. Identify areas of opportunity and acceleration; build dashboards and insights that inform experimentation and guide lever improvement.",
+      "Lead the design and management of dashboards, reports, and key performance indicators (KPIs) to measure and enhance team performance."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Revenue Operations",
+    "Lead Generation",
+    "GTM Strategy",
+    "SQL",
+    "BI tools",
+    "Sigma",
+    "dashboards",
+    "KPIs",
+    "automation",
+    "pre-sales",
+    "cross-functional",
+    "data visualization",
+    "process improvement",
+    "analytics"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Company is well-funded ($781M raised, $11B valuation) with notable enterprise clients and investors",
+    "Remote-first with truly global team and flexible location policy",
+    "Clear role scope within Revenue Operations / GTM Strategy team",
+    "Explicit collaboration partners and functional area (pre-sales) described",
+    "Annual learning & development stipend and social travel stipend offered",
+    "Company has co-working stipend for those not near main hubs"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship policy not stated",
+    "No job titles mentioned as company policy — may make leveling and career progression opaque",
+    "Role title says 'Lead Generation Strategy and Operations' but body describes broad Revenue/GTM Ops — could be a scope mismatch worth clarifying"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 4+ years requirement and leadership partnership responsibilities)",
+      "seniority.manages_people (not stated; inferred as false from IC-level language)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "compensation.equity_mentioned (no mention of equity anywhere in JD)"
+    ],
+    "ambiguities": [
+      "Role title is 'Lead Generation Strategy and Operations' but the body describes broad pre-sales Revenue/GTM Ops responsibilities beyond lead generation — scope may be wider than the title implies.",
+      "Visa sponsorship is not mentioned anywhere in the JD; set to 'unclear'.",
+      "No specific BI tools are required beyond SQL and an example of Sigma — it is unclear whether Sigma experience is mandatory or illustrative."
+    ]
+  }
+}

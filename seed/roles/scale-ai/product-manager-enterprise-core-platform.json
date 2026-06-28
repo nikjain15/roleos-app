@@ -1,0 +1,352 @@
+{
+  "company": "Scale AI",
+  "role_title": "Product Manager, Enterprise Core Platform",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4699779005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4699779005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY",
+      "Seattle, WA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Platform / Infrastructure PM",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years in product management required",
+      "Must have owned platform/infrastructure products at production bar",
+      "Comp range $205,600–$300,000 base, consistent with Senior to Staff-level IC at a top AI company",
+      "Expected to drive outcomes across teams without formal authority"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_platform",
+      "raw_text_from_jd": "6+ years in product management with meaningful time owning platform, infrastructure, or developer-facing products at production bar.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_platform_infrastructure",
+      "minimum_value": 6,
+      "unit": "years",
+      "qualifier": "with meaningful time owning platform, infrastructure, or developer-facing products at production bar",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_shipping_record",
+      "raw_text_from_jd": "Demonstrated record of defining and shipping platform capabilities — not features on top of a platform someone else built. You can describe the architectural decisions you made, what production required, and what you learned.",
+      "skill_type": "outcome",
+      "domain": "platform_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sequencing_judgment",
+      "raw_text_from_jd": "Strong sequencing judgment: can prioritize across competing customer commitments and team velocity needs with incomplete information, without thrashing.",
+      "skill_type": "capability",
+      "domain": "prioritization_and_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "Technical fluency sufficient to hold real conversations with platform engineers about architectural tradeoffs across infra, auth, observability, deployment, and agent runtime. Not deep coding, but genuine comprehension of how production systems work.",
+      "skill_type": "domain_knowledge",
+      "domain": "platform_infrastructure_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "infra",
+        "auth",
+        "observability",
+        "deployment",
+        "agent runtime"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "extreme_ownership",
+      "raw_text_from_jd": "Extreme ownership and follow-through: closes loops without reminders, drives outcomes across teams without formal authority, holds self and others to commitments.",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_and_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clear_communication",
+      "raw_text_from_jd": "Clear, precise communication: adjusts for audience (platform engineer vs. FD PM vs. executive); writes and speaks at the right level of detail.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "platform_foundation_ownership",
+      "raw_text_from_jd": "Platform foundation ownership: has defined what a platform capability needs to be before it can be used reliably in production; understands what 'done' means at the platform layer vs. the application layer.",
+      "skill_type": "capability",
+      "domain": "platform_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pattern_recognition",
+      "raw_text_from_jd": "Pattern recognition: identifies when field-built work has genuinely repeated and is ready to graduate to core; does not rush graduation or delay it out of caution.",
+      "skill_type": "capability",
+      "domain": "platform_capability_graduation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "quality_discipline",
+      "raw_text_from_jd": "Quality discipline: every capability earns its place twice — by being necessary and by being done well enough that it is trusted without thinking about it.",
+      "skill_type": "capability",
+      "domain": "platform_quality_standards",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Cross-functional influence: drives field teams and platform engineering toward shared outcomes through evidence and framing, not process.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operating_in_ambiguity",
+      "raw_text_from_jd": "Operating in ambiguity: creates structure where there is none; makes sequencing calls with incomplete information; does not wait for fully-formed requirements.",
+      "skill_type": "capability",
+      "domain": "ambiguity_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_ml_platform_experience",
+      "raw_text_from_jd": "Direct experience with AI/ML platform infrastructure — agent frameworks, eval pipelines, fine-tuning workflows, or observability for production AI systems.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_ml_platform_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "agent frameworks",
+        "eval pipelines",
+        "fine-tuning workflows",
+        "observability"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "constrained_environment_deployment",
+      "raw_text_from_jd": "Experience deploying into constrained environments: government, regulated industries, air-gapped or classified infrastructure.",
+      "skill_type": "domain_knowledge",
+      "domain": "regulated_and_government_deployments",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "air-gapped infrastructure",
+        "classified infrastructure"
+      ],
+      "industries_named": [
+        "government",
+        "regulated industries"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "field_pattern_platform_pm",
+      "raw_text_from_jd": "Prior experience as a platform or infrastructure PM at a company where field-built patterns were a key signal source for the core product.",
+      "skill_type": "domain_knowledge",
+      "domain": "platform_infrastructure_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Core Enterprise Platform — the foundational infrastructure layer that all Forward Deployed (FD) teams build on top of, including agentic primitives, eval infrastructure, expert judgment capture, data reasoning capabilities, auth, observability, and deployment",
+    "business_model": "B2B / enterprise AI platform; field-deployed to governments and large enterprises",
+    "primary_metrics_inferred": [
+      "Platform reliability and production bar (customer trust without thinking about it)",
+      "Forward deployed team time-to-value",
+      "Reduction of duplicate plumbing rebuilt per engagement",
+      "Capability graduation rate from FD-built patterns to core platform"
+    ],
+    "cross_functional_partners": [
+      "Platform engineering",
+      "Forward deployed PMs",
+      "Business Unit leads"
+    ],
+    "core_responsibilities": [
+      "Define what needs to be true at the core platform layer before anything reliable can be built on top of it",
+      "Prioritize and order platform work against customer commitments and FD team velocity",
+      "Identify genuinely repeating FD-built patterns and graduate capabilities to core",
+      "Hold quality bar so every capability ships at a level customers can trust without thinking about it",
+      "Unlock delivery team time-to-value by ensuring platform is secure by default, deployable anywhere, and observable in production",
+      "Partner with platform engineering, forward deployed PMs, and BU leads to surface signal and resolve sequencing tradeoffs"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      205600,
+      300000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants subject to Board of Director approval; details confirmed during hiring process",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "platform PM",
+    "infrastructure",
+    "production bar",
+    "agentic operating system",
+    "forward deployed",
+    "capability graduation",
+    "sequencing judgment",
+    "agent runtime",
+    "eval infrastructure",
+    "observability",
+    "enterprise AI",
+    "air-gapped",
+    "cross-functional influence"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($205,600–$300,000 base) for SF, NYC, and Seattle",
+    "Role has a clearly defined ownership scope — not vague or catch-all",
+    "JD is unusually precise about what the role is NOT (roadmap PM, program manager, feature tracker), which signals hiring clarity",
+    "Equity compensation explicitly mentioned",
+    "Scale works with high-profile customers (Meta, U.S. Army, Air Force, Mayo Clinic) — strong portfolio signal",
+    "Benefits package includes learning and development stipend"
+  ],
+  "red_flags": [
+    "No remote option stated — restricted to SF, NYC, or Seattle",
+    "Visa sponsorship policy not explicitly stated in JD body",
+    "Very high bar: requires proven track record of defining and shipping platform capabilities at production bar, not just feature work on existing platforms",
+    "Comp range spans $94,400, suggesting significant level ambiguity that will only be resolved during the interview process",
+    "90-day waiting period policy before reconsidering candidates for the same role"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years requirement + leadership expectations)",
+      "location.type (inferred as onsite from city-specific pay transparency disclosure; no remote/hybrid language in body)",
+      "scope.business_model (inferred from customer examples and 'field deployed' language)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Location type: JD specifies pay ranges for SF, NYC, and Seattle but does not explicitly state whether the role is fully onsite, hybrid, or remote. Treated as onsite given no remote language and city-specific pay transparency framing.",
+      "Seniority level: comp range ($205,600–$300,000) and JD note that it 'may be inclusive of several career levels at Scale' suggest the role could span Senior PM to Staff PM depending on interview performance and experience.",
+      "Core Competencies section reads as must-haves by content but is labeled separately from 'Must-Have Qualifications'. Both sections have been treated as hard requirements given unconditional language."
+    ]
+  }
+}

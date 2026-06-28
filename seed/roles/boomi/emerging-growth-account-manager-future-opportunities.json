@@ -1,0 +1,245 @@
+{
+  "company": "Boomi",
+  "role_title": "Emerging Growth Account Manager Future Opportunities",
+  "url": "https://boomi.com/boomi-jobs/?gh_jid=6004470004",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "6004470004",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Vancouver"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "Tuesday, Wednesday and Thursday in-office",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Other",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Account Executive / Sales (Emerging Growth Segment)",
+  "seniority": {
+    "level": "Junior-to-Mid IC (Sales)",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2+ years experience in relationship selling",
+      "OTE $120,000 - $140,000 CAD, consistent with junior-to-mid AE level",
+      "Emerging Growth Segment framing implies high-volume, entry-level accounts"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree or equivalent experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    },
+    {
+      "id": "years_relationship_selling",
+      "raw_text_from_jd": "2+ years experience in relationship selling",
+      "skill_type": "years_of_experience",
+      "domain": "sales",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "forecast_accuracy",
+      "raw_text_from_jd": "Accurately forecast future sales",
+      "skill_type": "capability",
+      "domain": "sales_forecasting",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pipeline_bookings_growth",
+      "raw_text_from_jd": "Execute on pipeline and bookings growth strategies",
+      "skill_type": "capability",
+      "domain": "sales_pipeline_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "track_report_metrics",
+      "raw_text_from_jd": "Track & report on critical sales and account metrics",
+      "skill_type": "capability",
+      "domain": "sales_reporting",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "c_level_advisory",
+      "raw_text_from_jd": "Act as a trusted business advisor to C-level business audiences as you use your in-depth knowledge of Boomi technology, products, and services to help customers formulate strategy and direction",
+      "skill_type": "capability",
+      "domain": "executive_sales_engagement",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_probing",
+      "raw_text_from_jd": "Utilize strategic probing to identify, evaluate, design, and propose business solutions",
+      "skill_type": "capability",
+      "domain": "solution_selling",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "meddpicc_methodology",
+      "raw_text_from_jd": "MEDDPICC sales methodology experience preferred",
+      "skill_type": "domain_knowledge",
+      "domain": "sales_methodology",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "MEDDPICC"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Emerging Growth Segment — high-volume, high-velocity new customer acquisition",
+    "business_model": "B2B SaaS (integration and automation platform)",
+    "primary_metrics_inferred": [
+      "New customer acquisition",
+      "Pipeline and bookings growth",
+      "Sales forecast accuracy",
+      "Account metrics"
+    ],
+    "cross_functional_partners": [
+      "Cross-functional resources (unspecified)"
+    ],
+    "core_responsibilities": [
+      "Acquire new customers in the Emerging Growth Segment",
+      "Act as trusted business advisor to C-level audiences",
+      "Utilize strategic probing to identify and propose business solutions",
+      "Design post-sale implementation plans",
+      "Analyze market factors to identify customer problems and recommend solutions",
+      "Engage cross-functional resources to achieve goals and meet customer needs",
+      "Develop and implement account plans targeting critical business objectives",
+      "Accurately forecast future sales",
+      "Execute on pipeline and bookings growth strategies",
+      "Track and report on critical sales and account metrics"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated",
+    "notes": "OTE ranges from $120,000 - $140,000 CAD annually; USD equivalent not stated"
+  },
+  "top_keywords": [
+    "Emerging Growth",
+    "Account Manager",
+    "relationship selling",
+    "MEDDPICC",
+    "pipeline",
+    "bookings",
+    "new customer acquisition",
+    "integration",
+    "automation",
+    "B2B SaaS",
+    "C-level",
+    "Vancouver",
+    "hybrid"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "OTE compensation range explicitly disclosed ($120,000–$140,000 CAD)",
+    "Hybrid schedule clearly defined (Tuesday, Wednesday, Thursday in-office)",
+    "Encourages candidates with impostor syndrome / confidence gap to still apply",
+    "Role has a clear and specific segment focus (Emerging Growth / high-volume, high-velocity)"
+  ],
+  "red_flags": [
+    "Role title says 'Future Opportunities' — may be a pipeline/evergreen posting rather than an immediate opening",
+    "Work authorization and visa sponsorship not addressed anywhere in the JD",
+    "Compensation stated in CAD only; no USD equivalent — limits clarity for cross-border candidates",
+    "No explicit mention of quota, territory, or team structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirement and OTE range)",
+      "scope.business_model (inferred from Boomi product description as B2B SaaS integration platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly named in JD)",
+      "compensation.base_range_usd (null; only CAD OTE stated, no base/variable split disclosed)",
+      "location.work_auth (not mentioned in JD)",
+      "location.visa_sponsorship (not mentioned in JD)"
+    ],
+    "ambiguities": [
+      "Role title includes 'Future Opportunities' which may indicate this is a pipeline/evergreen requisition rather than an active immediate hire — not clarified in the body.",
+      "OTE of $120,000–$140,000 CAD is total on-target earnings; base vs. variable split is not disclosed.",
+      "MEDDPICC is labelled 'preferred' in one bullet but the surrounding context lists it alongside apparent requirements — treated as soft/nice-to-have per JD language."
+    ]
+  }
+}

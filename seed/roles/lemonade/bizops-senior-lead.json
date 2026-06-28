@@ -1,0 +1,205 @@
+{
+  "company": "Lemonade",
+  "role_title": "BizOps Senior Lead",
+  "url": "https://jobs.ashbyhq.com/lemonade/3461aecb-da19-463e-b872-7df835b515a8",
+  "ats_provider": "ashby",
+  "ats_job_id": "3461aecb-da19-463e-b872-7df835b515a8",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "most days of the week",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Chief of Staff / mini-COO for Pet insurance line",
+  "seniority": {
+    "level": "Senior IC / Lead",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years in management consulting or business operations with leadership experience",
+      "Title includes 'Senior Lead'",
+      "'mini-COO' framing implies significant autonomy and ownership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_consulting_or_bizops",
+      "raw_text_from_jd": "6+ years in management consulting (strategy and operations) or business operations with leadership experience",
+      "skill_type": "years_of_experience",
+      "domain": "management_consulting_or_business_operations",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "management consulting firm"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_influence_track_record",
+      "raw_text_from_jd": "Track record of driving impact and influencing decisions across multiple stakeholder groups",
+      "skill_type": "outcome",
+      "domain": "stakeholder_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "adaptability_fast_environment",
+      "raw_text_from_jd": "Ability to adapt quickly in a fast-moving environment while maintaining strategic focus",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_mindset_data_to_strategy",
+      "raw_text_from_jd": "Strong analytical mindset with experience turning data into business strategy",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_project_leadership",
+      "raw_text_from_jd": "Experience leading cross-functional projects and building consensus across diverse teams",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "onsite_presence",
+      "raw_text_from_jd": "Ready to work in an office environment most days of the week",
+      "skill_type": "cultural_fit",
+      "domain": "work_arrangement",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Pet insurance line — profitability and growth strategy; cross-functional strategic initiatives",
+    "business_model": "B2C insurance (pet vertical), AI-first insurer",
+    "primary_metrics_inferred": [
+      "Pet insurance profitability",
+      "Revenue growth",
+      "Business performance optimization"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Insurance / Actuarial",
+      "Finance",
+      "Customer Operations",
+      "Revenue"
+    ],
+    "core_responsibilities": [
+      "Drive profitability and growth strategies for the Pet insurance business as a strategic business partner",
+      "Lead cross-functional initiatives spanning Product, Insurance, Finance, and Customer Operations teams",
+      "Take strategic projects from concept to execution across multiple stakeholder groups",
+      "Analyze complex business challenges and translate insights into actionable recommendations",
+      "Influence decision-making at the leadership level while building alignment across diverse teams",
+      "Navigate rapidly changing priorities and guide teams through strategic pivots",
+      "Partner with Product, Actuarial, Finance, and Revenue teams to optimize business performance"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "business operations",
+    "management consulting",
+    "Pet insurance",
+    "strategy",
+    "cross-functional",
+    "profitability",
+    "growth",
+    "AI-first",
+    "stakeholder management",
+    "mini-COO",
+    "data-driven",
+    "0 to 1"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product ownership framing ('mini-COO' for Pet line) signals real scope and autonomy",
+    "AI-first company culture explicitly stated as operational, not just marketing",
+    "Cross-functional scope spans multiple high-impact teams (Product, Actuarial, Finance, Revenue)"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No specific city listed for an in-office role — location of office is unclear",
+    "Visa sponsorship and work authorization not addressed",
+    "No mention of people management yet 'leadership experience' is required — scope of leadership is ambiguous"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior Lead', years requirement, and 'mini-COO' framing)",
+      "seniority.manages_people (inferred as false; 'leadership experience' mentioned but no direct reports stated)",
+      "scope.business_model (inferred from product description — B2C insurance, AI-first)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.type (inferred as onsite from 'office environment most days of the week')",
+      "location.remote_us_eligible (inferred as false from onsite requirement)"
+    ],
+    "ambiguities": [
+      "No office city or country is specified in the JD body. Lemonade operates in the US and Israel; the role location is ambiguous.",
+      "'Leadership experience' is required but it is unclear whether this means managing direct reports or leading projects/initiatives — treated as project leadership given no direct mention of people management."
+    ]
+  }
+}

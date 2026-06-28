@@ -1,0 +1,250 @@
+{
+  "company": "DoorDash",
+  "role_title": "Manager, Strategy & Operations - Core Consumer Experience",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8009023",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8009023",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM",
+  "seniority": {
+    "level": "Manager / Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of working experience required",
+      "Title is 'Manager' but reports to Senior Manager, implying IC-like manager without explicit direct reports mentioned",
+      "Comp range $136K–$200K base, consistent with Manager-level IC at DoorDash"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_strategy_ops",
+      "raw_text_from_jd": "You have 6+ years of working experience in strategy, operations, consulting, growth, product, marketplace, or general management roles",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 6,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "creative_strategic_thinking",
+      "raw_text_from_jd": "You're creative – You love thinking about new problems, and can switch between high level strategic thinking and in-the-weeds execution as needed",
+      "skill_type": "capability",
+      "domain": "strategic_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_toward_action_ambiguity",
+      "raw_text_from_jd": "You're a go-getter – You have a bias towards action, are comfortable with ambiguity, and are able to thrive in a fast-paced, constantly changing work environment",
+      "skill_type": "cultural_fit",
+      "domain": "operational_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "advanced_analytics_experimentation",
+      "raw_text_from_jd": "You're analytical – You enjoy getting deep into data and feel comfortable translating what you're seeing into tangible insights, you are extremely comfortable operating at the lowest level of detail - advanced analytics, experimentation, dashboards",
+      "skill_type": "capability",
+      "domain": "data_analytics_and_experimentation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_initiatives_track_record",
+      "raw_text_from_jd": "You have a proven track record of owning and scaling growth initiatives in complex environments",
+      "skill_type": "outcome",
+      "domain": "growth_operations",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "You have exceptional cross-functional leadership skills, with the ability to influence without authority",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "startup_experience",
+      "raw_text_from_jd": "You have past start up experience",
+      "skill_type": "domain_knowledge",
+      "domain": "startup_environment",
+      "evidence_required": "work_history",
+      "bridgeable": "n/a",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "start up"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_fluency_prompt_engineering",
+      "raw_text_from_jd": "You're AI-fluent and familiar with prompt engineering and model evaluation",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_and_machine_learning",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "prompt engineering",
+        "model evaluation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "DoorDash in-app consumer experience — food discovery, restaurant/dish discovery, content creation, go-to-market campaigns",
+    "business_model": "consumer marketplace, B2C",
+    "primary_metrics_inferred": [
+      "Consumer ordering confidence and conversion",
+      "Feature experiment impact (measurable outcomes)",
+      "Consumer discovery / engagement metrics",
+      "Content creation adoption on DoorDash"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Design",
+      "Marketing",
+      "Analytics"
+    ],
+    "core_responsibilities": [
+      "Shape team strategy and decide 'what we should do next'",
+      "Design and launch new initiatives from the ground up",
+      "Develop and test data-driven hypotheses",
+      "Analyze experiment results to inform business decisions and future experiments",
+      "Partner with Product, Engineering, Design, Marketing, Analytics for cross-functional and go-to-market execution",
+      "Help users discover the best restaurants and dishes",
+      "Encourage content creation on DoorDash",
+      "Use AI to automate existing processes",
+      "Support go-to-market campaigns",
+      "Create and implement efficient processes for working cross-functionally with strategic partners"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      136000,
+      200000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "strategy and operations",
+    "consumer experience",
+    "food discovery",
+    "experimentation",
+    "data-driven",
+    "cross-functional",
+    "go-to-market",
+    "growth initiatives",
+    "AI",
+    "product",
+    "marketplace",
+    "analytics",
+    "dashboards"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($136K–$200K base) and competitive",
+    "Equity grants included in compensation package",
+    "Comprehensive benefits including 16 weeks paid parental leave, wellness, 401(k) matching",
+    "Clear team mission and product surface described",
+    "Encourages applications from diverse backgrounds",
+    "Role has direct influence on major consumer product decisions at a large-scale platform"
+  ],
+  "red_flags": [
+    "Work location type is unclear — JD body does not specify remote, hybrid, or onsite; pay is stated as localized by work location, suggesting location matters",
+    "No mention of visa sponsorship",
+    "Manages people is ambiguous — title is 'Manager' but no direct reports are mentioned; role reports to Senior Manager",
+    "Broad comp range ($136K–$200K) may indicate significant location-based variance with little transparency"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (not explicitly stated; inferred as 'unclear' because no remote/hybrid/onsite designation given in body)",
+      "location.remote_us_eligible (inferred as true from national pay range covering Illinois and Colorado, and lack of city requirement)",
+      "seniority.level (inferred from comp range and title; people management not stated)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "manages_people (not stated; inferred as false given no mention of direct reports)"
+    ],
+    "ambiguities": [
+      "Location type is not stated; the JD mentions 'work location' pay localization and national range including IL and CO, suggesting remote-eligible, but no explicit remote/hybrid/onsite designation is given.",
+      "Role title is 'Manager' but the JD does not mention managing direct reports; could be a senior IC manager title rather than a people manager.",
+      "Visa sponsorship is not addressed anywhere in the JD."
+    ]
+  }
+}

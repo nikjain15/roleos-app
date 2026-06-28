@@ -1,0 +1,384 @@
+{
+  "company": "Airbnb",
+  "role_title": "Senior Manager, Revenue Operations",
+  "url": "https://careers.airbnb.com/positions/7980044?gh_jid=7980044",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7980044",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional work at an Airbnb office or attendance at offsites, as agreed to with your manager",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Revenue Operations / Controllership Manager",
+  "seniority": {
+    "level": "Senior Manager (likely equivalent to Director-adjacent IC or people manager)",
+    "years_required_min": 12,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "12+ years of finance and accounting experience, including management level experience",
+      "6+ years of relevant industry experience",
+      "Leads the Revenue Operations team",
+      "Reports to Director, Platform Controlling",
+      "Comp range $192K–$240K base consistent with Senior Manager level at Airbnb"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_finance_accounting",
+      "raw_text_from_jd": "12+ years of finance and accounting experience, including management level experience in a large multinational organization.",
+      "skill_type": "years_of_experience",
+      "domain": "finance_and_accounting",
+      "minimum_value": 12,
+      "unit": "years",
+      "qualifier": "including management level experience in a large multinational organization",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "large multinational organization"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "years_relevant_industry",
+      "raw_text_from_jd": "6+ years of relevant industry experience (tech, payments, marketplace(s), hospitality) in a high growth environment.",
+      "skill_type": "years_of_experience",
+      "domain": "industry_experience",
+      "minimum_value": 6,
+      "unit": "years",
+      "qualifier": "high growth environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "tech",
+        "payments",
+        "marketplace",
+        "hospitality"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "us_gaap_knowledge",
+      "raw_text_from_jd": "Strong working knowledge of US GAAP. Proven track record of operationalizing technical accounting standards to satisfy business requirements.",
+      "skill_type": "domain_knowledge",
+      "domain": "accounting_standards",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "erp_experience",
+      "raw_text_from_jd": "Experience with large-scale ERP (Oracle, SAP, Workday), monetization and billing systems.",
+      "skill_type": "tool_proficiency",
+      "domain": "enterprise_resource_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Oracle",
+        "SAP",
+        "Workday"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_executive_presence",
+      "raw_text_from_jd": "Polished communication skills and executive presence. Capable of translating complex business matters across functions and levels of leadership in a clear and concise manner.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Aptitude for collaboration and the ability to influence, mentor, and leverage the skills of others to achieve objectives.",
+      "skill_type": "capability",
+      "domain": "leadership_and_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_initiative_management",
+      "raw_text_from_jd": "Proven ability to successfully manage complex initiatives with cross-functional ownership.",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_enablement_leadership",
+      "raw_text_from_jd": "Champion the team's AI enablement agenda by identifying, piloting, and scaling AI use cases across close, reporting, and reconciliation processes.",
+      "skill_type": "capability",
+      "domain": "ai_enablement",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_human_review_checkpoints",
+      "raw_text_from_jd": "Design and maintain appropriate human-review checkpoints for all AI-assisted workflows, ensuring outputs meet audit-ready standards and SOX control requirements.",
+      "skill_type": "capability",
+      "domain": "ai_governance_and_controls",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_cross_functional_partnership",
+      "raw_text_from_jd": "Partner cross-functionally with Finance leadership, BizTech, and the broader AI enablement initiative to develop accounting-specific use cases, training, and governance frameworks.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "team_development",
+      "raw_text_from_jd": "Passion for and proven track record of training and developing team members.",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "excel_proficiency",
+      "raw_text_from_jd": "Proficient in MS Excel",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "MS Excel"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cpa_big4",
+      "raw_text_from_jd": "CPA or equivalent international certification, with Big 4 accounting firm experience, a plus.",
+      "skill_type": "credential",
+      "domain": "accounting_certification",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "Big 4 accounting firm"
+      ],
+      "credentials_named": [
+        "CPA"
+      ]
+    },
+    {
+      "id": "payments_compliance_reconciliation",
+      "raw_text_from_jd": "Payments compliance and reconciliation system experience is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "payments_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_tableau",
+      "raw_text_from_jd": "Experience in SQL and Tableau a plus",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "SQL",
+        "Tableau"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Platform Revenue Operations — Invoicing, Accounts Receivable, Bad Debt, Gift Card program, Collections; SOX controls; AI enablement for close and reporting",
+    "business_model": "marketplace / platform (Airbnb host-guest marketplace)",
+    "primary_metrics_inferred": [
+      "Close deadline adherence",
+      "Accuracy and completeness of platform account balances",
+      "SOX control effectiveness",
+      "AR aging / bad debt metrics",
+      "AI use case adoption across close and reporting processes"
+    ],
+    "cross_functional_partners": [
+      "Finance leadership",
+      "Platform SOX team",
+      "Payments",
+      "Compliance",
+      "Legal",
+      "BizTech",
+      "Director, Platform Controlling"
+    ],
+    "core_responsibilities": [
+      "Partner closely with finance teams to identify, assess and articulate the financial impact(s) of business changes.",
+      "Improve visibility for finance leadership into platform accounts and initiatives.",
+      "Partner with the platform SOX team to ensure risk identification and control mitigations are appropriate - design, implement, document and review controls to ensure they are functioning properly.",
+      "Develop relationships with key stakeholders in payments, compliance, legal and other partner and finance teams on the importance of engaging with Platform Controlling.",
+      "Lead the Revenue Operations team, and ensure all processes meet the close deadline.",
+      "Teach and mentor staff in accounting and finance on issues, including revenue technical accounting, GAAP guidance and best practices for documentation, partner engagement and operational processes.",
+      "Champion the team's AI enablement agenda by identifying, piloting, and scaling AI use cases across close, reporting, and reconciliation processes."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      192000,
+      240000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "This role may also be eligible for bonus, equity, benefits, and Employee Travel Credits.",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Revenue Operations",
+    "Platform Controlling",
+    "SOX",
+    "US GAAP",
+    "Accounts Receivable",
+    "Bad Debt",
+    "Invoicing",
+    "Gift Card",
+    "ERP",
+    "AI enablement",
+    "close process",
+    "reconciliation",
+    "payments compliance",
+    "multinational",
+    "Big 4"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($192K–$240K base)",
+    "Fully remote-US eligible with no stated in-office mandate beyond occasional offsites",
+    "Clear ownership areas stated (Invoicing, AR, Bad Debt, Gift Cards, Collections)",
+    "AI enablement framed pragmatically — 'AI tools are preparers, not signers' signals a grounded, non-hype culture",
+    "Role reports directly to Director, indicating meaningful scope and visibility"
+  ],
+  "red_flags": [
+    "Remote eligibility is restricted to states where Airbnb has a registered entity — excluded states list is evolving and not embedded in the JD",
+    "Visa sponsorship status is not mentioned; work auth requirement is inferred as no-sponsorship given US-entity state restrictions",
+    "12+ years hard requirement narrows the candidate pool significantly",
+    "CPA listed as 'a plus' but paired with Big 4 experience — ambiguous whether both are preferred together or independently"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, years requirements, and team leadership scope)",
+      "scope.business_model (inferred from Airbnb marketplace description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.work_auth (inferred as no-sponsorship from US state entity restriction language; not explicitly stated)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "CPA and Big 4 experience are listed together as 'a plus' — unclear if both are required together to qualify as nice-to-have or if either independently counts.",
+      "The JD states 'Remote Eligible' but restricts eligibility to states where Airbnb has a registered entity; the excluded states list is not embedded and is described as 'continuously evolving', making the effective remote scope uncertain.",
+      "SQL is listed under 'Proficient in MS Excel; Experience in SQL and Tableau a plus' — the sentence structure is ambiguous as to whether SQL is required or preferred; treated as soft/nice-to-have."
+    ]
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "company": "DoorDash",
+  "role_title": "Senior Manager, New Verticals - In Store Intelligence Strategy & Operations",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8030331",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8030331",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "New York, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "majority of team is in New York; spend time working together in-office and remotely",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager (platform-scale, ML-adjacent)",
+  "seniority": {
+    "level": "Senior Manager / IC6-equivalent people manager",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "8+ years of experience in high-performance cultures",
+      "2+ years of experience managing high-performing teams",
+      "Reports into a Director on Strategy & Operations team",
+      "Directly manages a team (own pod)",
+      "Comp range $170K–$250K base consistent with senior manager at DoorDash"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_total_experience",
+      "raw_text_from_jd": "You have 8+ years of experience. You've succeeded in high-performance cultures (whether in tech, operations, strategy, consulting, banking, or a related experience).",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_operations_or_related",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "tech",
+        "consulting",
+        "banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_people_management",
+      "raw_text_from_jd": "You have 2+ years of experience managing high-performing teams.",
+      "skill_type": "years_of_experience",
+      "domain": "people_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_and_excel_analytical",
+      "raw_text_from_jd": "you're comfortable pulling your own data in SQL or modeling in Excel.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL",
+        "Excel"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_metrics_ownership",
+      "raw_text_from_jd": "You have experience owning metrics with complex, multi-input attribution; comfort partnering with ML and engineering on technical tradeoffs",
+      "skill_type": "capability",
+      "domain": "technical_strategy_and_metrics",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "first_principles_problem_solving",
+      "raw_text_from_jd": "You solve problems from first principles. You're excited to solve problems in innovative ways, and you resist \"this is how it's always been done\" thinking.",
+      "skill_type": "cultural_fit",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "comfort_with_ambiguity",
+      "raw_text_from_jd": "You're unafraid of ambiguity. Rapid change and learning is exciting to you, and you thrive in ambiguous, startup environments",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "You'll work with a cross-functional team, including product, engineering, ML, design, and operations, and lead your own pod to build this new line of business for DoorDash.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategy_and_roadmap",
+      "raw_text_from_jd": "You'll lead high-impact initiatives from concept to execution — defining strategy, building roadmaps, partnering cross-functionally across product, engineering, and ML, and using data to continuously optimize outcomes.",
+      "skill_type": "capability",
+      "domain": "strategy_and_roadmapping",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "You have completed your BS/BA Degree, ideally a business or engineering focused concentration.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "BS/BA Degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "marketplace_ops_experience",
+      "raw_text_from_jd": "prior experience in marketplace ops, fulfillment, or data-intensive platform environments a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "marketplace_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mba_degree",
+      "raw_text_from_jd": "An MBA is a plus!",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear (directly manages a pod; size not stated)",
+    "surface": "DoorDash ground truth AI platform — in-store data collection and intelligence across tens of thousands of physical store locations; inventory accuracy, Dasher pick time, customer selection, catalog, and pricing",
+    "business_model": "marketplace / platform (B2B2C — merchant partners, Dashers, consumers); Grocery, Convenience, Alcohol, Retail verticals",
+    "primary_metrics_inferred": [
+      "Inventory accuracy",
+      "Dasher pick time",
+      "Customer selection quality",
+      "Non-restaurant GMV",
+      "Operational efficiency across store locations"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "ML",
+      "Design",
+      "Operations"
+    ],
+    "core_responsibilities": [
+      "Own the operational engine behind DoorDash's ground truth AI platform",
+      "Build and scale technology that collects in-store data across tens of thousands of physical store locations",
+      "Translate in-store data into measurable improvements in inventory accuracy, Dasher pick time, and customer selection",
+      "Design systems that capture real-time shelf data and define how that data flows into downstream product experiences",
+      "Lead high-impact initiatives from concept to execution — defining strategy, building roadmaps",
+      "Partner cross-functionally across product, engineering, and ML",
+      "Directly manage a team (pod)",
+      "Scale a nascent platform to the majority of DoorDash's non-restaurant GMV"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      170000,
+      250000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "ground truth AI platform",
+    "in-store intelligence",
+    "inventory accuracy",
+    "Dasher pick time",
+    "computer vision",
+    "marketplace ops",
+    "ML",
+    "strategy & operations",
+    "New Verticals",
+    "Grocery Convenience Alcohol Retail",
+    "SQL",
+    "first principles",
+    "physical-digital AI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($170K–$250K base) and competitive for a senior manager role",
+    "Highly visible role with clear platform ownership (not a vague project)",
+    "Novel problem space at intersection of computer vision, in-store logistics, and marketplace health",
+    "Equity grants mentioned",
+    "Comprehensive benefits package described in detail",
+    "Role reports directly to a Director — clear organizational placement"
+  ],
+  "red_flags": [
+    "Role requires New York-based candidate; remote not eligible — restricts geographic pool",
+    "Compensation range is wide ($80K spread), suggesting significant level/title ambiguity at time of offer",
+    "No explicit visa sponsorship statement — unclear for international candidates",
+    "Covey AI screening tool used for NYC roles — candidates subject to AEDT evaluation"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirements, people management requirement, comp range, and reporting line)",
+      "scope.team_size_estimate (not stated; characterized as 'pod' only)",
+      "scope.primary_metrics_inferred (inferred from responsibilities and platform description; not enumerated as KPIs in JD)",
+      "scope.business_model (inferred from product description and verticals listed)",
+      "location.remote_us_eligible (inferred from 'looking for someone based in New York as the majority of our team is here')",
+      "compensation.location_pay_differential (inferred from 'base salary is localized according to an employee's work location')"
+    ],
+    "ambiguities": [
+      "Visa sponsorship not mentioned anywhere in the JD; treated as 'unclear'",
+      "The JD says 'hybrid model' and 'looking for someone based in New York' but does not specify required in-office days per week — office time requirement quoted verbatim rather than quantified",
+      "The national base pay range listed ($170K–$250K) is very wide; actual offer likely depends heavily on specific location and experience level"
+    ]
+  }
+}

@@ -1,43 +1,43 @@
 {
   "company": "Sierra",
-  "role_title": "GTM Strategy & Operations",
-  "url": "https://jobs.ashbyhq.com/sierra/8023c5e9-5622-4f50-b3ba-0690a60e4cb2",
+  "role_title": "GTM Strategy and Operations",
+  "url": "https://jobs.ashbyhq.com/sierra/6b9b6904-a4b1-444b-8c35-f2bbb5ee2ff5",
   "ats_provider": "ashby",
-  "ats_job_id": "8023c5e9-5622-4f50-b3ba-0690a60e4cb2",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "6b9b6904-a4b1-444b-8c35-f2bbb5ee2ff5",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "onsite",
     "cities_listed": [
-      "San Francisco, CA"
+      "San Francisco"
     ],
     "remote_us_eligible": false,
     "office_time_required": "primarily in-person",
-    "work_auth": "unclear",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
-  "secondary_archetype": "Revenue / Sales Operations",
+  "secondary_archetype": "Sales / Revenue Operations",
   "seniority": {
-    "level": "Mid-Senior IC",
-    "years_required_min": 4,
+    "level": "Senior IC",
+    "years_required_min": 6,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "4–6+ years of experience in revenue operations, sales operations, management consulting, corporate strategy, or business operations",
-      "Experience working with and influencing senior stakeholders or executives",
-      "Owns territory strategy and operations end-to-end"
+      "6-8+ years of experience in revenue operations, sales operations, management consulting, corporate strategy, or business operations",
+      "Excellent stakeholder management and communication skills, including experience working with and influencing senior stakeholders or executives",
+      "High level of judgment and discretion"
     ]
   },
   "must_haves": [
     {
-      "id": "years_experience_revops_strategy",
-      "raw_text_from_jd": "4–6+ years of experience in revenue operations, sales operations, management consulting, corporate strategy, or business operations",
+      "id": "years_gtm_ops_experience",
+      "raw_text_from_jd": "6-8+ years of experience in revenue operations, sales operations, management consulting, corporate strategy, or business operations",
       "skill_type": "years_of_experience",
-      "domain": "revenue_operations_or_strategy",
-      "minimum_value": 4,
+      "domain": "revenue_operations_strategy_ops",
+      "minimum_value": 6,
       "unit": "years",
       "is_combined": false,
       "evidence_required": "work_history",
@@ -47,17 +47,14 @@
       "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
-      "employer_types_named": [
-        "management consulting firm",
-        "corporate strategy"
-      ],
+      "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "analytical_skills_models_datasets",
+      "id": "analytical_skills_modeling",
       "raw_text_from_jd": "Strong analytical skills, with experience building models and working with large datasets to drive decision-making",
       "skill_type": "capability",
-      "domain": "data_analysis",
+      "domain": "data_analysis_modeling",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -69,9 +66,9 @@
       "credentials_named": []
     },
     {
-      "id": "operational_process_ownership",
+      "id": "complex_ops_execution",
       "raw_text_from_jd": "Proven ability to own and execute complex operational processes with high attention to detail and accuracy",
-      "skill_type": "capability",
+      "skill_type": "outcome",
       "domain": "operations_execution",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
@@ -99,10 +96,10 @@
       "credentials_named": []
     },
     {
-      "id": "judgment_discretion_sales_changes",
+      "id": "judgment_discretion",
       "raw_text_from_jd": "High level of judgment and discretion, particularly when managing and communicating changes that impact sales teams",
       "skill_type": "capability",
-      "domain": "sales_operations",
+      "domain": "judgment_communication",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -114,12 +111,12 @@
       "credentials_named": []
     },
     {
-      "id": "ambiguity_prioritization_alignment",
+      "id": "ambiguity_navigation_prioritization",
       "raw_text_from_jd": "Ability to navigate ambiguity, prioritize effectively, and drive alignment in a fast-paced environment",
       "skill_type": "capability",
       "domain": "organizational_effectiveness",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -138,10 +135,10 @@
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
-      "tools_named": [
+      "tools_named": [],
+      "technologies_named": [
         "SQL"
       ],
-      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -151,7 +148,7 @@
       "id": "crm_familiarity",
       "raw_text_from_jd": "Familiarity with CRM platforms (e.g., Salesforce, HubSpot)",
       "skill_type": "tool_proficiency",
-      "domain": "crm_platforms",
+      "domain": "crm",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
@@ -166,12 +163,12 @@
       "credentials_named": []
     },
     {
-      "id": "territory_planning_segmentation_quota",
+      "id": "territory_planning_experience",
       "raw_text_from_jd": "Experience with territory planning, account segmentation, or quota design",
       "skill_type": "domain_knowledge",
-      "domain": "territory_planning",
+      "domain": "sales_territory_planning",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -181,7 +178,7 @@
       "credentials_named": []
     },
     {
-      "id": "startup_highgrowth_ops_experience",
+      "id": "startup_high_growth_experience",
       "raw_text_from_jd": "Previous startup or high-growth operational experience",
       "skill_type": "domain_knowledge",
       "domain": "startup_operations",
@@ -193,7 +190,8 @@
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [
-        "startup"
+        "startup",
+        "high-growth company"
       ],
       "credentials_named": []
     }
@@ -201,18 +199,18 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Territory strategy and operations across all sales segments",
-    "business_model": "B2B SaaS / AI platform for enterprise customer experience",
+    "surface": "GTM territory strategy and operations (territory design, carve process, analytics, stakeholder management)",
+    "business_model": "B2B SaaS / AI platform",
     "primary_metrics_inferred": [
-      "Territory coverage and balance quality",
+      "Territory coverage efficiency",
       "Seller productivity",
-      "Account allocation accuracy",
-      "Operational scalability and process efficiency"
+      "Account prioritization accuracy",
+      "Operational process scalability"
     ],
     "cross_functional_partners": [
       "Sales",
       "RevOps",
-      "Leadership/Executives"
+      "Leadership / Executives"
     ],
     "core_responsibilities": [
       "Design and continuously refine sales territories to align with company priorities, growth goals, and coverage models across segments",
@@ -229,50 +227,51 @@
     "base_range_usd": null,
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies",
+    "equity_form": "Eligible full-time employees can participate in Sierra's equity plans subject to the terms of the applicable plans and policies.",
     "location_pay_differential": false,
     "source": "unknown"
   },
   "top_keywords": [
     "territory strategy",
     "territory operations",
-    "sales operations",
     "revenue operations",
+    "sales operations",
     "account segmentation",
-    "account prioritization",
-    "GTM",
+    "analytics",
     "stakeholder management",
+    "GTM",
+    "CRM",
+    "SQL",
     "data-driven",
-    "Salesforce",
     "quota design",
-    "seller productivity",
-    "RevOps"
+    "high-growth"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear ownership scope — own territory strategy and operations end-to-end",
-    "High-profile co-founders (Bret Taylor, Clay Bavor) signal strong company pedigree",
-    "Equity participation explicitly mentioned",
-    "Company encourages applications even if experience doesn't precisely match the job description",
-    "Role spans both strategic and operational work, offering breadth"
+    "Well-known co-founders (Bret Taylor, Clay Bavor) with strong pedigrees at Google, Salesforce, Facebook, and OpenAI",
+    "Fast-growing AI company with global offices and strong market position",
+    "Equity participation available for full-time employees",
+    "JD encourages candidates to apply even if experience doesn't precisely match",
+    "Comprehensive benefits package including parental leave, fertility benefits, and discretionary stipend",
+    "Clear role scope with end-to-end ownership described"
   ],
   "red_flags": [
     "No compensation range disclosed",
-    "Primarily in-person company in San Francisco — eliminates remote candidates",
-    "Visa sponsorship and work authorization not addressed",
-    "Posting date not available — unclear how fresh this role is"
+    "Primarily in-person company based in San Francisco — fully remote not an option",
+    "Visa sponsorship status not stated",
+    "Role title is vague ('GTM Strategy and Operations') and could encompass a very wide or very narrow scope"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years range and responsibility scope; not explicitly stated)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated in JD)",
-      "location.office_time_required (inferred from 'primarily an in-person company')",
-      "location.remote_us_eligible (inferred from 'primarily in-person' language)"
+      "seniority.level (inferred from 6-8+ years requirement and senior stakeholder management signals)",
+      "scope.business_model (inferred from product description — AI platform for businesses)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.type (inferred as onsite from 'primarily an in-person company based in San Francisco')"
     ],
     "ambiguities": [
-      "The JD states Sierra is 'primarily an in-person company based in San Francisco' but also lists offices in Atlanta, New York, London, Paris, Madrid, Munich, Singapore, Japan, and Sydney — it is unclear whether this role could be based at any of those locations or is SF-only.",
-      "Years range is stated as '4–6+' which implies both a lower and open-ended upper bound; treated min as 4 years."
+      "The JD mentions offices in Atlanta, New York, London, Paris, Madrid, Munich, Singapore, Tokyo, and Sydney, but the role is not explicitly restricted to San Francisco. The company describes itself as 'primarily an in-person company based in San Francisco,' suggesting SF is the primary location but other offices may be options. Treated as San Francisco onsite.",
+      "Visa sponsorship is not mentioned anywhere in the JD; left as 'unclear'.",
+      "Years range stated as '6-8+' — the '+' after 8 suggests the range is a guideline, not a ceiling; years_required_max left as null."
     ]
   }
 }

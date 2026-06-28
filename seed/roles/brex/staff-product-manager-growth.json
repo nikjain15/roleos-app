@@ -1,10 +1,10 @@
 {
   "company": "Brex",
   "role_title": "Staff Product Manager, Growth",
-  "url": "https://www.brex.com/careers/8436530002?gh_jid=8436530002",
+  "url": "https://www.brex.com/careers/8436531002?gh_jid=8436531002",
   "ats_provider": "greenhouse",
-  "ats_job_id": "8436530002",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "8436531002",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -15,33 +15,35 @@
       "New York City, NY"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "at least 3 days per week on Monday, Wednesday and Thursday",
+    "office_time_required": "at least 3 days per week (Monday, Wednesday, Thursday); up to 4 weeks remote per year",
     "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Growth PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Technical PM (GTM systems / AI-powered infrastructure)",
+  "secondary_archetype": "Technical PM (GTM infrastructure / AI-powered revenue systems)",
   "seniority": {
-    "level": "Staff PM (IC6 equivalent)",
+    "level": "Staff IC",
     "years_required_min": null,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "Role titled 'Staff Product Manager'",
-      "Comp range $240K–$300K base, consistent with Staff IC at a late-stage fintech",
-      "Expected to own company-level metrics and influence executives",
-      "Expected to 'Help define and scale Brex's Growth Product function'"
+      "Compensation range $240K-$300K base, consistent with Staff IC at a late-stage fintech",
+      "'Help define and scale Brex's Growth Product function as it evolves' implies senior scope-setting",
+      "Executive visibility on cross-functional initiatives"
     ]
   },
   "must_haves": [
     {
-      "id": "gtm_systems_experience",
+      "id": "gtm_growth_systems_experience",
       "raw_text_from_jd": "Experience building and scaling growth, revenue, or GTM systems in a high-growth technology company.",
       "skill_type": "domain_knowledge",
-      "domain": "GTM_systems",
+      "domain": "GTM / growth / revenue systems",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "work_history",
-      "bridgeable": "no",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -56,9 +58,11 @@
       "id": "company_level_metrics_ownership",
       "raw_text_from_jd": "Experience owning and materially moving company-level metrics.",
       "skill_type": "outcome",
-      "domain": "growth_metrics",
+      "domain": "product / business metrics",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "no",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -71,7 +75,9 @@
       "id": "systems_thinking",
       "raw_text_from_jd": "Strong systems thinking — ability to identify leverage points across product, process, and people systems.",
       "skill_type": "capability",
-      "domain": "systems_design",
+      "domain": "systems design / strategic thinking",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -85,8 +91,10 @@
     {
       "id": "cross_functional_leadership",
       "raw_text_from_jd": "Demonstrated track record of leading complex, cross-functional initiatives with executive visibility.",
-      "skill_type": "capability",
-      "domain": "cross_functional_leadership",
+      "skill_type": "outcome",
+      "domain": "cross-functional leadership",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -101,9 +109,11 @@
       "id": "analytical_fluency",
       "raw_text_from_jd": "Deep analytical fluency; comfortable working with funnel metrics, experimentation frameworks, and data tools (SQL proficiency preferred).",
       "skill_type": "capability",
-      "domain": "data_analytics",
+      "domain": "analytics / data / experimentation",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
@@ -115,10 +125,12 @@
       "credentials_named": []
     },
     {
-      "id": "high_ownership_ambiguity",
+      "id": "ownership_ambiguity",
       "raw_text_from_jd": "High ownership mindset with the ability to operate in ambiguity and build from first principles.",
       "skill_type": "cultural_fit",
-      "domain": "team_culture",
+      "domain": "ownership / first-principles thinking",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -135,7 +147,9 @@
       "id": "sql_proficiency",
       "raw_text_from_jd": "Deep analytical fluency; comfortable working with funnel metrics, experimentation frameworks, and data tools (SQL proficiency preferred).",
       "skill_type": "tool_proficiency",
-      "domain": "data_querying",
+      "domain": "SQL / data querying",
+      "minimum_value": null,
+      "unit": null,
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
@@ -152,8 +166,8 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "GTM growth infrastructure — AI agents, outbound/lifecycle automation, pipeline scoring, onboarding optimization, experimentation frameworks, revenue tooling",
-    "business_model": "B2B SaaS / fintech — corporate cards, spend management, banking",
+    "surface": "GTM infrastructure and growth systems — AI agents, lifecycle automation, pipeline scoring, onboarding optimization, experimentation frameworks, revenue tooling",
+    "business_model": "B2B SaaS / fintech — corporate cards, banking, spend management, bill pay, travel software",
     "primary_metrics_inferred": [
       "Pipeline dollars",
       "Conversion rates",
@@ -194,46 +208,49 @@
   },
   "top_keywords": [
     "GTM systems",
+    "growth product",
     "AI agents",
-    "revenue growth",
-    "growth infrastructure",
-    "experimentation frameworks",
-    "pipeline prioritization",
+    "revenue funnel",
     "lifecycle automation",
-    "funnel optimization",
-    "staff PM",
-    "outbound automation",
+    "pipeline scoring",
+    "experimentation infrastructure",
+    "revenue tooling",
+    "RevOps",
+    "Staff PM",
+    "0→1",
+    "SQL",
     "ML-driven models",
-    "RevOps"
+    "outbound automation"
   ],
   "buzzword_density": "high",
   "green_flags": [
-    "Compensation range disclosed and competitive ($240K–$300K base)",
-    "Clear product surface and ownership area with specific initiative examples",
-    "Dedicated engineering and design team",
-    "Explicit metric ownership — company-level GTM metrics",
-    "Role has strategic scope: 'Help define and scale Brex's Growth Product function'"
+    "Compensation range disclosed and competitive ($240K-$300K base) for a Staff PM role",
+    "Clear product surface with specific initiative examples (AI agents, scoring, onboarding optimization)",
+    "Dedicated engineering and design team paired with this PM role",
+    "Explicit GTM metric ownership — high business impact and visibility",
+    "Brex has notable enterprise customers (DoorDash, Coinbase, Robinhood, Zoom, Plaid, Reddit, SeatGeek)"
   ],
   "red_flags": [
-    "Hybrid policy requires 3 specific days in office (Mon/Wed/Thu) in SF, Seattle, or NYC — eliminates remote candidates",
-    "Remote allowance limited to 4 weeks per year (minimum 1 week at a time)",
-    "SQL listed as 'preferred' in requirements section but the requirement also says 'deep analytical fluency' as a hard requirement — SQL itself is ambiguous hard vs. soft",
-    "High buzzword density (AI agents, autonomous agents, ML-driven models) may obscure actual scope",
-    "No years-of-experience floor stated, making calibration unclear",
-    "Visa sponsorship status not addressed"
+    "Hybrid mandate is strict — 3 fixed days per week (Mon/Wed/Thu) in SF, Seattle, or NYC; only 4 weeks remote per year",
+    "SQL proficiency is listed as 'preferred' in requirements but is also included as a hard requirement bullet — ambiguous severity",
+    "No years-of-experience floor stated, making seniority calibration difficult",
+    "Visa sponsorship status not mentioned anywhere in the JD",
+    "High buzzword density (AI-native, AI agents, autonomous, real-time signals) with limited specifics on current system maturity"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Staff' + comp range)",
-      "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (inferred from 'What you'll do' section, not a direct responsibility list)",
-      "location.work_auth (not stated; defaulted to 'open')",
-      "location.visa_sponsorship (not stated; defaulted to 'unclear')",
-      "compensation.location_pay_differential (inferred from 'starting base pay will depend on a number of factors including the candidate's location')"
+      "seniority.level (inferred from role title 'Staff' and compensation range)",
+      "seniority.years_required_min (not stated)",
+      "scope.primary_metrics_inferred (inferred from JD description; not listed as explicit targets)",
+      "scope.business_model (inferred from product description)",
+      "location.work_auth (not stated; defaulted to open)",
+      "location.visa_sponsorship (not stated; defaulted to unclear)",
+      "compensation.location_pay_differential (inferred from 'starting base pay will depend on candidate's location')"
     ],
     "ambiguities": [
-      "SQL proficiency appears in the Requirements (must-haves) section with the qualifier 'preferred' — captured as both a hard requirement (analytical fluency) and a soft nice-to-have (SQL specifically).",
-      "No explicit years-of-experience minimum stated anywhere in the JD; seniority inferred from title and comp range only."
+      "SQL proficiency appears in the Requirements section labeled as 'preferred' within the same sentence as hard analytical requirements — treated as nice-to-have (soft) but the surrounding sentence reads as a hard requirement; both must_haves and nice_to_haves capture this.",
+      "The JD does not specify whether the role manages direct reports; inferred as individual contributor (manages_people: false) based on 'Staff PM' framing and no mention of people management.",
+      "Years of experience required not stated anywhere; seniority inferred from title and compensation."
     ]
   }
 }

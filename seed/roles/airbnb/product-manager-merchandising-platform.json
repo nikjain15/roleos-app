@@ -1,0 +1,239 @@
+{
+  "company": "Airbnb",
+  "role_title": "Product Manager, Merchandising Platform",
+  "url": "https://careers.airbnb.com/positions/7724793?gh_jid=7724793",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7724793",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "based in San Francisco, CA",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM (platform + campaign/merchandising)",
+  "seniority": {
+    "level": "Senior IC / Staff-level PM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management experience",
+      "Desire to do individual contributor product management work",
+      "Comp range $194K-$239K base consistent with Senior/Staff IC at Airbnb"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "8+ years of product management experience, ideally in building platforms and campaign based marketing technology or ads /promotions systems.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "ideally in platforms and campaign-based marketing technology or ads/promotions systems",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "ads",
+        "promotions",
+        "marketing technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_automation_familiarity",
+      "raw_text_from_jd": "Familiarity with AI automation in campaign management.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_automation_campaign_management",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "revenue_global_programs",
+      "raw_text_from_jd": "Track record of driving incremental revenue and scaling global programs.",
+      "skill_type": "outcome",
+      "domain": "growth_and_revenue",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_execution",
+      "raw_text_from_jd": "Entrepreneurial experience of taking an idea to reality.",
+      "skill_type": "outcome",
+      "domain": "product_development",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_exec_alignment",
+      "raw_text_from_jd": "Demonstrated track record of building cross-functional and executive leadership alignment.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ic_pm_work",
+      "raw_text_from_jd": "Desire to do individual contributor product management work.",
+      "skill_type": "cultural_fit",
+      "domain": "ic_orientation",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sf_location",
+      "raw_text_from_jd": "Due to the nature of this position, the successful applicant will need to be based in San Francisco, CA to be able to conduct their work.",
+      "skill_type": "capability",
+      "domain": "location",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "San Francisco, CA"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [
+    "Alaska, Indiana, Nebraska, North Dakota, Ohio, South Dakota, Wisconsin, Alabama, Mississippi, Oklahoma, Delaware, Rhode Island"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Global campaign-based merchandising platform powering discovery and promotion across Homes, Services, Experiences, Hotels, and new verticals across all app and engagement channels",
+    "business_model": "marketplace (B2C travel/hospitality platform)",
+    "primary_metrics_inferred": [
+      "Incremental revenue",
+      "Campaign performance and revenue lift",
+      "Guest engagement",
+      "New business line expansion"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Operations",
+      "Data Science",
+      "Creative teams",
+      "Executive leadership"
+    ],
+    "core_responsibilities": [
+      "Lead the product vision, strategy, and platform roadmap that supports the merchandising needs of key business verticals (e.g. Homes, Services, Experiences, International) and new bets (e.g. Hotels, Luxe, Partnerships)",
+      "Build and scale a flexible, configurable platform for rapid testing and deployment of merchandising formats and offers/incentives.",
+      "Incorporate the latest AI technologies to automate targeting, creative asset generation, and campaign management.",
+      "Define and measure campaign performance, revenue lift, and guest engagement.",
+      "Partner with creative and operations teams to manage campaign calendars, assets, and global coordination.",
+      "Efficiently execute to ship products and deliver impact for our business and users."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      194000,
+      239000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity and bonus mentioned as potentially eligible",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "merchandising platform",
+    "campaign management",
+    "AI automation",
+    "promotions",
+    "ads",
+    "revenue lift",
+    "global programs",
+    "platform PM",
+    "Homes",
+    "Experiences",
+    "configurable platform",
+    "targeting",
+    "creative asset generation",
+    "engagement channels"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($194K-$239K base)",
+    "Clear product surface with well-defined scope across Airbnb's verticals",
+    "Bonus and equity mentioned in addition to base",
+    "Explicit IC orientation stated — no people management expected",
+    "AI automation is a key lever, indicating forward-looking mandate"
+  ],
+  "red_flags": [
+    "Hard requirement to be physically based in San Francisco, CA — eliminates remote candidates",
+    "Large list of excluded US states adds friction for relocation candidates",
+    "Visa sponsorship not mentioned — unclear for international candidates",
+    "8+ years is a high bar with no indication of flexibility"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and 8+ years requirement)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated as KPIs)",
+      "scope.business_model (inferred from Airbnb's marketplace model)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "location.work_auth (not stated; defaulted to 'open')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')"
+    ],
+    "ambiguities": [
+      "The 8+ years requirement says 'ideally in building platforms and campaign based marketing technology or ads/promotions systems' — 'ideally' suggests preference, but the requirement is listed under 'Your Expertise' without a separate nice-to-have section, so treated as hard.",
+      "Excluded state list is noted as 'continuously being updated', meaning eligibility may change post-fetch.",
+      "Equity and bonus eligibility is described as 'may also be eligible' — not guaranteed."
+    ]
+  }
+}

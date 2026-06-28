@@ -4,7 +4,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7913702",
   "ats_provider": "greenhouse",
   "ats_job_id": "7913702",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -17,28 +17,29 @@
   },
   "archetype": "Generalist PM",
   "archetype_confidence": "medium",
-  "secondary_archetype": "Technical PM (platform / horizontal systems)",
+  "secondary_archetype": "Technical PM (horizontal platform / design systems)",
   "seniority": {
-    "level": "Staff / Principal IC",
+    "level": "Staff IC (Principal PM / Staff PM)",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "10+ years of experience in product management, design, or engineering",
-      "at least 3+ years in senior capacity making company-level product decisions",
+      "at least 3+ years in a senior capacity making company-level product decisions",
       "Role title is 'Staff Product Manager'",
-      "Demonstrated experience leading company-wide initiatives"
+      "Expected to partner with senior leadership and lead company-wide initiatives"
     ]
   },
   "must_haves": [
     {
       "id": "years_pm_design_eng",
-      "raw_text_from_jd": "10+ years of experience in product management, design, or engineering with at least 3+ years in senior capacity making company-level product decisions",
+      "raw_text_from_jd": "10+ years of experience in product management, design, or engineering with at least 3+ years in a senior capacity making company-level product decisions",
       "skill_type": "years_of_experience",
-      "domain": "product_management_or_design_or_engineering",
+      "domain": "product_management+design+engineering",
       "minimum_value": 10,
       "unit": "years",
-      "qualifier": "including 3+ years in senior capacity making company-level product decisions",
+      "is_combined": true,
+      "qualifier": "at least 3+ years in a senior capacity making company-level product decisions",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -53,7 +54,7 @@
       "id": "ui_ux_principles",
       "raw_text_from_jd": "Strong understanding of user interface (UI) and user experience (UX) principles and best practices",
       "skill_type": "domain_knowledge",
-      "domain": "ui_ux",
+      "domain": "ui_ux_design",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -68,7 +69,7 @@
       "id": "technical_familiarity_personalization_ml",
       "raw_text_from_jd": "Technical familiarity with personalization systems, data modeling, and machine learning",
       "skill_type": "domain_knowledge",
-      "domain": "personalization_systems_data_modeling_ml",
+      "domain": "personalization+data_modeling+machine_learning",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -89,7 +90,7 @@
       "skill_type": "capability",
       "domain": "cross_functional_communication",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -99,11 +100,11 @@
       "credentials_named": []
     },
     {
-      "id": "company_wide_initiative_leadership",
+      "id": "company_wide_initiatives",
       "raw_text_from_jd": "Demonstrated experience leading company-wide initiatives influencing technical roadmaps",
       "skill_type": "outcome",
-      "domain": "horizontal_initiative_leadership",
-      "evidence_required": "project_examples",
+      "domain": "platform_strategy+technical_influence",
+      "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -120,7 +121,7 @@
       "raw_text_from_jd": "Believe that fast software is the best software",
       "skill_type": "cultural_fit",
       "domain": "engineering_culture",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
@@ -131,7 +132,7 @@
       "credentials_named": []
     },
     {
-      "id": "built_personalization_systems",
+      "id": "personalization_systems_built",
       "raw_text_from_jd": "Built complex personalization systems in the past",
       "skill_type": "outcome",
       "domain": "personalization_systems",
@@ -151,7 +152,7 @@
       "id": "governance_frameworks",
       "raw_text_from_jd": "Developed governance frameworks that balance usage and discovery",
       "skill_type": "outcome",
-      "domain": "information_architecture_governance",
+      "domain": "information_architecture+governance",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -166,7 +167,7 @@
       "id": "third_party_apps_pov",
       "raw_text_from_jd": "Strong (informed) point of view on how third-party apps fit into first-party experiences",
       "skill_type": "domain_knowledge",
-      "domain": "platform_ecosystem_third_party_integration",
+      "domain": "platform_ecosystem+developer_tools",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -181,7 +182,7 @@
       "id": "social_media_customer_feedback",
       "raw_text_from_jd": "Enjoy using social media to interact directly with customers for feedback",
       "skill_type": "cultural_fit",
-      "domain": "customer_feedback_channels",
+      "domain": "customer_research",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
@@ -196,32 +197,31 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Stripe Dashboard — scaffolding (navigation, search, settings), information architecture, core experiences (customer management, home page customization), personalization, interoperability",
+    "surface": "Stripe Dashboard — navigation, search, settings, information architecture, home page personalization, third-party developer integrations",
     "business_model": "B2B financial infrastructure platform",
     "primary_metrics_inferred": [
-      "User productivity / wayfinding efficiency",
-      "Product discovery rates",
-      "Quality and performance metrics (defined and tracked by this PM)",
-      "Third-party developer satisfaction"
+      "User productivity and product discovery",
+      "Dashboard quality and performance metrics",
+      "Third-party developer satisfaction",
+      "Interoperability across Dashboard layers"
     ],
     "cross_functional_partners": [
       "Engineering",
       "Design",
       "Senior leadership",
       "Third-party developers",
-      "Product teams"
+      "Product teams (company-wide)"
     ],
     "core_responsibilities": [
-      "Make the Dashboard easier to use and more powerful",
       "Own the strategy and roadmap that makes the Dashboard uniquely good for any business model",
-      "Collaborate with engineering and design across time zones (PST, EST, CET) to ship high impact functionality",
-      "Define and track success metrics for quality and performance",
-      "Partner with senior leadership to understand and uphold ambitions for quality at scale",
       "Improve wayfinding mechanisms to increase user productivity and product discovery",
       "Shape the information architecture to encourage interoperability",
       "Develop a strategy and roadmap for a more personalized Dashboard",
       "Write the playbook for interoperability across the numerous layers of indirection in the Dashboard",
-      "Partner with third-party developers to understand how the Dashboard can better serve their needs"
+      "Partner with third-party developers to understand how the Dashboard can better serve their needs",
+      "Collaborate with engineering and design across time zones (PST, EST, CET)",
+      "Define and track success metrics for quality and performance",
+      "Partner with senior leadership to understand and uphold ambitions for quality at scale"
     ]
   },
   "compensation": {
@@ -234,44 +234,46 @@
   },
   "top_keywords": [
     "Dashboard",
-    "personalization",
     "information architecture",
+    "personalization",
     "wayfinding",
     "interoperability",
-    "horizontal platform",
+    "platform strategy",
+    "horizontal PM",
     "systems thinking",
-    "data science",
-    "governance frameworks",
     "third-party developers",
-    "machine learning",
-    "staff PM"
+    "staff PM",
+    "UI/UX",
+    "data modeling",
+    "machine learning"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear product surface with explicit ownership area (Dashboard scaffolding, IA, personalization)",
-    "Role operates at company-level strategic impact ('company-level product decisions')",
-    "Explicit statement that preferred qualifications are bonuses, not requirements — encourages applicants who meet minimums",
-    "Cross-timezone collaboration signals distributed/flexible team (PST, EST, CET)"
+    "Clear product surface and ownership described in detail",
+    "Role described as high-impact, company-level scope — strong career opportunity for senior PMs",
+    "Explicitly states preferred qualifications are bonuses, not requirements — inclusive of candidates who partially match",
+    "Cross-timezone collaboration signals distributed or flexible working norms",
+    "Stripe's mission and scale offer meaningful product challenges"
   ],
   "red_flags": [
     "No compensation range disclosed",
-    "No location or remote/hybrid policy stated — unclear where this role is based",
-    "No visa sponsorship information provided",
-    "10+ years minimum experience is a high bar that filters out most mid-level PMs",
-    "Role combines systems thinking, storytelling, and data science — breadth may be unrealistic at senior IC without very specific background"
+    "No location or remote/hybrid policy stated — unclear whether role requires relocation or office attendance",
+    "Work authorization and visa sponsorship policy not mentioned",
+    "10+ years minimum is a high bar that combined with 'staff' title may signal slow upward mobility in title",
+    "Role spans very broad surface area (navigation, search, settings, IA, personalization, third-party) — scope may be ambitious for one PM"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level ('Staff / Principal IC' inferred from role title and 10+ years requirement; not explicitly mapped to internal level)",
-      "scope.business_model (inferred from Stripe's public product description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated verbatim)",
-      "location.type (not stated in JD; defaulted to 'unclear')",
-      "compensation (not mentioned at all in JD)"
+      "seniority.level (inferred from title 'Staff PM' and 10+ years + 3+ years senior requirement)",
+      "seniority.manages_people (inferred false; no people management mentioned)",
+      "scope.business_model (inferred from company description as B2B financial infrastructure)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type (not stated; marked as unclear)",
+      "compensation.equity_mentioned (not stated; marked false)"
     ],
     "ambiguities": [
-      "Location and work arrangement (remote/hybrid/onsite) are not specified anywhere in the JD body. Cannot determine eligibility or office requirements.",
-      "The 10+ years requirement spans 'product management, design, or engineering' — it is unclear whether the full 10 years must be in PM or can be a combination of all three fields.",
-      "The '3+ years in senior capacity making company-level product decisions' qualifier is nested inside the 10+ years requirement; it is ambiguous whether this must overlap with the 10 years or is additive."
+      "Location and remote/hybrid policy are entirely absent from the JD — impossible to determine work arrangement requirements",
+      "The minimum experience can be in 'product management, design, or engineering' — unclear whether non-PM backgrounds (e.g., pure engineering) fully satisfy this requirement in practice"
     ]
   }
 }

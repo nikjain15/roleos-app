@@ -1,25 +1,25 @@
 {
   "company": "Klaviyo",
   "role_title": "Senior Product Manager, Profiles Platform",
-  "url": "https://www.klaviyo.com/careers/jobs?gh_jid=7709909003",
+  "url": "https://www.klaviyo.com/careers/jobs/7709682003?gh_jid=7709682003",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7709909003",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7709682003",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
-    "type": "hybrid",
+    "type": "onsite",
     "cities_listed": [
-      "San Francisco, CA"
+      "Boston, MA"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "3 days/week in SF office",
+    "office_time_required": "5 days/week in Boston office",
     "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Technical PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Platform / Data Infrastructure PM",
+  "secondary_archetype": "Platform PM / Data Infrastructure PM",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 6,
@@ -27,8 +27,9 @@
     "manages_people": false,
     "level_signals": [
       "6+ years of product management experience",
+      "Base pay range $136,000–$204,000 USD",
       "Title is 'Senior Product Manager'",
-      "Base pay range $136,000–$204,000 consistent with Senior IC at a growth-stage SaaS company"
+      "Owns strategy and roadmap for core platform team"
     ]
   },
   "must_haves": [
@@ -51,7 +52,7 @@
       "credentials_named": []
     },
     {
-      "id": "data_infrastructure_experience",
+      "id": "data_systems_experience",
       "raw_text_from_jd": "You have experience working on data models, pipelines, or large-scale distributed systems",
       "skill_type": "domain_knowledge",
       "domain": "data_infrastructure",
@@ -89,7 +90,7 @@
       "raw_text_from_jd": "You have experience driving cross-team alignment across multiple stakeholders",
       "skill_type": "capability",
       "domain": "stakeholder_management",
-      "evidence_required": "project_examples",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -115,7 +116,7 @@
       "credentials_named": []
     },
     {
-      "id": "balance_long_short_term",
+      "id": "platform_vs_product_balance",
       "raw_text_from_jd": "You can balance long-term platform investments with short-term product needs",
       "skill_type": "capability",
       "domain": "product_strategy",
@@ -143,6 +144,23 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
+    },
+    {
+      "id": "onsite_boston",
+      "raw_text_from_jd": "Please note that this is an onsite role that requires 5 days/week in our Boston office. Fully remote candidates will not be considered at this time.",
+      "skill_type": "cultural_fit",
+      "domain": "work_location",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Boston, MA"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
     }
   ],
   "nice_to_haves": [
@@ -152,7 +170,7 @@
       "skill_type": "domain_knowledge",
       "domain": "customer_data_platforms",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -164,9 +182,9 @@
     {
       "id": "data_modeling_pipelines_storage",
       "raw_text_from_jd": "Familiarity with data modeling, event pipelines, or storage systems (e.g., KVS, streaming ingestion)",
-      "skill_type": "tool_proficiency",
+      "skill_type": "domain_knowledge",
       "domain": "data_engineering",
-      "evidence_required": "hands_on_use",
+      "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [
@@ -175,6 +193,7 @@
       "technologies_named": [
         "data modeling",
         "event pipelines",
+        "storage systems",
         "streaming ingestion"
       ],
       "industries_named": [],
@@ -186,7 +205,7 @@
       "id": "enterprise_scale_systems",
       "raw_text_from_jd": "Experience supporting enterprise-scale or high-volume systems",
       "skill_type": "domain_knowledge",
-      "domain": "enterprise_infrastructure",
+      "domain": "enterprise_systems",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
@@ -198,7 +217,7 @@
       "credentials_named": []
     },
     {
-      "id": "ai_analytics_platforms",
+      "id": "ai_analytics_platform_exposure",
       "raw_text_from_jd": "Exposure to AI/analytics platforms that depend on structured customer data",
       "skill_type": "domain_knowledge",
       "domain": "ai_analytics",
@@ -208,7 +227,8 @@
       "tools_named": [],
       "technologies_named": [
         "AI",
-        "analytics platforms"
+        "analytics platforms",
+        "structured customer data"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -216,12 +236,12 @@
       "credentials_named": []
     },
     {
-      "id": "data_residency_compliance",
+      "id": "data_residency_privacy_compliance",
       "raw_text_from_jd": "Experience with data residency, privacy, or compliance (e.g., GDPR, HIPAA)",
       "skill_type": "domain_knowledge",
       "domain": "data_privacy_compliance",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
@@ -239,14 +259,14 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Klaviyo's core customer profile data system — profile traits, transformations, storage layers, computed properties, and ingestion infrastructure",
-    "business_model": "B2B SaaS, martech/CDP platform serving ecommerce brands",
+    "surface": "Klaviyo's core customer data system (Profiles Platform) — profile traits, transformations, storage layers, ingestion, computed properties",
+    "business_model": "B2B SaaS / marketing automation platform (ecommerce-focused)",
     "primary_metrics_inferred": [
-      "Profile data quality and accuracy",
+      "Data quality metrics",
       "System performance and latency",
-      "Ingestion scalability (billions of profiles)",
-      "Cost efficiency (sharding, write optimization)",
-      "Compliance coverage (data residency, GDPR)"
+      "Ingestion throughput and scalability",
+      "Cost efficiency (storage, write patterns)",
+      "Profile accuracy / deduplication rates"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -281,48 +301,46 @@
     "source": "stated"
   },
   "top_keywords": [
-    "profile data",
-    "data infrastructure",
-    "platform PM",
-    "computed properties",
-    "distributed systems",
-    "data modeling",
-    "ingestion",
-    "data residency",
-    "enterprise scale",
+    "Profiles Platform",
     "customer data platform",
-    "identity",
+    "data infrastructure",
+    "computed properties",
+    "data modeling",
+    "distributed systems",
+    "platform PM",
+    "data residency",
     "scalability",
+    "identity systems",
+    "ingestion",
     "GDPR",
-    "backend systems"
+    "enterprise scale"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Salary range disclosed ($136K–$204K base)",
-    "Clear product surface and ownership area with concrete technical scope",
-    "High-impact platform role influencing nearly every product team",
-    "Explicit callout of long-term strategic work (computed properties, residency, identity quality)",
-    "Encourages close but not exact match candidates to apply",
-    "Role sits at foundation of platform — strong career leverage"
+    "Compensation range disclosed ($136K–$204K base)",
+    "Clear ownership of a high-impact, foundational platform team",
+    "Specific technical scope described in detail (computed properties, sharding, deduplication, data residency)",
+    "Cross-functional visibility across nearly every product team at Klaviyo",
+    "Encourages close-but-not-exact candidates to apply"
   ],
   "red_flags": [
-    "Hard requirement for 3 days/week in SF office; fully remote candidates explicitly excluded — geographically restrictive",
-    "Visa sponsorship policy not stated — unclear for non-US candidates",
-    "Broad comp range ($136K–$204K) provides limited signal on actual offer band for senior candidates",
-    "No mention of team size or reporting structure"
+    "Strict 5 days/week onsite requirement in Boston — eliminates all remote and hybrid candidates",
+    "No mention of visa sponsorship — unclear for international candidates",
+    "Broad comp range ($136K–$204K) offers limited signal on leveling without knowing preferred location"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title, years, and comp range)",
-      "scope.team_size_estimate (not stated; left as 'unclear')",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "seniority.level (inferred from title 'Senior PM' and comp range)",
+      "seniority.manages_people (inferred as false; no mention of direct reports)",
       "scope.business_model (inferred from product description and company context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.work_auth (defaulted to open; not stated)",
       "location.visa_sponsorship (not stated; marked unclear)",
-      "compensation.location_pay_differential (inferred from statement 'range reflects the cost of labor across various U.S. geographic markets')"
+      "compensation.location_pay_differential (inferred from JD language: 'reflects the cost of labor across various U.S. geographic markets')"
     ],
     "ambiguities": [
-      "The JD states '6+ years of product management experience, ideally in platform, data infrastructure, or backend systems' — the domain qualifier 'ideally' softens this, but the years requirement is unconditional. Treated as hard on years, with domain qualifier noted.",
-      "Visa sponsorship is not mentioned anywhere in the JD; marked as 'unclear' rather than 'no' or 'yes'."
+      "The JD states 'ideally in platform, data infrastructure, or backend systems' as a qualifier on the 6+ years requirement — this modifier makes it closer to preferred context rather than a strict hard requirement, but the 6+ years themselves are hard. Treated years as hard, domain qualifier noted.",
+      "Equity is listed as part of the total compensation package but described conditionally ('may include'); treated as equity_mentioned: true with soft language noted."
     ]
   }
 }

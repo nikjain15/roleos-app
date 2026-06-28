@@ -4,7 +4,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7920219",
   "ats_provider": "greenhouse",
   "ats_job_id": "7920219",
-  "fetched_at": "2026-05-25",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -15,19 +15,19 @@
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
-  "archetype": "Technical PM",
+  "archetype": "AI Product Manager",
   "archetype_confidence": "high",
-  "secondary_archetype": "AI Product Manager",
+  "secondary_archetype": "Technical PM",
   "seniority": {
-    "level": "Staff PM (IC6 equivalent)",
+    "level": "Staff IC",
     "years_required_min": 12,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "12+ years of experience as a Product Manager",
-      "Experience developing a multi-year vision, strategy and roadmap for large scale products",
-      "Experience leading cross-team initiatives from ideation to execution",
-      "Role title is 'Staff Product Manager'"
+      "Staff-level title",
+      "Experience developing a multi-year vision, strategy and roadmap for large-scale products",
+      "Experience leading cross-team initiatives from ideation to execution"
     ]
   },
   "must_haves": [
@@ -38,7 +38,6 @@
       "domain": "product_management",
       "minimum_value": 12,
       "unit": "years",
-      "is_combined": false,
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -55,7 +54,7 @@
       "skill_type": "capability",
       "domain": "user_experience",
       "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -66,7 +65,7 @@
     },
     {
       "id": "multiyear_vision_strategy",
-      "raw_text_from_jd": "Experience developing a multi-year vision, strategy and roadmap for large scale products",
+      "raw_text_from_jd": "Experience developing a multi-year vision, strategy and roadmap for large-scale products",
       "skill_type": "capability",
       "domain": "product_strategy",
       "evidence_required": "work_history",
@@ -108,7 +107,7 @@
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": [
-        "CS degree"
+        "computer science degree"
       ]
     },
     {
@@ -131,13 +130,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Support Experience platform — Stripe's user-facing AI agent, conversational infrastructure across merchant dashboard, consumer apps, and third-party agent integrations",
+    "surface": "Stripe's user-facing AI agent platform for support experience, including merchant dashboard, consumer apps, and third-party agent surfaces",
     "business_model": "B2B and B2C financial infrastructure platform",
     "primary_metrics_inferred": [
       "AI agent resolution rate vs. human agents",
       "Conversational experience quality across surfaces",
-      "Product team adoption of conversational platform",
-      "Feedback loop velocity (conversations to evals/prompt improvements)"
+      "Platform adoption by internal product teams",
+      "Feedback loop efficiency (conversation → eval → prompt improvement cycle)"
     ],
     "cross_functional_partners": [
       "Product teams across Stripe",
@@ -150,7 +149,7 @@
       "Build feedback loops from conversations through improvement recommendations to generating evals and prompts.",
       "Make Stripe's conversational AI agent as capable and effective as our best human agents by identifying scaled ways to improve its capabilities across surfaces, user segments and products.",
       "Integrate human and AI conversations in the platform so that teams can understand and manage both.",
-      "Develop the infrastructure that enables internal and external AI experiences to be driven from the same foundational primitives - so that teams can build once and have that capability available to internal, external and 3rd party use cases.",
+      "Develop the infrastructure that enables internal and external AI experiences to be driven from the same foundational primitives - so that teams can build once and have that capability available to internal, external and third-party use cases.",
       "Partner with GTM on expanding assistive capabilities to Stripe's GTM layer.",
       "Partner with the Conversation UX team to unlock novel capabilities for the AI agent."
     ]
@@ -173,36 +172,36 @@
     "prompts",
     "multi-year roadmap",
     "technical PM",
-    "Staff PM",
-    "applied AI",
-    "third-party agents"
+    "cross-team",
+    "fintech",
+    "payments"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear product surface and ownership articulated (AI support platform, conversational infrastructure)",
-    "Role is at the forefront of applied AI with high strategic impact",
-    "Explicit note that preferred qualifications are a bonus, not a requirement, encouraging candidates to apply",
-    "Cross-functional scope signals high organizational visibility"
+    "Clear and specific product surface described (AI support agent platform)",
+    "Explicit encouragement to apply if minimum requirements are met, acknowledging preferred qualifications are a bonus",
+    "High-impact, high-visibility role at the forefront of applied AI",
+    "Clear articulation of responsibilities and scope"
   ],
   "red_flags": [
-    "No compensation range disclosed",
-    "No location or work arrangement specified — remote eligibility and office requirements are unclear",
-    "No visa sponsorship information provided",
-    "12+ years minimum is a high bar that significantly narrows the candidate pool",
-    "No nice-to-haves listed — preferred qualifications section is empty despite being referenced in the JD"
+    "Compensation not disclosed",
+    "Location/remote policy not stated in JD — unclear whether role is remote, hybrid, or onsite",
+    "Visa sponsorship and work authorization not mentioned",
+    "No preferred qualifications listed, making differentiation between candidates harder to anticipate",
+    "12+ years requirement is a high bar that eliminates many strong AI PM candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Staff' and 12+ years requirement)",
-      "scope.business_model (inferred from Stripe's About section)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
-      "location.type (not stated; marked unclear)",
-      "compensation (not stated)"
+      "seniority.level inferred from title ('Staff') and years requirement (12+)",
+      "seniority.manages_people inferred as false — no direct reports or people management mentioned",
+      "scope.business_model inferred from company description",
+      "scope.primary_metrics_inferred — not stated in JD, inferred from responsibilities",
+      "location.type set to 'unclear' — no location or work policy information in JD body",
+      "compensation.equity_mentioned set to false — not mentioned in JD"
     ],
     "ambiguities": [
-      "JD references 'preferred qualifications are a bonus, not a requirement' but lists zero preferred qualifications — the nice_to_haves section is therefore empty, which is unusual.",
-      "Technical expertise requirement uses 'and/or' — it is unclear whether leading technical products alone (without a CS background) satisfies the requirement or both are needed.",
-      "No location, city, remote policy, or work authorization information is provided in the JD."
+      "Technical expertise requirement says 'You've led technical products and/or have a background in computer science (or similar)' — the 'and/or' makes this either an experience or credential requirement; treated as a single domain_knowledge must-have covering both paths",
+      "No location information is present in the JD; location.type defaulted to 'unclear'"
     ]
   }
 }

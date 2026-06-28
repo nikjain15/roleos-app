@@ -1,0 +1,320 @@
+{
+  "company": "Glossier",
+  "role_title": "Vice President, Digital Strategy & Growth",
+  "url": "https://boards.greenhouse.io/glossier/jobs/7956709?gh_jid=7956709",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7956709",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Other",
+  "archetype_confidence": "high",
+  "secondary_archetype": "VP Digital Strategy & Growth (executive commercial/digital leadership)",
+  "seniority": {
+    "level": "VP / Executive",
+    "years_required_min": 15,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "15+ years of leadership experience required",
+      "Reporting to Chief Commercial Officer (CCO)",
+      "Role titled Vice President",
+      "Comp range $235K-$305K consistent with senior executive",
+      "Lead, mentor, and develop a high-performing digital leadership team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_leadership_experience",
+      "raw_text_from_jd": "15+ years of leadership experience across digital, commerce, marketing, customer experience, or related functions within beauty, retail, consumer products, or high-growth consumer brands",
+      "skill_type": "years_of_experience",
+      "domain": "digital_commerce_marketing_leadership",
+      "minimum_value": 15,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "beauty",
+        "retail",
+        "consumer products",
+        "high-growth consumer brands"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_digital_growth_strategy",
+      "raw_text_from_jd": "Proven track record of developing and executing enterprise-level digital growth strategies that drive meaningful business impact",
+      "skill_type": "outcome",
+      "domain": "digital_growth_strategy",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "digital_transformation_experience",
+      "raw_text_from_jd": "Experience leading large-scale digital transformation, omnichannel customer experience, or digital capability-building initiatives",
+      "skill_type": "capability",
+      "domain": "digital_transformation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "commercial_financial_acumen",
+      "raw_text_from_jd": "Strong commercial and financial acumen with the ability to evaluate growth opportunities, investment decisions, and long-term business outcomes",
+      "skill_type": "capability",
+      "domain": "commercial_financial_strategy",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "senior_team_leadership",
+      "raw_text_from_jd": "Demonstrated success leading senior teams and developing high-performing leaders across multiple disciplines",
+      "skill_type": "capability",
+      "domain": "people_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "digital_ecosystem_knowledge",
+      "raw_text_from_jd": "Deep understanding of evolving digital ecosystems, including commerce, marketplaces, social platforms, customer engagement technologies, data strategy, personalization, and emerging technologies",
+      "skill_type": "domain_knowledge",
+      "domain": "digital_ecosystems",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "personalization",
+        "data strategy",
+        "emerging technologies"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_presence_stakeholder_influence",
+      "raw_text_from_jd": "Strong executive presence with the ability to influence and align stakeholders across all levels of an organization",
+      "skill_type": "capability",
+      "domain": "executive_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_thinking_problem_solving",
+      "raw_text_from_jd": "Exceptional strategic thinking and problem-solving skills, with the ability to connect customer insights, market trends, and business objectives into actionable plans",
+      "skill_type": "capability",
+      "domain": "strategic_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_alignment",
+      "raw_text_from_jd": "Proven ability to operate effectively in highly cross-functional environments and drive alignment across diverse stakeholder groups",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree required; MBA or advanced degree preferred",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "mba_or_advanced_degree",
+      "raw_text_from_jd": "Bachelor's degree required; MBA or advanced degree preferred",
+      "skill_type": "credential",
+      "domain": "education",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise-wide digital growth strategy across owned, earned, and paid digital channels; Digital Commerce, Social Commerce, Omnichannel Customer Experience, Loyalty, Brand Marketing, Technology alignment",
+    "business_model": "DTC + retail + wholesale consumer brand (beauty/lifestyle)",
+    "primary_metrics_inferred": [
+      "Customer acquisition and retention",
+      "Digital commerce revenue growth",
+      "Brand relevance and engagement across digital touchpoints",
+      "Digital ecosystem health and effectiveness"
+    ],
+    "cross_functional_partners": [
+      "Chief Commercial Officer (CCO)",
+      "Digital Commerce",
+      "Brand Marketing",
+      "Technology",
+      "Retail",
+      "Wholesale",
+      "Product Marketing",
+      "Customer Experience",
+      "Finance",
+      "Operations",
+      "Creative"
+    ],
+    "core_responsibilities": [
+      "Define and lead Glossier's long-term digital strategy, ensuring alignment with company growth objectives, customer priorities, and brand ambitions",
+      "Develop a cohesive vision for how customers discover, engage with, and purchase from Glossier across all digital touchpoints and channels",
+      "Identify and evaluate emerging digital commerce opportunities, technologies, platforms, and consumer behaviors that can unlock future growth and competitive advantage",
+      "Establish enterprise-wide digital growth priorities and investment frameworks, partnering with executive leadership to determine resource allocation and strategic initiatives",
+      "Lead the evolution of Glossier's omnichannel customer experience strategy",
+      "Partner with Technology leadership to define the digital capability roadmap, including platform modernization, customer data strategy, personalization capabilities, and future-state digital infrastructure",
+      "Champion customer-centric decision making across the organization",
+      "Serve as the executive sponsor for digital transformation initiatives",
+      "Partner with Brand Marketing and Creative leadership to ensure digital innovation supports and enhances Glossier's brand positioning",
+      "Develop executive-level reporting and performance frameworks",
+      "Lead, mentor, and develop a high-performing digital leadership team",
+      "Stay ahead of industry trends across digital commerce, AI, customer engagement, marketplaces, social commerce, retail technology, and emerging consumer behaviors"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      235000,
+      305000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Restricted Stock Units (RSUs)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "digital strategy",
+    "digital growth",
+    "omnichannel",
+    "digital commerce",
+    "social commerce",
+    "customer acquisition",
+    "retention",
+    "digital transformation",
+    "personalization",
+    "customer data strategy",
+    "executive leadership",
+    "brand relevance",
+    "emerging technologies",
+    "AI",
+    "marketplaces"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($235K-$305K base)",
+    "Equity in the form of RSUs mentioned",
+    "Reporting directly to Chief Commercial Officer — high organizational visibility",
+    "Clear articulation of scope and cross-functional partners",
+    "Mission-driven brand with strong cultural identity"
+  ],
+  "red_flags": [
+    "Location not specified anywhere in the JD — unclear if remote, hybrid, or onsite and in which city",
+    "Visa sponsorship and work authorization requirements not addressed",
+    "Buzzword-heavy JD with limited specificity on measurable outcomes or technology platforms used",
+    "15+ years required creates a narrow candidate pool at a very senior level",
+    "No mention of team size or direct reports structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "location.type (not stated; defaulted to 'unclear')",
+      "location.remote_us_eligible (not stated; defaulted to false)",
+      "location.work_auth (not stated; defaulted to 'unclear')",
+      "location.visa_sponsorship (not stated; defaulted to 'unclear')",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities)",
+      "scope.business_model (inferred from company description)",
+      "posting_first_seen (not available)",
+      "posting_last_updated (not available)"
+    ],
+    "ambiguities": [
+      "The JD does not specify a work location (city, remote eligibility, or office requirement). Location fields left as 'unclear'.",
+      "The Bachelor's degree requirement is listed in the same bullet as 'MBA or advanced degree preferred' — Bachelor's treated as hard requirement, MBA treated as nice-to-have soft."
+    ]
+  }
+}

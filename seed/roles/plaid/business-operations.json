@@ -1,42 +1,42 @@
 {
   "company": "Plaid",
   "role_title": "Business Operations",
-  "url": "https://jobs.ashbyhq.com/plaid/f58ef4f3-12d0-4cbf-8914-08439e6d36c0",
+  "url": "https://jobs.ashbyhq.com/plaid/6b08e0e9-2159-4002-bf54-b30dd5bda80c",
   "ats_provider": "ashby",
-  "ats_job_id": "f58ef4f3-12d0-4cbf-8914-08439e6d36c0",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "6b08e0e9-2159-4002-bf54-b30dd5bda80c",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "unclear",
     "cities_listed": [
-      "San Francisco, CA"
+      "San Francisco"
     ],
     "remote_us_eligible": false,
     "office_time_required": null,
-    "work_auth": "unclear",
+    "work_auth": "open",
     "visa_sponsorship": "unclear"
   },
   "archetype": "BizOps / Strategy & Ops",
   "archetype_confidence": "high",
-  "secondary_archetype": "Chief of Staff",
+  "secondary_archetype": "Program Manager",
   "seniority": {
-    "level": "Senior IC / Lead (mid-to-senior)",
+    "level": "Senior IC / Manager-track",
     "years_required_min": 6,
     "years_required_max": 11,
     "manages_people": false,
     "level_signals": [
       "6–11 years in management consulting, investment banking, and/or operating roles",
       "Partners directly with leaders across Product and GTM",
-      "High degree of autonomy in prioritizing what matters most"
+      "BizOps described as a launchpad to leadership roles"
     ]
   },
   "must_haves": [
     {
-      "id": "years_experience_consulting_banking_ops",
+      "id": "years_consulting_banking_ops",
       "raw_text_from_jd": "6–11 years in management consulting, investment banking, and/or operating roles (BizOps, Strategy & Ops, Finance)",
       "skill_type": "years_of_experience",
-      "domain": "management_consulting_banking_bizops",
+      "domain": "management_consulting_or_finance_or_bizops",
       "minimum_value": 6,
       "unit": "years",
       "is_combined": false,
@@ -57,12 +57,12 @@
       "credentials_named": []
     },
     {
-      "id": "ambiguity_autonomy",
+      "id": "comfort_with_ambiguity",
       "raw_text_from_jd": "Comfort with ambiguity and a high degree of autonomy in prioritizing what matters most",
       "skill_type": "cultural_fit",
-      "domain": "problem_solving",
+      "domain": "independent_work",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -76,8 +76,8 @@
       "raw_text_from_jd": "Ability to build relationships at all levels and drive cross-functional consensus",
       "skill_type": "capability",
       "domain": "stakeholder_management",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -89,9 +89,9 @@
     {
       "id": "strategic_operational_agenda",
       "raw_text_from_jd": "Driving the strategic and operational agenda for a Product or GTM organization — and the cross-functional initiatives that come with it",
-      "skill_type": "outcome",
+      "skill_type": "capability",
       "domain": "strategy_and_operations",
-      "evidence_required": "work_history",
+      "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -102,7 +102,7 @@
       "credentials_named": []
     },
     {
-      "id": "operating_rhythms",
+      "id": "operating_rhythms_ownership",
       "raw_text_from_jd": "Owning foundational operating rhythms — monthly business reports, QBRs, OKRs and KPIs, executive reporting — and evolving them as the business scales",
       "skill_type": "capability",
       "domain": "business_operations",
@@ -117,11 +117,11 @@
       "credentials_named": []
     },
     {
-      "id": "dashboards_metrics",
+      "id": "dashboards_and_metrics",
       "raw_text_from_jd": "Building out dashboards, metrics, and success measures that give leadership visibility and enable data-driven decisions",
       "skill_type": "capability",
-      "domain": "analytics_and_reporting",
-      "evidence_required": "project_examples",
+      "domain": "data_analytics",
+      "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
@@ -132,7 +132,7 @@
       "credentials_named": []
     },
     {
-      "id": "product_strategy_pricing_gtm",
+      "id": "product_strategy_pricing",
       "raw_text_from_jd": "Partnering on product strategy topics including pricing, commercialization, and go-to-market for new and existing products",
       "skill_type": "domain_knowledge",
       "domain": "product_strategy_gtm",
@@ -147,10 +147,10 @@
       "credentials_named": []
     },
     {
-      "id": "ai_tools_default_usage",
+      "id": "ai_tools_as_default",
       "raw_text_from_jd": "Using AI tools and agents as a default part of how you work — not as an experiment, but as a force multiplier",
       "skill_type": "tool_proficiency",
-      "domain": "ai_tools_and_agents",
+      "domain": "ai_tools",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "hard",
@@ -167,10 +167,10 @@
   ],
   "nice_to_haves": [
     {
-      "id": "ai_tools_workflow_acceleration",
+      "id": "ai_tools_workflow_familiarity",
       "raw_text_from_jd": "Familiarity with AI tools and agents to accelerate workflows is a plus",
       "skill_type": "tool_proficiency",
-      "domain": "ai_tools_and_agents",
+      "domain": "ai_tools",
       "evidence_required": "hands_on_use",
       "bridgeable": "yes",
       "severity": "soft",
@@ -193,10 +193,11 @@
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [
-        "SQL",
         "Tableau"
       ],
-      "technologies_named": [],
+      "technologies_named": [
+        "SQL"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -206,9 +207,9 @@
       "id": "fintech_payments_saas_experience",
       "raw_text_from_jd": "Experience in fintech, payments, or high-growth SaaS preferred",
       "skill_type": "domain_knowledge",
-      "domain": "industry_experience",
+      "domain": "fintech_payments_saas",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -225,12 +226,12 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "small team",
-    "surface": "BizOps team supporting Product and GTM organizations across Plaid's largest revenue lines and critical partnerships",
-    "business_model": "B2B fintech data network / API platform",
+    "surface": "Strategic and operational agenda for Product and GTM organizations; cross-functional initiatives spanning Product, GTM, Engineering, Finance, Legal, and Partnerships",
+    "business_model": "B2B fintech infrastructure / API platform",
     "primary_metrics_inferred": [
-      "OKRs and KPIs for Product and GTM orgs",
-      "P&L impact",
-      "Executive reporting metrics"
+      "OKRs and KPIs for Product and GTM organizations",
+      "Revenue line performance",
+      "P&L impact"
     ],
     "cross_functional_partners": [
       "Product",
@@ -241,19 +242,19 @@
       "Partnerships"
     ],
     "core_responsibilities": [
-      "Driving the strategic and operational agenda for a Product or GTM organization",
-      "Owning foundational operating rhythms — monthly business reports, QBRs, OKRs and KPIs, executive reporting",
-      "Building out dashboards, metrics, and success measures",
-      "Partnering on product strategy topics including pricing, commercialization, and go-to-market",
-      "Using AI tools and agents as a default part of how you work"
+      "Driving the strategic and operational agenda for a Product or GTM organization — and the cross-functional initiatives that come with it",
+      "Owning foundational operating rhythms — monthly business reports, QBRs, OKRs and KPIs, executive reporting — and evolving them as the business scales",
+      "Building out dashboards, metrics, and success measures that give leadership visibility and enable data-driven decisions",
+      "Partnering on product strategy topics including pricing, commercialization, and go-to-market for new and existing products",
+      "Using AI tools and agents as a default part of how you work — not as an experiment, but as a force multiplier"
     ]
   },
   "compensation": {
     "base_range_usd": null,
     "total_comp_estimate_usd": null,
-    "equity_mentioned": false,
-    "equity_form": null,
-    "location_pay_differential": false,
+    "equity_mentioned": true,
+    "equity_form": "equity (form unspecified)",
+    "location_pay_differential": true,
     "source": "unknown"
   },
   "top_keywords": [
@@ -261,44 +262,45 @@
     "Strategy & Ops",
     "management consulting",
     "investment banking",
+    "fintech",
+    "SQL",
+    "Tableau",
+    "AI tools",
     "OKRs",
     "KPIs",
     "dashboards",
-    "SQL",
-    "Tableau",
-    "fintech",
-    "payments",
-    "AI tools",
-    "go-to-market",
     "cross-functional",
-    "executive reporting"
+    "go-to-market",
+    "pricing",
+    "P&L"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Clear career launchpad narrative: 'past team members have gone on to leadership roles in Product, GTM, and operational functions'",
-    "Explicit encouragement to apply even if experience doesn't fully match the JD",
-    "Broad cross-functional scope provides high visibility and impact",
-    "Small, high-impact team signals lean/efficient culture"
+    "BizOps described as a 'launchpad' with past members going to leadership roles in Product, GTM, and operations — strong career trajectory signal",
+    "Small, high-impact team with direct access to senior leaders across Product and GTM",
+    "Role has clear, quantifiable impact framing ('direct, quantifiable impact on our customers, partners, and P&L')",
+    "Equity mentioned as part of compensation",
+    "Encourages candidates to apply even if experience doesn't fully match"
   ],
   "red_flags": [
-    "Compensation not disclosed",
-    "Location type not specified in JD body — unclear if hybrid, remote, or onsite",
-    "Visa sponsorship policy not stated",
-    "Tension between AI tools appearing in both must-haves (unconditional bullet under Responsibilities) and nice-to-haves ('is a plus' in Qualifications) — treated as hard for the usage mandate and soft for the explicit 'plus' qualifier"
+    "No compensation range disclosed despite JD mentioning pay factors",
+    "Location type not specified in JD body — unclear if remote, hybrid, or onsite",
+    "Visa sponsorship status not stated",
+    "AI tools listed as both a 'must-have' (default part of how you work) in responsibilities and a 'nice-to-have' (is a plus) in qualifications — internal contradiction"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years range and partner-level responsibilities)",
-      "scope.team_size_estimate (described as 'small team' in JD body)",
+      "location.type (not stated in JD body; listed as 'unclear')",
+      "location.remote_us_eligible (inferred as false given HQ-focused framing; not explicitly stated)",
+      "seniority.level (inferred from years range and seniority of partnerships described)",
+      "scope.team_size_estimate (inferred from 'small team of high-impact, low-ego generalist problem solvers')",
       "scope.business_model (inferred from company description)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed)",
-      "location.type (not stated in JD body; defaulted to 'unclear')",
-      "location.cities_listed (San Francisco inferred as HQ from company description; role location not explicitly stated)"
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
+      "compensation.location_pay_differential (inferred from 'Pay is based on factors such as... location')"
     ],
     "ambiguities": [
-      "AI tools/agents appears both as an unconditional responsibility bullet ('Using AI tools and agents as a default part of how you work') and as a nice-to-have in Qualifications ('Familiarity with AI tools and agents to accelerate workflows is a plus'). Treated the responsibilities bullet as hard and the qualifications bullet as soft/nice-to-have.",
-      "Location type is not specified in the JD body. Company HQ is San Francisco but no explicit remote/hybrid/onsite policy is stated for this role.",
-      "Visa sponsorship and work authorization requirements are not mentioned."
+      "AI tools appears in responsibilities as a hard requirement ('Using AI tools and agents as a default part of how you work') and again in qualifications as a soft preference ('Familiarity with AI tools and agents to accelerate workflows is a plus'). Both entries retained; responsibilities framing treated as hard, qualifications framing treated as soft.",
+      "Location type is not specified in the JD body. San Francisco is listed as HQ but no explicit remote/hybrid/onsite designation is given for this role."
     ]
   }
 }

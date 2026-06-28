@@ -4,7 +4,7 @@
   "url": "https://careers.airbnb.com/positions/7834495?gh_jid=7834495",
   "ats_provider": "greenhouse",
   "ats_job_id": "7834495",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -19,15 +19,15 @@
   "archetype_confidence": "high",
   "secondary_archetype": "Technical PM",
   "seniority": {
-    "level": "Staff PM (IC6 equivalent)",
+    "level": "Staff IC",
     "years_required_min": 9,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "9+ years of industry experience with a BS/Masters OR 6+ years with a PhD",
-      "Title is 'Staff Product Manager'",
-      "Compensation range $200K-$240K base, consistent with Staff IC at Airbnb",
-      "Described as 'one of the most consequential roles in CS Platform Product'"
+      "Title explicitly 'Staff Product Manager'",
+      "Comp range $200K-$240K base consistent with Staff IC at Airbnb",
+      "Expected to own multi-year product roadmap and drive cross-functional alignment at scale"
     ]
   },
   "must_haves": [
@@ -35,11 +35,10 @@
       "id": "years_experience_bs_ms",
       "raw_text_from_jd": "9+ years of industry experience with a BS/Masters OR 6+ years with a PhD, with deep expertise in AI/ML-powered platforms at consumer scale",
       "skill_type": "years_of_experience",
-      "domain": "product_management",
+      "domain": "product_management_ai_ml",
       "minimum_value": 9,
       "unit": "years",
-      "qualifier": "with BS/Masters; 6+ years with PhD",
-      "is_combined": false,
+      "qualifier": "BS/Masters path; 6+ years for PhD path",
       "evidence_required": "work_history",
       "bridgeable": "no",
       "severity": "hard",
@@ -60,8 +59,8 @@
       "id": "personalization_systems_knowledge",
       "raw_text_from_jd": "Strong working knowledge of personalization systems, contextual data retrieval, and LLM architectures - you can engage credibly with ML engineers on topics like RAG, retrieval optimization, and context engineering tradeoffs",
       "skill_type": "domain_knowledge",
-      "domain": "personalization_and_ml_systems",
-      "evidence_required": "hands_on_use",
+      "domain": "ai_personalization_and_llm_architectures",
+      "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
@@ -79,7 +78,7 @@
       "credentials_named": []
     },
     {
-      "id": "foundational_platform_products",
+      "id": "foundational_platform_track_record",
       "raw_text_from_jd": "Track record of building and shipping foundational platform products that power multiple downstream experiences and surfaces",
       "skill_type": "outcome",
       "domain": "platform_product_management",
@@ -97,7 +96,7 @@
       "id": "ab_experiment_design",
       "raw_text_from_jd": "Experience designing and interpreting A/B experiments and online experiment frameworks; ability to own end-to-end metrics strategy for complex AI systems",
       "skill_type": "capability",
-      "domain": "experimentation_and_analytics",
+      "domain": "experimentation_and_metrics",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -112,10 +111,10 @@
       "credentials_named": []
     },
     {
-      "id": "ambiguous_signal_synthesis",
+      "id": "ambiguity_synthesis",
       "raw_text_from_jd": "Strong capacity to synthesize ambiguous signals into clear, prioritized product decisions",
       "skill_type": "capability",
-      "domain": "product_strategy",
+      "domain": "product_decision_making",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -142,18 +141,15 @@
       "credentials_named": []
     },
     {
-      "id": "consumer_ai_personalization_shipping",
+      "id": "consumer_ai_personalization",
       "raw_text_from_jd": "Experience shipping consumer-facing AI products with personalization at the core",
       "skill_type": "outcome",
-      "domain": "consumer_ai_products",
+      "domain": "consumer_ai_personalization",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "AI",
-        "personalization"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -168,9 +164,7 @@
       "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [
-        "AI automation"
-      ],
+      "technologies_named": [],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -180,7 +174,7 @@
       "id": "multi_level_abstraction",
       "raw_text_from_jd": "Ability to work at multiple levels of abstraction - from the architecture of a retrieval system to the experience of a guest trying to resolve a cancellation dispute",
       "skill_type": "capability",
-      "domain": "technical_and_ux_fluency",
+      "domain": "technical_and_ux_depth",
       "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "hard",
@@ -198,13 +192,13 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "AI Personalization platform across Airbnb's customer support ecosystem (AIA — AI agent for guest/host support)",
-    "business_model": "consumer marketplace (B2C), guest and host support platform",
+    "surface": "AI Personalization platform powering community support experiences for guests and hosts across Airbnb's AI surfaces",
+    "business_model": "consumer marketplace (B2C/B2B2C), internal platform product supporting customer support AI",
     "primary_metrics_inferred": [
       "Self-solve rate",
       "Personalization coverage",
       "Citation accuracy",
-      "AI vs. human agent performance gap"
+      "Gap between AI and human agent performance"
     ],
     "cross_functional_partners": [
       "ML engineers",
@@ -216,13 +210,13 @@
     ],
     "core_responsibilities": [
       "Contribute towards the long-term vision for building 10-star, personalized community support",
-      "Partner with data science, ML, and operations to identify new high-signal personalization signals",
+      "Partner with data science, ML, and operations to identify new high-signal personalization signals to serve user needs",
       "Own the product roadmap across ML models, signals, schemas, and prompt optimization",
-      "Drive personalization experiment design and measurement: define KPIs (self-solve rate, personalization coverage, citation accuracy)",
+      "Drive personalization experiment design and measurement: define KPIs (self-solve rate, personalization coverage, citation accuracy), lead experiment design, and translate results into clear product decisions",
       "Collaborate with ML engineers to shape requirements for accuracy, latency, and scalability improvements",
       "Scale personalization infrastructure across Airbnb's AI surfaces",
-      "Build a framework for continuous improvement to close the gap between AI and human agent performance",
-      "Collaborate across engineering, ML, design, data science, and policy to ship with rigor from concept to production"
+      "Build a framework for continuous improvement: define how the team identifies personalization failures, prioritizes fixes, and systematically closes the gap between AI and human agent performance",
+      "Collaborate across engineering, ML, design, data science, and policy to build consensus on prioritization, drive cross-functional alignment, and ship with rigor from concept to production"
     ]
   },
   "compensation": {
@@ -237,47 +231,48 @@
     "source": "stated"
   },
   "top_keywords": [
-    "AI Personalization",
+    "AI personalization",
     "LLM",
     "RAG",
     "retrieval optimization",
-    "context engineering",
-    "community support",
+    "contextual data retrieval",
     "ML platform",
-    "Staff PM",
-    "consumer AI",
+    "community support",
+    "personalization systems",
+    "A/B experimentation",
     "prompt optimization",
-    "A/B experiments",
-    "self-solve rate",
-    "10-Star support"
+    "customer support AI",
+    "staff PM",
+    "consumer-facing AI"
   ],
-  "buzzword_density": "high",
+  "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed and competitive ($200K-$240K base)",
-    "Equity and bonus explicitly mentioned",
-    "Clear product surface ownership: full-stack AI personalization for CS platform",
-    "Specific KPIs named (self-solve rate, personalization coverage, citation accuracy)",
-    "Remote-US eligible role",
-    "Encouraging inclusion statement — all qualified individuals encouraged to apply"
+    "Compensation range explicitly disclosed ($200K-$240K base) and competitive for Staff PM",
+    "Remote-US eligible with flexible office attendance policy",
+    "Clear product surface and ownership area (AI Personalization full-stack)",
+    "Specific KPIs named (self-solve rate, personalization coverage, citation accuracy) indicating a metrics-driven culture",
+    "Role described as 'one of the most consequential roles in CS Platform Product' signaling high visibility",
+    "Airbnb's scale (5M hosts, 2B+ guest arrivals) offers substantial scope for impact"
   ],
   "red_flags": [
-    "Remote-US eligible but requires living in a state where Airbnb has a registered entity — some states are excluded; list is 'continuously evolving'",
-    "Visa sponsorship not addressed in JD; work_auth inferred as no-sponsorship based on state-residency restriction language",
-    "High buzzword density may indicate vague or aspirational role definition",
-    "No explicit team size or org structure provided",
-    "Requirement for 9+ years (BS/MS) is a high bar; 6+ with PhD alternative may narrow pool further"
+    "Visa sponsorship status not stated; work auth inferred as no-sponsorship due to 'must live in a state where Airbnb, Inc. has a registered entity' and excluded states list",
+    "Excluded US states list exists and is 'continuously evolving' — remote eligibility is not guaranteed for all US locations",
+    "Bar is very high: rare combination of customer experience chops, ML/LLM technical fluency, and strategic vision all required",
+    "No nice-to-haves listed — JD reads as all hard requirements with little flexibility"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from title 'Staff PM' and compensation range)",
-      "scope.business_model (inferred from product description)",
-      "scope.primary_metrics_inferred (partially stated in JD responsibilities but framed as inferred here for completeness)",
-      "location.work_auth (inferred as no-sponsorship from state-residency entity requirement language; not explicitly stated)"
+      "seniority.level (inferred from title 'Staff' + comp range + years required)",
+      "seniority.manages_people (not stated; inferred false as no direct reports mentioned)",
+      "scope.business_model (inferred from product description and Airbnb context)",
+      "scope.primary_metrics_inferred (KPIs named in responsibilities section, not a dedicated metrics section)",
+      "location.work_auth (inferred as no-sponsorship from state-registration requirement and exclusion list language; not explicitly stated)",
+      "location.visa_sponsorship (not stated; marked unclear)"
     ],
     "ambiguities": [
-      "Visa sponsorship is not mentioned in the JD; work_auth set to 'no-sponsorship' based on the registered-entity / state-residency language, but this is an inference rather than an explicit statement.",
-      "The JD mentions 'visionary Staff Platform Manager' in the body but the role title is 'Staff Product Manager' — minor inconsistency in language, not affecting classification.",
-      "Years requirement is tiered (9+ BS/MS or 6+ PhD); minimum_value set to 9 for BS/MS as the primary path, with the PhD alternative captured in the qualifier field."
+      "The JD uses 'Staff Platform Manager' in the body but the role title is 'Staff Product Manager, AI Personalization' — likely the same role, treated as equivalent here.",
+      "Visa sponsorship is not mentioned; work_auth set to 'no-sponsorship' based on the state-registration requirement language, but this is an inference.",
+      "The years-of-experience requirement '9+ years with BS/Masters OR 6+ years with a PhD' was captured with minimum_value of 9 (BS/MS path) but the PhD path lowers the bar to 6; this nuance is recorded in the qualifier field."
     ]
   }
 }

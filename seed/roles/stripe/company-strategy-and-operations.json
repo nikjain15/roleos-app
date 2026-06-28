@@ -1,0 +1,332 @@
+{
+  "company": "Stripe",
+  "role_title": "Company Strategy & Operations",
+  "url": "https://stripe.com/jobs/search?gh_jid=5956522",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "5956522",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Staff / Principal IC (senior individual contributor)",
+    "years_required_min": 15,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "15+ years of work experience required",
+      "Explicitly described as 'senior individual contributor role'",
+      "Works directly with C-suite and senior executive stakeholders",
+      "'You'll own outcomes end-to-end and raise the operational ceiling of the company'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_ops",
+      "raw_text_from_jd": "15+ years of work experience, with a significant portion in operational roles at high-growth tech companies—product operations, strategy and operations, business operations, or company or corporate planning",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_and_operations",
+      "minimum_value": 15,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth tech companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_systems_track_record",
+      "raw_text_from_jd": "A track record of building and owning operational systems. You have measurably improved how a company or large team operates, not just managed existing processes.",
+      "skill_type": "outcome",
+      "domain": "operational_systems",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "company_functional_planning",
+      "raw_text_from_jd": "Deep experience either with company or functional planning—annual planning, OKR and SOKR-style goal-setting, resource allocation, and operating cadence design",
+      "skill_type": "domain_knowledge",
+      "domain": "company_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "OKR",
+        "SOKR"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinker_automation_first",
+      "raw_text_from_jd": "A systems thinker who is automation-first—you instinctively reach for tools, data pipelines, and AI-augmented workflows to reduce manual overhead and increase leverage",
+      "skill_type": "capability",
+      "domain": "automation_and_systems_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "data pipelines",
+        "AI-augmented workflows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_rigor",
+      "raw_text_from_jd": "Strong analytical rigor—you're comfortable owning data and metrics directly, running your own analyses, and pressure-testing assumptions without relying on a dedicated analytics partner",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "csuite_stakeholder_experience",
+      "raw_text_from_jd": "Experience working directly with and presenting to C-suite and senior executive stakeholders. You're comfortable owning the room and bringing a sharp, independent perspective.",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_comfort",
+      "raw_text_from_jd": "High comfort with ambiguity—you take an undefined operational problem, scope it, design a solution, and drive it to completion with minimal oversight",
+      "skill_type": "cultural_fit",
+      "domain": "autonomous_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_proficiency",
+      "raw_text_from_jd": "Technical proficiency in AI tools in order to automate workflows as needed",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "automation_scaled_operational_workflows",
+      "raw_text_from_jd": "Experience applying automation-thinking and scaled approaches to operational workflows—from analysis and synthesis to systems and decision support",
+      "skill_type": "capability",
+      "domain": "operational_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "tech_company_experience",
+      "raw_text_from_jd": "Prior experience at a technology company is required.",
+      "skill_type": "domain_knowledge",
+      "domain": "technology_industry",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "technology company"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "fintech_consulting_banking_background",
+      "raw_text_from_jd": "Background in fintech, management consulting, or investment banking is a plus, but not required.",
+      "skill_type": "domain_knowledge",
+      "domain": "fintech_consulting_banking",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "management consulting",
+        "investment banking"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "stripe_ecosystem_familiarity",
+      "raw_text_from_jd": "Experience with the product and infrastructure ecosystem at Stripe or similar complex platform businesses",
+      "skill_type": "domain_knowledge",
+      "domain": "platform_business_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "modern_planning_tools_familiarity",
+      "raw_text_from_jd": "Familiarity with modern planning tools, workflow automation platforms, and operational data infrastructure",
+      "skill_type": "tool_proficiency",
+      "domain": "planning_and_automation_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "workflow automation platforms",
+        "operational data infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Central Strategy and Operations — company-wide operational systems, planning processes, operating rhythms, and information architecture",
+    "business_model": "B2B financial infrastructure platform",
+    "primary_metrics_inferred": [
+      "Speed and quality of leadership decision-making",
+      "Reduction of manual/fragmented processes",
+      "Operational leverage and scalability of company-wide systems"
+    ],
+    "cross_functional_partners": [
+      "C-suite and senior executive stakeholders",
+      "Leadership team",
+      "Partner teams across Stripe"
+    ],
+    "core_responsibilities": [
+      "Run planning for Stripe including annual planning workstreams and decision frameworks",
+      "Build, automate, and scale central operations infrastructure including data pipelines and AI-augmented workflows",
+      "Translate strategy into operational reality by preparing and running leadership-level operating forums",
+      "Drive continuous operational improvement and maintain a view of where operational systems are breaking down",
+      "Challenge assumptions and work across teams to address root causes of slow decisions, unclear handoffs, or diffuse accountability"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "strategy and operations",
+    "annual planning",
+    "OKR",
+    "systems thinker",
+    "automation-first",
+    "AI-augmented workflows",
+    "data pipelines",
+    "operating cadence",
+    "senior individual contributor",
+    "C-suite",
+    "operational infrastructure",
+    "high-growth tech"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership mandate — 'own outcomes end-to-end' with a well-defined operational surface",
+    "Senior IC role explicitly not a coordination or program management role — signals meaningful scope",
+    "Direct working relationships with most senior leaders at Stripe",
+    "Automation and AI-first orientation baked into role definition",
+    "Preferred qualifications are explicitly 'a bonus, not a requirement' — inclusive framing"
+  ],
+  "red_flags": [
+    "No location, remote policy, or compensation information disclosed in the JD",
+    "15+ years minimum is a high bar that excludes mid-career candidates",
+    "No visa sponsorship or work authorization guidance provided",
+    "Scope is broad and undefined ('building the infrastructure that makes Stripe faster') — may lead to role sprawl"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from '15+ years', 'senior individual contributor', and C-suite stakeholder access)",
+      "scope.business_model (inferred from Stripe product description)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.type set to 'unclear' — no location or remote policy stated in JD",
+      "compensation.equity_mentioned set to false — no mention in JD"
+    ],
+    "ambiguities": [
+      "Location and remote eligibility are entirely absent from the JD body — it is unclear whether this role is onsite, hybrid, or remote, and in which city(ies)",
+      "Visa sponsorship and work authorization requirements are not mentioned anywhere in the JD"
+    ]
+  }
+}

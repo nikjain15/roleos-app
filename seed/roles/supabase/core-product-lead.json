@@ -1,0 +1,271 @@
+{
+  "company": "Supabase",
+  "role_title": "Core Product Lead",
+  "url": "https://jobs.ashbyhq.com/supabase/f2f28afa-4b42-43c7-b977-48f5b686fba2",
+  "ats_provider": "ashby",
+  "ats_job_id": "f2f28afa-4b42-43c7-b977-48f5b686fba2",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-global",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "none (fully remote; WeWork/co-working allowance available globally)",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Technical Program Manager / Director of Product (people manager + strategy setter across Core division)",
+  "seniority": {
+    "level": "Director / Head of Product (people manager)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "Manages PMs across Platform, Databases, Auth, Storage, Functions, and Realtime",
+      "8+ years of product management experience on developer tools or infrastructure",
+      "Director level or equivalent people management experience explicitly mentioned",
+      "Reports to Head of Product",
+      "Responsible for hiring, firing, and running performance cycles for PM team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "pm_people_management",
+      "raw_text_from_jd": "Have managed product managers before, ideally at the Director level or equivalent. You've hired PMs, fired PMs, run performance cycles, coached people through promotions, and held a team together through a hard quarter.",
+      "skill_type": "capability",
+      "domain": "people_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_pm_devtools_infra",
+      "raw_text_from_jd": "Have 8+ years of product management experience on developer tools or infrastructure, or an ex-founder background with the same depth.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "developer tools or infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "developer tools",
+        "infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth_infra",
+      "raw_text_from_jd": "You're technical enough to read an architecture doc, follow a design discussion, and ask the right questions of engineers building distributed systems, databases, or cloud platforms.",
+      "skill_type": "domain_knowledge",
+      "domain": "distributed_systems_and_databases",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "distributed systems",
+        "databases",
+        "cloud platforms"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shipped_postgres_db_infra",
+      "raw_text_from_jd": "Have shipped in the Postgres, database, or developer-infrastructure space. You've owned products in this category, not just worked next to them. You understand how developers evaluate them, what makes them stick, and where they fail under load.",
+      "skill_type": "outcome",
+      "domain": "developer_infrastructure_products",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Postgres",
+        "databases"
+      ],
+      "industries_named": [
+        "developer infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "speed_bias",
+      "raw_text_from_jd": "Are biased toward speed. You'd rather have your team ship something imperfect and learn than spend another sprint refining a spec. You know when to stop planning and when to push your PMs to move.",
+      "skill_type": "cultural_fit",
+      "domain": "execution_culture",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_usage",
+      "raw_text_from_jd": "Use AI to move faster. You use AI tools to compress the slow parts of the job (research, drafting, synthesising customer feedback, reviewing PRDs) so more of your time goes to judgment calls and to the people you manage.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_productivity_tools",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "async_work_default",
+      "raw_text_from_jd": "Work async by default. Supabase is fully remote. You make decisions in writing, run your team through written artifacts, and move things forward without filling the calendar with meetings.",
+      "skill_type": "cultural_fit",
+      "domain": "async_remote_work",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "opensource_gtm_familiarity",
+      "raw_text_from_jd": "Familiarity with open-source go-to-market (where the product, community, and commercial offering reinforce each other) is a bonus.",
+      "skill_type": "domain_knowledge",
+      "domain": "open_source_go_to_market",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "open-source"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "Multiple PMs across Platform, Databases, Auth, Storage, Functions, and Realtime; company has 280+ total team members",
+    "surface": "Core division: Postgres, Auth, Storage, Edge Functions, Realtime, and platform substrate",
+    "business_model": "open-source developer platform with commercial/enterprise offering (B2D and B2B)",
+    "primary_metrics_inferred": [
+      "Developer adoption (7M+ developers)",
+      "Product stickiness across Core surfaces",
+      "Cross-product coherence and prioritisation effectiveness",
+      "PM team performance and development"
+    ],
+    "cross_functional_partners": [
+      "Engineering leads",
+      "Founders",
+      "Head of Product",
+      "Growth",
+      "Leadership/founding team"
+    ],
+    "core_responsibilities": [
+      "Build and develop the Core PM team across Platform, Databases, Auth, Storage, Functions, and Realtime",
+      "Set the product strategy across Core and decide where the bets are",
+      "Make cross-product prioritisation calls between Core products",
+      "Coach PMs on craft: customer evidence, problem definition, prioritisation, success metrics, written communication",
+      "Represent Core in leadership: board meetings, customer escalations, strategy reviews"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "ESOP (equity ownership in company)",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Postgres",
+    "developer tools",
+    "infrastructure",
+    "director of product",
+    "people management",
+    "open-source",
+    "async-first",
+    "distributed systems",
+    "AI tools",
+    "Core division",
+    "product strategy",
+    "cross-product prioritisation",
+    "remote"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Clear product ownership scope with named surfaces (Postgres, Auth, Storage, Edge Functions, Realtime)",
+    "Fully remote with global hiring — no location restrictions",
+    "ESOP equity for all team members",
+    "Comprehensive benefits: 100% health coverage for employees, 80% for dependents",
+    "Company scale is clear: 7M+ developers, $500M raised, 280+ team",
+    "Async-first culture explicitly articulated with written artifacts as the norm",
+    "Hiring process described as async-friendly and time-respectful",
+    "Ex-founder background explicitly accepted as an alternative to 8+ years PM experience"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship policy not stated",
+    "Role scope is very broad (6+ product areas) — could indicate under-resourcing or high coordination overhead",
+    "Director-level people management is described as 'ideally' but adjacent language treats it as expected — slight ambiguity on hard vs preferred"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from Director-level language, PM team management scope, and reporting line to Head of Product)",
+      "scope.business_model (inferred from open-source + commercial product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.remote_us_eligible (inferred from 'fully remote, hire globally' — not US-specific)",
+      "compensation.location_pay_differential (inferred as false from global remote / no mention of geo-based pay)"
+    ],
+    "ambiguities": [
+      "People management requirement: JD says 'ideally at the Director level or equivalent' which sounds preferred, but the surrounding context ('You've hired PMs, fired PMs... You can name the PMs you've developed') treats prior PM management as a hard requirement. Classified as hard; Director-level qualifier treated as soft signal.",
+      "Visa sponsorship: not mentioned anywhere in the JD. Marked as 'unclear'.",
+      "Ex-founder background is listed as an explicit alternative to 8+ years PM experience, creating ambiguity in how to classify the years requirement. Treated as hard but noting the founder-path alternative."
+    ]
+  }
+}

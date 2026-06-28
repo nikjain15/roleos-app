@@ -1,0 +1,340 @@
+{
+  "company": "Replit",
+  "role_title": "Japan Growth Lead",
+  "url": "https://jobs.ashbyhq.com/replit/999e1432-3edd-453b-b598-ab4b26e1bc5c",
+  "ats_provider": "ashby",
+  "ats_job_id": "999e1432-3edd-453b-b598-ab4b26e1bc5c",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Tokyo, Japan"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time in Tokyo",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Growth (non-PM) — enterprise/channel partnerships & market development",
+  "seniority": {
+    "level": "Senior IC / Lead",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in partnerships, business development, enterprise sales, or growth",
+      "Own end-to-end partnership development",
+      "Reports to International Partnerships Lead"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_partnerships_bd_sales",
+      "raw_text_from_jd": "8+ years of experience in partnerships, business development, enterprise sales, or growth, ideally in a technology or SaaS environment",
+      "skill_type": "years_of_experience",
+      "domain": "partnerships_business_development_enterprise_sales",
+      "minimum_value": 8,
+      "unit": "years",
+      "qualifier": "ideally in technology or SaaS",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology",
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "japanese_fluency",
+      "raw_text_from_jd": "Native or business-level Japanese fluency and deep cultural familiarity with Japan's business environment",
+      "skill_type": "capability",
+      "domain": "language_and_cultural_fluency",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Japan"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_govt_partnerships_japan",
+      "raw_text_from_jd": "Proven track record sourcing, structuring, and closing enterprise or government partnerships in Japan",
+      "skill_type": "outcome",
+      "domain": "enterprise_and_government_partnerships",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Japan"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "japan_public_sector_or_channel_experience",
+      "raw_text_from_jd": "Experience working with or selling to Japanese public sector institutions, large enterprises, or through channel/reseller networks",
+      "skill_type": "domain_knowledge",
+      "domain": "public_sector_enterprise_channel_sales",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Japan"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_stakeholder_communication",
+      "raw_text_from_jd": "Strong communicator who can adapt messaging for technical developers, non-technical operators, C-suite executives, and government stakeholders alike",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "self_starter_bias_for_action",
+      "raw_text_from_jd": "Self-starter with a bias for action; comfortable with ambiguity and excited to build market presence from the ground up",
+      "skill_type": "cultural_fit",
+      "domain": "autonomy_and_ambiguity",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_mindset",
+      "raw_text_from_jd": "Data-driven mindset — you measure what matters and use insights to iterate quickly",
+      "skill_type": "capability",
+      "domain": "analytics_and_iteration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_for_software_democratization",
+      "raw_text_from_jd": "Genuine passion for the future of software creation and democratizing access to building software",
+      "skill_type": "cultural_fit",
+      "domain": "mission_alignment",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "devtools_edu_saas_background",
+      "raw_text_from_jd": "Background in developer tools, coding education, SaaS platforms, or digital transformation consulting",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_tools_education_saas",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "developer tools",
+        "coding education",
+        "SaaS",
+        "digital transformation consulting"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "existing_japan_relationships",
+      "raw_text_from_jd": "Existing enterprise, government, or channel partner relationships in Japan you'd bring to the role",
+      "skill_type": "capability",
+      "domain": "existing_network_japan",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "Japan"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "partner_program_management_at_scale",
+      "raw_text_from_jd": "Experience managing or building partner programs at scale, including reseller programs with tiered incentives",
+      "skill_type": "capability",
+      "domain": "partner_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "japan_govt_digital_initiatives",
+      "raw_text_from_jd": "Familiarity with Japanese government digital initiatives such as DX (Digital Transformation) mandates or e-Gov platforms",
+      "skill_type": "domain_knowledge",
+      "domain": "japanese_government_digital_transformation",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "DX",
+        "e-Gov"
+      ],
+      "industries_named": [],
+      "geographies_named": [
+        "Japan"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "business_english_fluency",
+      "raw_text_from_jd": "Business-level English fluency for collaboration with Replit's global team",
+      "skill_type": "capability",
+      "domain": "language_fluency_english",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Replit's commercial presence in Japan — enterprise, government, education, channel/reseller, and community/PLG",
+    "business_model": "B2B and B2G (enterprise and government) + B2B channel/reseller + B2B2C education; SaaS platform",
+    "primary_metrics_inferred": [
+      "Deal pipeline volume and close rate",
+      "Channel/reseller revenue generated",
+      "Partnership agreements signed (enterprise, government, EDU)",
+      "Bottom-up/PLG adoption metrics in Japan",
+      "Market presence and brand recognition in Japan"
+    ],
+    "cross_functional_partners": [
+      "Replit global Partnerships team",
+      "Product",
+      "Marketing",
+      "Community",
+      "International Partnerships Lead"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end partnership development with enterprise accounts, government agencies, and public sector institutions in Japan",
+      "Identify, recruit, and activate resellers, system integrators, and channel partners who can distribute Replit's products in Japan",
+      "Build partnerships with Japanese universities, coding bootcamps, and educational institutions",
+      "Drive bottom-up adoption among Japanese builders through community engagement, developer relations, and PLG initiatives",
+      "Represent Replit at major Japanese technology conferences, trade shows, and industry events",
+      "Build and manage a robust deal pipeline, tracking opportunities from prospecting through close",
+      "Report on partnership and growth metrics"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Competitive Salary & Equity mentioned generically",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Japan",
+    "enterprise partnerships",
+    "government sales",
+    "channel partners",
+    "resellers",
+    "business development",
+    "developer tools",
+    "PLG",
+    "coding education",
+    "digital transformation",
+    "SaaS",
+    "Japanese fluency",
+    "market development"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership scope — 'own' end-to-end across enterprise, government, education, and PLG",
+    "High-impact, externally-facing role with direct market-building mandate",
+    "Equity mentioned alongside competitive salary",
+    "Generous benefits package (health, dental, vision, parental leave, FTO, wellness stipend)",
+    "Reports directly to International Partnerships Lead — clear line of authority",
+    "Encourages candidates from underrepresented and non-traditional backgrounds"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed — 'Competitive Salary & Equity' is vague",
+    "401(k) noted as 'US Only' — unclear what Japan-equivalent retirement benefits look like",
+    "No mention of visa sponsorship or work authorization support for Japan",
+    "Role is fully onsite in Tokyo with no remote option stated",
+    "Benefits section appears US-centric (401k, commuter benefits labelled 'In-Office Only') — applicability to Tokyo-based employee is unclear"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and 'Lead' title)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.business_model (inferred from product description and partnership targets)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type (stated as 'full-time role based in Tokyo, Japan'; interpreted as onsite)",
+      "compensation.source (no range stated; marked unknown)"
+    ],
+    "ambiguities": [
+      "Benefits section includes US-specific items (401k with 4% match 'US Only', commuter benefits 'In-Office Only') — unclear which apply to a Tokyo-based hire; may indicate benefits are partially or fully US-centric",
+      "Work authorization and visa sponsorship for Japan not mentioned anywhere in the JD",
+      "The archetype is closest to 'BizOps / Strategy & Ops' or 'Growth (non-PM)'; this role is primarily a market/partnership development lead, not a classic ops or product role — confidence is medium"
+    ]
+  }
+}

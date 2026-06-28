@@ -1,0 +1,361 @@
+{
+  "company": "Parloa",
+  "role_title": "Sr Technical Program Manager",
+  "url": "https://job-boards.eu.greenhouse.io/parloa/jobs/4877821101",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4877821101",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Enterprise Delivery / Professional Services TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of experience in technical program management, enterprise software delivery, consulting, professional services, or customer implementations",
+      "Mentoring junior TPMs and establishing scalable delivery best practices",
+      "Comp range $150K-$170K base OTE consistent with Senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_enterprise",
+      "raw_text_from_jd": "6+ years of experience in technical program management, enterprise software delivery, consulting, professional services, or customer implementations",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_enterprise_deployments",
+      "raw_text_from_jd": "Proven experience leading complex enterprise deployments involving integrations, multiple stakeholders, and cross-functional delivery teams",
+      "skill_type": "capability",
+      "domain": "enterprise_delivery_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_credibility",
+      "raw_text_from_jd": "Strong technical credibility and comfort discussing integrations, APIs, infrastructure dependencies, and implementation trade-offs",
+      "skill_type": "domain_knowledge",
+      "domain": "technical_integrations_and_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs",
+        "infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "delivery_methodologies",
+      "raw_text_from_jd": "Experience managing enterprise programs across Agile, Waterfall, and Hybrid delivery methodologies",
+      "skill_type": "capability",
+      "domain": "delivery_methodology",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_executive_communication",
+      "raw_text_from_jd": "Strong stakeholder management and executive communication skills with the ability to influence alignment across technical and business teams",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organized_execution_oriented",
+      "raw_text_from_jd": "Highly organized, execution-oriented, and comfortable operating in fast-paced, ambiguous environments",
+      "skill_type": "cultural_fit",
+      "domain": "execution_and_organization",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mindset",
+      "raw_text_from_jd": "Strong ownership mindset with the ability to proactively drive issues to resolution and maintain delivery momentum",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_and_accountability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mentoring_delivery_standards",
+      "raw_text_from_jd": "Experience mentoring junior team members or helping establish scalable delivery processes and governance standards",
+      "skill_type": "capability",
+      "domain": "team_development_and_governance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "conversational_ai_llms",
+      "raw_text_from_jd": "Experience with conversational AI, LLMs, or enterprise AI deployments",
+      "skill_type": "domain_knowledge",
+      "domain": "conversational_ai_and_llms",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "LLMs",
+        "conversational AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ccaas_platforms",
+      "raw_text_from_jd": "Exposure to CCaaS platforms, APIs, or enterprise integrations such as Genesys, Five9, NICE, or Avaya",
+      "skill_type": "tool_proficiency",
+      "domain": "ccaas_and_enterprise_integrations",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Genesys",
+        "Five9",
+        "NICE",
+        "Avaya"
+      ],
+      "technologies_named": [
+        "APIs",
+        "CCaaS"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "presales_sow",
+      "raw_text_from_jd": "Experience supporting pre-sales scoping, SOW development, resource estimation, or delivery planning",
+      "skill_type": "capability",
+      "domain": "pre_sales_and_sow",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "certifications_pmp_agile",
+      "raw_text_from_jd": "PMP, Scrum Master, Agile, or related certifications",
+      "skill_type": "credential",
+      "domain": "project_management_certifications",
+      "evidence_required": "verifiable_credential",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "PMP",
+        "Scrum Master",
+        "Agile"
+      ]
+    },
+    {
+      "id": "si_gsi_bpo_experience",
+      "raw_text_from_jd": "Experience working with SIs, GSIs, BPOs, or multi-region enterprise delivery programs",
+      "skill_type": "capability",
+      "domain": "partner_delivery_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "SIs",
+        "GSIs",
+        "BPOs"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tooling_passion",
+      "raw_text_from_jd": "Passion for AI tooling, operational excellence, and delivery process optimization",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_operational_excellence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "End-to-end enterprise Agentic AI deployment delivery — from kickoff through go-live and hypercare",
+    "business_model": "B2B enterprise SaaS / professional services, conversational AI platform",
+    "primary_metrics_inferred": [
+      "On-time delivery of enterprise AI deployments",
+      "Customer satisfaction and go-live success rates",
+      "Delivery process scalability and governance maturity"
+    ],
+    "cross_functional_partners": [
+      "Forward Deployed Engineers",
+      "Agent Architects",
+      "Product",
+      "Sales",
+      "Solution Engineering",
+      "Support",
+      "Deployment Strategists",
+      "Engagement Management",
+      "SIs / GSIs / BPOs / external implementation partners"
+    ],
+    "core_responsibilities": [
+      "Own end-to-end delivery across scope, timeline, budget, quality, risks, and dependencies for enterprise AI deployments",
+      "Lead implementations from SOW kickoff through design, integration, UAT, production go-live, and hypercare",
+      "Serve as the primary delivery contact for enterprise customer stakeholders, including executive sponsors and technical leaders",
+      "Coordinate technical delivery across integrations, infrastructure, environments, testing, and deployment readiness",
+      "Apply Agile, Waterfall, or Hybrid methodologies based on customer needs and implementation complexity",
+      "Mentor junior TPMs and help establish scalable delivery best practices across the broader organization",
+      "Support pre-sales activities including delivery scoping, resource estimation, SOW reviews, and implementation risk assessment",
+      "Manage co-delivery execution with SIs, GSIs, BPOs, and external implementation partners"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      150000,
+      170000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity package mentioned alongside base salary and performance-based variable component (OTE structure)",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "enterprise delivery",
+    "agentic AI",
+    "customer implementations",
+    "cross-functional",
+    "stakeholder management",
+    "RAID logs",
+    "Agile",
+    "Waterfall",
+    "Hybrid",
+    "conversational AI",
+    "CCaaS",
+    "SOW",
+    "go-live",
+    "hypercare",
+    "forward deployed engineers"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($150K-$170K base OTE) plus equity",
+    "Clear and detailed description of ownership areas and success criteria",
+    "High-visibility role with direct enterprise customer executive exposure",
+    "Well-known enterprise customers named (Booking.com, Allianz, SAP, TUI) indicating product maturity",
+    "Backed by strong investors: General Catalyst, EQT Ventures, Altimeter Capital",
+    "Structured recruiting process disclosed upfront"
+  ],
+  "red_flags": [
+    "Location not specified in the JD — remote, hybrid, or onsite status is entirely unclear",
+    "Visa sponsorship policy not mentioned despite being an e-verify employer",
+    "OTE structure means variable pay component is not quantified, making total comp range ambiguous",
+    "Role spans a very broad scope (pre-sales through post-go-live mentoring) which may indicate bandwidth pressure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years requirement + comp range + mentoring expectation)",
+      "location.type (not stated in JD; marked unclear)",
+      "scope.business_model (inferred from product description and customer list)",
+      "scope.primary_metrics_inferred (inferred from success criteria section; not stated as KPIs)",
+      "compensation.base_range_usd (stated as OTE range; whether this is base-only or total OTE is ambiguous)"
+    ],
+    "ambiguities": [
+      "Compensation is described as OTE (base + variable), but the $150K-$170K range label is 'Salary Range' — it is unclear whether the range represents base salary only or total OTE including variable.",
+      "No location information is provided in the JD body or metadata — remote, hybrid, or onsite status cannot be determined.",
+      "Parloa is noted as an e-verify employer in the USA but no visa sponsorship or work authorization requirements are stated."
+    ]
+  }
+}

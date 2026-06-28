@@ -1,0 +1,294 @@
+{
+  "company": "Brex",
+  "role_title": "BizOps Senior Manager Technical",
+  "url": "https://www.brex.com/careers/8550065002?gh_jid=8550065002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8550065002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "minimum of three days in the office per week, Monday Wednesday and Thursday",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Senior Manager / Director-equivalent",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "5+ years of experience leading teams",
+      "Title is 'Senior Manager'",
+      "Leads a team of highly technical operators",
+      "Comp range $210,600–$263,250 base, consistent with Senior Manager at a late-stage fintech"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_leading_systems_bizops",
+      "raw_text_from_jd": "5+ years of experience leading Systems, BizOps, TechOps, Internal Platform, or Operational Excellence teams in high-growth, fast-paced environments.",
+      "skill_type": "years_of_experience",
+      "domain": "systems_bizops_techops_leadership",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth, fast-paced environments"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "building_scaling_internal_systems",
+      "raw_text_from_jd": "Proven track record of building and scaling internal systems, workflows, and operational tooling that drive measurable business impact.",
+      "skill_type": "outcome",
+      "domain": "internal_systems_and_tooling",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_llm_automation_experience",
+      "raw_text_from_jd": "Experience leveraging AI/LLM technologies to automate workflows, improve operational efficiency, or build internal tools and agentic systems.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_llm_automation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "LLM",
+        "agentic systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "modern_operational_tooling_knowledge",
+      "raw_text_from_jd": "Strong understanding of modern operational tooling ecosystems, including platforms such as Salesforce, Retool, workflow automation tools, and data infrastructure.",
+      "skill_type": "tool_proficiency",
+      "domain": "operational_tooling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce",
+        "Retool"
+      ],
+      "technologies_named": [
+        "workflow automation",
+        "data infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency_systems_automation",
+      "raw_text_from_jd": "Technical fluency with systems architecture and automation development, including working knowledge of JavaScript, Python, SQL, APIs, and AI tooling ecosystems.",
+      "skill_type": "capability",
+      "domain": "systems_architecture_and_automation",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "JavaScript",
+        "Python",
+        "SQL",
+        "APIs",
+        "AI tooling ecosystems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_operational_mindset",
+      "raw_text_from_jd": "Strong analytical and operational mindset with the ability to use data to inform strategy, prioritize investments, and measure business outcomes.",
+      "skill_type": "capability",
+      "domain": "data_driven_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_alignment",
+      "raw_text_from_jd": "Demonstrated ability to operate effectively across highly cross-functional environments and align technical solutions with business strategy.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_complex_initiatives",
+      "raw_text_from_jd": "Proven ability to navigate ambiguity, drive alignment across stakeholders, and lead complex initiatives from concept to execution.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_bias_to_action",
+      "raw_text_from_jd": "Strong ownership mentality with a bias toward action and a willingness to operate hands-on when needed.",
+      "skill_type": "cultural_fit",
+      "domain": "leadership_style",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "excitement_ai_native_systems",
+      "raw_text_from_jd": "Excitement for building the next generation of AI-native operational systems and workflows.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_native_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI-native operational systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Systems and operational infrastructure powering Brex's Operations organization — including Risk, Compliance, Payment Operations, Servicing, and Banking Operations",
+    "business_model": "B2B fintech — corporate cards, banking, spend management, bill pay, and travel software",
+    "primary_metrics_inferred": [
+      "Operational efficiency and automation rate",
+      "Measurable business impact of internal systems and tooling",
+      "AI-native workflow adoption across Operations"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Data",
+      "Finance",
+      "Operations",
+      "GTM"
+    ],
+    "core_responsibilities": [
+      "Lead a team of highly technical operators responsible for systems, automation, and operational infrastructure",
+      "Define long-term vision for how Brex scales operationally",
+      "Drive execution on high-impact systems, workflows, and AI-powered tooling",
+      "Transform traditional operations into AI-native organizations through intelligent automation, agentic workflows, decision infrastructure, and scalable internal platforms",
+      "Partner with Product, Engineering, Data, Finance, and Operations leaders to solve complex business problems"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      210600,
+      263250
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity and other forms of compensation may be provided as part of a total compensation package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "AI-native",
+    "agentic workflows",
+    "LLM",
+    "operational infrastructure",
+    "BizOps",
+    "TechOps",
+    "internal platforms",
+    "workflow automation",
+    "Salesforce",
+    "Retool",
+    "Python",
+    "SQL",
+    "fintech",
+    "systems architecture",
+    "operational excellence"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($210,600–$263,250 base)",
+    "Clear ownership area — Operations systems across Risk, Compliance, Payment Operations, Servicing, Banking Operations",
+    "Explicit hybrid policy with structured in-office days and up to 4 weeks fully remote as a perk",
+    "High company visibility and cross-functional scope",
+    "Role sits at intersection of AI transformation and operational scale — high strategic importance"
+  ],
+  "red_flags": [
+    "Hybrid requirement mandates three specific days (Mon/Wed/Thu) in San Francisco office — highly restrictive for non-local candidates",
+    "No mention of visa sponsorship or work authorization — unclear for international applicants",
+    "Buzzword-heavy JD (AI-native, agentic, connective tissue repeated) with limited specificity on actual deliverables or success metrics",
+    "Responsibilities section partially repeats the 'Systems at Brex' intro verbatim — signals possible JD template/copy-paste issue"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior Manager', comp range, and team leadership signals)",
+      "seniority.manages_people (inferred from 'lead a team of highly technical operators')",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not in JD)",
+      "scope.business_model (inferred from company description)",
+      "compensation.location_pay_differential (inferred from 'starting base pay will depend on... candidate's location')"
+    ],
+    "ambiguities": [
+      "The 'Systems at Brex' section and 'Responsibilities' section contain nearly identical text — unclear if this is intentional or a copy-paste error in the JD.",
+      "No nice-to-haves or preferred qualifications are stated; all requirements treated as hard per JD language.",
+      "Work authorization and visa sponsorship are not mentioned anywhere in the JD."
+    ]
+  }
+}

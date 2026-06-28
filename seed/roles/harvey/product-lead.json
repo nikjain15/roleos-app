@@ -1,0 +1,229 @@
+{
+  "company": "Harvey",
+  "role_title": "Product Lead",
+  "url": "https://jobs.ashbyhq.com/harvey/7fd9be3d-7b34-49bc-ba75-f8a90b7269a0",
+  "ats_provider": "ashby",
+  "ats_job_id": "7fd9be3d-7b34-49bc-ba75-f8a90b7269a0",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Toronto"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in Toronto office, 2 days working from home",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "AI Product Manager (enterprise B2B SaaS, legal/professional services)",
+  "seniority": {
+    "level": "Director / Senior PM Manager",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "10+ years of product management experience",
+      "3+ years in a people-management capacity leading product teams",
+      "JD title is 'Product Lead' but body references 'Director of Product'",
+      "Responsible for leading, mentoring, and growing a team of product managers"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "10+ years of product management experience, including 3+ years in a people-management capacity leading product teams at a B2B SaaS company serving enterprise customers.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "B2B SaaS company serving enterprise customers"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "years_people_management",
+      "raw_text_from_jd": "including 3+ years in a people-management capacity leading product teams at a B2B SaaS company serving enterprise customers.",
+      "skill_type": "years_of_experience",
+      "domain": "people_management",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "B2B SaaS company serving enterprise customers"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "shipping_track_record",
+      "raw_text_from_jd": "A track record of shipping high-quality products end-to-end, from discovery and definition through launch and iteration, in fast-paced and ambiguous environments.",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_and_tactical",
+      "raw_text_from_jd": "Demonstrated ability to think strategically and operate tactically — comfortable setting long-term vision while rolling up your sleeves to solve immediate customer problems.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_communication_skills",
+      "raw_text_from_jd": "Strong analytical and communication skills, with experience using data to drive decisions and the ability to articulate a clear product vision to both technical and non-technical audiences.",
+      "skill_type": "capability",
+      "domain": "data_driven_decision_making",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "A technical background or strong technical fluency, enabling productive collaboration with engineering teams on complex system design and trade-offs.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_growth_environment",
+      "raw_text_from_jd": "Experience operating in high-growth environments where priorities shift quickly and the ability to navigate ambiguity is essential.",
+      "skill_type": "domain_knowledge",
+      "domain": "high_growth_startups",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "One or more of Harvey's core product areas serving enterprise professional services customers; role anchored in Toronto office",
+    "business_model": "B2B SaaS, enterprise, AI platform for legal and professional services",
+    "primary_metrics_inferred": [
+      "Product adoption",
+      "Engagement",
+      "Business impact / revenue",
+      "Customer satisfaction"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Go-to-Market",
+      "Customer Success",
+      "Sales"
+    ],
+    "core_responsibilities": [
+      "Define and drive the product strategy and roadmap for one or more of Harvey's core product areas",
+      "Lead, mentor, and grow a team of product managers",
+      "Partner with Engineering and Design to deliver high-quality, scalable product experiences",
+      "Engage directly with customers, Customer Success, and Sales to deeply understand workflows, pain points, and opportunities",
+      "Drive alignment across senior stakeholders on trade-offs, sequencing, and resource allocation",
+      "Establish and track key metrics for product adoption, engagement, and business impact",
+      "Help shape the local Toronto team culture while contributing to company-wide product strategy"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "product strategy",
+    "enterprise B2B SaaS",
+    "people management",
+    "AI platform",
+    "legal and professional services",
+    "roadmap",
+    "product adoption",
+    "agentic AI",
+    "Toronto",
+    "high-growth"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear hybrid working policy stated (3 days office, 2 days remote)",
+    "Company has strong product-market fit signals: 1500+ customers, 60+ countries",
+    "Founding team opportunity in Toronto office — meaningful ownership potential",
+    "Well-funded with world-class investor support mentioned",
+    "Explicit equal opportunity employer statement and disability accommodation process"
+  ],
+  "red_flags": [
+    "Role title is 'Product Lead' in identity fields but body consistently references 'Director of Product' — possible title mismatch or intentional leveling ambiguity worth clarifying",
+    "Compensation and equity details entirely absent",
+    "Visa sponsorship status not mentioned at all",
+    "Toronto-only hybrid role; fully remote or US-based candidates not eligible",
+    "No mention of AI/legal domain experience as a requirement despite it being a core product area — could signal very high bar in other areas"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 10+ years PM, 3+ years management, and Director-level language in body)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "scope.business_model (inferred from company description and enterprise customer references)",
+      "compensation.equity_mentioned (false — not stated in JD)",
+      "location.work_auth and location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Role title in identity fields is 'Product Lead' but the JD body consistently uses 'Director of Product' — unclear if these are the same level or a deliberate title discrepancy. Both readings noted.",
+      "JD mentions AI usage in recruitment process but does not clarify whether candidates must be located in Toronto at time of hire or if relocation support is offered."
+    ]
+  }
+}

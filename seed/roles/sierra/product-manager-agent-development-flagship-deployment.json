@@ -1,0 +1,321 @@
+{
+  "company": "Sierra",
+  "role_title": "Product Manager, Agent Development - Flagship Deployment",
+  "url": "https://jobs.ashbyhq.com/sierra/758beaca-db59-4e46-9867-7a93989735a7",
+  "ats_provider": "ashby",
+  "ats_job_id": "758beaca-db59-4e46-9867-7a93989735a7",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "primarily in-person",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager – embedded enterprise account",
+  "seniority": {
+    "level": "Senior PM / Staff PM",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5–8+ years of experience building highly technical products",
+      "at least 2–3 years as a Senior PM or above",
+      "owns a flagship enterprise account end-to-end",
+      "expected to navigate executive-level enterprise conversations"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_technical_product",
+      "raw_text_from_jd": "5–8+ years of experience building highly technical products, with at least 2–3 years as a Senior PM or above (or equivalent demonstrated scope and ownership).",
+      "skill_type": "years_of_experience",
+      "domain": "technical_product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "senior_pm_tenure",
+      "raw_text_from_jd": "at least 2–3 years as a Senior PM or above (or equivalent demonstrated scope and ownership).",
+      "skill_type": "years_of_experience",
+      "domain": "senior_product_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "engineering_background",
+      "raw_text_from_jd": "Engineering background or equivalent technical depth — you can review architecture, reason about API design, and hold your own in a technical discussion without needing an engineer to translate.",
+      "skill_type": "capability",
+      "domain": "software_engineering",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "API design"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "production_systems_at_scale",
+      "raw_text_from_jd": "You've shipped and owned production-grade systems at scale, with the reliability, observability, and hard tradeoffs that come with complex systems.",
+      "skill_type": "outcome",
+      "domain": "production_systems",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "reliability",
+        "observability"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_technical_partner",
+      "raw_text_from_jd": "A track record of operating as a trusted technical partner to enterprise customers — managing ambiguity and competing priorities, influencing without authority, and knowing when to push back.",
+      "skill_type": "outcome",
+      "domain": "enterprise_customer_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_quality_bar",
+      "raw_text_from_jd": "A high quality bar and quick to learn — you sweat the details others let slide, and pick up unfamiliar tools and domains fast.",
+      "skill_type": "cultural_fit",
+      "domain": "quality_and_learning",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "exceptional_communication",
+      "raw_text_from_jd": "Exceptional communication: you can explain a complex integration decision to an engineer, then explain the same decision to a VP.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "llm_ai_agents_experience",
+      "raw_text_from_jd": "You've worked with language models and production AI agents, and understand not just what they do but also how they work under the hood.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_agents_and_llms",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "language models",
+        "production AI agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "retail_consumer_ops",
+      "raw_text_from_jd": "You are familiar with retail or consumer business operations — order management, CX workflows, fulfillment, subscriptions, or commerce infrastructure.",
+      "skill_type": "domain_knowledge",
+      "domain": "retail_consumer_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "retail",
+        "consumer"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "builder_mindset",
+      "raw_text_from_jd": "You're a builder — side projects, open source, a startup attempt, or real production code (TypeScript, Go, Python, or similar) and enjoy getting your hands dirty.",
+      "skill_type": "cultural_fit",
+      "domain": "builder_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "TypeScript",
+        "Go",
+        "Python"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "embedded_enterprise_account",
+      "raw_text_from_jd": "Experience working in a dedicated, embedded model with a named enterprise account — you know what it means to be accountable for a relationship at that depth.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_account_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "mba_business_breadth",
+      "raw_text_from_jd": "MBA or equivalent business breadth — this is a product role, but you'll shape account strategy, commercial conversations, and what Sierra builds next.",
+      "skill_type": "credential",
+      "domain": "business_strategy",
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Production AI agents (chat and beyond) for Sierra's largest strategic customer — managing millions of customer interactions",
+    "business_model": "B2B enterprise SaaS – AI agent platform sold to large enterprises",
+    "primary_metrics_inferred": [
+      "Agent quality and reliability at scale",
+      "Customer experience outcomes (resolution rates, escalation rates)",
+      "Platform capability development driven by flagship account needs"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Platform team",
+      "Enterprise customer business units",
+      "Procurement",
+      "Compliance",
+      "Senior executives (customer-side)"
+    ],
+    "core_responsibilities": [
+      "Own the agent end to end — workflows, decisions, escalation logic, architecture, data flows, APIs, integrations, and user experience",
+      "Drive quality and outcomes: run evaluations, dig into failures, identify highest leverage improvements, and ship them with engineers",
+      "Push the platform forward by translating hard flagship problems into new platform capabilities with the Platform team",
+      "Navigate enterprise complexity across business units, procurement, compliance, and senior execs",
+      "Invent next experiences proactively and partner with customer teams to scope, design, and ship them"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity plans (options/RSUs implied for eligible full-time employees)",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "AI agents",
+    "production AI agents",
+    "flagship account",
+    "enterprise",
+    "technical PM",
+    "language models",
+    "platform",
+    "observability",
+    "reliability",
+    "embedded model",
+    "customer experience",
+    "API design",
+    "scale"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Highly specific role with clear ownership (flagship customer, production AI agents at scale)",
+    "Strong co-founder pedigree (Bret Taylor, Clay Bavor) lending credibility to the company's AI ambitions",
+    "Explicitly states 0→1 platform work driven by real scale problems — signal of high-impact engineering culture",
+    "Equity participation mentioned for full-time employees",
+    "Encourages candidates to apply even if experience doesn't precisely match",
+    "Stated company values provide transparency into culture expectations"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Primarily in-person in San Francisco; limited flexibility for remote candidates",
+    "Visa sponsorship status not stated",
+    "Embedded enterprise account model can create intense customer pressure and limited product autonomy",
+    "5–8+ years range with Senior PM minimum creates a narrow target band"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range + 'Senior PM or above' language)",
+      "scope.business_model (inferred from product description and customer description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "location.remote_us_eligible (inferred from 'primarily an in-person company based in San Francisco')",
+      "compensation.equity_form (inferred from 'Sierra's equity plans subject to the terms of the applicable plans and policies')"
+    ],
+    "ambiguities": [
+      "Location: JD says Sierra is 'primarily an in-person company based in San Francisco' but lists many global offices (Atlanta, New York, London, Paris, Madrid, Munich, Singapore, Tokyo, Sydney). It is unclear whether this role could be based in one of those offices or is strictly San Francisco. Treated as onsite in San Francisco.",
+      "Visa sponsorship is not mentioned anywhere in the JD. Marked as 'unclear'.",
+      "The '5–8+ years' phrasing is unusual — the '+' after '8' suggests the range is open-ended above 8 years, not capped. Minimum set to 5, max left null."
+    ]
+  }
+}

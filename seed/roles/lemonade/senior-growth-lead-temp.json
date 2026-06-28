@@ -1,0 +1,275 @@
+{
+  "company": "Lemonade",
+  "role_title": "Senior Growth Lead Temp",
+  "url": "https://jobs.ashbyhq.com/lemonade/5a85a94a-057b-4fa6-8129-e0c75405ea3e",
+  "ats_provider": "ashby",
+  "ats_job_id": "5a85a94a-057b-4fa6-8129-e0c75405ea3e",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "most days of the week",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years in growth, performance marketing, product, or strategy roles",
+      "Senior growth leader for Pet squad",
+      "Thought partner to senior stakeholders",
+      "Key member of broader growth and company leadership"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_growth_strategy",
+      "raw_text_from_jd": "7+ years in growth, performance marketing, product, or strategy roles, with a focus on owning and scaling a key product or business line",
+      "skill_type": "years_of_experience",
+      "domain": "growth_marketing_strategy",
+      "minimum_value": 7,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "measurable_growth_track_record",
+      "raw_text_from_jd": "Proven track record driving measurable growth via paid and non-paid channels, with strong business acumen across acquisition, CAC, LTV, and retention",
+      "skill_type": "outcome",
+      "domain": "growth_marketing",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "d2c_fast_paced_experience",
+      "raw_text_from_jd": "Experience working on a D2C product in a fast-paced, test-and-learn environment, with comfort navigating complex, regulated industries",
+      "skill_type": "domain_knowledge",
+      "domain": "direct_to_consumer",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_vision_to_execution",
+      "raw_text_from_jd": "Demonstrated ability to set a strategic vision and break it into concrete goals, experiments, and roadmaps",
+      "skill_type": "capability",
+      "domain": "strategy_and_planning",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_fluency",
+      "raw_text_from_jd": "High fluency in data, able to interrogate dashboards, run analysis, and partner with analysts to uncover insights and make decisions",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Experience leading cross-functional teams or pods, setting priorities, aligning stakeholders, and driving high-velocity output",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_influence",
+      "raw_text_from_jd": "Excellent communication skills — you can navigate tough conversations, influence stakeholders, and represent your team at all levels of the org",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "office_presence",
+      "raw_text_from_jd": "Ability to work in an office environment most days of the week",
+      "skill_type": "cultural_fit",
+      "domain": "work_environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_enthusiasm",
+      "raw_text_from_jd": "Enthusiasm about learning and adapting to the exciting world of AI – a commitment to exploring this field is a fundamental part of our culture",
+      "skill_type": "cultural_fit",
+      "domain": "ai_adoption",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "insurance_or_fintech_experience",
+      "raw_text_from_jd": "insurance or fintech experience is a plus",
+      "skill_type": "domain_knowledge",
+      "domain": "insurance_fintech",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "insurance",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Pet Insurance growth — paid and non-paid channels, lifecycle marketing, partnerships, veterinary distribution",
+    "business_model": "D2C insurance (B2C), AI-first insurance platform",
+    "primary_metrics_inferred": [
+      "CAC (Customer Acquisition Cost)",
+      "LTV (Lifetime Value)",
+      "Retention",
+      "Acquisition volume",
+      "Business-level growth objectives for Pet Insurance"
+    ],
+    "cross_functional_partners": [
+      "Performance marketers",
+      "Product managers",
+      "Analysts",
+      "Content marketers",
+      "Senior stakeholders"
+    ],
+    "core_responsibilities": [
+      "Execute and evolve the Pet Insurance growth strategy, balancing short- and long-term objectives",
+      "Translate strategy into a clear, executable growth plan using paid and non-paid channels, lifecycle marketing, partnerships, and more",
+      "Develop and expand new distribution channels, including partner and veterinary relationships",
+      "Own the key business metrics and growth objectives for Pet",
+      "Lead the go-to-market strategy for new launches, campaigns, and initiatives",
+      "Serve as the growth lead for the Pet squad",
+      "Influence and shape broader company strategy and planning",
+      "Be a thought partner to senior stakeholders"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "growth strategy",
+    "Pet insurance",
+    "paid channels",
+    "lifecycle marketing",
+    "D2C",
+    "CAC",
+    "LTV",
+    "cross-functional",
+    "AI-first",
+    "distribution channels",
+    "performance marketing",
+    "go-to-market"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership scope — Pet Insurance business line with defined metrics (CAC, LTV, retention)",
+    "AI-first culture signals a forward-looking environment",
+    "Temporary 6-month role (mat-leave cover) — may appeal to candidates seeking shorter engagements or re-entry opportunities",
+    "Explicitly states what three things matter for every role (drive, efficiency, adaptability) — cultural transparency"
+  ],
+  "red_flags": [
+    "Temporary/contract role (6-month mat-leave basis) — no indication of conversion to permanent",
+    "No compensation range disclosed",
+    "No city or location specified — unclear which office candidates would be expected in most days",
+    "Visa sponsorship and work authorization not addressed",
+    "Office presence 'most days of the week' required but office location not stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement and 'senior growth leader' framing)",
+      "seniority.manages_people (inferred as false — role leads a squad but no direct people management stated)",
+      "scope.business_model (inferred from D2C and insurance context)",
+      "scope.primary_metrics_inferred (inferred from CAC, LTV, retention references in JD)",
+      "location.cities_listed (not stated; no city named in JD)",
+      "location.remote_us_eligible (inferred false from 'most days in office' requirement)"
+    ],
+    "ambiguities": [
+      "No office location is named in the JD despite requiring in-office presence most days — candidate cannot confirm geography from JD alone",
+      "Role is described as temporary (6-month mat-leave) but no indication whether conversion to permanent is possible",
+      "The D2C regulated industry requirement says 'comfort navigating complex, regulated industries' is required, but 'insurance or fintech experience is a plus' — unclear if regulated industry experience is hard required or soft preferred; treated as hard for the general requirement and soft for the specific insurance/fintech label"
+    ]
+  }
+}

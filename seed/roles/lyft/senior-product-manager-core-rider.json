@@ -1,0 +1,233 @@
+{
+  "company": "Lyft",
+  "role_title": "Senior Product Manager, Core Rider",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8594724002?gh_jid=8594724002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8594724002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM (consumer app, ride request flows, membership/loyalty)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 4,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "4+ years in product management required",
+      "Title is Senior Product Manager",
+      "Base comp range $148K-$185K in SF, consistent with senior IC at Lyft",
+      "Leads core team of engineers, designers, data scientists, and marketers",
+      "Expected to drive strategic alignment and present to executive levels"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "4+ years in product management, product design or equivalent consultant experience with significant time spent leading consumer facing products.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 4,
+      "unit": "years",
+      "qualifier": "consumer-facing products focus",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "natural_leadership_project_management",
+      "raw_text_from_jd": "Natural leadership and ability to make things happen. You manage project ambiguity, complexity, and interdependencies in an organized and structured way, and you are able to define and analyze metrics that inform the success of your products.",
+      "skill_type": "capability",
+      "domain": "leadership_and_project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_ecosystem_judgment",
+      "raw_text_from_jd": "Excellent judgment and thoughtfulness about the dynamics of the product ecosystem.",
+      "skill_type": "domain_knowledge",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Strong communication skills and intuition for communication strategy at every level -- within teams, within the company, to users, and other audiences.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_project_prioritization",
+      "raw_text_from_jd": "Ability to conceptualize, prioritize and lead multiple projects for stakeholders.",
+      "skill_type": "capability",
+      "domain": "prioritization_and_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_oriented_organizational_skills",
+      "raw_text_from_jd": "Detail oriented with superior organizational skills -- balancing multiple projects, deadlines, and requests should be second nature to you.",
+      "skill_type": "capability",
+      "domain": "organizational_skills",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "membership_subscription_loyalty_background",
+      "raw_text_from_jd": "Background in membership, subscription, or loyalty program development in consumer-facing products or services preferred",
+      "skill_type": "domain_knowledge",
+      "domain": "membership_subscription_loyalty",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "consumer"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Lyft consumer app — core ride request flows (Golden Path strategy), spanning request and purchase flows, search, pickups and drop offs, post-match and in-trip experiences",
+    "business_model": "B2C ride-sharing / mobility marketplace",
+    "primary_metrics_inferred": [
+      "Ride request conversion rate",
+      "Core consumer funnel metrics",
+      "Business impact from ride request flow improvements",
+      "User retention / repeat ride rates"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data Science",
+      "Design",
+      "Marketing",
+      "Executive Leadership",
+      "Partner Teams"
+    ],
+    "core_responsibilities": [
+      "Drive strategic alignment by analyzing Lyft's competitive landscape and market position to define an ambitious product vision",
+      "Set team goals and success metrics that directly support Lyft's mission",
+      "Lead through uncharted product territory by analyzing fragmented data and emerging patterns to define strategic direction",
+      "Build a product roadmap to achieve your goals and lead a core team of engineers, designers, data scientists, and marketers to execute on it",
+      "Deeply understand the needs and motivations of your customers",
+      "Completely own your team's products from ideation, through development, launch, growth, and maintenance",
+      "Clearly communicate roadmaps, priorities, experiments, and decisions across a wide spectrum of audiences from partner teams to executive levels"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      148000,
+      185000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering (not quantified)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "consumer product",
+    "ride request flows",
+    "Golden Path strategy",
+    "product roadmap",
+    "data analysis",
+    "competitive intelligence",
+    "user research",
+    "cross-functional collaboration",
+    "membership",
+    "subscription",
+    "loyalty",
+    "ridesharing",
+    "consumer app"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($148K-$185K base) plus equity and bonus mentioned",
+    "Clear product surface and ownership area (Golden Path, core ride request flows)",
+    "18 weeks paid parental leave and strong benefits package",
+    "Hybrid with flexibility to work from anywhere up to 4 weeks per year",
+    "Well-defined cross-functional team (engineering, design, data science, marketing)"
+  ],
+  "red_flags": [
+    "Hybrid requires 3 specific days in office (Mon, Wed, Thu) — less flexible than typical hybrid arrangements",
+    "No visa sponsorship information provided — unclear for candidates requiring sponsorship",
+    "JD references 'equivalent consultant experience' as an alternative to PM experience, which may indicate non-traditional candidates are acceptable but the threshold for 'equivalent' is undefined"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title, comp range, and scope of responsibilities)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed in JD)",
+      "scope.business_model (inferred from product description)",
+      "location.visa_sponsorship (not mentioned in JD; set to 'unclear')"
+    ],
+    "ambiguities": [
+      "'4+ years in product management, product design or equivalent consultant experience' — unclear whether 4 years of product design or consulting alone satisfies this requirement or if PM experience is strictly required; treated as hard given the unconditional phrasing",
+      "Bonus mentioned as part of total comp ('not inclusive of potential equity offering, bonus or benefits') but no details provided on bonus structure or target"
+    ]
+  }
+}

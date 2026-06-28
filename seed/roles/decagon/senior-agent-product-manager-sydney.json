@@ -1,0 +1,258 @@
+{
+  "company": "Decagon",
+  "role_title": "Senior Agent Product Manager - Sydney",
+  "url": "https://jobs.ashbyhq.com/decagon/7d9e30a4-249b-4032-930c-4bd7bc8addb1",
+  "ats_provider": "ashby",
+  "ats_job_id": "7d9e30a4-249b-4032-930c-4bd7bc8addb1",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "Sydney"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "in-office (company describes itself as an in-office company)",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "AI Product Manager / Client-Facing Solutions Owner",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of experience owning ambiguous, high-stakes outcomes",
+      "Senior individual contributor role explicitly stated",
+      "Directs forward deployed engineers and partner teams but is not a people manager",
+      "Counterpart is C-suite of Fortune 500 companies"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_high_stakes_ownership",
+      "raw_text_from_jd": "6+ years of experience owning ambiguous, high-stakes outcomes and earning the trust of senior executives. This includes engagement managers, project leaders, and senior managers from top consulting firms, as well as product managers, founders, and forward-deployed or solutions roles at high-growth technology companies.",
+      "skill_type": "years_of_experience",
+      "domain": "high_stakes_client_ownership",
+      "minimum_value": 6,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "top consulting firms",
+        "high-growth technology companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "builders_instinct",
+      "raw_text_from_jd": "A builder's instinct. You want to design and build the actual solution, not just diagnose the problem or manage someone else who builds it.",
+      "skill_type": "capability",
+      "domain": "solution_design_and_delivery",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_acumen_ai",
+      "raw_text_from_jd": "Strong technical acumen. You can understand and shape AI agent designs and hold your own in a technical conversation with both engineers and executives.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_agents",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_presence",
+      "raw_text_from_jd": "Executive presence and a track record of becoming a trusted advisor to senior decision-makers at large, complex organizations.",
+      "skill_type": "capability",
+      "domain": "executive_relationship_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_comfort",
+      "raw_text_from_jd": "Comfort operating in fast-moving, ambiguous environments where you shape the solution as much as you implement it.",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "cs_engineering_math_degree",
+      "raw_text_from_jd": "A Computer Science, Engineering, or Math degree, or equivalent hands-on technical experience.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Computer Science degree",
+        "Engineering degree",
+        "Math degree"
+      ]
+    },
+    {
+      "id": "mba_biz_strategy",
+      "raw_text_from_jd": "An MBA, or equivalent experience at the intersection of business strategy and technology, is a plus.",
+      "skill_type": "credential",
+      "domain": "business_strategy",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "MBA"
+      ]
+    },
+    {
+      "id": "enterprise_software_experience",
+      "raw_text_from_jd": "Experience selling, deploying, or advising on enterprise software or transformation programs at the Fortune 500 level.",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_software",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise AI agent deployments for Fortune 500 clients across voice, chat, email, SMS, and other channels",
+    "business_model": "B2B enterprise SaaS / conversational AI platform",
+    "primary_metrics_inferred": [
+      "Successful delivery and adoption of AI agents",
+      "Account expansion and revenue growth",
+      "Customer satisfaction and executive trust",
+      "Agent performance in production"
+    ],
+    "cross_functional_partners": [
+      "Strategic Account Directors",
+      "Agent Strategy Managers",
+      "Forward Deployed Engineers",
+      "Sales",
+      "Solutions Engineers",
+      "Product",
+      "Engineering"
+    ],
+    "core_responsibilities": [
+      "Own the technical win on Decagon's largest strategic opportunities, partnering with Sales, Solutions Engineers and Forward-deployed engineers to build working AI agents that turn sophisticated, skeptical buyers into signed customers.",
+      "Serve as the executive partner to the C-suite of Fortune 500 companies, defining and driving their AI transformation roadmap and owning the relationship from first conversation through production and expansion.",
+      "Design, build, and optimize enterprise-grade AI agents in production, going deep on each customer's workflows, pain points, and goals.",
+      "Turn the frameworks and playbooks you develop into reusable assets that scale across accounts and feed directly into Decagon's product roadmap.",
+      "Direct Forward-deployed engineers and partner teams to deliver at scale while you stay accountable for the outcome.",
+      "Run tight feedback loops into Product and Engineering, shaping the product based on what you learn on the front lines of our most demanding deployments."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "AI agents",
+    "conversational AI",
+    "enterprise",
+    "Fortune 500",
+    "C-suite",
+    "customer experience",
+    "transformation roadmap",
+    "forward-deployed engineers",
+    "strategic accounts",
+    "technical acumen",
+    "executive presence",
+    "playbooks",
+    "product roadmap"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Clear articulation of role ownership and scope — not account management or standardized implementation",
+    "Role explicitly described as high-leverage: 'The work compounds in a way most roles don't'",
+    "Backed by prominent investors (a16z, Accel, Bain Capital Ventures, Coatue, Index Ventures)",
+    "Client list includes recognizable brand names (Cash App, Chime, Oura Health)",
+    "Comprehensive benefits package including parental leave, fertility benefits, retirement plan"
+  ],
+  "red_flags": [
+    "Compensation not disclosed",
+    "Visa sponsorship and work authorization not mentioned — unclear for Sydney-based international candidates",
+    "Role title says 'Product Manager' but responsibilities are closer to a hybrid of solutions engineering, consulting, and technical account ownership — role archetype may be misrepresented",
+    "In-office requirement with no remote option stated",
+    "Very high expectations (C-suite partner + builder + technical architect + account owner) for a single IC role"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 6+ years, 'senior individual contributor' label, and C-suite counterpart signal)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from product description and customer list)",
+      "compensation.equity_mentioned (not stated; defaulted to false)",
+      "location.work_auth and visa_sponsorship (not mentioned; marked unclear)",
+      "archetype (role blends consulting, solutions, and PM — classified as Technical Program Manager with secondary AI PM label)"
+    ],
+    "ambiguities": [
+      "Role is titled 'Product Manager' but the responsibilities (building AI agents for clients, owning customer relationships, pre-sales involvement) are more consistent with a Forward-Deployed Engineer, Solutions Architect, or Technical Account Executive. Archetype set to Technical Program Manager with low-to-medium confidence.",
+      "Benefits mention 401K and pension which are typically US/UK instruments; role is listed as Sydney-based, suggesting these may be US headquarters benefits listed generically.",
+      "No explicit statement about visa sponsorship or work authorization requirements for Sydney location."
+    ]
+  }
+}

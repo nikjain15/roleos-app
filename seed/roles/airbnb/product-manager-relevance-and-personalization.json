@@ -4,7 +4,7 @@
   "url": "https://careers.airbnb.com/positions/7905365?gh_jid=7905365",
   "ats_provider": "greenhouse",
   "ats_job_id": "7905365",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -21,7 +21,7 @@
   "archetype_confidence": "high",
   "secondary_archetype": "Technical PM",
   "seniority": {
-    "level": "Staff / Principal IC (likely PM6 or equivalent)",
+    "level": "Staff / Principal PM (IC6+)",
     "years_required_min": 10,
     "years_required_max": null,
     "manages_people": false,
@@ -29,12 +29,12 @@
       "10+ years of product management experience",
       "at least 3 years on ML, search, recommendations, or AI-powered products at scale",
       "Ability to earn the respect of Staff and Principal-level engineers and researchers",
-      "Comp range $232K-$282K base, consistent with Staff-level PM at Airbnb"
+      "Comp range $232K-$282K base, consistent with Staff/Principal PM level at Airbnb"
     ]
   },
   "must_haves": [
     {
-      "id": "years_pm_experience",
+      "id": "years_pm_total",
       "raw_text_from_jd": "10+ years of product management experience, with at least 3 years on ML, search, recommendations, or AI-powered products at scale",
       "skill_type": "years_of_experience",
       "domain": "product_management",
@@ -49,7 +49,7 @@
         "ML",
         "search",
         "recommendations",
-        "AI-powered products"
+        "AI"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -72,7 +72,7 @@
         "ML",
         "search",
         "recommendations",
-        "AI-powered products"
+        "AI"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -104,7 +104,7 @@
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [
-        "A/B tests"
+        "A/B testing"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -122,17 +122,18 @@
       "tools_named": [],
       "technologies_named": [],
       "industries_named": [
-        "two-sided marketplaces"
+        "marketplace",
+        "platform"
       ],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
     },
     {
-      "id": "engineer_researcher_credibility",
+      "id": "engineering_credibility",
       "raw_text_from_jd": "Ability to earn the respect of Staff and Principal-level engineers and researchers — you don't need to write code, but you need to engage at a level that builds credibility",
       "skill_type": "capability",
-      "domain": "technical_collaboration",
+      "domain": "cross_functional_collaboration",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -170,7 +171,7 @@
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
-        "LLM-based products",
+        "LLMs",
         "generative AI"
       ],
       "industries_named": [],
@@ -179,18 +180,17 @@
       "credentials_named": []
     },
     {
-      "id": "reinforcement_learning_familiarity",
+      "id": "rl_bandits_familiarity",
       "raw_text_from_jd": "Familiarity with reinforcement learning, contextual bandits, or explore/exploit frameworks in a product context (preferred)",
       "skill_type": "domain_knowledge",
-      "domain": "ml_frameworks",
-      "evidence_required": "hands_on_use",
+      "domain": "reinforcement_learning",
+      "evidence_required": "project_examples",
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
         "reinforcement learning",
-        "contextual bandits",
-        "explore/exploit frameworks"
+        "contextual bandits"
       ],
       "industries_named": [],
       "geographies_named": [],
@@ -218,12 +218,12 @@
   ],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Relevance & Personalization platform — search ranking, recommendations, personalization, and generative AI across guest and host journeys",
-    "business_model": "two-sided marketplace (B2C + host/guest), global scale",
+    "surface": "Relevance & Personalization platform — search ranking, recommendations, personalization, and generative AI across the guest journey and host marketplace",
+    "business_model": "two-sided marketplace (B2C / B2B), travel and short-term rental",
     "primary_metrics_inferred": [
-      "Bookings driven by relevance and personalization improvements",
+      "Bookings driven by relevance and personalization",
       "Guest satisfaction",
-      "Host success and competitiveness",
+      "Host success / competitiveness",
       "Marketplace health and fairness"
     ],
     "cross_functional_partners": [
@@ -234,18 +234,17 @@
       "Host team",
       "MarTech",
       "Trust & Safety",
-      "Customer Support",
-      "Engineering leadership"
+      "Customer Support"
     ],
     "core_responsibilities": [
-      "Define and drive the roadmap for Airbnb's relevance and personalization platform — from natural language query understanding to multi-turn, context-aware discovery experiences",
-      "Make prioritization calls that balance multiple competing objectives: guest experience, host success, revenue, fairness, and marketplace health",
+      "Define and drive the roadmap for Airbnb's relevance and personalization platform",
+      "Make prioritization calls balancing guest experience, host success, revenue, fairness, and marketplace health",
       "Partner with ML engineers and applied researchers to shape model strategy, evaluation frameworks, and experimentation design",
-      "Align cross-functional partners — Guest, Host, MarTech, Trust & Safety, Customer Support — on shared goals and sequencing",
-      "Drive the Tripcycle vision: ensuring R&P's intelligence layer connects across the full trip lifecycle, from inspiration through post-trip",
+      "Align cross-functional partners on shared goals and sequencing",
+      "Drive the Tripcycle vision connecting R&P intelligence across the full trip lifecycle",
       "Design and oversee A/B experiments with rigorous metric design and long-term effect measurement",
-      "Translate complex technical tradeoffs into clear decisions for engineering teams and concise narratives for leadership",
-      "Stay close to guests and hosts: synthesize user research, marketplace data, and competitive signals to sharpen your intuition and refine strategy"
+      "Translate complex technical tradeoffs into clear decisions and narratives for leadership",
+      "Stay close to guests and hosts via user research, marketplace data, and competitive signals"
     ]
   },
   "compensation": {
@@ -260,46 +259,48 @@
     "source": "stated"
   },
   "top_keywords": [
-    "Relevance and Personalization",
+    "relevance",
+    "personalization",
     "ML",
     "search ranking",
     "recommendations",
     "generative AI",
-    "LLM",
-    "A/B experimentation",
+    "LLMs",
     "two-sided marketplace",
+    "A/B experimentation",
     "Tripcycle",
     "natural language query understanding",
-    "personalization platform",
     "contextual bandits",
-    "reinforcement learning"
+    "reinforcement learning",
+    "roadmap",
+    "AI-powered products"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed and competitive ($232K-$282K base)",
-    "Clearly defined product surface with strategic ownership (not a feature-level PM role)",
-    "Team described in detail: ML engineers, applied researchers, and technical program managers",
-    "Long-term, ambitious vision (Tripcycle, travel companion) signals strategic investment",
-    "Honest about preferred vs. required criteria — three explicit 'preferred' signals"
+    "Compensation range disclosed and competitive ($232K-$282K base) with equity and bonus upside",
+    "Clear product surface with meaningful scope — Airbnb's matching intelligence engine at global scale",
+    "Explicit articulation of the team's mission and north star (travel companion, not just search engine)",
+    "Preferred qualifications clearly labeled, reducing ambiguity about what is hard vs. soft",
+    "Encourages broadest talent pool; disability accommodation process stated"
   ],
   "red_flags": [
-    "Role requires physical presence in San Francisco, CA — no hybrid or remote flexibility stated",
-    "Large exclusion list of US states where employees cannot be located",
-    "10+ years PM requirement with 3+ years ML/AI is a high bar that narrows the candidate pool significantly",
+    "Role requires physical presence in San Francisco, CA — fully remote candidates ineligible",
+    "Significant state exclusion list (11 states) limits eligible US-based applicants",
+    "10+ years PM experience with 3+ years in ML/AI at scale is a high bar that narrows the candidate pool considerably",
     "Visa sponsorship status not mentioned — unclear for international candidates"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range + 10+ years requirement + Staff/Principal-level collaboration signal)",
+      "seniority.level (inferred from comp range and years requirements; not explicitly stated)",
       "scope.team_size_estimate (not stated; left as 'unclear')",
       "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
-      "scope.business_model (inferred from marketplace description)",
-      "location.visa_sponsorship (not mentioned; marked unclear)",
-      "posting_first_seen and posting_last_updated (not available in provided data)"
+      "scope.business_model (inferred from product and company context)",
+      "location.visa_sponsorship (not mentioned in JD; marked 'unclear')"
     ],
     "ambiguities": [
-      "Location type: JD says 'the successful applicant will need to be based in San Francisco, CA' suggesting onsite, but does not explicitly state whether hybrid options exist. Treated as onsite given mandatory SF presence language.",
-      "The phrase 'This role may also be eligible for bonus, equity, benefits, and Employee Travel Credits' uses 'may also be eligible', making equity non-guaranteed; captured as equity_mentioned: true with qualifier."
+      "JD states 'need to be based in San Francisco, CA' suggesting onsite, but does not explicitly state percentage of in-office time required — treated as onsite.",
+      "The exclusion state list is described as 'continuously being updated' — actual eligibility may differ at time of application.",
+      "Seniority level label ('Staff / Principal PM') is inferred from compensation and required years; Airbnb does not use those exact titles in this JD."
     ]
   }
 }

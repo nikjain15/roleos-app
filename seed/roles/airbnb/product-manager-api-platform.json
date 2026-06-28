@@ -1,0 +1,357 @@
+{
+  "company": "Airbnb",
+  "role_title": "Product Manager, API Platform",
+  "url": "https://careers.airbnb.com/positions/7607680?gh_jid=7607680",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7607680",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional work at an Airbnb office or attendance at offsites, as agreed to with your manager",
+    "work_auth": "no-sponsorship",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM with developer platform focus",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of product management and/or product marketing experience",
+      "3+ years of product management experience designing and building developer platforms",
+      "Comp range $194K-$239K base, consistent with Senior/Staff IC at Airbnb",
+      "Entrepreneurial track record of taking an idea to reality and leading teams"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_or_pmmkt",
+      "raw_text_from_jd": "8+ years of product management and/or product marketing experience.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_or_product_marketing",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_developer_platform_pm",
+      "raw_text_from_jd": "3+ years of product management experience designing and building developer platforms.",
+      "skill_type": "years_of_experience",
+      "domain": "developer_platforms",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "API platform"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_empathy_and_track_record",
+      "raw_text_from_jd": "Demonstrated empathy for key developer pain points, and a track record of leadership in building products for developers.",
+      "skill_type": "outcome",
+      "domain": "developer_tools",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_productivity_passion",
+      "raw_text_from_jd": "Passionate about improving developer productivity, product quality, and automating/optimizing developer workflows.",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_productivity",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_partner_relationships",
+      "raw_text_from_jd": "Experience building strategic relationships with partner executives, senior management and technical staff to achieve business goals.",
+      "skill_type": "capability",
+      "domain": "partnership_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_messaging_delivery",
+      "raw_text_from_jd": "Experience creating product messaging and delivering to customers and the media.",
+      "skill_type": "capability",
+      "domain": "product_marketing",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "inbound_subject_matter_expertise",
+      "raw_text_from_jd": "Demonstrated inbound and subject matter expertise.",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_platform_domain",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_storytelling",
+      "raw_text_from_jd": "Be able to build compelling customer-focused stories and work with marketing and communications partners to bring them to life.",
+      "skill_type": "capability",
+      "domain": "product_marketing",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_product_leadership",
+      "raw_text_from_jd": "Demonstrated track record of product leadership in a cross functional environment.",
+      "skill_type": "outcome",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_execution",
+      "raw_text_from_jd": "Entrepreneurial track record of taking an idea to reality and leading teams through a dynamic environment.",
+      "skill_type": "outcome",
+      "domain": "product_execution",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_and_business_analysis",
+      "raw_text_from_jd": "A strong ability to effectively use data and perform business analysis to support product strategy/decisions.",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "travel_willingness",
+      "raw_text_from_jd": "Strong ability and desire to travel frequently, including domestic and international.",
+      "skill_type": "cultural_fit",
+      "domain": "travel",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [
+        "domestic",
+        "international"
+      ],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "pacific_time_zone_availability",
+      "raw_text_from_jd": "we ask that you are able to work Pacific Time Zone work hours as needed.",
+      "skill_type": "capability",
+      "domain": "availability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ic_pm_work_preference",
+      "raw_text_from_jd": "Enjoys doing individual contributor product management work and staying in the details.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_paced_execution",
+      "raw_text_from_jd": "Excited to drive execution across teams in a fast-paced environment.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "API platform for hosts and developers; developer-facing tools and partner integrations",
+    "business_model": "B2B2C — API platform enabling partners and developers to build applications on Airbnb supply/demand",
+    "primary_metrics_inferred": [
+      "API platform adoption by partners",
+      "Partner-driven supply and demand growth",
+      "Developer productivity and satisfaction",
+      "Number and quality of partner integrations"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Operations",
+      "Data Science",
+      "Account Managers",
+      "Marketing",
+      "Communications"
+    ],
+    "core_responsibilities": [
+      "Develop and maintain a product vision, strategy, and roadmap for the API platform.",
+      "Synthesize feedback and translate it into product features.",
+      "Develop a public and developer facing messaging and narrative for the API platform.",
+      "Align product teams and cross functional partners.",
+      "Develop partnerships with a focus on supply and demand.",
+      "Role model behaviors that encourage open communication and curiosity.",
+      "Make judgements and prioritization decisions that are in the best interests of our users.",
+      "Efficiently execute to ship products and deliver impact for our business and users."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      194000,
+      239000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as potential component alongside bonus, benefits, and Employee Travel Credits",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "API platform",
+    "developer platform",
+    "developer tools",
+    "product roadmap",
+    "partner ecosystem",
+    "product marketing",
+    "developer productivity",
+    "host and developer APIs",
+    "cross-functional leadership",
+    "supply and demand"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed and competitive ($194K-$239K base)",
+    "Remote-US eligible with flexible office attendance",
+    "Clear product surface with ownership of API platform strategy end-to-end",
+    "Explicit inclusion and disability accommodation commitments",
+    "Bonus, equity, and Employee Travel Credits mentioned as additional compensation"
+  ],
+  "red_flags": [
+    "Requirement to work Pacific Time Zone hours may disadvantage candidates in Eastern time zones",
+    "Must live in a state where Airbnb has a registered entity — some states excluded, and the exclusion list is evolving",
+    "Visa sponsorship status is unclear — not explicitly addressed in the JD",
+    "The 8+ years requirement combined with 3+ years specifically in developer platforms is a narrow pool filter",
+    "Travel requirement (frequent, domestic and international) is stated as a hard requirement but could be burdensome"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp + years required)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "scope.business_model (inferred from API platform context for partners and hosts)",
+      "location.work_auth (inferred as no-sponsorship; JD does not explicitly state sponsorship policy but restricts to states with Airbnb entities and does not mention visa)",
+      "location.visa_sponsorship set to unclear — not stated in JD"
+    ],
+    "ambiguities": [
+      "The JD lists both 'product management' and 'product marketing' experience in the 8+ year requirement — it is unclear whether PM experience alone would satisfy this or whether marketing experience can substitute; treated as combined/interchangeable.",
+      "'ic_pm_work_preference' and 'fast_paced_execution' bullets are unconditional in the JD but read as cultural fit signals rather than hard qualifications — classified as soft/nice-to-have.",
+      "Visa sponsorship not mentioned; work_auth set to 'no-sponsorship' is an inference based on the US-entity restriction language.",
+      "The JD notes the role 'may also be eligible for bonus, equity' — equity is conditional, not guaranteed."
+    ]
+  }
+}

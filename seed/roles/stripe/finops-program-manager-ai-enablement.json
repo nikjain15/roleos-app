@@ -1,0 +1,304 @@
+{
+  "company": "Stripe",
+  "role_title": "FinOps Program Manager,  AI Enablement",
+  "url": "https://stripe.com/jobs/search?gh_jid=7975826",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7975826",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 4,
+    "years_required_max": 6,
+    "manages_people": false,
+    "level_signals": [
+      "4–6 years of experience in Program Management or Strategic Operations",
+      "Leads strategic projects end-to-end from discovery through post-launch optimization",
+      "Partners with OE leads and FinSys teams; no direct reports mentioned"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management_strategic_ops",
+      "raw_text_from_jd": "You possess 4–6 years of experience in Program Management or Strategic Operations.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_or_strategic_operations",
+      "minimum_value": 4,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "workflow_design_capability",
+      "raw_text_from_jd": "You understand how to design workflows from the ground up, beyond merely tracking tasks.",
+      "skill_type": "capability",
+      "domain": "workflow_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_savviness_ai_data",
+      "raw_text_from_jd": "While not a software engineer, you are \"technically savvy.\" You can navigate data structures and AI orchestration tools to build prototypes or initial solutions independently to validate concepts before transitioning them.",
+      "skill_type": "capability",
+      "domain": "ai_and_data_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI orchestration tools",
+        "data structures"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_improvement_lean_six_sigma",
+      "raw_text_from_jd": "Your experience with Operational Excellence (Lean and Six Sigma) leads you to address process inefficiencies prior to automation efforts.",
+      "skill_type": "domain_knowledge",
+      "domain": "operational_excellence_lean_six_sigma",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Lean",
+        "Six Sigma"
+      ]
+    },
+    {
+      "id": "finance_engineering_bridge",
+      "raw_text_from_jd": "You excel at bridging the gap between Finance leads and FinSys engineers, translating operational challenges into technical requirements while preserving the business intent.",
+      "skill_type": "capability",
+      "domain": "cross_functional_translation_finance_engineering",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "finance"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "solution_realization_bias_for_action",
+      "raw_text_from_jd": "You possess a bias for action, ensuring that projects extend beyond the recommendation phase to guarantee the technical solution is adopted and delivers value to the sub-teams.",
+      "skill_type": "outcome",
+      "domain": "project_delivery",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "complex_cross_functional_finance_ops_programs",
+      "raw_text_from_jd": "Demonstrated experience managing complex, cross-functional programs in Finance or Business Operations, with the ability to map financial workflows, identify AI and automation opportunities, apply Lean and Six Sigma methodologies, influence stakeholders, and drive projects from discovery through technical realization",
+      "skill_type": "domain_knowledge",
+      "domain": "finance_or_business_operations_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "finance",
+        "business operations"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "finance_accounting_finops_experience",
+      "raw_text_from_jd": "Experience in a Finance, Accounting, or FinOps function",
+      "skill_type": "domain_knowledge",
+      "domain": "finance_accounting_finops",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "finance",
+        "accounting"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "erp_financial_systems_familiarity",
+      "raw_text_from_jd": "Familiarity with financial systems or ERP data (e.g., Oracle, SAP, NetSuite, Workday, Coupa)",
+      "skill_type": "tool_proficiency",
+      "domain": "erp_financial_systems",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Oracle",
+        "SAP",
+        "NetSuite",
+        "Workday",
+        "Coupa"
+      ],
+      "technologies_named": [],
+      "industries_named": [
+        "finance"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "workflow_orchestration_tools",
+      "raw_text_from_jd": "Experience with workflow orchestration tools (e.g., Airflow, Prefect, or similar)",
+      "skill_type": "tool_proficiency",
+      "domain": "workflow_orchestration",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Airflow",
+        "Prefect"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "embedded_engineering_data_product_role",
+      "raw_text_from_jd": "Prior experience in an embedded engineering or \"data product\" role within a business unit",
+      "skill_type": "domain_knowledge",
+      "domain": "embedded_engineering_data_product",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "FinOps Strategic Enablement — AI and process improvement initiatives across AP, AR, T&E, Payroll, and MonOps service teams",
+    "business_model": "internal / enterprise operations enablement within a financial infrastructure platform",
+    "primary_metrics_inferred": [
+      "Measurable ROI from AI and automation implementations",
+      "Reduction of manual bottlenecks across FinOps service teams",
+      "Adoption rate of technical solutions by sub-teams"
+    ],
+    "cross_functional_partners": [
+      "Operational Excellence (OE) leads",
+      "Finance Systems (FinSys) engineers",
+      "FinOps sub-teams (AP, AR, T&E, Payroll, MonOps)"
+    ],
+    "core_responsibilities": [
+      "Collaborate with FinOps sub-teams to identify high-impact opportunities for AI and automation",
+      "Transform operational challenges into clear, actionable project roadmaps",
+      "Lead strategic projects from initial discovery through technical implementation and post-launch optimization",
+      "Partner closely with OE leads and FinSys teams to design and develop scalable solutions",
+      "Foster a mindset focused on improvement to simplify and standardize processes before integrating AI capabilities",
+      "Take ownership of the final stages of implementation and ensure the solution delivers measurable ROI"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "FinOps",
+    "Program Management",
+    "AI Enablement",
+    "AI automation",
+    "Operational Excellence",
+    "Lean",
+    "Six Sigma",
+    "Finance Systems",
+    "workflow orchestration",
+    "ERP",
+    "process improvement",
+    "cross-functional",
+    "Strategic Enablement"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Role is clearly scoped with five named sub-teams and specific domains (AP, AR, T&E, Payroll, MonOps)",
+    "JD explicitly states preferred qualifications are a bonus, not a requirement — lowers barrier to apply",
+    "Strategic and high-impact positioning: 'This role is pivotal to achieving that objective'",
+    "Intersection of AI, finance, and operations — growing and well-resourced domain at Stripe"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location, remote/hybrid policy, or work authorization information provided",
+    "Visa sponsorship status entirely unstated",
+    "Posting dates not available — unclear how fresh the listing is"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 4–6 years experience range and scope of responsibilities)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.business_model (inferred from company description and team context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
+      "compensation.equity_mentioned (inferred as false; not mentioned in JD)",
+      "location.type (set to 'unclear'; JD provides no location or remote/hybrid details)"
+    ],
+    "ambiguities": [
+      "Years range stated as '4–6 years' — unusual ceiling for a minimum requirement; treated as a band rather than a strict max, but the upper bound is noted for reference.",
+      "The role title says 'Program Manager' but responsibilities and positioning are closer to a Technical Program Manager or BizOps/Strategy & Ops hybrid; classified as Technical Program Manager with BizOps secondary archetype.",
+      "No location data in JD body or metadata; location.type set to 'unclear' and all location subfields left null or unclear."
+    ]
+  }
+}

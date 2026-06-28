@@ -1,10 +1,10 @@
 {
   "company": "Airbnb",
-  "role_title": "Product Manager, Guest Discovery and Homepage",
-  "url": "https://careers.airbnb.com/positions/7827238?gh_jid=7827238",
+  "role_title": "Product Manager, Guest Discovery & Homepage",
+  "url": "https://careers.airbnb.com/positions/7968122?gh_jid=7968122",
   "ats_provider": "greenhouse",
-  "ats_job_id": "7827238",
-  "fetched_at": "2026-05-10",
+  "ats_job_id": "7968122",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -12,6 +12,7 @@
     "cities_listed": [
       "San Francisco, CA",
       "Los Angeles, CA",
+      "Seattle, WA",
       "New York, NY"
     ],
     "remote_us_eligible": false,
@@ -20,18 +21,19 @@
     "visa_sponsorship": "unclear"
   },
   "archetype": "Generalist PM",
-  "archetype_confidence": "high",
-  "secondary_archetype": "Growth PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "AI Product Manager",
   "seniority": {
-    "level": "Senior IC / Staff PM",
+    "level": "Senior / Staff IC (L6/L7 equivalent)",
     "years_required_min": 8,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
       "8+ years of product management experience",
-      "Desire to do individual contributor product management work",
-      "Comp range $194K–$239K base, consistent with senior/staff IC at Airbnb",
-      "Responsible for homepage and discovery across all key business verticals — high-scope ownership"
+      "Leading product vision, strategy, and roadmap across major business verticals",
+      "Executive alignment and cross-functional leadership scope",
+      "Base pay range $200K-$240K USD, consistent with senior/staff IC at Airbnb",
+      "Desire to do individual contributor product management work"
     ]
   },
   "must_haves": [
@@ -68,7 +70,7 @@
       "credentials_named": []
     },
     {
-      "id": "xfn_exec_alignment",
+      "id": "xfn_executive_alignment",
       "raw_text_from_jd": "Demonstrated track record of building cross-functional and executive leadership alignment.",
       "skill_type": "outcome",
       "domain": "stakeholder_management",
@@ -116,7 +118,7 @@
       "id": "data_and_business_analysis",
       "raw_text_from_jd": "A strong ability to effectively use data and perform business analysis to support product strategy/decisions.",
       "skill_type": "capability",
-      "domain": "data_analysis_and_business_strategy",
+      "domain": "data_analysis",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -131,7 +133,7 @@
       "id": "fast_paced_execution",
       "raw_text_from_jd": "Excited to drive execution across teams in a fast-paced environment.",
       "skill_type": "cultural_fit",
-      "domain": "execution_and_delivery",
+      "domain": "execution",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -146,7 +148,7 @@
       "id": "ic_pm_desire",
       "raw_text_from_jd": "Desire to do individual contributor product management work.",
       "skill_type": "cultural_fit",
-      "domain": "individual_contributor_mindset",
+      "domain": "ic_product_management",
       "evidence_required": "work_history",
       "bridgeable": "yes",
       "severity": "hard",
@@ -159,18 +161,16 @@
     }
   ],
   "nice_to_haves": [],
-  "explicitly_excluded": [
-    "Alaska, Indiana, Nebraska, North Dakota, Ohio, South Dakota, Wisconsin, Alabama, Mississippi, Oklahoma, Delaware, Rhode Island"
-  ],
+  "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Airbnb Homepage and Guest Discovery (across Homes, Services, Experiences, Hotels, Luxe, Partnerships)",
-    "business_model": "B2C marketplace (two-sided: guests and hosts), global scale",
+    "surface": "Airbnb Homepage and Guest Discovery experience (Homes, Services, Experiences, Hotels, Luxe, Partnerships)",
+    "business_model": "consumer marketplace, B2C",
     "primary_metrics_inferred": [
       "Guest bookings growth",
-      "Homepage engagement and discovery conversion",
-      "Session-level relevance and browsing metrics",
-      "Lifecycle campaign performance tied to discovery"
+      "Discovery engagement / click-through on homepage",
+      "Relevance of recommendations (AI/ML model quality)",
+      "Lifecycle and growth marketing campaign performance"
     ],
     "cross_functional_partners": [
       "Engineering",
@@ -198,8 +198,8 @@
   },
   "compensation": {
     "base_range_usd": [
-      194000,
-      239000
+      200000,
+      240000
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
@@ -208,44 +208,42 @@
     "source": "stated"
   },
   "top_keywords": [
-    "homepage",
-    "guest discovery",
-    "marketplace",
+    "Guest Discovery",
+    "Homepage",
     "AI technologies",
     "relevance models",
-    "consumer products",
-    "growth",
-    "cross-functional alignment",
+    "consumer marketplace",
     "product roadmap",
-    "lifecycle marketing",
+    "cross-functional alignment",
     "bookings growth",
-    "OKRs"
+    "lifecycle marketing",
+    "browsing experience"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($194K–$239K base) plus equity and bonus",
-    "Clear and specific product surface — homepage and discovery for all guest verticals",
-    "High-visibility, high-impact role spanning the full Airbnb product breadth",
-    "IC PM role with senior scope — explicitly states 'desire to do individual contributor product management work'",
-    "Cross-functional remit is well-defined (engineering, design, marketing, data, ops, trust)"
+    "Compensation range disclosed ($200K-$240K base)",
+    "Clearly defined product surface with real ownership (Homepage + Discovery for all verticals)",
+    "High-visibility role driving core guest growth metrics",
+    "Equity and bonus mentioned in addition to base",
+    "Role explicitly designed for individual contributor (not people manager)"
   ],
   "red_flags": [
-    "Requires physical presence in SF, LA, or NYC — no remote option; large exclusion list of US states",
-    "Visa sponsorship policy not stated — unclear for international candidates",
-    "JD does not specify educational requirements — may be inferred but not explicitly stated",
-    "Title says 'Product Manager' but the scope and comp suggest a Staff/Senior PM level; title may underrepresent the seniority expected"
+    "Role requires physical presence in San Francisco, Los Angeles, Seattle, or New York — fully remote not eligible",
+    "Visa sponsorship not addressed in the JD",
+    "Broad scope spanning all business verticals (Homes, Services, Experiences, Hotels, Luxe, Partnerships) may imply significant complexity and stakeholder load",
+    "8+ years experience floor with senior/exec alignment expectations makes this a high bar role"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range + years required + scope breadth)",
-      "scope.business_model (inferred from product description of Airbnb marketplace)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated)",
-      "location.visa_sponsorship (not stated in JD; marked unclear)",
-      "location.office_time_required (not stated; only city requirement specified)"
+      "seniority.level (inferred from comp range $200K-$240K and 8+ years requirement)",
+      "scope.business_model (inferred from consumer marketplace product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "location.visa_sponsorship (not stated; left as 'unclear')"
     ],
     "ambiguities": [
-      "Role requires being based in SF, LA, or NYC but does not explicitly state full-time in-office vs hybrid — location.type set to 'onsite' based on language 'need to be based in' with no hybrid qualifier mentioned",
-      "No nice-to-haves section exists in the JD; all requirements are listed under 'Your Expertise' as unconditional bullets — all treated as hard must-haves"
+      "JD lists four city options (SF, LA, Seattle, NY) but states the role requires being 'based in' one of them; it is unclear whether hybrid/partial-remote within those cities is permitted or if fully in-office is required — treated as onsite.",
+      "No 'Preferred' or 'Nice to have' section present in the JD; all bullets under 'Your Expertise' treated as must-haves with hard severity."
     ]
   }
 }

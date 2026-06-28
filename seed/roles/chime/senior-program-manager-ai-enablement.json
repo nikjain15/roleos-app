@@ -1,0 +1,376 @@
+{
+  "company": "Chime",
+  "role_title": "Senior Program Manager, AI Enablement",
+  "url": "https://boards.greenhouse.io/chime/jobs/8552459002?gh_jid=8552459002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8552459002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": true,
+    "office_time_required": "four days a week in the office and Fridays from home for those near one of our offices",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Enablement / Change Management Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience in program or project management",
+      "Base salary range $138,000–$190,000",
+      "Role title explicitly 'Senior Program Manager'",
+      "Expected to own programs end-to-end without waiting for structure"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management",
+      "raw_text_from_jd": "5+ years of experience in program or project management, preferably in a fast-paced tech environment.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "qualifier": "preferably in a fast-paced tech environment",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "tech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguous_program_building",
+      "raw_text_from_jd": "Experience taking ambiguous problems and building a program around them; narrative, roadmap, milestones, and operating cadence without waiting for structure to be provided",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "behavior_change_driving",
+      "raw_text_from_jd": "History of driving behavior change, not just program completion, and the judgment to know the difference between a launch and a result",
+      "skill_type": "outcome",
+      "domain": "change_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_ai_workflow_building",
+      "raw_text_from_jd": "Hands-on experience building or automating workflows using AI tools — able to walk through something personally built, what broke, and what changed as a result.",
+      "skill_type": "capability",
+      "domain": "ai_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI tools",
+        "workflow automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "large_distributed_program_ownership",
+      "raw_text_from_jd": "Experience owning large, distributed programs without direct authority over participants, and keeping them activated and accountable",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "proactive_stakeholder_communication",
+      "raw_text_from_jd": "Communication habits that keep stakeholders informed without them having to ask — status on shared surfaces, not surfaced reactively",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "program_health_model_definition",
+      "raw_text_from_jd": "Experience defining program health models upfront: success metrics, milestones, and measurement built in before launch, not retroactively",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "comfort_with_ambiguity",
+      "raw_text_from_jd": "Comfort spending time in a problem before designing a solution",
+      "skill_type": "cultural_fit",
+      "domain": "problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "productivity_tools_familiarity",
+      "raw_text_from_jd": "Familiarity with common productivity or workflow tools (e.g., Jira, Asana, Notion, etc)",
+      "skill_type": "tool_proficiency",
+      "domain": "productivity_tools",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "Jira",
+        "Asana",
+        "Notion"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ambassador_champion_coe_programs",
+      "raw_text_from_jd": "Experience running ambassador, champion, or CoE programs; groups where you had no direct authority over participants but were accountable for their activation and outcomes",
+      "skill_type": "domain_knowledge",
+      "domain": "enablement_programs",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enablement_ld_change_management_background",
+      "raw_text_from_jd": "Background in enablement, L&D, or change management in a technology environment",
+      "skill_type": "domain_knowledge",
+      "domain": "learning_and_development",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "internal_enterprise_ai_adoption_role",
+      "raw_text_from_jd": "Experience in an internal AI or enterprise AI adoption role",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_adoption",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "enterprise AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_ai_tooling",
+      "raw_text_from_jd": "Hands-on experience with AI tooling (e.g., ChatGPT, Glean, Claude, Cursor, Gemini)",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "ChatGPT",
+        "Glean",
+        "Claude",
+        "Cursor",
+        "Gemini"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_biz_ops_tpm_background",
+      "raw_text_from_jd": "Background in product operations, business operations, or technical program management.",
+      "skill_type": "domain_knowledge",
+      "domain": "operations_or_technical_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_governance_responsible_ai",
+      "raw_text_from_jd": "Working knowledge of AI governance or Responsible AI principles.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_governance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI governance",
+        "Responsible AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Applied AI team — AI enablement programs across all of Chime (AI Champions network, onboarding/activation programs, self-serve playbooks, golden paths)",
+    "business_model": "B2C fintech / financial technology company",
+    "primary_metrics_inferred": [
+      "Fluency progression of Chimers with AI tools",
+      "Adoption signals of AAI-built tools and resources",
+      "Productivity tied to company goals",
+      "Behavior change (not just program completion)"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "BizOps",
+      "People teams"
+    ],
+    "core_responsibilities": [
+      "Own cross-functional AI enablement programs end-to-end (e.g., AI Champions network, onboarding and activation programs)",
+      "Go deep on workflow problems before proposing solutions",
+      "Partner directly with teams to build AI-enabled solutions hands-on",
+      "Set health model for programs from day one — success metrics, milestones, and status on shared surfaces",
+      "Drive adoption of AAI-built tools and resources",
+      "Build and maintain self-serve enablement resources (playbooks, golden paths)",
+      "Lead change management for AI enablement work — training, comms, and activation",
+      "Build documentation and governance into programs from the start",
+      "Measure whether Chimers are actually working differently and report to leadership",
+      "Foster collaboration between Product, Engineering, BizOps, and People teams"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      138000,
+      190000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "competitive equity package",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "AI enablement",
+    "program management",
+    "change management",
+    "AI Champions network",
+    "workflow automation",
+    "fluency outcomes",
+    "self-serve enablement",
+    "behavior change",
+    "AI adoption",
+    "Applied AI",
+    "golden paths",
+    "playbooks",
+    "stakeholder activation"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($138,000–$190,000 base)",
+    "Clear program ownership scope — not a coordination role, genuine autonomy implied",
+    "Role is on an Applied AI team with clear internal mandate and executive visibility",
+    "Hybrid policy clearly described (4 days in office, Fridays remote for those near an office; fully remote program also mentioned)",
+    "Generous benefits including 24 weeks parental leave, $15k family planning reimbursement, wellness stipend",
+    "Bonus and equity explicitly mentioned alongside base"
+  ],
+  "red_flags": [
+    "JD hashtag says #LI-Hybrid but also mentions a 'fully remote program,' creating ambiguity about whether fully remote is truly available for this role",
+    "No visa sponsorship information provided",
+    "Specific cities for office locations not named in JD body beyond inferring San Francisco from legal disclosures",
+    "'Preferably in a fast-paced tech environment' qualifier on years of experience is vague and may be applied inconsistently"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from role title 'Senior' and comp range)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "scope.team_size_estimate (not stated)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not listed explicitly in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.cities_listed (San Francisco inferred from legal notice references to SF Fair Chance Ordinance; not explicitly named as role location)",
+      "location.visa_sponsorship (not mentioned; marked unclear)"
+    ],
+    "ambiguities": [
+      "JD hashtag #LI-Hybrid suggests hybrid, and the benefits section describes a 4-day-in-office policy, but also references a 'fully remote program' — unclear if this role is eligible for fully remote or hybrid only.",
+      "Office cities are not explicitly named for this role; San Francisco inferred from legal disclosures referencing the SF Fair Chance Ordinance and Cook County/NYC/LA ordinances, suggesting multiple office locations exist but the specific role location is not pinned.",
+      "The must-have qualifier 'preferably in a fast-paced tech environment' on the 5+ years requirement is borderline — classified as hard based on the unconditional phrasing of the bullet, with 'preferably' as a qualifier rather than a separate preferred item."
+    ]
+  }
+}

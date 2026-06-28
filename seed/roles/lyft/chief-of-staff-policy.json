@@ -1,0 +1,293 @@
+{
+  "company": "Lyft",
+  "role_title": "Chief of Staff, Policy",
+  "url": "https://app.careerpuck.com/job-board/lyft/job/8582822002?gh_jid=8582822002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8582822002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Washington D.C."
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days per week on Mondays, Wednesdays, and Thursdays",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Chief of Staff",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC / Director-level Chief of Staff",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years experience in a combination of operations, product management, strategy, finance, consulting, government or an equivalent field",
+      "Reporting to the Chief Policy Officer",
+      "Past experience staffing or working directly with the C-suite/SVP level on a regular basis",
+      "Base pay range $156,000 - $195,000 consistent with senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_experience_combined",
+      "raw_text_from_jd": "7+ years experience in a combination of operations, product management, strategy, finance, consulting, government or an equivalent field",
+      "skill_type": "years_of_experience",
+      "domain": "operations_strategy_finance_consulting",
+      "minimum_value": 7,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_planning_process_improvement",
+      "raw_text_from_jd": "The ideal candidate is a proven leader and has hands-on experience in the following areas: strategic planning, process improvement, project management, financial planning, organizational change, and internal communications",
+      "skill_type": "capability",
+      "domain": "strategic_planning_and_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "c_suite_experience",
+      "raw_text_from_jd": "This role requires past experience in staffing or working directly with the C-suite/SVP level on a regular basis",
+      "skill_type": "domain_knowledge",
+      "domain": "executive_support_and_partnership",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "C-suite",
+        "SVP-level organizations"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "financial_prowess",
+      "raw_text_from_jd": "Financial prowess and ability to create budgets and analyze financial models",
+      "skill_type": "capability",
+      "domain": "financial_planning_and_analysis",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strategic_planning_growth_company",
+      "raw_text_from_jd": "Proven experience designing and leading strategic planning at a growth company",
+      "skill_type": "outcome",
+      "domain": "strategic_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "growth company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Ability to comfortably dive into any area of the business or product, understand business needs, and facilitate executive decisions based on changing priorities",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_driven_decision_making",
+      "raw_text_from_jd": "Proven ability to track, prioritize, and drive multiple concurrent projects to successful completion. This position is expected to utilize data and metrics to communicate needs with the ease of a business unit owner",
+      "skill_type": "capability",
+      "domain": "data_analytics_and_project_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Excellent communicator in written and verbal form; ability to work well with executives, and able to lead and influence across multiple levels and multiple functions of an organization",
+      "skill_type": "capability",
+      "domain": "executive_communication_and_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "confidentiality_integrity",
+      "raw_text_from_jd": "Highest level of integrity, trust, and ability to manage confidential information",
+      "skill_type": "cultural_fit",
+      "domain": "integrity_and_confidentiality",
+      "evidence_required": "work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_and_detail_orientation",
+      "raw_text_from_jd": "Extraordinarily organized, attentive to detail, and and committed to proactively ensuring the completion of all deliverables",
+      "skill_type": "cultural_fit",
+      "domain": "organizational_effectiveness",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "adaptability_ambiguity",
+      "raw_text_from_jd": "Entrepreneurial, adaptable, high tolerance for ambiguity and complexity, and effective with limited resources",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability_and_resourcefulness",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Policy team operations and strategic planning under the Chief Policy Officer",
+    "business_model": "rideshare / mobility platform (B2C and B2B)",
+    "primary_metrics_inferred": [
+      "Headcount efficiency",
+      "Budget adherence",
+      "Delivery of CPO priorities and strategic initiatives",
+      "Team morale and organizational health"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Operations",
+      "Legal",
+      "Finance",
+      "People"
+    ],
+    "core_responsibilities": [
+      "Lead day-to-day operations and strategic planning; ranging from administrative approvals and task management, prioritizing meeting schedules, preparing and reviewing materials for executives, developing weekly and quarterly reports, overseeing annual planning and budgeting, and continuous monitoring of organizational design",
+      "Communicate priorities, activities, and results to the larger organization, while ensuring deliverables are met",
+      "Help build a successful and healthy organization: find knowledge and skills gaps and help address them, design optimal workflows, and align internal processes",
+      "Develop a thorough understanding of Product, Operations, Legal, Finance, and overall strategic needs of the company. Based on this, drive the priorities of the CPO by leading weekly team meetings, organizing and running team offsites, and identifying opportunities to increase leadership team effectiveness",
+      "Serve as a strategic thought partner to the CPO and Public Policy leadership team",
+      "Maintain a pulse on team morale and culture by being the eyes and ears of the CPO within the organization and developing informal and formal feedback loops to identify unmet team needs",
+      "Identify and lead special projects to ensure that new, unanticipated, or emerging issues do not fall through the cracks",
+      "Gather and analyze relevant data to generate insights, identify trends, and support evidence-based decision-making at the executive level",
+      "Collaborate with leadership team and colleagues (People, Finance, etc.) to drive employee satisfaction, headcount efficiency, professional development training, facilities planning, etc."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      156000,
+      195000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "potential equity offering mentioned but not quantified",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Chief of Staff",
+    "Chief Policy Officer",
+    "strategic planning",
+    "operational effectiveness",
+    "cross-functional leadership",
+    "budgeting",
+    "headcount management",
+    "executive advisory",
+    "public policy",
+    "organizational design",
+    "financial planning"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($156,000 - $195,000 base)",
+    "Clear reporting structure (directly to Chief Policy Officer)",
+    "Explicit hybrid schedule details (Mon/Wed/Thu in office)",
+    "Strong benefits package including 18 weeks paid parental leave and 401(k) match",
+    "Flexibility to work remotely up to 4 weeks per year"
+  ],
+  "red_flags": [
+    "Role is Washington D.C. area hybrid only — eliminates fully remote candidates",
+    "Visa sponsorship not mentioned anywhere in the JD",
+    "No nice-to-haves listed — hard requirement bar may be inflexible",
+    "JD contains a typo ('and and') suggesting lighter editorial review"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range, reporting structure, and years requirement)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated explicitly in JD)",
+      "scope.business_model (inferred from Lyft's known business)",
+      "location.visa_sponsorship (not mentioned; set to 'unclear')",
+      "location.work_auth (not mentioned; set to 'open')"
+    ],
+    "ambiguities": [
+      "Nice-to-haves section is entirely absent from this JD; all requirements are framed as requirements or descriptors of the 'ideal candidate', making it difficult to distinguish soft from hard. All flagged requirements have been classified as hard.",
+      "The JD mentions 'salary ranges are dependent on a variety of factors, including qualifications, experience and geographic location' suggesting the stated range may vary by location, but only one range (Washington D.C. area) is provided."
+    ]
+  }
+}

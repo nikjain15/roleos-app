@@ -1,0 +1,225 @@
+{
+  "company": "DoorDash",
+  "role_title": "Senior Associate, Strategy & Operations, DoorDash for Business Logistics",
+  "url": "https://job-boards.greenhouse.io/doordashusa/jobs/8028915",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8028915",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "unclear — 'remotely or hybrid depending preference'",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager (logistics/ops flavor)",
+  "seniority": {
+    "level": "Mid-Senior IC (Senior Associate)",
+    "years_required_min": 3,
+    "years_required_max": 5,
+    "manages_people": false,
+    "level_signals": [
+      "3–5 years of experience in strategy & operations, logistics, management consulting, or a high-growth marketplace environment",
+      "Title is Senior Associate, reporting to Senior Manager",
+      "Base range $87K–$128K nationally consistent with mid-senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_strategy_ops_logistics",
+      "raw_text_from_jd": "You have 3–5 years of experience in strategy & operations, logistics, management consulting, or a high-growth marketplace environment.",
+      "skill_type": "years_of_experience",
+      "domain": "strategy_operations_logistics",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "logistics",
+        "management consulting",
+        "marketplace"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth marketplace"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_operational_ownership",
+      "raw_text_from_jd": "You have a track record of owning operational problems end-to-end—from diagnosis to testing to rollout—and are comfortable building from scratch in ambiguous, early-stage environments.",
+      "skill_type": "outcome",
+      "domain": "operations_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_and_analytical_fluency",
+      "raw_text_from_jd": "You're analytically strong: you write SQL, work fluently with data, and know how to get to the root cause and turn complexity into clear recommendations.",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_fluency",
+      "raw_text_from_jd": "You demonstrate fluency with AI tools (e.g., ChatGPT, Cursor, or similar) to automate workflows, surface insights, and drive faster, better decisions.",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_workflow_automation",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "ChatGPT",
+        "Cursor"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_influence",
+      "raw_text_from_jd": "You communicate with clarity and influence—you can tailor your message for Dashers, operators, cross-functional partners, and senior leadership alike.",
+      "skill_type": "capability",
+      "domain": "stakeholder_communication",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hands_on_detail_orientation",
+      "raw_text_from_jd": "You love getting into the weeds—you'll happily roll up your sleeves, get to the lowest level of detail, and run the test yourself to find out what works.",
+      "skill_type": "cultural_fit",
+      "domain": "operational_execution",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "DoorDash for Business Catering — Dasher and delivery experience for large, high-stakes catering orders",
+    "business_model": "B2B corporate dining and benefits platform",
+    "primary_metrics_inferred": [
+      "On-time catering delivery rate",
+      "Dasher quality for catering (accuracy of drop-off and setup)",
+      "Scalability of operational fixes and automated workflows"
+    ],
+    "cross_functional_partners": [
+      "Dashers",
+      "operators",
+      "senior leadership",
+      "product team"
+    ],
+    "core_responsibilities": [
+      "Own Dasher quality for catering—on-time arrival, accurate drop-off and setup, and a clean handoff",
+      "Figure out how catering deliveries should actually work—Dasher selection, batching, timing, equipment, and handoff—by testing different approaches",
+      "Dig into individual deliveries, talk to Dashers and customers, and trace exactly where things break down",
+      "Build automated workflows using AI to surface where catering deliveries break down and turn manual analysis into repeatable processes",
+      "Translate ground-level learnings into clear product and operational recommendations for the product roadmap"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      87000,
+      128000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "strategy & operations",
+    "catering logistics",
+    "Dasher quality",
+    "SQL",
+    "AI tools",
+    "workflow automation",
+    "root cause analysis",
+    "early-stage",
+    "DoorDash for Business",
+    "logistics model",
+    "product roadmap"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($87K–$128K base nationally)",
+    "Equity grants included in compensation",
+    "Flexible remote or hybrid arrangement per candidate preference",
+    "Clear product surface and early-stage ownership opportunity",
+    "Comprehensive benefits package described in detail",
+    "Applications accepted on an ongoing basis — no hard deadline pressure"
+  ],
+  "red_flags": [
+    "Pay range is fairly wide ($41K spread), which could indicate significant location-based adjustment or leveling uncertainty",
+    "Early-stage, ambiguous scope ('building from scratch') may mean limited infrastructure support",
+    "Visa sponsorship status not stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title, years range, and comp)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "scope.business_model (inferred from team description)",
+      "location.cities_listed (no specific cities tied to this role stated; body says remote or hybrid by preference)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "Location type: JD body says 'can work remotely or hybrid depending preference' — treated as hybrid with remote eligibility, but could effectively be fully remote for some candidates. No specific city listed for this role.",
+      "Years range '3–5 years' is framed as what the company is 'excited about' rather than under an explicit 'Required' header; treated as hard given the unconditional framing in a 'What we look for' equivalent section.",
+      "No nice-to-haves section exists in the JD; all listed attributes are treated as must-haves."
+    ]
+  }
+}

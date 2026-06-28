@@ -1,0 +1,270 @@
+{
+  "company": "Attio",
+  "role_title": "Product Lead",
+  "url": "https://jobs.ashbyhq.com/attio/51876281-f2ca-4375-b07d-af54544fc27c",
+  "ats_provider": "ashby",
+  "ats_job_id": "51876281-f2ca-4375-b07d-af54544fc27c",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM",
+  "seniority": {
+    "level": "Senior IC / Lead PM",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title is 'Product Lead'",
+      "Expected to 'own core parts of the Attio product and contribute to overall product steering'",
+      "Expected to 'anticipate long-term architectural needs, guiding the roadmap for the next generation'",
+      "Founder mentality requirement implies high ownership and seniority"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "proven_product_ownership",
+      "raw_text_from_jd": "Proven experience owning products, platforms, data models, or core infrastructure surfaces in a world class product.",
+      "skill_type": "capability",
+      "domain": "product_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shipped_foundational_systems",
+      "raw_text_from_jd": "You've shipped foundational systems.",
+      "skill_type": "outcome",
+      "domain": "platform_engineering_product",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_curiosity",
+      "raw_text_from_jd": "A deep curiosity about how systems fit together. You enjoy diving into data models, untangling edge cases, and refining the foundations that critical systems rely on.",
+      "skill_type": "domain_knowledge",
+      "domain": "systems_thinking",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "data models"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_depth_systems_thinking",
+      "raw_text_from_jd": "Strong technical depth and systems thinking. You're comfortable reasoning about schemas, API design, and architectural trade-offs.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "schemas",
+        "API design"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "comfort_with_ambiguity",
+      "raw_text_from_jd": "Comfort in navigating ambiguity. You can turn incomplete information into structured decisions and clear next steps.",
+      "skill_type": "capability",
+      "domain": "decision_making",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_instincts",
+      "raw_text_from_jd": "Excellent product instincts. You know how to translate complex technical systems and customer problems into simple concepts and elegant user experiences.",
+      "skill_type": "capability",
+      "domain": "product_design_and_ux",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_stakeholder_management",
+      "raw_text_from_jd": "Excellent communication and stakeholder management skills. You can effectively collaborate with cross-functional teams and articulate a clear vision.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_storytelling",
+      "raw_text_from_jd": "Fluency in technical storytelling. You can can frame technical changes in ways that help GTM teams strengthen positioning and customer understanding.",
+      "skill_type": "capability",
+      "domain": "technical_communication",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "founder_mentality",
+      "raw_text_from_jd": "Founder mentality. You take responsibility for outcomes end to end, and move strategical and tactical decisions forward.",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_and_accountability",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Core Attio CRM product — platforms, data models, infrastructure surfaces, AI capabilities",
+    "business_model": "B2B SaaS CRM",
+    "primary_metrics_inferred": [
+      "Platform scalability and architectural health",
+      "Customer delight and product experience quality",
+      "AI capability adoption within core workflows"
+    ],
+    "cross_functional_partners": [
+      "Design",
+      "Engineering",
+      "GTM"
+    ],
+    "core_responsibilities": [
+      "Own core parts of the Attio product and contribute to overall product steering",
+      "Work with engineering to design systems that are simple to use but flexible and durable",
+      "Deeply understand the technical and user-facing implications of models, pipelines, and performance",
+      "Extend AI capabilities, evaluating where AI meaningfully augments core workflows",
+      "Champion a culture of technical excellence and thoughtful simplicity",
+      "Anticipate long-term architectural needs, guiding the roadmap for the next generation of Attio's platform",
+      "Shape the metrics and signals used to guide platform decisions",
+      "Ensure a best in class customer experience that delights users and builds on the Attio brand"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "Equity in an early-stage tech company",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "CRM",
+    "AI era",
+    "data models",
+    "platform",
+    "systems thinking",
+    "API design",
+    "schemas",
+    "foundational systems",
+    "technical depth",
+    "go-to-market",
+    "product lead",
+    "infrastructure"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Attio has raised $116M from well-known investors (GV, Redpoint, Balderton)",
+    "Equity offered in an early-stage company described as on 'an incredible trajectory'",
+    "Live workshop is problem-based and mirrors real collaboration — signals thoughtful hiring process",
+    "Company culture described as high-craft, detail-obsessed, and frontier-focused",
+    "Comprehensive benefits package including private medical insurance, pension, and enhanced family leave"
+  ],
+  "red_flags": [
+    "No location or remote/hybrid policy stated — candidates cannot determine geography or work arrangement",
+    "No compensation range disclosed; only 'competitive salary' mentioned",
+    "No years of experience stated — seniority expectations are implicit, not explicit",
+    "No visa sponsorship information provided"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Product Lead', ownership scope, and architectural guidance responsibilities)",
+      "scope.business_model (inferred from product description as B2B SaaS CRM)",
+      "scope.primary_metrics_inferred (not stated in JD; inferred from responsibilities)",
+      "location.type (not stated; marked unclear)",
+      "location.remote_us_eligible (not stated; defaulted to false)"
+    ],
+    "ambiguities": [
+      "Location is entirely absent from the JD — no city, country, remote/hybrid policy, or visa sponsorship information is provided. Cannot determine work arrangement.",
+      "The JD mentions 'pension contribution through Hargreaves Lansdown' and 'AXA' (UK providers), and team off-sites to European cities, suggesting a UK/European base, but this is not explicitly confirmed.",
+      "No years of experience requirement is stated; seniority is implied by scope and responsibilities only."
+    ]
+  }
+}

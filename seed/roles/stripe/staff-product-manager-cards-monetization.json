@@ -1,0 +1,356 @@
+{
+  "company": "Stripe",
+  "role_title": "Staff Product Manager, Cards Monetization",
+  "url": "https://stripe.com/jobs/search?gh_jid=7980498",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7980498",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Staff IC (Senior IC+, likely Staff PM)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of experience in a product role",
+      "Role titled 'Staff Product Manager'",
+      "Significant exposure to Stripe's leadership",
+      "Owns revenue growth and margin improvements for Cards business globally"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_product_experience",
+      "raw_text_from_jd": "10+ years of experience in a product role",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 10,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "b2b_gtm_pricing_contracting",
+      "raw_text_from_jd": "Deep understanding of B2B GTM, Pricing and Contracting processes and tools",
+      "skill_type": "domain_knowledge",
+      "domain": "b2b_gtm_pricing_contracting",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Ability to effectively collaborate with engineering, product, data science, and cross-functional teams.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "b2b_sales_gtm_experience",
+      "raw_text_from_jd": "Experience working with go-to-market teams in a B2B sales environment.",
+      "skill_type": "domain_knowledge",
+      "domain": "b2b_sales_gtm",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "b2b_pricing_monetization",
+      "raw_text_from_jd": "Experience in B2B Pricing/Monetization",
+      "skill_type": "domain_knowledge",
+      "domain": "b2b_pricing_monetization",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_analysis_and_instrumentation",
+      "raw_text_from_jd": "Ability to deeply analyze data, derive insights, and make data-driven decisions. Proven track record of instrumenting and measuring product initiatives, including those with less obvious metrics.",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Strong written and verbal communication skills with a talent for simplifying complex concepts",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_delivery_track_record",
+      "raw_text_from_jd": "Proven successes in delivering continuous product improvement as well as 0 ->1 launches",
+      "skill_type": "outcome",
+      "domain": "product_launches",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mindset",
+      "raw_text_from_jd": "Ownership mindset and persistence to work on whatever it takes to ensure that your product is successful",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_presentations",
+      "raw_text_from_jd": "Proven ability to deliver high-impact presentations to executive audiences.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "autonomy_and_responsibility",
+      "raw_text_from_jd": "Has the ability to thrive with a high level of autonomy and responsibility",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "strategy_consulting_or_finance",
+      "raw_text_from_jd": "Prior background in Strategy Consulting and/or Finance",
+      "skill_type": "domain_knowledge",
+      "domain": "strategy_consulting_finance",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "strategy consulting firm"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "data_observability_platforms",
+      "raw_text_from_jd": "Prior experience of building data observability platforms",
+      "skill_type": "capability",
+      "domain": "data_observability",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "payments_card_networks_banking",
+      "raw_text_from_jd": "Experience in Payments, working with Card Networks or Banking partners.",
+      "skill_type": "domain_knowledge",
+      "domain": "payments",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "banking"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_data_science_sql",
+      "raw_text_from_jd": "Experience working with ML, data science and data analyst teams. SQL proficiency will help.",
+      "skill_type": "tool_proficiency",
+      "domain": "ml_data_science",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Cards Monetization — pricing of card payment products worldwide, IC+ pricing launches, B2B pricing automation stack, margin and revenue monitoring systems",
+    "business_model": "B2B payments infrastructure, transaction-based pricing",
+    "primary_metrics_inferred": [
+      "Revenue growth from Cards business",
+      "Margin improvements on card transactions",
+      "IC+ pricing adoption with enterprise users",
+      "Pricing automation coverage and efficiency"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Design",
+      "Data Science",
+      "GTM",
+      "Pricing",
+      "Marketing",
+      "Finance",
+      "Operations",
+      "Network partnerships",
+      "Sales"
+    ],
+    "core_responsibilities": [
+      "Lead Card IC+ pricing/product and launch Stripe's IC+ pricing on Cards in new geos and grow adoption with enterprise users",
+      "Define pricing principles, drive pricing decisions and operationalize those decisions working with pricing, finance, marketing and GTM teams",
+      "Work with engineering and data science to build observability into current pricing, margin and revenue realization",
+      "Define processes for competitive analysis and regular pricing audits",
+      "Research best practices pricing automation (such as algorithmic bundling and discounting) and build out an end to end B2B pricing automation stack at Stripe",
+      "Work backwards from customers and identify new pricing models, build business cases, test, and launch"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Cards Monetization",
+    "IC+ pricing",
+    "B2B pricing",
+    "pricing automation",
+    "revenue growth",
+    "margin optimization",
+    "card payments",
+    "pricing observability",
+    "algorithmic bundling",
+    "enterprise pricing",
+    "GTM",
+    "ML/GenAI",
+    "Staff PM"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Strategically critical role with direct exposure to Stripe's leadership",
+    "Clearly scoped ownership area (Cards Monetization, IC+ pricing globally)",
+    "Explicit cross-functional partnership structure described in detail",
+    "Decisions described as having 'millions of dollars of impact' — high-visibility role",
+    "Preferred qualifications clearly distinguished from minimum requirements",
+    "Candidates encouraged to apply if they meet minimum requirements"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location specified in the JD — office, city, remote policy all unclear",
+    "10+ years minimum experience is a high bar that eliminates earlier-career PMs",
+    "Visa sponsorship and work authorization not addressed"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Staff PM' and 10+ years requirement)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type (not stated; set to 'unclear')",
+      "compensation.equity_mentioned (no mention of equity in JD)"
+    ],
+    "ambiguities": [
+      "Location is not specified anywhere in the JD body — it is unclear whether this role is remote, hybrid, or onsite, and which city or region it is based in.",
+      "Visa sponsorship and work authorization requirements are not addressed in the JD."
+    ]
+  }
+}

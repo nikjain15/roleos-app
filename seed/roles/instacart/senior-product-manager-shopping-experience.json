@@ -4,34 +4,35 @@
   "url": "https://instacart.careers/job/?gh_jid=7904851",
   "ats_provider": "greenhouse",
   "ats_job_id": "7904851",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
     "type": "remote-us",
     "cities_listed": [],
     "remote_us_eligible": true,
-    "office_time_required": "no mandatory office time; Flex First policy with optional in-person events",
+    "office_time_required": "none stated; Flex First policy with optional in-person events",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Generalist PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Growth PM (consumer shopping/health product, zero-to-one focus)",
+  "secondary_archetype": "Growth PM (consumer shopping / health vertical)",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 6,
     "years_required_max": null,
     "manages_people": false,
     "level_signals": [
-      "6+ years of product management experience",
-      "Base pay range $184K–$233K depending on state, consistent with Senior PM at a large consumer tech company",
-      "Zero-to-one ownership, cross-functional leadership, executive alignment signals senior IC scope"
+      "6+ years of product management experience required",
+      "Base pay range $184K–$233K depending on state, consistent with Senior PM",
+      "Leads a focused pod (6 engineers, 1 DS, 1 designer, 1 researcher)",
+      "Zero-to-one ownership with exec-level stakeholder alignment"
     ]
   },
   "must_haves": [
     {
-      "id": "years_pm_experience",
+      "id": "years_pm_consumer",
       "raw_text_from_jd": "6+ years of product management experience building consumer products, including ownership of end-to-end user experiences from discovery through launch and iteration.",
       "skill_type": "years_of_experience",
       "domain": "product_management_consumer",
@@ -69,9 +70,9 @@
       "id": "design_research_collaboration",
       "raw_text_from_jd": "Hands-on experience collaborating with product design and user research to convert insights into clear PRDs, prototypes, and shipped features.",
       "skill_type": "capability",
-      "domain": "product_design_research_collaboration",
+      "domain": "product_design_and_research",
       "evidence_required": "project_examples",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -84,7 +85,7 @@
       "id": "data_fluency_experimentation",
       "raw_text_from_jd": "Data fluency with experimentation and analytics (for example: defining success metrics, partnering on A/B tests, interpreting results; SQL proficiency or equivalent analytics tooling experience).",
       "skill_type": "tool_proficiency",
-      "domain": "data_analytics_experimentation",
+      "domain": "analytics_and_experimentation",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -106,7 +107,7 @@
       "skill_type": "capability",
       "domain": "stakeholder_management",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -160,12 +161,12 @@
       "credentials_named": []
     },
     {
-      "id": "ecommerce_marketplace_personalization",
+      "id": "ecommerce_personalization_background",
       "raw_text_from_jd": "Background in e-commerce, marketplaces, personalization/recommendation systems, search, or content experiences.",
       "skill_type": "domain_knowledge",
       "domain": "ecommerce_personalization_search",
       "evidence_required": "work_history",
-      "bridgeable": "maybe",
+      "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [
@@ -181,12 +182,12 @@
       "credentials_named": []
     },
     {
-      "id": "startup_experience",
+      "id": "startup_zero_to_one_experience",
       "raw_text_from_jd": "Startup or \"startup within a startup\" experience leading products from zero-to-one in high-ambiguity, fast-moving environments.",
-      "skill_type": "cultural_fit",
-      "domain": "startup_environment",
+      "skill_type": "domain_knowledge",
+      "domain": "startup_product_leadership",
       "evidence_required": "work_history",
-      "bridgeable": "yes",
+      "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
@@ -206,11 +207,7 @@
       "bridgeable": "yes",
       "severity": "soft",
       "tools_named": [],
-      "technologies_named": [
-        "recipes",
-        "nutrition data",
-        "health data platforms"
-      ],
+      "technologies_named": [],
       "industries_named": [
         "health"
       ],
@@ -236,14 +233,14 @@
   ],
   "explicitly_excluded": [],
   "scope": {
-    "team_size_estimate": "6 engineers, 1 data scientist, 1 designer, 1 user researcher (pod); broader group of PMs in Shopping Experience org",
-    "surface": "Health product area within Shopping Experience — dietary discovery, health-forward shopping, inspiration, and goal-oriented food experiences for consumers",
-    "business_model": "B2C consumer marketplace (grocery delivery)",
+    "team_size_estimate": "6 engineers, 1 data scientist, 1 designer, 1 user researcher (pod); broader Shopping Experience PM org",
+    "surface": "Health product area within Shopping Experience — dietary needs, health-forward discovery, inspiration, checkout",
+    "business_model": "B2C grocery delivery marketplace",
     "primary_metrics_inferred": [
       "Engagement with health/dietary features",
-      "Conversion from discovery to checkout",
+      "Conversion (idea to checkout)",
       "Retention of health-focused customers",
-      "Adoption of zero-to-one health features at scale"
+      "Adoption of zero-to-one health features"
     ],
     "cross_functional_partners": [
       "Design",
@@ -271,51 +268,52 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "new hire equity grant and annual refresh grants (form not specified, likely RSUs)",
+    "equity_form": "New hire equity grant plus annual refresh grants",
     "location_pay_differential": true,
     "source": "stated"
   },
   "top_keywords": [
     "zero-to-one",
     "health",
-    "shopping experience",
+    "Shopping Experience",
     "consumer products",
-    "dietary discovery",
-    "personalization",
-    "experimentation",
     "A/B testing",
+    "experimentation",
+    "dietary filters",
+    "discovery",
+    "conversion",
+    "retention",
     "SQL",
     "cross-functional",
-    "roadmap",
     "Flex First",
     "remote"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range fully disclosed across all US states ($184K–$233K base)",
-    "Equity (new hire + annual refresh) explicitly mentioned",
-    "Pod composition stated clearly (6 eng, 1 DS, 1 designer, 1 researcher) — good signal of investment in the area",
-    "Explicitly remote-first (Flex First policy, #LI-Remote tagged)",
-    "High-visibility, zero-to-one opportunity with millions of weekly users — large scope and impact potential",
-    "JD acknowledges ambiguity and startup-style environment — honest about role expectations"
+    "Compensation ranges disclosed across all US states — transparent and competitive ($184K–$233K base)",
+    "Equity clearly mentioned (new hire grant + annual refresh)",
+    "Specific pod composition stated (6 engineers, 1 DS, 1 designer, 1 researcher) — concrete ownership clarity",
+    "Flex First remote policy explicitly called out with #LI-Remote tag",
+    "High-visibility, zero-to-one opportunity with millions of weekly users — strong scope",
+    "Clear articulation of product area (Health within Shopping Experience)"
   ],
   "red_flags": [
-    "No mention of visa sponsorship or work authorization requirements — unclear for non-US citizens",
-    "Health/regulated consumer space is listed only as a 'preferred' qualification but the role is explicitly the 'Health product area' — may be more critical than soft implies",
-    "Pay band varies significantly by state ($184K–$233K); candidates in lower-band states may find it less competitive"
+    "No visa sponsorship or work authorization information provided",
+    "Compensation varies significantly by state (up to ~$49K spread between lowest and highest bands) — candidates outside CA/NY/CT/NJ face meaningful pay differential",
+    "Zero-to-one framing with ambiguity signals a nascent area — roadmap and success benchmarks may be loosely defined"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from years requirement + comp range)",
-      "scope.business_model (inferred from Instacart's known product)",
-      "scope.primary_metrics_inferred (inferred from responsibilities; not directly stated as KPIs)",
-      "compensation.equity_form (form not specified; RSUs inferred from typical large consumer tech practice)",
+      "seniority.level (inferred from years required and compensation range)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs)",
+      "scope.business_model (inferred from Instacart's known model)",
       "location.work_auth (not stated in JD)",
-      "location.visa_sponsorship (not stated in JD)"
+      "location.visa_sponsorship (not stated in JD)",
+      "compensation.base_range_usd min/max (taken as lowest-state floor and highest-state ceiling across all disclosed bands)"
     ],
     "ambiguities": [
-      "The role is tagged #LI-Remote and described as 'remote-friendly' with Flex First policy, but the company also holds regular in-person events; treated as remote-us rather than hybrid given no mandatory office percentage is stated.",
-      "Health domain experience is listed under Preferred Qualifications, yet the entire role is leading the 'Health product area' — this may be harder in practice than its 'soft' classification suggests."
+      "Compensation is broken into four geographic tiers; base_range_usd captures the full floor-to-ceiling across all tiers ($184K–$233K) rather than a single band — readers should check their state tier.",
+      "Location type tagged #LI-Remote and described as 'remote-friendly'; Flex First policy allows home/office/coffee shop with in-person events but no minimum office requirement stated — treated as remote-us."
     ]
   }
 }

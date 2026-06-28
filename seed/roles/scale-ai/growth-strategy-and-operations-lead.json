@@ -1,0 +1,260 @@
+{
+  "company": "Scale AI",
+  "role_title": "Growth Strategy & Operations Lead",
+  "url": "https://job-boards.greenhouse.io/scaleai/jobs/4701543005",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "4701543005",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA",
+      "New York, NY",
+      "Seattle, WA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth (non-PM)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience on growth, product, or operations, or as a SWE",
+      "Base salary range $180,800–$226,000 consistent with Senior IC",
+      "Presents to executive team; owns strategy and analytics independently"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_growth_ops_product_swe",
+      "raw_text_from_jd": "5+ years of experience on growth, product, or operations, or as a SWE.",
+      "skill_type": "years_of_experience",
+      "domain": "growth_operations_product_engineering",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": true,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_analytics_sql_python",
+      "raw_text_from_jd": "at minimum the role requires the ability to do data analytics using SQL or Python",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analytics",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SQL",
+        "Python"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_background_stem",
+      "raw_text_from_jd": "Strong technical background (a degree in STEM is ideal, and at minimum the role requires the ability to do data analytics using SQL or Python).",
+      "skill_type": "credential",
+      "domain": "technical_education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "STEM degree"
+      ]
+    },
+    {
+      "id": "operations_heavy_business_models",
+      "raw_text_from_jd": "Prior experience with operations-heavy business models (e.g. on-demand, marketplace, logistics, supply chain)",
+      "skill_type": "domain_knowledge",
+      "domain": "marketplace_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "on-demand",
+        "marketplace",
+        "logistics",
+        "supply chain"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_problem_solving",
+      "raw_text_from_jd": "Excellent problem-solving capabilities and a robust analytical approach, with the ability to leverage data to inform growth strategies",
+      "skill_type": "capability",
+      "domain": "analytical_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "entrepreneurial_ambiguity",
+      "raw_text_from_jd": "An entrepreneurial spirit, comfortable with navigating ambiguity and scaling new products or services from the ground up.",
+      "skill_type": "cultural_fit",
+      "domain": "entrepreneurship",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_tools_experience",
+      "raw_text_from_jd": "Prior experience building with AI tools and workflows - you've tinkered, shipped something, and can quickly pick up new AI tooling as the landscape evolves",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_tools_and_workflows",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "consultant_or_operational_experience",
+      "raw_text_from_jd": "experience working on operational challenges or as a consultant is a plus",
+      "skill_type": "domain_knowledge",
+      "domain": "consulting_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "consulting firm"
+      ],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Outlier expert contributor marketplace — supply-side growth engine for Generative AI projects",
+    "business_model": "B2B AI data/services marketplace; supply-side marketplace for expert contributors (PhDs, coders, domain experts)",
+    "primary_metrics_inferred": [
+      "Expert contributor acquisition and activation rates",
+      "Funnel conversion and onboarding speed",
+      "Project ramp success (qualified experts meeting delivery timelines)",
+      "Contributor retention and churn rates",
+      "Supply capacity forecasting accuracy"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "Go-to-Market",
+      "Project delivery teams",
+      "Executive team"
+    ],
+    "core_responsibilities": [
+      "Drive critical growth projects that expand and improve the expert supply available for Scale's highest-priority AI projects",
+      "Develop and enhance growth strategies, funnels, and pipelines for acquiring expert contributors through channels such as outbound, referrals, hackathons, partnerships, paid acquisition, and professional communities",
+      "Improve onboarding, screening, verification, and training systems so that experts can be evaluated, activated, and ramped onto customer projects quickly and reliably",
+      "Manage supply-side operations across the contributor lifecycle, including activation, retention, churn mitigation, skill/profile validation, and routing contributors to the most relevant projects",
+      "Build analytical systems and operating rhythms to forecast capacity needs, diagnose funnel bottlenecks, and ensure projects ramp enough qualified experts to meet delivery timelines",
+      "Present regular progress updates to Scale's executive team, translating supply health, ramp progress, and growth initiatives into clear recommendations and decisions"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      180800,
+      226000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity grant (subject to Board of Director approval)",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "growth strategy",
+    "supply-side operations",
+    "expert marketplace",
+    "Generative AI",
+    "contributor acquisition",
+    "onboarding funnels",
+    "capacity forecasting",
+    "SQL",
+    "Python",
+    "marketplace",
+    "Outlier",
+    "retention",
+    "analytics"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($180,800–$226,000 base)",
+    "Equity mentioned as part of compensation package",
+    "Clear and specific scope — supply-side growth for AI expert marketplace (Outlier)",
+    "Role has direct executive visibility (regular progress updates to executive team)",
+    "Comprehensive benefits including health, dental, vision, learning stipend, and generous PTO",
+    "Company has well-known enterprise and government customers (Meta, U.S. Army, Air Force, etc.)"
+  ],
+  "red_flags": [
+    "All requirements listed under 'Ideally, you'd have' — language suggests preferred, but context and must-have signals (SQL/Python explicitly called 'at minimum') create ambiguity about true hard requirements",
+    "No explicit mention of visa sponsorship — unclear for non-US candidates",
+    "90-day waiting period policy before reconsidering candidates for the same role may deter applicants who miss the first round",
+    "Role locations limited to SF, NYC, Seattle — no remote option stated, eliminating distributed candidates"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + responsibility scope + years required)",
+      "scope.primary_metrics_inferred (not directly stated in JD; inferred from responsibilities)",
+      "scope.business_model (inferred from product and company description)",
+      "location.type (inferred as onsite from city-specific pay transparency disclosure; no hybrid/remote language in body)",
+      "location.visa_sponsorship (not stated in JD)"
+    ],
+    "ambiguities": [
+      "All requirements appear under 'Ideally, you'd have:' which could imply all are preferred/nice-to-have; however, SQL/Python analytics is explicitly called 'at minimum the role requires', making it a hard requirement. Other items were classified as hard based on overall role criticality language and unconditional framing.",
+      "STEM degree is described as 'ideal' but SQL/Python ability is stated as 'at minimum' — creates ambiguity about whether a non-STEM degree with strong analytics skills would suffice. Treated as hard but with accepts_equivalent_experience flagged.",
+      "Location type: JD provides pay transparency for SF, NYC, Seattle only, implying onsite; no remote or hybrid language used. Treated as onsite but unconfirmed."
+    ]
+  }
+}

@@ -1,0 +1,310 @@
+{
+  "company": "Instacart",
+  "role_title": "Senior Product Manager, Retailer Platform",
+  "url": "https://instacart.careers/job/?gh_jid=8014060",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8014060",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "Flex First — employees choose where they work; regular in-person events",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Generalist PM with enterprise GTM / B2B platform focus",
+  "seniority": {
+    "level": "Senior IC (Senior PM)",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of B2B product management or similar experience",
+      "2+ years of direct involvement with sales or consulting and customer discovery with senior executives",
+      "Base pay range $184K–$233K depending on state, consistent with Senior PM",
+      "Role described as 'one of the most dynamic and high leverage roles we have'"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_b2b_pm",
+      "raw_text_from_jd": "8+ years of B2B product management or similar experience, 3+ in ecommerce / retail technology",
+      "skill_type": "years_of_experience",
+      "domain": "B2B_product_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "ecommerce",
+        "retail technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_ecommerce_retail",
+      "raw_text_from_jd": "3+ in ecommerce / retail technology",
+      "skill_type": "years_of_experience",
+      "domain": "ecommerce_retail_technology",
+      "minimum_value": 3,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "ecommerce",
+        "retail technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_sales_consulting",
+      "raw_text_from_jd": "2+ years of direct involvement with sales or consulting and customer discovery with senior executives",
+      "skill_type": "years_of_experience",
+      "domain": "enterprise_sales_consulting_customer_discovery",
+      "minimum_value": 2,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_gtm_intersection",
+      "raw_text_from_jd": "Strong experience operating at the intersection of product and go-to-market, working closely with enterprise sales, marketing, and customer success.",
+      "skill_type": "capability",
+      "domain": "product_go_to_market",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_trust_building",
+      "raw_text_from_jd": "Proven ability to build trust with executives, internally and externally.",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Strong leadership skills — able to guide large, multidisciplinary teams toward shared outcomes across Product, Engineering, Data, Design, and GTM.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "complex_product_ambiguity",
+      "raw_text_from_jd": "Demonstrated ability to handle complex product problems across a wide product surface with high ambiguity.",
+      "skill_type": "capability",
+      "domain": "product_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_vision_communication",
+      "raw_text_from_jd": "Strong product vision and communication skills — able to envision how grocery and e-commerce will evolve over the next three years, translate near-term asks into scalable platform offerings, and layer in emerging technologies to go beyond incremental improvements.",
+      "skill_type": "capability",
+      "domain": "product_vision_and_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "grocery",
+        "ecommerce"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "customer_product_strategy",
+      "raw_text_from_jd": "Proven customer and product strategy ability:\na) Build trust with external customers\nb) Identify needs and craft complex platform solutions\nc) Rally internal teams to make high-stakes tradeoffs under ambiguity and tight deadlines",
+      "skill_type": "outcome",
+      "domain": "customer_strategy_platform_solutions",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_and_product_intuition",
+      "raw_text_from_jd": "Fluent in both product intuition and data: able to assess value propositions for both retailers and their end customers, balancing qualitative insights and quantitative impact.",
+      "skill_type": "capability",
+      "domain": "data_driven_product_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "creative_tools_cms_site_building",
+      "raw_text_from_jd": "Experience in creative tools, content management systems, or site building in a B2B context",
+      "skill_type": "domain_knowledge",
+      "domain": "creative_tools_cms_site_building",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "White-label retailer ecommerce platform — site theming & brand platform, digital asset management, enterprise retailer GTM and partnership",
+    "business_model": "B2B SaaS white-label ecommerce platform for enterprise and mid-market retailers",
+    "primary_metrics_inferred": [
+      "Enterprise retailer acquisition and growth",
+      "Retailer ecommerce conversion and brand experience quality",
+      "Platform feature adoption by retailers",
+      "Enterprise deal wins and pipeline influence"
+    ],
+    "cross_functional_partners": [
+      "Design",
+      "Platform Engineering",
+      "Sales",
+      "Marketing",
+      "Customer Success",
+      "Data",
+      "GTM teams",
+      "Multiple R&D teams"
+    ],
+    "core_responsibilities": [
+      "Own the long term vision, strategy, and roadmap for site theming and content management",
+      "Build a centralized platform where retailers configure and manage the visual representation of their sites",
+      "Own the Digital Asset Manager (DAM): asset hosting, uploading, management, brand rules enforcement, and an API",
+      "Define the right balance between retailer flexibility and platform coherence",
+      "Shape the long-term vision for how AI can augment page editing and merchandising workflows",
+      "Enable and influence multiple product teams to build towards multi year horizons",
+      "Regularly represent Instacart externally to the world's largest retailers as an innovation partner",
+      "Drive cross-functional alignment on complex retailer requirements to win deals and support retailer-driven innovation roadmaps",
+      "Partner closely with Sales and Marketing to shape collateral and narratives that drive enterprise go-to-market success"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      184000,
+      233000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "New hire equity grant plus annual refresh grants",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "B2B product management",
+    "ecommerce platform",
+    "white-label",
+    "site theming",
+    "content management",
+    "digital asset management",
+    "enterprise retailer",
+    "go-to-market",
+    "creative tools",
+    "AI augmentation",
+    "retailer platform",
+    "design systems",
+    "enterprise sales",
+    "cross-functional leadership"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation ranges explicitly disclosed across multiple geographies ($184K–$233K base)",
+    "Equity (new hire + annual refresh) explicitly mentioned",
+    "Fully remote eligible (Flex First policy)",
+    "Clear dual product surface with well-defined ownership (site theming + enterprise GTM)",
+    "High-leverage, senior role with direct external retailer exposure",
+    "AI roadmap component signals forward-looking product investment"
+  ],
+  "red_flags": [
+    "Exceptionally broad scope — site theming, DAM, enterprise GTM, and retailer partnership all in one role — may signal under-staffing or scope creep risk",
+    "8+ years minimum experience plus 3+ years ecommerce and 2+ years sales/consulting creates a narrow candidate profile",
+    "Role requires fluency across both deep platform/technical product work and enterprise sales dynamics simultaneously, which is a rare combination",
+    "No mention of visa sponsorship or work authorization — unclear for non-US candidates despite remote-global hashtag not being present"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required + compensation range)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from product description)",
+      "compensation.base_range_usd min/max (stated as ranges per geography; min = lowest state tier floor, max = CA/NY/CT/NJ ceiling)",
+      "location.work_auth (not stated in JD)"
+    ],
+    "ambiguities": [
+      "Base pay range spans $184K–$233K across US geographies; the single base_range_usd field captures the full spread (lowest floor to highest ceiling) across all listed state tiers",
+      "JD uses #LI-Remote tag and describes Flex First policy but does not explicitly confirm whether international remote candidates are eligible; treated as remote-us only",
+      "Visa sponsorship is not mentioned anywhere in the JD; marked as 'unclear'"
+    ]
+  }
+}

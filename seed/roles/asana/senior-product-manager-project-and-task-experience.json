@@ -4,7 +4,7 @@
   "url": "https://www.asana.com/jobs/apply/7392230?gh_jid=7392230",
   "ats_provider": "greenhouse",
   "ats_job_id": "7392230",
-  "fetched_at": "2026-05-10",
+  "fetched_at": "2026-06-28",
   "posting_first_seen": null,
   "posting_last_updated": null,
   "location": {
@@ -13,13 +13,13 @@
       "New York City"
     ],
     "remote_us_eligible": false,
-    "office_time_required": "Monday, Tuesday, and Thursday in-office standard; Wednesday optional WFH; Friday depends on role",
+    "office_time_required": "Monday, Tuesday, and Thursday in office; Wednesday typically WFH; Friday depends on role",
     "work_auth": "unclear",
     "visa_sponsorship": "unclear"
   },
   "archetype": "Generalist PM",
   "archetype_confidence": "high",
-  "secondary_archetype": "Technical PM (enterprise B2B, data models, complex UX)",
+  "secondary_archetype": "Technical PM (enterprise B2B, complex data models)",
   "seniority": {
     "level": "Senior IC",
     "years_required_min": 5,
@@ -27,9 +27,9 @@
     "manages_people": false,
     "level_signals": [
       "5+ years of experience in Product Management",
-      "Mentor for others; share PM best practices",
-      "Base salary range $202,000–$230,000 consistent with Senior IC at a scaled tech company",
-      "Expected to handle 'difficult, ambiguous problems where the strategy and/or solution may not be clear from the outset'"
+      "Title explicitly 'Senior Product Manager'",
+      "Expected to mentor others and share PM best practices",
+      "Comp range $202K-$230K base, consistent with Senior PM at a large tech company"
     ]
   },
   "must_haves": [
@@ -52,25 +52,10 @@
       "credentials_named": []
     },
     {
-      "id": "ambiguous_problem_solving",
-      "raw_text_from_jd": "You're a product leader who has the basics of PMing down and can take on difficult, ambiguous problems where the strategy and/or solution may not be clear from the outset.",
-      "skill_type": "capability",
-      "domain": "product_strategy",
-      "evidence_required": "project_examples",
-      "bridgeable": "maybe",
-      "severity": "hard",
-      "tools_named": [],
-      "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [],
-      "credentials_named": []
-    },
-    {
-      "id": "systems_thinking",
+      "id": "systems_thinker",
       "raw_text_from_jd": "Systems thinker: You feel just as comfortable modeling data relationships in a technical diagram, just as well as you can partner with Design to walk stakeholders through a holistic UX flow.",
       "skill_type": "capability",
-      "domain": "systems_thinking_and_data_modeling",
+      "domain": "systems_thinking_and_ux",
       "evidence_required": "project_examples",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -85,7 +70,7 @@
       "id": "roadmap_creation_and_mvp_scoping",
       "raw_text_from_jd": "You create, flex, and evangelize a roadmap; thoughtfully break down projects to MVPs and iterative projects to ship with high velocity and business impact.",
       "skill_type": "capability",
-      "domain": "roadmap_management",
+      "domain": "product_roadmap_and_execution",
       "evidence_required": "shipped_products_with_metrics",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -112,10 +97,10 @@
       "credentials_named": []
     },
     {
-      "id": "cross_functional_collaboration_and_technical_communication",
+      "id": "cross_functional_collaboration_and_technical_depth",
       "raw_text_from_jd": "You partner with cross-functional teammates to deliver high-quality results. You speak with clarity and write sharp product specs. You are highly comfortable getting into deep technical discussions with engineers about the pros and cons of different approaches, and you pair with design on complex user flows.",
       "skill_type": "capability",
-      "domain": "cross_functional_collaboration",
+      "domain": "cross_functional_execution_and_technical_collaboration",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "hard",
@@ -145,9 +130,9 @@
       "id": "data_driven_goal_setting",
       "raw_text_from_jd": "Maximize clarity by bringing a data-driven mindset to setting concrete goals and milestones",
       "skill_type": "capability",
-      "domain": "data_driven_decision_making",
-      "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "maybe",
+      "domain": "data_driven_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
       "technologies_named": [],
@@ -157,15 +142,17 @@
       "credentials_named": []
     },
     {
-      "id": "enterprise_roadmap_delivery",
-      "raw_text_from_jd": "Define and deliver a compelling roadmap that delivers value for enterprise-level customers",
-      "skill_type": "outcome",
-      "domain": "enterprise_product_management",
-      "evidence_required": "shipped_products_with_metrics",
-      "bridgeable": "maybe",
+      "id": "ai_curiosity",
+      "raw_text_from_jd": "Demonstrates curiosity about AI tools and emerging technologies, with a willingness to learn and leverage them to enhance productivity, collaboration, or decision-making",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_tools_and_emerging_technology",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
       "severity": "hard",
       "tools_named": [],
-      "technologies_named": [],
+      "technologies_named": [
+        "AI tools"
+      ],
       "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
@@ -177,32 +164,15 @@
       "id": "complex_data_models_and_visualizations",
       "raw_text_from_jd": "Background in building for complex data models and visualizations, human-centric UX, and B2B platform or enterprise experience preferred.",
       "skill_type": "domain_knowledge",
-      "domain": "data_modeling_and_enterprise_ux",
+      "domain": "complex_data_models_ux_enterprise",
       "evidence_required": "work_history",
       "bridgeable": "maybe",
       "severity": "soft",
       "tools_named": [],
       "technologies_named": [],
-      "industries_named": [],
-      "geographies_named": [],
-      "employer_types_named": [
-        "B2B platform"
+      "industries_named": [
+        "B2B"
       ],
-      "credentials_named": []
-    },
-    {
-      "id": "ai_tools_curiosity",
-      "raw_text_from_jd": "Demonstrates curiosity about AI tools and emerging technologies, with a willingness to learn and leverage them to enhance productivity, collaboration, or decision-making",
-      "skill_type": "domain_knowledge",
-      "domain": "ai_tools_and_emerging_technology",
-      "evidence_required": "hands_on_use",
-      "bridgeable": "yes",
-      "severity": "soft",
-      "tools_named": [],
-      "technologies_named": [
-        "AI tools"
-      ],
-      "industries_named": [],
       "geographies_named": [],
       "employer_types_named": [],
       "credentials_named": []
@@ -211,33 +181,32 @@
   "explicitly_excluded": [],
   "scope": {
     "team_size_estimate": "unclear",
-    "surface": "Project & Task Experience — core Asana project and task product for millions of teams, with focus on enterprise-level customers",
-    "business_model": "B2B SaaS, work management platform",
+    "surface": "Project & Task Experience — core project and task management product features for enterprise customers",
+    "business_model": "B2B SaaS / enterprise work management platform",
     "primary_metrics_inferred": [
-      "Enterprise customer value delivered via roadmap",
-      "Adoption and usage of project/task features",
-      "Shipping velocity and business impact of iterative releases"
+      "Enterprise customer value delivery",
+      "Roadmap velocity and business impact",
+      "Adoption of new project and task features",
+      "Customer satisfaction / retention"
     ],
     "cross_functional_partners": [
       "Engineering",
       "Design",
       "Experience Research",
       "Data Science",
-      "Product Marketing",
-      "Product Leadership",
-      "PM team",
       "Sales",
       "Support",
-      "Marketing"
+      "Marketing",
+      "Product Marketing",
+      "Product Leadership",
+      "PM team"
     ],
     "core_responsibilities": [
       "Define and deliver a compelling roadmap that delivers value for enterprise-level customers",
       "Partner closely with Product Design to create an enterprise software experience that's intuitive and dead simple",
       "Create a product strategy to balance multiple priorities and use cases across customers, product teams, and enterprise-level compliance",
       "Maximize clarity by bringing a data-driven mindset to setting concrete goals and milestones",
-      "Partner with engineering, design, and other functions to execute on roadmaps with high velocity",
-      "Analyze top customer personas; dig into roots of customer needs; synthesize research",
-      "Mentor others and share PM best practices"
+      "Partner with engineering, design, and other functions to execute on roadmaps with high velocity"
     ]
   },
   "compensation": {
@@ -247,53 +216,52 @@
     ],
     "total_comp_estimate_usd": null,
     "equity_mentioned": true,
-    "equity_form": "equity mentioned as part of compensation package alongside base salary",
+    "equity_form": "equity mentioned as additional component of compensation package",
     "location_pay_differential": false,
     "source": "stated"
   },
   "top_keywords": [
-    "enterprise product management",
-    "project & task experience",
+    "Senior Product Manager",
+    "Project & Task Experience",
+    "enterprise",
+    "B2B",
     "roadmap",
-    "B2B platform",
     "data models",
-    "human-centric UX",
-    "cross-functional collaboration",
+    "UX",
+    "cross-functional",
     "AI tools",
-    "work management",
-    "systems thinking",
+    "Work Management",
     "MVP",
-    "high velocity",
-    "Asana"
+    "systems thinker",
+    "product strategy"
   ],
   "buzzword_density": "medium",
   "green_flags": [
-    "Compensation range disclosed ($202K–$230K base) and competitive for NYC Senior PM",
-    "Explicit encouragement to apply even if not meeting every requirement",
-    "Clear product surface and team context (Project & Task Experience)",
-    "Annual pay equity audit commitment signals fairness in compensation practices",
-    "Named cross-functional partners and specifics of hybrid schedule disclosed upfront",
-    "Equity and comprehensive benefits package mentioned"
+    "Compensation range disclosed ($202K-$230K base)",
+    "Explicit encouragement to apply even if not every requirement is met",
+    "Clear product surface and ownership area (Project & Task Experience)",
+    "Strong cross-functional collaboration culture described",
+    "Yearly pay equity audit demonstrates compensation fairness commitment",
+    "Well-established company (Fortune Best Workplaces 7+ years)"
   ],
   "red_flags": [
-    "NYC office-centric hybrid required (Mon/Tue/Thu); not suitable for remote candidates",
+    "Hard hybrid requirement in NYC (Mon/Tue/Thu in office) — eliminates remote candidates",
     "Visa sponsorship and work authorization not addressed in JD",
-    "Some requirements phrased as behavioral/cultural fit are difficult to objectively assess pre-interview",
-    "B2B/enterprise and complex data model experience is listed as 'preferred' in the about-you section but implied as near-required given the enterprise focus of the role — creates ambiguity on true hardness of that requirement"
+    "Friday WFH policy described as ambiguous ('depends on the type of work you do')"
   ],
   "extraction_notes": {
     "fields_inferred_not_stated": [
-      "seniority.level (inferred from comp range and 5+ years requirement)",
+      "seniority.level (inferred from title, years, comp, and mentorship expectations)",
       "scope.team_size_estimate (not stated; left as 'unclear')",
       "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)",
-      "scope.business_model (inferred from product description and enterprise focus)",
-      "location.work_auth (not stated in JD)",
-      "location.visa_sponsorship (not stated in JD)"
+      "scope.business_model (inferred from product description and 'enterprise' language)",
+      "location.work_auth (not mentioned in JD)",
+      "location.visa_sponsorship (not mentioned in JD)"
     ],
     "ambiguities": [
-      "The 'Background in building for complex data models and visualizations, human-centric UX, and B2B platform or enterprise experience preferred' is grammatically grouped with the 5+ years PM requirement bullet but labeled 'preferred' — classified as nice_to_have but is close to hard given the enterprise nature of the role.",
-      "Friday WFH is described as dependent on 'the type of work you do and the teams with which you partner' — actual in-office cadence may vary beyond Mon/Tue/Thu baseline.",
-      "AI tools curiosity is phrased as a behavioral trait ('demonstrates curiosity') rather than a hard skill, making severity classification ambiguous; treated as soft/nice-to-have."
+      "The AI curiosity requirement ('Demonstrates curiosity about AI tools...') is listed unconditionally in the 'About you' section but uses softer language ('curiosity', 'willingness to learn') compared to other hard requirements. Classified as hard given its unconditional placement.",
+      "Friday WFH policy is described conditionally ('depends on the type of work you do and the teams with which you partner'), making exact in-office expectations unclear without recruiter clarification.",
+      "The 'B2B platform or enterprise experience preferred' clause is attached to the 5+ years experience bullet, making it ambiguous whether it modifies the full requirement or is a standalone preference. Treated as nice-to-have given the word 'preferred'."
     ]
   }
 }

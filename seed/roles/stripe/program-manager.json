@@ -1,0 +1,265 @@
+{
+  "company": "Stripe",
+  "role_title": "Program Manager",
+  "url": "https://stripe.com/jobs/search?gh_jid=7923047",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7923047",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "Up to 50% telecommuting permitted",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Mid-level (2+ years experience, likely PM II / mid-IC)",
+    "years_required_min": 2,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "2 years minimum across all required dimensions",
+      "Bachelor's degree required",
+      "Comp range $148,450 - $210,600 base"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "education_bachelors_business",
+      "raw_text_from_jd": "Bachelor's degree or foreign equivalent in Business, Management, Economics or a related field, plus 2 years of experience managing timelines, resources, and stakeholder expectations to deliver results that align with organizational goals.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": false,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    },
+    {
+      "id": "years_managing_timelines_stakeholders",
+      "raw_text_from_jd": "2 years of experience managing timelines, resources, and stakeholder expectations to deliver results that align with organizational goals.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_documenting_operational_processes",
+      "raw_text_from_jd": "2 years of experience documenting operational processes",
+      "skill_type": "years_of_experience",
+      "domain": "operations_documentation",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_process_improvements",
+      "raw_text_from_jd": "2 years of experience designing and implementing process improvements",
+      "skill_type": "years_of_experience",
+      "domain": "process_improvement",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_scaling_support_operations",
+      "raw_text_from_jd": "2 years of experience scaling support operations",
+      "skill_type": "years_of_experience",
+      "domain": "support_operations",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_communicating_technical_concepts",
+      "raw_text_from_jd": "2 years of experience communicating technical concepts to users and stakeholders",
+      "skill_type": "years_of_experience",
+      "domain": "technical_communication",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_sql",
+      "raw_text_from_jd": "2 years of experience building queries using SQL",
+      "skill_type": "years_of_experience",
+      "domain": "data_querying",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SQL"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_analyzing_large_datasets",
+      "raw_text_from_jd": "2 years of experience analyzing large datasets to draw conclusions and make recommendations",
+      "skill_type": "years_of_experience",
+      "domain": "data_analysis",
+      "minimum_value": 2,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Payments and banking products (Stripe Managed Payments, Stripe Capital, fiat-to-crypto onramp/Payin integrations); support operations and product launch infrastructure",
+    "business_model": "B2B financial infrastructure platform",
+    "primary_metrics_inferred": [
+      "CSAT",
+      "Agent productivity",
+      "Operational costs",
+      "Early user adoption of new products",
+      "Operational cost savings from automation",
+      "Incubation graduation criteria / go-no-go dashboards"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Legal",
+      "Tax",
+      "Risk",
+      "Vendor support teams"
+    ],
+    "core_responsibilities": [
+      "Collaborate with cross-functional teams to build and scale operational infrastructure that supports the launch of innovative products",
+      "Design the playbook to execute against operational requirements and deliver a best-in-class user experience",
+      "Lead multiple projects simultaneously, managing timelines, resources, and stakeholder expectations",
+      "Identify and drive process improvements alongside product and engineering teams, focusing on automation opportunities",
+      "Engage with stakeholders across the organization to explore new strategic initiatives",
+      "Design the SOPs of technical product support, including API troubleshooting",
+      "Run incubation and governance programs for payments and banking products, guiding features from private beta to General Availability",
+      "Lead product compliance and operational-capacity programs for payments and banking product betas, coordinating Legal, Tax, and Risk"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      148450,
+      210600
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity mentioned as additional benefit; company bonus or sales commissions/bonuses also referenced",
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "program management",
+    "payments",
+    "banking",
+    "Stripe Capital",
+    "SOPs",
+    "API troubleshooting",
+    "SQL",
+    "support operations",
+    "process improvement",
+    "incubation governance",
+    "KYC/KYB",
+    "AI support agents",
+    "operational readiness",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Salary range explicitly disclosed ($148,450 - $210,600/yr)",
+    "Multiple positions available, suggesting active hiring pipeline",
+    "Hybrid work with up to 50% telecommuting permitted",
+    "Clear minimum requirements listed with explicit encouragement to apply if met",
+    "Equity and benefits (401k, medical/dental/vision) explicitly listed",
+    "Well-defined product scope (named products: Stripe Managed Payments, Stripe Capital, fiat-to-crypto onramp)"
+  ],
+  "red_flags": [
+    "JD body appears to repeat several responsibilities twice (likely copy-paste artifact from internal template), which may indicate a hastily assembled posting",
+    "No city or office location named for this role despite partial on-site requirement, making office location unclear",
+    "#LI-DNI tag indicates this role is not intended for LinkedIn distribution, which may limit candidate visibility",
+    "Wide compensation band ($62K spread) provides little signal on expected level without more context"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range and 2-year minimums)",
+      "scope.business_model (inferred from Stripe product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; CSAT, agent productivity, and costs are quoted but others are inferred)",
+      "location.cities_listed (no city named for this specific role)",
+      "location.work_auth (not stated; defaulted to open)",
+      "location.visa_sponsorship (not stated; defaulted to unclear)"
+    ],
+    "ambiguities": [
+      "Location: No city is named for this role. The JD states '40 hrs/week, up to 50% telecommuting permitted' suggesting partial on-site, but no office city is identified. Classified as hybrid with empty cities_listed.",
+      "The suffix 'NY19' at the bottom of the JD may indicate this is a New York-based posting, but this is not confirmed in the body text.",
+      "Several responsibilities appear duplicated verbatim in the JD body, suggesting a template or copy-paste error rather than intentional distinct duties.",
+      "Sales commissions/bonuses are mentioned alongside the salary but the role is titled Program Manager (not a sales role), suggesting boilerplate compensation language."
+    ]
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "company": "Sierra",
+  "role_title": "Business Operations",
+  "url": "https://jobs.ashbyhq.com/sierra/d30758ba-edbc-43f8-9862-ac239440fe5d",
+  "ats_provider": "ashby",
+  "ats_job_id": "d30758ba-edbc-43f8-9862-ac239440fe5d",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "primarily in-person",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Chief of Staff",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 4,
+    "years_required_max": 7,
+    "manages_people": false,
+    "level_signals": [
+      "4-7 years of experience in business operations or strategy",
+      "Embeds alongside functional leads on complex initiatives",
+      "Core member of a growing team, not a manager"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_biz_ops_strategy",
+      "raw_text_from_jd": "4-7 years of experience in business operations or strategy, ideally combining on-the-ground operating experience at a high-growth technology company with 1-2 years of management consulting, investment banking, or VC/PE",
+      "skill_type": "years_of_experience",
+      "domain": "business_operations_strategy",
+      "minimum_value": 4,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth technology company",
+        "management consulting",
+        "investment banking",
+        "VC/PE"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "interpersonal_trust_building",
+      "raw_text_from_jd": "Strong interpersonal skills and professional presence, with a demonstrated ability to earn trust quickly, build consensus across competing priorities, and manage through complex, multi-stakeholder environments to reach clear outcomes",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_initiative_management",
+      "raw_text_from_jd": "Proven ability to structure and manage complex, cross-functional initiatives from scoping through execution, maintaining momentum and delivering outcomes in a fast-moving environment",
+      "skill_type": "outcome",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "written_verbal_communication",
+      "raw_text_from_jd": "Exceptional written and verbal communication skills, with the ability to flex across altitudes and contexts, from working group updates with cross-functional teams to executive-level communications and presentations",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "critical_thinking_first_principles",
+      "raw_text_from_jd": "Strong critical thinking skills, a first-principles mindset, and sound business judgment, with a track record of bringing structure to ambiguity and driving to clear recommendations under uncertainty",
+      "skill_type": "capability",
+      "domain": "strategic_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_data_fluency",
+      "raw_text_from_jd": "Strong analytical skills and fluency with data, with the ability to work with metrics and data to inform strategy, pressure-test assumptions, and translate findings into clear, actionable plans",
+      "skill_type": "capability",
+      "domain": "data_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "operating_experience_ai_company",
+      "raw_text_from_jd": "Previous operating experience at a rapidly scaling technology or AI company",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_technology_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "rapidly scaling technology or AI company"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_native_workflows",
+      "raw_text_from_jd": "Experience designing and standing up AI-native workflows",
+      "skill_type": "capability",
+      "domain": "ai_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "company_wide_operational_processes",
+      "raw_text_from_jd": "Experience implementing company-wide operational processes & systems",
+      "skill_type": "capability",
+      "domain": "operational_systems",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Sierra's business operations function — operating system, goal-setting, dashboards, market expansion, and cross-functional strategic initiatives",
+    "business_model": "B2B AI platform for customer experience",
+    "primary_metrics_inferred": [
+      "Organizational alignment and goal attainment",
+      "Business performance visibility (dashboards/scorecards)",
+      "New market/geography launch readiness"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Marketing",
+      "GTM / Sales",
+      "Functional leads across the business",
+      "Operational leadership",
+      "Executive leadership"
+    ],
+    "core_responsibilities": [
+      "Build and run Sierra's operating system to drive visibility, accountability, and decision-making",
+      "Own the goal-setting infrastructure and leadership cadences",
+      "Design dashboards and scorecards for real-time business performance visibility",
+      "Embed AI into how the company plans and operates across functions",
+      "Lead cross-functional work to expand Sierra's presence into new segments and geographies",
+      "Act as thought partner to business leaders on complex challenges",
+      "Help define and scale world-class business operations at Sierra"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity plans (RSUs/options implied)",
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "business operations",
+    "strategy",
+    "AI-native",
+    "cross-functional",
+    "goal-setting",
+    "dashboards",
+    "market expansion",
+    "first-principles",
+    "high-growth",
+    "operating cadence",
+    "stakeholder management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "High-profile co-founders (Bret Taylor, Clay Bavor) with strong credibility signals",
+    "Explicit AI-native operating culture — growth opportunity in emerging space",
+    "Broad global expansion footprint signals strong company growth trajectory",
+    "Values are clearly articulated and include work-life balance ('Family' value)",
+    "Equity participation mentioned for full-time employees",
+    "JD encourages applicants even if experience doesn't precisely match"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Primarily in-person in San Francisco — eliminates remote candidates",
+    "Visa sponsorship not addressed anywhere in the JD",
+    "Role scope is broad and somewhat vague — multiple distinct functions bundled together without clear prioritization"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range 4-7 and IC framing)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type (inferred as onsite from 'primarily an in-person company based in San Francisco')",
+      "compensation.equity_form (inferred; JD says 'equity plans' without specifying form)"
+    ],
+    "ambiguities": [
+      "Years range '4-7 years' with 'ideally combining...with 1-2 years of management consulting, investment banking, or VC/PE' — the consulting/banking/VC qualifier reads as preferred ('ideally') but sits within the must-have experience block; treated as a strong preference rather than hard requirement",
+      "Visa sponsorship not mentioned anywhere; set to 'unclear'",
+      "Role could span Chief of Staff functions and BizOps — classified as BizOps/Strategy & Ops with Chief of Staff as secondary archetype"
+    ]
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "company": "Legora",
+  "role_title": "Senior Product Manager - Billing and Pricing",
+  "url": "https://jobs.ashbyhq.com/legora/2dfdbd92-5307-49a0-80ab-fa95824474f0",
+  "ats_provider": "ashby",
+  "ats_job_id": "2dfdbd92-5307-49a0-80ab-fa95824474f0",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "New York, NY"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "In-person environment: Union Square office designed for ambitious builders",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Generalist PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Growth PM (monetization / pricing focus)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Title is explicitly 'Senior Product Manager'",
+      "Described as 'An experienced, senior Product Manager'",
+      "Owns strategy, roadmap, and execution end to end — solo ownership signal",
+      "Partners with finance, GTM, and leadership — cross-functional senior scope"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "senior_pm_pricing_monetization",
+      "raw_text_from_jd": "An experienced, senior Product Manager with a strong background building and owning pricing or monetization systems at high-growth B2B SaaS companies.",
+      "skill_type": "years_of_experience",
+      "domain": "pricing_and_monetization",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth B2B SaaS companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "consumption_based_pricing_experience",
+      "raw_text_from_jd": "Hands-on experience with usage- or consumption-based pricing, including the billing, metering, and infrastructure that make it work.",
+      "skill_type": "domain_knowledge",
+      "domain": "consumption_based_pricing",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "commercial_product_judgment",
+      "raw_text_from_jd": "Strong commercial and product judgment, with the ability to balance customer value, business outcomes, and long-term incentive alignment.",
+      "skill_type": "capability",
+      "domain": "commercial_strategy",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "full_stack_comfort",
+      "raw_text_from_jd": "Comfort working across the stack, from polished user-facing experiences to backend systems, and partnering tightly with engineering and finance.",
+      "skill_type": "capability",
+      "domain": "technical_product_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_and_experimentation_fluency",
+      "raw_text_from_jd": "Fluency with data and experimentation, and the rigor to make pricing decisions defensible.",
+      "skill_type": "capability",
+      "domain": "data_analysis_and_experimentation",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_outcomes_orientation",
+      "raw_text_from_jd": "High standards, low ego, and a bias toward ownership and outcomes.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_native_monetization_excitement",
+      "raw_text_from_jd": "Genuine excitement about reinventing how software is monetized in an AI-native world.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_monetization",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Consumption-based pricing system — in-product billing experience and backend billing/metering infrastructure; product pricing decisions across models and features",
+    "business_model": "B2B SaaS, consumption-based (token/usage) pricing, legal AI",
+    "primary_metrics_inferred": [
+      "Revenue from consumption-based billing (tokens → dollars)",
+      "Pricing experiment impact / conversion",
+      "Billing accuracy and transparency",
+      "ARR growth driven by pricing strategy"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Finance",
+      "Go-to-market",
+      "Leadership"
+    ],
+    "core_responsibilities": [
+      "Own the strategy, roadmap, and execution for our consumption-based pricing system, from the in-product experience to the underlying billing and metering infrastructure.",
+      "Build and operate the systems that reliably turn usage (tokens) into revenue (dollars), partnering closely with engineering on accuracy, transparency, and trust.",
+      "Own product pricing decisions: how and when we price newly released models, how we price features, and what is included, bundled, add-on, or metered.",
+      "Continuously evolve our monetization strategy to keep our incentives aligned with our customers' and their end clients'.",
+      "Partner with go-to-market, finance, and leadership to translate pricing strategy into packaging, billing, and forecasting that scale.",
+      "Use data and customer insight to run pricing experiments, measure their impact, and turn results into a prioritized roadmap.",
+      "Deeply understand how legal teams buy and consume software, and translate that into pricing that is clear, fair, and durable."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "consumption-based pricing",
+    "billing",
+    "metering",
+    "monetization",
+    "usage-based pricing",
+    "B2B SaaS",
+    "legal AI",
+    "pricing strategy",
+    "tokens",
+    "go-to-market",
+    "experimentation",
+    "ARR"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific mandate — consumption-based pricing is a well-scoped, consequential surface area",
+    "Company at meaningful scale ($100M+ ARR) with room to grow — impact is real",
+    "First major legal AI company to move to consumption-based pricing — cutting-edge strategic context",
+    "Comprehensive benefits package explicitly listed (medical, dental, vision, parental leave, 401K with match, unlimited PTO)",
+    "Company is growing through acquisitions — signals financial health and ambition"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "In-person only at Union Square (NYC) — fully eliminates remote candidates; no flexibility mentioned",
+    "Visa/work authorization not addressed at all",
+    "No years-of-experience floor stated explicitly — seniority bar is vague beyond 'experienced, senior'"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title and JD language; no comp range provided)",
+      "seniority.years_required_min (not stated; left as null)",
+      "location.cities_listed (inferred from 'Union Square office' reference — Union Square is in NYC/Manhattan)",
+      "scope.business_model (inferred from product description and pricing context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "compensation.equity_mentioned (no mention of equity anywhere in JD)"
+    ],
+    "ambiguities": [
+      "Work authorization and visa sponsorship are entirely unaddressed in the JD — marked as 'unclear'",
+      "No explicit years-of-experience number given; 'experienced, senior' is the only signal — classified as hard based on unconditional bullet language",
+      "Benefits listed appear US-specific (Aetna, Kaiser, MetLife US, Maven Clinic, One Medical, 401K) suggesting US-based hire despite mention of global teams"
+    ]
+  }
+}

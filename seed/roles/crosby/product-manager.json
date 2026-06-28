@@ -1,0 +1,307 @@
+{
+  "company": "Crosby",
+  "role_title": "Product Manager",
+  "url": "https://jobs.ashbyhq.com/crosby/f96ace03-6f46-4df7-8176-932ac4369a28",
+  "ats_provider": "ashby",
+  "ats_job_id": "f96ace03-6f46-4df7-8176-932ac4369a28",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "New York City"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time in person",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of product management experience",
+      "Track record building AI/ML-powered products at an early-to-mid stage",
+      "Sole PM owning a major product surface end to end"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "5+ years of product management experience, with a track record building AI/ML-powered products at an early-to-mid stage.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "early-to-mid stage"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_product_depth",
+      "raw_text_from_jd": "You've worked on AI applications: written evals, reasoned about model behavior, picked tradeoffs between agentic architectures.",
+      "skill_type": "capability",
+      "domain": "ai_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "evals",
+        "agentic architectures",
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "domain_expertise_legal",
+      "raw_text_from_jd": "You'll spend significant time with lawyers and become a quasi-domain-expert on legal contracts and review workflows.",
+      "skill_type": "domain_knowledge",
+      "domain": "legal_contracts",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "legal"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "startup_dna",
+      "raw_text_from_jd": "You thrive in ambiguity, move with urgency, and have proven success in early-stage startup environments.",
+      "skill_type": "cultural_fit",
+      "domain": "startup_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "early-stage startup"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency",
+      "raw_text_from_jd": "You can engage with engineering on architecture, agent design, and eval infrastructure. You don't need to write code.",
+      "skill_type": "capability",
+      "domain": "technical_collaboration",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "agent design",
+        "eval infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bias_to_action",
+      "raw_text_from_jd": "You ship and iterate; you don't over-plan.",
+      "skill_type": "cultural_fit",
+      "domain": "execution",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mentality",
+      "raw_text_from_jd": "You take full responsibility for outcomes, not just deliverables.",
+      "skill_type": "cultural_fit",
+      "domain": "accountability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_ml_production_experience",
+      "raw_text_from_jd": "Hands-on experience building AI/ML-powered products in production",
+      "skill_type": "capability",
+      "domain": "ai_product_development",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "ML"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "domain_expert_collaboration",
+      "raw_text_from_jd": "Experience working with domain experts to shape an AI product (legal, medical, financial, scientific)",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [
+        "legal",
+        "medical",
+        "financial",
+        "scientific"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "product_0_to_scale",
+      "raw_text_from_jd": "Background that includes seeing a product evolve from early stage to scale",
+      "skill_type": "outcome",
+      "domain": "product_scaling",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "personal_ai_time",
+      "raw_text_from_jd": "Personal time spent in the AI sauce is a strong plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_research_and_experimentation",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Crosby's AI redlining system — product used by internal lawyers to review every contract; 0→1 build then scale across all contract types",
+    "business_model": "AI-native law firm, B2B legal services with proprietary tooling",
+    "primary_metrics_inferred": [
+      "Contract review quality",
+      "Automation rate across contract types",
+      "Speed of legal work delivery",
+      "Eval system signal quality"
+    ],
+    "cross_functional_partners": [
+      "Internal legal team",
+      "Applied AI engineering team",
+      "Design team",
+      "Design partners"
+    ],
+    "core_responsibilities": [
+      "Own the vision, product and roadmap end to end for the redlining product",
+      "Take the product surface from 0 → 1, then scale it across all contract types to unlock full automation",
+      "Design and operate the evaluation infrastructure for the redlining product",
+      "Spend significant time with internal legal team and design partners to surface requirements",
+      "Translate quality, automation, and customer outcomes into measurable signals",
+      "Move quickly under ambiguity; ship, learn, iterate"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "AI redlining",
+    "evals",
+    "agentic architectures",
+    "contract review",
+    "AI/ML products",
+    "0 to 1",
+    "legal tech",
+    "domain expert collaboration",
+    "eval infrastructure",
+    "product roadmap",
+    "automation"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific product ownership — AI redlining system for a defined use case",
+    "Named clients (Cursor, Ramp, Cognition) signal real traction and quality bar",
+    "Founders have strong pedigree (Stanford Law, first 15 engineers at Ramp)",
+    "JD is unusually concrete about the product surface and responsibilities",
+    "NY Labor Law disclosure signals pay range transparency compliance (even if not listed in scraped content)"
+  ],
+  "red_flags": [
+    "Compensation range referenced in JD text as required but not actually listed in the scraped content",
+    "Full-time in-person in New York City — eliminates remote or hybrid candidates entirely",
+    "Very early-stage company with significant ambiguity; 0→1 role requires high tolerance for uncertainty",
+    "Work authorization and visa sponsorship policy not stated"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 5+ years requirement and sole-PM scope)",
+      "location.type (inferred from 'We work together, in person, in New York City' — not a formal policy statement)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed)",
+      "compensation.base_range_usd (JD references NY Labor Law pay range requirement but value not present in scraped content)"
+    ],
+    "ambiguities": [
+      "The JD references 'US Pay Range for this position is listed in the job post' per NY Labor Law but no actual range appears in the scraped content — may be listed on the live ATS page only.",
+      "The bullets under 'Who you are' mix unconditional requirements with implied nice-to-haves without clear demarcation; 'Hands-on experience building AI/ML-powered products in production', 'Experience working with domain experts', and 'Background that includes seeing a product evolve from early stage to scale' appear as standalone bullets without a header — treated as hard requirements given they are unconditional statements."
+    ]
+  }
+}
