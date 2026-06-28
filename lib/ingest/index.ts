@@ -1,0 +1,103 @@
+/**
+ * Ingestion · orchestrator (docs/admin-ingestion.md). Table-driven, scope-aware,
+ * and self-recording: every run opens an `ingestion_runs` row and writes counts
+ * so /admin can show progress. Phase 1 is additive (scan → new → embed → insert);
+ * diff/prune + a per-role Claude extract step move here with the IngestWorkflow
+ * (Phase 2). Service-role; roles are read-only to users. No send.
+ */
+import { embeddings } from "@/lib/embeddings";
+import { supabaseService } from "@/lib/supabase/service";
+import { companiesForScope, scanCompany, demandKeywords, type IngestScope } from "./scan";
+import type { AtsPosting } from "@/lib/ats";
+
+type Db = ReturnType<typeof supabaseService>;
+
+const MAX_PER_COMPANY = 8;
+
+export interface IngestionSummary {
+  runId: string;
+  companies: number;
+  scanned: number;
+  added: number;
+}
+
+export async function runIngestion(
+  opts: { trigger?: "admin" | "cron"; scope?: IngestScope; maxPerCompany?: number } = {},
+): Promise<IngestionSummary> {
+  const db = supabaseService();
+  const scope = opts.scope ?? { kind: "all" };
+
+  const { data: run } = await db
+    .from("ingestion_runs")
+    .insert({ trigger: opts.trigger ?? "cron", scope, status: "scanning" })
+    .select("id")
+    .single();
+  const runId = (run as { id: string }).id;
+
+  try {
+    const [companies, kws] = await Promise.all([companiesForScope(scope), demandKeywords()]);
+    let scanned = 0;
+    let added = 0;
+    for (const c of companies) {
+      const posts = await scanCompany(c, kws);
+      scanned += posts.length;
+      added += await insertNew(db, posts, opts.maxPerCompany ?? MAX_PER_COMPANY);
+      await db.from("companies").update({ last_scanned_at: new Date().toISOString() }).eq("id", c.id);
+    }
+    await db
+      .from("ingestion_runs")
+      .update({ status: "done", scanned, new_count: added, extracted: added, finished_at: new Date().toISOString() })
+      .eq("id", runId);
+    return { runId, companies: companies.length, scanned, added };
+  } catch (e) {
+    await db
+      .from("ingestion_runs")
+      .update({ status: "error", error: e instanceof Error ? e.message : String(e), finished_at: new Date().toISOString() })
+      .eq("id", runId);
+    throw e;
+  }
+}
+
+/** Insert the postings not already in the corpus; embed each into the bge space. */
+async function insertNew(db: Db, posts: AtsPosting[], cap: number): Promise<number> {
+  if (posts.length === 0) return 0;
+  const urls = posts.map((p) => p.url);
+  const { data: existing } = await db.from("roles").select("url").in("url", urls);
+  const have = new Set((existing ?? []).map((r) => r.url as string));
+  const fresh = posts.filter((p) => !have.has(p.url)).slice(0, cap);
+
+  let added = 0;
+  for (const p of fresh) {
+    const description = p.description.slice(0, 8000);
+    const { data: role, error } = await db
+      .from("roles")
+      .insert({
+        company: p.company,
+        role_title: p.title,
+        url: p.url,
+        ats_provider: p.provider,
+        ats_job_id: p.externalId,
+        source: "ats",
+        description,
+        location: p.location ? { name: p.location } : null,
+        fetched_at: new Date().toISOString().slice(0, 10),
+        doc: { title: p.title, company: p.company, location: p.location, description, source: "ats", provider: p.provider },
+      })
+      .select("id")
+      .single();
+    if (error || !role) continue;
+    try {
+      const [vec] = await embeddings().embed([`${p.title}\n\n${description}`.slice(0, 4000)]);
+      await db
+        .from("role_embeddings")
+        .upsert(
+          { role_id: (role as { id: string }).id, chunk: "full", model: embeddings().model, embedding: JSON.stringify(vec) },
+          { onConflict: "role_id,chunk" },
+        );
+      added++;
+    } catch {
+      await db.from("roles").delete().eq("id", (role as { id: string }).id);
+    }
+  }
+  return added;
+}

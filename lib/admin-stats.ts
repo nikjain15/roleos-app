@@ -60,6 +60,13 @@ export interface DemandStats {
   corpusTotal: number;
   ingestedTotal: number;
   recentIngested: { company: string; role_title: string; created_at: string }[];
+  recentRuns: {
+    status: string;
+    trigger: string;
+    scanned: number;
+    new_count: number;
+    started_at: string;
+  }[];
 }
 
 function rank(values: string[], limit = 12): { key: string; count: number }[] {
@@ -92,7 +99,7 @@ export async function getDemandStats(): Promise<DemandStats> {
     .limit(5000);
   const rows = (data ?? []) as IntentRow[];
 
-  const [{ count: corpusTotal }, { count: ingestedTotal }, recent] = await Promise.all([
+  const [{ count: corpusTotal }, { count: ingestedTotal }, recent, runs] = await Promise.all([
     db.from("roles").select("*", { count: "exact", head: true }),
     db.from("roles").select("*", { count: "exact", head: true }).eq("source", "ats"),
     db
@@ -101,6 +108,11 @@ export async function getDemandStats(): Promise<DemandStats> {
       .eq("source", "ats")
       .order("created_at", { ascending: false })
       .limit(8),
+    db
+      .from("ingestion_runs")
+      .select("status, trigger, scanned, new_count, started_at")
+      .order("started_at", { ascending: false })
+      .limit(5),
   ]);
 
   return {
@@ -113,6 +125,7 @@ export async function getDemandStats(): Promise<DemandStats> {
     corpusTotal: corpusTotal ?? 0,
     ingestedTotal: ingestedTotal ?? 0,
     recentIngested: (recent.data ?? []) as DemandStats["recentIngested"],
+    recentRuns: (runs.data ?? []) as DemandStats["recentRuns"],
   };
 }
 
