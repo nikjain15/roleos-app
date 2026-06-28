@@ -1,8 +1,9 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { extractDocumentText, ACCEPTED_TYPES } from "@/lib/parse-document";
+import { supabaseBrowser } from "@/lib/supabase/client";
 
 /**
  * Value-first onboarding (journey.html §3 A→B→C). One input → watch RO reason
@@ -36,8 +37,42 @@ export default function Onboarding() {
   const [error, setError] = useState<string | null>(null);
   const [parsing, setParsing] = useState(false);
   const [fileNote, setFileNote] = useState<string | null>(null);
+  const [firstName, setFirstName] = useState<string | null>(null);
+  const [linkedinUrl, setLinkedinUrl] = useState("");
   const resultsRef = useRef<HTMLDivElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    // Personalize for a signed-in user (LinkedIn / Google / magic-link give name).
+    supabaseBrowser()
+      .auth.getUser()
+      .then(({ data }) => {
+        const m = data.user?.user_metadata as Record<string, unknown> | undefined;
+        const name = (m?.name ?? m?.full_name ?? m?.given_name) as string | undefined;
+        if (name) setFirstName(String(name).split(" ")[0]);
+      })
+      .catch(() => {});
+    // Remember the last LinkedIn URL on this device (one-time convenience).
+    try {
+      const saved = localStorage.getItem("roleos.linkedin_url");
+      if (saved) setLinkedinUrl(saved);
+    } catch {
+      /* localStorage unavailable — fine */
+    }
+  }, []);
+
+  const isLinkedInUrl = (s: string) => /linkedin\.com\/in\//i.test(s.trim());
+
+  function pullLinkedIn() {
+    const url = linkedinUrl.trim();
+    if (!isLinkedInUrl(url) || running || parsing) return;
+    try {
+      localStorage.setItem("roleos.linkedin_url", url);
+    } catch {
+      /* ignore */
+    }
+    run(url);
+  }
 
   async function onFile(file: File | undefined) {
     if (!file) return;
@@ -63,8 +98,10 @@ export default function Onboarding() {
     }
   }
 
-  async function run() {
-    if (profile.trim().length < 30 || running) return;
+  async function run(override?: string) {
+    const p = (override ?? profile).trim();
+    // Allow a short LinkedIn URL through (it auto-fetches); else require real text.
+    if ((p.length < 30 && !isLinkedInUrl(p)) || running) return;
     setRunning(true);
     setStatus([]);
     setMirror(null);
@@ -76,7 +113,7 @@ export default function Onboarding() {
       const res = await fetch("/api/onboard", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ profile }),
+        body: JSON.stringify({ profile: p }),
       });
       if (!res.body) throw new Error("no stream");
 
@@ -115,12 +152,46 @@ export default function Onboarding() {
       </Link>
 
       <h1 className="mt-8 text-3xl font-bold tracking-tight">
-        Tell RO about your work. Watch what she sees.
+        {firstName
+          ? `Welcome, ${firstName} — let's get RO your work.`
+          : "Tell RO about your work. Watch what she sees."}
       </h1>
       <p className="mt-3 text-tx2">
-        Paste your CV, your LinkedIn, or just a few honest lines. No sign-up —
-        RO works first, you decide after.
+        {firstName
+          ? "Signing in tells me who you are, not what you've built — LinkedIn won't hand over your experience. Drop your profile URL and I'll pull the rest."
+          : "Paste your CV, your LinkedIn, or just a few honest lines. No sign-up — RO works first, you decide after."}
       </p>
+
+      {/* LinkedIn URL — one-tap auto-fetch (via Apify). The fastest path now. */}
+      <div className="mt-6 rounded-xl border border-info/40 bg-info-bg/40 p-4">
+        <label className="text-[11px] font-semibold uppercase tracking-wide text-info-tx">
+          Pull straight from LinkedIn
+        </label>
+        <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+          <input
+            value={linkedinUrl}
+            onChange={(e) => setLinkedinUrl(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && pullLinkedIn()}
+            placeholder="https://www.linkedin.com/in/your-handle/"
+            disabled={running || parsing}
+            className="flex-1 rounded-md border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none focus:border-info disabled:opacity-60"
+          />
+          <button
+            onClick={pullLinkedIn}
+            disabled={running || parsing || !isLinkedInUrl(linkedinUrl)}
+            className="shrink-0 rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+          >
+            {running ? "Pulling…" : "Pull my profile"}
+          </button>
+        </div>
+        <p className="mt-1.5 text-[11px] text-tx3">
+          I fetch your public profile and match on it — full experience, one tap. (One pull = one fetch.)
+        </p>
+      </div>
+
+      <div className="my-4 flex items-center gap-3 text-xs text-tx3">
+        <span className="h-px flex-1 bg-bd" /> or paste / upload <span className="h-px flex-1 bg-bd" />
+      </div>
 
       <textarea
         value={profile}
@@ -141,7 +212,7 @@ export default function Onboarding() {
 
       <div className="mt-3 flex flex-wrap items-center gap-3">
         <button
-          onClick={run}
+          onClick={() => run()}
           disabled={running || parsing || profile.trim().length < 30}
           className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
         >
