@@ -5,6 +5,7 @@ import SaveOnboarding from "@/components/SaveOnboarding";
 import SignOut from "@/components/SignOut";
 import TailorButton from "@/components/TailorButton";
 import { isAdmin } from "@/lib/admin";
+import DigestCard from "@/components/DigestCard";
 
 /**
  * The decision feed — the home (journey.html §6). No tabs, no Kanban. What RO
@@ -81,6 +82,9 @@ export default async function Feed() {
           </Link>
         </div>
       </div>
+
+      {/* RO's ambient digest — what she did / what needs you, on your cadence */}
+      {matches && matches.length > 0 && <DigestCard />}
 
       {!matches || matches.length === 0 ? (
         <div className="mt-8 rounded-xl border border-bd bg-surf2 p-6">
