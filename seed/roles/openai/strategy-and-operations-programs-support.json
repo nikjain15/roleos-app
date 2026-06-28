@@ -1,0 +1,280 @@
+{
+  "company": "OpenAI",
+  "role_title": "Strategy & Operations Programs, Support",
+  "url": "https://jobs.ashbyhq.com/openai/9747412d-a23d-48ba-bddd-ad1247c360f5",
+  "ats_provider": "ashby",
+  "ats_job_id": "9747412d-a23d-48ba-bddd-ad1247c360f5",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical Program Manager",
+  "seniority": {
+    "level": "Senior / Staff IC or People Manager",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": null,
+    "level_signals": [
+      "8+ years of experience in operations, strategy, and consulting",
+      "at least 5 years of experience building and leading customer-facing operations",
+      "direct experience engaging with executives and senior leaders",
+      "operating at all altitudes – discussing strategy and vision with executives"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_ops_strategy_consulting",
+      "raw_text_from_jd": "Have 8+ years of experience in operations, strategy, and consulting, with at least 5 years of experience building and leading customer-facing operations. You have a history of high impact work in a technical environment.",
+      "skill_type": "years_of_experience",
+      "domain": "operations_strategy_consulting",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_customer_facing_ops",
+      "raw_text_from_jd": "with at least 5 years of experience building and leading customer-facing operations",
+      "skill_type": "years_of_experience",
+      "domain": "customer_facing_operations",
+      "minimum_value": 5,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "end_to_end_ownership",
+      "raw_text_from_jd": "Have extensive experience in taking end-to-end ownership of large, ambiguous problems, and breaking them down into clear, actionable plans.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_engagement",
+      "raw_text_from_jd": "Have direct experience engaging with executives and senior leaders to influence and drive strategic decisions.",
+      "skill_type": "capability",
+      "domain": "executive_stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_data_modeling",
+      "raw_text_from_jd": "Are highly analytical, with strong skills in data modeling and operational forecasting to drive insights and decision-making.",
+      "skill_type": "capability",
+      "domain": "data_analytics_and_forecasting",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "data modeling",
+        "operational forecasting"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_influence",
+      "raw_text_from_jd": "Possess excellent communication and collaboration skills and are skilled in influencing stakeholders across all levels of the organization.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operating_at_all_altitudes",
+      "raw_text_from_jd": "Are comfortable operating at all altitudes – discussing strategy and vision with executives, and troubleshooting operations with individual contributors.",
+      "skill_type": "capability",
+      "domain": "cross_level_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "thrive_in_chaos",
+      "raw_text_from_jd": "Thrive in chaos, and relentlessly drive program structure to enable the team.",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_for_ai_technology",
+      "raw_text_from_jd": "Have a passion for technology, AI, and customer service, and are enthusiastic about the transformative impact of AI on business and society.",
+      "skill_type": "cultural_fit",
+      "domain": "ai_and_technology_enthusiasm",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "non_traditional_tech_leverage",
+      "raw_text_from_jd": "Are non-traditional – this role will require leveraging technology and concepts that are not yet established in the world (some of which you will produce yourself).",
+      "skill_type": "cultural_fit",
+      "domain": "innovative_problem_solving",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "User Operations / Customer Support organization at OpenAI",
+    "business_model": "B2B and B2C AI products; customers range from early-stage startups to global enterprises",
+    "primary_metrics_inferred": [
+      "Support operational efficiency and scalability",
+      "Customer experience quality",
+      "Automation and self-service adoption",
+      "Support organization growth in line with business growth"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Technical Success",
+      "Product",
+      "Engineering",
+      "Data teams",
+      "Go-to-market organization",
+      "Partnerships"
+    ],
+    "core_responsibilities": [
+      "Drive the ideation and operationalization of new support systems, processes, and programs",
+      "Collaborate with leaders to identify, evaluate, and prioritize new strategic and operational initiatives",
+      "Work with product, engineering, and data teams to uncover and address key operational challenges and growth/scaling opportunities",
+      "Deep dive into critical drivers of support operations and identify opportunities for optimization and innovation",
+      "Partner with go-to-market, product, and partnerships to launch new initiatives including change management"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "support operations",
+    "strategy",
+    "operations",
+    "customer experience",
+    "AI",
+    "automation",
+    "process optimization",
+    "self-service",
+    "data modeling",
+    "operational forecasting",
+    "change management",
+    "go-to-market",
+    "scalability",
+    "executive engagement"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear articulation of scope and organizational context (User Operations team at OpenAI)",
+    "Role explicitly tied to AI-driven transformation of customer support — high-impact growth area",
+    "Cross-functional exposure across Product, Engineering, Sales, and GTM",
+    "JD explicitly states 'this is not creating and executing playbooks' — signals genuine strategic ownership"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location or remote policy stated — significant unknown for candidates",
+    "No visa sponsorship information provided",
+    "8+ years AND 5+ years sub-requirement is a high bar with no flexibility language",
+    "Role scope is extremely broad and ambiguous ('drive ideation', 'think ten steps ahead') — success criteria unclear"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and executive engagement signals; not explicitly stated)",
+      "seniority.manages_people (not stated; left as null)",
+      "location.type (not stated in JD; left as 'unclear')",
+      "location.work_auth (not stated; left as 'unclear')",
+      "location.visa_sponsorship (not stated; left as 'unclear')",
+      "scope.business_model (inferred from team description mentioning startups to enterprises)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "compensation (not stated)"
+    ],
+    "ambiguities": [
+      "The JD references San Francisco and Los Angeles County in the legal boilerplate, but this may be standard legal language rather than an indicator of role location. No explicit location is named for this role.",
+      "The 'nice_to_have' for non-traditional background is listed under 'You might thrive in this role if you:' alongside hard requirements — classification as soft is a judgment call since the section header is ambiguous."
+    ]
+  }
+}

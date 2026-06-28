@@ -1,0 +1,252 @@
+{
+  "company": "OpenAI",
+  "role_title": "Platform Operations Program Manager",
+  "url": "https://jobs.ashbyhq.com/openai/616ef2ce-3790-432d-9a6d-32abb2f52ff9",
+  "ats_provider": "ashby",
+  "ats_job_id": "616ef2ce-3790-432d-9a6d-32abb2f52ff9",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in office",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in program management, developer operations, product operations, or related fields",
+      "Serve as a senior cross-functional partner",
+      "Lead high-priority partner reviews and escalations"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management",
+      "raw_text_from_jd": "Have 8+ years of experience in program management, developer operations, product operations, or related fields.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_concepts_comfort",
+      "raw_text_from_jd": "Are comfortable engaging with technical concepts such as MCP, APIs, OAuth, authentication, permissions, and data flows, even if you're not writing production code.",
+      "skill_type": "domain_knowledge",
+      "domain": "developer_platforms_and_apis",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "MCP",
+        "APIs",
+        "OAuth",
+        "authentication",
+        "permissions",
+        "data flows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_judgment",
+      "raw_text_from_jd": "Exercise strong operational judgment and can balance speed, safety, and business priorities when making decisions.",
+      "skill_type": "capability",
+      "domain": "operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_alignment",
+      "raw_text_from_jd": "Bring structure to ambiguous, cross-functional problems and drive alignment across Product, Engineering, Policy, Legal, Security, and Operations.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking",
+      "raw_text_from_jd": "Think in systems rather than individual cases, identifying recurring patterns and building durable processes instead of one-off solutions.",
+      "skill_type": "capability",
+      "domain": "process_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_automation_experience",
+      "raw_text_from_jd": "Have experience using AI and automation to reduce manual work, improve quality, and scale operational processes.",
+      "skill_type": "capability",
+      "domain": "ai_and_automation",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clear_communication",
+      "raw_text_from_jd": "Communicate clearly with both technical and non-technical audiences, translating complex requirements into practical guidance.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "developer_partner_experience_empathy",
+      "raw_text_from_jd": "Care deeply about developer and partner experience while maintaining consistent standards that protect the platform and its users.",
+      "skill_type": "cultural_fit",
+      "domain": "developer_experience",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Account & Platform Integrity Operations — developer ecosystem (plugins, MCP apps, agent skills, integrations)",
+    "business_model": "developer platform / API ecosystem, B2B and B2D",
+    "primary_metrics_inferred": [
+      "Speed and consistency of developer app/integration reviews",
+      "Quality of integrations launched on the platform",
+      "Reduction in manual operational work via automation",
+      "Developer and partner experience satisfaction"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Policy",
+      "Legal",
+      "Security",
+      "Developer Experience",
+      "Go-to-Market",
+      "Ecosystem organization"
+    ],
+    "core_responsibilities": [
+      "Own the operational processes that help developers bring apps, plugins, and integrations to market, from submission and review through launch, appeals, and ongoing monitoring.",
+      "Manage external review partners and policy operations workflows, helping teams apply standards consistently while identifying areas where guidance, process, or quality expectations need to improve.",
+      "Partner with Product, Engineering, Policy, Legal, Security, Developer Experience, and Go-to-Market teams to turn platform goals and requirements into clear, effective operating processes.",
+      "Lead high-priority partner reviews and escalations, balancing speed to launch with user trust, and consistent standards.",
+      "Create feedback loops across product, policy, tooling, and developer experience teams to reduce friction for developers and improve the quality of integrations over time.",
+      "Lead automation and AI-driven initiatives, such as agentic workflows, to improve the speed, consistency, and scale review and support processes.",
+      "Serve as a senior cross-functional partner, using operational expertise and platform insights to help shape product strategy and improve how the ecosystem works."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "platform operations",
+    "program management",
+    "developer ecosystem",
+    "MCP",
+    "APIs",
+    "OAuth",
+    "account integrity",
+    "fraud prevention",
+    "abuse detection",
+    "agentic workflows",
+    "automation",
+    "cross-functional",
+    "developer experience",
+    "policy operations",
+    "platform trust"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership area and well-defined scope (developer ecosystem, plugins, MCP apps, integrations)",
+    "Role is senior and high-visibility — named as 'senior cross-functional partner' shaping product strategy",
+    "Explicit acknowledgment of AI/automation as a lever to improve operations, signaling modern tooling mindset",
+    "Hybrid with 3 days in-office clearly stated — no ambiguity on location policy",
+    "Role sits within a growth team (Ecosystem), suggesting investment and headcount priority"
+  ],
+  "red_flags": [
+    "Compensation not disclosed",
+    "Visa sponsorship not mentioned — unclear for non-US applicants",
+    "No nice-to-haves listed, making calibration of expectations harder",
+    "8+ years requirement is a strict floor with no alternative experience path offered"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and 'senior cross-functional partner' language; no explicit level stated)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "compensation.equity_mentioned (inferred as false; equity not mentioned anywhere in JD)"
+    ],
+    "ambiguities": [
+      "All requirements appear under 'You Might Thrive If You' framing, which could imply they are preferences rather than hard requirements. However, the items are unconditional descriptors of expected qualifications and include specific year thresholds, so they are treated as must_haves with severity hard per extraction rules.",
+      "Visa sponsorship policy is not stated; work_auth set to 'open' based on equal opportunity employer language, but sponsorship status remains unclear."
+    ]
+  }
+}

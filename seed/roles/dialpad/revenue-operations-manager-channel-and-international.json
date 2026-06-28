@@ -1,0 +1,344 @@
+{
+  "company": "Dialpad",
+  "role_title": "Revenue Operations Manager Channel & International",
+  "url": "https://job-boards.greenhouse.io/dialpad/jobs/8436717002",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8436717002",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "Austin, TX",
+      "Tempe, AZ"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "unclear",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "BizOps / Strategy & Ops",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Revenue Operations / GTM Operations",
+  "seniority": {
+    "level": "Senior IC / Manager",
+    "years_required_min": 7,
+    "years_required_max": 10,
+    "manages_people": false,
+    "level_signals": [
+      "7–10 years of total professional experience",
+      "4–6+ years in Sales Operations, Revenue Operations, or GTM Strategy",
+      "Reports to VP of Revenue Operations",
+      "Leads or co-leads weekly forecast calls with Sales leadership",
+      "Influences senior stakeholders without formal authority"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "total_years_experience",
+      "raw_text_from_jd": "7–10 years of total professional experience.",
+      "skill_type": "years_of_experience",
+      "domain": "professional_experience",
+      "minimum_value": 7,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_sales_rev_ops_gtm",
+      "raw_text_from_jd": "4–6+ years in Sales Operations, Revenue Operations, or GTM Strategy.",
+      "skill_type": "years_of_experience",
+      "domain": "sales_operations_revenue_operations_gtm",
+      "minimum_value": 4,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "direct_or_channel_experience",
+      "raw_text_from_jd": "Experience supporting Direct Sales Teams and/or Channel organizations.",
+      "skill_type": "domain_knowledge",
+      "domain": "direct_sales_channel_operations",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_mindset",
+      "raw_text_from_jd": "Strong analytical mindset with the ability to turn data into decisions.",
+      "skill_type": "capability",
+      "domain": "data_analysis",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_structure",
+      "raw_text_from_jd": "Comfortable working with ambiguity and building structure where none exists.",
+      "skill_type": "capability",
+      "domain": "organizational_effectiveness",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Excellent executive communication — written, verbal, and storytelling.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "influence_without_authority",
+      "raw_text_from_jd": "Ability to influence senior stakeholders without formal authority.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_ownership_mentality",
+      "raw_text_from_jd": "High ownership mentality: you see problems and fix them.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "detail_and_big_picture",
+      "raw_text_from_jd": "Detail-oriented but able to zoom out to the bigger picture.",
+      "skill_type": "capability",
+      "domain": "strategic_operational_balance",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "core_tools_proficiency",
+      "raw_text_from_jd": "Strong experience with Salesforce, Tableau, Outreach, Clay, Scratchpad, and ZoomInfo.",
+      "skill_type": "tool_proficiency",
+      "domain": "revenue_operations_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Salesforce",
+        "Tableau",
+        "Outreach",
+        "Clay",
+        "Scratchpad",
+        "ZoomInfo"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "saas_experience",
+      "raw_text_from_jd": "SaaS experience strongly preferred.",
+      "skill_type": "domain_knowledge",
+      "domain": "saas",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "adjacent_tools_familiarity",
+      "raw_text_from_jd": "Familiarity working alongside tools like Anaplan, routing platforms (Leandata), or forecasting tools (Clari).",
+      "skill_type": "tool_proficiency",
+      "domain": "revenue_operations_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Anaplan",
+        "Leandata",
+        "Clari"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "biz_systems_analytics_partnership",
+      "raw_text_from_jd": "Ability to partner effectively with Business systems and analytics teams.",
+      "skill_type": "capability",
+      "domain": "cross_functional_partnership",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Partner-led and geographically distributed revenue motions — pipeline management, forecasting, channel attribution, international coverage",
+    "business_model": "B2B SaaS, AI-native business communications platform",
+    "primary_metrics_inferred": [
+      "Forecast accuracy",
+      "Stage-to-stage conversion",
+      "Deal aging",
+      "Pipeline hygiene",
+      "Partner-sourced pipeline integrity",
+      "Forecast bias and slippage patterns"
+    ],
+    "cross_functional_partners": [
+      "Sales leadership",
+      "Revenue Intelligence & Analytics",
+      "Systems and Data teams",
+      "GTM Strategy and Planning",
+      "VP of Revenue Operations"
+    ],
+    "core_responsibilities": [
+      "Define and enforce opportunity stage entry and exit criteria",
+      "Establish deal inspection frameworks by segment and deal size",
+      "Identify and eliminate poorly qualified pipeline, stalled deals, and inflated forecasts",
+      "Own forecast methodology and call discipline across segments",
+      "Lead or co-lead weekly forecast calls with Sales leadership",
+      "Track and surface forecast bias, slippage patterns, and risk signals",
+      "Design and run pipeline councils by segment",
+      "Translate execution issues into process improvements and system enforcement",
+      "Define and own core pipeline and forecast KPIs",
+      "Monitor partner-sourced pipeline integrity and attribution",
+      "Support forecast validation for partner-led deals",
+      "Monitor territory and partner coverage sufficiency"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Revenue Operations",
+    "Channel Operations",
+    "Sales Operations",
+    "Forecast accuracy",
+    "Pipeline management",
+    "Pipeline hygiene",
+    "GTM Strategy",
+    "Partner-led revenue",
+    "Salesforce",
+    "Tableau",
+    "Clari",
+    "Agentic AI",
+    "SaaS",
+    "International"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear reporting structure to VP of Revenue Operations",
+    "Role is explicitly described as revenue execution, not reporting support — signals real ownership",
+    "Specific tooling stack listed (Salesforce, Tableau, Outreach, Clay, Scratchpad, ZoomInfo, Clari, Leandata)",
+    "Encourages candidates who don't meet every qualification to apply",
+    "Established company with 70,000+ customers and named enterprise logos",
+    "Two office options listed (Austin, TX and Tempe, AZ)"
+  ],
+  "red_flags": [
+    "Compensation range not disclosed",
+    "Visa sponsorship policy not stated",
+    "Office time requirement for hybrid not specified",
+    "'SaaS experience strongly preferred' is listed under must-haves section but uses preferred language — classification ambiguity"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years range and reporting structure)",
+      "seniority.manages_people (inferred as false — no direct reports mentioned)",
+      "scope.business_model (inferred from company description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicit KPIs listed)",
+      "location.remote_us_eligible (inferred as false — JD says 'based in our Austin or Tempe offices')",
+      "compensation.equity_mentioned (inferred as false — not stated in JD)"
+    ],
+    "ambiguities": [
+      "'SaaS experience strongly preferred' appears under the skills section alongside hard requirements. 'Strongly preferred' language suggests soft, but placement with unconditional bullets creates ambiguity. Classified as soft (nice_to_have).",
+      "Location type: JD states 'opportunity to be based in our Austin or Tempe offices' — implies office-based but does not specify required days in office. Classified as hybrid with unclear office time.",
+      "'Ability to partner effectively with Business systems and analytics teams' is listed under the same skills section as hard requirements but reads as a collaborative capability rather than a strict gate; classified as soft."
+    ]
+  }
+}

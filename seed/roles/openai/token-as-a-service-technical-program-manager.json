@@ -1,0 +1,379 @@
+{
+  "company": "OpenAI",
+  "role_title": "Token-as-a-Service Technical Program Manager",
+  "url": "https://jobs.ashbyhq.com/openai/e8558280-69dc-438a-b905-623f75ae6d62",
+  "ats_provider": "ashby",
+  "ats_job_id": "e8558280-69dc-438a-b905-623f75ae6d62",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Infrastructure Delivery / Capacity Scaling",
+  "seniority": {
+    "level": "Senior IC / Staff TPM",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of Technical Program Management, Engineering Program Management, or Infrastructure Delivery experience",
+      "Executive-level stakeholder management expected",
+      "High-visibility role with direct impact on global scaling"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_experience",
+      "raw_text_from_jd": "8+ years of Technical Program Management, Engineering Program Management, or Infrastructure Delivery experience.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "large_scale_technical_programs",
+      "raw_text_from_jd": "Experience leading large-scale technical programs involving cloud, data center, networking, hardware, or distributed systems.",
+      "skill_type": "capability",
+      "domain": "infrastructure_program_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "cloud",
+        "distributed systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "compute_infrastructure_understanding",
+      "raw_text_from_jd": "Strong understanding of compute infrastructure, clusters, networking, storage, and production systems.",
+      "skill_type": "domain_knowledge",
+      "domain": "compute_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "compute infrastructure",
+        "clusters",
+        "networking",
+        "storage",
+        "production systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_execution",
+      "raw_text_from_jd": "Proven ability to drive cross-functional execution across engineering, operations, finance, and external vendors.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_stakeholder_management",
+      "raw_text_from_jd": "Experience managing executive stakeholders and communicating complex tradeoffs clearly.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_skills_infrastructure",
+      "raw_text_from_jd": "Strong analytical skills with ability to reason about utilization, throughput, capacity, and operational metrics.",
+      "skill_type": "capability",
+      "domain": "infrastructure_analytics",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_tolerance",
+      "raw_text_from_jd": "Comfortable operating in ambiguous, fast-scaling environments.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Strong written and verbal communication skills.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ownership_mentality",
+      "raw_text_from_jd": "High ownership mentality with bias toward action.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "external_providers_experience",
+      "raw_text_from_jd": "Experience working with external providers, strategic partners, or hyperscalers is highly preferred.",
+      "skill_type": "domain_knowledge",
+      "domain": "hyperscaler_partnerships",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "hyperscalers",
+        "strategic partners"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "gpu_cluster_ai_infra",
+      "raw_text_from_jd": "Experience with GPU clusters, AI infrastructure, or large-scale model serving environments.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "GPU clusters",
+        "AI infrastructure",
+        "model serving"
+      ],
+      "industries_named": [
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "token_economics_inference_planning",
+      "raw_text_from_jd": "Familiarity with token economics, inference capacity planning, or workload scheduling.",
+      "skill_type": "domain_knowledge",
+      "domain": "inference_capacity_planning",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "inference capacity planning",
+        "workload scheduling"
+      ],
+      "industries_named": [
+        "AI"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "global_infra_scaling_third_party",
+      "raw_text_from_jd": "Experience scaling global infrastructure through third-party providers.",
+      "skill_type": "capability",
+      "domain": "global_infrastructure_scaling",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "third-party providers"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_networking_hardware_background",
+      "raw_text_from_jd": "Background in systems engineering, networking, or hardware deployment programs.",
+      "skill_type": "domain_knowledge",
+      "domain": "systems_networking_hardware",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "networking",
+        "hardware deployment"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "new_operational_models",
+      "raw_text_from_jd": "Experience building new operational models in high-growth environments.",
+      "skill_type": "capability",
+      "domain": "operational_model_building",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Token-as-a-Service (TaaS) — converting external/third-party infrastructure capacity into production-ready token supply for OpenAI model training and inference workloads",
+    "business_model": "internal infrastructure platform / B2B strategic partnerships (hyperscalers, colocation, cloud partners)",
+    "primary_metrics_inferred": [
+      "Deployed capacity vs usable token output",
+      "Token ramp forecasts",
+      "Time-to-production for partner environments",
+      "ROI on capacity investments"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Capacity Planning",
+      "Networking",
+      "Hardware",
+      "Finance",
+      "Product",
+      "External Providers / Partners"
+    ],
+    "core_responsibilities": [
+      "Lead end-to-end delivery programs that convert external infrastructure capacity into production-ready token supply",
+      "Own readiness across compute, storage, networking, security, and operational dependencies for third-party environments",
+      "Build integrated plans across internal engineering teams and external partners with clear milestones, owners, risks, and critical paths",
+      "Drive launch execution for new partner regions, clusters, and capacity expansions",
+      "Create operating mechanisms that measure deployed capacity versus usable token output",
+      "Identify bottlenecks preventing token generation and drive resolution",
+      "Coordinate with capacity planning and finance teams to prioritize highest ROI capacity opportunities",
+      "Establish executive-level reporting on delivery status, risks, and token ramp forecasts",
+      "Improve repeatability of partner onboarding, technical integration, and scaling motions",
+      "Manage escalations across internal and external stakeholders during high-severity delivery issues",
+      "Help define the long-term operating model for Token-as-a-Service across Stargate and 3P ecosystems"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Token-as-a-Service",
+    "TaaS",
+    "Technical Program Manager",
+    "infrastructure delivery",
+    "compute capacity",
+    "GPU clusters",
+    "hyperscalers",
+    "Stargate",
+    "3P Engineering",
+    "model training",
+    "inference",
+    "capacity planning",
+    "partner onboarding",
+    "cross-functional execution",
+    "production throughput"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "High-visibility role with direct impact on OpenAI's global scaling",
+    "Clear scope and ownership area (TaaS across Stargate and 3P ecosystems)",
+    "Relocation assistance explicitly offered",
+    "Hybrid model with defined office days (3 per week) — not fully on-site",
+    "Role sits at intersection of infrastructure execution, systems readiness, and business impact — broad career scope"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship status not mentioned",
+    "Role requires physical presence in San Francisco, CA — no remote option stated",
+    "Highly specialized domain (TaaS, token economics, AI infrastructure at hyperscale) may make candidate pool narrow"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and executive stakeholder scope)",
+      "scope.business_model (inferred from product description and team context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not directly listed in JD)",
+      "compensation.equity_mentioned (no mention of equity anywhere in JD)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "'Experience working with external providers, strategic partners, or hyperscalers is highly preferred' appears in the Qualifications section (not a separate Preferred Skills section), but uses 'highly preferred' language — treated as nice_to_have (soft) rather than must_have (hard) based on qualifying language.",
+      "No explicit mention of visa sponsorship availability; marked as 'unclear'."
+    ]
+  }
+}

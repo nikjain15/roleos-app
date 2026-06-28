@@ -1,0 +1,261 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, API Infrastructure",
+  "url": "https://jobs.ashbyhq.com/openai/7ffa2a14-fa9c-46cb-a30a-1f7a35ae904a",
+  "ats_provider": "ashby",
+  "ats_job_id": "7ffa2a14-fa9c-46cb-a30a-1f7a35ae904a",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in the office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (enterprise infrastructure focus)",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Described as 'experienced Product Manager'",
+      "Proven experience leading large, complex, highly technical cross-functional teams",
+      "Sets strategy and executes across security, legal, compliance, finance, and engineering",
+      "Mentoring/leading others mentioned as a plus"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "experience_security_privacy_data_infra",
+      "raw_text_from_jd": "Have experience in security, privacy, data infrastructure, or usage-based platform products.",
+      "skill_type": "domain_knowledge",
+      "domain": "security_privacy_data_infrastructure",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_governance_access_controls",
+      "raw_text_from_jd": "Strong understanding of data governance, access controls, and enterprise identity.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_governance_access_controls_enterprise_identity",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "SSO",
+        "SAML",
+        "SCIM"
+      ],
+      "industries_named": [
+        "enterprise software"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "usage_metering_billing",
+      "raw_text_from_jd": "Experience with usage metering, cost-management tooling, or billing-adjacent systems.",
+      "skill_type": "domain_knowledge",
+      "domain": "usage_metering_billing",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_domain_collaboration",
+      "raw_text_from_jd": "Ability to work across security, legal, engineering, compliance, and finance domains.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "systems_thinking_analytical",
+      "raw_text_from_jd": "Strong systems thinking, analytical skills, and comfort operating in high-risk, high-trust areas.",
+      "skill_type": "capability",
+      "domain": "systems_thinking_analytics",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "leading_complex_xfn_teams",
+      "raw_text_from_jd": "Proven experience leading large, complex, highly technical cross-functional teams.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_regulatory_alignment",
+      "raw_text_from_jd": "Excellent communication and ability to drive alignment across complex technical and regulatory environments.",
+      "skill_type": "capability",
+      "domain": "communication_stakeholder_alignment",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "mentoring_leading_others",
+      "raw_text_from_jd": "Mentoring/leading others is a plus.",
+      "skill_type": "capability",
+      "domain": "people_leadership_mentoring",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "API data processing, data privacy, billing, and access controls products",
+    "business_model": "B2D (developer/enterprise API platform), usage-based billing",
+    "primary_metrics_inferred": [
+      "API usage growth and reliability",
+      "Enterprise customer adoption of data control and compliance features",
+      "Developer spend visibility and cost predictability",
+      "Regional data processing footprint expansion"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Security",
+      "Legal",
+      "Compliance",
+      "Finance",
+      "Leadership",
+      "Research"
+    ],
+    "core_responsibilities": [
+      "Develop an enterprise data control plane to securely access and manage enterprise data for LLM use",
+      "Drive product strategy for safety controls, privacy features, access management, and API usage/cost visibility",
+      "Build and improve data governance capabilities: retention, encryption, audit logs, permissions, and lifecycle management",
+      "Lead development of access control models, identity flows (SSO/SAML, SCIM), and admin tooling",
+      "Oversee usage metering, cost dashboards, alerts, budgeting tools, and predictable API cost experiences"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "API infrastructure",
+    "data governance",
+    "access controls",
+    "enterprise identity",
+    "SSO/SAML",
+    "SCIM",
+    "usage metering",
+    "billing",
+    "data privacy",
+    "LLM",
+    "data processing",
+    "enterprise-grade",
+    "compliance",
+    "audit logs",
+    "cost management"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface and ownership area (data control plane, billing, access controls)",
+    "Role partners directly with engineering, security, legal, compliance, finance, and leadership — high visibility",
+    "Relocation assistance offered",
+    "Well-defined hybrid policy (3 days/week in office)",
+    "OpenAI is a marquee AI company with significant market impact"
+  ],
+  "red_flags": [
+    "Compensation not disclosed",
+    "Visa sponsorship not mentioned",
+    "Years of experience not specified, making seniority level ambiguous",
+    "High-trust, high-risk regulatory and compliance environment may narrow candidate pool significantly"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'experienced' language, complexity of scope, and cross-functional leadership requirement; no explicit level stated)",
+      "scope.business_model (inferred from API platform description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "compensation.equity_mentioned (not stated; defaulted to false)",
+      "location.visa_sponsorship (not mentioned in JD; marked unclear)"
+    ],
+    "ambiguities": [
+      "The JD lists requirements under 'You might thrive in this role if you:' which is softer language, but the items read as de facto requirements for this highly technical role. They have been classified as hard must_haves accordingly, with one explicit 'plus' item (mentoring) classified as soft.",
+      "Years of experience not stated anywhere; seniority inferred from scope and description as 'experienced Product Manager' leading 'large, complex, highly technical cross-functional teams'."
+    ]
+  }
+}

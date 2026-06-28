@@ -1,0 +1,259 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Design Program Manager",
+  "url": "https://jobs.ashbyhq.com/openai/d59151b2-5b9e-481d-b9a7-ad8225b2dd32",
+  "ats_provider": "ashby",
+  "ats_job_id": "d59151b2-5b9e-481d-b9a7-ad8225b2dd32",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time, San Francisco HQ",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "medium",
+  "secondary_archetype": "Design Operations / Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in design operations roles within high-growth tech environments",
+      "Compensation range $216K-$240K base, consistent with senior IC at OpenAI",
+      "Foundational member of design program management — strategic and hands-on",
+      "Expected to work closely with design leadership and senior partners"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_design_ops",
+      "raw_text_from_jd": "Have 8+ years of experience in design operations roles within high-growth tech environments.",
+      "skill_type": "years_of_experience",
+      "domain": "design_operations",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "high-growth tech environments"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "zero_to_one_operational_systems",
+      "raw_text_from_jd": "Have built and scaled 0-1 operational systems across multidisciplinary teams—balancing long-term vision with hands-on execution.",
+      "skill_type": "outcome",
+      "domain": "operations_and_systems_design",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "design_product_dev_familiarity",
+      "raw_text_from_jd": "Are deeply familiar with the design and product development process—from early research and concepting through delivery and iteration.",
+      "skill_type": "domain_knowledge",
+      "domain": "design_and_product_development",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "design_tools_asset_management",
+      "raw_text_from_jd": "Have experience managing shared design tools, assets, and libraries to support consistency and efficiency at scale.",
+      "skill_type": "capability",
+      "domain": "design_asset_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vendor_contractor_management",
+      "raw_text_from_jd": "Are skilled at vendor and contractor management, with a focus on enabling seamless collaboration and high-quality outcomes.",
+      "skill_type": "capability",
+      "domain": "vendor_and_contractor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organized_action_oriented",
+      "raw_text_from_jd": "Are highly organized, action-oriented, and comfortable getting in the weeds to get things done.",
+      "skill_type": "cultural_fit",
+      "domain": "execution_and_work_style",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "strong_communicator_cross_functional",
+      "raw_text_from_jd": "Are a strong communicator and collaborator, experienced in working with senior leadership, technical partners, and designers of all levels.",
+      "skill_type": "capability",
+      "domain": "communication_and_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_paced_problem_solving",
+      "raw_text_from_jd": "Thrive in fast-paced environments and enjoy solving problems in real time to help teams move forward.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_orientation_flexibility",
+      "raw_text_from_jd": "Have a flexible orientation toward process–understanding when it's most effective, how and when to advocate for it, and what it can't do",
+      "skill_type": "capability",
+      "domain": "process_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Product Design organization at OpenAI — operational infrastructure, systems, and programs supporting design teams across consumer, developer, and enterprise products",
+    "business_model": "AI research and deployment company, B2C and B2B",
+    "primary_metrics_inferred": [
+      "Design team operational efficiency",
+      "OKR and roadmap alignment across design, product, and engineering",
+      "Vendor/contractor quality and accountability",
+      "Onboarding and resource allocation effectiveness"
+    ],
+    "cross_functional_partners": [
+      "Product Design leadership",
+      "Research",
+      "Engineering",
+      "Product Management",
+      "Product Operations",
+      "Engineering Operations"
+    ],
+    "core_responsibilities": [
+      "Partner with design leadership to identify and implement programs, processes, and tools that help the team operate more effectively across multiple product workstreams.",
+      "Lead operational planning and execution for key initiatives, including team-wide rituals, hiring coordination, onboarding, resource allocation, and internal communications.",
+      "Build and maintain scalable systems that support team growth, executional excellence, and strong collaboration with research, engineering, and product counterparts.",
+      "Oversee asset management practices across the design organization, ensuring shared libraries, templates, and systems are version-controlled, accessible, and consistently used.",
+      "Manage external vendors and contractors—handling onboarding, scoping, resourcing, contract workflows, and performance tracking to extend the team's capacity with quality and accountability.",
+      "Partner closely with Product and Engineering Operations to align OKRs, roadmaps, and delivery milestones.",
+      "Help manage intake, prioritization, and resource planning for design work across a fast-moving and highly collaborative product environment.",
+      "Drive clarity around ownership, roles, and execution timelines—ensuring the right people are in the loop at the right time.",
+      "Facilitate retrospectives, team health check-ins, and continuous improvement efforts to help the team operate at its best."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      216000,
+      240000
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "design operations",
+    "program management",
+    "product design",
+    "operational systems",
+    "vendor management",
+    "asset management",
+    "OKRs",
+    "cross-functional collaboration",
+    "design infrastructure",
+    "high-growth tech"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range clearly disclosed ($216K-$240K base)",
+    "Role described as foundational — high visibility and impact opportunity",
+    "Relocation assistance explicitly offered",
+    "Clear and specific responsibilities listed; not vague",
+    "Role sits at intersection of design leadership, product, and engineering — broad influence"
+  ],
+  "red_flags": [
+    "Onsite only in San Francisco HQ — no remote option mentioned, eliminates non-SF candidates",
+    "Visa sponsorship status not mentioned — unclear for international candidates",
+    "No equity or total comp details provided beyond base salary range",
+    "Role is entirely framed as 'you might thrive if' (nice-to-have framing) rather than explicitly labeled required vs. preferred, making hard vs. soft distinctions ambiguous"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from comp range + years requirement + strategic framing)",
+      "scope.team_size_estimate (not stated; left as 'unclear')",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "scope.business_model (inferred from company description)",
+      "location.remote_us_eligible (inferred as false from 'This role is based in our San Francisco HQ')",
+      "compensation.equity_mentioned (inferred as false; not mentioned anywhere in JD)"
+    ],
+    "ambiguities": [
+      "All qualifications are presented under 'You might thrive in this role if you:' framing, which is ambiguous between required and preferred. Given the specificity and seniority of the role, all items have been treated as must_haves with severity hard, as they appear to describe the baseline competency profile rather than bonus attributes.",
+      "Visa sponsorship is not mentioned anywhere in the JD; marked as 'unclear'."
+    ]
+  }
+}

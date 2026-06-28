@@ -1,0 +1,310 @@
+{
+  "company": "OpenAI",
+  "role_title": "Supply Chain Operations Program Manager, AI Infrastructure",
+  "url": "https://jobs.ashbyhq.com/openai/063d1957-23f0-4976-b8bd-93a0d4a31cfb",
+  "ats_provider": "ashby",
+  "ats_job_id": "063d1957-23f0-4976-b8bd-93a0d4a31cfb",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": "Support onsite factory builds and field deployments as needed (domestic and international travel)",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Supply Chain / NPI Operations Program Manager",
+  "seniority": {
+    "level": "Senior IC / Staff",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in Operations, Engineering, Program Management, or equivalent",
+      "Single-threaded operational leader accountable for outcomes end-to-end",
+      "Influence senior stakeholders and drive decisions",
+      "Executive-level communication responsibility"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_ops_eng_pm",
+      "raw_text_from_jd": "8+ years of experience in Operations, Engineering, Program Management, or equivalent, within hardware development, manufacturing, or supply chain domains (compute, networking, datacenter, or similarly complex systems)",
+      "skill_type": "years_of_experience",
+      "domain": "operations_engineering_program_management",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware development",
+        "manufacturing",
+        "supply chain",
+        "compute",
+        "networking",
+        "datacenter"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "npi_program_leadership",
+      "raw_text_from_jd": "Proven track record leading complex hardware NPI programs end-to-end, from early bring-up through production ramp",
+      "skill_type": "outcome",
+      "domain": "hardware_npi_program_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "hardware development"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "manufacturing_supply_chain_fundamentals",
+      "raw_text_from_jd": "Strong understanding of manufacturing and supply chain fundamentals, including BOM management, ECO/MCO processes, build readiness, factory test, quality controls, and material planning",
+      "skill_type": "domain_knowledge",
+      "domain": "manufacturing_supply_chain",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "BOM management",
+        "ECO/MCO processes"
+      ],
+      "industries_named": [
+        "manufacturing",
+        "supply chain"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership",
+      "raw_text_from_jd": "Demonstrated ability to lead cross-functional teams, influence senior stakeholders, and drive decisions in ambiguous, time-compressed environments",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Exceptional written and verbal communication skills, with the ability to distill complex issues for executive and external audiences",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "hyperscale_datacenter_experience",
+      "raw_text_from_jd": "Experience operating in hyperscale datacenter or large-scale infrastructure environments",
+      "skill_type": "domain_knowledge",
+      "domain": "hyperscale_datacenter_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "datacenter",
+        "hyperscale infrastructure"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "supplier_engagement_build_cost",
+      "raw_text_from_jd": "Familiarity with supplier engagement models, build cost drivers, and NPI scaling tradeoffs",
+      "skill_type": "domain_knowledge",
+      "domain": "supplier_engagement_cost_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "server_rack_network_hardware",
+      "raw_text_from_jd": "Technical background in server, rack, and/or network hardware",
+      "skill_type": "domain_knowledge",
+      "domain": "server_rack_network_hardware",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "server hardware",
+        "rack hardware",
+        "network hardware"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operational_process_design",
+      "raw_text_from_jd": "Experience designing or improving operational processes, dashboards, governance forums, or execution metrics",
+      "skill_type": "capability",
+      "domain": "operational_process_improvement",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "plm_erp_experience",
+      "raw_text_from_jd": "Experience supporting PLM processes and familiarity with ERP systems",
+      "skill_type": "tool_proficiency",
+      "domain": "plm_erp_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "PLM",
+        "ERP"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "AI infrastructure hardware NPI and production ramps, including AI-native silicon and tightly integrated systems (e.g., Jalapeño and future generations)",
+    "business_model": "internal infrastructure / supercomputing platform",
+    "primary_metrics_inferred": [
+      "On-schedule hardware delivery",
+      "Production ramp throughput and yield targets",
+      "Quality controls and reliability gates",
+      "Cost targets",
+      "Scalability and repeatability of operating mechanisms"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "Strategic Sourcing",
+      "Finance",
+      "Capacity Planning",
+      "Executive stakeholders",
+      "Sustaining Operations",
+      "Contract manufacturers",
+      "OEMs",
+      "Integrators"
+    ],
+    "core_responsibilities": [
+      "Act as single-threaded owner for operational readiness across NPI and ramp from early bring-up through sustained production",
+      "Translate infrastructure strategy and engineering objectives into operating plans, execution priorities, and decision frameworks",
+      "Drive alignment across Engineering, Operations, Strategic Sourcing, Finance, Capacity Planning, and Executive stakeholders",
+      "Lead transition activities from NPI to mass production",
+      "Translate engineering requirements into actionable, factory-ready plans with tier-1 manufacturing and integration partners",
+      "Lead cross-functional build and debug cadences",
+      "Drive factory and deployment ramp readiness including throughput, yield, quality controls, and reliability gates",
+      "Own end-to-end risk management—identification, mitigation planning, escalation, and executive-level communication",
+      "Build and scale repeatable operating mechanisms for predictable hardware development",
+      "Define requirements for operational systems (e.g., PLM enablement) and implement them",
+      "Build relationships with contract manufacturers, OEMs, and integrators",
+      "Support onsite factory builds and field deployments (domestic and international travel)"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "NPI",
+    "production ramp",
+    "supply chain",
+    "hardware program management",
+    "manufacturing",
+    "AI infrastructure",
+    "silicon",
+    "BOM management",
+    "ECO/MCO",
+    "PLM",
+    "ERP",
+    "contract manufacturers",
+    "OEM",
+    "single-threaded owner",
+    "operational readiness",
+    "cross-functional"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear and specific role scope — single-threaded owner for NPI and production ramp",
+    "Named hardware program context (Jalapeño) signals real hardware work, not vague AI hype",
+    "Explicit travel expectation disclosed (domestic and international)",
+    "Detailed must-have and nice-to-have breakdown signals mature hiring process",
+    "OpenAI's infrastructure scale offers significant impact opportunity"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No city or location explicitly stated in the JD body — work location/hybrid policy unclear",
+    "Visa sponsorship policy not stated",
+    "Role requires international travel with no clarity on frequency or expectations",
+    "No mention of team size or reporting structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and executive accountability signals)",
+      "seniority.manages_people (inferred as false; no people management mentioned)",
+      "location.type (inferred as onsite from travel and factory build support language; no explicit office policy stated)",
+      "location.remote_us_eligible (inferred as false given onsite factory and field deployment expectations)",
+      "scope.business_model (inferred as internal infrastructure from context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated in JD)"
+    ],
+    "ambiguities": [
+      "Location/city not specified in JD body; no hybrid/remote policy stated. Treated as onsite given repeated references to onsite factory builds and field deployments.",
+      "Visa sponsorship policy not mentioned anywhere in the JD. Marked as unclear.",
+      "The 'You Might Thrive in this role if' heading is used for required qualifications — language suggests conditional but items are structurally required. All items under this section treated as hard must-haves per JD language convention."
+    ]
+  }
+}

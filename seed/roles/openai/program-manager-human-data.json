@@ -1,0 +1,298 @@
+{
+  "company": "OpenAI",
+  "role_title": "Program Manager, Human Data",
+  "url": "https://jobs.ashbyhq.com/openai/932c9cc1-c542-4f67-8d0d-443de87b8213",
+  "ats_provider": "ashby",
+  "ats_job_id": "932c9cc1-c542-4f67-8d0d-443de87b8213",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "full-time onsite at San Francisco HQ",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Junior to Mid-level",
+    "years_required_min": 1,
+    "years_required_max": 2,
+    "manages_people": false,
+    "level_signals": [
+      "at least 1-2 years of relevant experience",
+      "eager to grow within a role that challenges and develops your skills",
+      "role involves hands-on operational execution and calibration tasks"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "relevant_experience",
+      "raw_text_from_jd": "you have at least 1-2 years of relevant experience and are eager to grow within a role that challenges and develops your skills.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_or_operations",
+      "minimum_value": 1,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "vendor_and_trainer_coordination",
+      "raw_text_from_jd": "Work closely with external vendors, trainers and internal researchers to collect, review, and deliver high-quality data",
+      "skill_type": "capability",
+      "domain": "vendor_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "requirements_and_instructions",
+      "raw_text_from_jd": "Gather requirements, write instructions, define success criteria, and calibrate the AI trainers",
+      "skill_type": "capability",
+      "domain": "data_program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_assessment_and_feedback",
+      "raw_text_from_jd": "Use internal tooling to assess labeled data and provide feedback to AI trainers",
+      "skill_type": "tool_proficiency",
+      "domain": "data_labeling_and_quality",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "process_improvement",
+      "raw_text_from_jd": "Think critically and share recommendations on tooling and process improvements, optimizing for quality, throughput, and AI trainer experience",
+      "skill_type": "capability",
+      "domain": "operational_process_improvement",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_analytics_hands_on",
+      "raw_text_from_jd": "You've gone beyond basic data annotation and have hands-on experience with data analytics, using insights to inform decisions and improve processes.",
+      "skill_type": "capability",
+      "domain": "data_analytics",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_and_fast_pace",
+      "raw_text_from_jd": "You are comfortable navigating ambiguity, managing shifting priorities, and adapting to fast-paced changes without missing a beat.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_and_collaboration",
+      "raw_text_from_jd": "You're an excellent communicator. You love bringing people together, fostering collaboration, and providing clarity in complex situations.",
+      "skill_type": "cultural_fit",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "organizational_skills",
+      "raw_text_from_jd": "Even when things are moving quickly, you keep track of details, manage competing demands, and bring structure to complexity.",
+      "skill_type": "cultural_fit",
+      "domain": "organization_and_structure",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_llm_agents_interest",
+      "raw_text_from_jd": "You're curious about AI, LLMs, Agents. While not required, an interest or background in these areas will help you connect the dots in our broader mission.",
+      "skill_type": "domain_knowledge",
+      "domain": "artificial_intelligence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "LLMs",
+        "Agents"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "startup_environment_experience",
+      "raw_text_from_jd": "If you enjoy the hustle, resourcefulness, and rapid iteration typical of start-ups, you'll feel right at home.",
+      "skill_type": "cultural_fit",
+      "domain": "startup_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [
+        "start-ups"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_safety_interest",
+      "raw_text_from_jd": "While you might have an interest in broader topics like safety, you find satisfaction in executing operational tasks efficiently and effectively.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_safety",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Human Data team — end-to-end data collection programs for training and evaluation of AI models",
+    "business_model": "internal-facing, supporting AI research and model training at OpenAI",
+    "primary_metrics_inferred": [
+      "Data quality and throughput",
+      "AI trainer calibration accuracy",
+      "Successful campaign completion rate"
+    ],
+    "cross_functional_partners": [
+      "Research teams",
+      "Operations",
+      "Engineering",
+      "External vendors",
+      "AI trainers"
+    ],
+    "core_responsibilities": [
+      "Execute complex programs for collecting high-quality human data",
+      "Interface between external vendors and AI trainers",
+      "Gather requirements, write instructions, define success criteria, and calibrate AI trainers",
+      "Use internal tooling to assess labeled data and provide feedback to AI trainers",
+      "Recommend tooling and process improvements optimizing for quality, throughput, and AI trainer experience"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "human data",
+    "data collection",
+    "AI trainers",
+    "RLHF",
+    "program management",
+    "vendor management",
+    "data quality",
+    "data analytics",
+    "LLMs",
+    "model training",
+    "operations"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear product surface and team remit described in detail",
+    "Role has direct impact on model training at OpenAI",
+    "Low years-of-experience bar (1-2 years) — accessible to earlier-career candidates",
+    "JD explicitly encourages curiosity and growth mindset rather than rigid credential requirements"
+  ],
+  "red_flags": [
+    "Compensation not disclosed anywhere in the JD",
+    "Visa sponsorship status not mentioned",
+    "Role is fully onsite at San Francisco HQ — no remote or hybrid option stated",
+    "JD is light on specifics around tooling and day-to-day workflow, making it hard to assess fit precisely"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 1-2 years experience signal and operational scope of role)",
+      "scope.business_model (inferred from team description — internal research support)",
+      "scope.primary_metrics_inferred (not stated; inferred from responsibilities)",
+      "location.office_time_required (inferred from 'This role is based in our San Francisco HQ' — no hybrid language used)"
+    ],
+    "ambiguities": [
+      "The JD mentions 'at least 1-2 years of relevant experience' under a 'You'll thrive if' section rather than a hard 'Required' section, making severity ambiguous. Treated as hard given the unconditional framing and role context.",
+      "Data analytics hands-on experience is described as a positive differentiator ('You have a knack for data') but framed in the same 'You'll thrive if' section — could be soft; treated as hard given it is described as going 'beyond basic data annotation'."
+    ]
+  }
+}

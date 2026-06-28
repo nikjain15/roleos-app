@@ -1,0 +1,263 @@
+{
+  "company": "OpenAI",
+  "role_title": "Senior Technical Program Manager - Security",
+  "url": "https://jobs.ashbyhq.com/openai/c414f15f-60c4-40b5-a896-d2ad6c7f4415",
+  "ats_provider": "ashby",
+  "ats_job_id": "c414f15f-60c4-40b5-a896-d2ad6c7f4415",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Security/Compliance TPM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 5,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "5+ years of experience leading complex technical programs",
+      "Title explicitly says 'Senior Technical Program Manager'",
+      "Communicates to executive audiences — implies senior standing",
+      "Expected to shape foundational security programs at scale"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_security_programs",
+      "raw_text_from_jd": "Have 5+ years of experience leading complex technical programs focused on infrastructure security, data privacy, compliance, or enterprise platform capabilities.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management_security",
+      "minimum_value": 5,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_security_execution",
+      "raw_text_from_jd": "Have a proven record of success driving highly cross-functional efforts across engineering, infrastructure, legal, compliance, and product stakeholders.",
+      "skill_type": "outcome",
+      "domain": "cross_functional_program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "engineering_security_regulatory_fluency",
+      "raw_text_from_jd": "Are deeply fluent in the intersection of engineering systems, security controls, and regulatory expectations—and are able to bring clarity and structure across all three.",
+      "skill_type": "domain_knowledge",
+      "domain": "security_engineering_compliance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "security controls"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_architecture_collaboration",
+      "raw_text_from_jd": "You will need to deeply collaborate on technical architecture and resolve technical problems in partnership with engineering.",
+      "skill_type": "capability",
+      "domain": "technical_architecture",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "security_program_frameworks",
+      "raw_text_from_jd": "Establish scalable frameworks and build programs around critical security initiatives including vulnerability management, evidence collection, incident response coordination, supply chain risk management, and device security.",
+      "skill_type": "capability",
+      "domain": "security_programs",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "vulnerability management",
+        "incident response",
+        "supply chain risk management",
+        "device security"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "privacy_security_requirements_execution",
+      "raw_text_from_jd": "Track and enforce OpenAI's privacy and security requirements by translating commitments into engineering milestones and driving their full implementation across systems.",
+      "skill_type": "capability",
+      "domain": "privacy_and_compliance_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "executive_communication",
+      "raw_text_from_jd": "Communicate status, risks, tradeoffs, and decisions clearly to technical and executive audiences and drive cross-functional execution with urgency and care.",
+      "skill_type": "capability",
+      "domain": "executive_communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structured_operator_in_ambiguity",
+      "raw_text_from_jd": "Thrive in high-trust environments, bring rigor and systems thinking to ambiguity, and operate with a bias for aligned execution over org boundaries.",
+      "skill_type": "cultural_fit",
+      "domain": "execution_in_ambiguity",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "empathetic_communicator_influencer",
+      "raw_text_from_jd": "Are an empathetic communicator and leader—able to influence across technical and non-technical audiences, and build durable trust with partners.",
+      "skill_type": "cultural_fit",
+      "domain": "stakeholder_influence",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Security, privacy, IT, and compliance programs spanning infrastructure, insider threat, information security, physical security, and information technology",
+    "business_model": "B2C and B2B AI products (ChatGPT, OpenAI API, enterprise products)",
+    "primary_metrics_inferred": [
+      "Reduction in internal data access exposure",
+      "Security milestone delivery and quality",
+      "Cross-org dependency resolution",
+      "Compliance and regulatory commitment fulfillment"
+    ],
+    "cross_functional_partners": [
+      "IT",
+      "Infrastructure",
+      "Application",
+      "Legal",
+      "Privacy",
+      "Security",
+      "Engineering",
+      "Product",
+      "Policy"
+    ],
+    "core_responsibilities": [
+      "Drive execution of critical security and compliance programs such as vulnerability management, merger and acquisition security and integration, infrastructure hardening, and datacenter security management",
+      "Partner with IT, Infrastructure, Application, Legal, Privacy, and Security teams to build scalable programs",
+      "Establish scalable frameworks and build programs around critical security initiatives including vulnerability management, evidence collection, incident response coordination, supply chain risk management, and device security",
+      "Track and enforce OpenAI's privacy and security requirements by translating commitments into engineering milestones",
+      "Create and maintain program-level visibility across risk areas, security milestones, and cross-org dependencies",
+      "Communicate status, risks, tradeoffs, and decisions clearly to technical and executive audiences"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "security",
+    "compliance",
+    "technical program management",
+    "vulnerability management",
+    "infrastructure hardening",
+    "insider threat",
+    "incident response",
+    "supply chain risk management",
+    "privacy",
+    "cross-functional",
+    "data access",
+    "M&A security",
+    "device security"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Role scoped clearly to a foundational, high-impact security function at a prominent AI company",
+    "Explicitly frames role as 'foundational in shaping how we secure OpenAI's systems' — high visibility",
+    "Cross-functional breadth (engineering, legal, policy, product) makes for varied and strategic work",
+    "EEO and reasonable accommodations commitments stated explicitly"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location or remote policy stated — candidates cannot assess geography fit",
+    "Visa sponsorship status is not addressed",
+    "The 'You might thrive in this role if you' framing makes all requirements ambiguous between hard and soft — all treated as hard per schema rules but this is an inference"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Senior' and 5+ years requirement)",
+      "seniority.manages_people (inferred as false; no direct reports mentioned)",
+      "location.type (not stated; set to 'unclear')",
+      "location.work_auth (inferred as 'open' from EEO language; not explicitly stated)",
+      "scope.business_model (inferred from product description in About the Team)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "compensation.equity_mentioned (set to false; no mention in JD)"
+    ],
+    "ambiguities": [
+      "All requirements appear under a 'You might thrive in this role if you:' heading, which could imply soft/preferred. However, the items are substantive and directly tied to core responsibilities, so all are treated as hard severity per extraction rules. This is flagged as an ambiguity.",
+      "Location/remote policy is entirely absent from the JD body. The cities mentioned in the background check section (San Francisco, Los Angeles) are legal compliance boilerplate, not role location indicators.",
+      "Visa sponsorship is not addressed anywhere in the JD."
+    ]
+  }
+}

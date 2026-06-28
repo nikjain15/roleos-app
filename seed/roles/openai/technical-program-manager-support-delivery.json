@@ -1,0 +1,247 @@
+{
+  "company": "OpenAI",
+  "role_title": "Technical Program Manager, Support Delivery",
+  "url": "https://jobs.ashbyhq.com/openai/b8a1293b-bf5b-488d-8257-869584db6496",
+  "ats_provider": "ashby",
+  "ats_job_id": "b8a1293b-bf5b-488d-8257-869584db6496",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "hybrid",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "3 days in-office per week",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of experience in program management, operations, or support engineering",
+      "Role involves leading strategy and program design across multiple initiatives",
+      "Expected to help shape vision and strategy of a new team"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_mgmt_ops_support",
+      "raw_text_from_jd": "Have 8+ years of experience in program management, operations, or support engineering, with a focus on building scalable processes and tooling",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_operations_support",
+      "minimum_value": 8,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "shipped_tools_automations",
+      "raw_text_from_jd": "Have shipped or maintained tools and automations (dashboards, ETL pipelines, low-code apps) that eliminated manual work and scaled beyond a single team",
+      "skill_type": "outcome",
+      "domain": "tooling_and_automation",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "ETL pipelines",
+        "dashboards",
+        "low-code apps"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "llm_as_co_developer",
+      "raw_text_from_jd": "Treat ChatGPT & LLMs as default co-developers, rapidly turning natural-language ideas into working code or queries",
+      "skill_type": "tool_proficiency",
+      "domain": "ai_tooling",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "ChatGPT"
+      ],
+      "technologies_named": [
+        "LLMs"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_collaboration",
+      "raw_text_from_jd": "Deeply enjoy working cross-functionally and are skilled at building relationships with Product, Engineering, and Operations teams",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "structure_in_dynamic_environment",
+      "raw_text_from_jd": "Excel in a dynamic, high-impact team environment where you can create structure and make meaningful contributions",
+      "skill_type": "cultural_fit",
+      "domain": "ambiguity_tolerance",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "automation_efficiency_passion",
+      "raw_text_from_jd": "Are passionate about using tools and automation to drive efficiency and improve customer outcomes",
+      "skill_type": "cultural_fit",
+      "domain": "automation_and_efficiency",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_org_problem_solving",
+      "raw_text_from_jd": "Possess exceptional communication, organization, and problem-solving skills",
+      "skill_type": "capability",
+      "domain": "communication_and_organization",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "high_ownership_bias_action",
+      "raw_text_from_jd": "Have a high ownership mindset with a bias toward action; comfortable operating in ambiguity, driving clarity, and rolling up their sleeves to get things done",
+      "skill_type": "cultural_fit",
+      "domain": "ownership_and_execution",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Senior Support Engineering team within User Operations; Tier 3 frontline support delivery for strategic customers",
+    "business_model": "B2B and B2C AI product deployment (enterprise and startup customers)",
+    "primary_metrics_inferred": [
+      "Support resolution quality and efficiency",
+      "Reduction in manual work through automation",
+      "Customer satisfaction and adoption metrics",
+      "Productivity and workflow improvements for support team"
+    ],
+    "cross_functional_partners": [
+      "Sales",
+      "Technical Success",
+      "Product",
+      "Engineering",
+      "Operations"
+    ],
+    "core_responsibilities": [
+      "Lead support delivery programs for Tier 3 frontline delivery for our most strategic customers, including productivity and workflow improvements, team operations, and knowledge management for the Support Delivery team",
+      "Partner with Support Delivery and cross-functional leadership to define the experience, stand up the program, manage pilots and rollout, and ensure premium operations and playbooks stay healthy over time",
+      "Lead strategy and program design for internal support initiatives, including specialization programs, quality initiatives, community support, product reliability and launch supportability",
+      "Coordinate requirements, implementation, and ongoing iteration with internal build owners and systems partners",
+      "Lead projects to identify, implement, and scale tools and automation that improve customer support efficiency and effectiveness",
+      "Identify and scale practical AI-powered workflows across support operations, using automation, LLMs, and internal tooling to reduce manual work, improve resolution quality, and help the team operate more effectively at scale",
+      "Collaborate across teams to identify opportunities for improvement, reduce friction, and enhance overall customer satisfaction",
+      "Help shape the vision and strategy of a new team, contributing to its long-term success and influence across the organization"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "Technical Program Manager",
+    "support delivery",
+    "Tier 3 support",
+    "LLMs",
+    "automation",
+    "ETL pipelines",
+    "AI-powered workflows",
+    "knowledge management",
+    "cross-functional",
+    "scalable processes",
+    "operational frameworks",
+    "User Operations"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Relocation assistance is available",
+    "Clear hybrid policy stated (3 days in-office per week)",
+    "Role explicitly describes foundational impact — building new team and defining strategy",
+    "Intersection of technical (ETL, LLMs, automation) and operational skills is well-defined",
+    "OpenAI's scale offers meaningful scope and influence"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship policy not stated",
+    "San Francisco onsite requirement (3 days/week) limits remote candidates",
+    "Role requires 8+ years but JD language is aspirational and vague in several places, making exact expectations harder to gauge"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 8+ years requirement and strategic scope of role)",
+      "scope.business_model (inferred from product description and customer types mentioned)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "compensation.equity_mentioned (not stated; left as false)",
+      "posting_first_seen and posting_last_updated (not available in source data)"
+    ],
+    "ambiguities": [
+      "Visa sponsorship is not mentioned anywhere in the JD; classified as 'unclear'",
+      "The JD lists 'You might thrive in this role if you:' as the header for requirements — this phrasing is softer than 'Required', but all items under it read as hard requirements given the seniority and specificity; classified as must_haves with severity hard",
+      "No nice-to-haves or preferred qualifications section exists in the JD; nice_to_haves left empty"
+    ]
+  }
+}

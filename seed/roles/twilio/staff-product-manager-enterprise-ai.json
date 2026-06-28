@@ -1,0 +1,400 @@
+{
+  "company": "Twilio",
+  "role_title": "Staff Product Manager - Enterprise AI",
+  "url": "https://job-boards.greenhouse.io/twilio/jobs/7918885",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7918885",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "occasional travel for project or team in-person meetings",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM with enterprise/internal tools focus",
+  "seniority": {
+    "level": "Staff PM (IC6 equivalent)",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years product management experience required",
+      "Staff title signals senior IC leadership",
+      "Comp range up to $228,700 base in SF Bay Area consistent with Staff-level IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7+ years of product management experience at fast-paced technology companies, with at least 3 years in GTM functions (sales operations, customer support, compliance/risk operations) and/or Corporate Functions (finance operations, legal tech, HR tech)",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "qualifier": "at fast-paced technology companies; at least 3 years in GTM or Corporate Functions",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "GTM",
+        "sales operations",
+        "customer support",
+        "compliance/risk operations",
+        "finance operations",
+        "legal tech",
+        "HR tech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "fast-paced technology companies"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "domain_depth",
+      "raw_text_from_jd": "Deep understanding of at least two of the following domains: sales workflows and CRM systems, customer support operations and help desk platforms, compliance/risk operations and fraud detection systems, financial operations and ERP systems, legal operations and contract lifecycle management, HR operations and human capital management systems",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_business_functions",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "CRM systems",
+        "help desk platforms",
+        "fraud detection systems",
+        "ERP systems",
+        "contract lifecycle management",
+        "human capital management systems"
+      ],
+      "industries_named": [
+        "sales",
+        "customer support",
+        "compliance/risk",
+        "finance",
+        "legal",
+        "HR"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "unified_platform_product_building",
+      "raw_text_from_jd": "Proven ability to build products that serve diverse user personas and use cases within a unified platform strategy",
+      "skill_type": "capability",
+      "domain": "platform_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_ml_technical_fluency",
+      "raw_text_from_jd": "Strong technical fluency with AI/ML concepts, agentic systems, workflow automation, and conversational AI",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_ml",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI/ML",
+        "agentic systems",
+        "workflow automation",
+        "conversational AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sql_proficiency",
+      "raw_text_from_jd": "Proficiency with SQL and ability to extract, analyze, and interpret data independently to inform product decisions",
+      "skill_type": "tool_proficiency",
+      "domain": "data_analysis",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [
+        "SQL"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "stakeholder_management",
+      "raw_text_from_jd": "Excellent stakeholder management skills with experience influencing senior leaders and driving cross-functional alignment",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "measurable_business_impact",
+      "raw_text_from_jd": "Demonstrated success delivering measurable business impact through product innovation and operational efficiency",
+      "skill_type": "outcome",
+      "domain": "product_impact",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree or equivalent experience",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_powered_tools_experience",
+      "raw_text_from_jd": "Experience with AI-powered sales tools, support automation platforms, compliance/risk management systems, finance tools, legal tech platforms, or HR automation systems",
+      "skill_type": "domain_knowledge",
+      "domain": "enterprise_ai_tools",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "sales",
+        "customer support",
+        "compliance/risk",
+        "finance",
+        "legal tech",
+        "HR"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "enterprise_platform_knowledge",
+      "raw_text_from_jd": "Knowledge of enterprise platforms including Salesforce, Zendesk, Workday, and other enterprise systems",
+      "skill_type": "tool_proficiency",
+      "domain": "enterprise_systems",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [
+        "Salesforce",
+        "Zendesk",
+        "Workday"
+      ],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "methodologies_and_frameworks",
+      "raw_text_from_jd": "Familiarity with sales methodologies (MEDDPICC, etc.), support best practices (ITIL), operational excellence frameworks, finance best practices (financial close, procurement, FP&A), legal operations (contract management, matter management), and HR processes (recruiting, onboarding, HRIS administration)",
+      "skill_type": "domain_knowledge",
+      "domain": "business_methodologies",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "MEDDPICC",
+        "ITIL"
+      ],
+      "industries_named": [
+        "sales",
+        "finance",
+        "legal",
+        "HR"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "internal_tools_background",
+      "raw_text_from_jd": "Background in building internal tools, operational dashboards, or productivity platforms for business functions",
+      "skill_type": "capability",
+      "domain": "internal_tooling",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ml_systems_experience",
+      "raw_text_from_jd": "Experience with recommendation systems, predictive analytics, ML-driven insights, document processing, intelligent document understanding, or knowledge management systems",
+      "skill_type": "domain_knowledge",
+      "domain": "ml_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "recommendation systems",
+        "predictive analytics",
+        "ML-driven insights",
+        "document processing",
+        "intelligent document understanding",
+        "knowledge management systems"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "adoption_track_record",
+      "raw_text_from_jd": "Track record of driving adoption of new products across large, distributed teams",
+      "skill_type": "outcome",
+      "domain": "product_adoption",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [
+    "Candidates located in San Francisco, CA; Oakland, CA; San Jose, CA; or surrounding areas are not eligible to be hired for this role"
+  ],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Enterprise AI platform powering GTM functions (Sales, Support, Operations) and Corporate Functions (Finance, Legal, HR) via agentic workflows and automation",
+    "business_model": "internal enterprise product / platform (B2B internal tooling for Twilio's own GTM and corporate functions)",
+    "primary_metrics_inferred": [
+      "Productivity gains for GTM and Corporate Function users",
+      "Case deflection and support efficiency",
+      "Cost savings from automation (invoice processing, contract review, recruiting)",
+      "Adoption rates across business functions",
+      "Business outcomes / ROI from AI deployments"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Data Science",
+      "AI/ML teams",
+      "GTM leaders",
+      "Corporate Function leaders (Finance, Legal, HR)",
+      "Operations teams"
+    ],
+    "core_responsibilities": [
+      "Define and execute the product roadmap for Enterprise AI spanning GTM and Corporate Functions",
+      "Build AI-powered solutions across Sales, Support, Operations, Finance, Legal, and HR",
+      "Leverage Enterprise AI platform to build agentic solutions using multi-agent architecture, knowledge retrieval, workflow automation, and LLM-powered reasoning",
+      "Integrate with enterprise systems including Salesforce, Zendesk, Workday, NetSuite, DocuSign, Sift, and internal Twilio tools",
+      "Collaborate with business leaders to translate priorities into product requirements and roadmaps",
+      "Drive adoption and enablement across end users",
+      "Measure and communicate impact through clear business metrics"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      155520,
+      228700
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity plan and corporate bonus plan eligibility mentioned",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Enterprise AI",
+    "agentic systems",
+    "LLM",
+    "multi-agent architecture",
+    "workflow automation",
+    "GTM functions",
+    "corporate functions",
+    "Salesforce",
+    "Zendesk",
+    "Workday",
+    "SQL",
+    "conversational AI",
+    "Staff PM",
+    "internal tools",
+    "knowledge retrieval"
+  ],
+  "buzzword_density": "high",
+  "green_flags": [
+    "Compensation ranges explicitly disclosed across multiple geographies",
+    "Explicit application deadline stated (06/27/26) indicating active posting",
+    "Clear product surface with diverse, well-scoped use cases across GTM and Corporate Functions",
+    "Remote-first culture explicitly emphasized",
+    "Company encourages applicants with non-traditional backgrounds",
+    "Equity and bonus participation explicitly mentioned"
+  ],
+  "red_flags": [
+    "Excluded from SF Bay Area, Oakland, San Jose despite Bay Area pay band listed — creates geographic inconsistency worth clarifying",
+    "Scope is extremely broad (6+ business functions; 15+ named use cases) which could indicate lack of focus or under-resourcing",
+    "High buzzword density may signal early-stage or unclear product definition",
+    "Visa sponsorship status not stated anywhere in the JD",
+    "No mention of team size or reporting structure"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level inferred from title ('Staff') and compensation range",
+      "scope.business_model inferred from product description (internal enterprise AI platform)",
+      "scope.primary_metrics_inferred (not stated verbatim; inferred from responsibilities)",
+      "location.visa_sponsorship set to 'unclear' as not mentioned in JD",
+      "posting_first_seen and posting_last_updated not available from JD content"
+    ],
+    "ambiguities": [
+      "Compensation table includes a 'San Francisco Bay area, California' pay band ($182,960-$228,700) but the role explicitly states it is not eligible for hire in San Francisco, Oakland, San Jose, or surrounding areas — these two statements appear contradictory. The exclusion language in 'Location' section likely supersedes the pay table.",
+      "base_range_usd set to the full national spread [155520, 228700]; actual applicable range depends on candidate location.",
+      "Work auth / visa sponsorship not mentioned anywhere in the JD; set to 'open' and 'unclear' respectively."
+    ]
+  }
+}

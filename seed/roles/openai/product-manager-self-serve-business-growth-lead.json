@@ -1,0 +1,291 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, Self-Serve Business Growth Lead",
+  "url": "https://jobs.ashbyhq.com/openai/d23c6966-e702-4088-860b-0f529745e03c",
+  "ats_provider": "ashby",
+  "ats_job_id": "d23c6966-e702-4088-860b-0f529745e03c",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": null,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Growth PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM (developer/B2B SaaS focus)",
+  "seniority": {
+    "level": "Senior IC / Staff PM",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": true,
+    "level_signals": [
+      "Referred to as 'senior product leader'",
+      "Help build and mentor a growing team of PMs as the self-serve growth function scales",
+      "Own executive-level narratives",
+      "Own self-serve business growth goals, metrics, and executive-level narratives"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "plg_b2b_experience",
+      "raw_text_from_jd": "Have led product-led growth initiatives for B2B, SaaS, developer, or business-facing products.",
+      "skill_type": "domain_knowledge",
+      "domain": "product_led_growth",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B",
+        "SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "growth_loops_activation",
+      "raw_text_from_jd": "Have experience building growth loops, activation flows, team adoption experiences, monetization paths, or expansion motions.",
+      "skill_type": "capability",
+      "domain": "growth_product_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "team_workspace_products",
+      "raw_text_from_jd": "Have worked on team-based, workspace, collaboration, developer, or multi-user products.",
+      "skill_type": "domain_knowledge",
+      "domain": "collaboration_developer_products",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_team_ownership",
+      "raw_text_from_jd": "Are comfortable owning business outcomes even when execution depends on multiple teams and product surfaces.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "analytical_strategy",
+      "raw_text_from_jd": "Are highly analytical and can translate customer behavior, product data, and business goals into a focused product strategy.",
+      "skill_type": "capability",
+      "domain": "product_analytics_strategy",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Are strong at cross-functional influence, strategic alignment, and executive communication.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "significant_scale",
+      "raw_text_from_jd": "Have operated at significant scale, such as large user bases, meaningful revenue responsibility, or high-growth product lines.",
+      "skill_type": "outcome",
+      "domain": "scale_and_growth",
+      "minimum_value": null,
+      "unit": null,
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "plg_saas_developer_experience",
+      "raw_text_from_jd": "Experience in PLG, B2B SaaS, self-serve growth, monetization, lifecycle growth, or developer products.",
+      "skill_type": "domain_knowledge",
+      "domain": "product_led_growth",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "B2B SaaS"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "workspace_collaboration_developer",
+      "raw_text_from_jd": "Experience with team-based, workspace, collaboration, or developer-facing products.",
+      "skill_type": "domain_knowledge",
+      "domain": "collaboration_developer_products",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sales_gtm_partnership",
+      "raw_text_from_jd": "Experience partnering with Sales, Revenue, or Go-To-Market teams on handoff, upsell, or expansion motions.",
+      "skill_type": "capability",
+      "domain": "sales_gtm_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Self-serve business growth for OpenAI products (Codex, OpenAI API) across full customer journey: acquisition, conversion, activation, retention, expansion, monetization",
+    "business_model": "B2B self-serve / product-led growth, developer-facing, with Enterprise upsell motion",
+    "primary_metrics_inferred": [
+      "Team adoption rate",
+      "Self-serve conversion and activation metrics",
+      "Retention and expansion revenue",
+      "Usage growth across self-serve business products"
+    ],
+    "cross_functional_partners": [
+      "Product",
+      "Engineering",
+      "Design",
+      "Data Science",
+      "Sales",
+      "Marketing",
+      "Operations",
+      "Go-To-Market"
+    ],
+    "core_responsibilities": [
+      "Define the end-to-end product strategy for self-serve business growth across acquisition, conversion, activation, retention, expansion, and monetization",
+      "Identify and prioritize the highest-impact product opportunities that improve team adoption, usage, retention, and expansion",
+      "Develop growth motions that help teams building with OpenAI get to value faster",
+      "Partner with core product teams to shape roadmap priorities",
+      "Own self-serve business growth goals, metrics, and executive-level narratives",
+      "Work closely with Sales and Go-To-Market teams to design handoff, upsell, and expansion motions",
+      "Use customer insights, product analytics, experimentation, and business data to inform strategy",
+      "Influence cross-functional partners",
+      "Help build and mentor a growing team of PMs"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "product-led growth",
+    "self-serve",
+    "B2B SaaS",
+    "activation",
+    "retention",
+    "expansion",
+    "monetization",
+    "developer products",
+    "Codex",
+    "OpenAI API",
+    "growth loops",
+    "cross-functional influence",
+    "executive communication",
+    "team adoption",
+    "product analytics"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership scope covering the full growth funnel (acquisition through expansion)",
+    "Explicit people leadership component — building and mentoring a PM team",
+    "Strong cross-functional mandate with named partners (Sales, GTM, Data Science, etc.)",
+    "Directly tied to high-profile OpenAI products (Codex, OpenAI API)"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location or remote/hybrid policy stated — unclear if role requires relocation",
+    "No visa sponsorship information provided",
+    "Seniority level implied ('senior product leader') but not explicitly defined",
+    "Duplicate qualification bullets appear in the JD (PLG/B2B SaaS and workspace/developer experience listed twice under both 'you might thrive' and standalone bullet points), suggesting possible editorial inconsistency"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 'senior product leader' language, executive communication ownership, and people management signal)",
+      "seniority.manages_people (inferred from 'Help build and mentor a growing team of PMs')",
+      "scope.business_model (inferred from product description and self-serve/enterprise context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.type (not stated in JD; marked as unclear)"
+    ],
+    "ambiguities": [
+      "The 'You might thrive in this role if you:' section contains both unconditional bullets (treated as hard requirements) and items that appear to be soft preferences (labeled 'Experience in PLG...' and 'Experience with team-based...' and 'Experience partnering with Sales...'), creating ambiguity. The latter three were classified as nice_to_haves because they appear as standalone sub-bullets without the same 'Have' framing as the main bullets.",
+      "No location, remote policy, or visa sponsorship information is stated anywhere in the JD."
+    ]
+  }
+}

@@ -1,0 +1,215 @@
+{
+  "company": "Coinbase",
+  "role_title": "Group Product Manager, Payments Core",
+  "url": "https://www.coinbase.com/careers/positions/7991474?gh_jid=7991474",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "7991474",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "quarterly in-person working sessions ('surges')",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Generalist PM (platform/infrastructure focus)",
+  "seniority": {
+    "level": "Staff / Principal IC (Group PM)",
+    "years_required_min": 10,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "10+ years of product management experience required",
+      "Titled 'Group Product Manager' signaling senior IC leadership",
+      "JD explicitly calls this 'a high-impact IC leadership role for a seasoned payments expert'",
+      "Base salary range $243K–$287K consistent with senior/staff IC at Coinbase"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_payments",
+      "raw_text_from_jd": "10+ years of product management experience, with deep expertise in payments infrastructure, payment processing, or fintech platforms.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management_payments",
+      "minimum_value": 10,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_year_platform_strategy",
+      "raw_text_from_jd": "Track record of owning and driving multi-year platform strategies that delivered measurable improvements in processing success rates, cost efficiency, or global payment coverage.",
+      "skill_type": "outcome",
+      "domain": "payments_platform_strategy",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency_payments",
+      "raw_text_from_jd": "Deep technical fluency in payment systems architecture, processing flows, multi-partner routing, payment method economics, interchange optimization, and the regulatory landscape for payments across major markets.",
+      "skill_type": "domain_knowledge",
+      "domain": "payments_systems_architecture",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "payment systems architecture",
+        "multi-partner routing",
+        "interchange optimization"
+      ],
+      "industries_named": [
+        "payments"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_leadership_regulated",
+      "raw_text_from_jd": "Demonstrated ability to lead complex, cross-functional initiatives in highly regulated environments, driving alignment across engineering, finance, compliance, and business stakeholders, and articulating platform strategy and investment tradeoffs to executive leadership.",
+      "skill_type": "capability",
+      "domain": "cross_functional_leadership",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "payments",
+        "fintech"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "generative_ai_responsible_use",
+      "raw_text_from_jd": "Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality.",
+      "skill_type": "tool_proficiency",
+      "domain": "generative_ai_workflow",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Payments Core — fiat money movement infrastructure processing hundreds of billions of dollars annually across 15+ payment methods in 30+ countries",
+    "business_model": "B2C and B2B platform, crypto exchange / fintech",
+    "primary_metrics_inferred": [
+      "Payment processing success rates",
+      "Least-cost routing / cost efficiency",
+      "Global payment coverage (30+ countries)",
+      "Processing partner reliability and uptime",
+      "Self-serve adoption by internal product groups"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Finance",
+      "Compliance",
+      "Business stakeholders",
+      "Executive leadership"
+    ],
+    "core_responsibilities": [
+      "Own the end-to-end product roadmap for Payments Core, encompassing core payment processing, payment method integrations (ACH, cards, bank transfers), multi-partner infrastructure, and payment lifecycle management.",
+      "Drive optimization of payment processing success rates, least-cost routing, and transaction efficiency to directly improve Coinbase's revenue and customer experience across its global footprint.",
+      "Lead the strategy and execution for multi-partner payments infrastructure, enabling processing partner routing, redundancy, and failover to maximize reliability and cost efficiency.",
+      "Partner with Engineering to shape system architecture and technical investments that drive scalability, resilience, and adaptability across Payments Core's platform.",
+      "Build self-serve capabilities that enable Product Groups to leverage Payments Core without heavy integration overhead, unblocking growth across Coinbase's product surface.",
+      "Shape Payments Core's long-term strategy for emerging payment methods, real-time payment networks, and evolving regulatory landscapes."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      243865,
+      286900
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity eligibility mentioned alongside bonus and benefits",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "payments infrastructure",
+    "payment processing",
+    "least-cost routing",
+    "multi-partner routing",
+    "ACH",
+    "interchange optimization",
+    "fintech",
+    "platform strategy",
+    "processing success rates",
+    "real-time payment networks",
+    "global expansion",
+    "cross-functional leadership",
+    "regulatory landscape",
+    "self-serve capabilities"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly disclosed ($243,865–$286,900 base)",
+    "Equity and bonus eligibility mentioned in addition to base",
+    "Clear, specific product surface with quantified scale (hundreds of billions annually, 15+ payment methods, 30+ countries)",
+    "High-impact IC role with explicit ownership of multi-year strategy — not a support or execution-only role",
+    "Remote-first company culture explicitly stated",
+    "Role sits within Platform product group — high organizational visibility"
+  ],
+  "red_flags": [
+    "Quarterly in-person 'surges' required — may be a constraint for candidates who cannot travel periodically",
+    "10+ years minimum with deep payments infrastructure expertise is a narrow talent pool requirement",
+    "No nice-to-haves or preferred qualifications listed — JD is entirely mandatory requirements, leaving no flexibility signals",
+    "Visa sponsorship and work authorization policies not stated — unclear for non-US applicants",
+    "AI-based initial screening interview disclosed — candidates should be aware of automated first-round process"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Group PM', comp range, and JD language 'high-impact IC leadership role')",
+      "scope.business_model (inferred from company context — crypto exchange / fintech platform)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed as KPIs in JD)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)",
+      "compensation.location_pay_differential (inferred from 'Base salary varies by location' disclaimer)"
+    ],
+    "ambiguities": [
+      "JD states Coinbase is 'remote-first, but not remote-only' and mentions quarterly in-person surges, but no specific city or office location is listed for this role. Treated as remote-us with periodic travel requirement.",
+      "The generative AI requirement ('Utilizes generative AI responsibly...') is listed under 'Required Skills and Experience' with no qualifier; treated as hard requirement, though it reads more like a company-wide behavioral expectation than a screening criterion."
+    ]
+  }
+}

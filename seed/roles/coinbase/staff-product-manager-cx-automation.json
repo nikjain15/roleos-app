@@ -1,0 +1,210 @@
+{
+  "company": "Coinbase",
+  "role_title": "Staff Product Manager, CX Automation",
+  "url": "https://www.coinbase.com/careers/positions/8001275?gh_jid=8001275",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8001275",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "quarterly in-person working sessions ('surges')",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical PM",
+  "archetype_confidence": "high",
+  "secondary_archetype": "AI Product Manager",
+  "seniority": {
+    "level": "Staff PM (IC6 equivalent)",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of product management experience required",
+      "Staff-level title",
+      "Comp range $207K-$244K base consistent with Staff IC at Coinbase",
+      "Owns product strategy and end-to-end delivery across major customer surfaces"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "7+ years of product management experience, with demonstrated depth in both customer-facing product surfaces (front-end UX) and platform/systems work (back-end APIs, integrations, data flows) - not exclusively one or the other.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "qualifier": "with depth in both front-end UX and back-end platform/systems work",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "APIs",
+        "integrations",
+        "data flows"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_powered_support_products",
+      "raw_text_from_jd": "Experience building or scaling AI-powered customer support products, including automation workflows, intelligent routing, chatbots, or LLM-based assistants across chat, voice, or self-service channels.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_customer_support",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "automation workflows",
+        "intelligent routing",
+        "chatbots",
+        "LLM-based assistants"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "success_metrics_and_data_driven",
+      "raw_text_from_jd": "Track record of defining and tracking success metrics across complex funnels (automation rate, CSAT, deflection rate, resolution time) and using data to drive prioritization decisions.",
+      "skill_type": "outcome",
+      "domain": "data_driven_product_management",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_influence",
+      "raw_text_from_jd": "Experience partnering across multiple product groups and stakeholders without owning end-to-end UX, with proven ability to influence outcomes and align priorities in a matrixed environment.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "generative_ai_responsible_use",
+      "raw_text_from_jd": "Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality.",
+      "skill_type": "capability",
+      "domain": "generative_ai",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Chat, voice, and proactive support surfaces; CX Automation within Enterprise Applications & Architecture (EAA) org; Amazon Connect, Sprinklr, and internal platforms",
+    "business_model": "B2C / B2B2C — Coinbase customer support platform serving millions of customers",
+    "primary_metrics_inferred": [
+      "Automation rate",
+      "CSAT (customer satisfaction score)",
+      "Deflection rate",
+      "Resolution time",
+      "P&L impact from tooling optimization"
+    ],
+    "cross_functional_partners": [
+      "Intelligence team (ML/LLM)",
+      "Third-party AI vendors",
+      "Engineering",
+      "CX Operations",
+      "Data Science",
+      "Compliance"
+    ],
+    "core_responsibilities": [
+      "Own the product roadmap and end-to-end delivery for chat, voice, and proactive support surfaces",
+      "Drive automation rate and CSAT improvements by identifying high-impact opportunities to deflect contacts, reach out proactively, and optimize handoffs",
+      "Build AI-integrated capabilities across support surfaces by partnering with Intelligence team (ML/LLM) and 3P AI vendors",
+      "Partner with Engineering, CX Operations, Data Science, and Compliance to ensure support surfaces are reliable, scalable, and compliant",
+      "Shape P&L impact through tooling optimization and deprecation, evaluating build-vs-buy tradeoffs and scoping market for emerging CX technologies"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      207485,
+      244100
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity eligibility mentioned alongside bonus and benefits",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "CX automation",
+    "AI-powered customer support",
+    "LLM",
+    "chatbot",
+    "intelligent routing",
+    "Amazon Connect",
+    "Sprinklr",
+    "automation rate",
+    "CSAT",
+    "deflection rate",
+    "chat and voice",
+    "proactive support",
+    "Staff PM",
+    "matrixed environment",
+    "build-vs-buy"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range disclosed ($207K-$244K base) with equity and bonus mentioned",
+    "Clear product surface and ownership area with defined success metrics",
+    "Remote-first company with only quarterly in-person surges required",
+    "AI-native role with real ML/LLM partnership scope, not superficial",
+    "Staff-level title with significant strategic ownership and P&L responsibility"
+  ],
+  "red_flags": [
+    "No visa sponsorship or work authorization details stated — unclear for non-US candidates",
+    "Role requires quarterly in-person 'surges' which may not suit candidates seeking fully async remote",
+    "Application limit of 3 submissions per 6 months across all Coinbase roles may disadvantage candidates applying to multiple positions",
+    "JD notes Coinbase is piloting AI-based initial screening interviews — candidate experience may be non-traditional"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from title 'Staff' + comp range + years required)",
+      "scope.business_model (inferred from product description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; partially stated in JD as examples in requirements)",
+      "location.work_auth (not stated)",
+      "location.visa_sponsorship (not stated)",
+      "compensation.location_pay_differential (inferred from 'Base salary varies by location' language)"
+    ],
+    "ambiguities": [
+      "Location type: JD states 'remote-first, but not remote-only' and requires quarterly in-person 'surges'; treated as remote-us rather than hybrid since no office percentage or city is specified for this role",
+      "No specific cities listed for this role despite Coinbase having US offices; cities_listed left empty",
+      "Visa sponsorship and work authorization not addressed in JD body"
+    ]
+  }
+}

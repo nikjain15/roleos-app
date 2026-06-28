@@ -1,0 +1,237 @@
+{
+  "company": "Coinbase",
+  "role_title": "Senior Program Manager, Contracts & Analytics",
+  "url": "https://www.coinbase.com/careers/positions/8008047?gh_jid=8008047",
+  "ats_provider": "greenhouse",
+  "ats_job_id": "8008047",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "remote-us",
+    "cities_listed": [],
+    "remote_us_eligible": true,
+    "office_time_required": "quarterly in-person working sessions called 'surges'",
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Legal Operations / CLM Program Manager",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 8,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "8+ years of program or project management experience",
+      "Sets strategic direction for tooling and workflows",
+      "Owns CLM technology roadmap and backlog",
+      "Communicates to senior stakeholders",
+      "Base salary range $148,835–$175,100 consistent with senior IC"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_program_management",
+      "raw_text_from_jd": "8+ years of program or project management experience within Legal Operations, contract management, or a technology-driven operations function, with a track record of setting strategic direction for tooling and workflows, not just executing on them.",
+      "skill_type": "years_of_experience",
+      "domain": "program_management_legal_ops",
+      "minimum_value": 8,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "legal operations",
+        "contract management"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technology_roadmap_ownership",
+      "raw_text_from_jd": "Demonstrated experience owning a technology roadmap and backlog, including prioritizing build-vs-buy decisions, scoping in-house development work, and partnering with engineering and architecture teams to deliver integrated solutions.",
+      "skill_type": "capability",
+      "domain": "technology_roadmap_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "clm_ironclad_expert",
+      "raw_text_from_jd": "Expert-level, hands-on experience with Contract Lifecycle Management (CLM) systems (Ironclad required), including workflow design, template management, reporting, and integration planning with platforms like Salesforce.",
+      "skill_type": "tool_proficiency",
+      "domain": "contract_lifecycle_management",
+      "evidence_required": "hands_on_use",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [
+        "Ironclad",
+        "Salesforce"
+      ],
+      "technologies_named": [
+        "CLM"
+      ],
+      "industries_named": [
+        "legal operations"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_automation_adoption",
+      "raw_text_from_jd": "Proven ability to drive AI and automation adoption within a team, including evaluating tools, building proof of concepts, and leading enablement programs that result in measurable workflow improvements.",
+      "skill_type": "capability",
+      "domain": "ai_automation_enablement",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI",
+        "automation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "legal_tech_data_reporting",
+      "raw_text_from_jd": "Working knowledge of legal technology and AI-driven contract review tools (e.g., Evisort), with experience in data extraction, metadata management, and building reporting frameworks that serve as the system of record for agreements.",
+      "skill_type": "domain_knowledge",
+      "domain": "legal_technology_and_data_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [
+        "Evisort"
+      ],
+      "technologies_named": [
+        "AI-driven contract review",
+        "data extraction",
+        "metadata management"
+      ],
+      "industries_named": [
+        "legal technology"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "generative_ai_responsible_use",
+      "raw_text_from_jd": "Utilizes generative AI responsibly, maintaining human oversight to deliver business-ready outputs and drive measurable improvements in workflow efficiency, cost, and quality.",
+      "skill_type": "capability",
+      "domain": "generative_ai_usage",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "generative AI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Contract Lifecycle Management (CLM) ecosystem within Coinbase's Legal Operations team",
+    "business_model": "B2B and institutional (enterprise crypto/fintech platform)",
+    "primary_metrics_inferred": [
+      "Contracting speed improvements",
+      "Compliance improvements",
+      "AI/automation adoption and measurable workflow efficiency gains",
+      "Data integrity and reporting accuracy for agreements"
+    ],
+    "cross_functional_partners": [
+      "Legal",
+      "Institutional Sales",
+      "Enterprise Architecture",
+      "Engineering",
+      "Compliance"
+    ],
+    "core_responsibilities": [
+      "Own the CLM technology roadmap and backlog, setting strategic direction for Ironclad, Evisort, Salesforce, and emerging tools",
+      "Lead in-house builds and workflow development partnering with Enterprise Architecture and Engineering",
+      "Drive AI enablement for the Legal Operations team including proof of concepts (N8N, Workato, Claude, Glean) and adoption programs",
+      "Develop and manage the comprehensive contracts reporting framework and system of record",
+      "Communicate roadmap enhancements and strategic recommendations to senior stakeholders",
+      "Lead large, cross-functional contracts initiatives end-to-end"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": [
+      148835,
+      175100
+    ],
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": true,
+    "equity_form": "equity eligibility mentioned alongside bonus and benefits",
+    "location_pay_differential": true,
+    "source": "stated"
+  },
+  "top_keywords": [
+    "Contract Lifecycle Management",
+    "CLM",
+    "Ironclad",
+    "Evisort",
+    "Salesforce",
+    "Legal Operations",
+    "AI enablement",
+    "automation",
+    "technology roadmap",
+    "program management",
+    "data extraction",
+    "reporting framework",
+    "N8N",
+    "Workato",
+    "generative AI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Compensation range explicitly stated ($148,835–$175,100 base)",
+    "Equity and bonus eligibility mentioned",
+    "Remote-first company with clearly described in-person cadence (quarterly surges)",
+    "Clear scope of ownership — CLM ecosystem with named tools",
+    "Strategic role with engineering partnership, not just configuration",
+    "Role ID and #LI-Remote tag confirm remote eligibility"
+  ],
+  "red_flags": [
+    "No visa sponsorship information provided — unclear for international applicants",
+    "Ironclad is listed as a hard requirement ('required'), which is a narrow tool-specific bar",
+    "AI-based initial screening interview mentioned — may disadvantage some candidates",
+    "Quarterly surges (mandatory in-person travel) not fully detailed in scope or frequency"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and compensation range)",
+      "seniority.manages_people (inferred from JD; no direct management responsibilities stated)",
+      "scope.business_model (inferred from Coinbase's known business and 'Institutional Sales' partner)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly listed in JD)",
+      "location.work_auth (not stated in JD)",
+      "location.visa_sponsorship (not stated in JD)",
+      "compensation.location_pay_differential (inferred from 'Base salary varies by location' note)"
+    ],
+    "ambiguities": [
+      "JD includes '#LI-Remote' tag and 'remote-first' language, but also states 'remote-first, but not remote-only' and mandates quarterly in-person surges — treated as remote-us with periodic required travel rather than fully remote.",
+      "Work authorization and visa sponsorship are not addressed anywhere in the JD body."
+    ]
+  }
+}

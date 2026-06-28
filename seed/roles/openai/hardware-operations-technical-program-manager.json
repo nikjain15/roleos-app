@@ -1,0 +1,390 @@
+{
+  "company": "OpenAI",
+  "role_title": "Hardware Operations Technical Program Manager",
+  "url": "https://jobs.ashbyhq.com/openai/29328228-2737-482b-aded-9e9fa2b478a8",
+  "ats_provider": "ashby",
+  "ats_job_id": "29328228-2737-482b-aded-9e9fa2b478a8",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "unclear",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Hardware / Infrastructure TPM",
+  "seniority": {
+    "level": "Senior IC / Staff TPM",
+    "years_required_min": 7,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "7+ years of experience in technical program management or related roles",
+      "Expected to drive executive-level communication and governance",
+      "Owns end-to-end cross-functional program execution across hardware lifecycle"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_tpm_hardware_ops",
+      "raw_text_from_jd": "7+ years of experience in technical program management, hardware operations, manufacturing operations, infrastructure deployment, or related technical execution roles.",
+      "skill_type": "years_of_experience",
+      "domain": "technical_program_management",
+      "minimum_value": 7,
+      "unit": "years",
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_systems_at_scale",
+      "raw_text_from_jd": "Experience supporting hardware systems at scale, ideally including servers, racks, networking hardware, data center infrastructure, or high-performance compute environments.",
+      "skill_type": "domain_knowledge",
+      "domain": "hardware_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "servers",
+        "racks",
+        "networking hardware",
+        "high-performance compute"
+      ],
+      "industries_named": [
+        "data center"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_lifecycle_knowledge",
+      "raw_text_from_jd": "Strong understanding of hardware development and deployment lifecycle, including NPI, qualification, manufacturing ramp, logistics, installation, validation, and operational support.",
+      "skill_type": "domain_knowledge",
+      "domain": "hardware_development_lifecycle",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "NPI",
+        "qualification",
+        "manufacturing ramp",
+        "logistics",
+        "installation",
+        "validation"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_program_management",
+      "raw_text_from_jd": "Demonstrated ability to manage complex cross-functional schedules, dependencies, risks, and executive communications.",
+      "skill_type": "capability",
+      "domain": "program_management",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "technical_fluency_hardware",
+      "raw_text_from_jd": "Strong technical fluency across hardware systems, rack integration, manufacturing readiness, and infrastructure deployment.",
+      "skill_type": "capability",
+      "domain": "hardware_systems",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "rack integration",
+        "manufacturing readiness",
+        "infrastructure deployment"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguous_environment_execution",
+      "raw_text_from_jd": "Proven ability to operate in ambiguous environments and create scalable execution mechanisms.",
+      "skill_type": "capability",
+      "domain": "execution_in_ambiguity",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_skills",
+      "raw_text_from_jd": "Excellent written and verbal communication skills, with the ability to influence technical and non-technical stakeholders.",
+      "skill_type": "capability",
+      "domain": "communication",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "education_bachelors",
+      "raw_text_from_jd": "Bachelor's degree in engineering, computer science, operations, supply chain, or equivalent practical experience.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "n/a",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree",
+        "engineering degree",
+        "computer science degree",
+        "operations degree",
+        "supply chain degree"
+      ]
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "ai_hyperscale_infrastructure",
+      "raw_text_from_jd": "Experience with AI infrastructure, hyperscale data centers, cloud infrastructure, or high-density compute systems is a plus.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "AI infrastructure",
+        "hyperscale data centers",
+        "cloud infrastructure",
+        "high-density compute"
+      ],
+      "industries_named": [
+        "cloud",
+        "data center"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "gpu_accelerator_programs",
+      "raw_text_from_jd": "Experience with GPU, accelerator, server, rack, or cluster-scale infrastructure programs.",
+      "skill_type": "domain_knowledge",
+      "domain": "gpu_accelerator_infrastructure",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "GPU",
+        "accelerator",
+        "server",
+        "rack",
+        "cluster-scale infrastructure"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_ops_mfg_background",
+      "raw_text_from_jd": "Background in hardware operations, manufacturing program management, supply chain operations, data center deployment, or technical infrastructure TPM.",
+      "skill_type": "domain_knowledge",
+      "domain": "hardware_operations_manufacturing",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "data center",
+        "supply chain",
+        "manufacturing"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "rack_integration_familiarity",
+      "raw_text_from_jd": "Familiarity with rack integration, power/cooling constraints, cabling, networking, serviceability, and deployment readiness.",
+      "skill_type": "domain_knowledge",
+      "domain": "rack_integration",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "rack integration",
+        "power/cooling constraints",
+        "cabling",
+        "networking",
+        "serviceability"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "operating_rhythms_readiness_reviews",
+      "raw_text_from_jd": "Experience building operating rhythms, readiness reviews, risk registers, launch dashboards, or executive program reviews.",
+      "skill_type": "capability",
+      "domain": "program_governance",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "npi_to_production_scaling",
+      "raw_text_from_jd": "Experience scaling programs from prototype/NPI into repeatable production deployment.",
+      "skill_type": "outcome",
+      "domain": "npi_production_scaling",
+      "evidence_required": "shipped_products_with_metrics",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "NPI"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "AI infrastructure hardware programs spanning servers, racks, networking hardware, power/cooling, and data center infrastructure (Stargate team)",
+    "business_model": "internal infrastructure / hyperscale AI compute deployment",
+    "primary_metrics_inferred": [
+      "Hardware operational health and repair performance",
+      "Deployment quality and readiness status",
+      "Execution efficiency across hardware lifecycle milestones",
+      "Operational handoff readiness"
+    ],
+    "cross_functional_partners": [
+      "Hardware Engineering",
+      "Data Center Engineering",
+      "Networking",
+      "Supply Chain",
+      "Manufacturing",
+      "Deployment",
+      "Operations",
+      "Network Operations",
+      "Reliability Engineering",
+      "External Suppliers"
+    ],
+    "core_responsibilities": [
+      "Drive end-to-end Hardware Operations readiness programs across AI infrastructure systems",
+      "Develop and operationalize scalable hardware operations processes, workflows, and support models",
+      "Lead cross-functional execution of Hardware Operations readiness initiatives",
+      "Partner across engineering, manufacturing, supply chain, and operations teams for alignment on readiness milestones",
+      "Develop operational scorecards, reporting frameworks, and metric algorithms",
+      "Identify operational, technical, supplier, tooling, and process risks; drive mitigation plans",
+      "Lead cross-functional issue resolution during hardware deployment, validation, and sustaining operations",
+      "Create and mature operational governance models including readiness reviews and escalation management",
+      "Ensure operational knowledge sharing across internal teams, suppliers, and infrastructure partners"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "hardware operations",
+    "technical program management",
+    "AI infrastructure",
+    "Stargate",
+    "data center",
+    "NPI",
+    "rack integration",
+    "manufacturing readiness",
+    "deployment",
+    "supply chain",
+    "operational readiness",
+    "cross-functional execution",
+    "GPU infrastructure",
+    "sustaining operations"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear team context (Stargate) and well-defined product surface for hardware infrastructure",
+    "Role spans full hardware lifecycle from NPI through sustaining operations — broad scope",
+    "OpenAI is a high-profile employer with significant investment in infrastructure (Stargate program)",
+    "Explicit list of cross-functional partners gives strong sense of organizational context",
+    "JD encourages candidates who 'thrive' with a nuanced soft-skills section, suggesting culture fit matters"
+  ],
+  "red_flags": [
+    "No location specified anywhere in the JD — unclear if remote, hybrid, or onsite; no cities listed",
+    "No compensation or equity information provided",
+    "No visa sponsorship or work authorization information stated",
+    "Posting date unknown — cannot assess freshness",
+    "Very broad scope may indicate under-defined team structure or high-pressure execution environment"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from 7+ years requirement and executive communication expectations)",
+      "seniority.manages_people (inferred as false; no people management mentioned)",
+      "scope.business_model (inferred from team description as internal infrastructure)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "location.type (marked unclear; no location information in JD)",
+      "compensation (not stated anywhere in JD)"
+    ],
+    "ambiguities": [
+      "Location is entirely absent from the JD — no city, no remote/hybrid/onsite designation. Marked as 'unclear'.",
+      "The 'Experience supporting hardware systems at scale, ideally including...' phrasing uses 'ideally' which could suggest soft, but it appears in the required Qualifications section — treated as hard.",
+      "Work authorization and visa sponsorship not mentioned; marked unclear."
+    ]
+  }
+}

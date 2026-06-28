@@ -14,26 +14,37 @@ interface Env {
   APP_URL: string;
 }
 
-async function fireDigests(env: Env): Promise<{ status: number; body: string }> {
-  const res = await fetch(`${env.APP_URL}/api/cron/digests`, {
+async function hit(env: Env, path: string): Promise<{ path: string; status: number; body: string }> {
+  const res = await fetch(`${env.APP_URL}${path}`, {
     method: "POST",
     headers: { "x-cron-secret": env.CRON_SECRET },
   });
-  return { status: res.status, body: (await res.text()).slice(0, 500) };
+  return { path, status: res.status, body: (await res.text()).slice(0, 300) };
+}
+
+// Both ambient jobs: build due digests + hunt new roles (demand-driven ingest).
+async function fireAll(env: Env) {
+  return Promise.all([hit(env, "/api/cron/digests"), hit(env, "/api/cron/ingest")]);
 }
 
 export default {
   // Cloudflare cron trigger.
   async scheduled(_event: unknown, env: Env, ctx: { waitUntil(p: Promise<unknown>): void }) {
-    ctx.waitUntil(fireDigests(env));
+    ctx.waitUntil(fireAll(env));
   },
 
-  // Manual trigger for testing: GET /?secret=... — same secret, never public.
+  // Manual trigger for testing: GET /?secret=...[&only=ingest|digests]
   async fetch(req: Request, env: Env): Promise<Response> {
-    if (new URL(req.url).searchParams.get("secret") !== env.CRON_SECRET) {
+    const u = new URL(req.url);
+    if (u.searchParams.get("secret") !== env.CRON_SECRET) {
       return new Response("forbidden", { status: 403 });
     }
-    const r = await fireDigests(env);
+    const only = u.searchParams.get("only");
+    const r = only === "ingest"
+      ? [await hit(env, "/api/cron/ingest")]
+      : only === "digests"
+        ? [await hit(env, "/api/cron/digests")]
+        : await fireAll(env);
     return new Response(JSON.stringify(r), { headers: { "content-type": "application/json" } });
   },
 };

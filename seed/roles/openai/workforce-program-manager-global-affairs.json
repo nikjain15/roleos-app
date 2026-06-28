@@ -1,0 +1,289 @@
+{
+  "company": "OpenAI",
+  "role_title": "Workforce Program Manager, Global Affairs",
+  "url": "https://jobs.ashbyhq.com/openai/d4f62f53-839d-4850-b040-b823870fd915",
+  "ats_provider": "ashby",
+  "ats_job_id": "d4f62f53-839d-4850-b040-b823870fd915",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "unclear",
+    "cities_listed": [],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "BizOps / Strategy & Ops",
+  "seniority": {
+    "level": "Mid to Senior IC",
+    "years_required_min": null,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "Manages multi-stakeholder partnerships independently",
+      "Serves as primary point of contact for Global Affairs Certifications partnerships",
+      "Executes multi-stakeholder initiatives from concept through implementation",
+      "Represents OpenAI externally at conferences and partner meetings"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "partnership_program_management_experience",
+      "raw_text_from_jd": "Experience managing partnerships and programs within workforce development, education, nonprofit, or public-sector environments.",
+      "skill_type": "years_of_experience",
+      "domain": "partnership_and_program_management",
+      "minimum_value": null,
+      "unit": null,
+      "is_combined": false,
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "workforce development",
+        "education",
+        "nonprofit",
+        "public-sector"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "relationship_stakeholder_skills",
+      "raw_text_from_jd": "Strong relationship-management and stakeholder-engagement skills.",
+      "skill_type": "capability",
+      "domain": "stakeholder_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_stakeholder_initiative_execution",
+      "raw_text_from_jd": "Experience executing multi-stakeholder initiatives from concept through implementation.",
+      "skill_type": "outcome",
+      "domain": "program_execution",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "communication_project_management",
+      "raw_text_from_jd": "Excellent communication and project management abilities.",
+      "skill_type": "capability",
+      "domain": "communication_and_project_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "passion_access_opportunity",
+      "raw_text_from_jd": "Passion for expanding access to opportunity through technology and education.",
+      "skill_type": "cultural_fit",
+      "domain": "mission_alignment",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ai_literacy_workforce_interest",
+      "raw_text_from_jd": "Interest in AI literacy, workforce transformation, and the future of work.",
+      "skill_type": "domain_knowledge",
+      "domain": "ai_literacy_and_workforce",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "AI literacy"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "workforce_boards_community_colleges",
+      "raw_text_from_jd": "Experience working with workforce boards, community colleges, labor organizations, or economic development entities.",
+      "skill_type": "domain_knowledge",
+      "domain": "workforce_ecosystem_partners",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "workforce development",
+        "education"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [
+        "workforce boards",
+        "community colleges",
+        "labor organizations",
+        "economic development entities"
+      ],
+      "credentials_named": []
+    },
+    {
+      "id": "credentialing_certifications_adult_learning",
+      "raw_text_from_jd": "Familiarity with credentialing, certifications, or adult learning programs.",
+      "skill_type": "domain_knowledge",
+      "domain": "credentialing_and_certifications",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "education"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "public_private_partnerships",
+      "raw_text_from_jd": "Experience navigating public-private partnerships.",
+      "skill_type": "domain_knowledge",
+      "domain": "public_private_partnerships",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_paced_ambiguity",
+      "raw_text_from_jd": "Comfort operating in fast-paced, ambiguous environments.",
+      "skill_type": "cultural_fit",
+      "domain": "adaptability",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Global Affairs workforce initiatives and Certifications programs",
+    "business_model": "mission-driven, public-benefit / policy engagement",
+    "primary_metrics_inferred": [
+      "Partnership goals and success metrics established with partners",
+      "Number and scale of workforce organizations onboarded",
+      "Program outcomes for AI literacy and upskilling participants"
+    ],
+    "cross_functional_partners": [
+      "Academy",
+      "Certifications",
+      "GTM",
+      "Product",
+      "Research",
+      "Legal",
+      "Communications",
+      "Partnerships"
+    ],
+    "core_responsibilities": [
+      "Identify, cultivate, and manage relationships with workforce organizations and strategic partners",
+      "Serve as the primary point of contact for Global Affairs Certifications partnerships",
+      "Support partnership design, implementation, renewals, and expansion opportunities",
+      "Coordinate with partners to establish goals, success metrics, and reporting structures",
+      "Support the launch and execution of workforce initiatives focused on AI literacy, upskilling, and economic opportunity",
+      "Develop playbooks and implementation guidance for workforce partners",
+      "Monitor outcomes and synthesize learnings to inform future programming",
+      "Represent OpenAI at conferences, workshops, and partner meetings",
+      "Facilitate trainings, roundtables, and stakeholder discussions",
+      "Contribute to briefing materials, presentations, and thought leadership content"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "workforce development",
+    "program management",
+    "partnerships",
+    "AI literacy",
+    "certifications",
+    "global affairs",
+    "upskilling",
+    "community colleges",
+    "public-private partnerships",
+    "economic opportunity",
+    "stakeholder engagement",
+    "future of work"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear mission alignment with AI access and economic opportunity",
+    "Cross-functional exposure across research, product, legal, communications, and GTM",
+    "Externally facing role with conference and thought leadership opportunities",
+    "OpenAI is a marquee brand in AI with significant policy influence"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "No location or remote work policy stated — work arrangement is entirely unclear",
+    "Role requirements section is structured ambiguously ('You'll be responsible for:' lists both hard requirements and nice-to-haves without clear delineation)",
+    "No visa sponsorship information provided",
+    "Seniority level and years of experience not specified"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from scope and responsibilities; no title level or years stated)",
+      "scope.business_model (inferred from team description)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not stated in JD)",
+      "location.type set to 'unclear' — no city, office, or remote policy mentioned in JD body",
+      "compensation.source set to 'unknown' — no comp data in JD"
+    ],
+    "ambiguities": [
+      "The 'You'll be responsible for:' section lists both clearly required items (e.g., managing partnerships) and items that read as preferred/nice-to-have (e.g., familiarity with credentialing, comfort with ambiguity). The JD does not use 'Required' or 'Preferred' labels. Items without explicit seniority qualifiers or 'familiarity/interest' language were treated as hard; softer-signaling items (familiarity, comfort, experience with specific org types) were classified as nice-to-haves.",
+      "No location is specified in the JD — unclear if role is remote, hybrid, or onsite and in which city or country. Location.type set to 'unclear'."
+    ]
+  }
+}

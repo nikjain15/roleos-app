@@ -1,0 +1,222 @@
+{
+  "company": "OpenAI",
+  "role_title": "Product Manager, Safety Measurement",
+  "url": "https://jobs.ashbyhq.com/openai/fbc7ebaf-3a26-406d-9ff6-f166f3e246a2",
+  "ats_provider": "ashby",
+  "ats_job_id": "fbc7ebaf-3a26-406d-9ff6-f166f3e246a2",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": null,
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "AI Product Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Technical PM",
+  "seniority": {
+    "level": "Senior IC",
+    "years_required_min": 6,
+    "years_required_max": null,
+    "manages_people": false,
+    "level_signals": [
+      "6+ years of product management or related industry roles",
+      "Represents topline safety metric to senior leadership",
+      "Owns strategy for suite of safety measurement platforms company-wide"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "years_pm_experience",
+      "raw_text_from_jd": "Have 6+ years of product management or related industry roles, with specific expertise in AI safety, trust & safety, integrity, or related domains.",
+      "skill_type": "years_of_experience",
+      "domain": "product_management",
+      "minimum_value": 6,
+      "unit": "years",
+      "qualifier": "with specific expertise in AI safety, trust & safety, integrity, or related domains",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "AI safety",
+        "trust & safety",
+        "integrity"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "data_science_background",
+      "raw_text_from_jd": "Have a background in data science, statistics, economics, or related fields.",
+      "skill_type": "domain_knowledge",
+      "domain": "data_science_statistics_economics",
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "interdisciplinary_curiosity",
+      "raw_text_from_jd": "Are deeply curious and interested in interdisciplinary fields such as human-computer interaction, psychology, philosophy, or similar areas.",
+      "skill_type": "cultural_fit",
+      "domain": "interdisciplinary_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "ambiguity_consensus",
+      "raw_text_from_jd": "Have hands-on experience driving consensus and action in ambiguous spaces.",
+      "skill_type": "capability",
+      "domain": "stakeholder_alignment",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "assumption_challenging",
+      "raw_text_from_jd": "Excel at identifying and challenging underlying assumptions and constraints through insightful questioning.",
+      "skill_type": "capability",
+      "domain": "critical_thinking",
+      "evidence_required": "project_examples",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "cross_functional_communication",
+      "raw_text_from_jd": "Are highly effective at cross-functional collaboration and communicating complex technical concepts clearly and persuasively.",
+      "skill_type": "capability",
+      "domain": "cross_functional_collaboration",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "fast_paced_environment",
+      "raw_text_from_jd": "Enjoy working in a fast-paced, high-growth environment.",
+      "skill_type": "cultural_fit",
+      "domain": "team_culture",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Safety measurement platforms and products used across OpenAI; topline safety metrics for frontier models",
+    "business_model": "AI research and deployment company",
+    "primary_metrics_inferred": [
+      "Harm prevalence on production platforms",
+      "Safeguard efficacy measurements",
+      "Topline safety metric reported to senior leadership"
+    ],
+    "cross_functional_partners": [
+      "Data Science",
+      "Research",
+      "Engineering",
+      "Policy"
+    ],
+    "core_responsibilities": [
+      "Partner closely with data science, research, engineering, policy teams, and other stakeholders to craft a vision for understanding safety outcomes and prevalence on our platforms.",
+      "Define strategic priorities and product roadmaps focused on improving safety measurement approaches will scaling our measurement platform to more use cases, products, and cross-functional team needs.",
+      "Establish repeatable processes to integrate cutting-edge AI safety research into OpenAI's safety measurement products.",
+      "Develop and continuously refine clear, actionable success criteria that effectively capture our ambitions with safety measurement.",
+      "Represent quantitative progress on safety to senior leadership."
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "safety measurement",
+    "AI safety",
+    "harm measurement",
+    "safeguard efficacy",
+    "trust & safety",
+    "frontier models",
+    "data science",
+    "safety research",
+    "product roadmap",
+    "cross-functional collaboration",
+    "red-teaming",
+    "AGI"
+  ],
+  "buzzword_density": "medium",
+  "green_flags": [
+    "Clear ownership of a company-wide strategic function (topline safety metric)",
+    "Direct interface with senior leadership — high visibility role",
+    "Relocation assistance explicitly offered",
+    "Equal opportunity employer with explicit accommodation policy",
+    "Mission-driven work with tangible societal impact"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Visa sponsorship policy not stated",
+    "All requirements are framed under 'You might thrive in this role if you' — ambiguous whether these are hard requirements or preferred qualifications",
+    "Role is onsite San Francisco only; no remote option mentioned"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required + scope of ownership)",
+      "scope.primary_metrics_inferred (inferred from responsibilities; not explicitly stated)",
+      "scope.business_model (inferred from company description)",
+      "location.type (inferred as onsite from 'This position is based in San Francisco, CA' with no hybrid/remote language)",
+      "location.visa_sponsorship (not stated; marked unclear)"
+    ],
+    "ambiguities": [
+      "All requirements are listed under 'You might thrive in this role if you' which traditionally implies preferences, not hard requirements. However, the 6+ years PM experience with specific domain expertise, data science background, and cross-functional capabilities read as de facto hard requirements given the seniority and specificity. Classified as hard accordingly.",
+      "No explicit hybrid or remote policy stated beyond 'based in San Francisco, CA with relocation assistance available' — treated as onsite but a hybrid arrangement cannot be ruled out."
+    ]
+  }
+}

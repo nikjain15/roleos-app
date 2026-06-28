@@ -1,0 +1,359 @@
+{
+  "company": "OpenAI",
+  "role_title": "Operations Program Manager - Robotics Data Acquisition",
+  "url": "https://jobs.ashbyhq.com/openai/7e0c1731-a24a-4a75-9cda-2a0502f8e152",
+  "ats_provider": "ashby",
+  "ats_job_id": "7e0c1731-a24a-4a75-9cda-2a0502f8e152",
+  "fetched_at": "2026-06-28",
+  "posting_first_seen": null,
+  "posting_last_updated": null,
+  "location": {
+    "type": "onsite",
+    "cities_listed": [
+      "San Francisco, CA"
+    ],
+    "remote_us_eligible": false,
+    "office_time_required": "5 days a week in-person",
+    "work_auth": "open",
+    "visa_sponsorship": "unclear"
+  },
+  "archetype": "Technical Program Manager",
+  "archetype_confidence": "high",
+  "secondary_archetype": "Operations/Manufacturing Program Manager",
+  "seniority": {
+    "level": "Mid-Senior IC",
+    "years_required_min": 3,
+    "years_required_max": 5,
+    "manages_people": false,
+    "level_signals": [
+      "3-5 years of hands-on experience in manufacturing, industrial / process engineering, operations, robotics, or production environments",
+      "Coordinate across floor operators and technicians with limited supervision",
+      "Hands-on floor presence role, not a people manager"
+    ]
+  },
+  "must_haves": [
+    {
+      "id": "daily_ops_coordination",
+      "raw_text_from_jd": "Coordinate daily operations readiness across workstations, operators, materials.",
+      "skill_type": "capability",
+      "domain": "operations_management",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "kpi_tracking",
+      "raw_text_from_jd": "Track core operating metrics including utilization, cycle time, throughput, downtime, operator productivity, and data quality.",
+      "skill_type": "capability",
+      "domain": "operational_metrics",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "bottleneck_identification",
+      "raw_text_from_jd": "Identify bottlenecks through workflow analysis, time studies, and capacity modeling, then drive practical fixes.",
+      "skill_type": "capability",
+      "domain": "process_improvement",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "hardware_rollout_execution",
+      "raw_text_from_jd": "Execute the rollout of new hardware, sensors, tools, and process changes with Engineering, Operations, Facilities, Supply Chain, and Safety.",
+      "skill_type": "capability",
+      "domain": "hardware_deployment",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "equipment_readiness",
+      "raw_text_from_jd": "Identify equipment readiness issues and coordinate with technical support to keep workstations, and test equipment calibrated, configured, maintained, and ready for rollouts and evaluations.",
+      "skill_type": "capability",
+      "domain": "equipment_maintenance",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "root_cause_analysis",
+      "raw_text_from_jd": "Lead root cause analysis for recurring operational issues and follow through on corrective actions.",
+      "skill_type": "capability",
+      "domain": "quality_operations",
+      "evidence_required": "project_examples",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "sop_documentation",
+      "raw_text_from_jd": "Provide operation input to create and maintain SOPs, work instructions, training materials, and process controls.",
+      "skill_type": "capability",
+      "domain": "documentation_and_process_control",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "resource_escalation_management",
+      "raw_text_from_jd": "Identify and flag resource constraints and manage issue escalation and resolution.",
+      "skill_type": "capability",
+      "domain": "operations_management",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "years_experience_ops",
+      "raw_text_from_jd": "Bring 3-5 years of hands-on experience in manufacturing, industrial / process engineering, operations, robotics, or production environments.",
+      "skill_type": "years_of_experience",
+      "domain": "manufacturing_operations_engineering",
+      "minimum_value": 3,
+      "unit": "years",
+      "evidence_required": "work_history",
+      "bridgeable": "no",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "manufacturing",
+        "robotics"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "lean_six_sigma_methods",
+      "raw_text_from_jd": "Have experience using Lean, Six Sigma, time studies, or similar methods to improve processes.",
+      "skill_type": "capability",
+      "domain": "process_improvement_methodologies",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [
+        "Lean",
+        "Six Sigma"
+      ],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "kpi_domain_knowledge",
+      "raw_text_from_jd": "Understand operating KPIs such as cycle time, takt time, throughput, utilization, yield, OEE, and uptime.",
+      "skill_type": "domain_knowledge",
+      "domain": "manufacturing_kpis",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [
+        "manufacturing"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    },
+    {
+      "id": "multi_workstream_coordination",
+      "raw_text_from_jd": "Can manage multiple work-streams, coordinate across floor operators and technicians to drive execution with limited supervision.",
+      "skill_type": "capability",
+      "domain": "cross_functional_coordination",
+      "evidence_required": "work_history",
+      "bridgeable": "maybe",
+      "severity": "hard",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "nice_to_haves": [
+    {
+      "id": "bachelors_degree",
+      "raw_text_from_jd": "Have a bachelor's degree in Industrial, Mechanical, Manufacturing, or a related technical field.",
+      "skill_type": "credential",
+      "domain": "education",
+      "minimum_value": "bachelors",
+      "accepts_equivalent_experience": true,
+      "evidence_required": "degree_or_work_history",
+      "bridgeable": "maybe",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [],
+      "industries_named": [],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": [
+        "Bachelor's degree in Industrial Engineering",
+        "Bachelor's degree in Mechanical Engineering",
+        "Bachelor's degree in Manufacturing Engineering"
+      ]
+    },
+    {
+      "id": "robotics_data_acquisition_exposure",
+      "raw_text_from_jd": "Have exposure to robotics data acquisition, autonomous vehicle systems, camera / audio systems, automation, or robotics systems.",
+      "skill_type": "domain_knowledge",
+      "domain": "robotics_and_data_acquisition",
+      "evidence_required": "work_history",
+      "bridgeable": "yes",
+      "severity": "soft",
+      "tools_named": [],
+      "technologies_named": [
+        "robotics data acquisition",
+        "autonomous vehicle systems",
+        "camera / audio systems",
+        "automation"
+      ],
+      "industries_named": [
+        "robotics",
+        "autonomous vehicles"
+      ],
+      "geographies_named": [],
+      "employer_types_named": [],
+      "credentials_named": []
+    }
+  ],
+  "explicitly_excluded": [],
+  "scope": {
+    "team_size_estimate": "unclear",
+    "surface": "Day-to-day operations of robotics data acquisition / data collection facilities",
+    "business_model": "internal AI research operations (robotics data collection infrastructure)",
+    "primary_metrics_inferred": [
+      "Utilization",
+      "Cycle time",
+      "Throughput",
+      "Downtime",
+      "Operator productivity",
+      "Data quality",
+      "OEE",
+      "Uptime"
+    ],
+    "cross_functional_partners": [
+      "Engineering",
+      "Operations",
+      "Facilities",
+      "Supply Chain",
+      "Safety",
+      "Operators",
+      "Technicians"
+    ],
+    "core_responsibilities": [
+      "Coordinate daily operations readiness across workstations, operators, materials",
+      "Track core operating metrics including utilization, cycle time, throughput, downtime, operator productivity, and data quality",
+      "Identify bottlenecks through workflow analysis, time studies, and capacity modeling, then drive practical fixes",
+      "Execute the rollout of new hardware, sensors, tools, and process changes",
+      "Identify equipment readiness issues and coordinate with technical support",
+      "Lead root cause analysis for recurring operational issues and follow through on corrective actions",
+      "Provide operation input to create and maintain SOPs, work instructions, training materials, and process controls",
+      "Identify and flag resource constraints and manage issue escalation and resolution"
+    ]
+  },
+  "compensation": {
+    "base_range_usd": null,
+    "total_comp_estimate_usd": null,
+    "equity_mentioned": false,
+    "equity_form": null,
+    "location_pay_differential": false,
+    "source": "unknown"
+  },
+  "top_keywords": [
+    "robotics data acquisition",
+    "operations program manager",
+    "manufacturing operations",
+    "Lean",
+    "Six Sigma",
+    "OEE",
+    "cycle time",
+    "throughput",
+    "bottleneck analysis",
+    "SOP",
+    "root cause analysis",
+    "hardware rollout",
+    "data collection",
+    "production operations",
+    "takt time"
+  ],
+  "buzzword_density": "low",
+  "green_flags": [
+    "Clear, specific responsibilities tied to measurable outcomes (throughput, utilization, OEE)",
+    "Role is part of OpenAI's Robotics team working on general-purpose robotics — high-impact mission",
+    "Hands-on floor operations role with defined scope and ownership",
+    "Requirements are concrete and experience-based, not vague"
+  ],
+  "red_flags": [
+    "No compensation range disclosed",
+    "Requires in-person presence 5 days a week in San Francisco — no remote flexibility",
+    "Visa sponsorship status not stated — unclear for international candidates",
+    "All requirements phrased under 'You might thrive if you' which is ambiguous about hard vs. soft — treated mostly as hard based on specificity and unconditional language",
+    "No explicit mention of equity or total comp despite OpenAI's typical equity-heavy packages"
+  ],
+  "extraction_notes": {
+    "fields_inferred_not_stated": [
+      "seniority.level (inferred from years required and scope of responsibilities)",
+      "scope.business_model (inferred from team description and role context)",
+      "scope.primary_metrics_inferred (inferred from responsibilities, also partially stated in JD)",
+      "location.work_auth (inferred as open; not explicitly stated)",
+      "compensation.equity_mentioned (inferred as false; not mentioned in JD)"
+    ],
+    "ambiguities": [
+      "All qualifications are listed under 'You might thrive in this role if you:' phrasing, which is softer language, but most items are specific, experience-based, and core to the role function. Treated as hard severity except bachelor's degree (explicitly listed as a specific degree, treated as soft given typical JD conventions) and robotics exposure (clearly supplementary).",
+      "Visa sponsorship is not mentioned anywhere in the JD; marked as 'unclear'."
+    ]
+  }
+}
