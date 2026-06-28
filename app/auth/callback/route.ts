@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
+import { supabaseService } from "@/lib/supabase/service";
 
 /**
  * OAuth + magic-link callback. Supabase redirects here with a `code`; we
@@ -14,8 +15,23 @@ export async function GET(req: Request): Promise<Response> {
 
   if (code) {
     const supabase = await supabaseServer();
-    const { error } = await supabase.auth.exchangeCodeForSession(code);
+    const { data, error } = await supabase.auth.exchangeCodeForSession(code);
     if (!error) {
+      // Gate 2: if Google returned a refresh token (offline access + Gmail/Calendar
+      // scopes), store it (service-role-only) so RO can read mail/calendar later.
+      const refresh = data.session?.provider_refresh_token;
+      if (refresh && data.user) {
+        try {
+          await supabaseService()
+            .from("google_tokens")
+            .upsert(
+              { user_id: data.user.id, refresh_token: refresh, updated_at: new Date().toISOString() },
+              { onConflict: "user_id" },
+            );
+        } catch {
+          /* non-fatal — sign-in still succeeds; Gate 2 just won't have a token */
+        }
+      }
       return NextResponse.redirect(new URL(next, url.origin));
     }
   }

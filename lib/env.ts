@@ -28,6 +28,9 @@ export interface RoleOSEnv {
   NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
   // Shared secret the cron worker presents to /api/cron/* (digest scheduler).
   CRON_SECRET?: string;
+  // Google OAuth client (Gate 2) — used server-side to refresh Gmail/Calendar tokens.
+  GOOGLE_OAUTH_CLIENT_ID?: string;
+  GOOGLE_OAUTH_CLIENT_SECRET?: string;
   // Optional URL→profile scraper (lib/profile-fetcher) — none set = feature off.
   APIFY_TOKEN?: string;
   APIFY_LINKEDIN_ACTOR?: string; // actor slug, e.g. "owner~linkedin-profile-scraper"
