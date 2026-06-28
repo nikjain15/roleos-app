@@ -82,67 +82,99 @@ function profileObjectToText(o: Record<string, unknown>): string {
   return normalizeProfileText(text);
 }
 
+/**
+ * Map the apimaestro/linkedin-profile-detail actor's nested shape (verified live):
+ * { basic_info{ fullname, headline, location{full}, current_company, about,
+ * top_skills }, experience[]{title,company,duration,description},
+ * education[]{school,degree,duration} }. Returns null if it isn't that shape so
+ * the caller can fall back to the generic flattener.
+ */
+function apimaestroProfileToText(item: Record<string, unknown>): string | null {
+  const b = item.basic_info as Record<string, unknown> | undefined;
+  if (!b || typeof b !== "object") return null;
+  const parts: string[] = [];
+  const s = (v: unknown) => (typeof v === "string" ? v.trim() : "");
+  if (s(b.fullname)) parts.push(`Name: ${s(b.fullname)}`);
+  if (s(b.headline)) parts.push(`Headline: ${s(b.headline)}`);
+  const loc = b.location as { full?: string } | string | undefined;
+  const locStr = typeof loc === "string" ? loc : loc?.full;
+  if (locStr) parts.push(`Location: ${locStr}`);
+  if (s(b.current_company)) parts.push(`Current company: ${s(b.current_company)}`);
+  if (s(b.about)) parts.push(`About: ${s(b.about)}`);
+  const skills = b.top_skills;
+  if (Array.isArray(skills) && skills.length) parts.push(`Top skills: ${skills.join(", ")}`);
+  else if (s(skills)) parts.push(`Top skills: ${s(skills)}`);
+
+  const exp = item.experience as Array<Record<string, unknown>> | undefined;
+  if (Array.isArray(exp) && exp.length) {
+    parts.push("Experience:");
+    for (const e of exp.slice(0, 12)) {
+      parts.push(
+        `- ${s(e.title)}${s(e.company) ? ` @ ${s(e.company)}` : ""}${s(e.duration) ? ` (${s(e.duration)})` : ""}`,
+      );
+      if (s(e.description)) parts.push(`  ${s(e.description)}`);
+    }
+  }
+  const edu = item.education as Array<Record<string, unknown>> | undefined;
+  if (Array.isArray(edu) && edu.length) {
+    parts.push("Education:");
+    for (const e of edu.slice(0, 6)) parts.push(`- ${s(e.school)} — ${s(e.degree)}`.trim());
+  }
+  return parts.length > 1 ? parts.join("\n") : null;
+}
+
 // ── Apify: run an actor synchronously and read its dataset items ─────────────
 // POST .../acts/<actor>/run-sync-get-dataset-items?token=… → array of items.
+// Default actor: apimaestro/linkedin-profile-detail (verified live).
 function apifyFetcher(token: string, actor: string): ProfileFetcher {
   return {
     name: "apify",
     async fetchProfileText(url: string): Promise<string> {
+      const actorPath = actor.replace("/", "~"); // Apify API form: username~actor
       const endpoint = `https://api.apify.com/v2/acts/${encodeURIComponent(
-        actor,
+        actorPath,
       )}/run-sync-get-dataset-items?token=${encodeURIComponent(token)}`;
       const res = await fetch(endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // Common actor input keys; harmless extras are ignored by the actor.
-        body: JSON.stringify({ profileUrls: [url], urls: [url], startUrls: [{ url }] }),
+        // apimaestro takes `username` (a profile URL or handle); extras are ignored.
+        body: JSON.stringify({ username: url, profileUrl: url, url }),
       });
       if (!res.ok) throw new Error(`apify ${res.status}`);
       const items = (await res.json()) as unknown;
       const first = Array.isArray(items) ? items[0] : items;
       if (!first || typeof first !== "object") throw new Error("apify: empty result");
-      return profileObjectToText(first as Record<string, unknown>);
+      const obj = first as Record<string, unknown>;
+      const text = apimaestroProfileToText(obj) ?? profileObjectToText(obj);
+      return normalizeProfileText(text);
     },
   };
 }
 
-// ── Bright Data: trigger a dataset snapshot, poll until ready ────────────────
+// ── Bright Data: synchronous /scrape (real-time) — results in the response ───
+// POST .../datasets/v3/scrape?dataset_id=… body {"input":[{"url":…}]}.
+// (NOTE: requires an ACTIVE Bright Data account; an inactive one returns
+//  "Customer is not active". Response shape mapped via the generic flattener —
+//  verify the field mapping the first time it runs on a live account.)
 function brightDataFetcher(token: string, datasetId: string): ProfileFetcher {
   return {
     name: "brightdata",
     async fetchProfileText(url: string): Promise<string> {
-      const trigger = await fetch(
-        `https://api.brightdata.com/datasets/v3/trigger?dataset_id=${encodeURIComponent(
+      const res = await fetch(
+        `https://api.brightdata.com/datasets/v3/scrape?dataset_id=${encodeURIComponent(
           datasetId,
-        )}&include_errors=true`,
+        )}&notify=false&include_errors=true`,
         {
           method: "POST",
           headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-          body: JSON.stringify([{ url }]),
+          body: JSON.stringify({ input: [{ url }] }),
         },
       );
-      if (!trigger.ok) throw new Error(`brightdata trigger ${trigger.status}`);
-      const { snapshot_id } = (await trigger.json()) as { snapshot_id?: string };
-      if (!snapshot_id) throw new Error("brightdata: no snapshot_id");
-
-      // Bounded poll (the onboard request has a 60s ceiling).
-      const deadline = Date.now() + 45_000;
-      while (Date.now() < deadline) {
-        const snap = await fetch(
-          `https://api.brightdata.com/datasets/v3/snapshot/${snapshot_id}?format=json`,
-          { headers: { Authorization: `Bearer ${token}` } },
-        );
-        if (snap.status === 202) {
-          await new Promise((r) => setTimeout(r, 3000));
-          continue;
-        }
-        if (!snap.ok) throw new Error(`brightdata snapshot ${snap.status}`);
-        const data = (await snap.json()) as unknown;
-        const first = Array.isArray(data) ? data[0] : data;
-        if (!first || typeof first !== "object") throw new Error("brightdata: empty result");
-        return profileObjectToText(first as Record<string, unknown>);
-      }
-      throw new Error("brightdata: timed out");
+      if (!res.ok) throw new Error(`brightdata ${res.status}`);
+      const data = (await res.json()) as unknown;
+      const first = Array.isArray(data) ? data[0] : data;
+      if (!first || typeof first !== "object") throw new Error("brightdata: empty result");
+      return normalizeProfileText(profileObjectToText(first as Record<string, unknown>));
     },
   };
 }

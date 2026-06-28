@@ -15,27 +15,32 @@ The two adapters are written to each provider's documented API shape but are
 first time you add a key (the `profileObjectToText` flattener is deliberately
 tolerant of schema differences).
 
-## Activate Apify (recommended — pay-per-use, simplest)
-1. Create an Apify account → **Settings → Integrations → API token**.
-2. Pick a LinkedIn profile actor from the Apify Store (e.g. a "LinkedIn Profile
-   Scraper") and note its slug, formatted `owner~actor-name`.
-3. Set both secrets:
+## Activate Apify (recommended — pay-per-use, simplest) — VERIFIED LIVE
+Default actor: **`apimaestro/linkedin-profile-detail`** (35M+ runs, ~100% success;
+verified end-to-end on 2026-06-27 — nested `basic_info`/`experience`/`education`
+shape mapped in `lib/profile-fetcher.ts`).
+1. Apify account → **Settings → API & Integrations** → copy the token (`apify_api_…`).
+2. Set both secrets:
    ```bash
-   printf %s "<apify-token>"            | npx wrangler secret put APIFY_TOKEN
-   printf %s "owner~linkedin-actor"     | npx wrangler secret put APIFY_LINKEDIN_ACTOR
+   printf %s "<apify-token>"                       | npx wrangler secret put APIFY_TOKEN
+   printf %s "apimaestro/linkedin-profile-detail"  | npx wrangler secret put APIFY_LINKEDIN_ACTOR
    ```
-4. Redeploy (`npm run deploy`). Done — a pasted LinkedIn URL now auto-fetches.
+3. Redeploy (`npm run deploy`). Done — a pasted LinkedIn URL now auto-fetches.
 
-## Activate Bright Data (enterprise, 5k free records/mo)
-1. Bright Data → create a **LinkedIn Profile** dataset (Web Scraper API) → note
-   the **dataset id** and an **API token**.
+## Activate Bright Data (enterprise, 5k free records/mo) — needs an ACTIVE account
+The adapter uses the **synchronous** `/datasets/v3/scrape` endpoint (real-time;
+the "LinkedIn people profiles - collect by URL" scraper, dataset id like
+`gd_…`). ⚠️ An un-activated account returns **"Customer is not active"** — finish
+billing/KYC in the Bright Data console first.
+1. Bright Data → the LinkedIn people-profiles scraper → note its **dataset id**
+   and an **API token** (Account settings → API tokens).
 2. Set both secrets:
    ```bash
    printf %s "<brightdata-token>"  | npx wrangler secret put BRIGHTDATA_TOKEN
-   printf %s "<dataset-id>"        | npx wrangler secret put BRIGHTDATA_DATASET_ID
+   printf %s "gd_xxxxxxxx"         | npx wrangler secret put BRIGHTDATA_DATASET_ID
    ```
-3. Redeploy. (Bright Data is async — the adapter triggers a snapshot and polls up
-   to ~45s, within the onboard request's 60s ceiling.)
+3. Redeploy. (Response field-mapping uses the generic flattener — verify it the
+   first time it runs on a live, active account.)
 
 If both are configured, Apify wins (simpler sync API). With neither set, a pasted
 LinkedIn URL falls back to the honest "paste your text / upload your PDF" message.
