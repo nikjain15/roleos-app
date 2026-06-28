@@ -4,6 +4,7 @@ import mirrorSkill from "@/agent/skills/mirror";
 import { parseModelJson } from "@/lib/json";
 import { assessProfileInput, thinInputMessage } from "@/lib/profile-input";
 import { normalizeProfileText } from "@/lib/normalize-profile";
+import { extractLinkedInUrl, getProfileFetcher } from "@/lib/profile-fetcher";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -39,13 +40,35 @@ export async function POST(req: Request): Promise<Response> {
         send({ type: "status", text: "Reading what you sent…" });
 
         // Honesty guard (ro-voice "thin input"): a bare URL / too-little text has
-        // no real signal to match on. Don't fabricate a shortlist off noise —
-        // ask for real content instead. (LinkedIn etc. can't be fetched here.)
-        const assess = assessProfileInput(profile);
+        // no real signal to match on. Don't fabricate a shortlist off noise.
+        let profileText = profile;
+        const assess = assessProfileInput(profileText);
         if (!assess.ok) {
-          send({ type: "needs_more", text: thinInputMessage(assess) });
-          send({ type: "done" });
-          return;
+          // If it's a LinkedIn URL AND a scraper is configured, try to fetch the
+          // real profile; otherwise stay honest and ask for real content.
+          const url = extractLinkedInUrl(profileText);
+          const fetcher = url ? getProfileFetcher() : null;
+          if (url && fetcher) {
+            try {
+              send({ type: "status", text: "Pulling your profile from that link…" });
+              const fetched = await fetcher.fetchProfileText(url);
+              if (assessProfileInput(fetched).ok) {
+                profileText = fetched;
+              } else {
+                send({ type: "needs_more", text: thinInputMessage(assess) });
+                send({ type: "done" });
+                return;
+              }
+            } catch {
+              send({ type: "needs_more", text: thinInputMessage(assess) });
+              send({ type: "done" });
+              return;
+            }
+          } else {
+            send({ type: "needs_more", text: thinInputMessage(assess) });
+            send({ type: "done" });
+            return;
+          }
         }
 
         // Mirror + full matching in parallel (both through the quality gate).
@@ -53,8 +76,8 @@ export async function POST(req: Request): Promise<Response> {
         send({ type: "status", text: "Comparing you against all 557 roles…" });
         send({ type: "status", text: "Reading you back, and reasoning about the closest fits…" });
         const [mirrorRes, matchRes] = await Promise.all([
-          runSkill(mirrorSkill, { userId: "anon", data: { profile } }),
-          matchProfile(profile, 6),
+          runSkill(mirrorSkill, { userId: "anon", data: { profile: profileText } }),
+          matchProfile(profileText, 6),
         ]);
 
         const mirror = parseModelJson<{ statements: string[]; insight: string }>(
