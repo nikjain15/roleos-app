@@ -19,10 +19,11 @@ export const maxDuration = 60;
  * No send capability (human-gated-outward holds).
  */
 export async function POST(req: Request): Promise<Response> {
-  const raw = (await req.json()) as { profile?: string };
-  // Strip extraction/boilerplate noise on EVERY input (paste + upload) before it
-  // hits any model — fewer tokens, cleaner signal, same content.
-  const profile = raw.profile ? normalizeProfileText(raw.profile) : raw.profile;
+  const body = (await req.json()) as { profile?: string };
+  // Keep the RAW input through the gate + assess + URL-detection (normalizing
+  // here would strip a URL-only input to empty). Noise-stripping happens later,
+  // on the actual content we match on (real paste or a fetched profile).
+  const profile = body.profile;
   if (!profile || profile.trim().length < 30) {
     return Response.json(
       { error: "Give RO a bit more to go on — paste your CV, LinkedIn, or a few lines about your work." },
@@ -70,6 +71,10 @@ export async function POST(req: Request): Promise<Response> {
             return;
           }
         }
+
+        // Strip extraction/boilerplate noise now — on the real content we match
+        // on (the paste or the fetched profile) — for fewer tokens, same signal.
+        profileText = normalizeProfileText(profileText);
 
         // Mirror + full matching in parallel (both through the quality gate).
         // matchProfile = rank all 557 by similarity → reason over the closest.
