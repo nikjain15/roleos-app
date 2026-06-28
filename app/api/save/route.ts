@@ -12,6 +12,8 @@ import { supabaseServer } from "@/lib/supabase/server";
 interface SaveBody {
   profile: string;
   mirror?: { statements: string[]; insight: string };
+  /** The LinkedIn URL this came from, if any — stored so RO can re-fetch later. */
+  linkedin_url?: string;
   matches?: Array<{
     id: string;
     fit: number;
@@ -33,7 +35,11 @@ export async function POST(req: Request): Promise<Response> {
 
   // master_profile (projection) — the living source of truth starts here.
   const { error: mpErr } = await supabase.from("master_profile").upsert(
-    { user_id: user.id, data: { raw: body.profile, mirror: body.mirror ?? null }, updated_at: new Date().toISOString() },
+    {
+      user_id: user.id,
+      data: { raw: body.profile, mirror: body.mirror ?? null, linkedin_url: body.linkedin_url ?? null },
+      updated_at: new Date().toISOString(),
+    },
     { onConflict: "user_id" },
   );
   if (mpErr) return NextResponse.json({ error: mpErr.message }, { status: 500 });
