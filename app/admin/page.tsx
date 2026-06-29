@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
 import { getAdminStats, getDemandStats, RUNS_WINDOW, type DemandStats } from "@/lib/admin-stats";
+import IngestRunner from "@/components/IngestRunner";
 
 /**
  * Admin dashboard (journey.html §6 admin panel, Phase 4). Costs + models +
@@ -198,6 +199,8 @@ function DemandView({ d }: { d: DemandStats }) {
           {chips(d.topLocations)}
         </div>
       </div>
+      <IngestRunner />
+
       {d.recentRuns.length > 0 && (
         <div className="mt-4">
           <p className="mb-2 text-xs font-medium text-tx">Recent ingestion runs</p>
