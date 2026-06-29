@@ -58,6 +58,13 @@ export async function companiesForScope(scope: IngestScope): Promise<Company[]> 
   return data ?? [];
 }
 
+/** Enabled company names — the durable Workflow iterates these (one step each). */
+export async function listEnabledCompanyNames(): Promise<string[]> {
+  const db = supabaseService();
+  const { data } = await db.from("companies").select("name").eq("enabled", true).limit(500);
+  return (data ?? []).map((c) => c.name as string);
+}
+
 /** Keywords users are hunting — widen the relevance filter to include them. */
 export async function demandKeywords(): Promise<string[]> {
   const db = supabaseService();

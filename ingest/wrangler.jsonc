@@ -1,0 +1,14 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "roleos-ingest",
+  "main": "worker.ts",
+  "compatibility_date": "2025-03-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "observability": { "enabled": true },
+  // The durable Workflow (per-company reconcile steps). Bound to itself.
+  "workflows": [
+    { "name": "roleos-ingest-workflow", "binding": "INGEST", "class_name": "IngestWorkflow" }
+  ],
+  // The app it drives. CRON_SECRET is a secret (wrangler secret put).
+  "vars": { "APP_URL": "https://ro.roleos.fyi" }
+}
