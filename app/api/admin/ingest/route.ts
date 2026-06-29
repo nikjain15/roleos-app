@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin";
-import { runIngestion, reconcileCompany, listEnabledCompanyNames } from "@/lib/ingest";
+import { runIngestion, reconcileCompany, listEnabledCompanyNames, syncYcCompanies } from "@/lib/ingest";
 import { type IngestScope } from "@/lib/ingest/scan";
 import { env } from "@/lib/env";
 
@@ -24,10 +24,15 @@ export async function POST(req: Request): Promise<Response> {
   const internal = !!expected && secret === expected;
 
   const body = (await req.json().catch(() => ({}))) as {
-    op?: "companies" | "reconcile";
+    op?: "companies" | "reconcile" | "yc-sync";
     company?: string;
-    scope?: "all" | "demand" | { companies?: string[] };
+    scope?: "all" | "demand" | "yc" | { companies?: string[] };
+    durable?: boolean;
   };
+
+  // The deployed IngestWorkflow worker (Phase 2b). The app starts an instance;
+  // the Workflow then drives this same route per-company over the internal path.
+  const INGEST_WORKER_URL = "https://roleos-ingest.nikjain1588.workers.dev";
 
   // ── internal (Workflow) ──────────────────────────────────────────────────
   if (internal) {
@@ -37,6 +42,9 @@ export async function POST(req: Request): Promise<Response> {
       }
       if (body.op === "reconcile" && body.company) {
         return NextResponse.json(await reconcileCompany(body.company));
+      }
+      if (body.op === "yc-sync") {
+        return NextResponse.json(await syncYcCompanies());
       }
       return NextResponse.json({ error: "unknown op" }, { status: 400 });
     } catch (e) {
@@ -49,6 +57,34 @@ export async function POST(req: Request): Promise<Response> {
 
   // ── admin UI (cookie) — bounded synchronous run ──────────────────────────
   await requireAdmin();
+
+  // Durable full run: start an IngestWorkflow instance (unbounded, retried,
+  // per-company steps) and return its id. The Workflow drives the internal path.
+  if (body.durable) {
+    try {
+      const res = await fetch(
+        `${INGEST_WORKER_URL}/start?secret=${encodeURIComponent(env().CRON_SECRET ?? "")}`,
+        { method: "POST" },
+      );
+      const j = (await res.json()) as { id?: string };
+      return NextResponse.json({ ok: res.ok, durable: true, id: j.id });
+    } catch {
+      return NextResponse.json({ ok: false, error: "couldn't start the workflow" }, { status: 502 });
+    }
+  }
+  // YC sync is a company-layer feeder (no scan/extract) — handle it before the
+  // role-ingestion scopes.
+  if (body.op === "yc-sync" || body.scope === "yc") {
+    try {
+      const summary = await syncYcCompanies();
+      return NextResponse.json({ ok: true, ...summary });
+    } catch (e) {
+      return NextResponse.json(
+        { ok: false, error: e instanceof Error ? e.message : "yc sync failed" },
+        { status: 500 },
+      );
+    }
+  }
   let scope: IngestScope = { kind: "all" };
   if (body.scope === "demand") scope = { kind: "demand" };
   else if (body.scope && typeof body.scope === "object" && Array.isArray(body.scope.companies)) {
