@@ -15,6 +15,7 @@ import { companiesForScope, scanCompany, demandKeywords, type IngestScope } from
 import type { AtsPosting } from "@/lib/ats";
 
 export { listEnabledCompanyNames } from "./scan";
+export { syncYcCompanies, type YcSyncSummary, type YcDataset } from "./yc";
 
 type Db = ReturnType<typeof supabaseService>;
 

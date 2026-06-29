@@ -169,6 +169,14 @@ function DemandView({ d }: { d: DemandStats }) {
         <Tile label="Roles in corpus" value={d.corpusTotal.toLocaleString()} hint="seed + hunted" />
         <Tile label="Hunted in (ATS)" value={d.ingestedTotal.toLocaleString()} hint="added by ingestion" tone={d.ingestedTotal ? "good" : "neutral"} />
       </div>
+      <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Tile
+          label="YC companies"
+          value={d.ycCompanies.toLocaleString()}
+          hint={`${d.ycEnabled.toLocaleString()} enabled for scanning`}
+          tone={d.ycCompanies ? "good" : "neutral"}
+        />
+      </div>
       {d.recentIngested.length > 0 && (
         <div className="mt-4">
           <p className="mb-2 text-xs font-medium text-tx">Recently hunted in</p>

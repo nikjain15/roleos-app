@@ -59,6 +59,9 @@ export interface DemandStats {
   // Corpus / ingestion — how the demand-driven hunt is growing the role list.
   corpusTotal: number;
   ingestedTotal: number;
+  // YC source — companies fed in from the yc-oss directory (lib/ingest/yc.ts).
+  ycCompanies: number;
+  ycEnabled: number;
   recentIngested: { company: string; role_title: string; created_at: string }[];
   recentRuns: {
     status: string;
@@ -99,9 +102,22 @@ export async function getDemandStats(): Promise<DemandStats> {
     .limit(5000);
   const rows = (data ?? []) as IntentRow[];
 
-  const [{ count: corpusTotal }, { count: ingestedTotal }, recent, runs] = await Promise.all([
+  const [
+    { count: corpusTotal },
+    { count: ingestedTotal },
+    { count: ycCompanies },
+    { count: ycEnabled },
+    recent,
+    runs,
+  ] = await Promise.all([
     db.from("roles").select("*", { count: "exact", head: true }),
     db.from("roles").select("*", { count: "exact", head: true }).eq("source", "ats"),
+    db.from("companies").select("*", { count: "exact", head: true }).eq("source", "yc"),
+    db
+      .from("companies")
+      .select("*", { count: "exact", head: true })
+      .eq("source", "yc")
+      .eq("enabled", true),
     db
       .from("roles")
       .select("company, role_title, created_at")
@@ -124,6 +140,8 @@ export async function getDemandStats(): Promise<DemandStats> {
     topLocations: rank(rows.map((r) => r.location ?? "").filter(Boolean)),
     corpusTotal: corpusTotal ?? 0,
     ingestedTotal: ingestedTotal ?? 0,
+    ycCompanies: ycCompanies ?? 0,
+    ycEnabled: ycEnabled ?? 0,
     recentIngested: (recent.data ?? []) as DemandStats["recentIngested"],
     recentRuns: (runs.data ?? []) as DemandStats["recentRuns"],
   };
