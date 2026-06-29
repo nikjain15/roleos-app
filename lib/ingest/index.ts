@@ -14,6 +14,8 @@ import { logAgentRuns } from "@/lib/agent-runs";
 import { companiesForScope, scanCompany, demandKeywords, type IngestScope } from "./scan";
 import type { AtsPosting } from "@/lib/ats";
 
+export { listEnabledCompanyNames } from "./scan";
+
 type Db = ReturnType<typeof supabaseService>;
 
 const MAX_PER_COMPANY = 8;
@@ -70,6 +72,61 @@ export async function runIngestion(
       .eq("id", runId);
     throw e;
   }
+}
+
+/**
+ * Reconcile ONE company end-to-end — the durable unit the IngestWorkflow runs as
+ * a single retryable step (docs/admin-ingestion.md Phase 2b). Scan its board,
+ * insert+structure+embed the new roles (no per-run cap — it's one company), and
+ * prune the ones that have closed. PRUNE SAFETY: only prune when the scan
+ * actually returned postings — a transient fetch failure (0 posts) must never be
+ * read as "every role closed" and mass-delete the company.
+ */
+export async function reconcileCompany(
+  name: string,
+): Promise<{ company: string; scanned: number; added: number; closed: number }> {
+  const db = supabaseService();
+  const [company] = await companiesForScope({ kind: "company", companies: [name] });
+  if (!company) return { company: name, scanned: 0, added: 0, closed: 0 };
+
+  const kws = await demandKeywords();
+  const posts = await scanCompany(company, kws);
+  await db.from("companies").update({ last_scanned_at: new Date().toISOString() }).eq("id", company.id);
+
+  const added = await insertNew(db, posts, 50, 50);
+  const closed = posts.length > 0 ? await pruneClosed(db, company.name, posts.map((p) => p.url)) : 0;
+  return { company: company.name, scanned: posts.length, added, closed };
+}
+
+/** Archive + remove this company's ATS roles that are no longer on the board. */
+async function pruneClosed(db: Db, company: string, openUrls: string[]): Promise<number> {
+  const open = new Set(openUrls);
+  const { data: existing } = await db
+    .from("roles")
+    .select("id, url, role_title, ats_provider, source, doc")
+    .eq("company", company)
+    .eq("source", "ats")
+    .limit(1000);
+  const toClose = (existing ?? []).filter((r) => !open.has(r.url as string));
+  if (toClose.length === 0) return 0;
+
+  for (const r of toClose) {
+    await db.from("roles_archive").upsert(
+      {
+        id: r.id,
+        company,
+        role_title: r.role_title,
+        url: r.url,
+        ats_provider: r.ats_provider,
+        source: r.source,
+        doc: r.doc,
+      },
+      { onConflict: "id" },
+    );
+    await db.from("role_embeddings").delete().eq("role_id", r.id as string);
+    await db.from("roles").delete().eq("id", r.id as string);
+  }
+  return toClose.length;
 }
 
 /**
