@@ -6,6 +6,7 @@ import SignOut from "@/components/SignOut";
 import TailorButton from "@/components/TailorButton";
 import { isAdmin } from "@/lib/admin";
 import DigestCard from "@/components/DigestCard";
+import RematchButton from "@/components/RematchButton";
 
 /**
  * The decision feed — the home (journey.html §6). No tabs, no Kanban. What RO
@@ -116,9 +117,12 @@ export default async function Feed() {
           <h1 className="mt-8 text-xl font-bold tracking-tight">
             I&apos;ve been at it — here&apos;s where we are
           </h1>
-          <p className="mt-1 text-sm text-tx3">
-            {pursue.length} worth pursuing · {matches.length} I&apos;m tracking. You make the calls.
-          </p>
+          <div className="mt-1 flex flex-wrap items-center justify-between gap-2">
+            <p className="text-sm text-tx3">
+              {pursue.length} worth pursuing · {matches.length} I&apos;m tracking. You make the calls.
+            </p>
+            <RematchButton />
+          </div>
 
           {pursue.length > 0 && (
             <section className="mt-6">
