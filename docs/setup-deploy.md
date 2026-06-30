@@ -55,6 +55,30 @@ done
 Do NOT set `CLOUDFLARE_API_TOKEN` as a prod secret — the Worker uses the AI
 *binding*, not a token, and the `.dev.vars` token is a narrow dev one.
 
+### Deploy auth trap — the narrow `CLOUDFLARE_API_TOKEN` (read this if a deploy 401s)
+The `.dev.vars` `CLOUDFLARE_API_TOKEN` is a **dev-scoped** token (no Workers-deploy
+permission). It must NOT reach a build/deploy or you get `Authentication error
+[10000]` / `Failed to retrieve account IDs`. Two files leak it:
+- **`.env.local`** — wrangler 4.x auto-loads it, and `next build` opens a remote
+  AI session with it. **Keep `CLOUDFLARE_API_TOKEN` OUT of `.env.local`** (the file
+  even says so). If it crept back, delete that one line.
+- **`.dev.vars`** — `opennextjs-cloudflare deploy` sources it ("Using secrets
+  defined in .dev.vars"). For the **app deploy**, temporarily strip the
+  `CLOUDFLARE_API_TOKEN=` line, then restore after:
+  ```bash
+  cp .dev.vars /tmp/dv.bak
+  grep -v '^CLOUDFLARE_API_TOKEN=' /tmp/dv.bak > .dev.vars
+  export CLOUDFLARE_ACCOUNT_ID=430f00d6622c766342f89a4e6a2261f6  # OAuth can't list accounts
+  npx opennextjs-cloudflare build && npx opennextjs-cloudflare deploy
+  cp /tmp/dv.bak .dev.vars   # restore (Node scripts still want the token)
+  ```
+- **Ingest worker** (`ingest/wrangler.jsonc`): `--env-file` to an empty file
+  sidesteps the `.env.local` load:
+  `npx wrangler deploy -c ingest/wrangler.jsonc --env-file /tmp/empty.env`.
+
+If wrangler OAuth has expired, `npx wrangler login` first (the OAuth session has
+the Workers-deploy scope the `.dev.vars` token lacks).
+
 ---
 
 ## 2 · Enable the custom domain

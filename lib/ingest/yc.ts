@@ -195,6 +195,91 @@ export async function syncYcCompanies(
   };
 }
 
+/** Hard ceiling on total enabled companies — scan.ts reads enabled with a
+ *  500-row limit, so we keep total enabled below this so nothing is silently
+ *  dropped at scan time. Leaves headroom for seed + demand rows. */
+const SCAN_ENABLE_CEILING = 480;
+
+export interface YcPromoteSummary {
+  requested: number;
+  promoted: number; // candidates flipped to enabled this call
+  headroom: number; // how many more could be enabled before the ceiling
+  enabledTotalNow: number; // total enabled companies (all sources) after promote
+}
+
+/**
+ * Promote the top-N disabled YC candidates to enabled (admin action). Ranked by
+ * the same yc-oss priority as the initial sync (relevance → top_company → team
+ * size, freshly re-fetched and joined by yc_slug), so the best candidates go
+ * first. Bounded by SCAN_ENABLE_CEILING so we never enable past what the scan can
+ * read. Idempotent-ish: re-running just enables the next N.
+ */
+export async function promoteYcCandidates(count: number): Promise<YcPromoteSummary> {
+  const db = supabaseService();
+  const want = Math.max(0, Math.floor(count));
+
+  // Respect the scan ceiling: headroom = ceiling − currently-enabled (all sources).
+  const { count: enabledTotal } = await db
+    .from("companies")
+    .select("*", { count: "exact", head: true })
+    .eq("enabled", true);
+  const headroom = Math.max(0, SCAN_ENABLE_CEILING - (enabledTotal ?? 0));
+  const n = Math.min(want, headroom);
+  if (n === 0) {
+    return { requested: want, promoted: 0, headroom, enabledTotalNow: enabledTotal ?? 0 };
+  }
+
+  // Disabled YC candidates.
+  const { data: candidates } = await db
+    .from("companies")
+    .select("id, yc_slug")
+    .eq("source", "yc")
+    .eq("enabled", false)
+    .limit(5000);
+  if (!candidates?.length) {
+    return { requested: want, promoted: 0, headroom, enabledTotalNow: enabledTotal ?? 0 };
+  }
+
+  // Fresh priority map by YC slug (hiring.json — cached 15m, cheap).
+  const prio = await ycPriorityBySlug();
+  const ranked = [...candidates]
+    .sort((a, b) => (prio.get(b.yc_slug as string) ?? -1) - (prio.get(a.yc_slug as string) ?? -1))
+    .slice(0, n);
+
+  let promoted = 0;
+  const ids = ranked.map((c) => c.id as string);
+  for (let i = 0; i < ids.length; i += 200) {
+    const chunk = ids.slice(i, i + 200);
+    const { error, count: updated } = await db
+      .from("companies")
+      .update({ enabled: true }, { count: "exact" })
+      .in("id", chunk);
+    if (error) throw new Error(`promote update: ${error.message}`);
+    promoted += updated ?? chunk.length;
+  }
+
+  return {
+    requested: want,
+    promoted,
+    headroom: headroom - promoted,
+    enabledTotalNow: (enabledTotal ?? 0) + promoted,
+  };
+}
+
+/** Build a priority score per YC slug from the live hiring feed (see priority()). */
+async function ycPriorityBySlug(): Promise<Map<string, number>> {
+  const map = new Map<string, number>();
+  try {
+    const res = await fetch(ENDPOINT.hiring, { headers: { accept: "application/json" }, signal: AbortSignal.timeout(30_000) });
+    if (!res.ok) return map;
+    const raw = (await res.json()) as YcCompany[];
+    for (const c of raw) if (c.slug) map.set(c.slug, priority(c));
+  } catch {
+    /* empty map → candidates rank equally (still bounded by n) */
+  }
+  return map;
+}
+
 /** Look up which of these slugs already exist (chunked to keep .in() lists small). */
 async function fetchExistingSlugs(
   db: ReturnType<typeof supabaseService>,

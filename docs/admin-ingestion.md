@@ -175,3 +175,45 @@ Decision #6 keeps an `engine: 'claude' | 'ollama'` seam, with Ollama as a
 the Workers runtime* — Flag A dropped Ollama from the deployed stack (one model,
 one vector space). Prod/ambient runs are **Claude (extract) + Workers AI bge
 (embed)** only. Keep Ollama strictly to local CLI backfills.
+
+---
+
+## Cron wired to the durable Workflow — SHIPPED (2026-06-30)
+The last Phase-2b gap is closed: the hourly cron no longer runs the heavy scan
+synchronously.
+
+**The bug it fixes.** `/api/cron/ingest` used to fall back to a synchronous
+`runIngestion({scope:'all'})` over the full enabled set (~366 companies, each
+scan + Claude extract + embed) inside one HTTP request. That exceeded the
+worker's `maxDuration=300` and was killed mid-loop, so the `try/catch` never
+reached the `done`/`error` update — every hour left an orphaned
+`ingestion_runs.status='scanning'` row (33 accrued before the fix; all cleaned to
+`status='error'`).
+
+**The fix.** `/api/cron/ingest` now:
+1. runs the **bounded synchronous `demand` pass** (only companies users are
+   actively hunting — small, safe, records an `ingestion_runs` row); then
+2. hands the rest to the durable **`IngestWorkflow`** — it `POST`s
+   `roleos-ingest…/start` **only when `listUnscannedCompanyNames(1).remaining > 0`**
+   (no no-op instance per hour once the corpus is caught up).
+
+**The Workflow itself** was upgraded from "loop every enabled company in one
+instance" (which hit *Too many subrequests* on a 366-company sweep) to a
+**self-chaining batch**: `BATCH=12` never-scanned companies per instance
+(`listUnscannedCompanyNames`, `last_scanned_at IS NULL`), a `chain-next` step
+spawns the `depth+1` instance while a full batch remains (`MAX_DEPTH=80`), and
+each company is one isolated, retried `reconcile` step. Each instance gets a fresh
+subrequest budget, so a 300+ company sweep can't exhaust one invocation.
+
+**Deployed + proven (2026-06-30):** app `roleos` `v e05863d6` + `roleos-ingest`
+`v f283417a`. Live cron path returns `{durable:{started:true}}`. The 60 staged
+`source='discovered'` companies were enabled and fully scanned via the Workflow
+(234 ATS roles added, 0 stuck rows). Final `ingestion_runs`: 39 done / 33 error
+(cleaned zombies) / 0 scanning.
+
+**Still open (non-blocking):** the durable path writes no `ingestion_runs` row
+(admin won't show those sweeps — could open one per instance); a second hourly
+cron can briefly run a concurrent chain over the same unscanned set
+(harmless — dedup by URL + guarded prune); the backfill is sequential
+(~12 companies/instance). Recurring re-scan freshness (re-null `last_scanned_at`
+on a cadence) is the separate role-refresh loop — see `docs/setup-role-refresh.md`.

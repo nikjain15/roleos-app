@@ -6,17 +6,15 @@
  */
 import { supabaseService } from "@/lib/supabase/service";
 import { fetchCompanyPostings, type AtsPosting } from "@/lib/ats";
+import { isRelevantTitle } from "./relevance";
 
 export interface Company {
   id: string;
   name: string;
   slug: string;
   ats_provider: string | null;
+  yc_slug: string | null;
 }
-
-/** Keep the corpus on-target: senior product / AI / ML roles, not every req. */
-export const RELEVANT_TITLE =
-  /\b(product manager|product lead|product owner|head of product|director of product|vp product|group product|principal product|staff product|\bpm\b|\bai\b|\bml\b|machine learning|gen ?ai|llm|data product|product, )\b/i;
 
 const escapeRe = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
@@ -30,7 +28,7 @@ export async function companiesForScope(scope: IngestScope): Promise<Company[]> 
   const db = supabaseService();
   const sel = db
     .from("companies")
-    .select("id, name, slug, ats_provider")
+    .select("id, name, slug, ats_provider, yc_slug")
     .eq("enabled", true);
 
   if (scope.kind === "company") {
@@ -65,6 +63,26 @@ export async function listEnabledCompanyNames(): Promise<string[]> {
   return (data ?? []).map((c) => c.name as string);
 }
 
+/**
+ * The next batch of enabled companies that have never been scanned, plus the
+ * total still outstanding. The self-chaining IngestWorkflow pulls a small batch
+ * per instance (fresh subrequest budget each) and spawns the next instance while
+ * `remaining > batch` — so a 300+ company sweep can't exhaust one invocation.
+ */
+export async function listUnscannedCompanyNames(
+  limit: number,
+): Promise<{ companies: string[]; remaining: number }> {
+  const db = supabaseService();
+  const { data, count } = await db
+    .from("companies")
+    .select("name", { count: "exact" })
+    .eq("enabled", true)
+    .is("last_scanned_at", null)
+    .order("name")
+    .limit(limit);
+  return { companies: (data ?? []).map((c) => c.name as string), remaining: count ?? 0 };
+}
+
 /** Keywords users are hunting — widen the relevance filter to include them. */
 export async function demandKeywords(): Promise<string[]> {
   const db = supabaseService();
@@ -74,8 +92,8 @@ export async function demandKeywords(): Promise<string[]> {
 
 /** Fetch + filter one company's open roles. */
 export async function scanCompany(c: Company, keywords: string[] = []): Promise<AtsPosting[]> {
-  const posts = await fetchCompanyPostings(c.name, c.slug || undefined);
+  const posts = await fetchCompanyPostings(c.name, c.slug || undefined, c.yc_slug || undefined);
   if (posts.length === 0) return [];
   const kwRe = keywords.length ? new RegExp(keywords.map(escapeRe).join("|"), "i") : null;
-  return posts.filter((p) => RELEVANT_TITLE.test(p.title) || (kwRe?.test(p.title) ?? false));
+  return posts.filter((p) => isRelevantTitle(p.title, kwRe));
 }

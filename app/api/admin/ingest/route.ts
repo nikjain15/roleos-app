@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin";
-import { runIngestion, reconcileCompany, listEnabledCompanyNames, syncYcCompanies } from "@/lib/ingest";
+import { runIngestion, reconcileCompany, listEnabledCompanyNames, listUnscannedCompanyNames, syncYcCompanies, promoteYcCandidates } from "@/lib/ingest";
 import { type IngestScope } from "@/lib/ingest/scan";
 import { env } from "@/lib/env";
 
@@ -24,8 +24,10 @@ export async function POST(req: Request): Promise<Response> {
   const internal = !!expected && secret === expected;
 
   const body = (await req.json().catch(() => ({}))) as {
-    op?: "companies" | "reconcile" | "yc-sync";
+    op?: "companies" | "unscanned" | "reconcile" | "yc-sync" | "yc-promote";
     company?: string;
+    count?: number;
+    limit?: number;
     scope?: "all" | "demand" | "yc" | { companies?: string[] };
     durable?: boolean;
   };
@@ -40,11 +42,17 @@ export async function POST(req: Request): Promise<Response> {
       if (body.op === "companies") {
         return NextResponse.json({ companies: await listEnabledCompanyNames() });
       }
+      if (body.op === "unscanned") {
+        return NextResponse.json(await listUnscannedCompanyNames(body.limit ?? 12));
+      }
       if (body.op === "reconcile" && body.company) {
         return NextResponse.json(await reconcileCompany(body.company));
       }
       if (body.op === "yc-sync") {
         return NextResponse.json(await syncYcCompanies());
+      }
+      if (body.op === "yc-promote") {
+        return NextResponse.json(await promoteYcCandidates(body.count ?? 100));
       }
       return NextResponse.json({ error: "unknown op" }, { status: 400 });
     } catch (e) {
@@ -81,6 +89,18 @@ export async function POST(req: Request): Promise<Response> {
     } catch (e) {
       return NextResponse.json(
         { ok: false, error: e instanceof Error ? e.message : "yc sync failed" },
+        { status: 500 },
+      );
+    }
+  }
+  // Promote the next N disabled YC candidates to enabled (ranked, ceiling-bounded).
+  if (body.op === "yc-promote") {
+    try {
+      const summary = await promoteYcCandidates(body.count ?? 100);
+      return NextResponse.json({ ok: true, ...summary });
+    } catch (e) {
+      return NextResponse.json(
+        { ok: false, error: e instanceof Error ? e.message : "promote failed" },
         { status: 500 },
       );
     }
