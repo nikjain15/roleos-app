@@ -44,6 +44,8 @@ export default function Onboarding() {
   const [linkedinUrl, setLinkedinUrl] = useState("");
   const [signedIn, setSignedIn] = useState(false);
   const [savedNote, setSavedNote] = useState(false);
+  // How many roles RO compared against (the embedded pool) — sent with matches.
+  const [scanned, setScanned] = useState<number | null>(null);
   const resultsRef = useRef<HTMLDivElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
@@ -153,7 +155,7 @@ export default function Onboarding() {
           else if (ev.type === "resolved") { gotResolved = ev.profile; setResolvedProfile(ev.profile); }
           else if (ev.type === "needs_more") setNeedsMore(ev.text);
           else if (ev.type === "mirror") { gotMirror = { statements: ev.statements, insight: ev.insight }; setMirror(gotMirror); }
-          else if (ev.type === "matches") { gotMatches = ev.matches; setMatches(ev.matches); }
+          else if (ev.type === "matches") { gotMatches = ev.matches; setMatches(ev.matches); if (typeof ev.scanned === "number") setScanned(ev.scanned); }
           else if (ev.type === "error") setError(ev.text);
         }
       }
@@ -338,7 +340,7 @@ export default function Onboarding() {
             <h2 className="text-lg font-semibold">
               Roles worth your time{" "}
               <span className="font-normal text-tx3">
-                · compared all 557, these {matches.length} are closest — reasoned through, not just ranked
+                · compared all {(scanned ?? 0).toLocaleString()}, these {matches.length} are closest — reasoned through, not just ranked
               </span>
             </h2>
             <div className="mt-4 space-y-3">
@@ -402,9 +404,22 @@ export default function Onboarding() {
                   </p>
                   <button
                     onClick={() => {
+                      // Keep the source LinkedIn URL so RO can re-fetch later.
+                      // The direct-pull path already saves this; the sign-up
+                      // path must too, or master_profile.linkedin_url ends up null.
+                      const srcUrl = isLinkedInUrl(linkedinUrl)
+                        ? linkedinUrl.trim()
+                        : isLinkedInUrl(profile)
+                          ? profile.trim()
+                          : undefined;
                       sessionStorage.setItem(
                         "roleos.pending",
-                        JSON.stringify({ profile: resolvedProfile ?? profile, mirror, matches }),
+                        JSON.stringify({
+                          profile: resolvedProfile ?? profile,
+                          mirror,
+                          matches,
+                          linkedin_url: srcUrl,
+                        }),
                       );
                       window.location.href = "/login?next=/feed";
                     }}

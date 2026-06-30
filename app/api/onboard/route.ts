@@ -112,11 +112,11 @@ export async function POST(req: Request): Promise<Response> {
 
         // Mirror + full matching in parallel (both through the quality gate).
         // matchProfile = rank all 557 by similarity → reason over the closest.
-        send({ type: "status", text: "Comparing you against all 557 roles…" });
+        send({ type: "status", text: "Comparing you against every open role…" });
         send({ type: "status", text: "Reading you back, and reasoning about the closest fits…" });
         const [mirrorRes, matchRes] = await Promise.all([
           runSkill(mirrorSkill, { userId: "anon", data: { profile: profileText } }),
-          matchProfile(profileText, 6),
+          matchProfile(profileText, 8),
         ]);
 
         const mirror = parseModelJson<{ statements: string[]; insight: string }>(
