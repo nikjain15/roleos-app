@@ -12,10 +12,11 @@ import extractRole from "@/agent/skills/extract_role";
 import { parseModelJson } from "@/lib/json";
 import { logAgentRuns } from "@/lib/agent-runs";
 import { companiesForScope, scanCompany, demandKeywords, type IngestScope } from "./scan";
-import type { AtsPosting } from "@/lib/ats";
+import { normalizeArchetype } from "./archetype";
+import { fetchYcJobDescription, type AtsPosting } from "@/lib/ats";
 
-export { listEnabledCompanyNames } from "./scan";
-export { syncYcCompanies, type YcSyncSummary, type YcDataset } from "./yc";
+export { listEnabledCompanyNames, listUnscannedCompanyNames } from "./scan";
+export { syncYcCompanies, promoteYcCandidates, type YcSyncSummary, type YcDataset } from "./yc";
 
 type Db = ReturnType<typeof supabaseService>;
 
@@ -145,7 +146,14 @@ async function insertNew(db: Db, posts: AtsPosting[], cap: number, remaining: nu
 
   let added = 0;
   for (const p of fresh) {
-    const description = p.description.slice(0, 8000);
+    // WAAS list postings carry no JD — enrich with the full text from the job's
+    // own page (bounded: only the relevant roles we're about to insert).
+    let raw = p.description;
+    if (p.provider === "yc") {
+      const full = await fetchYcJobDescription(p.url);
+      if (full) raw = `${full}\n\n${p.description}`;
+    }
+    const description = raw.slice(0, 8000);
 
     // Structure the JD (best-effort — recall still works on the embedding if it fails).
     let structured: {
@@ -177,7 +185,7 @@ async function insertNew(db: Db, posts: AtsPosting[], cap: number, remaining: nu
         ats_job_id: p.externalId,
         source: "ats",
         description,
-        archetype: structured?.archetype ?? null,
+        archetype: normalizeArchetype(structured?.archetype),
         seniority: structured?.seniority ? { level: structured.seniority } : null,
         must_haves: arr(structured?.must_haves),
         nice_to_haves: arr(structured?.nice_to_haves),

@@ -19,6 +19,9 @@ type Result = {
   inserted?: number;
   enabled?: number;
   existing?: number;
+  // yc promote
+  promoted?: number;
+  enabledTotalNow?: number;
   // durable workflow
   durable?: boolean;
   id?: string;
@@ -47,14 +50,17 @@ export default function IngestRunner() {
 
   const run = (scope: "all" | "demand", label: string) => post({ scope }, label);
   const syncYc = () => post({ op: "yc-sync" }, "yc");
+  const promoteYc = () => post({ op: "yc-promote", count: 100 }, "promote");
   const runDurable = () => post({ durable: true }, "durable");
 
   const summary = (r: Result) =>
     r.durable
       ? `Started a durable full run (${r.id?.slice(0, 8) ?? "?"}…). It hunts every company in the background, retrying per company — refresh in a few minutes to watch the corpus grow.`
-      : busyWasYc(r)
-        ? `Done — +${r.inserted} YC companies added (${r.enabled} enabled, ${r.existing} already had). Refresh to see them above.`
-        : `Done — ${r.companies} companies, ${r.scanned} scanned, +${r.added} added. Refresh to see them above.`;
+      : typeof r.promoted === "number"
+        ? `Enabled ${r.promoted} more YC candidates (top-ranked) — ${r.enabledTotalNow} companies now in the scan list. The next ingest run will source them.`
+        : busyWasYc(r)
+          ? `Done — +${r.inserted} YC companies added (${r.enabled} enabled, ${r.existing} already had). Refresh to see them above.`
+          : `Done — ${r.companies} companies, ${r.scanned} scanned, +${r.added} added. Refresh to see them above.`;
 
   return (
     <div className="mt-4 rounded-xl border border-bd bg-surf p-4">
@@ -84,6 +90,13 @@ export default function IngestRunner() {
           className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 disabled:opacity-40"
         >
           {busy === "yc" ? "Syncing…" : "Sync YC companies"}
+        </button>
+        <button
+          onClick={promoteYc}
+          disabled={!!busy}
+          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 disabled:opacity-40"
+        >
+          {busy === "promote" ? "Enabling…" : "Enable 100 YC candidates"}
         </button>
         <button
           onClick={runDurable}
