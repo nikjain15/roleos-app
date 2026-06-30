@@ -13,7 +13,11 @@ const nextConfig: NextConfig = {
 
 export default nextConfig;
 
-// Enable the Cloudflare bindings (env, KV, DO, Workers AI) during `next dev`
-// so local dev mirrors prod. No-op outside the OpenNext dev server.
+// Enable the Cloudflare bindings (env, KV, DO, Workers AI) during `next dev` so
+// local dev mirrors prod. Skipped in CI — there it would try to start a remote
+// proxy session that can't connect, failing `next lint` (the build supplies its
+// own bindings, so skipping is safe). Local dev is unaffected.
 import { initOpenNextCloudflareForDev } from "@opennextjs/cloudflare";
-initOpenNextCloudflareForDev();
+if (!process.env.CI) {
+  initOpenNextCloudflareForDev();
+}
