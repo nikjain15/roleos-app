@@ -1,5 +1,12 @@
 # Setup — Google sign-in + Gmail/Calendar (Gate 2 + Flag C)
 
+> **Status: DONE and live.** Google sign-in + Gmail/Calendar (readonly) are
+> configured and verified end-to-end. Project "RoleOS" (roleos-500804), OAuth
+> web client "RoleOS Web". This doc is kept as the **reference** for how it was
+> set up / how to reconfigure. The app requests the Gmail/Calendar scopes
+> directly in `signInWithOAuth(options.scopes)` — Supabase "Additional scopes"
+> is NOT required.
+
 Gate 2 (screening answers + recruiter replies) reads your **Gmail + Calendar**
 with permission (Flag C: real OAuth in v1). This also enables "Continue with
 Google" sign-in. ~15 minutes of setup in two consoles.
@@ -28,9 +35,10 @@ Google" sign-in. ~15 minutes of setup in two consoles.
 3. Under **Additional scopes**, add: `https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/calendar.readonly`
 4. Save. (The redirect URLs / site URL are already configured for localhost.)
 
-Hand me the Client ID + secret (or just say it's done) and "Continue with
-Google" works immediately for you + any added test users. I'll then wire Gate 2
-to read recruiter mail + calendar via the Google provider token.
+This is configured — "Continue with Google" works for the owner + added test
+users, and Gate 2 reads recruiter mail + calendar via the Google provider token
+(captured as a refresh token at `/auth/callback`, minted on demand by
+`lib/google-auth.ts`).
 
 ## 3 · Google verification (only for non-test users — later)
 
