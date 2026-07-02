@@ -2,6 +2,7 @@ import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import ArtifactActions from "@/components/ArtifactActions";
+import RegenerateResume from "@/components/RegenerateResume";
 
 /**
  * Gate 1 — résumé studio. Renders the tailored variant + RO's rationale per
@@ -32,13 +33,14 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
 
   const { data: artifact } = await supabase
     .from("artifacts")
-    .select("id, status, content, provenance, roles(company, role_title)")
+    .select("id, status, content, provenance, role_id, roles(company, role_title)")
     .eq("id", id)
     .single<{
       id: string;
       status: string;
       content: Content;
       provenance: Provenance;
+      role_id: string | null;
       roles: { company: string; role_title: string } | null;
     }>();
   if (!artifact) notFound();
@@ -46,6 +48,9 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
   const c = artifact.content ?? {};
   const truth = artifact.provenance?.truth ?? null;
   const truthOk = truth ? truth.ok : artifact.provenance?.gate_status === "passed";
+  // Never render a blank résumé. If the drafter produced no usable body (even
+  // after shape-repair), own it and offer a redraft — don't show a void.
+  const hasBody = Boolean(c.summary) || Boolean(c.bullets && c.bullets.length > 0);
 
   return (
     <main className="mx-auto max-w-2xl px-6 py-12">
@@ -60,6 +65,10 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
         Tailored for {artifact.roles?.company} — {artifact.roles?.role_title}
       </h1>
 
+      {!hasBody ? (
+        <RegenerateResume roleId={artifact.role_id} />
+      ) : (
+      <>
       {/* Truth gate */}
       {truthOk ? (
         <div className="mt-4 rounded-lg border-l-[3px] border-suc bg-suc-bg p-3 text-[13px] text-suc">
@@ -131,6 +140,8 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
       )}
 
       <ArtifactActions id={artifact.id} status={artifact.status} />
+      </>
+      )}
     </main>
   );
 }
