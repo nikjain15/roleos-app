@@ -134,13 +134,64 @@ emphasis + keywords (7–8), outreach tone (9), cadence (10), interview focus (1
 negotiation posture (12), **and the funnel calibration itself (14)** — so the pace math
 gets more accurate the longer you use it. Fully transparent + correctable (Settings).
 
+## 7b · Tuning decisions — v1 locked (2026-07-02)
+
+Resolving the four tuning areas so the engine is rigorous, not hand-wavy.
+
+**A · Pace / funnel math — priors + your real rates, with honest uncertainty.**
+- Each funnel stage (apply→screen→onsite→offer) is a conversion rate with a **confidence
+  interval**, not a point number. Start from published senior-PM **priors** (wide
+  uncertainty), then **shrink toward the user's own observed rates** as events accrue
+  (empirical-Bayes blend; small n → lean on priors, large n → lean on personal). Show
+  **ranges** ("~25–40 applications"), never false precision.
+- Plan **with lead times, not just counts**: applications sit before a screen, interview
+  cycles run ~2–4 weeks, plus notice. So the *"apply-by"* date is computed well before the
+  deadline — the pace front-loads sending. A deadline shorter than one realistic interview
+  cycle is flagged as aggressive on day 0.
+- **Feasibility gate:** required apps/week vs (a) live role supply for the goal and (b) the
+  user's intensity ceiling. If required > feasible, the goal is **At risk from the start** —
+  said plainly, with the levers.
+
+**B · Goal inputs & multi-goal — one planned goal + "also open to".**
+- Goal Setter captures: target (archetype, seniority, comp floor, company type/stage,
+  location/remote, domains to seek/avoid), deadline (date + **hard/soft**), constraints
+  (visa, dealbreakers, must-haves), intensity (hrs/week + apps/week ceiling), optional
+  motivation (for tone).
+- v1 = **one active goal with a full plan/pace**, plus an optional **"also open to"** filter
+  that *widens sourcing* without getting its own pace. Goals are **savable + switchable**
+  (e.g. "AI PM" primary, "BizOps" alternate). True concurrent multi-goal planning (split
+  funnels) is deferred — it complicates pace accounting without clear v1 value.
+
+**C · Milestones & timeline — derived from the deadline, not fixed.**
+- Phases are computed from the deadline and lead times, not hardcoded days: **Ramp**
+  (shortlist + first wave) → **Push** (steady sending) → **Convert** (interviews/onsites)
+  → **Close** (offers/negotiation). Boundaries shift with the window.
+- **Short deadline** → compresses, front-loads, and warns it's aggressive + recommends
+  widening. **Long deadline** → sustainable pace + guards against burnout + periodic goal
+  review. Milestones re-derive whenever the goal or deadline changes.
+
+**D · Adaptation behavior — an escalation ladder, always proposed not imposed.**
+1. Off pace → **proactive nudge** (see nudge model below).
+2. A stage underperforms → **targeted fix** (re-position résumé / Coach focus).
+3. Structural gap (supply or conversion can't reach target) → **re-plan options with
+   quantified trade-offs** (widen / accelerate / relax comp) + the resulting probability.
+4. Genuinely infeasible → **honest reset** conversation (extend to N days / broaden) with
+   odds. **RO never silently changes the plan — it proposes; you approve** (plan changes are
+   human-gated, like sends).
+
 ## 8 · Guardrails (non-negotiable, enforced in code)
 
 - **Human-gated outward** — RO drafts and prepares up to the send; **you send**, always.
+  Plan changes are proposed, not auto-applied.
 - **Truth-gated** — no invented claims in any artifact; flagged to your eyes.
 - **RLS** — your goal, pipeline, and profile are yours alone.
-- **Wellbeing > engagement** — the pace pushes toward *your* goal, never toward time-in-app;
-  no guilt, no streaks, honest odds.
+- **Proactive push toward the goal — never guilt (user chose proactive).** RO actively
+  nudges to keep you on pace: deadline-aware reminders, "you're 2 behind this week — here's
+  the one thing," momentum prompts. But it stays inside the wellbeing rule: **no streaks,
+  no "you haven't logged in", no manufactured urgency, no shame.** Assertive about *your*
+  deadline; never manipulative. Honors quiet hours; a real user-actionable deadline is the
+  only thing that raises the volume. (This deliberately loosens the notifications engine's
+  near-total push ban — but only for goal-anchored, user-actionable pace nudges.)
 - **Responsive + accessible** — every screen works on phone and desktop.
 
 ## 9 · "Fully functional" = definition of done
@@ -151,11 +202,10 @@ watch RO adapt the plan as reality unfolds — end to end, on any device, with e
 outward action gated by their click.** Each module above ships only when its
 inputs→outputs work against real data and the guardrail tests stay green.
 
-## Open questions
+## Open questions (remaining)
 
-- **(product)** Do we let users run **multiple concurrent goals** (e.g. two archetypes), or
-  one active goal at a time in v1? (Recommend: one active goal, switchable.)
-- **(data)** Seed the funnel from public benchmarks until we have per-user rates — what
-  source do we cite for senior-PM conversion baselines?
-- **(product)** How hard should the pace nudge be when a user falls behind — informative
-  only, or a gentle prompt? (Recommend: informative + one suggested action, never guilt.)
+- **(data)** Which public source(s) do we cite for the senior-PM conversion **priors** (the
+  starting funnel rates before personal data accrues)? Needs a defensible benchmark.
+- **(eng)** Where does the pace/funnel computation run — a scheduled recompute (cron/
+  Workflow) writing a `plan` snapshot, vs. computed on read? (Leaning: nightly recompute +
+  on goal change, cached on the goal row.)
