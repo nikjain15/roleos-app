@@ -1,14 +1,16 @@
-# Plan — admin-triggered ATS ingestion pipeline
+# Admin-triggered ATS ingestion pipeline
 
-Status: **FINALIZED — decisions locked 2026-06-28** (see "Locked decisions" +
-"Revised architecture" below). Logic proven end-to-end; this is productionizing
-it behind `/admin` on Cloudflare. Owner: Nik.
+Status: **SHIPPED + LIVE.** The durable Cloudflare **IngestWorkflow**
+(`ingest/` worker, binding `INGEST`) is deployed and driving ingestion; the admin
+**Run** control (`components/IngestRunner.tsx` on `/admin`, demand/all scopes)
+and per-role Claude `extract_role` are live. The corpus has grown from the 557
+seed to **~1,500+ roles**. This doc is the design record + runbook. Owner: Nik.
 
-> **Manual admin control — answer to "can I configure ingestion from /admin?":**
-> Not yet. What's live today is the hourly cron over a seed list (see "Shipped
-> baseline" below). This plan is exactly what adds the admin Run button, scope
-> pickers, live progress panel, and editable company list. Building it delivers
-> that control.
+> **Admin control — "can I run ingestion from /admin?":** ✅ Yes — the Run
+> button + result panel ship on `/admin`, and the "Run full (durable) ⚡" button
+> starts an IngestWorkflow instance. Still open (polish): a Companies-manager
+> CRUD UI (enable/disable/add) and making durable sweeps write `ingestion_runs`
+> rows so they show in the admin history.
 
 Turns today's manual pipeline into a first-class, admin-triggered (and later
 ambient/cron) feature: **scan ATS boards → diff vs live roles → archive+remove

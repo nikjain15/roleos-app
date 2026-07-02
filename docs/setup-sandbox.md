@@ -1,9 +1,15 @@
 # Setup — Build-studio live-code sandbox (Gate 3 prototype/MVP canvas)
 
+> **Status:** The prototype/MVP canvas is **built** (`build_code` skill +
+> `sandbox/studio` worker) and the sandbox 3-point check **passed** on free local
+> Docker (secure exec + live preview URL + caps). What remains is **prod live
+> preview**, which needs **paid Cloudflare Containers**. Without it the canvas runs
+> graceful-offline (code shown, no live iframe) — fully functional otherwise.
+
 The document canvases (PRD, case study) are already live. The **clickable
 prototype / MVP** canvas — where RO builds runnable code with a live preview —
-needs a secure code sandbox. We chose **Cloudflare Sandbox SDK** (see
-`sandbox/spike/RECOMMENDATION.md`). It needs two things only you can enable:
+uses **Cloudflare Sandbox SDK** (see `sandbox/spike/RECOMMENDATION.md`). To turn
+on live previews you need:
 
 ## 1 · Docker (for local dev)
 
@@ -22,17 +28,16 @@ Containers is a **paid** Workers feature.
 2. Containers is included with Workers Paid; no separate signup, but the paid
    plan is required.
 
-## 3 · Then tell me — I'll do the rest
+## 3 · Turn on prod live previews (once Workers Paid + Containers are on)
 
-Once Docker is running + Workers Paid is on, I will:
-1. Run the **deferred 3-point sandbox check** on the spike
-   (`cd sandbox/spike/cf-sandbox && npx wrangler dev`): prove egress deny-by-
-   default, measure cold-start latency, and record $/build — the gate from
-   `architecture.md §10` before building studio UI on it.
-2. If it passes, build the **prototype/MVP canvas**: RO writes code into the
-   sandbox, returns a live preview URL, enforces runtime/egress/memory caps.
-3. **Promote the build session to a Durable Object** (architecture.md §1.2: the
-   build-studio DO owns the live sandbox) — the document-canvas logic is
-   unchanged; the DO just wraps it and holds the live sandbox. Two-way door.
+The canvas and sandbox worker are already built. To go live in prod:
+1. Deploy the sandbox worker: `cd sandbox/studio && npm install && npm run deploy`
+   (needs Workers Paid — the CF registry push fails with `Unauthorized` on Free).
+2. Set `SANDBOX_SECRET` on both workers + `SANDBOX_URL` on the main app, then
+   `npm run deploy` the app. Preview URLs may need a wildcard custom domain
+   (e.g. `sandbox.roleos.fyi`).
+3. Verify the live iframe end-to-end (build a prototype in `/studio/build`).
 
-No code changes needed from you — just the two toggles above.
+Until then the prototype canvas stays graceful-offline. Local live-preview
+verification: fix the Docker PATH symlink, `wrangler dev` the `sandbox/studio`
+worker, set `SANDBOX_URL=http://localhost:8788`, rebuild a prototype.

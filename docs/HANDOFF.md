@@ -25,25 +25,25 @@ Next.js App Router + TS + Tailwind on Cloudflare via `@opennextjs/cloudflare`. S
 - **RLS** is the real boundary; `decision_events` append-only; `profiles.role` immutable by users; `roles`/`role_embeddings` read-only; `agent_runs` admin-only. `taste_model` is a DERIVED projection (confidence + provenance).
 - **Quality > latency** (user directive): never trade output quality for speed; optimize latency separately later.
 
-## WHAT'S BUILT + VERIFIED LIVE (Phases 0–3, all local)
-- **Foundation:** repo, schema+RLS+auth migrations (applied to live Supabase via `db/seed/apply-migrations.mjs` using a Supabase PAT — no DB password), 557 roles + 557 embeddings seeded, model registry + `callModel` (meters every call to `agent_runs`), `lib/json` tolerant parser, CI + 13 tests.
+## WHAT'S BUILT + VERIFIED LIVE (all 5 gates — DEPLOYED at ro.roleos.fyi)
+- **Foundation:** repo, schema+RLS+auth migrations (applied to live Supabase via `db/seed/apply-migrations.mjs` using a Supabase PAT — no DB password), role corpus seeded then grown to ~1,500+ via durable ingestion (from a 557-role seed), model registry + `callModel` (meters every call to `agent_runs`), `lib/json` tolerant parser, CI + 55 tests.
 - **Core slice:** landing → value-first onboarding (`/onboarding`, streaming "watch RO reason" → mirror → matches) → matching (pgvector `match_roles` RPC + Claude reasoning) → auth (magic link + Google code; middleware-gated) → save → **decision feed** (`/feed`).
 - **Gate 1** résumé tailoring (`/api/tailor`, `/studio/resume/[id]`) + **truth gate** + truth-driven auto-revise.
 - **Taste model** (the moat): `lib/taste.ts` projectTaste — decision_events → inferences w/ confidence+provenance.
 - **Gate 3 build studio (document canvas)** `/studio/build`: 8-phase co-creation, inject-your-edge interview, RO-as-adversary pressure-test, **enforced authenticity gate** (no 100%-RO submit; blocked < 20% your-thinking).
 - **Gate 4 coach** `/studio/coach`: prep (intel+predicted Qs+story-gap map) + multi-turn mock (RO as interviewer) + debrief.
 - **Gate 5 negotiation** `/studio/negotiate`: benchmark + lever scenarios + drafted counter (you-send gated).
-- **Sandbox proven (FREE):** the deferred 3-point check passed on local Docker (`sandbox/spike/cf-sandbox` via `wrangler dev`): secure exec + live preview URL + caps. See `sandbox/spike/RECOMMENDATION.md`.
+- **Gate 3 prototype/MVP canvas:** `build_code` skill + sandbox worker (`sandbox/studio`, CF Sandbox DO) — generates a runnable multi-file project from the bet + edge, live-preview iframe with graceful-offline fallback, same provenance + authenticity gate.
+- **Gate 2 screening/recruiter:** real Gmail/Calendar (readonly) via Google provider token; classify inbox, truth-gated screening answers, you-send replies. `/studio/recruiter`.
+- **Auth:** Google + LinkedIn OIDC + magic link — **all enabled and verified live.**
+- **Ambient + admin:** notifications engine + `/settings` quiet hours, digest brain + cron delivery (separate `roleos-cron` worker), admin dashboard (`/admin`) with cost/quality/demand stats, demand-driven durable ingestion (`ingest/` Cloudflare Workflow).
+- **Deployed:** live at ro.roleos.fyi (OpenNext on Cloudflare Workers). Phase-5 hardening done (RLS audit green, no client secrets, a11y baseline). See `docs/security-audit.md`.
 
-## NOT DEPLOYED
-The app has **never been deployed to Cloudflare** — it only runs via `next dev`. Only the Supabase data layer is live/cloud. Deployment is a distinct remaining task (below).
-
-## REMAINING WORK (suggested order)
-1. **Build-studio prototype/MVP canvas (gate 3, last piece).** Sandbox is de-risked. Plan: (a) `build_code` skill — RO generates a runnable multi-file project from the bet + edge (pure skill, low-risk); (b) the build-studio **sandbox as its own small worker** (Sandbox DO + container, runs via `wrangler dev` + Docker) that the main Next app calls over HTTP — this IS the DO that "owns the sandbox" (architecture §1.2; main app on `next dev` can't host containers directly); (c) studio "prototype" canvas type = generated code + live-preview iframe, same provenance + authenticity gate. User will pay for CF Containers only when deploying to prod, if it proves out.
-2. **Gate 2 — screening/recruiter + real Gmail/Calendar (Flag C).** Needs the user to do `docs/setup-google.md` (Google OAuth client + Supabase Google provider + scopes). Then read recruiter mail + calendar via the provider token, draft screening answers + replies (you-send gated). Google sign-in is currently NOT enabled (magic link works).
-3. **Deploy to Cloudflare (prod).** `opennextjs-cloudflare build && deploy`; set secrets via `wrangler secret`; configure Supabase auth redirect URLs for the prod domain; smoke-test. (roleos.fyi is the intended domain.)
-4. **Phase 4:** admin dashboards (agent_runs costs / evals / quality pass-rates — data already flowing), notifications + quiet hours (4 tiers, journey §10), ambient agent (per-user DO alarm).
-5. **Phase 5:** RLS audit, a11y, perf, harden the invariant tests.
+## REMAINING WORK (all external-dependency or polish — core build is done)
+1. **Email digest delivery** — blocked on Cloudflare Email enablement (account-level, likely paid). In-app digest is the working delivery today.
+2. **Live sandbox preview in prod** — blocked on paid CF Containers; prototype canvas works graceful-offline (shows code, no live iframe) until then.
+3. **Companies-manager CRUD UI** + make the durable-ingest sweeps write `ingestion_runs` rows (admin currently blind to those).
+4. **Secret rotation** (keys were shared in chat) + full a11y/contrast/perf audit.
 
 ## KNOWN GOTCHAS (learned this session)
 - **Run checks SEQUENTIALLY**, not many concurrent npm/vitest/tsc — concurrency corrupted `node_modules` (picomatch `parse.fastpaths` / "Class extends undefined" crashes). Fix if it recurs: `npm ci`. `tsc` is slow (~30–60s) on this codebase; be patient, don't assume a hang.

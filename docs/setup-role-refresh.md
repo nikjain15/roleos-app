@@ -1,7 +1,14 @@
-# Plan — recurring role/company freshness loop
+# Recurring role/company freshness loop
 
-Status: **PLAN ONLY** (approved decisions below; nothing built or run yet).
-Author date: 2026-06-28. Owner: Nik.
+> **Status: largely SUPERSEDED — see [`admin-ingestion.md`](admin-ingestion.md).**
+> The freshness loop shipped as the durable Cloudflare **IngestWorkflow** +
+> `roleos-cron` (hourly scan/extract/embed, prune-closed archives to
+> `roles_archive`). The corpus is live and grown to ~1,500+. This doc is retained
+> for the **design rationale** (cadence, lifecycle columns, coverage strategy);
+> the "today's state / gap" section below is historical (pre-Workflow).
+> Still open: a hybrid Ollama-first pass (Claude-only for new/changed JDs) was the
+> planned cost optimization — the shipped version uses Claude `extract_role` for
+> new roles; Ollama first-pass is not wired.
 
 Keeps the live `public.roles` data current: re-scan enabled companies, extract
 new/changed JDs, **detect closed postings**, and expand coverage — on a schedule.
