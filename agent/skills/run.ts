@@ -24,17 +24,38 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
     { skill: skill.id },
   );
 
+  // Shape-repair: a structured skill whose FIRST output doesn't parse into the
+  // expected shape (Sonnet occasionally wraps JSON in prose / code fences / adds
+  // trailing commas) would otherwise be thrown away by the gate, leaving the user
+  // with an empty artifact. One reformat pass — reshape only, invent nothing —
+  // recovers the content before it reaches the gate.
+  let output = text;
+  const repairRuns: (typeof run)[] = [];
+  if (skill.structured && skill.expects && !skill.expects(output)) {
+    const repair = await callModel(
+      "draft",
+      {
+        system:
+          "The text below was meant to be a SINGLE strict JSON object. Return ONLY valid minified JSON: fix syntax (unquoted keys, trailing commas, code fences, surrounding prose) and keep the SAME keys and values. Change nothing, invent nothing. If no JSON object is recoverable, return {}.",
+        prompt: output,
+      },
+      { skill: `${skill.id}:shape-repair` },
+    );
+    repairRuns.push(repair.run);
+    if (skill.expects(repair.text)) output = repair.text;
+  }
+
   const verdict = await runQualityGate({
     skillId: skill.id,
-    output: text,
+    output,
     expects: skill.expects,
     structured: skill.structured,
     skipCritic: skill.gate === "shape_only",
     groundTruth: typeof input.data.groundTruth === "string" ? input.data.groundTruth : undefined,
   });
 
-  // Include the skill's own generation call in the metered runs (for agent_runs).
-  verdict.runs.unshift(run);
+  // Include the skill's own generation call (+ any repair) in the metered runs.
+  verdict.runs.unshift(run, ...repairRuns);
 
   return { skillId: skill.id, verdict };
 }
