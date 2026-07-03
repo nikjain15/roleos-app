@@ -98,7 +98,7 @@
   `app/(app)/layout.tsx` and let the client component **self-hide** on pre-auth routes (`/login`,
   `/onboarding` live inside `(app)`), rather than threading it through each page. For an LLM-suggested
   navigation target, **whitelist the href server-side** — never trust the model's link.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/10
 
 ### Slice 6 — Explore Ask (conversational) + Login polish · 2026-07-03 · branch `slice/6-explore-ask-login`
 - **Built:** fixes the two live-UX complaints — Explore Ask dumped one-shot text; login was flat.
