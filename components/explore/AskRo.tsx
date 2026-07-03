@@ -1,17 +1,25 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import {
+  parseThread,
+  serializeThread,
+  THREAD_STORAGE_KEY,
+  type AskTurn as Turn,
+  type CitedRole as Cited,
+} from "@/lib/explore-thread";
 
 /**
  * Conversational "Ask RO about the Index" (Slice 6 rewrite). Multi-turn: each Q&A
  * stays in a thread, follow-up chips continue the conversation, and cited roles are
  * clickable. Answers are grounded by `/api/explore/ask` (index_qa) — RO never
  * invents. The convert door (share profile → your fit) stays in view.
+ *
+ * W6: the thread persists across page loads (localStorage, browser-only — nothing
+ * server-side for anon visitors; validated on read, capped, clearable).
  */
 type Scope = { company?: string; archetype?: string };
-type Cited = { id: string; company: string; role_title: string };
-type Turn = { q: string; a: string; cited: Cited[]; followups: string[] };
 
 export default function AskRo({
   scope,
@@ -28,6 +36,31 @@ export default function AskRo({
   const [error, setError] = useState<string | null>(null);
   const threadEnd = useRef<HTMLDivElement>(null);
   const about = label ? ` about ${label}` : " about the Index";
+
+  // W6: restore the thread after mount (hydration-safe), persist on change.
+  const [restored, setRestored] = useState(false);
+  useEffect(() => {
+    try {
+      setTurns(parseThread(window.localStorage.getItem(THREAD_STORAGE_KEY)));
+    } catch {
+      /* storage blocked (private mode etc.) — start fresh */
+    }
+    setRestored(true);
+  }, []);
+  useEffect(() => {
+    if (!restored) return;
+    try {
+      if (turns.length === 0) window.localStorage.removeItem(THREAD_STORAGE_KEY);
+      else window.localStorage.setItem(THREAD_STORAGE_KEY, serializeThread(turns));
+    } catch {
+      /* storage full/blocked — the thread just won't persist */
+    }
+  }, [turns, restored]);
+
+  function clearThread() {
+    setTurns([]);
+    setError(null);
+  }
 
   async function ask(question: string) {
     const text = question.trim();
@@ -78,6 +111,14 @@ export default function AskRo({
       {/* Conversation thread */}
       {started && (
         <div className="mt-4 space-y-4">
+          <div className="flex items-center justify-between">
+            <p className="text-[10px] uppercase tracking-wide text-tx3">
+              Your conversation — saved in this browser only
+            </p>
+            <button onClick={clearThread} className="text-[11px] text-tx3 underline hover:text-tx">
+              clear conversation
+            </button>
+          </div>
           {turns.map((t, i) => (
             <div key={i}>
               <p className="text-[13px] font-medium text-tx2">
