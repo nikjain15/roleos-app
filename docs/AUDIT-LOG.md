@@ -91,7 +91,7 @@
   `vitest`/`git`. This checkout was moved to `~/dev/roleos`; the branch was rebuilt via a clean
   clone there. Also: npm's own install hangs under global-cache lock contention — use an isolated
   `--cache <scratch> --no-audit --no-fund`. (Both added to Standing learnings.)
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/2 (base `revamp/journey`)
 
 ### Slice 0 — Résumé never-blank · 2026-07-02 · branch `revamp/journey` (c4a1982)
 - **Built:** shape-repair pass in `agent/skills/run.ts` (reformat malformed structured
