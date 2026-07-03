@@ -92,8 +92,14 @@ export default async function Feed() {
         </span>
         <div className="flex gap-2">
           <Link
-            href="/tracker"
+            href="/roles"
             className="rounded-md border border-info bg-info-bg px-3 py-1.5 text-xs font-medium text-info-tx"
+          >
+            Roles →
+          </Link>
+          <Link
+            href="/tracker"
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
           >
             Tracker →
           </Link>
