@@ -14,6 +14,9 @@ const baseURL = process.env.PW_BASE_URL ?? "http://127.0.0.1:3000";
 export default defineConfig({
   testDir: "./tests/e2e",
   testMatch: "**/*.spec.ts",
+  // The live/ suite (seeded sessions, real Supabase + models) has its own config
+  // (playwright.live.config.ts) — it must NOT run in the fast/CI smoke.
+  testIgnore: "**/live/**",
   fullyParallel: false, // sequential — the repo corrupts under concurrent dev/build load
   workers: 1,
   forbidOnly: !!process.env.CI,

@@ -16,6 +16,7 @@
     "test:watch": "vitest",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
+    "test:e2e:live": "playwright test --config playwright.live.config.ts",
     "invariant:imports": "depcruise agent --config .dependency-cruiser.cjs",
     "seed:roles": "tsx db/seed/seed-roles.ts",
     "seed:embeddings": "tsx db/seed/embed-roles.ts",
