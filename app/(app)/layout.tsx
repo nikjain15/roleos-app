@@ -1,16 +1,17 @@
 import type { ReactNode } from "react";
 import RoDock from "@/components/RoDock";
+import AppNav from "@/components/AppNav";
 
 /**
- * Layout for the authenticated app group — mounts the RO-everywhere dock (Slice 7)
- * on every screen in this group. The dock self-hides on pre-auth surfaces (/login,
- * /onboarding). Kept minimal (no nav chrome — the full app shell is Slice 10) so it
- * doesn't change how existing pages render.
+ * Layout for the authenticated app group (Slice 10) — the single app shell: one nav
+ * (`AppNav`) across every screen + the RO-everywhere dock (Slice 7). Both self-hide
+ * on pre-auth surfaces (/login, /onboarding). `#app-content` is the skip-link target.
  */
 export default function AppGroupLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      {children}
+      <AppNav />
+      <div id="app-content">{children}</div>
       <RoDock />
     </>
   );
