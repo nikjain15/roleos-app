@@ -1,17 +1,33 @@
 import Link from "next/link";
 import type { RoleLite } from "@/lib/explore";
+import type { ExploreFit } from "@/lib/explore-fit";
+import FitBadge from "@/components/explore/FitBadge";
 
 /**
  * Renders a curated-first list of roles (docs/explore-index.md). Seed roles show
  * their extracted depth; thin ingested (`ats`) roles are badged honestly so we
  * never imply a freshly-hunted posting is fully analyzed.
+ *
+ * Fit-on-browse (P0-7): pass the viewer's `fit` overlay (from exploreFitForRoles)
+ * to badge each role with their scored or estimated fit. Omitted/null for anon —
+ * the index renders exactly as before.
  */
-export default function RoleList({ roles }: { roles: RoleLite[] }) {
+export default function RoleList({ roles, fit }: { roles: RoleLite[]; fit?: ExploreFit | null }) {
   if (roles.length === 0) {
     return <p className="text-sm text-tx3">No open roles in the Index here right now.</p>;
   }
   return (
-    <ul className="divide-y divide-bd overflow-hidden rounded-xl border border-bd">
+    <>
+      {fit?.needsProfile && (
+        <p className="mb-3 rounded-lg border border-bd bg-surf2 px-3 py-2 text-xs text-tx2">
+          You&apos;re signed in, but RO doesn&apos;t have your profile yet —{" "}
+          <Link href="/onboarding" className="font-medium text-info hover:underline">
+            finish onboarding
+          </Link>{" "}
+          to see your fit on every role here.
+        </p>
+      )}
+      <ul className="divide-y divide-bd overflow-hidden rounded-xl border border-bd">
       {roles.map((r) => (
         <li key={r.id} className="flex items-center justify-between gap-4 bg-surf px-4 py-3">
           <div className="min-w-0">
@@ -25,6 +41,10 @@ export default function RoleList({ roles }: { roles: RoleLite[] }) {
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-2">
+            {(() => {
+              const f = fit?.byRole.get(r.id);
+              return f ? <FitBadge fit={f} /> : null;
+            })()}
             {r.source === "ats" ? (
               <span className="rounded-full bg-surf2 px-2 py-0.5 text-[10px] text-tx3" title="Freshly hunted from the company board — lighter detail than the curated set">
                 freshly hunted
@@ -37,6 +57,7 @@ export default function RoleList({ roles }: { roles: RoleLite[] }) {
           </div>
         </li>
       ))}
-    </ul>
+      </ul>
+    </>
   );
 }

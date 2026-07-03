@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import ExploreHeader from "@/components/explore/ExploreHeader";
 import AskRo from "@/components/explore/AskRo";
 import { posting } from "@/lib/explore";
+import { exploreFitForRoles } from "@/lib/explore-fit";
+import FitBadge from "@/components/explore/FitBadge";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +20,8 @@ export default async function PostingPage({ params }: { params: Promise<{ id: st
   const { id } = await params;
   const p = await posting(id);
   if (!p) notFound();
+  const fit = await exploreFitForRoles([p.id]); // null for anon — page unchanged (P0-7)
+  const myFit = fit?.byRole.get(p.id);
 
   return (
     <>
@@ -29,7 +33,10 @@ export default async function PostingPage({ params }: { params: Promise<{ id: st
         ]}
       />
       <main className="mx-auto max-w-3xl px-6 py-12">
-        <h1 className="text-2xl font-bold tracking-tight">{p.role_title}</h1>
+        <div className="flex flex-wrap items-center gap-2">
+          <h1 className="text-2xl font-bold tracking-tight">{p.role_title}</h1>
+          {myFit && <FitBadge fit={myFit} />}
+        </div>
         <p className="mt-1 text-sm text-tx2">
           {p.company}
           {p.location?.name ? ` · ${p.location.name}` : ""}

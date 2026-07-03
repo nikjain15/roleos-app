@@ -3,6 +3,7 @@ import ExploreHeader from "@/components/explore/ExploreHeader";
 import AskRo from "@/components/explore/AskRo";
 import RoleList from "@/components/explore/RoleList";
 import { archetypeBySlug, archetypeRoles } from "@/lib/explore";
+import { exploreFitForRoles } from "@/lib/explore-fit";
 
 export const dynamic = "force-dynamic";
 
@@ -19,6 +20,7 @@ export default async function RoleTypePage({ params }: { params: Promise<{ slug:
   const name = await archetypeBySlug(slug);
   if (!name) notFound();
   const roles = await archetypeRoles(name);
+  const fit = await exploreFitForRoles(roles.map((r) => r.id)); // null for anon — index unchanged (P0-7)
   return (
     <>
       <ExploreHeader crumbs={[{ label: "Index", href: "/explore" }, { label: "Role types", href: "/explore/roles" }, { label: name }]} />
@@ -26,7 +28,7 @@ export default async function RoleTypePage({ params }: { params: Promise<{ slug:
         <h1 className="text-2xl font-bold tracking-tight">{name}</h1>
         <p className="mt-1 text-sm text-tx2">{roles.length} open {roles.length === 1 ? "role" : "roles"} of this type in the Index.</p>
         <div className="mt-8">
-          <RoleList roles={roles} />
+          <RoleList roles={roles} fit={fit} />
         </div>
         <AskRo
           scope={{ archetype: name }}

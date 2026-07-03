@@ -19,6 +19,7 @@ const FORBIDDEN = [
   "@/lib/profile-fetcher",
   "@/lib/match",
   "@/lib/run-match",
+  "@/lib/explore-fit",
   "@/agent/registry",
   "@/agent/skills/run",
 ];
