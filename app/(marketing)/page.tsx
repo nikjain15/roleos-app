@@ -40,7 +40,7 @@ export default function Landing() {
         </Link>
       </div>
 
-      <p className="mt-10 font-mono text-xs text-tx3">
+      <p className="mt-10 font-mono text-xs text-tx2">
         Phase 1 foundation · the demo-as-hero arrives in Phase 2
       </p>
     </main>
