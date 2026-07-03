@@ -5,6 +5,7 @@ import { mhText } from "@/lib/explore";
 import { runSkill } from "@/agent/skills/run";
 import indexQa from "@/agent/skills/index_qa";
 import { logAgentRuns } from "@/lib/agent-runs";
+import { suggestFollowups } from "@/lib/followups";
 
 /**
  * Anon "Ask RO about the Index" (docs/explore-index.md Phase 2). PUBLIC — no auth.
@@ -55,8 +56,13 @@ async function contextRoles(question: string, scope: Scope) {
 }
 
 export async function POST(req: Request): Promise<Response> {
-  const body = (await req.json().catch(() => ({}))) as { question?: string; scope?: Scope };
+  const body = (await req.json().catch(() => ({}))) as {
+    question?: string;
+    scope?: Scope;
+    history?: Array<{ q?: string; a?: string }>;
+  };
   const question = (body.question ?? "").trim().slice(0, 500);
+  const history = Array.isArray(body.history) ? body.history.slice(-4) : [];
   if (question.length < 3) {
     return NextResponse.json({ error: "Ask a question about the Index." }, { status: 400 });
   }
@@ -84,12 +90,14 @@ export async function POST(req: Request): Promise<Response> {
     const scopeLabel = body.scope?.company ?? (body.scope?.archetype ? `${body.scope.archetype} roles` : "");
     const { verdict } = await runSkill(indexQa, {
       userId: "anon",
-      data: { question, roles, scopeLabel },
+      data: { question, roles, scopeLabel, history },
     });
     await logAgentRuns(null, verdict.runs, { skill: indexQa.id });
 
     const cited = roles.slice(0, 5).map((r) => ({ id: r.id, company: r.company, role_title: r.role_title }));
-    return NextResponse.json({ answer: verdict.finalOutput, cited });
+    const asked = [...history.map((h) => h.q ?? ""), question];
+    const followups = suggestFollowups(body.scope, cited.length > 0, asked);
+    return NextResponse.json({ answer: verdict.finalOutput, cited, followups });
   } catch (e) {
     return NextResponse.json(
       { error: e instanceof Error ? e.message : "RO couldn't answer that one." },

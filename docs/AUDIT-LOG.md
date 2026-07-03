@@ -52,8 +52,50 @@
   runtime. Keep `Document` construction in a pure lib; do the packing in the route.
 - **ESLint `rules-of-hooks`:** a plain (non-hook) function must NOT be named `use*` — the linter
   treats any `useX` called from a callback as a misused Hook. Name helpers `applyX`/`doX`.
+- **`--tx3` muted-text token now meets WCAG AA** (darkened light `#8d8c85`→`#6b6a63`, lightened dark
+  `#7a786f`→`#928f85`). It failed axe contrast twice (landing, login); fixing the TOKEN fixes every
+  page. `text-tx3` is safe for body/caption text now. The E2E smoke covers `/` **and `/login`** at
+  375/768/1280 + axe, so new contrast regressions on those surfaces fail CI.
 
 ## Slice entries (newest first)
+
+### Slice 6 — Explore Ask (conversational) + Login polish · 2026-07-03 · branch `slice/6-explore-ask-login`
+- **Built:** fixes the two live-UX complaints — Explore Ask dumped one-shot text; login was flat.
+  - **Conversational Explore Ask** (`components/explore/AskRo.tsx` rewrite): multi-turn **thread**
+    (each Q&A stays), **follow-up chips** after every answer, clickable cited roles, auto-scroll.
+    `index_qa` skill now takes prior turns as context (grounding discipline unchanged — ROLES stay
+    the only source of truth); `/api/explore/ask` accepts `history` + returns `followups`.
+  - `lib/followups.ts` (+ 4 tests): pure, deterministic follow-up suggestions (clickable prompts,
+    NOT model-asserted facts — zero invention risk), contextual to scope + whether roles were cited.
+  - **Login polish** (`/login`): brand SVG icons (aria-hidden), "what's waiting" reassurance list,
+    trust line, ≥44px targets, tightened spacing/mobile — same passwordless auth logic.
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean.
+  - **D2/D3** green — 106/106 vitest (+4 followups); live-probed `/api/explore/ask`: too-short → 400,
+    valid+history → 200 (grounded answer + followups end-to-end).
+  - **D4** green — `next build` + `opennextjs-cloudflare build` (`/login`, `/api/explore/ask`).
+  - **D5/D7** green **after fix** — extended the E2E smoke to cover **`/login`** at 375/768/1280 + axe;
+    it **caught a real serious contrast violation** (the `--tx3` muted token failed AA). Fixed the
+    TOKEN app-wide (light `#8d8c85`→`#6b6a63`, dark `#7a786f`→`#928f85`); re-ran → 18/18 green
+    (`/` + `/login`). Login a11y: labelled email, icon buttons named by text, visible focus.
+  - **D6** green — `/login` public (200); `/api/explore/ask` is intentionally anon + **IP rate-limited**
+    (existing design, unchanged); no new auth surface; no-send + no-client-secret green.
+  - **D8** green — no schema change. **D9** green — followups pure; `history` capped (4 turns in, 3
+    sent); ask route already IP-rate-limited + metered to `agent_runs`.
+  - **D10** green — human-gated-outward intact (Explore Ask has no send; `index_qa` grounding
+    preserved); truth gate untouched.
+- **Scenarios run:** public smoke `/` + `/login` ×3 viewports + axe; explore-ask 400/200 live;
+  unit personas for followups (generic, company-scoped, already-asked exclusion, nothing-to-suggest).
+  Prompt-injection: conversation `history` is the user's own prior Q + RO's own grounded A; `index_qa`
+  still answers ONLY from the ROLES block, so injected text can't make RO invent or send.
+- **Deferred (no silent gaps):** (1) persisting the anon conversation across page loads (in-memory
+  per session for now). (2) richer structured answers (inline role links within prose) — kept the
+  cited-roles rail. (3) model-generated (vs deterministic) follow-ups — deterministic is safer/cheaper
+  for anon traffic. (4) authed E2E of the full ask thread — needs the model in CI.
+- **New learnings:** the `--tx3` token now meets AA (see Standing learnings) — fixing the token fixed
+  every page at once. Extending the E2E `PUBLIC_PAGES` list is the cheapest way to lock a11y/responsive
+  regressions on a new public surface.
+- **PR:** <pending>
 
 ### Slice 5 — Roles Workspace (Phase A) · 2026-07-03 · branch `slice/5-roles-workspace`
 - **Built:** the worked shortlist — turns the static match list into a sort/filter/curate surface
