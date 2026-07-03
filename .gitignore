@@ -23,3 +23,9 @@ sandbox/spike/**/node_modules/
 # tsc incremental cache
 tsconfig.tsbuildinfo
 *.tsbuildinfo
+
+# Playwright E2E/a11y artifacts
+/playwright-report/
+/test-results/
+/blob-report/
+/playwright/.cache/
