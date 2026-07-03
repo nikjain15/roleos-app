@@ -10,7 +10,10 @@ import { expectNoSeriousA11y } from "./helpers/axe";
  * server can't serve it, the harness fails loudly here rather than silently
  * passing an empty suite.
  */
-const PUBLIC_PAGES = ["/", "/login", "/explore"];
+// `/` and `/login` need no backend. `/explore` reads the index via the service-role
+// key, which CI's e2e job deliberately doesn't have — so cover it only where secrets
+// are present (local/preview), never asserting it in the no-secret CI run.
+const PUBLIC_PAGES = process.env.CI ? ["/", "/login"] : ["/", "/login", "/explore"];
 
 for (const path of PUBLIC_PAGES) {
   test(`public page ${path} renders without crashing`, async ({ page }) => {
