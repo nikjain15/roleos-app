@@ -80,11 +80,11 @@ export default async function Feed() {
       {/* The spine: goal status + Today agenda (or a set-your-goal CTA) */}
       <GoalCockpit plan={plan} agenda={agenda} />
 
-      <div className="mt-8 flex items-center justify-between gap-2">
+      <div className="mt-8 flex flex-wrap items-center justify-between gap-2">
         <span className="flex items-center gap-2 text-sm text-suc">
           <span className="inline-block h-2 w-2 rounded-full bg-suc" /> RO is working · in the background
         </span>
-        <div className="flex gap-2">
+        <div className="flex flex-wrap gap-2">
           <Link
             href="/roles"
             className="rounded-md border border-info bg-info-bg px-3 py-1.5 text-xs font-medium text-info-tx"
