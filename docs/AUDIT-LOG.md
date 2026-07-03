@@ -91,7 +91,7 @@
   "one nav, every screen" without touching each page; de-dup the page that carried its own primary
   header (feed) to avoid double chrome. Growing the E2E `PUBLIC_PAGES` list is the cheapest durable
   a11y/responsive net for public surfaces.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/13
 
 ### Slice 9 — Proactive pace nudges · 2026-07-03 · branch `slice/9-pace-nudges`
 - **Built:** RO now *proactively* pushes you toward your deadline — strictly inside the wellbeing
