@@ -1,6 +1,16 @@
 import type { NextConfig } from "next";
+import { securityHeaders } from "./lib/security-headers";
 
 const nextConfig: NextConfig = {
+  // H4: CSP + security headers on every route (policy in lib/security-headers).
+  async headers() {
+    return [
+      {
+        source: "/(.*)",
+        headers: securityHeaders(process.env.NEXT_PUBLIC_SUPABASE_URL),
+      },
+    ];
+  },
   // OpenNext on Cloudflare supports the full App Router (SSR, server actions,
   // route handlers) — we deliberately do NOT pin `runtime = 'edge'` per route.
   reactStrictMode: true,

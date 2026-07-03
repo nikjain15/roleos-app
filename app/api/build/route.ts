@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 import { runSkill } from "@/agent/skills/run";
 import { parseModelJson } from "@/lib/json";
@@ -43,8 +45,24 @@ export async function POST(req: Request): Promise<Response> {
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
 
-  const body = (await req.json()) as Record<string, unknown>;
-  const action = body.action as string;
+  const parsed = await validateBody(
+    req,
+    z.object({
+      action: z.enum(["start", "choose_bet", "answer_edge", "build_prototype", "pressure_test", "edit_section", "submit"]),
+      roleId: z.string().uuid().nullable().optional(),
+      sessionId: z.string().uuid().optional(),
+      canvasType: z.string().max(30).optional(),
+      brief: z.string().max(20_000).optional(),
+      angleIndex: z.number().int().min(0).max(20).optional(),
+      customBet: z.string().max(2_000).optional(),
+      answer: z.string().max(8_000).optional(),
+      sectionId: z.string().max(100).optional(),
+      body: z.string().max(20_000).optional(),
+    }),
+  );
+  if (!parsed.ok) return parsed.response;
+  const body: Record<string, unknown> = parsed.data;
+  const action = parsed.data.action;
   const uid = user.id;
 
   // helper: load + persist a build artifact's content (RLS-scoped)
