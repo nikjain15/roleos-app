@@ -16,6 +16,7 @@ export type NotifTier = "push" | "digest" | "in_feed" | "never";
 /** What kind of thing happened. */
 export type NotifKind =
   | "deadline" // interview tomorrow, take-home due, recruiter waiting N days
+  | "pace" // goal-anchored pace nudge (off-track for YOUR deadline) — assertive, never guilt
   | "recruiter_reply" // a human is waiting on you
   | "draft_ready" // RO drafted something for your judgment
   | "new_matches" // RO found roles
