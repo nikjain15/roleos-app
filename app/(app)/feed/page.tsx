@@ -2,7 +2,6 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import SaveOnboarding from "@/components/SaveOnboarding";
-import SignOut from "@/components/SignOut";
 import TailorButton from "@/components/TailorButton";
 import { isAdmin } from "@/lib/admin";
 import DigestCard from "@/components/DigestCard";
@@ -66,23 +65,14 @@ export default async function Feed() {
     <main className="mx-auto max-w-2xl px-6 py-12">
       <SaveOnboarding />
 
-      <div className="flex items-center justify-between">
-        <span className="inline-flex items-center gap-2 text-sm font-semibold">
-          <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">RO</span>
-          RoleOS
-        </span>
-        <div className="flex items-center gap-3">
-          {admin && (
-            <Link href="/admin" className="text-sm text-tx3 hover:text-info">
-              Admin
-            </Link>
-          )}
-          <Link href="/settings" className="text-sm text-tx3 hover:text-info">
-            Settings
+      {/* Primary nav (logo · sections · settings · sign-out) is the app shell's AppNav. */}
+      {admin && (
+        <div className="flex justify-end">
+          <Link href="/admin" className="text-xs text-tx3 hover:text-info">
+            Admin →
           </Link>
-          <SignOut />
         </div>
-      </div>
+      )}
 
       {/* Proactive, wellbeing-gated pace nudge (only when off-pace) */}
       <PaceNudgeCard />

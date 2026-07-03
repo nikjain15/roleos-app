@@ -59,6 +59,40 @@
 
 ## Slice entries (newest first)
 
+### Slice 10 — App shell + responsive/a11y pass · 2026-07-03 · branch `slice/10-app-shell`
+- **Built:** one consistent nav across every authenticated screen + a broader a11y/responsive net.
+  - `components/AppNav.tsx`: the single app shell nav (Feed · Goal · Roles · Tracker · Explore +
+    Settings + Sign out), wiring the Slice-T scaffold with live `aria-current` active state, a skip
+    link, sticky header, horizontal-scroll nav on mobile (body never scrolls), ≥44px targets.
+    Self-hides on `/login` + `/onboarding`. Mounted in `app/(app)/layout.tsx` (with the `#app-content`
+    skip target + the Slice-7 dock).
+  - De-duplicated the feed's own header (logo + Settings + Sign-out now live in `AppNav`; kept the
+    admin link). Other pages keep their contextual "← back" affordance.
+  - Extended the E2E smoke to also cover **`/explore`** at 375/768/1280 + axe (public index).
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean (dropped the feed's now-unused `SignOut` import).
+  - **D2/D3** green — 117/117 vitest.
+  - **D4** green — `next build` + `opennextjs-cloudflare build`.
+  - **D5/D7** green — **E2E/axe 27/27**: `/` + `/login` + `/explore`, each at 3 viewports, render +
+    no-horizontal-overflow + 0 serious/critical axe. `/login` still passes with the nav **self-hidden**
+    there (verified). Nav a11y: semantic `<nav>`, `aria-current`, skip link, keyboard-usable.
+  - **D6** green — nav is client-side; routes stay middleware-gated (unchanged). no-send +
+    no-client-secret green.
+  - **D8** green — no migration. **D9** green — no new queries (nav is static links; `usePathname`).
+  - **D10** green — human-gated + truth gate untouched; guardrails intact.
+- **Scenarios run:** public smoke `/` + `/login` + `/explore` ×3 viewports + axe; nav self-hide on
+  `/login` confirmed; mobile horizontal-scroll nav without body overflow.
+- **Deferred (no silent gaps):** (1) authed-screen E2E of the nav (active state, dock) — needs a seeded
+  session; the harness is ready and the public surfaces are fully covered. (2) collapsing the remaining
+  per-page "← back" links into the shell (kept as contextual back for now). (3) a bottom tab bar on
+  mobile (the scrollable top nav is the v1). (4) full contrast audit of authed-only screens beyond the
+  by-construction tokens (the token-level AA fix from Slice 6 covers muted text app-wide).
+- **New learnings:** mounting one nav in `app/(app)/layout.tsx` + self-hiding on pre-auth routes gives
+  "one nav, every screen" without touching each page; de-dup the page that carried its own primary
+  header (feed) to avoid double chrome. Growing the E2E `PUBLIC_PAGES` list is the cheapest durable
+  a11y/responsive net for public surfaces.
+- **PR:** <pending>
+
 ### Slice 9 — Proactive pace nudges · 2026-07-03 · branch `slice/9-pace-nudges`
 - **Built:** RO now *proactively* pushes you toward your deadline — strictly inside the wellbeing
   rule (goal-engine §8): assertive about YOUR pace, never guilt/streaks/inactivity.
