@@ -95,7 +95,7 @@
 - **New learnings:** the `--tx3` token now meets AA (see Standing learnings) — fixing the token fixed
   every page at once. Extending the E2E `PUBLIC_PAGES` list is the cheapest way to lock a11y/responsive
   regressions on a new public surface.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/9
 
 ### Slice 5 — Roles Workspace (Phase A) · 2026-07-03 · branch `slice/5-roles-workspace`
 - **Built:** the worked shortlist — turns the static match list into a sort/filter/curate surface
