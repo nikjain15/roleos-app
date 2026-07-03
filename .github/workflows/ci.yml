@@ -23,3 +23,25 @@ jobs:
         run: npm run invariant:imports
       - name: Tests (incl. no-send invariant + guardrails)
         run: npm test
+
+  e2e:
+    # D2/D3/D5/D7 harness — E2E persona flows, responsive, and axe a11y.
+    # Separate job (own runner) so it never runs concurrently with the tsc/vitest
+    # `check` job on the same node_modules (the repo corrupts under that).
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Install Playwright browser (chromium)
+        run: npx playwright install --with-deps chromium
+      - name: E2E + a11y (Playwright)
+        run: npm run test:e2e
+        env:
+          # Public-page smoke needs no secrets; persona flows that need Supabase/
+          # Anthropic are guarded to skip (and logged) until secrets are wired in CI.
+          NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
