@@ -100,7 +100,7 @@
   about uncertainty** (null inference + low confidence when it hasn't seen enough) rather than an LLM
   guessing — cheaper, no hallucination, and the "still learning" state is itself honest UX. User
   corrections overlay at read time so a cache refresh never clobbers them.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/11
 
 ### Slice 7 — RO-everywhere dock · 2026-07-03 · branch `slice/7-ro-dock`
 - **Built:** an ask/act layer on every authenticated screen — RO answers about YOUR hunt, grounded
