@@ -68,10 +68,11 @@
     untouched `admin`/`dispatch` files, not introduced here); `depcruise` 0 violations (35 modules).
   - **D2/D3** green — 63/63 vitest incl. new `validate` (4); E2E smoke: public `/` renders (status
     < 500, body visible), harness fails loudly on empty suite rather than silently passing.
-  - **D4** deferred (justified) — slice adds **no Workers-runtime code** (`validate.ts` uses only
-    `NextResponse`+`zod`, edge-safe; `AppShell` is RSC-safe `next/link`; `docx` not yet imported;
-    Playwright/axe are devDeps, never bundled). Full `opennextjs-cloudflare build` boot smoke
-    deferred to the first slice that ships a route (also avoids the `.dev.vars` deploy-token trap).
+  - **D4** green — `next build` compiled all routes with the slice's additions, then
+    `opennextjs-cloudflare build` produced the Workers bundle (`.open-next/worker.js`) with no
+    node-only-API breakage. (Ran with `.dev.vars` moved aside to dodge the deploy-token trap, then
+    restored — the build needs no runtime secrets.) `validate.ts` is edge-safe (`NextResponse`+`zod`);
+    `AppShell` is RSC-safe; `docx` not yet imported; Playwright/axe are devDeps, never bundled.
   - **D5** green — no horizontal overflow at 375/768/1280 on `/`.
   - **D6** green — `no-send-tool` + `no-client-secret-imports` invariants pass; `validate.ts` fails
     closed; `.env.local`/`.dev.vars` copied locally for the audit are gitignored (not committed).
@@ -83,9 +84,9 @@
 - **Scenarios run:** public-landing render + responsive (375/768/1280) + axe a11y; unit personas via
   existing suite. Persona/edge/RLS/injection E2E specs are now *possible* on this harness and land
   with the feature slices that own those surfaces (Slice T ships no user-data route to probe).
-- **Deferred (no silent gaps):** (1) `opennextjs-cloudflare` boot smoke → first route-shipping slice;
-  (2) live-render/a11y of `AppShell` → the slice that mounts it; (3) CI E2E persona flows needing
-  Supabase/Anthropic secrets → when those secrets are added to CI (job is wired, secrets optional).
+- **Deferred (no silent gaps):** (1) live-render/a11y of `AppShell` → the slice that mounts it;
+  (2) CI E2E persona flows needing Supabase/Anthropic secrets → when those secrets are added to CI
+  (job is wired, secrets optional). [D4 Workers boot smoke — previously deferred — now run & green.]
 - **New learnings:** **the repo must live OUTSIDE iCloud-synced `~/Documents`** — a fresh
   `node_modules` triggers a `fileproviderd` sync storm (load avg → 40+) that hangs `npm`/`tsc`/
   `vitest`/`git`. This checkout was moved to `~/dev/roleos`; the branch was rebuilt via a clean
