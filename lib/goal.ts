@@ -1,7 +1,8 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { computePlan } from "@/lib/plan/plan";
 import { computeRates } from "@/lib/plan/rates";
-import type { Goal as EngineGoal, Plan } from "@/lib/plan/types";
+import { observedFromApplications, type AppLike } from "@/lib/plan/observed";
+import type { Goal as EngineGoal, Plan, Rates } from "@/lib/plan/types";
 
 /**
  * Server-side goal loading + plan compute (the DB-touching seam; the pure engine
@@ -9,9 +10,9 @@ import type { Goal as EngineGoal, Plan } from "@/lib/plan/types";
  * their shortlist, and computes the pace/plan. RLS-scoped: every read is the
  * caller's own rows.
  *
- * Rates are priors for now (the tracker's real conversions arrive in Slice 3 — the
- * `applications` table); when it lands, derive `observed` here and pass it to
- * `computeRates`. Deterministic input `today` is passed by the caller.
+ * Rates blend priors with the user's REAL conversions from the tracker
+ * (`applications.stage_history`, dimension 14). Deterministic input `today` is
+ * passed by the caller.
  */
 export interface GoalRow {
   id: string;
@@ -41,7 +42,7 @@ export async function liveSupply(supabase: SupabaseClient): Promise<number> {
   return count ?? 0;
 }
 
-export function planFor(goal: GoalRow, supply: number, today = todayISO()): Plan {
+export function planFor(goal: GoalRow, supply: number, rates?: Rates, today = todayISO()): Plan {
   return computePlan(
     {
       target: goal.target ?? undefined,
@@ -49,8 +50,27 @@ export function planFor(goal: GoalRow, supply: number, today = todayISO()): Plan
       deadline_hard: goal.deadline_hard,
       intensity: goal.intensity ?? undefined,
     },
-    { today, liveSupply: supply, rates: computeRates() },
+    { today, liveSupply: supply, rates: rates ?? computeRates() },
   );
+}
+
+/** Blended rates from the user's real application funnel (falls back to priors). */
+export async function ratesFromTracker(supabase: SupabaseClient): Promise<Rates> {
+  const { data } = await supabase
+    .from("applications")
+    .select("stage, stage_history")
+    .returns<AppLike[]>();
+  return computeRates(observedFromApplications(data ?? []));
+}
+
+/** Applications sent (reached 'applied') in the last 7 days — for agenda pacing. */
+export async function appsThisWeek(supabase: SupabaseClient, today = todayISO()): Promise<number> {
+  const weekAgo = new Date(new Date(today).getTime() - 7 * 86_400_000).toISOString();
+  const { count } = await supabase
+    .from("applications")
+    .select("id", { count: "exact", head: true })
+    .gte("sent_at", weekAgo);
+  return count ?? 0;
 }
 
 /** The active goal + its (freshly computed) plan, or nulls when no goal is set. */
@@ -63,6 +83,6 @@ export async function loadActiveGoal(
     .eq("status", "active")
     .maybeSingle<GoalRow>();
   if (!goal) return { goal: null, plan: null };
-  const supply = await liveSupply(supabase);
-  return { goal, plan: planFor(goal, supply) };
+  const [supply, rates] = await Promise.all([liveSupply(supabase), ratesFromTracker(supabase)]);
+  return { goal, plan: planFor(goal, supply, rates) };
 }

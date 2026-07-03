@@ -8,7 +8,7 @@ import { isAdmin } from "@/lib/admin";
 import DigestCard from "@/components/DigestCard";
 import RematchButton from "@/components/RematchButton";
 import GoalCockpit from "@/components/GoalCockpit";
-import { loadActiveGoal } from "@/lib/goal";
+import { loadActiveGoal, appsThisWeek } from "@/lib/goal";
 import { computeAgenda } from "@/lib/plan/agenda";
 
 /**
@@ -51,12 +51,13 @@ export default async function Feed() {
     .from("artifacts")
     .select("id", { count: "exact", head: true })
     .eq("status", "approved");
+  const sentThisWeek = plan ? await appsThisWeek(supabase) : 0;
   const agenda = plan
     ? computeAgenda({
         plan,
         pursueRoles: pursue.length,
         readyArtifacts: readyCount ?? 0,
-        appsThisWeek: 0, // real sent-count arrives with the tracker (Slice 3)
+        appsThisWeek: sentThisWeek,
       })
     : [];
 
@@ -91,8 +92,14 @@ export default async function Feed() {
         </span>
         <div className="flex gap-2">
           <Link
-            href="/watch"
+            href="/tracker"
             className="rounded-md border border-info bg-info-bg px-3 py-1.5 text-xs font-medium text-info-tx"
+          >
+            Tracker →
+          </Link>
+          <Link
+            href="/watch"
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2"
           >
             Keep me in the loop →
           </Link>

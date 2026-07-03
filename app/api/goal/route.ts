@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { supabaseServer } from "@/lib/supabase/server";
 import { validateBody } from "@/lib/validate";
-import { liveSupply, planFor, todayISO, type GoalRow } from "@/lib/goal";
+import { liveSupply, planFor, ratesFromTracker, todayISO, type GoalRow } from "@/lib/goal";
 
 export const dynamic = "force-dynamic";
 
@@ -96,8 +96,8 @@ export async function POST(req: Request): Promise<Response> {
   // Recompute + cache the plan on the row.
   const { data: goal } = await supabase.from("goals").select("*").eq("id", goalId).single<GoalRow>();
   if (!goal) return NextResponse.json({ error: "not found" }, { status: 404 });
-  const supply = await liveSupply(supabase);
-  const plan = planFor(goal, supply, todayISO());
+  const [supply, rates] = await Promise.all([liveSupply(supabase), ratesFromTracker(supabase)]);
+  const plan = planFor(goal, supply, rates, todayISO());
   await supabase
     .from("goals")
     .update({ plan, computed_at: new Date().toISOString() })
