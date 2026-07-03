@@ -47,8 +47,8 @@ function roleLabel(r: MatchRow["roles"]): string {
 export async function buildDigestState(userId: string) {
   const db = supabaseService();
   const [{ data: matches }, { data: artifacts }] = await Promise.all([
-    db.from("matches").select("recommendation, status, roles(company, role_title)").eq("user_id", userId),
-    db.from("artifacts").select("type, status").eq("user_id", userId),
+    db.from("matches").select("recommendation, status, roles(company, role_title)").eq("user_id", userId).limit(500),
+    db.from("artifacts").select("type, status").eq("user_id", userId).limit(500),
   ]);
   const m = (matches ?? []) as MatchRow[];
   const arts = (artifacts ?? []) as ArtRow[];

@@ -65,6 +65,37 @@
 
 ## Slice entries (newest first)
 
+### H5 · Performance/scale pass (caps · caching · cost alerting) · 2026-07-03 · branch `v2/h5-perf-scale`
+- **Built:**
+  - **Index review (D9):** inventoried every pg index on live — coverage is already right
+    (roles company/archetype/source, agent_runs created, matches/applications/artifacts user
+    composites, HNSW ANN). **No new indexes needed → no migration**; the review itself is the
+    deliverable.
+  - **Pagination caps** on every previously unbounded read: feed matches (100), tracker apps
+    (300) + trackable (200), roles board (500), digest matches/artifacts (500 each), goal-rates
+    applications (500), admin demand intents (1000). No page renders an unbounded scan anymore.
+  - **Caching:** `public_index_stats` (identical for every visitor, ran per anonymous hit) now
+    goes through `unstable_cache` with a 5-minute revalidate — role lists and postings stay
+    per-request fresh; only the rollup is cached.
+  - **Cost-budget alerting:** `lib/cost-budget.ts` — `COST_BUDGET_DAILY_USD` env (default $25),
+    pure `budgetLevel` (warn at 80%, exceeded at 100%), throttled best-effort 24h-spend check
+    wired into `logAgentRuns` (every metered call path). Emits structured `cost_budget.warn|
+    exceeded` console lines Workers Logs can alert on. Never throws, never blocks a user.
+- **Audit:** D1 green. D2/D3 green — +2 vitest (threshold boundaries at 80/100%, env fallback on
+  junk/zero/unset) + 1 live E2E (a 60-match heavy user gets an intact board + feed — the caps
+  don't truncate into a broken state). D4 green (opennextjs; unstable_cache backed by the
+  incremental cache). D5/D7 green — no UI change; full a11y sweep re-ran green. D6 green —
+  cost-budget lib is server-only (added to the no-client-secret list). D8 green — no migration.
+  D9 green — the slice. D10 green — invariants green.
+- **Test-count ratchet:** vitest 138→140 · live E2E 35→36 run · public 27→27 · scenarios +1.
+- **Deferrals (no silent gaps):** (1) true keyset pagination UIs when a real user exceeds the
+  caps (500 matches is ~60× current usage); (2) `rate_events`/`index_ask_events` retention cron
+  (weekly delete >7d — one-liner once the cron surface is touched next); (3) admin Ops tile for
+  budget level (H1's card owns that surface — one-line addition post-merge).
+- **Learnings:** check `pg_indexes` BEFORE writing an index migration — this codebase had already
+  indexed every hot path, and the honest deliverable was caps + caching, not redundant DDL.
+  `unstable_cache` is the right tool for anonymous-identical aggregates on OpenNext; keep
+  per-user reads out of it entirely.
 ### H4 · Security pass (CSP · audit gate · zod sweep · rotation runbook) · 2026-07-03 · branch `v2/h4-security-pass`
 - **Built:**
   - **CSP + security headers** on every route: `lib/security-headers.ts` (pure, unit-tested) wired
@@ -100,7 +131,6 @@
   headers silently vanish if the adapter changes; the E2E proves they're served. For
   action-dispatch routes, a zod enum on `action` is the cheapest high-value guard: hostile verbs
   die at 400 before any DB or model work.
-
 ### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 ### H3 · Rate-limiting + abuse guards on public/AI routes · 2026-07-03 · branch `v2/h3-rate-limiting`
 - **Built:** the index-ask pattern generalized to every model-calling route.

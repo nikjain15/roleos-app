@@ -1,4 +1,5 @@
 import { supabaseService } from "@/lib/supabase/service";
+import { checkCostBudget } from "@/lib/cost-budget";
 import type { AgentRunRecord } from "@/agent/registry";
 import type { GateVerdict } from "@/agent/quality-gate";
 
@@ -33,6 +34,7 @@ export async function logAgentRuns(
       judge_verdict,
     }));
     await db.from("agent_runs").insert(rows);
+    await checkCostBudget(); // H5: rolling-24h budget alert (throttled, never throws)
   } catch {
     /* never block the user on telemetry */
   }

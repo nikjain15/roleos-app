@@ -38,6 +38,7 @@ export default async function Feed() {
   const { data: matches } = await supabase
     .from("matches")
     .select("role_id, fit_score, recommendation, reasoning, status, roles(company, role_title, url)")
+    .limit(100)
     .order("fit_score", { ascending: false })
     .returns<MatchRow[]>();
 

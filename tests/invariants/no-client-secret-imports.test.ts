@@ -16,6 +16,7 @@ const FORBIDDEN = [
   "@/lib/google",
   "@/lib/digest",
   "@/lib/agent-runs",
+  "@/lib/cost-budget",
   "@/lib/profile-fetcher",
   "@/lib/match",
   "@/lib/run-match",
