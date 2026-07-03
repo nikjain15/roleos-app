@@ -153,6 +153,38 @@ export async function seedArtifact(
   return data!.id;
 }
 
+/** A drafted cover-letter artifact (slice W2). */
+export async function seedCoverArtifact(
+  db: SupabaseClient,
+  userId: string,
+  roleId: string,
+  opts: { status?: string; subject?: string; body?: string; violations?: string[] } = {},
+): Promise<string> {
+  const { data } = await db
+    .from("artifacts")
+    .insert({
+      user_id: userId,
+      role_id: roleId,
+      type: "cover",
+      content: {
+        subject: opts.subject ?? "Application — a real drafted subject",
+        body:
+          opts.body ??
+          "Dear team,\n\nA real drafted cover letter grounded in the profile.\n\nBest,\nThe Candidate",
+        angle: "payments depth",
+        truth_note: "",
+      },
+      provenance: {
+        gate_status: opts.violations?.length ? "needs_your_eyes" : "passed",
+        truth: { ok: !(opts.violations?.length), violations: opts.violations ?? [] },
+      },
+      status: opts.status ?? "approved",
+    })
+    .select("id")
+    .single<{ id: string }>();
+  return data!.id;
+}
+
 export async function seedApplication(
   db: SupabaseClient,
   userId: string,

@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
-import { buildApplyBundle } from "@/lib/apply";
+import { buildApplyBundle, type ApplyCover } from "@/lib/apply";
 import ApplyPanel from "@/components/ApplyPanel";
+import CoverLetterCard, { type CoverArtifact } from "@/components/CoverLetterCard";
 
 /**
  * Apply / Send (Slice 4) — the human-gated outward step. RO composes the bundle
@@ -42,9 +43,46 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
     (user.user_metadata?.full_name as string | undefined) ??
     undefined;
 
+  // Latest drafted cover letter for this role (W2). An APPROVED one replaces
+  // the template in the bundle; anything else renders for review/edit/approve.
+  let coverArt: CoverArtifact | null = null;
+  if (artifact.role_id) {
+    const { data: c } = await supabase
+      .from("artifacts")
+      .select("id, status, content, provenance")
+      .eq("role_id", artifact.role_id)
+      .eq("type", "cover")
+      .order("created_at", { ascending: false })
+      .limit(1)
+      .maybeSingle<{
+        id: string;
+        status: string;
+        content: Record<string, unknown>;
+        provenance: Record<string, unknown> | null;
+      }>();
+    if (c) {
+      const truth = (c.provenance?.truth ?? null) as { ok?: boolean; violations?: unknown[] } | null;
+      coverArt = {
+        id: c.id,
+        status: c.status,
+        subject: typeof c.content?.subject === "string" ? c.content.subject : "",
+        body: typeof c.content?.body === "string" ? c.content.body : "",
+        angle: typeof c.content?.angle === "string" ? c.content.angle : null,
+        truthFlags:
+          c.status !== "approved" && truth && truth.ok === false && Array.isArray(truth.violations)
+            ? truth.violations.map((v) => String(v))
+            : [],
+      };
+    }
+  }
+  const approvedCover: ApplyCover | null =
+    coverArt && coverArt.status === "approved" && coverArt.body
+      ? { subject: coverArt.subject, body: coverArt.body }
+      : null;
+
   const approved = artifact.status === "approved";
   const bundle = approved
-    ? buildApplyBundle(artifact.content ?? {}, artifact.roles ?? {}, name)
+    ? buildApplyBundle(artifact.content ?? {}, artifact.roles ?? {}, name, approvedCover)
     : null;
 
   return (
@@ -73,7 +111,10 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
           </Link>
         </div>
       ) : (
-        <ApplyPanel artifactId={artifact.id} bundle={bundle} roleLabel={roleLabel} />
+        <div className="space-y-5">
+          {artifact.role_id && <CoverLetterCard roleId={artifact.role_id} cover={coverArt} />}
+          <ApplyPanel artifactId={artifact.id} bundle={bundle} roleLabel={roleLabel} />
+        </div>
       )}
     </main>
   );

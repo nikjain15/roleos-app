@@ -22,6 +22,7 @@ test.describe("API authz: unauthenticated is rejected", () => {
     ["/api/taste", "post", { dimension: 1, confirmed: true }],
     ["/api/ro/ask", "post", { question: "hi" }],
     ["/api/apply", "post", { artifactId: UUID }],
+    ["/api/cover", "post", { roleId: UUID }],
     [`/api/artifact/${UUID}/edit`, "patch", { content: {} }],
     [`/api/artifact/${UUID}/reground`, "post", { bulletIndex: 0 }],
     [`/api/artifact/${UUID}/export?format=docx`, "get"],
@@ -53,6 +54,7 @@ test.describe("API validation: a malformed body is 400, never 500", () => {
     ["/api/ro/ask", "post", { question: "" }],
     ["/api/taste", "post", { dimension: 99, confirmed: true }],
     ["/api/apply", "post", {}],
+    ["/api/cover", "post", { roleId: "not-a-uuid" }],
   ];
 
   for (const [path, method, body] of cases) {
