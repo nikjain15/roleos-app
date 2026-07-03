@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 
 /**
@@ -30,8 +32,17 @@ export async function POST(req: Request): Promise<Response> {
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
 
-  const body = (await req.json()) as SaveBody;
-  if (!body.profile) return NextResponse.json({ error: "nothing to save" }, { status: 400 });
+  const parsed = await validateBody(
+    req,
+    z.object({
+      profile: z.string().min(1, "nothing to save").max(200_000),
+      mirror: z.unknown().optional(),
+      linkedin_url: z.string().max(300).nullable().optional(),
+      matches: z.array(z.record(z.string(), z.unknown())).max(50).optional(),
+    }),
+  );
+  if (!parsed.ok) return parsed.response;
+  const body = parsed.data as unknown as SaveBody;
 
   // master_profile (projection) — the living source of truth starts here.
   const { error: mpErr } = await supabase.from("master_profile").upsert(

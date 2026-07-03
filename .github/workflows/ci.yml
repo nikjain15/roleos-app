@@ -23,6 +23,8 @@ jobs:
         run: npm run invariant:imports
       - name: Tests (incl. no-send invariant + guardrails)
         run: npm test
+      - name: Dependency audit (H4 gate — fail on high/critical in prod deps)
+        run: npm audit --omit=dev --audit-level=high
 
   e2e:
     # D2/D3/D5/D7 harness — E2E persona flows, responsive, and axe a11y.

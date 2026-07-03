@@ -21,7 +21,8 @@
     "invariant:imports": "depcruise agent --config .dependency-cruiser.cjs",
     "seed:roles": "tsx db/seed/seed-roles.ts",
     "seed:embeddings": "tsx db/seed/embed-roles.ts",
-    "check": "npm run typecheck && npm run lint && npm run invariant:imports && npm run test"
+    "check": "npm run typecheck && npm run lint && npm run invariant:imports && npm run test",
+    "audit:high": "npm audit --omit=dev --audit-level=high"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.68.0",
