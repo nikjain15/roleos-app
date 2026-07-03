@@ -1,9 +1,10 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useMemo, useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 import TailorButton from "@/components/TailorButton";
 import { curate, type SortKey, type Verdict, type WorkspaceRole } from "@/lib/workspace";
+import { parseWorkspaceParams } from "@/lib/dock-acts";
 
 /**
  * The Roles Workspace board (Slice 5). Sort + filter over the already-reasoned
@@ -27,6 +28,19 @@ export default function RolesWorkspace({ initial }: { initial: WorkspaceRole[] }
   const [company, setCompany] = useState("");
   const [location, setLocation] = useState("");
   const [remoteOnly, setRemoteOnly] = useState(false);
+
+  // Filter-this-view (W3): the RO dock proposes a sanitized /roles?… link; when
+  // the user clicks it the params land here and the board filters IN PLACE.
+  const searchParams = useSearchParams();
+  useEffect(() => {
+    const { filters, sort: s } = parseWorkspaceParams(new URLSearchParams(searchParams.toString()));
+    if (filters.verdict !== undefined) setVerdict(filters.verdict);
+    if (filters.company !== undefined) setCompany(filters.company);
+    if (filters.location !== undefined) setLocation(filters.location);
+    if (filters.remoteOnly !== undefined) setRemoteOnly(filters.remoteOnly);
+    if (s) setSort(s);
+  }, [searchParams]);
+
   const [expanded, setExpanded] = useState<string | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [refreshing, setRefreshing] = useState(false);
