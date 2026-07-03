@@ -65,7 +65,7 @@
 
 ## Slice entries (newest first)
 
-### Live E2E harness (post-board) · 2026-07-03 · branch `chore/e2e-live-harness`
+### Live E2E harness (post-board) · 2026-07-03 · branch `chore/e2e-live-harness` · PR #15
 - **Built:** the seeded-session live E2E suite (`tests/e2e/live/`, `playwright.live.config.ts`,
   `npm run test:e2e:live`) that drives the AUTHENTICATED app against real Supabase — covering the
   scenario library CI can't: **persona happy-path, edge/negative states, cross-user RLS, prompt-
