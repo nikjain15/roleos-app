@@ -65,6 +65,41 @@
 
 ## Slice entries (newest first)
 
+### W7 · Goal switching UI + "also open to" wiring (multi-goal-lite) · 2026-07-03 · branch `v2/w7-goal-switching`
+- **Built:** Phase W's last slice.
+  - **Multi-goal-lite:** `POST /api/goal` gains `save_as_new` (parks the active goal as a paused
+    alternate, inserts the new active); new `PATCH /api/goal` `{goalId, action: activate|pause|
+    archive}` — activation parks the current active (the one-active partial-unique invariant
+    holds), recomputes + caches the plan, and writes an append-only `decision_event`. GoalSetter
+    gains the "save as a new goal" checkbox; new `GoalSwitcher` lists alternates (≤10) with
+    switch/archive on `/goal`.
+  - **"Also open to" deeper wiring:** pure `goalQueryTexts(goal)` (target phrase + ≤3 domain
+    fan-outs + also_open_to text, truncated/deduped) → `matchProfile(…, extraQueries)` →
+    `recomputeMatchesForUser` reads the ACTIVE goal and widens recall with it. Switching goals now
+    genuinely re-aims sourcing on the next rematch, not just the pace numbers.
+- **Audit:** D1 green. D2/D3 green — +4 vitest (target phrase + widener, domain fan-out cap, junk/
+  empty/naked-domain honesty, dedupe + truncation) + 3 live E2E (save_as_new → exactly one active,
+  activate swaps back with plan recomputed, archive lands; goal-page UI switch on click; cross-user
+  RLS probe: A PATCHing B's goal → 404, B untouched) + 2 contract rows (PATCH 401, bogus action
+  400). D4 green (opennextjs). D5/D7 green — labelled checkbox/buttons; `/goal` in the a11y sweep.
+  D6 green — zod on PATCH; RLS-scoped everywhere; the switch endpoint can only touch own rows.
+  D8 green — NO migration (`goals.status` + partial-unique index were built for this). D9 green —
+  bounded reads (≤10 alternates); the extra recall queries stay inside the existing 7-query cap
+  (one embed call each). D10 green — invariants green; switching sends nothing.
+- **Test-count ratchet:** vitest 138→142 · live E2E 35→40 run · public 27→27 · scenarios +3.
+- **Deferrals (no silent gaps):** (1) auto-rematch on switch — deliberate: recompute costs model
+  calls, so the workspace's explicit "↻ refresh matches" stays the trigger (the switcher copy says
+  exactly that); (2) per-goal shortlist separation (matches are goal-agnostic rows today — true
+  multi-goal shortlists are a bigger product call); (3) "achieved" celebration flow.
+- **Learnings:** the one-active partial-unique index makes switching a two-step (park, then
+  activate) — do the park with `.eq("status","active")` (not by id) so it's idempotent even if
+  state drifted. Placeholder/hint copy ("e.g. Senior AI Product Manager") collides with real data
+  in tests — `{ exact: true }` or scope to the container.
+
+**Phase W complete** — W1–W7 all queued as PRs #18–#24. Next: Phase H (H1 observability first).
+
+### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
 ### W6 · Persist anon Explore conversation across page loads · 2026-07-03 · branch `v2/w6-anon-explore-convo`
 - **Built:** the Ask-RO thread on `/explore` now survives page loads and navigation for anon
   visitors. `lib/explore-thread.ts` (pure): validated `parseThread` (localStorage is untrusted —
@@ -268,8 +303,7 @@
   ANN index. `&nbsp;` in JSX badge text breaks Playwright text matchers (and real-user search) —
   prefer plain spaces inside a nowrap span. Supabase Management API `POST /v1/projects/:ref/database/query`
   (with `SUPABASE_ACCESS_TOKEN` from `.dev.vars`) is the working recipe for applying migrations —
-  the us-east pooler DSN in older notes 404s the tenant.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
-  roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
+  the us-east pooler DSN in older notes 404s the tenant.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/  roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
   issues.** All 14 deploys succeeded; migrations 0010–0012 live. Committed as a repeatable
   `prod.spec.ts` / `npm run test:e2e:prod`.
 - **New coverage (live suite, 35 tests total):** `a11y-sweep` (every authed screen @375px + axe),

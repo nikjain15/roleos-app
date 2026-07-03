@@ -47,6 +47,14 @@ const GoalSchema = z.object({
     .nullable()
     .optional(),
   also_open_to: z.record(z.string(), z.unknown()).nullable().optional(),
+  // W7 multi-goal-lite: keep the current active goal as a paused alternate and
+  // create this as the new active goal, instead of editing in place.
+  save_as_new: z.boolean().optional(),
+});
+
+const SwitchSchema = z.object({
+  goalId: z.string().uuid(),
+  action: z.enum(["activate", "pause", "archive"]),
 });
 
 export async function POST(req: Request): Promise<Response> {
@@ -80,6 +88,15 @@ export async function POST(req: Request): Promise<Response> {
   };
 
   let goalId = existing?.id ?? null;
+  if (goalId && input.save_as_new) {
+    // W7: park the current active goal as an alternate, then insert the new one.
+    const { error: pauseErr } = await supabase
+      .from("goals")
+      .update({ status: "paused", updated_at: new Date().toISOString() })
+      .eq("id", goalId);
+    if (pauseErr) return NextResponse.json({ error: "save failed" }, { status: 500 });
+    goalId = null;
+  }
   if (goalId) {
     const { error } = await supabase.from("goals").update(row).eq("id", goalId);
     if (error) return NextResponse.json({ error: "save failed" }, { status: 500 });
@@ -114,4 +131,70 @@ export async function POST(req: Request): Promise<Response> {
   });
 
   return NextResponse.json({ ok: true, goal: { ...goal, plan }, plan });
+}
+
+/**
+ * W7 — goal switching. Activate a paused/archived goal (parking the current
+ * active one), or pause/archive any goal. Activation recomputes the plan so
+ * the feed/pace re-aim immediately; sourcing re-aims on the next rematch.
+ */
+export async function PATCH(req: Request): Promise<Response> {
+  const supabase = await supabaseServer();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
+
+  const parsed = await validateBody(req, SwitchSchema);
+  if (!parsed.ok) return parsed.response;
+  const { goalId, action } = parsed.data;
+
+  const { data: target } = await supabase.from("goals").select("*").eq("id", goalId).maybeSingle<GoalRow>();
+  if (!target) return NextResponse.json({ error: "no such goal" }, { status: 404 });
+
+  const now = new Date().toISOString();
+
+  if (action === "activate") {
+    if (target.status !== "active") {
+      // Park the current active first (the partial-unique index allows one).
+      const { error: parkErr } = await supabase
+        .from("goals")
+        .update({ status: "paused", updated_at: now })
+        .eq("status", "active");
+      if (parkErr) return NextResponse.json({ error: "switch failed" }, { status: 500 });
+      const { error: actErr } = await supabase
+        .from("goals")
+        .update({ status: "active", updated_at: now })
+        .eq("id", goalId);
+      if (actErr) return NextResponse.json({ error: "switch failed" }, { status: 500 });
+    }
+    // Fresh plan for the newly active goal.
+    const [supply, rates] = await Promise.all([liveSupply(supabase), ratesFromTracker(supabase)]);
+    const plan = planFor(target, supply, rates, todayISO());
+    await supabase.from("goals").update({ plan, computed_at: now }).eq("id", goalId);
+
+    await supabase.from("decision_events").insert({
+      user_id: user.id,
+      kind: "goal",
+      subject_ref: goalId,
+      action: "approve",
+      payload: { switch: "activate", archetype: target.target?.archetype ?? null },
+      weight: 3,
+    });
+    return NextResponse.json({ ok: true, goalId, status: "active", plan });
+  }
+
+  const status = action === "pause" ? "paused" : "archived";
+  const { error } = await supabase.from("goals").update({ status, updated_at: now }).eq("id", goalId);
+  if (error) return NextResponse.json({ error: "update failed" }, { status: 500 });
+
+  await supabase.from("decision_events").insert({
+    user_id: user.id,
+    kind: "goal",
+    subject_ref: goalId,
+    action: action === "archive" ? "reject" : "edit",
+    payload: { switch: action },
+    weight: 1,
+  });
+  return NextResponse.json({ ok: true, goalId, status });
 }
