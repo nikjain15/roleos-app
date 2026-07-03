@@ -92,7 +92,7 @@
 - **New learnings:** the most durable "stress test" for guardrails is **static + pure**: parse the
   migrations to prove RLS coverage, grep the outward helpers to prove no-transport, and run the pure
   engines over the edge-case matrix — all in CI, no secrets. Convention becomes an enforced invariant.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/14
 
 ### Slice 10 — App shell + responsive/a11y pass · 2026-07-03 · branch `slice/10-app-shell`
 - **Built:** one consistent nav across every authenticated screen + a broader a11y/responsive net.
