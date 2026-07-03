@@ -98,7 +98,7 @@
   proactive nudge is just a new `kind` + a pure builder that returns **null when there's nothing honest
   to say** — the "stay silent when on track" path is the most important test. Throttle proactive jobs
   server-side (`ambient.last_nudge_at`) so hourly cron stays safe.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/12
 
 ### Slice 8 — 15-dimension self-learning + funnel calibration · 2026-07-03 · branch `slice/8-self-learning`
 - **Built:** the structured 15-dim taste model — transparent + correctable — that sharpens fit, voice,
