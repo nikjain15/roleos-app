@@ -43,9 +43,11 @@ describe("computePlan", () => {
     expect(p.funnel.screens.mid).toBeLessThan(p.funnel.applications.mid);
     expect(p.funnel.applications.low).toBeLessThanOrEqual(p.funnel.applications.mid);
     expect(p.funnel.applications.high).toBeGreaterThanOrEqual(p.funnel.applications.mid);
-    // spec sanity: ~25–40 targeted apps at prior rates
-    expect(p.funnel.applications.mid).toBeGreaterThan(20);
-    expect(p.funnel.applications.mid).toBeLessThan(60);
+    // cited priors: ~50 targeted apps → ~6 first interviews → ~3 finals → 1 offer
+    expect(p.funnel.applications.mid).toBeGreaterThan(30);
+    expect(p.funnel.applications.mid).toBeLessThan(80);
+    expect(p.funnel.screens.mid).toBeGreaterThanOrEqual(4);
+    expect(p.funnel.onsites.mid).toBeGreaterThanOrEqual(2);
   });
 
   it("front-loads the apply-by date before the deadline (lead time)", () => {
