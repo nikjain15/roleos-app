@@ -4,6 +4,7 @@ import { runSkill } from "@/agent/skills/run";
 import draftResume from "@/agent/skills/draft_resume";
 import { parseModelJson } from "@/lib/json";
 import { logAgentRuns } from "@/lib/agent-runs";
+import { checkRateLimit, rateLimitResponse } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -20,6 +21,12 @@ export async function POST(req: Request): Promise<Response> {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
+
+  // H3: drafting runs the full quality gate (several model calls) — per-user budget.
+  const rate = await checkRateLimit("tailor", user.id);
+  if (!rate.allowed) {
+    return rateLimitResponse("You've tailored a lot of résumés this hour — review what you have; it resets soon.");
+  }
 
   const { roleId } = (await req.json()) as { roleId?: string };
   if (!roleId) return NextResponse.json({ error: "roleId required" }, { status: 400 });

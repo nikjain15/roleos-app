@@ -65,6 +65,38 @@
 
 ## Slice entries (newest first)
 
+### H3 · Rate-limiting + abuse guards on public/AI routes · 2026-07-03 · branch `v2/h3-rate-limiting`
+- **Built:** the index-ask pattern generalized to every model-calling route.
+  - **`db/migrations/0015_rate_events.sql`** — shared rolling-window log keyed by (scope, subject);
+    RLS enabled with NO policies = deny-all to clients (nobody reads, forges, or resets windows).
+    **ALREADY APPLIED to live Supabase (additive) — no action needed on merge.** The legacy
+    `index_ask_events` table stays untouched.
+  - **`lib/rate-limit.ts`** (server-only, added to the no-client-secret forbidden list): per-route
+    budgets — explore_ask 20/h/IP (unchanged), onboard 5/h/IP (the most expensive PUBLIC path,
+    previously UNLIMITED — the real cost hole this slice closes), ro_ask 30/h/user, tailor 12/h/user,
+    rematch 6/h/user. One indexed head-count + one insert per request. **Fail-open by design**
+    (limiter outage never downs the product) with a structured `rate_limit.degraded` warn line;
+    hits log `rate_limit.hit`. Honest, per-route 429 copy via `rateLimitResponse`.
+  - Wired BEFORE any body parse/model call in `/api/onboard`, `/api/ro/ask`, `/api/tailor`,
+    `/api/rematch`; `/api/explore/ask` migrated to the shared helper (same budget).
+- **Audit:** D1 green. D2/D3 green — +3 vitest (IP-header precedence, budget-table sanity incl.
+  tightest-public invariant, 429 shape) + 5 live E2E (anon explore-ask + onboard 429 with SEEDED
+  windows — proving the guard fires before any model spend; authed rematch+tailor per-user 429;
+  under-window requests pass (no overfiring); RLS deny-all probe on rate_events read AND write).
+  D4 green (opennextjs). D5/D7 green — no UI change; 429 copy is honest and names the reset.
+  D6 green — this IS the abuse/cost guard; deny-all table; per-user keys can't be spoofed
+  (auth id), per-IP uses cf-connecting-ip first. D8 green — additive migration, applied.
+  D9 green — two indexed ops per guarded request; window rows are tiny and prunable. D10 green —
+  invariants green; nothing sends.
+- **Test-count ratchet:** vitest 138→141 · live E2E 35→40 run · public 27→27 · scenarios +5.
+- **Deferrals (no silent gaps):** (1) studio routes (negotiate/coach/recruiter/build) — authed +
+  low-traffic; same one-liner pattern when volume warrants; (2) `rate_events` retention pruning
+  (a weekly cron `delete < now()-7d`) — rides with H5; (3) swap the limiter's console warn to
+  H1's `lib/log` once both merge (deliberately not cross-PR-dependent).
+- **Learnings:** rate-limit BEFORE body parsing and model calls — the 429 must cost nothing.
+  Seeding the window table directly makes 429 paths testable without burning a single model call.
+  Branch-parallel slices must not import each other's new libs (H3 initially imported H1's
+  lib/log — caught because this branch is off main; inline the tiny dependency instead).
 ### H1 · Observability + error tracking · 2026-07-03 · branch `v2/h1-observability`
 - **Built:** the go-live visibility layer, zero paid deps (Workers observability reads stdout).
   - **`lib/log.ts`** — structured JSON logging (one line per event, exactly what Workers Logs
@@ -126,8 +158,7 @@
   state drifted. Placeholder/hint copy ("e.g. Senior AI Product Manager") collides with real data
   in tests — `{ exact: true }` or scope to the container.
 
-**Phase W complete** — W1–W7 all queued as PRs #18–#24. Next: Phase H (H1 observability first).
-### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+**Phase W complete** — W1–W7 all queued as PRs #18–#24. Next: Phase H (H1 observability first).### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 - **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
 ### W6 · Persist anon Explore conversation across page loads · 2026-07-03 · branch `v2/w6-anon-explore-convo`
 - **Built:** the Ask-RO thread on `/explore` now survives page loads and navigation for anon

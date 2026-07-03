@@ -9,6 +9,7 @@ import { logAgentRuns } from "@/lib/agent-runs";
 import { parseModelJson } from "@/lib/json";
 import { validateAct, type RawAct } from "@/lib/dock-acts";
 import { logError } from "@/lib/log";
+import { checkRateLimit, rateLimitResponse } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -35,6 +36,10 @@ export async function POST(req: Request): Promise<Response> {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
+
+  // H3: per-user budget on the dock's model calls.
+  const rate = await checkRateLimit("ro_ask", user.id);
+  if (!rate.allowed) return rateLimitResponse("You've asked RO a lot this hour — it resets soon.");
 
   const parsed = await validateBody(req, BodySchema);
   if (!parsed.ok) return parsed.response;
