@@ -8,6 +8,7 @@ import { isAdmin } from "@/lib/admin";
 import DigestCard from "@/components/DigestCard";
 import RematchButton from "@/components/RematchButton";
 import GoalCockpit from "@/components/GoalCockpit";
+import PaceNudgeCard from "@/components/PaceNudgeCard";
 import { loadActiveGoal, appsThisWeek } from "@/lib/goal";
 import { computeAgenda } from "@/lib/plan/agenda";
 
@@ -82,6 +83,9 @@ export default async function Feed() {
           <SignOut />
         </div>
       </div>
+
+      {/* Proactive, wellbeing-gated pace nudge (only when off-pace) */}
+      <PaceNudgeCard />
 
       {/* The spine: goal status + Today agenda (or a set-your-goal CTA) */}
       <GoalCockpit plan={plan} agenda={agenda} />
