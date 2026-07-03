@@ -1,9 +1,10 @@
 import { describe, it, expect } from "vitest";
-import { toVerdict, locationText, filterRoles, sortRoles, curate, type WorkspaceRole } from "@/lib/workspace";
+import { toVerdict, locationText, filterRoles, sortRoles, curate, mhTexts, toggleCompare, type WorkspaceRole } from "@/lib/workspace";
 
 const row = (over: Partial<WorkspaceRole>): WorkspaceRole => ({
   role_id: "r", fit: 50, verdict: "maybe", company: "Acme", title: "PM", location: "NYC",
-  remote: false, url: null, why: null, gaps: [], status: "new", created_at: "2026-07-01", ...over,
+  remote: false, url: null, why: null, gaps: [], status: "new", created_at: "2026-07-01",
+  mustHaves: [], note: null, ...over,
 });
 
 describe("toVerdict", () => {
@@ -68,5 +69,25 @@ describe("curate", () => {
       row({ role_id: "c", fit: 99, verdict: "skip" }),
     ];
     expect(curate(rows, "fit", { verdict: "pursue" }).map((r) => r.role_id)).toEqual(["b", "a"]);
+  });
+});
+
+// ── P1 (slice W4) ────────────────────────────────────────────────────────────
+describe("mhTexts — must-haves flattened for compare", () => {
+  it("handles seed objects, ats strings, and junk, capped", () => {
+    expect(mhTexts(["a", { raw_text_from_jd: "b" }, { text: "c" }, { requirement: "d" }])).toEqual(["a", "b", "c", "d"]);
+    expect(mhTexts(["1", "2", "3", "4", "5", "6", "7"])).toHaveLength(6);
+    expect(mhTexts(null)).toEqual([]);
+    expect(mhTexts("not-an-array")).toEqual([]);
+    expect(mhTexts([{}])).toEqual([]); // an empty object flattens to nothing, not "{}" noise
+  });
+});
+
+describe("toggleCompare — 2–3 role selection", () => {
+  it("adds, removes, and caps at 3", () => {
+    expect(toggleCompare([], "a")).toEqual(["a"]);
+    expect(toggleCompare(["a"], "a")).toEqual([]);
+    expect(toggleCompare(["a", "b", "c"], "d")).toEqual(["a", "b", "c"]); // cap
+    expect(toggleCompare(["a", "b", "c"], "b")).toEqual(["a", "c"]); // removal still works at cap
   });
 });

@@ -21,6 +21,30 @@ export interface WorkspaceRole {
   gaps: string[];
   status: string; // new | saved | pursuing | dismissed
   created_at: string;
+  /** Role must-haves flattened to text (P1 compare). */
+  mustHaves: string[];
+  /** The user's private note on this role (P1 notes), null if none. */
+  note: string | null;
+}
+
+/** Flatten a roles.must_haves jsonb entry (seed = objects, ats = strings) to text. */
+export function mhTexts(must_haves: unknown, cap = 6): string[] {
+  if (!Array.isArray(must_haves)) return [];
+  return (must_haves as unknown[]).slice(0, cap).map((v) => {
+    if (typeof v === "string") return v;
+    if (v && typeof v === "object") {
+      const o = v as Record<string, unknown>;
+      return String(o.raw_text_from_jd ?? o.text ?? o.requirement ?? "");
+    }
+    return String(v);
+  }).filter((t) => t.length > 0);
+}
+
+/** Toggle a role in the compare selection, capped (P1: compare 2–3). */
+export function toggleCompare(selected: string[], roleId: string, max = 3): string[] {
+  if (selected.includes(roleId)) return selected.filter((id) => id !== roleId);
+  if (selected.length >= max) return selected;
+  return [...selected, roleId];
 }
 
 export interface WorkspaceFilters {
