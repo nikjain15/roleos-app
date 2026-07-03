@@ -56,6 +56,9 @@
   `#7a786f`→`#928f85`). It failed axe contrast twice (landing, login); fixing the TOKEN fixes every
   page. `text-tx3` is safe for body/caption text now. The E2E smoke covers `/` **and `/login`** at
   375/768/1280 + axe, so new contrast regressions on those surfaces fail CI.
+- **CI's e2e job has only PUBLIC Supabase keys** (no service-role) — so E2E `PUBLIC_PAGES` that read
+  via the service role (e.g. `/explore`) 500 in CI. Gate those to non-CI runs
+  (`process.env.CI ? [...] : [...]`); `/` + `/login` are the safe always-on CI smoke.
 
 ## Slice entries (newest first)
 
@@ -73,9 +76,11 @@
   - **D1** green — tsc/lint/depcruise clean (dropped the feed's now-unused `SignOut` import).
   - **D2/D3** green — 117/117 vitest.
   - **D4** green — `next build` + `opennextjs-cloudflare build`.
-  - **D5/D7** green — **E2E/axe 27/27**: `/` + `/login` + `/explore`, each at 3 viewports, render +
-    no-horizontal-overflow + 0 serious/critical axe. `/login` still passes with the nav **self-hidden**
-    there (verified). Nav a11y: semantic `<nav>`, `aria-current`, skip link, keyboard-usable.
+  - **D5/D7** green — **E2E/axe**: `/` + `/login` + `/explore` locally (27/27, each at 3 viewports,
+    render + no-horizontal-overflow + 0 serious/critical axe); **CI covers `/` + `/login`** only —
+    `/explore` reads the index via the **service-role key** which the CI e2e job deliberately lacks, so
+    it 500s there and is gated to non-CI runs (caught by CI on first push, then fixed). `/login` still
+    passes with the nav **self-hidden**. Nav a11y: semantic `<nav>`, `aria-current`, skip link, keyboard.
   - **D6** green — nav is client-side; routes stay middleware-gated (unchanged). no-send +
     no-client-secret green.
   - **D8** green — no migration. **D9** green — no new queries (nav is static links; `usePathname`).
