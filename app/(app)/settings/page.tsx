@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabaseBrowser } from "@/lib/supabase/client";
+import TasteDimensions from "@/components/TasteDimensions";
 import {
   type Cadence,
   type NotifSettings,
@@ -158,6 +159,11 @@ export default function Settings() {
           </p>
         </>
       )}
+
+      <section className="mt-12 border-t border-bd pt-8">
+        <h2 className="text-xl font-bold tracking-tight">How I&apos;m learning you</h2>
+        <TasteDimensions />
+      </section>
     </main>
   );
 }

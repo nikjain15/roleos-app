@@ -59,6 +59,49 @@
 
 ## Slice entries (newest first)
 
+### Slice 8 — 15-dimension self-learning + funnel calibration · 2026-07-03 · branch `slice/8-self-learning`
+- **Built:** the structured 15-dim taste model — transparent + correctable — that sharpens fit, voice,
+  and the plan (goal-engine §7). Distinct from the existing free-form `taste_model`.
+  - `lib/dimensions.ts` (+ 6 tests): the canonical 15-dim taxonomy + **honest, DETERMINISTIC**
+    `deriveDimensions(signals)` — real evidence → calibrated inference + confidence; no evidence →
+    `null` + low confidence + a plain "still learning" basis. **Never fabricates a preference.** No LLM.
+  - `db/migrations/0012_taste_dimensions.sql`: structured table (one row per user+dimension: inference,
+    confidence, provenance, **user_note + user_confirmed**), owner RLS, unique(user, dimension).
+  - `lib/taste-dimensions.ts` + `/api/taste` (zod + RLS): GET aggregates the user's real signals
+    (curate saves/dismisses/pursues, résumé edits, blended funnel rates [dim 14, from Slice 3],
+    cadence, intensity) → derive → **overlay the user's corrections** (their words win, conf 0.95) →
+    cache snapshot. POST records a confirm/correction + an append-only `correct` decision_event.
+  - Settings gains a **"How I'm learning you"** section (`components/TasteDimensions.tsx`): each
+    dimension with its inference + confidence bar, correctable inline.
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean.
+  - **D2/D3** green — 112/112 vitest (+6 dimensions: all-15-returned, honest-no-signal, selectivity
+    from curates, cadence high-confidence, funnel real-vs-priors, effort from intensity). Graceful:
+    **missing `taste_dimensions` table → derived-only** (no corrections), settings still renders.
+  - **D4** green — `next build` (`/api/taste`, `/settings`) + `opennextjs-cloudflare build`.
+  - **D5/D7** green — E2E/axe 18/18. Taste UI a11y: labelled correction textareas, confidence bar with
+    `title`, keyboard-usable.
+  - **D6** green — live-probed: `/api/taste` GET+POST unauth → 401; `/settings` → 307; zod; **new
+    `taste_dimensions` table has owner RLS**; no-send + no-client-secret green.
+  - **D8** green — additive migration; owner RLS + unique reviewed; `decision_events` reused (`correct`);
+    upsert preserves user overrides (only derived cols written by the cache path).
+  - **D9** green — bounded signal reads (events limit 500; counts); **NO model call** — the whole model
+    is deterministic rule-based math, so it's cheap and can't hallucinate.
+  - **D10** green — human-gated + truth intact; the model is honest by construction (null when unsure).
+- **Scenarios run:** public smoke `/` + `/login` ×3 + axe; unauth gating on `/api/taste` + `/settings`;
+  unit personas for derivation (empty→all-null, heavy-dismiss→selective, real-funnel, cadence/effort).
+  Prompt-injection: no model call in the taste path; inferences derive only from the user's own actions.
+- **Deferred (no silent gaps):** (1) **apply migration 0012 to Supabase on merge** (required; code
+  degrades gracefully). (2) per-archetype fit split (fit dims currently share the curate signal — needs
+  joining role attributes to curate events). (3) folding the free-form `taste_model` into the structured
+  dims (kept both for now). (4) using dims to actively re-rank/re-voice (they're surfaced + calibrating;
+  deeper wiring into match/résumé is a follow-up). (5) authed E2E of correct→persist.
+- **New learnings:** a "self-learning" surface is most trustworthy when it's **deterministic + honest
+  about uncertainty** (null inference + low confidence when it hasn't seen enough) rather than an LLM
+  guessing — cheaper, no hallucination, and the "still learning" state is itself honest UX. User
+  corrections overlay at read time so a cache refresh never clobbers them.
+- **PR:** <pending>
+
 ### Slice 7 — RO-everywhere dock · 2026-07-03 · branch `slice/7-ro-dock`
 - **Built:** an ask/act layer on every authenticated screen — RO answers about YOUR hunt, grounded
   in your real state, and points you to one next screen. Never sends or acts.
