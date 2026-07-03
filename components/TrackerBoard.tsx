@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { enteredStageAt, slaState } from "@/lib/tracker";
 
 /**
  * The tracker board (Slice 3). Stage-grouped lanes (responsive — stacks on mobile,
@@ -17,6 +19,12 @@ export interface AppRow {
   next_action: { label: string; due?: string } | null;
   sent_at: string | null;
   roles: { company: string; role_title: string; url: string | null } | null;
+}
+
+export interface RoleArtifact {
+  id: string;
+  type: string; // resume | cover
+  status: string;
 }
 
 export interface TrackableRole {
@@ -43,9 +51,20 @@ const STAGE_LABEL: Record<string, string> = {
   offer: "Offer", rejected: "Rejected", withdrawn: "Withdrawn",
 };
 
-export default function TrackerBoard({ apps, trackable }: { apps: AppRow[]; trackable: TrackableRole[] }) {
+export default function TrackerBoard({
+  apps,
+  trackable,
+  artifacts = {},
+}: {
+  apps: AppRow[];
+  trackable: TrackableRole[];
+  /** role_id → the user's résumé/cover artifacts for that role (W5 linking). */
+  artifacts?: Record<string, RoleArtifact[]>;
+}) {
   const router = useRouter();
   const [busy, setBusy] = useState<string | null>(null);
+  const [timelineFor, setTimelineFor] = useState<string | null>(null);
+  const now = new Date();
 
   async function advance(id: string, stage: string) {
     setBusy(id);
@@ -96,7 +115,11 @@ export default function TrackerBoard({ apps, trackable }: { apps: AppRow[]; trac
               {lane.label} · {laneApps.length}
             </h2>
             <div className="mt-2 space-y-2">
-              {laneApps.map((a) => (
+              {laneApps.map((a) => {
+                const entered = enteredStageAt(a.stage_history, a.sent_at ?? now.toISOString());
+                const sla = slaState(a.stage, entered, now);
+                const arts = (a.role_id && artifacts[a.role_id]) || [];
+                return (
                 <div key={a.id} className="rounded-lg border border-bd bg-surf p-3">
                   <div className="flex flex-wrap items-start justify-between gap-2">
                     <div className="min-w-0">
@@ -105,8 +128,38 @@ export default function TrackerBoard({ apps, trackable }: { apps: AppRow[]; trac
                         <span className="text-tx3">· {a.roles?.company ?? ""}</span>
                       </p>
                       {a.next_action?.label && (
-                        <p className="mt-0.5 text-xs text-info-tx">Next: {a.next_action.label}</p>
+                        <p className="mt-0.5 text-xs text-info-tx">
+                          Next: {a.next_action.label}
+                          {a.next_action.due ? <span className="text-tx3"> · by {a.next_action.due}</span> : null}
+                        </p>
                       )}
+                      {/* W5: per-stage SLA — honest nudge when a stage sits too long. */}
+                      <div className="mt-1 flex flex-wrap items-center gap-2 text-[11px]">
+                        {sla.state === "overdue" && (
+                          <span className="rounded bg-warn-bg px-1.5 py-0.5 text-warn">
+                            {sla.daysInStage}d in {STAGE_LABEL[a.stage]?.toLowerCase() ?? a.stage} — needs a move
+                          </span>
+                        )}
+                        {sla.state === "due" && (
+                          <span className="rounded bg-info-bg px-1.5 py-0.5 text-info-tx">due today</span>
+                        )}
+                        {/* W5: artifact links — the résumé/cover behind this application. */}
+                        {arts.map((art) =>
+                          art.type === "resume" ? (
+                            <Link
+                              key={art.id}
+                              href={`/studio/resume/${art.id}`}
+                              className="rounded bg-surf2 px-1.5 py-0.5 text-tx2 underline-offset-2 hover:underline"
+                            >
+                              résumé · {art.status}
+                            </Link>
+                          ) : (
+                            <span key={art.id} className="rounded bg-surf2 px-1.5 py-0.5 text-tx2">
+                              cover · {art.status}
+                            </span>
+                          ),
+                        )}
+                      </div>
                     </div>
                     <label className="flex items-center gap-1.5 text-xs text-tx3">
                       <span className="sr-only">Stage for {a.roles?.role_title}</span>
@@ -122,8 +175,32 @@ export default function TrackerBoard({ apps, trackable }: { apps: AppRow[]; trac
                       </select>
                     </label>
                   </div>
+
+                  {/* W5: timeline — the append-only stage_history, honest and inspectable. */}
+                  {(a.stage_history?.length ?? 0) > 0 && (
+                    <>
+                      <button
+                        onClick={() => setTimelineFor(timelineFor === a.id ? null : a.id)}
+                        aria-expanded={timelineFor === a.id}
+                        className="mt-2 text-xs text-info-tx underline"
+                      >
+                        {timelineFor === a.id ? "hide timeline" : "timeline"}
+                      </button>
+                      {timelineFor === a.id && (
+                        <ol className="mt-2 space-y-1 border-l-2 border-bd pl-3 text-xs text-tx2">
+                          {a.stage_history!.map((h, i) => (
+                            <li key={i}>
+                              <span className="font-medium text-tx">{STAGE_LABEL[h.stage] ?? h.stage}</span>
+                              <span className="text-tx3"> · {h.at?.slice(0, 10)}</span>
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </>
+                  )}
                 </div>
-              ))}
+                );
+              })}
             </div>
           </section>
         );
