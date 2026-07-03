@@ -65,6 +65,37 @@
 
 ## Slice entries (newest first)
 
+### W3 · RO-dock act-verbs (filter-this-view + tailor in place) · 2026-07-03 · branch `v2/w3-ro-dock-act-verbs`
+- **Built:** the slice-7 deferral — the dock now proposes ACTS beyond navigation, still human-gated,
+  still zero transport. `lib/dock-acts.ts` (pure, shared): `validateAct` (a model-proposed tailor act
+  must name one of the user's OWN top-pursue roles or it's dropped — the label is built from OUR data,
+  never the model's string; filter params are whitelisted into a sanitized `/roles?…` href),
+  `buildFilterHref`, `parseWorkspaceParams`. `ro_ask` may now return `{act}` (tailor|filter) grounded
+  in a new `state.top_pursue` (id+company+title, ≤5, RLS-scoped); `/api/ro/ask` validates everything
+  before it reaches the client. `RoDock` renders act chips: **filter** = a Link to the sanitized
+  `/roles?…` (the workspace reads URL params via `parseWorkspaceParams` and filters IN PLACE);
+  **tailor** = a button that runs `/api/tailor` ONLY on the user's click, then opens the studio.
+- **Audit:** D1 green (tsc/lint/depcruise — after `rm`-less recovery from stale `.next/types`, see
+  learning). D2/D3 green — 7 new vitest (foreign-roleId injection guard, href sanitization incl.
+  `javascript:`/oversize text, param round-trip, junk-param honesty) + 3 new live E2E (URL-param
+  filtering in place incl. junk params; model-gated: filter-ask → sanitized act, tailor-ask → own-role
+  act only — both VERIFIED with real model calls, then E2E_LIVE_MODEL-gated). D4 green (opennextjs
+  build). D5/D7 green — act chips reuse the dock's existing ≥36px chip pattern; board a11y untouched
+  (a11y sweep covers `/roles`). D6 green — the act layer is the whole point: server-side validation of
+  every model proposal (defense-in-depth beyond the href whitelist); no new API surface. D8 green — no
+  migration. D9 green — `top_pursue` derived from the existing bounded matches read (join added, still
+  limit 1000); no new model calls on the browse path. D10 green — no-send + depcruise green; `ro_ask`
+  still has `tools: []`; every act executes only on a user click.
+- **Test-count ratchet:** vitest 138→145 · live E2E 35→38 (36 run + 2 model-gated verified-once) ·
+  public E2E 27→27 · scenarios +3. (W1/W2 add their own on their branches; counts sum on merge.)
+- **Deferrals (no silent gaps):** (1) "draft cover" act verb — lands after W2 (PR #19) merges; one
+  more `validateAct` kind + chip. (2) filter acts only target `/roles` (the board) — Explore filtering
+  is a different surface (W1). (3) authed dock-UI E2E (open→ask→click chip) still needs a stable
+  model-in-CI story; the API layer is covered.
+- **Learnings:** switching branches leaves STALE `.next/types` route stubs that fail `tsc` (phantom
+  routes from the other branch) — regenerate with `npx next build` (or clean `.next`) before
+  typechecking after a branch switch. `useSearchParams` in a client component is fine on a
+  `force-dynamic` page (no Suspense boundary needed at build).
 ### W2 · Drafted cover letters (replaces the template in Apply) · 2026-07-03 · branch `v2/w2-cover-letters`
 - **Built:** a REAL, truth-gated cover letter per role. New `draft_cover` skill (draft job, FULL
   quality gate incl. truth gate, structured, `expects` requires subject + ≥80-char body per the
@@ -148,8 +179,7 @@
   ANN index. `&nbsp;` in JSX badge text breaks Playwright text matchers (and real-user search) —
   prefer plain spaces inside a nowrap span. Supabase Management API `POST /v1/projects/:ref/database/query`
   (with `SUPABASE_ACCESS_TOKEN` from `.dev.vars`) is the working recipe for applying migrations —
-  the us-east pooler DSN in older notes 404s the tenant.
-### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+  the us-east pooler DSN in older notes 404s the tenant.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 - **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
   roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
   issues.** All 14 deploys succeeded; migrations 0010–0012 live. Committed as a repeatable
