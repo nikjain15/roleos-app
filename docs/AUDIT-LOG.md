@@ -55,6 +55,48 @@
 
 ## Slice entries (newest first)
 
+### Slice 3 — Application Tracker · 2026-07-03 · branch `slice/3-application-tracker`
+- **Built:** the funnel of record — closes the goal→apply→track→adapt loop and feeds REAL
+  conversions back into the pace engine.
+  - `db/migrations/0011_applications.sql`: `applications` table (stage enum, **append-only
+    `stage_history`**, artifact links, next_action, sent_at), **owner RLS** (sel/ins/upd/del),
+    **unique (user, role)**.
+  - `lib/plan/observed.ts` (+ tests): pure — derives per-stage `{conversions, trials}` from each
+    application's furthest funnel stage reached (a later rejection doesn't erase progress). Wired
+    into `lib/goal.ts` (`ratesFromTracker`) so `computeRates` now **blends priors with the user's
+    lived funnel** (dimension 14); `appsThisWeek` feeds the agenda's real pacing.
+  - `/api/applications` (zod + RLS): POST create (unique-per-role → 409), PATCH advance (appends
+    history, stamps `sent_at` on first `applied`, writes a `decision_event`; terminal → `reject`).
+  - `/tracker` board + `components/TrackerBoard.tsx`: stage-grouped lanes (responsive, no
+    horizontal Kanban), accessible stage `<select>` to advance, one-tap "track" for pursued roles
+    not yet in the pipeline. Feed gains a Tracker link; agenda now uses real sent-this-week.
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean.
+  - **D2/D3** green — 89/89 vitest (+4 observed: furthest-stage-after-rejection, empty→priors,
+    per-stage conversions, feeds computeRates). Graceful: **missing `applications` table → priors +
+    0 apps/wk** (feed/goal still render).
+  - **D4** green — `next build` (`/tracker`, `/api/applications`) + `opennextjs-cloudflare build`.
+  - **D5/D7** green — E2E/axe 9/9 (public). Tracker a11y by construction: labelled selects, ≥40px
+    targets, lanes stack on mobile.
+  - **D6** green — live-probed: `/tracker` → 307, `/api/applications` POST+PATCH unauth → 401; zod on
+    the route; **new `applications` table has owner RLS**; no-send + no-client-secret green.
+  - **D8** green — additive migration; owner RLS + unique(user,role) reviewed; `stage_history`
+    append-only (never rewritten — only pushed to); `decision_events` reused.
+  - **D9** green — pure funnel math; bounded reads; `appsThisWeek` via `count head:true`.
+  - **D10** green — **human-gated-outward intact**: reaching `applied` RECORDS that the user applied;
+    RO sends nothing here (the actual send is the separate Apply path, Slice 4). Truth gate untouched.
+- **Scenarios run:** public smoke ×3; unauth gating on `/tracker` + `/api/applications` (POST/PATCH);
+  unit personas — furthest-stage after rejection, no-apply-yet (priors), full funnel, 50-app blend.
+  Prompt-injection: `/api/applications` stores only validated enums/uuids, no model call, no send tool.
+- **Deferred (no silent gaps):** (1) **apply migration 0011 to Supabase on merge** (required; code
+  degrades gracefully until then). (2) authed E2E of create→advance→pace-shift — needs seeded session.
+  (3) richer next_action automation + timeline view + per-stage SLAs — later. (4) tracker↔résumé
+  artifact linking surfaced in UI (schema supports `artifact_ids`) — later slice.
+- **New learnings:** derive funnel rates from the **furthest stage each application reached** (via
+  append-only `stage_history`), not its current stage — so a rejection after an onsite still counts the
+  onsite as a real trial. Keep the derivation pure (`lib/plan/observed.ts`) and unit-test it.
+- **PR:** https://github.com/nikjain15/roleos-app/pull/6
+
 ### Slice 2 — Goal Setter + Plan/Pace engine + Feed cockpit · 2026-07-03 · branch `slice/2-goal-pace-feed`
 - **Built:** the spine — "get X in Y days" becomes a live, honest plan.
   - `lib/plan/` (pure, heavily tested): `rates.ts` (empirical-Bayes blend of senior-PM **priors** →
