@@ -65,6 +65,31 @@
 
 ## Slice entries (newest first)
 
+### W6 · Persist anon Explore conversation across page loads · 2026-07-03 · branch `v2/w6-anon-explore-convo`
+- **Built:** the Ask-RO thread on `/explore` now survives page loads and navigation for anon
+  visitors. `lib/explore-thread.ts` (pure): validated `parseThread` (localStorage is untrusted —
+  malformed/hostile content is dropped field-by-field, strings truncated, ≤12 turns, never throws)
+  + `serializeThread`. `AskRo` restores after mount (hydration-safe), persists on change, removes
+  the key when empty, and gains an explicit **"clear conversation"** button + honest "saved in this
+  browser only" copy. Nothing is stored server-side for anon users — browser-only by design.
+- **Audit:** D1 green. D2/D3 green — +4 vitest (round-trip, garbage/non-JSON/wrong-shape never
+  crash, per-field scrubbing of non-strings, cap + truncation) + 3 live E2E (stored thread renders
+  after fresh load AND across navigation incl. restored follow-up chips; clear wipes UI + storage +
+  stays clean on reload; corrupted storage renders a fresh page). D4 green (opennextjs build).
+  D5/D7 green — clear affordance is a labelled button; no layout change (explore already in smoke
+  ×3 + axe). D6 green — stored content is parsed defensively and rendered as React text (no
+  dangerouslySetInnerHTML); no new API surface; privacy improved (explicit clear + honest copy).
+  D8 green — NO migration, no server storage. D9 green — zero model calls; storage capped. D10
+  green — invariants untouched.
+- **Test-count ratchet:** vitest 138→142 · live E2E 35→38 run · public 27→27 · scenarios +3.
+- **Deferrals (no silent gaps):** (1) migrating the anon thread into the account at signup (nice
+  convert-door touch — needs a product call on consent copy); (2) per-scope threads (one global
+  thread is the simpler, honest v1 — history already rides along to the model via the existing
+  `history` param).
+- **Learnings:** starter suggestion chips can textually collide with test fixtures ("Which
+  companies sponsor visas?" is both a chip and was my seeded question) — seed E2E content with
+  strings that can't appear in static UI. `addInitScript` + localStorage is the clean way to test
+  client persistence without model calls.
 ### W5 · Tracker depth (artifact links · next_action automation · timeline · SLAs) · 2026-07-03 · branch `v2/w5-tracker-depth`
 - **Built:** the four W5 bullets, all deterministic (zero model calls).
   - **`lib/tracker.ts`** (pure, unit-tested): `STAGE_SLA_DAYS` per stage; `slaState` (ok/due/overdue
@@ -128,8 +153,7 @@
 - **Learnings:** bulk mutations should still emit PER-ROW decision_events — the taste model's
   signal quality depends on granularity, and a `bulk` flag in payload preserves the gesture's
   context. Playwright duplicate test titles fail the run when a matrix gains a second row for the
-  same route — include the body in the generated title.
-### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+  same route — include the body in the generated title.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 ### W3 · RO-dock act-verbs (filter-this-view + tailor in place) · 2026-07-03 · branch `v2/w3-ro-dock-act-verbs`
 - **Built:** the slice-7 deferral — the dock now proposes ACTS beyond navigation, still human-gated,
   still zero transport. `lib/dock-acts.ts` (pure, shared): `validateAct` (a model-proposed tailor act
