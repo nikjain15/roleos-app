@@ -65,6 +65,41 @@
 
 ## Slice entries (newest first)
 
+### X3 · Pre-send application quality score · 2026-07-03 · branch `v2/x3-quality-score`
+- **PRD-first** (Phase X rule): `docs/specs/x3-quality-score.md` committed before any code —
+  problem, goals/non-goals, approach, guardrails, acceptance criteria.
+- **Built:** the closed-loop's front half.
+  - **`app_score` skill** — REASON-tier (judging wants the strongest head), full gate, `tools: []`,
+    strict `expects` (score 0–100 + likelihood enum + weak_spots array). Judges the approved
+    résumé against THIS role's must-haves like a calibrated recruiter screen; every weak spot
+    must carry a concrete two-minute fix; grounded only in provided inputs.
+  - **`POST /api/apply-score`** — zod → per-user 8/h limit on the live `rate_events` table
+    (inline; converges with H3's lib post-merge) → ownership + APPROVED checks (foreign → 404
+    via RLS, draft → 409) → metered skill → persists the latest score on
+    `artifacts.provenance.app_score` (NO migration) + an append-only `decision_events` row
+    (kind `app_score`, payload {role_id, score, likelihood}) — **the calibration substrate X4
+    joins against real outcomes**.
+  - **ApplyScoreCard on `/apply/[id]`** — click-to-score (the user's gesture = the model call),
+    score + likelihood chip, strengths, fix-before-you-send list linking to the editor,
+    re-score; last score renders from provenance on reload. Copy is explicit: RO's calibrated
+    read, never a gate — **applying stays possible at any score**.
+- **Audit:** D1 green. D2/D3 green — +3 vitest (skill contract: tier/gate/no-tools, grounded
+  prompt, expects range/enum/shape) + 4 live E2E (guard matrix 401/400/404/409 model-free;
+  seeded-window 429 before spend; stored score renders from provenance; model-gated real scoring
+  run VERIFIED — 200, valid range, provenance + calibration event asserted in DB). D4 green
+  (opennextjs). D5/D7 green — labelled card, ≥36px controls, warn-block has the way forward
+  (editor link); `/apply` in the a11y sweep. D6 green — zod, RLS-scoped, rate-limited, no new
+  table. D8 green — NO migration (provenance jsonb + append-only events). D9 green — one metered
+  reason call per user click; guards are indexed head-counts. D10 green — no send; low score
+  never blocks `/api/apply` (acceptance §4).
+- **Test-count ratchet:** vitest 138→141 · live E2E 35→38 run (+1 model-gated verified-once) ·
+  public 27→27 · scenarios +4.
+- **Deferrals (no silent gaps):** (1) cover letter in the scored bundle — after W2 merges (input
+  is designed generic); (2) score-vs-outcome calibration + funnel-priors feedback — X4 by design;
+  (3) surfacing the score in the tracker card — one-liner after W5 merges.
+- **Learnings:** append-only `decision_events` is the right calibration substrate — score events
+  join cleanly against `applications.stage_history` with zero new schema. Storing "latest" on
+  provenance + "history" in events gives both a fast read and a full trail.
 ### H5 · Performance/scale pass (caps · caching · cost alerting) · 2026-07-03 · branch `v2/h5-perf-scale`
 - **Built:**
   - **Index review (D9):** inventoried every pg index on live — coverage is already right
@@ -130,8 +165,7 @@
 - **Learnings:** assert security headers in the PUBLIC smoke (CI-safe, no secrets) — config-only
   headers silently vanish if the adapter changes; the E2E proves they're served. For
   action-dispatch routes, a zod enum on `action` is the cheapest high-value guard: hostile verbs
-  die at 400 before any DB or model work.
-### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+  die at 400 before any DB or model work.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 ### H3 · Rate-limiting + abuse guards on public/AI routes · 2026-07-03 · branch `v2/h3-rate-limiting`
 - **Built:** the index-ask pattern generalized to every model-calling route.
   - **`db/migrations/0015_rate_events.sql`** — shared rolling-window log keyed by (scope, subject);
