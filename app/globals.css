@@ -10,7 +10,7 @@
   --surf2: #f4f2ec;
   --tx: #1c1b19;
   --tx2: #5f5e5a;
-  --tx3: #8d8c85;
+  --tx3: #6b6a63; /* darkened from #8d8c85 → meets WCAG AA (≥4.5:1) on paper/white */
   --bd: #e6e3da;
   --info-bg: #e6f1fb;
   --info: #185fa5;
@@ -29,7 +29,7 @@
     --surf2: #26241f;
     --tx: #eceae3;
     --tx2: #a8a69d;
-    --tx3: #7a786f;
+    --tx3: #928f85; /* lightened from #7a786f → meets WCAG AA on warm-charcoal */
     --bd: #33312b;
     --info-bg: #0c447c;
     --info: #85b7eb;

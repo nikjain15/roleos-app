@@ -10,7 +10,7 @@ import { expectNoSeriousA11y } from "./helpers/axe";
  * server can't serve it, the harness fails loudly here rather than silently
  * passing an empty suite.
  */
-const PUBLIC_PAGES = ["/"];
+const PUBLIC_PAGES = ["/", "/login"];
 
 for (const path of PUBLIC_PAGES) {
   test(`public page ${path} renders without crashing`, async ({ page }) => {
