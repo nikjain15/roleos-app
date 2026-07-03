@@ -20,6 +20,7 @@ const FORBIDDEN = [
   "@/lib/match",
   "@/lib/run-match",
   "@/lib/explore-fit",
+  "@/lib/rate-limit",
   "@/agent/registry",
   "@/agent/skills/run",
 ];

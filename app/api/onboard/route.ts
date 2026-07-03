@@ -1,4 +1,5 @@
 import { matchProfile } from "@/lib/run-match";
+import { checkRateLimit, clientIp, rateLimitResponse } from "@/lib/rate-limit";
 import { runSkill } from "@/agent/skills/run";
 import mirrorSkill from "@/agent/skills/mirror";
 import distillProfile from "@/agent/skills/distill_profile";
@@ -30,6 +31,12 @@ const DISTILL_OVER_CHARS = 3500;
  * No send capability (human-gated-outward holds).
  */
 export async function POST(req: Request): Promise<Response> {
+  // H3: the most expensive PUBLIC path (full matching pipeline) — per-IP limit.
+  const rate = await checkRateLimit("onboard", clientIp(req));
+  if (!rate.allowed) {
+    return rateLimitResponse("You've run onboarding a few times this hour — give it a rest and try again soon.");
+  }
+
   const body = (await req.json()) as { profile?: string };
   // Keep the RAW input through the gate + assess + URL-detection (normalizing
   // here would strip a URL-only input to empty). Noise-stripping happens later,

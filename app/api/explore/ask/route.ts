@@ -6,6 +6,7 @@ import { runSkill } from "@/agent/skills/run";
 import indexQa from "@/agent/skills/index_qa";
 import { logAgentRuns } from "@/lib/agent-runs";
 import { suggestFollowups } from "@/lib/followups";
+import { checkRateLimit, clientIp, rateLimitResponse } from "@/lib/rate-limit";
 
 /**
  * Anon "Ask RO about the Index" (docs/explore-index.md Phase 2). PUBLIC — no auth.
@@ -15,18 +16,7 @@ import { suggestFollowups } from "@/lib/followups";
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-const WINDOW_MIN = 60;
-const MAX_PER_WINDOW = 20;
-
 type Scope = { company?: string; archetype?: string } | undefined;
-
-function clientIp(req: Request): string {
-  return (
-    req.headers.get("cf-connecting-ip") ||
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-    "unknown"
-  );
-}
 
 function compact(r: Record<string, unknown>) {
   const loc = r.location as { name?: string } | string | null;
@@ -67,23 +57,14 @@ export async function POST(req: Request): Promise<Response> {
     return NextResponse.json({ error: "Ask a question about the Index." }, { status: 400 });
   }
 
-  const db = supabaseService();
-  const ip = clientIp(req);
-
-  // Rolling-window IP rate limit.
-  const since = new Date(Date.now() - WINDOW_MIN * 60_000).toISOString();
-  const { count } = await db
-    .from("index_ask_events")
-    .select("*", { count: "exact", head: true })
-    .eq("ip", ip)
-    .gte("created_at", since);
-  if ((count ?? 0) >= MAX_PER_WINDOW) {
-    return NextResponse.json(
-      { error: "You've asked RO a lot in the last hour — share your profile to keep going with RO directly." },
-      { status: 429 },
+  // H3: shared limiter (same 20/hour-per-IP budget as before; the legacy
+  // index_ask_events table stays in place — no destructive change).
+  const rate = await checkRateLimit("explore_ask", clientIp(req));
+  if (!rate.allowed) {
+    return rateLimitResponse(
+      "You've asked RO a lot in the last hour — share your profile to keep going with RO directly.",
     );
   }
-  await db.from("index_ask_events").insert({ ip });
 
   try {
     const roles = await contextRoles(question, body.scope);
