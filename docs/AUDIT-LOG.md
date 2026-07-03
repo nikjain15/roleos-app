@@ -62,6 +62,38 @@
 
 ## Slice entries (newest first)
 
+### Slice 11 — Stress-test harness · 2026-07-03 · branch `slice/11-stress-test` — **FINAL SLICE, board complete**
+- **Built:** the scenario library + guardrails codified as **automatable** tests (CI-runnable, no
+  secrets/model needed) so "it holds" is enforced, not asserted once.
+  - `tests/invariants/rls-coverage.test.ts`: statically parses the migration SQL and fails if any
+    table with a `user_id` column lacks `enable row level security` — the durable guard behind the
+    cross-user RLS scenario (catches a future table that forgets RLS before it can leak).
+  - `tests/invariants/wellbeing.test.ts`: every BANNED notif kind → tier `never` under any context;
+    pace nudges silent on-track; `lib/apply.ts` + `lib/pace-nudge.ts` contain **no transport**
+    (`fetch`/XHR/WebSocket/SMTP) — the human-gated-outward promise, programmatic.
+  - `tests/stress/scenarios.test.ts`: the scenario matrix over the pure engines — thin/URL-only input,
+    malformed model JSON (fail-closed), deadline-too-short → off_track, no-supply → at_risk, honest
+    funnel ranges, empty-pipeline agenda never dead-ends, clean-vs-flagged résumé, priors-when-no-data,
+    15-dims-honest-when-no-signal. Every edge **degrades honestly, never crashes/fabricates**.
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean.
+  - **D2/D3** green — **138/138 vitest** (+21 harness: rls-coverage, wellbeing, scenarios).
+  - **D4** green by absence — tests-only slice, no runtime/route change (E2E re-run confirms).
+  - **D5/D7** green — E2E/axe 27/27 (local) / 18 (CI) unchanged.
+  - **D6** green — the RLS-coverage + no-transport tests *strengthen* D6; no-send + no-client-secret green.
+  - **D8** green — no migration; RLS coverage now enforced in CI. **D9** green — pure/static tests.
+  - **D10** green — the guardrails are now **regression-locked by tests**, not just convention.
+- **Scenarios run:** the full deterministic scenario library (above) + the public E2E smoke. Model/DB/
+  session-dependent scenarios (persona happy-path E2E, live 2-session cross-user RLS, prompt-injection
+  through the model) remain manual/preview-audit items — the harness locks everything runnable in CI.
+- **Deferred (no silent gaps):** (1) authed persona E2E + live cross-user RLS probe + in-model prompt-
+  injection — need a seeded session/model in CI (harness ready; runnable locally with `.env.local`).
+  (2) load/perf stress (concurrent writes) — out of scope for v1.
+- **New learnings:** the most durable "stress test" for guardrails is **static + pure**: parse the
+  migrations to prove RLS coverage, grep the outward helpers to prove no-transport, and run the pure
+  engines over the edge-case matrix — all in CI, no secrets. Convention becomes an enforced invariant.
+- **PR:** https://github.com/nikjain15/roleos-app/pull/14
+
 ### Slice 10 — App shell + responsive/a11y pass · 2026-07-03 · branch `slice/10-app-shell`
 - **Built:** one consistent nav across every authenticated screen + a broader a11y/responsive net.
   - `components/AppNav.tsx`: the single app shell nav (Feed · Goal · Roles · Tracker · Explore +
