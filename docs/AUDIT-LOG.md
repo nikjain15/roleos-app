@@ -59,8 +59,32 @@
 - **CI's e2e job has only PUBLIC Supabase keys** (no service-role) — so E2E `PUBLIC_PAGES` that read
   via the service role (e.g. `/explore`) 500 in CI. Gate those to non-CI runs
   (`process.env.CI ? [...] : [...]`); `/` + `/login` are the safe always-on CI smoke.
+- **Authed screens can hide responsive/a11y bugs the public smoke can't reach** (e.g. `/feed` overflowed
+  at 375px). Run `npm run test:e2e:live` (seeded-session harness, `tests/e2e/live/`) locally to cover the
+  authed flows + edge/RLS/injection scenarios — it forges a Supabase session and self-skips in CI.
 
 ## Slice entries (newest first)
+
+### Live E2E harness (post-board) · 2026-07-03 · branch `chore/e2e-live-harness`
+- **Built:** the seeded-session live E2E suite (`tests/e2e/live/`, `playwright.live.config.ts`,
+  `npm run test:e2e:live`) that drives the AUTHENTICATED app against real Supabase — covering the
+  scenario library CI can't: **persona happy-path, edge/negative states, cross-user RLS, prompt-
+  injection (model-gated), and authed mobile a11y.** Forges a real session (service-role createUser →
+  magiclink → `verifyOtp` → `sb-<ref>-auth-token` cookie), seeds realistic rows, auto-cleans (deleteUser
+  cascades). Self-skips without secrets (`hasSecrets`) → no-op in CI; the fast public smoke ignores
+  `live/`. Full how-to in `docs/e2e-live-harness.md`.
+- **Findings (first run):** ✅ cross-user RLS holds (A→B probes all 404, B's data untouched); ✅
+  **prompt-injection refused** — an "ignore instructions… CEO of Google" CV makes RO's truth gate flag
+  the adversarial profile and generate NO résumé (my first assertion was naive — it matched RO's own
+  refusal note; corrected to check the résumé *body*); 🐛 **found + fixed a real bug**: the authed
+  `/feed` overflowed 192px at 375px (un-wrapped action-link row) — invisible to the public-only smoke —
+  fixed with `flex-wrap`.
+- **Audit:** typecheck/lint clean; 138 vitest; 27 public E2E; live suite persona+edge×3+RLS+injection
+  all green locally. No runtime code beyond the feed `flex-wrap` fix; no migration.
+- **Note (documented limitation):** RO grounds the truth gate against the user's OWN profile, so a false
+  claim the *user themselves* supplies is trusted — RO guards against inventing *beyond* the profile,
+  not against the user's own inputs. Expected, not a leak.
+
 
 ### Slice 11 — Stress-test harness · 2026-07-03 · branch `slice/11-stress-test` — **FINAL SLICE, board complete**
 - **Built:** the scenario library + guardrails codified as **automatable** tests (CI-runnable, no
