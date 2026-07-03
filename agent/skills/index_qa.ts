@@ -16,6 +16,16 @@ export default skill({
     const question = String(data.question ?? "");
     const scope = data.scopeLabel ? ` (the user is looking at ${data.scopeLabel})` : "";
     const roles = (data.roles as Array<Record<string, unknown>>) ?? [];
+    // Prior turns (if any) so follow-ups read as one conversation, not one-shots.
+    const history = (data.history as Array<{ q?: string; a?: string }>) ?? [];
+    const priorChat = history.length
+      ? "EARLIER IN THIS CHAT (context only — the ROLES below stay the only source of truth):\n" +
+        history
+          .slice(-2)
+          .map((h) => `You: ${String(h.q ?? "").slice(0, 300)}\nRO: ${String(h.a ?? "").slice(0, 400)}`)
+          .join("\n") +
+        "\n\n"
+      : "";
     const context = roles
       .map((r, i) => {
         const mh = Array.isArray(r.must_haves) ? (r.must_haves as string[]).slice(0, 5) : [];
@@ -37,7 +47,7 @@ export default skill({
         "Be concise and concrete (2-4 sentences or a short list). Reference specific roles/companies when relevant.",
         "Warm, candid, never salesy. End with ONE short line inviting them to share their profile so RO can score their actual fit — only if it fits naturally.",
       ].join(" "),
-      user: `QUESTION${scope}: ${question}\n\nROLES:\n${context || "(no roles matched)"}\n\nAnswer from the roles above.`,
+      user: `${priorChat}QUESTION${scope}: ${question}\n\nROLES:\n${context || "(no roles matched)"}\n\nAnswer from the roles above.`,
     };
   },
   expects: (t) => t.trim().length > 0,
