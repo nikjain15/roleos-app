@@ -107,7 +107,7 @@
 - **New learnings:** `docx` packs on Workers via `Packer.toBase64String` + `atob(...)`→`Uint8Array`
   (avoid Node `Buffer`/`Blob`). A non-hook helper must not be named `use*` — ESLint `rules-of-hooks`
   treats it as a Hook. (Both added to Standing learnings.)
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/3
 
 ### Slice T — Audit tooling + app-shell scaffold · 2026-07-02 · branch `slice/T-audit-tooling`
 - **Built:** the audit harness every later slice depends on —
