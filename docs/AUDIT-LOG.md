@@ -95,7 +95,7 @@
 - **New learnings:** derive funnel rates from the **furthest stage each application reached** (via
   append-only `stage_history`), not its current stage — so a rejection after an onsite still counts the
   onsite as a real trial. Keep the derivation pure (`lib/plan/observed.ts`) and unit-test it.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/6
 
 ### Slice 2 — Goal Setter + Plan/Pace engine + Feed cockpit · 2026-07-03 · branch `slice/2-goal-pace-feed`
 - **Built:** the spine — "get X in Y days" becomes a live, honest plan.
