@@ -98,7 +98,7 @@
   the pre-filled Gmail/ATS URL and records the gesture; the user submits in their own tool. This keeps
   the no-send invariant literally true (no fetch/SMTP anywhere) while still "closing the loop." Any
   future outward feature should follow this shape.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/7
 
 ### Slice 3 — Application Tracker · 2026-07-03 · branch `slice/3-application-tracker`
 - **Built:** the funnel of record — closes the goal→apply→track→adapt loop and feeds REAL
