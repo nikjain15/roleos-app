@@ -140,11 +140,13 @@ const inputCls =
   "mt-1 w-full rounded-md border border-bd bg-surf px-3 py-2 text-[15px] text-tx outline-none focus:border-info";
 
 function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
+  // Wrap the control in the <label> so it's implicitly associated (a11y: every form
+  // element must have a label — a bare sibling <label> doesn't count).
   return (
-    <div>
-      <label className="text-sm font-medium text-tx">{label}</label>
+    <label className="block">
+      <span className="text-sm font-medium text-tx">{label}</span>
       {children}
       {hint && <p className="mt-1 text-[11px] text-tx3">{hint}</p>}
-    </div>
+    </label>
   );
 }
