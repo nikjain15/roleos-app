@@ -65,6 +65,22 @@
 
 ## Slice entries (newest first)
 
+### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
+  roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
+  issues.** All 14 deploys succeeded; migrations 0010–0012 live. Committed as a repeatable
+  `prod.spec.ts` / `npm run test:e2e:prod`.
+- **New coverage (live suite, 35 tests total):** `a11y-sweep` (every authed screen @375px + axe),
+  `api-contract` (per-route 401/403/400 authz+validation matrix), `flows` (goal→plan, tracker
+  create→advance, curate, DOCX export, apply-gesture, taste correction — asserting real DB state).
+- **🐛 Found + fixed:** `/watch` had **unlabelled form inputs** (the `Field` wrapper's `<label>` wasn't
+  associated with its control — axe `label` violation, a real prod a11y bug). Fixed by wrapping the
+  control in the `<label>`. (The a11y sweep is the generalization of the `/feed`-overflow catch.)
+- **Audit:** typecheck/lint clean; 138 vitest; 27 public E2E; **35 live tests green** locally; prod
+  health check green. Only runtime change is the `/watch` label fix; no migration.
+- **Learning:** the seeded-session live suite is the right home for authed a11y/authz/flow coverage —
+  each new authed screen should get a line in the a11y sweep + (if it has a route) the contract matrix.
+
 ### Live E2E harness (post-board) · 2026-07-03 · branch `chore/e2e-live-harness` · PR #15
 - **Built:** the seeded-session live E2E suite (`tests/e2e/live/`, `playwright.live.config.ts`,
   `npm run test:e2e:live`) that drives the AUTHENTICATED app against real Supabase — covering the

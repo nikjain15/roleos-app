@@ -17,6 +17,7 @@
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "test:e2e:live": "playwright test --config playwright.live.config.ts",
+    "test:e2e:prod": "E2E_PROD=1 PW_BASE_URL=https://ro.roleos.fyi playwright test --config playwright.live.config.ts prod.spec.ts",
     "invariant:imports": "depcruise agent --config .dependency-cruiser.cjs",
     "seed:roles": "tsx db/seed/seed-roles.ts",
     "seed:embeddings": "tsx db/seed/embed-roles.ts",
