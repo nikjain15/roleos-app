@@ -106,7 +106,7 @@
 - **New learnings:** keep the pace math **pure with `today`/`liveSupply` passed in** — deterministic,
   unit-testable, and dodges the Workflow `new Date()` ban if ever reused there. New user tables: add the
   4 owner policies + a `where status='active'` partial-unique for singleton rows.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/4
 
 ### Slice 1 — Résumé Editor + export · 2026-07-03 · branch `slice/1-resume-editor`
 - **Built:** the truth gate turned from a wall into a resolvable craft surface.
