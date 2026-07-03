@@ -41,4 +41,28 @@ describe("buildApplyBundle", () => {
     expect(b.atsUrl).toBeNull();
     expect(b.gmailUrl).toContain("mail.google.com");
   });
+
+  // Slice W2 — an approved drafted cover letter replaces the template wholesale.
+  it("uses the approved cover letter (body + subject) instead of the template", () => {
+    const cover = { subject: "Staff PM — Alex for Acme", body: "Dear Acme team,\n\nA real letter.\n\nBest,\nAlex" };
+    const b = buildApplyBundle(resume, role, "Alex", cover);
+    expect(b.subject).toBe("Staff PM — Alex for Acme");
+    expect(b.note).toBe(cover.body);
+    expect(b.note).not.toContain("A few things I'd bring");
+    expect(b.gmailUrl).toContain(encodeURIComponent("A real letter.").replace(/%20/g, "+").slice(0, 6));
+    expect(b.mailtoUrl).toContain(encodeURIComponent("A real letter."));
+    expect(b.atsUrl).toBe("https://acme.com/jobs/1");
+  });
+
+  it("falls back to the template subject when the cover has none, and to the template when the cover body is empty", () => {
+    const b1 = buildApplyBundle(resume, role, "Alex", { body: "Real letter body here." });
+    expect(b1.subject).toBe("Application — Staff PM at Acme");
+    expect(b1.note).toBe("Real letter body here.");
+
+    const b2 = buildApplyBundle(resume, role, "Alex", { subject: "s", body: "   " });
+    expect(b2.note).toContain("A few things I'd bring");
+
+    const b3 = buildApplyBundle(resume, role, "Alex", null);
+    expect(b3.note).toContain("A few things I'd bring");
+  });
 });
