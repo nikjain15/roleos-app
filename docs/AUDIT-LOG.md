@@ -47,8 +47,67 @@
 - **Playwright/axe harness:** `npm run test:e2e` self-boots `next dev` and runs 375/768/1280 +
   axe (0 serious/critical). Needs `npx playwright install chromium` once. `/` (marketing) needs
   no secrets; routes behind auth need `.env.local` copied in + are guarded/deferred in CI.
+- **`docx` on Workers:** pack with `Packer.toBase64String(doc)` then `Uint8Array.from(atob(b64),
+  c => c.charCodeAt(0))` — the Node `toBuffer`/`toBlob` paths aren't guaranteed on the Workers
+  runtime. Keep `Document` construction in a pure lib; do the packing in the route.
+- **ESLint `rules-of-hooks`:** a plain (non-hook) function must NOT be named `use*` — the linter
+  treats any `useX` called from a callback as a misused Hook. Name helpers `applyX`/`doX`.
 
 ## Slice entries (newest first)
+
+### Slice 1 — Résumé Editor + export · 2026-07-03 · branch `slice/1-resume-editor`
+- **Built:** the truth gate turned from a wall into a resolvable craft surface.
+  - `components/ResumeEditor.tsx`: two-pane canvas (left = user's real CV / source of truth,
+    read-only; right = editable tailored draft). Inline **flag chips** on flagged bullets with the
+    reason; three in-place **resolve actions** — *Use RO's grounded version*, *Edit myself*, *Keep
+    my original*. **Autosave** (debounced), **live grounded/needs-your-eyes** status pill, and
+    **Export DOCX/PDF** that enable only when grounded. Mobile: pane toggle; desktop: side-by-side.
+  - `lib/resume/flags.ts` (+ test): pure violation→bullet mapper (token overlap), unmatched →
+    document-level flags; excludes user-resolved violations from live status. Invariant-safe — does
+    NOT touch the drafter's model contract or the truth gate.
+  - APIs (all zod-validated via Slice T's `lib/validate.ts`, RLS-scoped): `PATCH …/edit` (autosave,
+    content-only, snapshots the pristine draft for revert), `POST …/reground` (re-grounds ONE bullet
+    strictly to `master_profile` via the **metered** registry → `agent_runs`; writes an append-only
+    `correct` decision_event), `GET …/export?format=docx` (`docx` lib, selectable text, Workers-safe
+    `Packer.toBase64String`+`atob`).
+  - `lib/resume/docx.ts` (+ test): ATS-safe single-column DOCX builder (pure; packing in the route).
+  - `…/resume/[id]/print` + `AutoPrint`: client print-to-PDF view (no headless Chrome on Workers).
+  - Rewrote `…/studio/resume/[id]` to mount the editor (kept the never-blank guard + Regenerate).
+- **Audit D1–D10:**
+  - **D1** green — `tsc` 0 errors; `next lint` 0 errors (2 pre-existing warnings only; lint caught a
+    real `rules-of-hooks` bug — a helper named `useGrounded` read as a Hook → renamed `applyGrounded`);
+    `depcruise` 0 violations.
+  - **D2/D3** green — 71/71 vitest incl. new `resume-flags` (5) + `resume-docx` (3, packs a real
+    >500-byte DOCX); never-blank guard preserved; malformed-input → 400 (validate unit tests).
+  - **D4** green — `next build` compiled the new routes (`/studio/resume/[id]` editor 4.1 kB, `/print`);
+    `opennextjs-cloudflare build` produced the Workers bundle with `docx`+`atob` intact.
+  - **D5/D7** green — E2E/axe harness 9/9 across 375/768/1280 (public surface). Editor a11y by
+    construction: labelled fields, `role=status aria-live` truth pill, visible focus, ≥40px targets.
+  - **D6** green — live-probed unauth: page → 307 login redirect, `/edit`,`/reground`,`/export` → 401;
+    auth checked before any work (export reordered auth-before-format); zod on every new route; RLS
+    owner policies gate cross-user reads (a foreign id → 404, filtered by RLS); reground grounds only
+    to the user's own `master_profile`; no-send + no-client-secret invariants green.
+  - **D8** green — no migrations; `content` jsonb extended backward-compatibly (`original`,
+    `resolved_violations`); `decision_events` reused append-only (`correct`).
+  - **D9** green — bounded single-row reads by id; bullets capped (zod max 60); autosave debounced +
+    content-only (no per-keystroke events); the one reground model call metered to `agent_runs`.
+  - **D10** green — truth gate untouched and still authoritative; grounding ≠ approval (autosave/
+    reground deliberately do NOT mutate `status`; "make it mine" stays the only approval path).
+- **Scenarios run:** public smoke (render/responsive/a11y ×3 viewports); unauth auth-gating probes on
+  all new routes; unit personas for flag mapping (overstated scope, doc-level, resolved, multi-bullet)
+  and DOCX (full/empty). Prompt-injection: reground's system prompt is truth-gate-constrained ("never
+  invent", ground only to master_profile) and imports no send tool — injection in a CV can't exfiltrate
+  or send.
+- **Deferred (no silent gaps):** (1) **authed persona E2E** of the editor happy-path (open → resolve
+  flag → autosave → export download) — needs a seeded user+artifact+session+secrets; harness is ready,
+  lands when CI secrets are wired. (2) **live 2-session cross-user RLS test** — relies on existing
+  `artifacts` owner policies (asserted by policy, not a live probe this slice). (3) Per-bullet flag-id
+  in the drafter output (exact vs. inferred mapping) — future eng-debt, noted in `lib/resume/flags.ts`.
+  (4) P1s (keyword-lift panel, undo/redo, version pins) — out of P0 scope.
+- **New learnings:** `docx` packs on Workers via `Packer.toBase64String` + `atob(...)`→`Uint8Array`
+  (avoid Node `Buffer`/`Blob`). A non-hook helper must not be named `use*` — ESLint `rules-of-hooks`
+  treats it as a Hook. (Both added to Standing learnings.)
+- **PR:** https://github.com/nikjain15/roleos-app/pull/3
 
 ### Slice T — Audit tooling + app-shell scaffold · 2026-07-02 · branch `slice/T-audit-tooling`
 - **Built:** the audit harness every later slice depends on —
