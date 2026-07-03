@@ -55,6 +55,46 @@
 
 ## Slice entries (newest first)
 
+### Slice 5 — Roles Workspace (Phase A) · 2026-07-03 · branch `slice/5-roles-workspace`
+- **Built:** the worked shortlist — turns the static match list into a sort/filter/curate surface
+  over the already-reasoned matches (no onboarding re-run, no per-action model call).
+  - `lib/workspace.ts` (+ 9 tests): pure sort (fit / recency / verdict), filter (verdict / company /
+    location / remote, AND-combined, dismissed always hidden), `toVerdict`, `locationText` (flattens
+    `roles.location` jsonb + remote detection).
+  - `/api/match/curate` (zod + RLS): save / dismiss / pursue / restore → updates `matches.status` +
+    writes an append-only `decision_event` (approve/skip/view). No model call.
+  - `/roles` page + `components/RolesWorkspace.tsx`: card board with fit + verdict + inline
+    "why this fits" (stored rationale + gaps), optimistic **local re-rank** on curate, and a separate
+    explicit **↻ refresh matches** (`/api/rematch`). "Pursue" bridges to the résumé via the existing
+    `TailorButton`. Responsive single column; honest empty states (no-matches vs no-filter-match).
+    `/roles` gated in middleware; feed gains a Roles link.
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean.
+  - **D2/D3** green — 102/102 vitest (+9 workspace: verdict normalize, location flatten, AND filters,
+    dismissed-hidden, empty result, all sorts, curate one-pass). Honest empty states covered.
+  - **D4** green — `next build` (`/roles`, `/api/match/curate`; distinct from public `/explore/roles`)
+    + `opennextjs-cloudflare build`.
+  - **D5/D7** green — E2E/axe 9/9 (public). Workspace a11y: labelled sort/filter controls, `aria-
+    expanded` on why-toggle, ≥40px targets, single-column mobile.
+  - **D6** green — live-probed: `/roles` → 307, `/api/match/curate` unauth → 401; zod; RLS-scoped
+    curate (owner-only, one match per user+role); no-send + no-client-secret green.
+  - **D8** green — no new table (reuses `matches` + `decision_events`); status transitions only.
+    **D9** green — reads the already-reasoned matches (no re-reason on curate); bounded; the one
+    heavy path (`/api/rematch`) is user-triggered + already metered.
+  - **D10** green — human-gated-outward intact (workspace ends at "pursue" handoff; no send); truth
+    gate untouched.
+- **Scenarios run:** public smoke ×3; unauth gating on `/roles` + `/api/match/curate`; unit personas
+  for sort/filter/curate + empty-filter. Prompt-injection: curate stores only validated uuid+enum, no
+  model call; the "why" is the user's own stored rationale.
+- **Deferred (no silent gaps):** (1) **P0-7 fit-on-browse** (fit badge across `/explore`) → Phase B
+  (PRD splits it; Phase A shippable alone). (2) P1 — compare 2–3 roles, per-role notes, bulk dismiss,
+  saved-search→/watch. (3) keyboard triage (j/k/s/x). (4) comp sort — `roles.comp` sparse, P1 where
+  present (PRD open question). (5) authed E2E of curate→re-rank — needs seeded session.
+- **New learnings:** curation re-rank is **local + instant** (optimistic status update → `curate()`
+  re-filters) — a full `/api/rematch` (model calls) is a *separate, explicit* refresh, never per
+  keystroke/click. Keep the sort/filter logic pure so it's identical on server and client.
+- **PR:** https://github.com/nikjain15/roleos-app/pull/8
+
 ### Slice 4 — Apply / Send (human-gated) · 2026-07-03 · branch `slice/4-apply-send`
 - **Built:** the outward step — replaces the `/api/dispatch` 501 stub with the real, human-gated
   apply path. **RO composes; you send.**
