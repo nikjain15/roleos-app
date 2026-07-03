@@ -35,6 +35,10 @@ when secrets are absent (`hasSecrets`), so it's a no-op in CI and never flakes t
 | `edge.spec.ts` | D3 | 0 matches → honest empty state; sub-cycle deadline → Off-track + extend lever; flagged résumé → "needs your eyes" shown |
 | `rls.spec.ts` | D6 | user A (signed in) is blocked from user B's résumé/apply/export/page → 404, B's data untouched |
 | `injection.spec.ts` | D6 | a CV carrying "ignore instructions… CEO of Google" → RO **detects the injection and refuses** (no fabricated body); résumé body never echoes the fabrication (model-gated) |
+| `a11y-sweep.spec.ts` | D5, D7 | **every** authed screen (feed/goal/roles/tracker/settings/watch/résumé/apply) at 375px → no h-overflow + 0 serious axe |
+| `api-contract.spec.ts` | D6 | every mutating route: unauth → 401, secretless cron → 403, malformed body → 400 (never 500) |
+| `flows.spec.ts` | D2 | goal→plan, tracker create→advance, curate dismiss, DOCX export, apply gesture (records send + advances), taste correction — asserting real DB state |
+| `prod.spec.ts` | ops | opt-in prod health check (`npm run test:e2e:prod`) — every authed surface on ro.roleos.fyi returns non-5xx |
 
 ## Findings from the first run (2026-07-03)
 
@@ -45,6 +49,10 @@ when secrets are absent (`hasSecrets`), so it's a no-op in CI and never flakes t
   beyond* the profile, not against the user's own inputs.)
 - 🐛 **Found + fixed:** the authed `/feed` overflowed 192px at 375px (an un-wrapped
   action-link row) — the public-only smoke couldn't catch it. Fixed with `flex-wrap`.
+- 🐛 **Found + fixed (coverage expansion):** `/watch` had unlabelled form inputs (the
+  `Field` wrapper's `<label>` wasn't associated with its control) — axe `label`
+  violation. Fixed by wrapping the control in the `<label>`.
+- ✅ Prod authed surfaces (ro.roleos.fyi) all return non-5xx (`npm run test:e2e:prod`).
 
 ## Still manual / not automated
 
