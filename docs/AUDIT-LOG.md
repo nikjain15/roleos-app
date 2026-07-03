@@ -59,6 +59,47 @@
 
 ## Slice entries (newest first)
 
+### Slice 7 — RO-everywhere dock · 2026-07-03 · branch `slice/7-ro-dock`
+- **Built:** an ask/act layer on every authenticated screen — RO answers about YOUR hunt, grounded
+  in your real state, and points you to one next screen. Never sends or acts.
+  - `agent/skills/ro_ask.ts`: structured skill (answer + ONE optional in-app action), grounded ONLY
+    in the state passed in, warm RO voice. **`tools: []` → structurally cannot send** (no-send holds).
+  - `/api/ro/ask` (zod + RLS): gathers the user's own goal + plan verdict + pipeline counts + screen,
+    runs the skill (metered → `agent_runs`), and returns `{answer, action}`. The suggested `action.href`
+    is **whitelisted server-side** (defense-in-depth — never a foreign link).
+  - `components/RoDock.tsx`: floating dock (dialog semantics, Escape to close, focus-to-input,
+    ≥44px trigger) that self-hides on `/login` + `/onboarding`. Actions are links the user clicks.
+  - `app/(app)/layout.tsx`: minimal group layout mounting the dock on all `(app)` screens (no nav
+    chrome — the full shell is Slice 10; existing pages render unchanged).
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean (36 modules cruised — `ro_ask` added, still 0 outbound).
+  - **D2/D3** green — 106/106 vitest; live-probed `/api/ro/ask` unauth → 401. Empty-state safe (dock
+    answers honestly from an empty pipeline).
+  - **D4** green — `next build` (`/api/ro/ask`) + `opennextjs-cloudflare build`.
+  - **D5/D7** green — E2E/axe 18/18. The new `(app)` layout wraps `/login`; the dock **self-hides**
+    there (verified — `/login` a11y/render still pass). Dock a11y: `role=dialog`, keyboard-closable,
+    focus moves to input, labelled controls.
+  - **D6** green — `/api/ro/ask` unauth → 401 (auth before zod); zod; RLS-scoped context reads; action
+    href **whitelisted**; public `/` unaffected (marketing is outside the `(app)` group — no dock).
+    no-send + no-client-secret green.
+  - **D8** green — no schema change. **D9** green — bounded context reads (limit 1000 for counts; ready
+    via `count head:true`); one metered model call per ask.
+  - **D10** green — **HUMAN-GATED OUTWARD PRESERVED**: `ro_ask` has no tools; `/api/ro/ask` and
+    `RoDock` import no transport; actions are proposed in-app links the user clicks, never executed;
+    the `no-send-tool` invariant + depcruise stay green. Truth gate untouched (grounded-only answers).
+- **Scenarios run:** public smoke `/` + `/login` ×3 + axe (dock self-hide on `/login` verified); unauth
+  gating on `/api/ro/ask`; marketing-unaffected check. Prompt-injection: the question is the user's own
+  and the answer is grounded ONLY in their own state; a hostile action href is dropped by the whitelist.
+- **Deferred (no silent gaps):** (1) richer ACT verbs (draft/filter-this-view in place) — v1 proposes a
+  navigation action only, keeping it strictly non-executing. (2) streaming answers. (3) authed E2E of the
+  dock open→ask→answer flow — needs a seeded session + model in CI. (4) conversation memory in the dock
+  (each ask is standalone). (5) dock on the `/admin` surface (outside `(app)` group by design).
+- **New learnings:** to put something on "every authed screen" cheaply, add a minimal
+  `app/(app)/layout.tsx` and let the client component **self-hide** on pre-auth routes (`/login`,
+  `/onboarding` live inside `(app)`), rather than threading it through each page. For an LLM-suggested
+  navigation target, **whitelist the href server-side** — never trust the model's link.
+- **PR:** https://github.com/nikjain15/roleos-app/pull/10
+
 ### Slice 6 — Explore Ask (conversational) + Login polish · 2026-07-03 · branch `slice/6-explore-ask-login`
 - **Built:** fixes the two live-UX complaints — Explore Ask dumped one-shot text; login was flat.
   - **Conversational Explore Ask** (`components/explore/AskRo.tsx` rewrite): multi-turn **thread**
