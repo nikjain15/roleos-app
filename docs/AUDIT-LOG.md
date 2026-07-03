@@ -55,6 +55,59 @@
 
 ## Slice entries (newest first)
 
+### Slice 2 — Goal Setter + Plan/Pace engine + Feed cockpit · 2026-07-03 · branch `slice/2-goal-pace-feed`
+- **Built:** the spine — "get X in Y days" becomes a live, honest plan.
+  - `lib/plan/` (pure, heavily tested): `rates.ts` (empirical-Bayes blend of senior-PM **priors** →
+    the user's real rates, each stage a rate + credible band), `plan.ts` (backward funnel as
+    **ranges**, lead-time-aware **apply-by** date, weekly pace, derived Ramp/Push/Convert/Close
+    phases, **feasibility verdict** on_track/at_risk/off_track + the single best lever), `agenda.ts`
+    (ranked "Today" moves from plan + shortlist/draft state). 14 unit tests.
+  - `db/migrations/0010_goals.sql`: first-class `goals` table (target/deadline/constraints/intensity/
+    also_open_to/plan/status), **owner RLS** (sel/ins/upd/del mirroring §3.3), **partial-unique one
+    active goal per user**.
+  - `lib/goal.ts` (DB seam) + `POST /api/goal` (zod + RLS; upserts the active goal, recomputes &
+    caches the plan, writes an `edit` decision_event).
+  - `/goal` Goal Setter page + `components/GoalSetter.tsx` (target, hard/soft deadline, constraints,
+    intensity, also-open-to) with a live `PlanSummary`. Feed cockpit: `components/GoalCockpit.tsx`
+    added **above** the existing feed (status pill + Today agenda; graceful "set your goal" CTA when
+    none) — matches/digest untouched. `/goal` added to middleware PRIVATE.
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean.
+  - **D2/D3** green — 85/85 vitest (+14 pace-engine: funnel ranges, apply-by front-load, off-track on
+    sub-cycle deadline, ceiling & supply feasibility, no-deadline honesty, agenda ranking + never-
+    dead-ends). Graceful degradation verified: no goal → CTA; **missing `goals` table → nulls, feed
+    still renders** (defensive, pre-migration safe).
+  - **D4** green — `next build` (`/goal`, `/feed`, `/api/goal` compiled) + `opennextjs-cloudflare
+    build` Workers bundle.
+  - **D5/D7** green — E2E/axe 9/9 across 375/768/1280 (public). Goal Setter/cockpit a11y by
+    construction: labelled fields, `role=status` pace pill, keyboard-usable, ≥40px targets.
+  - **D6** green — live-probed: `/goal` → 307, `/api/goal` unauth → 401; zod on the route; **new
+    `goals` table has owner RLS** (default-deny, one-active partial unique); no-send + no-client-secret
+    invariants green.
+  - **D8** green — additive migration; owner RLS + partial-unique reviewed; `decision_events` reused
+    append-only (`edit`, kind `goal`); `plan` cached on the row (nightly recompute + on-change per
+    §7b, computed-on-read fallback).
+  - **D9** green — pure O(1) plan math (no model call in the pace path); bounded reads (single active
+    goal; `count head:true` for supply/ready); no N+1.
+  - **D10** green — human-gated-outward intact (setting a goal sends nothing; plan changes are
+    proposed in-UI, never auto-applied; pace-nudge *delivery* is Slice 9); truth gate untouched.
+- **Scenarios run:** public smoke (render/responsive/a11y ×3); unauth gating on `/goal` + `/api/goal`;
+  unit personas — aggressive short deadline (off-track + extend lever), low intensity ceiling (at-risk),
+  thin role supply (broaden lever), roomy goal (on-track), no-deadline (no false pace), on-pace-nothing-
+  pending (agenda never empty). Prompt-injection: `/api/goal` stores only validated scalar fields, runs
+  no model call, imports no send tool.
+- **Deferred (no silent gaps):** (1) **apply migration 0010 to live Supabase — required deploy step**
+  before/with merge (code degrades gracefully until then). (2) **Personal-rate blending** (rates from
+  real `applications`) activates when the **tracker (Slice 3)** lands — currently priors-only, noted in
+  `lib/goal.ts`. (3) **Priors citation** — v1 uses the spec's own senior-PM funnel (§3) as priors with
+  wide bands; owner to confirm/replace the public benchmark (spec open question). (4) Authed E2E of
+  goal→plan→cockpit — needs a seeded session; harness ready. (5) "also open to" widening sourcing +
+  goal switching UI — captured/stored, deeper wiring is later slices.
+- **New learnings:** keep the pace math **pure with `today`/`liveSupply` passed in** — deterministic,
+  unit-testable, and dodges the Workflow `new Date()` ban if ever reused there. New user tables: add the
+  4 owner policies + a `where status='active'` partial-unique for singleton rows.
+- **PR:** https://github.com/nikjain15/roleos-app/pull/4
+
 ### Slice 1 — Résumé Editor + export · 2026-07-03 · branch `slice/1-resume-editor`
 - **Built:** the truth gate turned from a wall into a resolvable craft surface.
   - `components/ResumeEditor.tsx`: two-pane canvas (left = user's real CV / source of truth,
