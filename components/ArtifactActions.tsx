@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 /**
@@ -40,13 +41,12 @@ export default function ArtifactActions({ id, status }: { id: string; status: st
               without your click).
             </p>
             <div className="mt-3 flex items-center gap-3">
-              <button
-                disabled
-                className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white opacity-50"
-                title="Sending is the separate, user-clicked dispatch — wired next."
+              <Link
+                href={`/apply/${id}`}
+                className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
               >
-                Send it ↗
-              </button>
+                Apply — you send ↗
+              </Link>
               <button onClick={() => router.push("/feed")} className="text-sm text-tx3 underline">
                 back to feed
               </button>

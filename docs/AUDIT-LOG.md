@@ -55,6 +55,51 @@
 
 ## Slice entries (newest first)
 
+### Slice 4 — Apply / Send (human-gated) · 2026-07-03 · branch `slice/4-apply-send`
+- **Built:** the outward step — replaces the `/api/dispatch` 501 stub with the real, human-gated
+  apply path. **RO composes; you send.**
+  - `lib/apply.ts` (+ tests): pure — from an APPROVED résumé + role builds a subject, a short honest
+    cover note (templated from the real résumé, no invention), and pre-filled **Gmail/mailto compose
+    URLs + the company ATS link**. No transport, no fetch, no side effects.
+  - `/api/apply` (zod + RLS): the send GESTURE. Verifies the artifact is **approved** (truth gate —
+    nothing unapproved goes out), writes an append-only `decision_event` **action='send'**, and
+    advances/creates the tracker row → **'applied'** (stamps `sent_at` → the pace engine sees a real
+    send). **Performs NO external transport** — the actual submit happens when the user opens the
+    pre-filled compose/ATS window.
+  - `/apply/[id]` page + `components/ApplyPanel.tsx`: 3 steps (open your application → your composed
+    note → "I've applied → track it"); honest copy "RO never sends — you do." Wired the résumé
+    `ArtifactActions` "Apply — you send ↗" button to it; `/apply` added to middleware PRIVATE.
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean.
+  - **D2/D3** green — 93/93 vitest (+4 apply: compose-URL encoding, note from résumé, 3-bullet cap,
+    graceful missing-role). Unapproved artifact → 409 (can't apply); missing role → 409.
+  - **D4** green — `next build` (`/apply/[id]`, `/api/apply`) + `opennextjs-cloudflare build`.
+  - **D5/D7** green — E2E/axe 9/9 (public). Apply panel a11y: labelled steps, ≥44px primary actions,
+    external links `rel=noopener`.
+  - **D6** green — live-probed: `/apply/[id]` → 307, `/api/apply` unauth → 401 (auth before zod); zod
+    on the route; RLS-scoped reads/writes; no-client-secret green.
+  - **D8** green — no new table; reuses `applications` (append-only history) + `decision_events`
+    (`send`). **D9** green — bounded single-row reads; pure bundle build; no model call.
+  - **D10** green — **HUMAN-GATED OUTWARD PRESERVED + STRENGTHENED**: `no-send-tool` +
+    `no-client-secret` invariants green; `lib/apply.ts` and `/api/apply` perform **zero transport**
+    (only compose URLs the user opens); the agent layer still imports no send tool (depcruise clean).
+    Only an approved artifact can be applied (truth gate). The `send` decision_event is written from a
+    genuine UI gesture — exactly the dispatch contract, minus RO ever transporting.
+- **Scenarios run:** public smoke ×3; unauth gating on `/apply` + `/api/apply`; unapproved-résumé
+  block (409); unit personas for bundle composition (full/missing fields). Prompt-injection: the note
+  is templated from the user's own approved résumé text; `/api/apply` makes no model call and sends
+  nothing, so injected CV text can't exfiltrate or trigger an outbound action.
+- **Deferred (no silent gaps):** (1) a *drafted* cover letter (currently a clean template) — the
+  cover artifact is its own spec/non-goal of the résumé editor. (2) recruiter-email autofill when a
+  contact is known (Gmail `to` is left blank for the user). (3) authed E2E of approve→apply→tracker
+  advance — needs a seeded session. (4) `/api/dispatch` 501 stub left in place (superseded by
+  `/api/apply`); safe to remove in a later cleanup.
+- **New learnings:** the "send" path is a **compose-URL handoff, not a transport** — RoleOS builds
+  the pre-filled Gmail/ATS URL and records the gesture; the user submits in their own tool. This keeps
+  the no-send invariant literally true (no fetch/SMTP anywhere) while still "closing the loop." Any
+  future outward feature should follow this shape.
+- **PR:** <pending>
+
 ### Slice 3 — Application Tracker · 2026-07-03 · branch `slice/3-application-tracker`
 - **Built:** the funnel of record — closes the goal→apply→track→adapt loop and feeds REAL
   conversions back into the pace engine.
