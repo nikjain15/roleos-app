@@ -21,6 +21,7 @@ export default async function Tracker() {
   const { data: apps } = await supabase
     .from("applications")
     .select("id, role_id, stage, stage_history, next_action, sent_at, roles(company, role_title, url)")
+    .limit(300)
     .order("updated_at", { ascending: false })
     .returns<AppRow[]>();
 
@@ -28,6 +29,7 @@ export default async function Tracker() {
   const { data: matches } = await supabase
     .from("matches")
     .select("role_id, fit_score, roles(company, role_title)")
+    .limit(200)
     .eq("recommendation", "pursue")
     .order("fit_score", { ascending: false })
     .returns<TrackableRole[]>();

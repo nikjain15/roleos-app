@@ -7,6 +7,7 @@
  * NEVER import into a client component — service-role only.
  */
 import { headers } from "next/headers";
+import { unstable_cache } from "next/cache";
 import { supabaseService } from "@/lib/supabase/service";
 
 /**
@@ -90,11 +91,25 @@ interface RpcStats {
  * (and the all-roles JS aggregation was tripping the Worker resource limit on the
  * overview, which runs two of them).
  */
+/**
+ * H5: the aggregate is identical for every visitor — cache it for 5 minutes
+ * (Next data cache via unstable_cache; OpenNext backs it with the incremental
+ * cache). Role LISTS and postings stay per-request fresh; only this rollup is
+ * cached, so the overview stops re-aggregating on every anonymous hit.
+ */
+const cachedStats = unstable_cache(
+  async (): Promise<RpcStats> => {
+    const db = supabaseService();
+    const { data } = await db.rpc("public_index_stats");
+    return (data as RpcStats) ?? {};
+  },
+  ["public-index-stats"],
+  { revalidate: 300 },
+);
+
 async function rpcStats(): Promise<RpcStats> {
   await dynamicReadGuard();
-  const db = supabaseService();
-  const { data } = await db.rpc("public_index_stats");
-  return (data as RpcStats) ?? {};
+  return cachedStats();
 }
 
 /** All companies that have at least one role, biggest first. */

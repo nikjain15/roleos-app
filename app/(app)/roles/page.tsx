@@ -33,6 +33,7 @@ export default async function RolesPage() {
   const { data: matches } = await supabase
     .from("matches")
     .select("role_id, fit_score, reasoning, gaps, recommendation, status, created_at, roles(company, role_title, url, location, must_haves)")
+    .limit(500)
     .order("fit_score", { ascending: false })
     .returns<MatchRow[]>();
 
