@@ -7,6 +7,9 @@ import TailorButton from "@/components/TailorButton";
 import { isAdmin } from "@/lib/admin";
 import DigestCard from "@/components/DigestCard";
 import RematchButton from "@/components/RematchButton";
+import GoalCockpit from "@/components/GoalCockpit";
+import { loadActiveGoal } from "@/lib/goal";
+import { computeAgenda } from "@/lib/plan/agenda";
 
 /**
  * The decision feed — the home (journey.html §6). No tabs, no Kanban. What RO
@@ -42,6 +45,21 @@ export default async function Feed() {
   const rest = (matches ?? []).filter((m) => m.recommendation !== "pursue");
   const admin = await isAdmin();
 
+  // Goal cockpit (the spine): status + Today agenda. Graceful when no goal set.
+  const { plan } = await loadActiveGoal(supabase);
+  const { count: readyCount } = await supabase
+    .from("artifacts")
+    .select("id", { count: "exact", head: true })
+    .eq("status", "approved");
+  const agenda = plan
+    ? computeAgenda({
+        plan,
+        pursueRoles: pursue.length,
+        readyArtifacts: readyCount ?? 0,
+        appsThisWeek: 0, // real sent-count arrives with the tracker (Slice 3)
+      })
+    : [];
+
   return (
     <main className="mx-auto max-w-2xl px-6 py-12">
       <SaveOnboarding />
@@ -63,6 +81,9 @@ export default async function Feed() {
           <SignOut />
         </div>
       </div>
+
+      {/* The spine: goal status + Today agenda (or a set-your-goal CTA) */}
+      <GoalCockpit plan={plan} agenda={agenda} />
 
       <div className="mt-8 flex items-center justify-between gap-2">
         <span className="flex items-center gap-2 text-sm text-suc">
