@@ -7,9 +7,18 @@ import type { Observed, Rate, Rates, Stage } from "./types";
  * observed rates as events accrue — small n leans on the prior, large n on you.
  * Ranges are surfaced everywhere; we never show false precision.
  *
- * PRIORS (v1): derived from the spec's own senior-PM funnel (§3: ~25–40 targeted
- * apps ⇒ ~8–12 first interviews ⇒ ~3–5 finals ⇒ 1 offer). Wide uncertainty.
- * OPEN QUESTION (flagged to owner): swap in a firmer cited public benchmark.
+ * PRIORS (v1 — cited): the TARGETED funnel for a qualified senior candidate who
+ * applies selectively to matched roles with a tailored résumé (RoleOS's whole
+ * value prop), NOT the ~3% spray-and-pray job-board aggregate. Sources + rationale
+ * in `docs/specs/funnel-priors.md`. Wide uncertainty (moderate pseudo-counts) so
+ * the user's real rates take over quickly (dimension 14).
+ *
+ *   apply→screen  0.12  — qualified + tailored converts ~4–12% (vs ~3% aggregate);
+ *                         Career.IO 2025: avg successful seeker 32 apps → 4 interviews (12.5%).
+ *   screen→onsite 0.45  — first interview → final/onsite loop.
+ *   onsite→offer  0.35  — onsite→offer benchmark is ~30–40%.
+ *   ⇒ ~50 targeted apps → ~6 first interviews → ~3 final rounds → 1 offer, matching
+ *     the "21–80 applications = highest offer probability" band.
  */
 interface Prior {
   mean: number;
@@ -17,9 +26,9 @@ interface Prior {
 }
 
 export const PRIORS: Record<Stage, Prior> = {
-  apply_to_screen: { mean: 0.3, strength: 20 }, // ~33 targeted apps → ~10 screens
-  screen_to_onsite: { mean: 0.4, strength: 12 }, // ~10 screens → ~4 onsites
-  onsite_to_offer: { mean: 0.25, strength: 8 }, // ~4 onsites → 1 offer
+  apply_to_screen: { mean: 0.12, strength: 12 }, // ~50 targeted apps → ~6 screens
+  screen_to_onsite: { mean: 0.45, strength: 10 }, // ~6 screens → ~3 onsites
+  onsite_to_offer: { mean: 0.35, strength: 8 }, // ~3 onsites → 1 offer
 };
 
 /**
