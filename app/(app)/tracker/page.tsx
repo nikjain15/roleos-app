@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
-import TrackerBoard, { type AppRow, type TrackableRole } from "@/components/TrackerBoard";
+import TrackerBoard, { type AppRow, type RoleArtifact, type TrackableRole } from "@/components/TrackerBoard";
 
 /**
  * Application Tracker (buildplan §3) — the funnel of record. Every role's real
@@ -33,6 +33,22 @@ export default async function Tracker() {
     .returns<TrackableRole[]>();
   const trackable = (matches ?? []).filter((m) => m.role_id && !tracked.has(m.role_id)).slice(0, 12);
 
+  // W5: the user's artifacts by role, so each card links to its résumé/cover
+  // (RLS-scoped; bounded). Newest first so the freshest artifact leads.
+  const { data: artRows } = await supabase
+    .from("artifacts")
+    .select("id, role_id, type, status")
+    .in("type", ["resume", "cover"])
+    .order("created_at", { ascending: false })
+    .limit(500);
+  const artifactsByRole = new Map<string, RoleArtifact[]>();
+  for (const a of artRows ?? []) {
+    if (!a.role_id) continue;
+    const list = artifactsByRole.get(a.role_id as string) ?? [];
+    if (list.length < 4) list.push({ id: a.id as string, type: a.type as string, status: a.status as string });
+    artifactsByRole.set(a.role_id as string, list);
+  }
+
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
       <div className="flex items-center justify-between">
@@ -49,7 +65,7 @@ export default async function Tracker() {
       </p>
 
       <div className="mt-8">
-        <TrackerBoard apps={apps ?? []} trackable={trackable} />
+        <TrackerBoard apps={apps ?? []} trackable={trackable} artifacts={Object.fromEntries(artifactsByRole)} />
       </div>
     </main>
   );

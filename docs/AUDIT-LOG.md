@@ -65,6 +65,37 @@
 
 ## Slice entries (newest first)
 
+### W5 · Tracker depth (artifact links · next_action automation · timeline · SLAs) · 2026-07-03 · branch `v2/w5-tracker-depth`
+- **Built:** the four W5 bullets, all deterministic (zero model calls).
+  - **`lib/tracker.ts`** (pure, unit-tested): `STAGE_SLA_DAYS` per stage; `slaState` (ok/due/overdue
+    from the append-only `stage_history`, `now` injected for testability); `deriveNextAction` — a
+    concrete, honest next step per stage with `due = entered + SLA` (saved adapts when an approved
+    résumé exists; terminal stages derive null).
+  - **`/api/applications`**: POST and PATCH now auto-derive `next_action` when the caller doesn't
+    supply one (explicit value still wins; explicit null still clears) — every tracked application
+    always shows a real next step.
+  - **TrackerBoard**: per-card SLA chip ("10d in applied — needs a move" / "due today"), expandable
+    **timeline** rendering the stage_history, and **artifact links** (résumé chips link to the
+    studio; the page maps the user's artifacts by role, RLS-scoped, bounded 500/4-per-role).
+- **Audit:** D1 green. D2/D3 green — +6 vitest (SLA boundary ok/due/overdue, terminal stages,
+  garbage timestamps degrade to 0d, next-action derivation for every stage, due math, adaptive
+  saved) + 2 live E2E (create→advance→terminal: auto next_action with due, sent_at stamped, terminal
+  clears it — asserted against real DB; board renders overdue chip + timeline + linked résumé from a
+  10-day-old seeded history). D4 green (opennextjs build). D5/D7 green — chips wrap (flex-wrap);
+  timeline is a semantic <ol>; `/tracker` already in the a11y sweep. D6 green — no new route; PATCH
+  derivation validated by existing zod; RLS-scoped reads only. D8 green — NO migration (uses the
+  existing `next_action`/`stage_history`/`artifact_ids` columns). D9 green — one bounded artifacts
+  read per page; derivation is O(1). D10 green — invariants green; nothing sends; SLAs nudge in-app
+  only.
+- **Test-count ratchet:** vitest 138→146 · live E2E 35→37 run · public 27→27 · scenarios +2.
+- **Deferrals (no silent gaps):** (1) SLA-overdue surfacing in the Feed/pace-nudge path (belongs to
+  the nudge engine; the data is now on the card); (2) manual artifact link/unlink UI —
+  `artifact_ids` stays API-only; the by-role auto-mapping covers the real need; (3) cover-artifact
+  deep link once W2's apply-page cover card merges.
+- **Learnings:** `getByText("Saved")` can match a HIDDEN <option> in a stage <select> — assert on
+  the specific container (`ol li`) instead of page-wide text when the word also lives in form
+  controls. Auto-deriving on the server (not the client) means the Feed/agenda and future nudges
+  read the same `next_action` truth the tracker shows.
 ### W4 · Roles workspace P1 (compare · notes · bulk dismiss) · 2026-07-03 · branch `v2/w4-workspace-p1`
 - **Built:** the three P1 requirements of the roles-workspace spec.
   - **Compare 2–3** — per-card checkbox (capped via pure `toggleCompare`), side-by-side panel with
@@ -98,7 +129,6 @@
   signal quality depends on granularity, and a `bulk` flag in payload preserves the gesture's
   context. Playwright duplicate test titles fail the run when a matrix gains a second row for the
   same route — include the body in the generated title.
-
 ### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 ### W3 · RO-dock act-verbs (filter-this-view + tailor in place) · 2026-07-03 · branch `v2/w3-ro-dock-act-verbs`
 - **Built:** the slice-7 deferral — the dock now proposes ACTS beyond navigation, still human-gated,
