@@ -22,9 +22,14 @@ async function hit(env: Env, path: string): Promise<{ path: string; status: numb
   return { path, status: res.status, body: (await res.text()).slice(0, 300) };
 }
 
-// Hourly ambient jobs: build due digests + hunt new roles (demand-driven ingest).
+// Hourly ambient jobs: build due digests + goal-anchored pace nudges + hunt new
+// roles. Nudges are throttled to ≤1/48h per user server-side, so hourly is safe.
 async function fireHourly(env: Env) {
-  return Promise.all([hit(env, "/api/cron/digests"), hit(env, "/api/cron/ingest")]);
+  return Promise.all([
+    hit(env, "/api/cron/digests"),
+    hit(env, "/api/cron/nudges"),
+    hit(env, "/api/cron/ingest"),
+  ]);
 }
 
 // Daily: refresh the YC company layer (yc-oss rebuilds daily). New/enabled YC
@@ -58,9 +63,11 @@ export default {
         ? [await hit(env, "/api/cron/ingest")]
         : only === "digests"
           ? [await hit(env, "/api/cron/digests")]
-          : only === "yc-sync"
-            ? [await hit(env, "/api/cron/yc-sync")]
-            : await fireHourly(env);
+          : only === "nudges"
+            ? [await hit(env, "/api/cron/nudges")]
+            : only === "yc-sync"
+              ? [await hit(env, "/api/cron/yc-sync")]
+              : await fireHourly(env);
     return new Response(JSON.stringify(r), { headers: { "content-type": "application/json" } });
   },
 };
