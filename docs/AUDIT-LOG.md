@@ -93,7 +93,7 @@
 - **New learnings:** curation re-rank is **local + instant** (optimistic status update → `curate()`
   re-filters) — a full `/api/rematch` (model calls) is a *separate, explicit* refresh, never per
   keystroke/click. Keep the sort/filter logic pure so it's identical on server and client.
-- **PR:** <pending>
+- **PR:** https://github.com/nikjain15/roleos-app/pull/8
 
 ### Slice 4 — Apply / Send (human-gated) · 2026-07-03 · branch `slice/4-apply-send`
 - **Built:** the outward step — replaces the `/api/dispatch` 501 stub with the real, human-gated
