@@ -59,6 +59,47 @@
 
 ## Slice entries (newest first)
 
+### Slice 9 — Proactive pace nudges · 2026-07-03 · branch `slice/9-pace-nudges`
+- **Built:** RO now *proactively* pushes you toward your deadline — strictly inside the wellbeing
+  rule (goal-engine §8): assertive about YOUR pace, never guilt/streaks/inactivity.
+  - `lib/pace-nudge.ts` (+ 5 tests): pure `buildPaceNudge(plan, deadlineHard)` — returns a nudge ONLY
+    when off-pace with a concrete lever; **null when on-track or no deadline** (RO stays quiet). Leads
+    with the lever; asserted no-guilt language (tested). The `candidate` feeds the notifications engine.
+  - Added a `pace` `NotifKind` — `decideNotification` already does the rest: a hard slipping deadline
+    can raise the volume (gently, breaking quiet hours); `at_risk`/soft → digest; cadence `open` →
+    never interrupts.
+  - `/api/cron/nudges` (secret-gated, service-role): per-user plan recompute → `buildPaceNudge` →
+    `decideNotification` (quiet/caps/cadence) → **throttled** (`profiles.ambient.last_nudge_at`, ≤1/48h)
+    `pace` notification insert. Wired into the hourly cron worker (`cron/worker.ts` + `?only=nudges`).
+  - Feed surface: `/api/nudge` (GET latest unread pace + POST mark-read) + `components/PaceNudgeCard.tsx`
+    (dismissible "got it", links to the plan).
+- **Audit D1–D10:**
+  - **D1** green — tsc/lint/depcruise clean (removed an unused import the build lint flagged).
+  - **D2/D3** green — 117/117 vitest (+5 pace-nudge: silent-on-track, silent-no-deadline, no-guilt copy,
+    time-sensitivity by hard/soft, full engine routing incl quiet-hours-gentle + cadence-open).
+  - **D4** green — `next build` (`/api/nudge`, `/api/cron/nudges`) + `opennextjs-cloudflare build`.
+  - **D5/D7** green — E2E/axe 18/18. Nudge card `role=status`, dismissible, links to the plan.
+  - **D6** green — live-probed: `/api/nudge` unauth → 401; `/api/cron/nudges` no/bad secret → 403; zod;
+    RLS-scoped nudge read/dismiss; no-send + no-client-secret green.
+  - **D8** green — **no new migration** (reuses `notifications` + `profiles.ambient`). **D9** green —
+    bounded cron scan (≤500 goals, 25/run) + 48h throttle; no model call (deterministic plan math).
+  - **D10** green — human-gated + truth intact; the **wellbeing invariant holds**: banned bait kinds
+    still can't notify; a pace nudge fires only when genuinely off-pace + actionable, and `on_track`/
+    resting → silence (never manufactured urgency).
+- **Scenarios run:** public smoke `/` + `/login` ×3 + axe; unauth/secret gating on `/api/nudge` +
+  `/api/cron/nudges`; unit personas — on-track (silent), no-deadline (silent), off-track hard (push-
+  eligible, gentle in quiet hours), at-risk soft (digest), cadence-open (never interrupts).
+- **Deferred (no silent gaps):** (1) **redeploy the cron worker** to fire nudges hourly (`wrangler
+  deploy -c cron/wrangler.jsonc`); the endpoint works now + is manually triggerable (`?only=nudges`).
+  (2) email/push delivery — Cloudflare Email still gated; nudges are in-feed for now (tier recorded for
+  when a channel lands). (3) per-user timezone for quiet hours (cron uses UTC hour best-effort, same as
+  digests). (4) authed E2E of a delivered nudge → dismiss.
+- **New learnings:** the notifications engine already encodes the wellbeing rules, so a new
+  proactive nudge is just a new `kind` + a pure builder that returns **null when there's nothing honest
+  to say** — the "stay silent when on track" path is the most important test. Throttle proactive jobs
+  server-side (`ambient.last_nudge_at`) so hourly cron stays safe.
+- **PR:** https://github.com/nikjain15/roleos-app/pull/12
+
 ### Slice 8 — 15-dimension self-learning + funnel calibration · 2026-07-03 · branch `slice/8-self-learning`
 - **Built:** the structured 15-dim taste model — transparent + correctable — that sharpens fit, voice,
   and the plan (goal-engine §7). Distinct from the existing free-form `taste_model`.
