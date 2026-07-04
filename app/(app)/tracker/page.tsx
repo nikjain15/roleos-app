@@ -69,7 +69,10 @@ export default async function Tracker() {
       <h1 className="mt-6 text-2xl font-bold tracking-tight">Application tracker</h1>
       <p className="mt-2 max-w-2xl text-[15px] text-tx2">
         Every role you&apos;re pursuing and exactly where it stands. Advancing a stage keeps your
-        pace honest — it&apos;s what tells RO if you&apos;re on track.
+        pace honest — it&apos;s what tells RO if you&apos;re on track.{" "}
+        <Link href="/ready-room" className="font-medium text-info hover:underline">
+          Review the overnight queue →
+        </Link>
       </p>
 
       <HuntToggle initialPaused={huntPaused} />
