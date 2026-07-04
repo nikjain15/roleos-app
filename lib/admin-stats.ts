@@ -98,6 +98,7 @@ export async function getDemandStats(): Promise<DemandStats> {
   const { data } = await db
     .from("intents")
     .select("target_role, keywords, companies, location, mode")
+    .limit(1000)
     .eq("status", "active")
     .limit(5000);
   const rows = (data ?? []) as IntentRow[];
