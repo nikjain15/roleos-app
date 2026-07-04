@@ -114,17 +114,22 @@
   migration**; reused `profiles.ambient` jsonb; append-only respected. D9 green — every
   query bounded; every model call metered; budget stand-down. D10 green — invariants all
   green; drafts land as `draft`/`needs_your_eyes`, never `approved`/`sent`.
-- **Test-count ratchet:** vitest 209→224 · live E2E 99→107 by `--list` (run: 72 passed /
-  10 gated-skips model+prod / 0 failed) · public 33→33 · scenarios +6 (paused-skip ·
+- **Test-count ratchet:** vitest 209→224 · live E2E 99→107 by `--list` (run: 97 passed /
+  10 gated-skips model+prod / 0 failed, in 4 chunks under the auth budget) · public 33→33 ·
+  scenarios +6 (paused-skip ·
   dormant-skip · 20h-throttle idempotency · malformed-cron-body · cross-user hunt-state
   probe · overnight-hunt persona flow).
 - **Deferrals:** multi-user scale-out of the nightly sweep (Queue/Workflow — same deferral
   as digests); per-user local-time hunt scheduling (02:30 UTC fits the current user base);
   cover letters in the overnight queue (W2 drafts them at Apply); surfacing hunt results as
   a feed card beyond the digest note.
-- **Learnings:** (1) Supabase auth rate-limits `verifyOtp` — back-to-back full live-suite
-  runs exhaust the window and EVERYTHING fails at seed time with misleading breadth; wait
-  out the window, don't chase phantom regressions. (2) In `next dev`, a too-strict CSP
+- **Learnings:** (1) Supabase auth rate-limits OTP verification (~30 per 5 min per IP,
+  project default) and the live suite now seeds 40+ users per run — a single full run
+  EXHAUSTS THE BUDGET MID-RUN: everything green until ~test #66, then instant (~0.5s)
+  seed-time failures with misleading breadth. Fix used here: run the suite in 3 chunks
+  with ~5.5-min cool-downs (each chunk under the budget). Durable fixes are a decision for
+  the human (raising the Supabase auth rate limit = auth-config change → hard-stop) or a
+  test-debt slice that pools/reuses seeded users across specs. (2) In `next dev`, a too-strict CSP
   fails as SILENT hydration death — clicks no-op with zero console errors except an eval
   CSP violation; if UI tests click and nothing happens, check CSP before blaming the test.
   (3) Fire-and-forget DB inserts hide check-constraint violations — pin literal enum
