@@ -5,9 +5,10 @@
   "compatibility_date": "2025-03-01",
   "compatibility_flags": ["nodejs_compat"],
   // Hourly: digests + demand-driven role ingest. Daily (06:00 UTC): YC company
-  // sync (yc-oss rebuilds daily). worker.ts branches on event.cron — keep
-  // "0 6 * * *" in sync with DAILY_CRON there.
-  "triggers": { "crons": ["0 * * * *", "0 6 * * *"] },
+  // sync (yc-oss rebuilds daily). Nightly (02:30 UTC): the overnight hunt (X1).
+  // worker.ts branches on event.cron — keep "0 6 * * *" in sync with DAILY_CRON
+  // and "30 2 * * *" with NIGHTLY_CRON there.
+  "triggers": { "crons": ["0 * * * *", "0 6 * * *", "30 2 * * *"] },
   "observability": { "enabled": true },
   // Public app origin the cron calls. CRON_SECRET is a secret (wrangler secret put).
   "vars": { "APP_URL": "https://ro.roleos.fyi" }
