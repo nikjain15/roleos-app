@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 import { getGoogleAccessToken } from "@/lib/google-auth";
 import { gmailRecent, calendarUpcoming } from "@/lib/google";
@@ -32,8 +34,19 @@ export async function POST(req: Request): Promise<Response> {
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
   const uid = user.id;
-  const body = (await req.json()) as Record<string, unknown>;
-  const action = body.action as string;
+  const parsed = await validateBody(
+    req,
+    z.object({
+      action: z.enum(["scan", "draft_reply", "draft_screening"]),
+      message: z.string().max(20_000).optional(),
+      question: z.string().max(4_000).optional(),
+      availability: z.array(z.string().max(200)).max(20).optional(),
+      classification: z.record(z.string(), z.unknown()).optional(),
+    }),
+  );
+  if (!parsed.ok) return parsed.response;
+  const body: Record<string, unknown> = parsed.data;
+  const action = parsed.data.action;
 
   const masterRaw = async () => {
     const { data } = await supabase.from("master_profile").select("data").eq("user_id", uid).single();

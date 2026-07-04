@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 import { runSkill } from "@/agent/skills/run";
 import { parseModelJson } from "@/lib/json";
@@ -21,10 +23,12 @@ export async function POST(req: Request): Promise<Response> {
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
 
-  const { offer, roleId } = (await req.json()) as { offer?: string; roleId?: string };
-  if (!offer || offer.trim().length < 20) {
-    return NextResponse.json({ error: "paste the offer details for RO to work from" }, { status: 400 });
-  }
+  const parsed = await validateBody(
+    req,
+    z.object({ offer: z.string().min(20, "paste the offer details for RO to work from").max(20_000), roleId: z.string().uuid().optional() }),
+  );
+  if (!parsed.ok) return parsed.response;
+  const { offer, roleId } = parsed.data;
 
   const profileRaw =
     ((await supabase.from("master_profile").select("data").eq("user_id", user.id).single()).data?.data as {

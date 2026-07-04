@@ -37,7 +37,11 @@ export async function POST(req: Request): Promise<Response> {
     return rateLimitResponse("You've run onboarding a few times this hour — give it a rest and try again soon.");
   }
 
-  const body = (await req.json()) as { profile?: string };
+
+  const body = (await req.json().catch(() => ({}))) as { profile?: string };
+  if (typeof body.profile === "string" && body.profile.length > 200_000) {
+    return Response.json({ error: "that's too much text — trim it to the CV itself" }, { status: 400 });
+  }
   // Keep the RAW input through the gate + assess + URL-detection (normalizing
   // here would strip a URL-only input to empty). Noise-stripping happens later,
   // on the actual content we match on (real paste or a fetched profile).

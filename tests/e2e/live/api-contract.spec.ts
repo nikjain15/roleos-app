@@ -60,6 +60,14 @@ test.describe("API validation: a malformed body is 400, never 500", () => {
     ["/api/cover", "post", { roleId: "not-a-uuid" }],
     ["/api/role-note", "post", { roleId: "not-a-uuid", note: "x" }],
     ["/api/match/curate", "post", { role_ids: [UUID], action: "save" }], // bulk save is deliberately invalid
+    // H4 zod sweep — every previously hand-checked route now 400s on junk.
+    ["/api/tailor", "post", { roleId: "not-a-uuid" }],
+    ["/api/negotiate", "post", { offer: "too short" }],
+    ["/api/save", "post", { profile: "" }],
+    ["/api/watch", "post", { intensity: 99 }],
+    ["/api/coach", "post", { action: "explode" }],
+    ["/api/recruiter", "post", { action: "exfiltrate" }],
+    ["/api/build", "post", { action: "rm-rf" }],
   ];
 
   for (const [path, method, body] of cases) {

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 import { runSkill } from "@/agent/skills/run";
 import draftResume from "@/agent/skills/draft_resume";
@@ -28,8 +30,9 @@ export async function POST(req: Request): Promise<Response> {
     return rateLimitResponse("You've tailored a lot of résumés this hour — review what you have; it resets soon.");
   }
 
-  const { roleId } = (await req.json()) as { roleId?: string };
-  if (!roleId) return NextResponse.json({ error: "roleId required" }, { status: 400 });
+  const parsed = await validateBody(req, z.object({ roleId: z.string().uuid() }));
+  if (!parsed.ok) return parsed.response;
+  const { roleId } = parsed.data;
 
   const { data: mp } = await supabase.from("master_profile").select("data").eq("user_id", user.id).single();
   const profileRaw = (mp?.data as { raw?: string } | null)?.raw;

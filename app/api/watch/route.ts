@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 
 /**
@@ -45,7 +47,20 @@ export async function POST(req: Request): Promise<Response> {
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
 
-  const b = (await req.json()) as WatchBody;
+  const parsed = await validateBody(
+    req,
+    z.object({
+      target_role: z.string().max(200).optional(),
+      keywords: z.array(z.string().max(80)).max(30).optional(),
+      companies: z.array(z.string().max(120)).max(30).optional(),
+      location: z.string().max(120).optional(),
+      target_base_usd: z.number().nonnegative().max(10_000_000).optional(),
+      intensity: z.number().min(1).max(3).optional(),
+      notify: z.boolean().optional(),
+    }),
+  );
+  if (!parsed.ok) return parsed.response;
+  const b = parsed.data as WatchBody;
   const intensity = Math.min(3, Math.max(1, Math.round(b.intensity ?? 1)));
   const row = {
     user_id: user.id,
