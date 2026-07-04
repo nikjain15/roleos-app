@@ -4,6 +4,7 @@ import digestSkill from "@/agent/skills/digest";
 import { parseModelJson } from "@/lib/json";
 import { logAgentRuns } from "@/lib/agent-runs";
 import type { Cadence } from "@/lib/notifications";
+import { deliverEmail } from "@/lib/email";
 
 /**
  * The ambient digest builder — the agent's brain. Gathers a user's real state,
@@ -86,6 +87,29 @@ export async function buildAndStoreDigest(userId: string): Promise<DigestContent
     .from("profiles")
     .update({ ambient: { last_digest_at: new Date().toISOString() } })
     .eq("id", userId);
+
+  // H2 (prepared): email the digest to the USER'S OWN address. Flag-gated
+  // no-op until the human enables CF Email (docs/runbooks/enable-email.md).
+  try {
+    const { data: u } = await db.auth.admin.getUserById(userId);
+    const email = u?.user?.email;
+    if (email) {
+      await deliverEmail({
+        to: email,
+        subject: `RO · ${content.title}`,
+        text: [
+          content.title,
+          "",
+          ...content.did.map((d) => `• ${d}`),
+          "",
+          ...(content.needs ?? []).map((n) => `→ ${n}`),
+          content.note ?? "",
+        ].join("\n"),
+      });
+    }
+  } catch {
+    /* delivery is best-effort — the in-feed digest stays the source of truth */
+  }
 
   return content;
 }
