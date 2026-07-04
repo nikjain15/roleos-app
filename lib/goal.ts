@@ -73,6 +73,38 @@ export async function appsThisWeek(supabase: SupabaseClient, today = todayISO())
   return count ?? 0;
 }
 
+/**
+ * Recall query texts derived from the goal (slice W7 — "also open to" wiring).
+ * The TARGET phrase anchors sourcing to what the user actually wants, and each
+ * also_open_to entry widens recall WITHOUT its own pace (per the goals schema).
+ * Pure — unit-tested; consumed by recomputeMatchesForUser as extra recall queries.
+ */
+export function goalQueryTexts(
+  goal: Pick<GoalRow, "target" | "also_open_to"> | null | undefined,
+): string[] {
+  if (!goal) return [];
+  const out: string[] = [];
+  const t = goal.target ?? {};
+  const targetPhrase = [t.seniority, t.archetype]
+    .filter((x): x is string => typeof x === "string" && x.trim().length > 0)
+    .join(" ")
+    .trim();
+  if (targetPhrase) out.push(targetPhrase.slice(0, 200));
+  if (Array.isArray(t.domains)) {
+    for (const d of t.domains.slice(0, 3)) {
+      if (typeof d === "string" && d.trim() && targetPhrase) {
+        out.push(`${targetPhrase} ${d.trim()}`.slice(0, 200));
+      }
+    }
+  }
+  const also = goal.also_open_to;
+  if (also && typeof also === "object") {
+    const text = (also as { text?: unknown }).text;
+    if (typeof text === "string" && text.trim().length > 2) out.push(text.trim().slice(0, 300));
+  }
+  return [...new Set(out)];
+}
+
 /** The active goal + its (freshly computed) plan, or nulls when no goal is set. */
 export async function loadActiveGoal(
   supabase: SupabaseClient,

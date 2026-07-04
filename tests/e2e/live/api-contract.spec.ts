@@ -13,6 +13,7 @@ test.describe("API authz: unauthenticated is rejected", () => {
 
   const unauth: Array<[string, "get" | "post" | "patch", object?]> = [
     ["/api/goal", "post", { target: {} }],
+    ["/api/goal", "patch", { goalId: UUID, action: "activate" }],
     ["/api/applications", "post", { role_id: UUID }],
     ["/api/applications", "patch", { id: UUID, stage: "applied" }],
     ["/api/match/curate", "post", { role_id: UUID, action: "dismiss" }],
@@ -49,6 +50,7 @@ test.describe("API validation: a malformed body is 400, never 500", () => {
 
   const cases: Array<[string, "post" | "patch", object]> = [
     ["/api/goal", "post", { deadline_date: "not-a-date" }],
+    ["/api/goal", "patch", { goalId: UUID, action: "explode" }],
     ["/api/applications", "post", { role_id: "not-a-uuid" }],
     ["/api/applications", "patch", { id: UUID, stage: "not-a-stage" }],
     ["/api/match/curate", "post", { role_id: UUID, action: "bogus" }],
