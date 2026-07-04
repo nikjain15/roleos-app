@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { supabaseServer } from "@/lib/supabase/server";
 import { validateBody } from "@/lib/validate";
+import { deriveNextAction } from "@/lib/tracker";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +62,7 @@ export async function POST(req: Request): Promise<Response> {
       stage,
       stage_history: [{ stage, at: now }],
       artifact_ids: artifact_ids ?? null,
+      next_action: deriveNextAction(stage, { enteredAt: now }),
       sent_at: stage === "applied" ? now : null,
       updated_at: now,
     })
@@ -119,7 +121,9 @@ export async function PATCH(req: Request): Promise<Response> {
       stage,
       stage_history: history,
       sent_at: app.sent_at ?? (stage === "applied" ? now : null),
-      next_action: next_action ?? null,
+      // W5: an explicit next_action wins; otherwise derive the stage's default
+      // (deterministic, no model call) so the card always shows a real next step.
+      next_action: next_action !== undefined ? next_action : deriveNextAction(stage, { enteredAt: now }),
       updated_at: now,
     })
     .eq("id", id);
