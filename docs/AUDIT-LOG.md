@@ -65,6 +65,43 @@
 
 ## Slice entries (newest first)
 
+### H4 · Security pass (CSP · audit gate · zod sweep · rotation runbook) · 2026-07-03 · branch `v2/h4-security-pass`
+- **Built:**
+  - **CSP + security headers** on every route: `lib/security-headers.ts` (pure, unit-tested) wired
+    via next.config `headers()` — `default-src 'self'`, `frame-ancestors 'none'`, `object-src
+    'none'`, connect-src limited to self + our Supabase origin, `form-action` allows only self +
+    the Gmail compose handoff; plus nosniff, X-Frame-Options DENY, strict Referrer-Policy,
+    Permissions-Policy, HSTS. ('unsafe-inline' retained for Next's bootstrap — no nonce plumbing
+    on OpenNext; foreign scripts/plugins/framing are still dead.)
+  - **npm audit CI gate** — `npm audit --omit=dev --audit-level=high` in the check job (+
+    `npm run audit:high`). Verified green today (2 moderate dev-chain advisories exist; gate
+    targets prod deps at high+).
+  - **zod input-validation sweep** — the standing "no route validates yet" learning is now CLOSED:
+    tailor (uuid), negotiate (offer 20–20k), save (profile ≤200k + capped fields), watch (all
+    fields bounded, intensity 1–3), coach/recruiter/build (action ENUMS + per-field caps — junk
+    actions now 400 before touching a model or the DB), onboard (200k body cap, friendly min-copy
+    kept).
+  - **Secret-rotation runbook** — `docs/runbooks/secret-rotation.md`: per-secret recipes (Supabase
+    service/anon, Anthropic, CF token incl. the deploy-token trap, CRON_SECRET, Google OAuth,
+    Apify, Supabase access token) + post-rotation verification. **Rotation itself remains a human
+    hard-stop** — the loop wrote the recipe, not the action.
+- **Audit:** D1 green. D2/D3 green — +3 vitest (CSP composition incl. trailing-slash + unset
+  origin, full header set) + 6 public E2E (headers actually SERVED on `/` + `/login` ×3 viewports
+  — runs in CI, no secrets) + 7 live contract rows (each swept route 400s on junk incl. hostile
+  action names). D4 green (opennextjs build serves next.config headers). D5/D7 green — no UI
+  change; smoke ×3 + axe still green UNDER the enforced CSP (the real regression risk). D6 green —
+  this is the slice. D8 green — NO migration. D9 green — headers are static strings; zod is O(1).
+  D10 green — invariants green.
+- **Test-count ratchet:** vitest 138→141 · live E2E 35→42 run · public 27→33 · scenarios +7.
+- **Deferrals (no silent gaps):** (1) CSP nonces (needs OpenNext middleware plumbing — would let
+  us drop 'unsafe-inline'); (2) the 2 moderate dev-only advisories (esbuild chain) — below the
+  gate, tracked; (3) actually executing rotation — human hard-stop by design.
+- **Learnings:** assert security headers in the PUBLIC smoke (CI-safe, no secrets) — config-only
+  headers silently vanish if the adapter changes; the E2E proves they're served. For
+  action-dispatch routes, a zod enum on `action` is the cheapest high-value guard: hostile verbs
+  die at 400 before any DB or model work.
+
+### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 ### H3 · Rate-limiting + abuse guards on public/AI routes · 2026-07-03 · branch `v2/h3-rate-limiting`
 - **Built:** the index-ask pattern generalized to every model-calling route.
   - **`db/migrations/0015_rate_events.sql`** — shared rolling-window log keyed by (scope, subject);
@@ -158,8 +195,7 @@
   state drifted. Placeholder/hint copy ("e.g. Senior AI Product Manager") collides with real data
   in tests — `{ exact: true }` or scope to the container.
 
-**Phase W complete** — W1–W7 all queued as PRs #18–#24. Next: Phase H (H1 observability first).### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
-- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
+**Phase W complete** — W1–W7 all queued as PRs #18–#24. Next: Phase H (H1 observability first).### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
 ### W6 · Persist anon Explore conversation across page loads · 2026-07-03 · branch `v2/w6-anon-explore-convo`
 - **Built:** the Ask-RO thread on `/explore` now survives page loads and navigation for anon
   visitors. `lib/explore-thread.ts` (pure): validated `parseThread` (localStorage is untrusted —

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
+import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 import { runSkill } from "@/agent/skills/run";
 import { parseModelJson } from "@/lib/json";
@@ -25,8 +27,18 @@ export async function POST(req: Request): Promise<Response> {
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
 
-  const body = (await req.json()) as Record<string, unknown>;
-  const action = body.action as string;
+  const parsed = await validateBody(
+    req,
+    z.object({
+      action: z.enum(["prep", "mock_turn", "debrief"]),
+      roleId: z.string().uuid().optional(),
+      pipelineId: z.string().uuid().optional(),
+      message: z.string().max(8_000).optional(),
+    }),
+  );
+  if (!parsed.ok) return parsed.response;
+  const body: Record<string, unknown> = parsed.data;
+  const action = parsed.data.action;
   const uid = user.id;
 
   const profileRaw = async () =>
