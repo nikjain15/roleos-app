@@ -7,6 +7,8 @@ import CoverLetterCard, { type CoverArtifact } from "@/components/CoverLetterCar
 import ApplyScoreCard, { type AppScore } from "@/components/ApplyScoreCard";
 import BriefCard, { type CompanyBriefView } from "@/components/BriefCard";
 import { calibrateScores, loadOutcomeModel, type Calibration } from "@/lib/outcome-learning";
+import WarmPathsCard from "@/components/WarmPathsCard";
+import { warmPaths, CONNECTIONS_CAP, type ConnectionRow } from "@/lib/connections";
 
 /**
  * Apply / Send (Slice 4) — the human-gated outward step. RO composes the bundle
@@ -98,6 +100,17 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
     brief = (hit?.payload as CompanyBriefView | null) ?? null;
   }
 
+  // X6: warm paths into THIS company from the user's own people (RLS rows).
+  let paths: ReturnType<typeof warmPaths> = [];
+  if (artifact.roles?.company) {
+    const { data: conns } = await supabase
+      .from("connections")
+      .select("id, name, company, title, email, source, note")
+      .limit(CONNECTIONS_CAP)
+      .returns<ConnectionRow[]>();
+    paths = warmPaths(conns ?? [], artifact.roles.company);
+  }
+
   const approved = artifact.status === "approved";
   const bundle = approved
     ? buildApplyBundle(artifact.content ?? {}, artifact.roles ?? {}, name, approvedCover)
@@ -163,6 +176,7 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
           {artifact.role_id && artifact.roles && (
             <BriefCard roleId={artifact.role_id} company={artifact.roles.company} initial={brief} />
           )}
+          {artifact.role_id && <WarmPathsCard roleId={artifact.role_id} paths={paths} />}
           <ApplyPanel artifactId={artifact.id} bundle={bundle} roleLabel={roleLabel} />
         </div>
       )}
