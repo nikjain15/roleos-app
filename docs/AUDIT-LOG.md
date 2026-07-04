@@ -65,6 +65,42 @@
 
 ## Slice entries (newest first)
 
+### X5 · Comp intelligence + offer decision co-pilot · 2026-07-03 · branch `v2/x5-comp-copilot`
+- **PRD-first**: `docs/specs/x5-comp-copilot.md`. **Comp-source decision made in the PRD:** v1 =
+  STATED base ranges in RO's own corpus (measured live: 1,536 roles, 691 with comp fields) —
+  percentiles always shown WITH n, small n displayed never hidden; external feeds (levels.fyi,
+  H1B, paid APIs) each deferred as their own ToS/paid decision.
+- **Built (zero model calls in the whole slice):**
+  - **`lib/comp.ts`** (pure): `summarizeRanges` (midpoint percentiles, junk-safe, honest n=0),
+    `compareOffers` (transparent weighted score — money normalized to the best offer, soft
+    dimensions are the USER'S OWN 1–5 reads; parts sum to the total; deterministic),
+    `parseOffers` (localStorage untrusted: junk dropped, ratings clamped, ≤3).
+  - **`GET /api/comp-benchmark`** — authed, bounded (≤2000), honest `basis: "…not a market
+    survey"`; unknown archetype → n=0, never an error.
+  - **`/offers` page + OfferCompare** — benchmark strip for the goal's archetype; up to 3
+    offers with weights sliders and THE MATH SHOWN ("a score, not a verdict"); offers live
+    ONLY in the browser (privacy: comp is the most sensitive thing a user types), one-click
+    clear; links to the existing negotiate studio. Added to the a11y sweep.
+- **Audit:** D1 green. D2/D3 green — +5 vitest (percentiles + junk + honest empty; parts-sum
+  invariant; weight-flip determinism; total-beats-base; untrusted-storage clamps/caps) + 2 live
+  E2E (benchmark 401/shape/n=0-honesty against the real corpus; full UI flow: two offers →
+  money leads on equal ratings → growth rating + weights flip the leader → reload persistence →
+  clear wipes storage). D4 green (opennextjs). D5/D7 green — labelled inputs/sliders, table in
+  overflow-x-auto, `/offers` in the 375px+axe sweep. D6 green — authed API; no model, no
+  egress, no server storage of offers. D8 green — NO migration. D9 green — one bounded read;
+  everything else is client math. D10 green — invariants green; the co-pilot advises with
+  visible arithmetic, decides nothing.
+- **Test-count ratchet:** vitest 138→143 · live E2E 35→37 run · public 27→27 · scenarios +2.
+- **Fix along the way:** my E2E first asserted "comp-heavy defaults keep MoneyCo ahead" while
+  GrowthCo at growth=5 legitimately wins under DEFAULT weights — the test was wrong, the math
+  was right; restructured to flip via ratings+weights explicitly.
+- **Deferrals:** external comp feeds (per-PRD); comp-vs-benchmark chip on posting cards;
+  negotiate-skill deep link with the offer prefilled.
+- **Learnings:** when a "wrong" E2E result appears in pure-math features, recompute by hand
+  before touching the code — here the assertion, not the arithmetic, was mistaken. Browser-only
+  storage is a FEATURE for sensitive inputs (offers), same pattern as W6's anon thread.
+
+### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 ### X2 · Company research briefs (first-party sources) · 2026-07-03 · branch `v2/x2-research-briefs`
 - **PRD-first**: `docs/specs/x2-research-briefs.md` — v1 sources are FIRST-PARTY ONLY (companies
   row + stored postings + the target role): ToS-safe by construction, zero egress. **Interviewer
@@ -158,8 +194,7 @@
 - **Learnings:** short-circuiting BEFORE the model call ("enough_signal") makes honesty the
   cheap path — the thin-input scenario costs zero tokens and can run in the model-free suite.
   Reading sibling-slice substrates (X3's app_score events) GENERICALLY lets parallel branches
-  compose without cross-PR imports.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
-- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
+  compose without cross-PR imports.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
   roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
 ### X3 · Pre-send application quality score · 2026-07-03 · branch `v2/x3-quality-score`
 - **PRD-first** (Phase X rule): `docs/specs/x3-quality-score.md` committed before any code —
