@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
-import { toVerdict, locationText, type WorkspaceRole } from "@/lib/workspace";
+import { toVerdict, locationText, mhTexts, type WorkspaceRole } from "@/lib/workspace";
 import RolesWorkspace from "@/components/RolesWorkspace";
 
 /**
@@ -20,7 +20,7 @@ type MatchRow = {
   recommendation: string | null;
   status: string;
   created_at: string;
-  roles: { company: string; role_title: string; url: string | null; location: unknown } | null;
+  roles: { company: string; role_title: string; url: string | null; location: unknown; must_haves: unknown } | null;
 };
 
 export default async function RolesPage() {
@@ -32,9 +32,13 @@ export default async function RolesPage() {
 
   const { data: matches } = await supabase
     .from("matches")
-    .select("role_id, fit_score, reasoning, gaps, recommendation, status, created_at, roles(company, role_title, url, location)")
+    .select("role_id, fit_score, reasoning, gaps, recommendation, status, created_at, roles(company, role_title, url, location, must_haves)")
     .order("fit_score", { ascending: false })
     .returns<MatchRow[]>();
+
+  // The user's private per-role notes (P1, RLS-scoped — own rows only).
+  const { data: noteRows } = await supabase.from("role_notes").select("role_id, note").limit(1000);
+  const notes = new Map((noteRows ?? []).map((n) => [n.role_id as string, n.note as string]));
 
   const rows: WorkspaceRole[] = (matches ?? []).map((m) => {
     const loc = locationText(m.roles?.location);
@@ -54,6 +58,8 @@ export default async function RolesPage() {
       gaps,
       status: m.status,
       created_at: m.created_at,
+      mustHaves: mhTexts(m.roles?.must_haves),
+      note: notes.get(m.role_id) ?? null,
     };
   });
 

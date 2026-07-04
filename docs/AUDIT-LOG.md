@@ -65,6 +65,41 @@
 
 ## Slice entries (newest first)
 
+### W4 · Roles workspace P1 (compare · notes · bulk dismiss) · 2026-07-03 · branch `v2/w4-workspace-p1`
+- **Built:** the three P1 requirements of the roles-workspace spec.
+  - **Compare 2–3** — per-card checkbox (capped via pure `toggleCompare`), side-by-side panel with
+    fit + verdict, must-haves (new `mhTexts` flattener over `roles.must_haves`), gaps, and the why.
+  - **Per-role notes** — new `role_notes` table (migration `0014`, owner-RLS full CRUD, unique
+    (user, role)); `/api/role-note` (zod ≤2000 chars; empty save DELETES the row — no tombstones);
+    editor lives in the card's expanded section; a 📝 chip marks noted roles.
+  - **Bulk dismiss** — visible only on a FILTERED view; explicit confirm; `/api/match/curate` now
+    accepts `{role_ids[≤100], action}` restricted to dismiss/restore (positive signals stay
+    per-role); writes one append-only `decision_event` PER role (taste granularity survives the
+    bulk gesture, `payload.bulk: true`).
+- **Audit:** D1 green. D2/D3 green — +2 vitest (mhTexts junk/cap, toggleCompare cap) + 4 new live
+  E2E (note save→reload→clear against real DB; cross-user RLS read AND write probes on
+  `role_notes`; bulk dismiss leaves the pursue match untouched + 3 per-role bulk events; compare
+  panel renders both roles' fit/gaps) + 3 contract-matrix rows (`/api/role-note` 401+400, bulk
+  `save` → 400 by design). D4 green (opennextjs build). D5/D7 green — compare panel is
+  `overflow-x-auto` + stacks to one column on mobile; labelled checkbox/textarea; `/roles` in the
+  a11y sweep. D6 green — zod both routes; RLS verified live. D8 green — additive migration 0014,
+  **ALREADY APPLIED to live Supabase (2026-07-03) — no action needed on merge**; rls-coverage
+  invariant passes. D9 green — notes read bounded (limit 1000); bulk capped at 100; events batch-
+  inserted; zero model calls in the whole slice. D10 green — all invariants; decision_events stays
+  append-only and per-role.
+- **Test-count ratchet:** vitest 138→140 · live E2E 35→42 run · public 27→27 · scenarios +4.
+- **Fixes along the way:** Playwright strict mode again — `getByLabel("Verdict")` also matches the
+  Sort select (its option text lands in the accessible name); anchor with `/^Verdict/`. And an
+  optimistic-UI race: assert the DB only after `waitForResponse` on the mutating POST, or you read
+  the pre-write state.
+- **Deferrals (no silent gaps):** (1) saved-search/watch-filter handoff (P1's 4th bullet) — belongs
+  with `/watch` wiring; (2) compare export/share; (3) keyboard triage (P2).
+- **Learnings:** bulk mutations should still emit PER-ROW decision_events — the taste model's
+  signal quality depends on granularity, and a `bulk` flag in payload preserves the gesture's
+  context. Playwright duplicate test titles fail the run when a matrix gains a second row for the
+  same route — include the body in the generated title.
+
+### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 ### W3 · RO-dock act-verbs (filter-this-view + tailor in place) · 2026-07-03 · branch `v2/w3-ro-dock-act-verbs`
 - **Built:** the slice-7 deferral — the dock now proposes ACTS beyond navigation, still human-gated,
   still zero transport. `lib/dock-acts.ts` (pure, shared): `validateAct` (a model-proposed tailor act
@@ -179,8 +214,7 @@
   ANN index. `&nbsp;` in JSX badge text breaks Playwright text matchers (and real-user search) —
   prefer plain spaces inside a nowrap span. Supabase Management API `POST /v1/projects/:ref/database/query`
   (with `SUPABASE_ACCESS_TOKEN` from `.dev.vars`) is the working recipe for applying migrations —
-  the us-east pooler DSN in older notes 404s the tenant.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
-- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
+  the us-east pooler DSN in older notes 404s the tenant.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
   roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
   issues.** All 14 deploys succeeded; migrations 0010–0012 live. Committed as a repeatable
   `prod.spec.ts` / `npm run test:e2e:prod`.
