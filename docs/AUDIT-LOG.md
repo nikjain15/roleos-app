@@ -65,6 +65,23 @@
 
 ## Slice entries (newest first)
 
+### Prod-smoke expansion (coverage) · 2026-07-04 · branch `chore/prod-smoke-expansion`
+- **Why:** the prod health check (`prod.spec.ts`) predates the X-era merges — `/offers`,
+  `/review`, `/api/comp-benchmark`, `/api/health` and the cron secret-gates were live in
+  prod but unverified. Step H (post-merge prod verification) leans on this spec, so its
+  blind spots are the loop's blind spots.
+- **Built (one file, zero conflicts with the queued PRs):** surface list gains `/offers`,
+  `/review`, `/api/comp-benchmark`; new test — `/api/health` answers 200 with a real body;
+  new test — all four `/api/cron/*` routes 403 a wrong secret IN PROD (the live proof the
+  CRON_SECRET gate deployed).
+- **Verified against prod:** `npm run test:e2e:prod` → 3/3 green against `ro.roleos.fyi`
+  (10.7s). Prod healthy.
+- **Audit:** D1 green (tsc; test file only). D2/D3 green. D4–D9 n/a (no runtime code).
+  D10 green. **Ratchet:** vitest 209→209 · live E2E 99→101 by `--list` (+2) · public
+  33→33 · scenarios +2 (prod health-endpoint contract · prod cron-gate probe).
+- **Deferral:** once the queued PRs merge, add their surfaces here too (`/connections`,
+  hunt cron 403, voice-flag-off coach) — noted for the post-merge pass.
+
 ### T2 · OTP-budget-aware live harness (test-debt) · 2026-07-04 · branch `v2/t2-otp-budget-harness`
 - **Problem (from X1's audit):** Supabase rate-limits OTP verification (~30/5min/IP) and
   the live suite seeds 40+ users per run — an unpaced full run EXHAUSTS THE BUDGET
