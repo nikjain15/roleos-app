@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase/server";
 import { recomputeMatchesForUser } from "@/lib/recompute-matches";
+import { checkRateLimit, rateLimitResponse } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -19,6 +20,12 @@ export async function POST(): Promise<Response> {
     data: { user },
   } = await supabase.auth.getUser();
   if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
+
+  // H3: the full matching pipeline is the priciest authed call — per-user budget.
+  const rate = await checkRateLimit("rematch", user.id);
+  if (!rate.allowed) {
+    return rateLimitResponse("You've refreshed matches a lot this hour — your shortlist is current. It resets soon.");
+  }
 
   try {
     const res = await recomputeMatchesForUser(supabase, user.id);
