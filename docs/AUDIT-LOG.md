@@ -65,6 +65,54 @@
 
 ## Slice entries (newest first)
 
+### W1 · Fit-on-browse (roles-workspace P0-7) · 2026-07-03 · branch `v2/w1-fit-on-browse`
+- **Built:** per-role fit indicator on `/explore` for signed-in users; anon index unchanged
+  (the P0-7 acceptance criteria exactly). Scored `matches` rows show RO's real fit+verdict
+  badge; every other role gets an honest embedding-similarity ESTIMATE ("strong signal /
+  worth a look / weaker signal · est"), visually distinct and tooltipped so an estimate never
+  masquerades as a reasoned score. Signed-in-without-profile gets one way-forward hint
+  (→ /onboarding). Zero model calls on the browse path.
+- **Key design (calibration data):** cosine distance is only meaningful RELATIVE to the user —
+  measured 2026-07-03 over the 1,519-role corpus: senior-AI-PM profile p10/median = 0.231/0.291,
+  non-tech profile = 0.361/0.403. Absolute cutoffs would call everything strong for one user and
+  weak for another. So each user's p10/p35 distances are computed once (percentile RPC over the
+  corpus) and cached in `profile_embeddings` with the profile-hash-keyed embedding; tiering is
+  the pure `tierForDistance` (unit-tested).
+- **New surface:** migration `db/migrations/0013_explore_fit.sql` — `profile_embeddings` (owner-
+  read RLS, service-role-only writes — no user insert/update policies on purpose), `role_distances`
+  RPC (exact pk-join distances — NOT subject to the HNSW ef_search ~40-row cap that limits
+  `match_roles`), `profile_distance_quantiles` RPC. **Migration ALREADY APPLIED to live Supabase
+  (2026-07-03, additive-only) — no action needed on merge.**
+- **Audit:** D1 green (tsc/lint/depcruise clean). D2/D3 green — 8 new vitest (tier boundaries,
+  per-user adaptivity, degenerate anchors, verdict mapping) + 5 new live E2E (anon unchanged;
+  scored+estimated overlay; no-profile way-forward; cross-user RLS probe on `profile_embeddings`
+  read AND write; 375px + axe on the badged page). D4 green (opennextjs build; webcrypto sha-256,
+  no node-only APIs). D5/D7 green (badges in the existing shrink-0 slot, no overflow; axe clean).
+  D6 green — RLS verified live (anon insert → 42501; cross-user read → 0 rows); no new API route
+  (SSR only, no input surface → no zod needed); explore-fit added to the no-client-secret-imports
+  forbidden list. D8 green — additive migration, RLS on the new user table (rls-coverage invariant
+  passes). D9 green — browse path is 3 bounded reads + 1 pk-join RPC; embed+quantile scan runs only
+  on profile change (hash check); fixed a real 414 risk (`matches .in(2000 uuids)` in a GET → fetch
+  the user's own bounded match set instead). D10 green — full invariant suite passes; no send path,
+  no truth-gate change.
+- **Test-count ratchet:** vitest 138→146 · live E2E 35→40 · public E2E 27→27 · scenarios +5.
+- **Fixes along the way:** FitBadge `&nbsp;` broke text matching (and would any user copy/search) —
+  plain space; tokens `ok`/`bg-ok` don't exist in this theme — use `suc`/`suc-bg`/`info-bg`/`info-tx`
+  like RolesWorkspace.
+- **Deferrals (no silent gaps):** (1) lazy-embed path (cache miss → Workers AI embed) not covered by
+  live E2E — local `next dev` lacks the AI binding + CF REST creds by design (deploy-token trap);
+  it's the same provider call `matchProfile` exercises, and failure degrades to "no estimates".
+  Verify once on prod post-merge (visit /explore signed-in, expect est badges). (2) `/explore`
+  overview + `/explore/roles`/`/explore/companies` list companies/archetypes, not roles — badges
+  apply on company/archetype/posting pages where roles render. Company-level fit rollups are the
+  spec's P2. (3) Estimate tiers ignore non-embedded roles (17 of 1,536) — they simply show no badge.
+- **Learnings:** HNSW `match_roles` silently caps at ~ef_search (~40) rows regardless of
+  `match_count` — any "distances for a known id set" need must use an exact pk-join RPC, not the
+  ANN index. `&nbsp;` in JSX badge text breaks Playwright text matchers (and real-user search) —
+  prefer plain spaces inside a nowrap span. Supabase Management API `POST /v1/projects/:ref/database/query`
+  (with `SUPABASE_ACCESS_TOKEN` from `.dev.vars`) is the working recipe for applying migrations —
+  the us-east pooler DSN in older notes 404s the tenant.
+
 ### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 - **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
   roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod

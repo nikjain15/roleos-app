@@ -3,6 +3,7 @@ import ExploreHeader from "@/components/explore/ExploreHeader";
 import AskRo from "@/components/explore/AskRo";
 import RoleList from "@/components/explore/RoleList";
 import { companyBySlug, companyRoles } from "@/lib/explore";
+import { exploreFitForRoles } from "@/lib/explore-fit";
 
 export const dynamic = "force-dynamic";
 
@@ -19,6 +20,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
   const company = await companyBySlug(slug);
   if (!company) notFound();
   const roles = await companyRoles(company);
+  const fit = await exploreFitForRoles(roles.map((r) => r.id)); // null for anon — index unchanged (P0-7)
   const curated = roles.filter((r) => r.source !== "ats").length;
 
   return (
@@ -31,7 +33,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
           {curated > 0 ? ` · ${curated} fully read` : ""}.
         </p>
         <div className="mt-8">
-          <RoleList roles={roles} />
+          <RoleList roles={roles} fit={fit} />
         </div>
         <AskRo
           scope={{ company }}
