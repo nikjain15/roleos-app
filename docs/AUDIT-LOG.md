@@ -65,6 +65,34 @@
 
 ## Slice entries (newest first)
 
+### X2 · Company research briefs (first-party sources) · 2026-07-03 · branch `v2/x2-research-briefs`
+- **PRD-first**: `docs/specs/x2-research-briefs.md` — v1 sources are FIRST-PARTY ONLY (companies
+  row + stored postings + the target role): ToS-safe by construction, zero egress. **Interviewer
+  briefs are explicitly OUT** (person-level research needs a human product decision — the other
+  half of the board line stays open); v2's flag-gated fixed-host homepage fetch is a future slice.
+- **Built:** `company_brief` skill (draft tier, full gate, `tools: []`, structured — overview /
+  hiring signal (the role MIX is strategy) / what-they-value from repeated must-haves / honest
+  comp read / prep pointers / **mandatory `unknowns`** — the prompt FORBIDS asserting funding/
+  news/culture and routes them to unknowns; honesty is the feature). `POST /api/brief` (zod,
+  6/h per-user on `rate_events`, metered, stores as notification kind `company_brief`, status
+  `read` — reference material, never an interruption). BriefCard on `/apply/[id]`; the latest
+  stored brief for that company renders free.
+- **Audit:** D1 green. D2/D3 green — +3 vitest (skill contract, no-fabrication prompt assertions,
+  expects) + 3 live E2E (guard matrix 401/400/404/429 model-free; stored brief incl. unknowns
+  renders free; model-gated real generation VERIFIED — grounded overview, NON-EMPTY unknowns,
+  persisted). D4 green (opennextjs). D5/D7 green — labelled card; `/apply` in the a11y sweep.
+  D6 green — zod, rate-limited, zero egress, no person data. D8 green — NO migration
+  (notifications + rate_events reused). D9 green — bounded reads (≤50 postings); one metered
+  draft call per click. D10 green — invariants green; grounded-only + unknowns discipline is the
+  truth-gate posture extended to research.
+- **Test-count ratchet:** vitest 138→141 · live E2E 35→37 run (+1 model-gated verified-once) ·
+  public 27→27 · scenarios +3.
+- **Deferrals (no silent gaps):** (1) interviewer briefs — human product decision required (ToS/
+  privacy); (2) v2 fixed-host fetch of the company's own site (flag + egress review); (3) brief
+  on the tracker/posting surfaces (post-merge one-liners).
+- **Learnings:** "honest unknowns" turns a data-poor v1 into a trustworthy feature instead of a
+  fabrication risk — and gives v2 a measurable target (shrink the unknowns list). The corpus
+  itself is a research source: the role mix at a company IS its strategy signal.
 ### H2 · Email delivery — PREPARED, flag-gated (HARD-STOP: CF Email) · 2026-07-03 · branch `v2/h2-email-delivery-prep`
 - **Built (code-ready; the switch stays human):**
   - **`lib/email.ts`** — the delivery seam: pure `buildMime` (plain-text, header-injection folded
@@ -130,8 +158,7 @@
 - **Learnings:** short-circuiting BEFORE the model call ("enough_signal") makes honesty the
   cheap path — the thin-input scenario costs zero tokens and can run in the model-free suite.
   Reading sibling-slice substrates (X3's app_score events) GENERICALLY lets parallel branches
-  compose without cross-PR imports.
-### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+  compose without cross-PR imports.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 - **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
   roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
 ### X3 · Pre-send application quality score · 2026-07-03 · branch `v2/x3-quality-score`
