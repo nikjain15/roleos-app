@@ -25,6 +25,7 @@ test.describe("authed a11y + responsive sweep (375px)", () => {
 
     const screens = [
       "/feed", "/goal", "/roles", "/tracker", "/settings", "/watch", "/review", "/offers",
+      "/connections", // X6 — upload/manual/delete controls must hold up at 375px
       `/studio/resume/${art}`, `/apply/${art}`,
     ];
 
