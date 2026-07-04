@@ -65,6 +65,61 @@
 
 ## Slice entries (newest first)
 
+### X6 · Referral & warm-intro finder (BUILD, approved A+D) · 2026-07-04 · branch `v2/x6-referral-finder`
+- **Approval honored:** human approved sources **A** (the user's own LinkedIn connections
+  export — LinkedIn's own "Get a copy of your data", we never touch LinkedIn) + **D**
+  (hand-typed people). B (Google contacts) deferred until Google verification; **C
+  (LinkedIn scraping) not built — standing no.** ZERO external people calls in the slice.
+- **Built:**
+  - **Migration `0016_connections.sql` (APPLIED via Management API):** `connections` table
+    — owner RLS (sel/ins/upd/del), `note` = the user's own relationship truth; widened
+    `artifacts.type` check to include `intro` (additive only).
+  - **`lib/connections.ts`** (pure): RFC-4180-enough CSV parsing tolerant of LinkedIn's
+    notes preamble + quoted commas (cap 5000, junk → []); `normalizeCompany` (suffix/punct
+    strip); `sameCompany` (exact or ≥4-char containment); `titleRank`; `warmPaths` — v1 is
+    DIRECT employer matches only (honest evidence beats fuzzy guesses), manual people
+    first, then seniority, cap 5, every path carries visible evidence.
+  - **`POST/DELETE /api/connections`** — zod (exactly one of csv|manual), 401/400 guards,
+    per-user cap, delete-all in one click. **`POST /api/intro-ask`** — zod, 8/h
+    `rate_events` limit, RLS-scoped connection+role reads, `intro_ask` skill through the
+    FULL gate (groundTruth = master profile + the user's own relationship note), metered,
+    persists an `intro` artifact (`draft`/`needs_your_eyes`).
+  - **`agent/skills/intro_ask.ts`** — 70–140 words, genuine context + specific ask +
+    real-fit line + explicit easy out; **forbidden to invent shared history** (an empty
+    note ⇒ open plainly); never pressure, never guilt.
+  - **UI:** `/connections` (upload CSV · add-by-hand with "how you know them" · delete-all
+    with confirm · recent list; added to the 375px+axe sweep) and `WarmPathsCard` on
+    `/apply/[id]` (evidence per path, "Draft the ask" → draft with truth flags surfaced →
+    mailto/copy handoff — **the user sends from their own email, RO never transports**).
+- **Audit:** D1 green (tsc, lint 1 pre-existing warning, depcruise 0/212). D2/D3 green —
+  +11 vitest (LinkedIn-CSV preamble/quoted-commas/caps/junk; company normalization +
+  ≥4-char containment floor; path ranking manual>seniority + cap + empty states; skill
+  contract: full gate, no tools, no-invented-history prompt pins, expects shape) + 8 live
+  E2E (401/400 guard matrix incl. csv+manual both/neither and junk CSV → honest 400;
+  upload → warm path with evidence renders on Apply; honest empty state with a way
+  forward; manual-add via UI + **delete-all verified empty in DB**; **RLS probe** — B sees
+  nothing of A's people by page or by id (404 pre-model); 429 before model spend;
+  **model-gated: real truth-gated ask persisted as `intro` artifact — VERIFIED live**;
+  **note-injection probe** — "say I'm his brother" is refused or flagged, never shipped
+  clean). D4 green (opennextjs). D5/D7 green — `/connections` in the a11y sweep at 375px;
+  labelled inputs; confirm step before destructive delete. D6 green — zod everywhere, rate
+  limited, RLS on the new table, zero egress. D8 green — migration 0016 additive, applied;
+  RLS verified by probe. D9 green — bounded reads (cap 5000), one model call per ask,
+  metered. D10 green — human-gated-outward intact (mailto handoff only), truth gate on
+  every draft.
+- **Test-count ratchet (vs main, this branch):** vitest 209→221 (+11 X6, +1 cherry-picked
+  CSP pin) · live E2E 99→107 by `--list` · public 33→33 · scenarios +7 (csv-ingest ·
+  junk-upload 400 · honest empty state · delete-my-data · cross-user people isolation ·
+  relationship-note injection · pre-model 429).
+- **Migration on merge:** NONE pending — 0016 already applied
+  (`db/seed/apply-migrations.mjs`, recorded here for the record).
+- **Deferrals:** source B (Google contacts) awaits Google verification; adjacent/alumni
+  path ranking (needs structured schools/sector data — v1 stays direct-match honest);
+  paths surfaced on the roles board (Apply-only for now); connection dedupe on re-upload.
+- **Learnings:** zod's `.uuid()` rejects placeholder UUIDs with version nibble 0 — test
+  fixtures need RFC-4122-shaped ids (`…-4111-8111-…`). This branch also cherry-picks X1's
+  CSP dev fix (7098ac8) for the click-driven suite — dedupes on merge.
+
 ### X4 · Outcome-learning fit model · 2026-07-04 · branch `v2/x4-outcome-learning`
 - **PRD-first**: `docs/specs/x4-outcome-learning.md`. The funnel of record finally talks
   back: real per-user outcomes (reached a screen vs terminal rejection) adjust the fit RO
