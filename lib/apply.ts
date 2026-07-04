@@ -38,13 +38,35 @@ export function gmailComposeUrl(to: string, subject: string, body: string): stri
   return `https://mail.google.com/mail/?${p.toString()}`;
 }
 
+/** A drafted, truth-gated cover letter (artifacts.type = 'cover', slice W2). */
+export interface ApplyCover {
+  subject?: string;
+  body?: string;
+}
+
 export function buildApplyBundle(
   resume: ApplyResume,
   role: ApplyRole,
   applicantName?: string,
+  cover?: ApplyCover | null,
 ): ApplyBundle {
   const title = role.role_title?.trim() || "the role";
   const company = role.company?.trim() || "your team";
+
+  // An approved drafted cover letter replaces the template wholesale (W2).
+  // The template below stays as the honest fallback so applying never blocks.
+  const coverBody = cover?.body?.trim();
+  if (coverBody) {
+    const subject = cover?.subject?.trim() || `Application — ${title}${role.company ? ` at ${company}` : ""}`;
+    return {
+      subject,
+      note: coverBody,
+      atsUrl: role.url?.trim() || null,
+      gmailUrl: gmailComposeUrl("", subject, coverBody),
+      mailtoUrl: `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(coverBody)}`,
+    };
+  }
+
   const subject = `Application — ${title}${role.company ? ` at ${company}` : ""}`;
 
   const opener = `Hi,\n\nI'd like to apply for ${title} at ${company}.`;
