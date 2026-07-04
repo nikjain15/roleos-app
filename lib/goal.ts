@@ -59,6 +59,7 @@ export async function ratesFromTracker(supabase: SupabaseClient): Promise<Rates>
   const { data } = await supabase
     .from("applications")
     .select("stage, stage_history")
+    .limit(500)
     .returns<AppLike[]>();
   return computeRates(observedFromApplications(data ?? []));
 }
