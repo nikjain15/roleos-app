@@ -65,6 +65,45 @@
 
 ## Slice entries (newest first)
 
+### T2 · OTP-budget-aware live harness (test-debt) · 2026-07-04 · branch `v2/t2-otp-budget-harness`
+- **Problem (from X1's audit):** Supabase rate-limits OTP verification (~30/5min/IP) and
+  the live suite seeds 40+ users per run — an unpaced full run EXHAUSTS THE BUDGET
+  MID-RUN (green until ~test #30, then instant seed-time failures with misleading
+  breadth). Every slice since X1 ran the suite in hand-rolled chunks with cooldowns.
+- **Built (harness only — zero product code, zero new secrets, spec API unchanged):**
+  - **`tests/e2e/live/otp-budget.ts`** — pure pacing math (`otpDelayMs`, `pruneLedger`,
+    paced to 26/5min leaving headroom for unledgered strays) + a timestamp ledger in the
+    OS tmpdir so back-to-back runs share one budget + `isOtpRateLimit` matcher.
+  - **`seed.ts createUser`** — `paceOtp()` before every verification (visible
+    "[otp-budget] pacing Ns" lines so a paused suite never looks hung) + ONE retry after
+    a full window on rate-limit errors (robust to burn the ledger never saw).
+  - **`fixtures.ts newUser`** — extends the CURRENT test's timeout by the expected wait
+    before a paced pause (a 4-min budget wait must never read as a test hang). Found the
+    honest way: the first one-command run paced perfectly (236s→175s→115s→54s→21s drip,
+    exactly the rolling-window model) and 9 tests died on the OLD 60s timeout.
+  - Rejected approach, for the record: minting session JWTs with the project JWT secret
+    would eliminate the budget entirely but requires fetching + persisting a new powerful
+    secret — that's secret-handling (hard-stop), left as a human option.
+- **Proof:** full live suite as ONE command (`npm run test:e2e:live`), started against a
+  pre-burned window: **exit 0 — 90 passed / 9 model+prod-gated skips / 0 failed in
+  13.9 min, self-pacing through 36 budget events** (worst single pause 106s, invisible to
+  test outcomes thanks to the timeout extension). Chunk scripts retired.
+- **Audit:** D1 green (tsc; test files only). D2/D3 green — +6 vitest (no-headroom
+  zero-delay, exact wait-until-slot-frees, stale/junk timestamps never block, over-full
+  window bounded wait, ledger pruning, rate-limit phrasing matcher incl. negatives).
+  D4 n/a (no runtime code). D5/D7 n/a. D6 green — no new secrets, no auth semantics
+  touched; the pacer only makes the harness a politer auth client. D8 green — no
+  migration. D9 green — the suite self-paces instead of hammering. D10 green.
+- **Test-count ratchet (vs main):** vitest 209→215 (+6) · live E2E 99→99 (harness slice —
+  no product surface) · public 33→33 · scenarios +2 (budget-exhaustion pacing ·
+  rate-limited-despite-pacing retry).
+- **Deferrals:** raising the Supabase auth rate limit (human, auth-config); JWT-secret
+  session minting (human, secret-handling); user pooling across specs (bigger refactor,
+  only needed if the suite triples again).
+- **Learnings:** budget waits inside fixtures MUST extend the test's own timeout
+  (`testInfo.setTimeout`) or they masquerade as hangs. Pace UNDER the documented limit
+  (26 vs 30) — other clients share the window and the ledger can't see them.
+
 ### X8 · Voice mock interviews (BUILD, approved option A) · 2026-07-04 · branch `v2/x8-voice-mocks`
 - **Approval honored:** human approved **option A** — browser-native Web Speech API
   (on-device/browser STT + `speechSynthesis` TTS), **flag-gated, zero new vendors, zero
