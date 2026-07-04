@@ -65,6 +65,43 @@
 
 ## Slice entries (newest first)
 
+### W2 · Drafted cover letters (replaces the template in Apply) · 2026-07-03 · branch `v2/w2-cover-letters`
+- **Built:** a REAL, truth-gated cover letter per role. New `draft_cover` skill (draft job, FULL
+  quality gate incl. truth gate, structured, `expects` requires subject + ≥80-char body per the
+  standing learning); new `/api/cover` route (zod, auth-first, metered via `logAgentRuns`, persists
+  a `cover` artifact with gate provenance — the artifacts schema already allowed type `cover`).
+  If an approved résumé exists for the role, its angle is passed so the letter stays consistent.
+  On `/apply/[id]`: a CoverLetterCard lets the user draft (their click = the model call), see truth
+  flags honestly, edit subject/body, and approve — approval reuses `/api/artifact/[id]/decision`
+  (append-only `decision_events` kind `cover`, teaches taste). An APPROVED cover replaces the
+  template wholesale in `buildApplyBundle` (subject + note + compose URLs); the template stays as
+  the honest fallback so applying never blocks. Human-gated outward preserved: nothing sends.
+- **Audit:** D1 green (tsc/lint/depcruise). D2/D3 green — 6 new vitest (bundle override, fallbacks,
+  skill contract/expects) + 6 new live E2E (approved-cover swap incl. template-gone; flagged-draft →
+  UI approve → swap + decision_event; no-cover fallback + draft CTA; cross-user RLS on covers;
+  model-gated: real draft passes gate + prompt-injection can't ship "CEO of Google" unflagged —
+  both VERIFIED once with real model calls, then gated behind E2E_LIVE_MODEL like tailoring).
+  D4 green (opennextjs build). D5/D7 green — `/apply/[id]` is already in the authed a11y sweep
+  (375px + axe) and passed WITH the new card; labelled inputs, ≥40px targets, `role=alert` errors.
+  D6 green — zod on the new route (401 → 400 order verified in the contract matrix, which gained
+  both /api/cover rows); RLS-scoped reads everywhere; injection covered. D8 green — NO migration
+  (schema already had `cover` type). D9 green — one bounded extra read on the apply page; every
+  model call metered with the judge verdict. D10 green — no-send + no-client-secret + depcruise
+  green; drafting AND approving are explicit user gestures.
+- **Test-count ratchet:** vitest 138→144 · live E2E 35→45 (41 run + 2 model-gated verified-once +
+  2 prod-gated) · public E2E 27→27 · scenarios +6. (W1 on its own branch adds +8/+5 — counts sum
+  on merge.)
+- **Fixes along the way:** Playwright strict-mode: the letter text legitimately appears twice
+  (card preview + apply note) — assert with `.first()`. The decision route takes ~10–15s (taste
+  projection) — the approve-flow assertion needs a 45s timeout, not the 15s default.
+- **Deferrals (no silent gaps):** (1) no dedicated `/studio/cover/[id]` editor — the Apply-page
+  card covers draft→flag→edit→approve; a full studio pane is worth its own slice if covers grow
+  richer. (2) Cover DOCX export not wired (the letter is a paste-ready note; export is a later
+  nice-to-have). (3) W3's act-verbs may want "draft cover" in the RO dock — left to W3.
+- **Learnings:** `artifacts.type` check constraint already listed `cover` since 0001 — check the
+  schema before writing a migration; the slice needed none. The `/api/artifact/[id]/decision`
+  route generalizes cleanly to any artifact kind (it writes `kind: artifact.type`) — new artifact
+  kinds get approve/edit/reject + taste learning for free.
 ### W1 · Fit-on-browse (roles-workspace P0-7) · 2026-07-03 · branch `v2/w1-fit-on-browse`
 - **Built:** per-role fit indicator on `/explore` for signed-in users; anon index unchanged
   (the P0-7 acceptance criteria exactly). Scored `matches` rows show RO's real fit+verdict
@@ -112,7 +149,6 @@
   prefer plain spaces inside a nowrap span. Supabase Management API `POST /v1/projects/:ref/database/query`
   (with `SUPABASE_ACCESS_TOKEN` from `.dev.vars`) is the working recipe for applying migrations —
   the us-east pooler DSN in older notes 404s the tenant.
-
 ### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 - **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
   roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
