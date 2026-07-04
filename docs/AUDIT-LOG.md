@@ -65,6 +65,76 @@
 
 ## Slice entries (newest first)
 
+### X1 · Overnight autonomous hunt · 2026-07-04 · branch `v2/x1-overnight-hunt`
+- **PRD-first**: `docs/specs/x1-overnight-hunt.md`. The candidate wakes up to work already
+  done: fresh goal-matched roles sourced, résumés pre-drafted through the FULL quality gate
+  (truth gate included), queued in the Tracker for one review-and-click send. **No send** —
+  the human-gated-outward invariant is untouched; the hunt ends at the Ready queue.
+- **Built (reuse-first — no migration, no new tables):**
+  - **`lib/hunt.ts`** — pure eligibility/selection/copy (`isHuntDue` 20h throttle + pause,
+    `isDormant` 30d, `selectHuntTargets` fresh-pursues-only minus tracked/drafted roles,
+    `huntSummary` honest calm copy) + `huntForUser` orchestrator (re-match via
+    `recomputeMatchesForUser` with graceful recall-failure fallback → `draft_resume` through
+    the same gate as `/api/tailor`, metered → artifact (`provenance.source: overnight_hunt`)
+    → application `ready`/`drafting` per gate verdict, `next_action` derived, 23505-safe →
+    `decision_events` kind `hunt`).
+  - **`POST /api/cron/hunt`** — secret-gated, service-role; caps ≤8 users, ≤2 drafts/user,
+    ≤8 drafts/run, 240s soft deadline (deferred users LOGGED, never silent); stands down
+    entirely when the 24h cost budget is `exceeded` (H5 tie-in); one digest-tier
+    `draft_ready` notification per productive night via `decideNotification`; optional
+    `{only_user_id, draft_cap}` scope for manual/test runs (nightly sweep unaffected).
+  - **Cron worker**: new nightly trigger `30 2 * * *` → `fireNightly` (+ manual `?only=hunt`).
+    **Redeploy on merge:** `npx wrangler deploy -c cron/wrangler.jsonc`.
+  - **User control**: `HuntToggle` on `/tracker` (aria-pressed, role=alert error, honest
+    copy) → `PATCH /api/hunt` (zod, RLS-scoped) → `profiles.ambient.hunt_paused`, honored
+    by the sweep immediately.
+- **Fixes found by this slice's audit (both pre-existing):**
+  1. **H4's CSP broke Next dev hydration** — `script-src` without `'unsafe-eval'` kills
+     dev-mode client JS (eval source maps), so EVERY Playwright click through `next dev`
+     silently no-opped (X5's offers click test was already failing on merged main). Fix:
+     dev-only `'unsafe-eval'` flag in the pure policy, wired to NODE_ENV in next.config;
+     prod policy unchanged + unit-pinned (`never allows eval in production`).
+  2. **Every `rematch` decision_event since W-era was silently dropped** — action
+     `'recompute'` violates 0001's check constraint and the fire-and-forget insert hid it
+     (0 rows in prod, verified). Fix: action `'edit'` (kind `rematch` keeps the semantic);
+     new CI guard `tests/unit/decision-actions.test.ts` greps every decision_events insert
+     and pins actions to the legal verbs — an illegal verb now fails CI, not the substrate.
+- **Audit:** D1 green (tsc, lint [1 pre-existing warning untouched], depcruise 0/209
+  modules). D2/D3 green — +15 vitest (throttle/pause/dormancy incl. malformed timestamps →
+  fail-toward-spending-nothing; selection filters/sort/caps; copy honesty incl.
+  no-urgency-theater; CSP dev/prod split; decision-actions guard) + 8 live E2E (secretless
+  403; PATCH 401/400; toggle persists across reload; cross-user hunt-state probe; malformed
+  cron body 400; paused-user skip; dormant-user skip; **model-gated full hunt VERIFIED
+  live** — re-match → truth-gated draft → Tracker `ready`/`drafting` with artifact linked +
+  next_action → exactly one digest-tier note → agent_runs metered → second sweep inside 20h
+  no-ops). D4 green (opennextjs build). D5/D7 green — `/tracker` already in the 375px+axe
+  sweep; toggle is labelled, keyboardable, error state has a way forward. D6 green — cron
+  secret-gated; zod on both new routes; no egress; injection on `draft_resume` covered by
+  the existing tailor injection scenario (identical skill + gate path). D8 green — **no
+  migration**; reused `profiles.ambient` jsonb; append-only respected. D9 green — every
+  query bounded; every model call metered; budget stand-down. D10 green — invariants all
+  green; drafts land as `draft`/`needs_your_eyes`, never `approved`/`sent`.
+- **Test-count ratchet:** vitest 209→224 · live E2E 99→107 by `--list` (run: 97 passed /
+  10 gated-skips model+prod / 0 failed, in 4 chunks under the auth budget) · public 33→33 ·
+  scenarios +6 (paused-skip ·
+  dormant-skip · 20h-throttle idempotency · malformed-cron-body · cross-user hunt-state
+  probe · overnight-hunt persona flow).
+- **Deferrals:** multi-user scale-out of the nightly sweep (Queue/Workflow — same deferral
+  as digests); per-user local-time hunt scheduling (02:30 UTC fits the current user base);
+  cover letters in the overnight queue (W2 drafts them at Apply); surfacing hunt results as
+  a feed card beyond the digest note.
+- **Learnings:** (1) Supabase auth rate-limits OTP verification (~30 per 5 min per IP,
+  project default) and the live suite now seeds 40+ users per run — a single full run
+  EXHAUSTS THE BUDGET MID-RUN: everything green until ~test #66, then instant (~0.5s)
+  seed-time failures with misleading breadth. Fix used here: run the suite in 3 chunks
+  with ~5.5-min cool-downs (each chunk under the budget). Durable fixes are a decision for
+  the human (raising the Supabase auth rate limit = auth-config change → hard-stop) or a
+  test-debt slice that pools/reuses seeded users across specs. (2) In `next dev`, a too-strict CSP
+  fails as SILENT hydration death — clicks no-op with zero console errors except an eval
+  CSP violation; if UI tests click and nothing happens, check CSP before blaming the test.
+  (3) Fire-and-forget DB inserts hide check-constraint violations — pin literal enum
+  columns with a source-grep CI guard when the write path deliberately swallows errors.
+
 ### X5 · Comp intelligence + offer decision co-pilot · 2026-07-03 · branch `v2/x5-comp-copilot`
 - **PRD-first**: `docs/specs/x5-comp-copilot.md`. **Comp-source decision made in the PRD:** v1 =
   STATED base ranges in RO's own corpus (measured live: 1,536 roles, 691 with comp fields) —
