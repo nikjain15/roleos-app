@@ -4,6 +4,7 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { buildApplyBundle, type ApplyCover } from "@/lib/apply";
 import ApplyPanel from "@/components/ApplyPanel";
 import CoverLetterCard, { type CoverArtifact } from "@/components/CoverLetterCard";
+import ApplyScoreCard, { type AppScore } from "@/components/ApplyScoreCard";
 
 /**
  * Apply / Send (Slice 4) — the human-gated outward step. RO composes the bundle
@@ -24,12 +25,13 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
 
   const { data: artifact } = await supabase
     .from("artifacts")
-    .select("id, status, content, role_id, roles(company, role_title, url)")
+    .select("id, status, content, provenance, role_id, roles(company, role_title, url)")
     .eq("id", id)
     .single<{
       id: string;
       status: string;
       content: Content;
+      provenance: { app_score?: AppScore } | null;
       role_id: string | null;
       roles: { company: string; role_title: string; url: string | null } | null;
     }>();
@@ -111,7 +113,10 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
           </Link>
         </div>
       ) : (
-        <div className="space-y-5">
+        <div className="mt-6 space-y-5">
+          {artifact.role_id && (
+            <ApplyScoreCard artifactId={artifact.id} initial={artifact.provenance?.app_score ?? null} />
+          )}
           {artifact.role_id && <CoverLetterCard roleId={artifact.role_id} cover={coverArt} />}
           <ApplyPanel artifactId={artifact.id} bundle={bundle} roleLabel={roleLabel} />
         </div>
