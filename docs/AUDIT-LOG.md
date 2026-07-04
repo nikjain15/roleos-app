@@ -65,6 +65,45 @@
 
 ## Slice entries (newest first)
 
+### X7 · Weekly strategy review · 2026-07-03 · branch `v2/x7-weekly-review`
+- **PRD-first**: `docs/specs/x7-weekly-review.md` committed before code.
+- **Built:** RO steps back once a week and gives the candid read.
+  - **`lib/weekly-review.ts`** — `buildReviewState`: last-7-days sends/advances/rejections from
+    `applications.stage_history`, curation volume + `app_score` events from `decision_events`
+    (X3's substrate — reads it generically, works before/after X3 merges), goal + plan verdict +
+    weekly target, pipeline counts. Bounded reads; `enough_signal` gate (≥3 real events)
+    SHORT-CIRCUITS before any model call — thin weeks get honesty, not fabrication, for free.
+  - **`weekly_review` skill** — reason tier, full gate, `tools: []`, structured (headline,
+    pace_read, working/not_working ≤3, pivots ≤3 with whys, next_week ≤3, wellbeing_note).
+    Prompt hard-codes the voice invariants: grounded-only, NO guilt, wellbeing over engagement,
+    pivots PROPOSED never applied.
+  - **`/api/review`** — GET latest (free, RLS via notifications kind `weekly_review`); POST runs
+    on the user's click (2/h rate limit on live `rate_events`; metered; stored). Reuses the
+    digest's notifications pattern — **no migration**.
+  - **`/review` page + ReviewRunner** — latest review renders free; pivots link to /goal and
+    /roles ("your call, not mine"); honest empty + thin-signal states. Added to the a11y sweep.
+- **Audit:** D1 green. D2/D3 green — +3 vitest (skill contract: tier/gate/no-tools, voice-
+  invariant prompt assertions, expects shape) + 5 live E2E (401s; thin-signal 200-with-honesty
+  proven model-FREE; seeded-window 429; stored review renders from the notification; model-gated
+  real run VERIFIED — grounded review persisted, asserted in DB). D4 green (opennextjs). D5/D7
+  green — `/review` in the 375px+axe sweep; semantic sections; every state has a way forward.
+  D6 green — auth on both verbs; rate-limited; no body input (nothing to inject); RLS reads.
+  D8 green — NO migration (notifications + rate_events reused). D9 green — bounded reads; the
+  thin-signal gate makes the cheap path the default. D10 green — wellbeing invariant is IN the
+  prompt and asserted by unit test; nothing sends; pivots human-applied.
+- **Test-count ratchet:** vitest 138→141 · live E2E 35→39 run (+1 model-gated verified-once) ·
+  public 27→27 · scenarios +5.
+- **Deferrals (no silent gaps):** (1) weekly cron auto-run + delivery — the digest cron is the
+  natural home; H2's flag gates delivery (one small PR post-merge); (2) feed card for the latest
+  review (feed edit conflicts with queued PRs; one-liner post-merge); (3) multi-week trends.
+- **Learnings:** short-circuiting BEFORE the model call ("enough_signal") makes honesty the
+  cheap path — the thin-input scenario costs zero tokens and can run in the model-free suite.
+  Reading sibling-slice substrates (X3's app_score events) GENERICALLY lets parallel branches
+  compose without cross-PR imports.
+
+### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
+- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
+  roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
 ### X3 · Pre-send application quality score · 2026-07-03 · branch `v2/x3-quality-score`
 - **PRD-first** (Phase X rule): `docs/specs/x3-quality-score.md` committed before any code —
   problem, goals/non-goals, approach, guardrails, acceptance criteria.
@@ -463,8 +502,7 @@
   ANN index. `&nbsp;` in JSX badge text breaks Playwright text matchers (and real-user search) —
   prefer plain spaces inside a nowrap span. Supabase Management API `POST /v1/projects/:ref/database/query`
   (with `SUPABASE_ACCESS_TOKEN` from `.dev.vars`) is the working recipe for applying migrations —
-  the us-east pooler DSN in older notes 404s the tenant.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/  roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
-  issues.** All 14 deploys succeeded; migrations 0010–0012 live. Committed as a repeatable
+  the us-east pooler DSN in older notes 404s the tenant.### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`- **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/  roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod  issues.** All 14 deploys succeeded; migrations 0010–0012 live. Committed as a repeatable
   `prod.spec.ts` / `npm run test:e2e:prod`.
 - **New coverage (live suite, 35 tests total):** `a11y-sweep` (every authed screen @375px + axe),
   `api-contract` (per-route 401/403/400 authz+validation matrix), `flows` (goal→plan, tracker
