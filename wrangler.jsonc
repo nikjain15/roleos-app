@@ -17,6 +17,10 @@
   // subdomain. roleos.fyi is an active zone on this account (verified 2026-06-27).
   "routes": [{ "pattern": "ro.roleos.fyi", "custom_domain": true }],
   // ---- Bindings -----------------------------------------------------------
+  // H2 (PREPARED — human enables): CF Email sending. Uncomment after completing
+  // docs/runbooks/enable-email.md steps 1-3, then deploy. Code no-ops until then.
+  // "send_email": [{ "name": "SEND_EMAIL", "allowed_destination_addresses": [] }],
+
   // Workers AI: embeddings (bge) in prod AND dev (dev calls the remote binding).
   "ai": {
     "binding": "AI"
