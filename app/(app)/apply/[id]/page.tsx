@@ -5,6 +5,7 @@ import { buildApplyBundle, type ApplyCover } from "@/lib/apply";
 import ApplyPanel from "@/components/ApplyPanel";
 import CoverLetterCard, { type CoverArtifact } from "@/components/CoverLetterCard";
 import ApplyScoreCard, { type AppScore } from "@/components/ApplyScoreCard";
+import BriefCard, { type CompanyBriefView } from "@/components/BriefCard";
 
 /**
  * Apply / Send (Slice 4) — the human-gated outward step. RO composes the bundle
@@ -81,6 +82,20 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
     coverArt && coverArt.status === "approved" && coverArt.body
       ? { subject: coverArt.subject, body: coverArt.body }
       : null;
+  // X2: the latest stored brief for THIS company (free render; RLS-scoped).
+  let brief: CompanyBriefView | null = null;
+  if (artifact.roles?.company) {
+    const { data: b } = await supabase
+      .from("notifications")
+      .select("payload")
+      .eq("kind", "company_brief")
+      .order("created_at", { ascending: false })
+      .limit(10);
+    const hit = (b ?? []).find(
+      (n) => (n.payload as CompanyBriefView | null)?.company === artifact.roles!.company,
+    );
+    brief = (hit?.payload as CompanyBriefView | null) ?? null;
+  }
 
   const approved = artifact.status === "approved";
   const bundle = approved
@@ -118,6 +133,9 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
             <ApplyScoreCard artifactId={artifact.id} initial={artifact.provenance?.app_score ?? null} />
           )}
           {artifact.role_id && <CoverLetterCard roleId={artifact.role_id} cover={coverArt} />}
+          {artifact.role_id && artifact.roles && (
+            <BriefCard roleId={artifact.role_id} company={artifact.roles.company} initial={brief} />
+          )}
           <ApplyPanel artifactId={artifact.id} bundle={bundle} roleLabel={roleLabel} />
         </div>
       )}
