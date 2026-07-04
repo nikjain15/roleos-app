@@ -262,7 +262,22 @@ export default function RolesWorkspace({ initial }: { initial: WorkspaceRole[] }
                     {r.title} <span className="text-tx3">· {r.company}</span>
                   </p>
                   <div className="mt-1 flex flex-wrap items-center gap-2 text-xs text-tx3">
-                    {r.fit !== null && <span className="font-mono">fit {Math.round(r.fit)}</span>}
+                    {r.fit !== null && (
+                      <span className="font-mono">
+                        fit {Math.round(r.fit)}
+                        {r.fitAdjust && <> → {r.fitAdjust.adjusted}</>}
+                      </span>
+                    )}
+                    {/* X4: outcome overlay — labelled, base fit stays visible above. */}
+                    {r.fitAdjust && (
+                      <span
+                        className="rounded bg-info-bg px-1.5 py-0.5 text-info-tx"
+                        title={r.fitAdjust.because.map((b) => `${b.feature} ${b.wins}/${b.n}`).join(" · ")}
+                      >
+                        {r.fitAdjust.delta > 0 ? "+" : ""}
+                        {r.fitAdjust.delta} · your track record
+                      </span>
+                    )}
                     <span className={`rounded px-1.5 py-0.5 ${VERDICT_STYLE[r.verdict]}`}>{r.verdict}</span>
                     {r.location && <span>{r.location}</span>}
                     {r.status === "saved" && <span className="rounded bg-suc-bg px-1.5 py-0.5 text-suc">saved</span>}
@@ -308,6 +323,17 @@ export default function RolesWorkspace({ initial }: { initial: WorkspaceRole[] }
               {expanded === r.role_id && (
                 <div className="mt-2 rounded-md bg-surf2 p-2 text-xs text-tx2">
                   {r.why && <p>{r.why}</p>}
+                  {r.fitAdjust && (
+                    <p className="mt-1.5">
+                      <span className="font-semibold">Your track record:</span> fit adjusted{" "}
+                      {r.fitAdjust.delta > 0 ? "+" : ""}
+                      {r.fitAdjust.delta} because{" "}
+                      {r.fitAdjust.because
+                        .map((b) => `${b.feature} roles converted ${b.wins}/${b.n} for you`)
+                        .join("; ")}
+                      . RO&apos;s original read stays shown — this only reflects your real outcomes.
+                    </p>
+                  )}
                   {r.gaps.length > 0 && (
                     <p className="mt-1.5">
                       <span className="font-semibold">Gaps:</span> {r.gaps.join(" · ")}

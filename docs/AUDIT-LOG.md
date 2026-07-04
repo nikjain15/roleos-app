@@ -65,6 +65,59 @@
 
 ## Slice entries (newest first)
 
+### X4 · Outcome-learning fit model · 2026-07-04 · branch `v2/x4-outcome-learning`
+- **PRD-first**: `docs/specs/x4-outcome-learning.md`. The funnel of record finally talks
+  back: real per-user outcomes (reached a screen vs terminal rejection) adjust the fit RO
+  shows next — bounded ±8, deterministic, and always with the arithmetic attached — and
+  X3's screen-likelihood scores get an honest calibration read-back. **Zero model calls,
+  zero migration, nothing stored** — derived at render time from rows the caller owns.
+- **Built:**
+  - **`lib/outcome-learning.ts`** (pure core + 2-query RLS bridge): `outcomeOf` (win = ever
+    reached screening+; loss = rejected / withdrawn-after-applied without a screen;
+    **in-flight is never counted — silence is not a loss**), `roleFeatures` (archetype +
+    ≤6 keywords, normalized), `learnLifts` (per-feature wins/n vs the user's own base rate,
+    shrunk `(wins − n·base)/(n+2)`, n<2 teaches nothing), `adjustFit` (Σ lifts ×10, clamped
+    ±8, top-3 `because` with wins/n, clamped 0–100, null when no evidence), `calibrateScores`
+    + `calibrationLine` (latest score per role × decided outcomes; small samples say "read
+    gently"; empty history says nothing).
+  - **Surfaces (server-rendered):** `/roles` board — `fit 70 → 76` + "+6 · your track
+    record" chip, full explanation in the expanded details; `/feed` cards — same overlay
+    inline; `/apply/[id]` score card — one muted line ("Your past 'high' scores converted
+    1/2 — small sample, read gently."). Base fit is NEVER hidden or overwritten; stored
+    `matches.fit_score` and recommendations untouched (the overlay informs, the reasoner
+    decides).
+- **Audit:** D1 green (tsc after the `.next/types` branch-switch rebuild; lint = 1
+  pre-existing warning; depcruise 0/206). D2/D3 green — +14 vitest (win/loss/in-flight
+  taxonomy incl. withdrawn-before-applied; feature normalization + junk; shrinkage math;
+  n<2 floor; clamp under feature pile-up; null on no-evidence/no-fit/net-zero; calibration
+  latest-per-role + junk-likelihood + honest empties) + 5 live E2E (request-level, server-
+  rendered HTML: lift chip on /roles + /feed from seeded funnel truth; no-history renders
+  the page as before; **cross-user RLS probe** — B's outcomes never move A's fit;
+  calibration line with n on /apply; no fabricated stats without history). D4 green
+  (opennextjs build). D5/D7 green — chips flex-wrap, tooltip info duplicated as real text
+  in expanded details (keyboard-reachable); /roles + /feed already in the 375px+axe sweep.
+  D6 green — no new routes, no input surfaces, no egress; reads are RLS-scoped own-rows.
+  D8 green — NO migration, nothing written. D9 green — 2 bounded queries per page render.
+  D10 green — invariants untouched; no model calls anywhere in the slice.
+- **Test-count ratchet (vs main, this branch):** vitest 209→224 (+14 X4, +1 cherry-picked
+  CSP pin) · live E2E 99→104 by `--list` (run green in chunks under the auth budget; the
+  10 click-driven specs re-run green after the CSP cherry-pick) · public 33→33 · scenarios +5
+  (outcome-lift happy path · no-history no-op · cross-user outcome isolation · calibration
+  read-back · empty-calibration honesty).
+- **Deferrals:** company-stage/size features (needs consistent corpus fields); lift-aware
+  ORDERING (display order still by base fit — a product decision on how much the overlay
+  may steer); X4 signals into the 15-dim taste view; recompute-time persistence of
+  adjustments (deliberately render-time for freshness).
+- **Learnings:** RSC inserts `<!-- -->` between JSX text and expression nodes — assert
+  server-rendered HTML with a regex (`/fit (<!-- -->)?70/`), not `toContain("fit 70")`.
+  Request-level `request.get(page)` assertions on server components dodge the dev-CSP
+  hydration issue entirely and are faster than browser contexts — prefer them when no
+  interaction is being tested. **Heads-up: every click-driven live E2E is RED on current
+  main** (H4's CSP kills dev hydration; found+fixed in X1). This branch cherry-picks X1's
+  CSP fix (7098ac8) so its full suite can run green pre-merge — the duplicate patch
+  resolves on rebase/merge. (Merge note: this entry and X1's union in AUDIT-LOG on merge,
+  as in the W-era merges.)
+
 ### X1 · Overnight autonomous hunt · 2026-07-04 · branch `v2/x1-overnight-hunt`
 - **PRD-first**: `docs/specs/x1-overnight-hunt.md`. The candidate wakes up to work already
   done: fresh goal-matched roles sourced, résumés pre-drafted through the FULL quality gate
