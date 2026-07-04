@@ -55,6 +55,7 @@ microcopy source of truth; deviations need a documented reason in the PR.
 | Slice | Name | Needs | Notes |
 |---|---|---|---|
 | J1 | **Onboarding v2 — value-first, taste-from-minute-one** — tappable mirror w/ visible re-rank payoff · sharpness meter + optional target · plain-English ticker · combined read+jobs screen · taste-line save (flag) · save-payload completeness (pre-save reactions → decision_events) · Explore arrival variant · honest recoveries | — | PRD: `docs/specs/onboarding-design.md` · proto: https://roleos.fyi/proto/onboarding/ · READY |
+| J2 | **Goal setup UX — invitation · propose-and-edit · warm date moment · push modes · plan reveal** — invited-never-forced card · she proposes/you edit (edits = decision events) · infer-first wall-vs-ambition · Steady/Push/All-in w/ live week preview · funnel-ranges reveal → one this-week number → soft-edged phases · lever conversation for infeasible windows · warm-copy bar enforced | — | PRD: `docs/specs/goal-setup-design.md` · proto: https://roleos.fyi/proto/goal-setup/ · re-skins the live engine, does NOT rebuild math · READY |
 
 ## Human go-live actions (NOT loop slices — hard-stops the loop prepares but you execute)
 
