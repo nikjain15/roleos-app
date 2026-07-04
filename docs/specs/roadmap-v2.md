@@ -46,6 +46,16 @@ how product direction stays steerable without blocking the loop.
 | X7 | **Weekly strategy review** — candid, wellbeing-aware weekly review: pace, what's working, recommended pivots, next-week focus | — | reuses digest + plan |
 | X8 | **Voice mock interviews** — talk to RO for realistic mocks with adaptive follow-ups + debrief | — | **likely paid voice infra → hard-stop for approval**; spec + cost first |
 
+## Phase J — Journey depth (design-approved slices from the design-depth loop)
+
+Each J-slice ships a human-APPROVED design: the PRD is already written and signed off — the
+slice is **build-to-spec**, not spec-then-build. The linked prototype is the visual +
+microcopy source of truth; deviations need a documented reason in the PR.
+
+| Slice | Name | Needs | Notes |
+|---|---|---|---|
+| J1 | **Onboarding v2 — value-first, taste-from-minute-one** — tappable mirror w/ visible re-rank payoff · sharpness meter + optional target · plain-English ticker · combined read+jobs screen · taste-line save (flag) · save-payload completeness (pre-save reactions → decision_events) · Explore arrival variant · honest recoveries | — | PRD: `docs/specs/onboarding-design.md` · proto: https://roleos.fyi/proto/onboarding/ · READY |
+
 ## Human go-live actions (NOT loop slices — hard-stops the loop prepares but you execute)
 
 - **Cloudflare Email** enablement (unblocks H2 email/push delivery).
