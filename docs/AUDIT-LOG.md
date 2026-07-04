@@ -65,6 +65,37 @@
 
 ## Slice entries (newest first)
 
+### H2 · Email delivery — PREPARED, flag-gated (HARD-STOP: CF Email) · 2026-07-03 · branch `v2/h2-email-delivery-prep`
+- **Built (code-ready; the switch stays human):**
+  - **`lib/email.ts`** — the delivery seam: pure `buildMime` (plain-text, header-injection folded
+    into the subject — an injected `\r\nBcc:` can never become a header), `emailEnabled` (requires
+    BOTH `EMAIL_DELIVERY_ENABLED=1` and `EMAIL_FROM`), `deliverEmail` (flag-off → honest
+    structured `email.skipped {flag_off}` no-op — demand visible in Workers Logs before enabling;
+    binding missing → `no_binding`; errors → warn line; NEVER throws). Recipient is ONLY the
+    signed-in user's own auth email — no arbitrary `to` API exists by design.
+  - **Digest wiring** — `buildAndStoreDigest` now attempts delivery after storing (no-op today);
+    in-feed stays the source of truth, delivery is best-effort.
+  - **Guardrails hardened**: `lib/email` added to BOTH the no-client-secret forbidden list AND
+    depcruise's agent-no-outbound-transport rule — the agent layer structurally cannot import the
+    email seam, ever. Human-gated-outward untouched (this delivers RO's notifications TO the user).
+  - **`docs/runbooks/enable-email.md`** — the exact human checklist (Email Routing + DKIM,
+    uncomment the prepared `send_email` binding in wrangler.jsonc, flip the two secrets, verify
+    via cron + Workers Logs, one-flag rollback).
+- **Audit:** D1 green. D2/D3 green — +4 vitest (MIME shape, header-injection fold, dual-condition
+  flag incl. exactly-"1", flag-off no-op never throws). D4 green (opennextjs; `cloudflare:email`
+  imported dynamically so dev/CI never resolve it). D5/D7 n/a (no UI). D6 green — injection-folded
+  headers; recipient locked to own auth email; agent-layer import structurally forbidden. D8 green
+  — no migration. D9 green — one no-op call per digest today. D10 green — depcruise + no-send green
+  with the STRONGER rule.
+- **Test-count ratchet:** vitest 138→142 · live E2E 35 (unchanged — flag-off path exercised by the
+  digest flow already in-suite) · public 27→27 · scenarios +2 (injection fold, flag matrix).
+- **HARD-STOP:** enabling Cloudflare Email (external service on the domain) is the human's —
+  runbook written, code no-ops until then. PR marked accordingly.
+- **Deferrals:** nudge/weekly-review delivery reuse the same seam (one-liners post-merge);
+  HTML templates (plain text is the honest v1).
+- **Learnings:** ship the OFF path as the tested default — `email.skipped` telemetry shows real
+  demand before anyone pays for or configures the service. Strengthen invariants in the same PR
+  that introduces the risky seam (depcruise entry landed WITH lib/email, not after).
 ### X7 · Weekly strategy review · 2026-07-03 · branch `v2/x7-weekly-review`
 - **PRD-first**: `docs/specs/x7-weekly-review.md` committed before code.
 - **Built:** RO steps back once a week and gives the candid read.
@@ -100,7 +131,6 @@
   cheap path — the thin-input scenario costs zero tokens and can run in the model-free suite.
   Reading sibling-slice substrates (X3's app_score events) GENERICALLY lets parallel branches
   compose without cross-PR imports.
-
 ### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 - **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
   roles/tracker/settings/watch/résumé/apply + nudge/taste/goal/ro-ask APIs) → **all non-5xx, no prod
