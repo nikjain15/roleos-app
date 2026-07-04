@@ -6,6 +6,7 @@ import ApplyPanel from "@/components/ApplyPanel";
 import CoverLetterCard, { type CoverArtifact } from "@/components/CoverLetterCard";
 import ApplyScoreCard, { type AppScore } from "@/components/ApplyScoreCard";
 import BriefCard, { type CompanyBriefView } from "@/components/BriefCard";
+import { calibrateScores, loadOutcomeModel, type Calibration } from "@/lib/outcome-learning";
 
 /**
  * Apply / Send (Slice 4) — the human-gated outward step. RO composes the bundle
@@ -102,6 +103,28 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
     ? buildApplyBundle(artifact.content ?? {}, artifact.roles ?? {}, name, approvedCover)
     : null;
 
+  // X4: how did the user's PAST scores actually convert? Own rows only; an
+  // empty history renders nothing (never a fabricated stat).
+  let calibration: Calibration = {};
+  if (approved && artifact.role_id) {
+    const [{ data: scoreEvents }, { outcomes }] = await Promise.all([
+      supabase
+        .from("decision_events")
+        .select("payload, created_at")
+        .eq("kind", "app_score")
+        .order("created_at", { ascending: false })
+        .limit(200),
+      loadOutcomeModel(supabase),
+    ]);
+    calibration = calibrateScores(
+      (scoreEvents ?? []).map((e) => {
+        const p = e.payload as { role_id?: string; likelihood?: string } | null;
+        return { role_id: p?.role_id ?? null, likelihood: p?.likelihood ?? null, created_at: e.created_at as string };
+      }),
+      outcomes,
+    );
+  }
+
   return (
     <main className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
       <div className="flex items-center justify-between">
@@ -130,7 +153,11 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
       ) : (
         <div className="mt-6 space-y-5">
           {artifact.role_id && (
-            <ApplyScoreCard artifactId={artifact.id} initial={artifact.provenance?.app_score ?? null} />
+            <ApplyScoreCard
+              artifactId={artifact.id}
+              initial={artifact.provenance?.app_score ?? null}
+              calibration={calibration}
+            />
           )}
           {artifact.role_id && <CoverLetterCard roleId={artifact.role_id} cover={coverArt} />}
           {artifact.role_id && artifact.roles && (

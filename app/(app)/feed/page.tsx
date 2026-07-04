@@ -10,6 +10,7 @@ import GoalCockpit from "@/components/GoalCockpit";
 import PaceNudgeCard from "@/components/PaceNudgeCard";
 import { loadActiveGoal, appsThisWeek } from "@/lib/goal";
 import { computeAgenda } from "@/lib/plan/agenda";
+import { adjustFit, loadOutcomeModel, roleFeatures, type FitAdjustment } from "@/lib/outcome-learning";
 
 /**
  * The decision feed — the home (journey.html §6). No tabs, no Kanban. What RO
@@ -25,7 +26,13 @@ type MatchRow = {
   recommendation: string | null;
   reasoning: { why?: string } | null;
   status: string;
-  roles: { company: string; role_title: string; url: string | null } | null;
+  roles: {
+    company: string;
+    role_title: string;
+    url: string | null;
+    archetype: string | null;
+    keywords: unknown;
+  } | null;
 };
 
 export default async function Feed() {
@@ -37,10 +44,17 @@ export default async function Feed() {
 
   const { data: matches } = await supabase
     .from("matches")
-    .select("role_id, fit_score, recommendation, reasoning, status, roles(company, role_title, url)")
+    .select(
+      "role_id, fit_score, recommendation, reasoning, status, roles(company, role_title, url, archetype, keywords)",
+    )
     .limit(100)
     .order("fit_score", { ascending: false })
     .returns<MatchRow[]>();
+
+  // X4: the user's real funnel outcomes nudge displayed fit — bounded, explained,
+  // derived fresh each render. No outcomes yet → adj is always null, page unchanged.
+  const { lifts } = await loadOutcomeModel(supabase);
+  const adjFor = (m: MatchRow): FitAdjustment | null => adjustFit(m.fit_score, roleFeatures(m.roles), lifts);
 
   const pursue = (matches ?? []).filter((m) => m.recommendation === "pursue");
   const rest = (matches ?? []).filter((m) => m.recommendation !== "pursue");
@@ -160,7 +174,7 @@ export default async function Feed() {
               </p>
               <div className="space-y-3">
                 {pursue.map((m) => (
-                  <Card key={m.role_id} m={m} />
+                  <Card key={m.role_id} m={m} adj={adjFor(m)} />
                 ))}
               </div>
             </section>
@@ -184,7 +198,7 @@ export default async function Feed() {
               )}
               <div className="space-y-3">
                 {rest.map((m) => (
-                  <Card key={m.role_id} m={m} />
+                  <Card key={m.role_id} m={m} adj={adjFor(m)} />
                 ))}
               </div>
             </section>
@@ -195,7 +209,7 @@ export default async function Feed() {
   );
 }
 
-function Card({ m }: { m: MatchRow }) {
+function Card({ m, adj }: { m: MatchRow; adj?: FitAdjustment | null }) {
   const recColor =
     m.recommendation === "pursue"
       ? "bg-suc-bg text-suc"
@@ -208,10 +222,19 @@ function Card({ m }: { m: MatchRow }) {
         <p className="font-semibold text-tx">
           {m.roles?.company} — {m.roles?.role_title}
         </p>
+        {/* X4: base fit stays visible; the outcome overlay is labelled, never silent. */}
         <span className={`shrink-0 rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${recColor}`}>
           {m.recommendation} · {m.fit_score}
+          {adj && <> → {adj.adjusted}</>}
         </span>
       </div>
+      {adj && (
+        <p className="mt-1 text-xs text-tx3">
+          {adj.delta > 0 ? "+" : ""}
+          {adj.delta} from your track record:{" "}
+          {adj.because.map((b) => `${b.feature} ${b.wins}/${b.n}`).join(" · ")}
+        </p>
+      )}
       {m.reasoning?.why && <p className="mt-2 text-[15px] leading-relaxed text-tx2">{m.reasoning.why}</p>}
       {/* Actions on EVERY match — RO recommends, you decide (ro-voice: your */}
       {/* judgment always overrides). Drafting is RO; sending stays human-gated. */}
