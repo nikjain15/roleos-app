@@ -16,6 +16,14 @@ describe("contentSecurityPolicy", () => {
   it("omits the supabase origin cleanly when unset", () => {
     expect(contentSecurityPolicy(undefined)).toContain("connect-src 'self';");
   });
+
+  it("never allows eval in production; dev (and only dev) gets it for Next's eval source maps", () => {
+    expect(contentSecurityPolicy("https://abc.supabase.co")).not.toContain("unsafe-eval");
+    expect(contentSecurityPolicy("https://abc.supabase.co", false)).not.toContain("unsafe-eval");
+    expect(contentSecurityPolicy("https://abc.supabase.co", true)).toContain(
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+    );
+  });
 });
 
 describe("securityHeaders", () => {

@@ -1,5 +1,6 @@
 import { createClient, type SupabaseClient } from "@supabase/supabase-js";
 import { readFileSync } from "node:fs";
+import { paceOtp, isOtpRateLimit, OTP_WINDOW_MS } from "./otp-budget";
 
 /**
  * Live E2E harness plumbing (local/preview only). Loads `.env.local`, forges a
@@ -52,7 +53,13 @@ export interface SeededUser {
   cleanup: () => Promise<void>;
 }
 
-/** Create a throwaway confirmed user + a forged session cookie. */
+/**
+ * Create a throwaway confirmed user + a forged session cookie. T2: OTP
+ * verification is budget-paced (Supabase allows ~30/5min per IP; the ledger in
+ * otp-budget.ts spaces us under it) and retried ONCE after a full window on a
+ * rate-limit error — the whole suite runs green as ONE command instead of
+ * hand-chunked with cooldowns.
+ */
 export async function createUser(tag = "e2e"): Promise<SeededUser> {
   const db = admin();
   const email = `${tag}-${Date.now()}-${Math.floor(performance.now())}@roleos.test`;
@@ -60,17 +67,33 @@ export async function createUser(tag = "e2e"): Promise<SeededUser> {
   if (error || !created.user) throw error ?? new Error("createUser failed");
   const userId = created.user.id;
 
-  const { data: link } = await db.auth.admin.generateLink({ type: "magiclink", email });
-  const tokenHash = (link?.properties as { hashed_token?: string } | undefined)?.hashed_token;
-  if (!tokenHash) throw new Error("no magiclink token");
-  const pub = createClient(SUPABASE_URL, ANON, { auth: { persistSession: false } });
-  const { data: verified, error: vErr } = await pub.auth.verifyOtp({ token_hash: tokenHash, type: "email" });
-  if (vErr || !verified.session) throw vErr ?? new Error("verifyOtp failed");
+  const verify = async () => {
+    const { data: link } = await db.auth.admin.generateLink({ type: "magiclink", email });
+    const tokenHash = (link?.properties as { hashed_token?: string } | undefined)?.hashed_token;
+    if (!tokenHash) throw new Error("no magiclink token");
+    const pub = createClient(SUPABASE_URL, ANON, { auth: { persistSession: false } });
+    await paceOtp();
+    const { data: verified, error: vErr } = await pub.auth.verifyOtp({ token_hash: tokenHash, type: "email" });
+    if (vErr || !verified.session) throw vErr ?? new Error("verifyOtp failed");
+    return verified.session;
+  };
+
+  let session: Awaited<ReturnType<typeof verify>>;
+  try {
+    session = await verify();
+  } catch (err) {
+    if (!isOtpRateLimit(err)) throw err;
+    // Budget burned outside our ledger (an earlier manual run, another
+    // checkout) — wait out one full window, then try once more.
+    console.log("[otp-budget] rate-limited despite pacing — waiting out a full window");
+    await new Promise((r) => setTimeout(r, OTP_WINDOW_MS + 2_000));
+    session = await verify();
+  }
 
   return {
     userId,
     email,
-    cookie: sessionCookie(verified.session),
+    cookie: sessionCookie(session),
     db,
     cleanup: async () => {
       await db.auth.admin.deleteUser(userId).catch(() => {});

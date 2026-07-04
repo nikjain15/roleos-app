@@ -65,6 +65,289 @@
 
 ## Slice entries (newest first)
 
+### Prod-smoke expansion (coverage) · 2026-07-04 · branch `chore/prod-smoke-expansion`
+- **Why:** the prod health check (`prod.spec.ts`) predates the X-era merges — `/offers`,
+  `/review`, `/api/comp-benchmark`, `/api/health` and the cron secret-gates were live in
+  prod but unverified. Step H (post-merge prod verification) leans on this spec, so its
+  blind spots are the loop's blind spots.
+- **Built (one file, zero conflicts with the queued PRs):** surface list gains `/offers`,
+  `/review`, `/api/comp-benchmark`; new test — `/api/health` answers 200 with a real body;
+  new test — all four `/api/cron/*` routes 403 a wrong secret IN PROD (the live proof the
+  CRON_SECRET gate deployed).
+- **Verified against prod:** `npm run test:e2e:prod` → 3/3 green against `ro.roleos.fyi`
+  (10.7s). Prod healthy.
+- **Audit:** D1 green (tsc; test file only). D2/D3 green. D4–D9 n/a (no runtime code).
+  D10 green. **Ratchet:** vitest 209→209 · live E2E 99→101 by `--list` (+2) · public
+  33→33 · scenarios +2 (prod health-endpoint contract · prod cron-gate probe).
+- **Deferral:** once the queued PRs merge, add their surfaces here too (`/connections`,
+  hunt cron 403, voice-flag-off coach) — noted for the post-merge pass.
+
+### T2 · OTP-budget-aware live harness (test-debt) · 2026-07-04 · branch `v2/t2-otp-budget-harness`
+- **Problem (from X1's audit):** Supabase rate-limits OTP verification (~30/5min/IP) and
+  the live suite seeds 40+ users per run — an unpaced full run EXHAUSTS THE BUDGET
+  MID-RUN (green until ~test #30, then instant seed-time failures with misleading
+  breadth). Every slice since X1 ran the suite in hand-rolled chunks with cooldowns.
+- **Built (harness only — zero product code, zero new secrets, spec API unchanged):**
+  - **`tests/e2e/live/otp-budget.ts`** — pure pacing math (`otpDelayMs`, `pruneLedger`,
+    paced to 26/5min leaving headroom for unledgered strays) + a timestamp ledger in the
+    OS tmpdir so back-to-back runs share one budget + `isOtpRateLimit` matcher.
+  - **`seed.ts createUser`** — `paceOtp()` before every verification (visible
+    "[otp-budget] pacing Ns" lines so a paused suite never looks hung) + ONE retry after
+    a full window on rate-limit errors (robust to burn the ledger never saw).
+  - **`fixtures.ts newUser`** — extends the CURRENT test's timeout by the expected wait
+    before a paced pause (a 4-min budget wait must never read as a test hang). Found the
+    honest way: the first one-command run paced perfectly (236s→175s→115s→54s→21s drip,
+    exactly the rolling-window model) and 9 tests died on the OLD 60s timeout.
+  - Rejected approach, for the record: minting session JWTs with the project JWT secret
+    would eliminate the budget entirely but requires fetching + persisting a new powerful
+    secret — that's secret-handling (hard-stop), left as a human option.
+- **Proof:** full live suite as ONE command (`npm run test:e2e:live`), started against a
+  pre-burned window: **exit 0 — 90 passed / 9 model+prod-gated skips / 0 failed in
+  13.9 min, self-pacing through 36 budget events** (worst single pause 106s, invisible to
+  test outcomes thanks to the timeout extension). Chunk scripts retired.
+- **Audit:** D1 green (tsc; test files only). D2/D3 green — +6 vitest (no-headroom
+  zero-delay, exact wait-until-slot-frees, stale/junk timestamps never block, over-full
+  window bounded wait, ledger pruning, rate-limit phrasing matcher incl. negatives).
+  D4 n/a (no runtime code). D5/D7 n/a. D6 green — no new secrets, no auth semantics
+  touched; the pacer only makes the harness a politer auth client. D8 green — no
+  migration. D9 green — the suite self-paces instead of hammering. D10 green.
+- **Test-count ratchet (vs main):** vitest 209→215 (+6) · live E2E 99→99 (harness slice —
+  no product surface) · public 33→33 · scenarios +2 (budget-exhaustion pacing ·
+  rate-limited-despite-pacing retry).
+- **Deferrals:** raising the Supabase auth rate limit (human, auth-config); JWT-secret
+  session minting (human, secret-handling); user pooling across specs (bigger refactor,
+  only needed if the suite triples again).
+- **Learnings:** budget waits inside fixtures MUST extend the test's own timeout
+  (`testInfo.setTimeout`) or they masquerade as hangs. Pace UNDER the documented limit
+  (26 vs 30) — other clients share the window and the ledger can't see them.
+
+### X8 · Voice mock interviews (BUILD, approved option A) · 2026-07-04 · branch `v2/x8-voice-mocks`
+- **Approval honored:** human approved **option A** — browser-native Web Speech API
+  (on-device/browser STT + `speechSynthesis` TTS), **flag-gated, zero new vendors, zero
+  new keys, zero new infra**. Options B/C stay unbuilt. Cost per mock = only the model
+  turns we already meter (~$0.15–0.40). **No audio ever leaves the browser** — only the
+  recognized text goes to the same `/api/coach` endpoint typing uses.
+- **Built:**
+  - **Flag:** `VOICE_MOCKS_ENABLED` (env; unset in prod until the human sets it). The
+    coach page became a thin server shell reading the flag; `CoachClient` renders
+    byte-identical text coach when off. Local `.env.local` has it on for the harness.
+  - **`components/VoiceMode.tsx`** — mic capture with live interim captions
+    (`aria-live`), spoken interviewer turns (cancelled on unmount/toggle-off), and TWO
+    honest degradation paths: constructor missing → plain fallback line; constructor
+    present but service/mic fails at runtime (headless, denied permission) → role=alert
+    explanation. The text box works in every state. Privacy line in the UI: "Your voice
+    never leaves the browser — only the words do."
+  - **`lib/voice-metrics.ts`** (pure) + debrief integration — transcript-grounded
+    delivery notes (filler density with counts, >250-word rambles, thin-answer patterns,
+    words/min only when actually timed, one honest positive when clean). Gains-oriented
+    copy, never shaming; applies to typed answers too.
+  - **`/api/coach` rate limit** (PRD acceptance #4; was missing): 60 calls/h per user via
+    `rate_events` — two long mocks fit, a runaway voice loop can't burn past it.
+- **Audit:** D1 green (tsc, lint 1 pre-existing warning, depcruise 0 violations). D2/D3
+  green — +8 vitest (filler word-boundaries, wpm edges incl. untimed/too-short, empty
+  transcript → no fabrication, ramble/thin thresholds, ≥2-timed-answers pace rule,
+  no-shaming copy sweep) + 2 live E2E (model-free: 401 + seeded 429 before model spend;
+  **model-gated FULL flow VERIFIED live**: flag shows the toggle → voice affordances +
+  privacy note → runtime degradation honest → text loop still works with voice on →
+  debrief renders transcript-grounded delivery notes). D4 green (opennextjs). D5/D7 green
+  — captions are first-class (live `aria-live` interim + persistent transcript), controls
+  are buttons with `aria-pressed`, coach page already in responsive sweeps. D6 green —
+  no new routes; coach gains the missing rate limit; no egress; flag default-off. D8
+  green — **NO migration**. D9 green — no new queries; every model call already metered.
+  D10 green — invariants untouched; the mock loop's brain didn't change, only its
+  transport.
+- **Test-count ratchet (vs main, this branch):** vitest 209→218 (+8 X8, +1 cherry-picked
+  CSP pin) · live E2E 99→101 by `--list` · public 33→33 · scenarios +4 (voice unavailable
+  degradation · runtime speech-service failure · coach 429 · voice-mode full-loop persona).
+- **Go-live note (human):** to enable in prod set `VOICE_MOCKS_ENABLED=1`
+  (`npx wrangler secret put VOICE_MOCKS_ENABLED` or a plain var) and redeploy — flag-off
+  prod behavior is byte-identical until then.
+- **Deferrals:** option C (Workers AI Whisper/TTS upgrade) awaits demand; voice pace from
+  audio timing beyond recognition windows; Safari-specific tuning (works via
+  webkitSpeechRecognition; not E2E-covered — Playwright WebKit lacks the API).
+- **Learnings:** headless Chromium EXPOSES `webkitSpeechRecognition` but its service
+  fails at runtime — feature-detecting the constructor is NOT enough; ship a runtime
+  onerror path with honest copy (and that's the branch E2E can actually verify).
+  `getByText("Debrief")` collides with busy copy + button text — use `{ exact: true }`.
+
+### X6 · Referral & warm-intro finder (BUILD, approved A+D) · 2026-07-04 · branch `v2/x6-referral-finder`
+- **Approval honored:** human approved sources **A** (the user's own LinkedIn connections
+  export — LinkedIn's own "Get a copy of your data", we never touch LinkedIn) + **D**
+  (hand-typed people). B (Google contacts) deferred until Google verification; **C
+  (LinkedIn scraping) not built — standing no.** ZERO external people calls in the slice.
+- **Built:**
+  - **Migration `0016_connections.sql` (APPLIED via Management API):** `connections` table
+    — owner RLS (sel/ins/upd/del), `note` = the user's own relationship truth; widened
+    `artifacts.type` check to include `intro` (additive only).
+  - **`lib/connections.ts`** (pure): RFC-4180-enough CSV parsing tolerant of LinkedIn's
+    notes preamble + quoted commas (cap 5000, junk → []); `normalizeCompany` (suffix/punct
+    strip); `sameCompany` (exact or ≥4-char containment); `titleRank`; `warmPaths` — v1 is
+    DIRECT employer matches only (honest evidence beats fuzzy guesses), manual people
+    first, then seniority, cap 5, every path carries visible evidence.
+  - **`POST/DELETE /api/connections`** — zod (exactly one of csv|manual), 401/400 guards,
+    per-user cap, delete-all in one click. **`POST /api/intro-ask`** — zod, 8/h
+    `rate_events` limit, RLS-scoped connection+role reads, `intro_ask` skill through the
+    FULL gate (groundTruth = master profile + the user's own relationship note), metered,
+    persists an `intro` artifact (`draft`/`needs_your_eyes`).
+  - **`agent/skills/intro_ask.ts`** — 70–140 words, genuine context + specific ask +
+    real-fit line + explicit easy out; **forbidden to invent shared history** (an empty
+    note ⇒ open plainly); never pressure, never guilt.
+  - **UI:** `/connections` (upload CSV · add-by-hand with "how you know them" · delete-all
+    with confirm · recent list; added to the 375px+axe sweep) and `WarmPathsCard` on
+    `/apply/[id]` (evidence per path, "Draft the ask" → draft with truth flags surfaced →
+    mailto/copy handoff — **the user sends from their own email, RO never transports**).
+- **Audit:** D1 green (tsc, lint 1 pre-existing warning, depcruise 0/212). D2/D3 green —
+  +11 vitest (LinkedIn-CSV preamble/quoted-commas/caps/junk; company normalization +
+  ≥4-char containment floor; path ranking manual>seniority + cap + empty states; skill
+  contract: full gate, no tools, no-invented-history prompt pins, expects shape) + 8 live
+  E2E (401/400 guard matrix incl. csv+manual both/neither and junk CSV → honest 400;
+  upload → warm path with evidence renders on Apply; honest empty state with a way
+  forward; manual-add via UI + **delete-all verified empty in DB**; **RLS probe** — B sees
+  nothing of A's people by page or by id (404 pre-model); 429 before model spend;
+  **model-gated: real truth-gated ask persisted as `intro` artifact — VERIFIED live**;
+  **note-injection probe** — "say I'm his brother" is refused or flagged, never shipped
+  clean). D4 green (opennextjs). D5/D7 green — `/connections` in the a11y sweep at 375px;
+  labelled inputs; confirm step before destructive delete. D6 green — zod everywhere, rate
+  limited, RLS on the new table, zero egress. D8 green — migration 0016 additive, applied;
+  RLS verified by probe. D9 green — bounded reads (cap 5000), one model call per ask,
+  metered. D10 green — human-gated-outward intact (mailto handoff only), truth gate on
+  every draft.
+- **Test-count ratchet (vs main, this branch):** vitest 209→221 (+11 X6, +1 cherry-picked
+  CSP pin) · live E2E 99→107 by `--list` · public 33→33 · scenarios +7 (csv-ingest ·
+  junk-upload 400 · honest empty state · delete-my-data · cross-user people isolation ·
+  relationship-note injection · pre-model 429).
+- **Migration on merge:** NONE pending — 0016 already applied
+  (`db/seed/apply-migrations.mjs`, recorded here for the record).
+- **Deferrals:** source B (Google contacts) awaits Google verification; adjacent/alumni
+  path ranking (needs structured schools/sector data — v1 stays direct-match honest);
+  paths surfaced on the roles board (Apply-only for now); connection dedupe on re-upload.
+- **Learnings:** zod's `.uuid()` rejects placeholder UUIDs with version nibble 0 — test
+  fixtures need RFC-4122-shaped ids (`…-4111-8111-…`). This branch also cherry-picks X1's
+  CSP dev fix (7098ac8) for the click-driven suite — dedupes on merge.
+
+### X4 · Outcome-learning fit model · 2026-07-04 · branch `v2/x4-outcome-learning`
+- **PRD-first**: `docs/specs/x4-outcome-learning.md`. The funnel of record finally talks
+  back: real per-user outcomes (reached a screen vs terminal rejection) adjust the fit RO
+  shows next — bounded ±8, deterministic, and always with the arithmetic attached — and
+  X3's screen-likelihood scores get an honest calibration read-back. **Zero model calls,
+  zero migration, nothing stored** — derived at render time from rows the caller owns.
+- **Built:**
+  - **`lib/outcome-learning.ts`** (pure core + 2-query RLS bridge): `outcomeOf` (win = ever
+    reached screening+; loss = rejected / withdrawn-after-applied without a screen;
+    **in-flight is never counted — silence is not a loss**), `roleFeatures` (archetype +
+    ≤6 keywords, normalized), `learnLifts` (per-feature wins/n vs the user's own base rate,
+    shrunk `(wins − n·base)/(n+2)`, n<2 teaches nothing), `adjustFit` (Σ lifts ×10, clamped
+    ±8, top-3 `because` with wins/n, clamped 0–100, null when no evidence), `calibrateScores`
+    + `calibrationLine` (latest score per role × decided outcomes; small samples say "read
+    gently"; empty history says nothing).
+  - **Surfaces (server-rendered):** `/roles` board — `fit 70 → 76` + "+6 · your track
+    record" chip, full explanation in the expanded details; `/feed` cards — same overlay
+    inline; `/apply/[id]` score card — one muted line ("Your past 'high' scores converted
+    1/2 — small sample, read gently."). Base fit is NEVER hidden or overwritten; stored
+    `matches.fit_score` and recommendations untouched (the overlay informs, the reasoner
+    decides).
+- **Audit:** D1 green (tsc after the `.next/types` branch-switch rebuild; lint = 1
+  pre-existing warning; depcruise 0/206). D2/D3 green — +14 vitest (win/loss/in-flight
+  taxonomy incl. withdrawn-before-applied; feature normalization + junk; shrinkage math;
+  n<2 floor; clamp under feature pile-up; null on no-evidence/no-fit/net-zero; calibration
+  latest-per-role + junk-likelihood + honest empties) + 5 live E2E (request-level, server-
+  rendered HTML: lift chip on /roles + /feed from seeded funnel truth; no-history renders
+  the page as before; **cross-user RLS probe** — B's outcomes never move A's fit;
+  calibration line with n on /apply; no fabricated stats without history). D4 green
+  (opennextjs build). D5/D7 green — chips flex-wrap, tooltip info duplicated as real text
+  in expanded details (keyboard-reachable); /roles + /feed already in the 375px+axe sweep.
+  D6 green — no new routes, no input surfaces, no egress; reads are RLS-scoped own-rows.
+  D8 green — NO migration, nothing written. D9 green — 2 bounded queries per page render.
+  D10 green — invariants untouched; no model calls anywhere in the slice.
+- **Test-count ratchet (vs main, this branch):** vitest 209→224 (+14 X4, +1 cherry-picked
+  CSP pin) · live E2E 99→104 by `--list` (run green in chunks under the auth budget; the
+  10 click-driven specs re-run green after the CSP cherry-pick) · public 33→33 · scenarios +5
+  (outcome-lift happy path · no-history no-op · cross-user outcome isolation · calibration
+  read-back · empty-calibration honesty).
+- **Deferrals:** company-stage/size features (needs consistent corpus fields); lift-aware
+  ORDERING (display order still by base fit — a product decision on how much the overlay
+  may steer); X4 signals into the 15-dim taste view; recompute-time persistence of
+  adjustments (deliberately render-time for freshness).
+- **Learnings:** RSC inserts `<!-- -->` between JSX text and expression nodes — assert
+  server-rendered HTML with a regex (`/fit (<!-- -->)?70/`), not `toContain("fit 70")`.
+  Request-level `request.get(page)` assertions on server components dodge the dev-CSP
+  hydration issue entirely and are faster than browser contexts — prefer them when no
+  interaction is being tested. **Heads-up: every click-driven live E2E is RED on current
+  main** (H4's CSP kills dev hydration; found+fixed in X1). This branch cherry-picks X1's
+  CSP fix (7098ac8) so its full suite can run green pre-merge — the duplicate patch
+  resolves on rebase/merge. (Merge note: this entry and X1's union in AUDIT-LOG on merge,
+  as in the W-era merges.)
+
+### X1 · Overnight autonomous hunt · 2026-07-04 · branch `v2/x1-overnight-hunt`
+- **PRD-first**: `docs/specs/x1-overnight-hunt.md`. The candidate wakes up to work already
+  done: fresh goal-matched roles sourced, résumés pre-drafted through the FULL quality gate
+  (truth gate included), queued in the Tracker for one review-and-click send. **No send** —
+  the human-gated-outward invariant is untouched; the hunt ends at the Ready queue.
+- **Built (reuse-first — no migration, no new tables):**
+  - **`lib/hunt.ts`** — pure eligibility/selection/copy (`isHuntDue` 20h throttle + pause,
+    `isDormant` 30d, `selectHuntTargets` fresh-pursues-only minus tracked/drafted roles,
+    `huntSummary` honest calm copy) + `huntForUser` orchestrator (re-match via
+    `recomputeMatchesForUser` with graceful recall-failure fallback → `draft_resume` through
+    the same gate as `/api/tailor`, metered → artifact (`provenance.source: overnight_hunt`)
+    → application `ready`/`drafting` per gate verdict, `next_action` derived, 23505-safe →
+    `decision_events` kind `hunt`).
+  - **`POST /api/cron/hunt`** — secret-gated, service-role; caps ≤8 users, ≤2 drafts/user,
+    ≤8 drafts/run, 240s soft deadline (deferred users LOGGED, never silent); stands down
+    entirely when the 24h cost budget is `exceeded` (H5 tie-in); one digest-tier
+    `draft_ready` notification per productive night via `decideNotification`; optional
+    `{only_user_id, draft_cap}` scope for manual/test runs (nightly sweep unaffected).
+  - **Cron worker**: new nightly trigger `30 2 * * *` → `fireNightly` (+ manual `?only=hunt`).
+    **Redeploy on merge:** `npx wrangler deploy -c cron/wrangler.jsonc`.
+  - **User control**: `HuntToggle` on `/tracker` (aria-pressed, role=alert error, honest
+    copy) → `PATCH /api/hunt` (zod, RLS-scoped) → `profiles.ambient.hunt_paused`, honored
+    by the sweep immediately.
+- **Fixes found by this slice's audit (both pre-existing):**
+  1. **H4's CSP broke Next dev hydration** — `script-src` without `'unsafe-eval'` kills
+     dev-mode client JS (eval source maps), so EVERY Playwright click through `next dev`
+     silently no-opped (X5's offers click test was already failing on merged main). Fix:
+     dev-only `'unsafe-eval'` flag in the pure policy, wired to NODE_ENV in next.config;
+     prod policy unchanged + unit-pinned (`never allows eval in production`).
+  2. **Every `rematch` decision_event since W-era was silently dropped** — action
+     `'recompute'` violates 0001's check constraint and the fire-and-forget insert hid it
+     (0 rows in prod, verified). Fix: action `'edit'` (kind `rematch` keeps the semantic);
+     new CI guard `tests/unit/decision-actions.test.ts` greps every decision_events insert
+     and pins actions to the legal verbs — an illegal verb now fails CI, not the substrate.
+- **Audit:** D1 green (tsc, lint [1 pre-existing warning untouched], depcruise 0/209
+  modules). D2/D3 green — +15 vitest (throttle/pause/dormancy incl. malformed timestamps →
+  fail-toward-spending-nothing; selection filters/sort/caps; copy honesty incl.
+  no-urgency-theater; CSP dev/prod split; decision-actions guard) + 8 live E2E (secretless
+  403; PATCH 401/400; toggle persists across reload; cross-user hunt-state probe; malformed
+  cron body 400; paused-user skip; dormant-user skip; **model-gated full hunt VERIFIED
+  live** — re-match → truth-gated draft → Tracker `ready`/`drafting` with artifact linked +
+  next_action → exactly one digest-tier note → agent_runs metered → second sweep inside 20h
+  no-ops). D4 green (opennextjs build). D5/D7 green — `/tracker` already in the 375px+axe
+  sweep; toggle is labelled, keyboardable, error state has a way forward. D6 green — cron
+  secret-gated; zod on both new routes; no egress; injection on `draft_resume` covered by
+  the existing tailor injection scenario (identical skill + gate path). D8 green — **no
+  migration**; reused `profiles.ambient` jsonb; append-only respected. D9 green — every
+  query bounded; every model call metered; budget stand-down. D10 green — invariants all
+  green; drafts land as `draft`/`needs_your_eyes`, never `approved`/`sent`.
+- **Test-count ratchet:** vitest 209→224 · live E2E 99→107 by `--list` (run: 97 passed /
+  10 gated-skips model+prod / 0 failed, in 4 chunks under the auth budget) · public 33→33 ·
+  scenarios +6 (paused-skip ·
+  dormant-skip · 20h-throttle idempotency · malformed-cron-body · cross-user hunt-state
+  probe · overnight-hunt persona flow).
+- **Deferrals:** multi-user scale-out of the nightly sweep (Queue/Workflow — same deferral
+  as digests); per-user local-time hunt scheduling (02:30 UTC fits the current user base);
+  cover letters in the overnight queue (W2 drafts them at Apply); surfacing hunt results as
+  a feed card beyond the digest note.
+- **Learnings:** (1) Supabase auth rate-limits OTP verification (~30 per 5 min per IP,
+  project default) and the live suite now seeds 40+ users per run — a single full run
+  EXHAUSTS THE BUDGET MID-RUN: everything green until ~test #66, then instant (~0.5s)
+  seed-time failures with misleading breadth. Fix used here: run the suite in 3 chunks
+  with ~5.5-min cool-downs (each chunk under the budget). Durable fixes are a decision for
+  the human (raising the Supabase auth rate limit = auth-config change → hard-stop) or a
+  test-debt slice that pools/reuses seeded users across specs. (2) In `next dev`, a too-strict CSP
+  fails as SILENT hydration death — clicks no-op with zero console errors except an eval
+  CSP violation; if UI tests click and nothing happens, check CSP before blaming the test.
+  (3) Fire-and-forget DB inserts hide check-constraint violations — pin literal enum
+  columns with a source-grep CI guard when the write path deliberately swallows errors.
+
 ### X5 · Comp intelligence + offer decision co-pilot · 2026-07-03 · branch `v2/x5-comp-copilot`
 - **PRD-first**: `docs/specs/x5-comp-copilot.md`. **Comp-source decision made in the PRD:** v1 =
   STATED base ranges in RO's own corpus (measured live: 1,536 roles, 691 with comp fields) —
