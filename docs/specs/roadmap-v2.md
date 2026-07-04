@@ -61,3 +61,19 @@ The loop writes the code/flags/checklists for these and **stops** for you to fli
 Wrap-up (W1–W7, highly parallel) → Hardening (H1,H3,H4,H5; H2 waits on CF Email) →
 Advanced (X-slices, spec-then-build; X1/X3 first for the biggest leverage). Keep one PR per
 slice, every D1–D10 dimension green, guardrails never regressed.
+
+## Round 3 — proposed by the loop (step I, 2026-07-04) — needs your merge to become READY
+
+> Phases W/H/X above are fully built (merged or queued as CI-green PRs). Per the loop's
+> "raise the bar" step, these are the next highest-leverage slices toward the North Star —
+> land the target role FASTER with LESS stress. Same rules: spec-then-build (PRD is the
+> first commit), one PR per slice. Merging THIS section is your approval to build them.
+
+| Slice | Name | Needs | Why it's next (North-Star leverage) |
+|---|---|---|---|
+| X9 | **Reply desk — scheduling + follow-up autopilot (drafts only)** | — | The funnel's biggest silent-drop zone is AFTER a recruiter replies: slow scheduling and missed follow-ups kill live threads. Gate-2 Gmail/Calendar integration + `lib/followups` + the SLA engine already exist — X9 detects a reply that needs scheduling, proposes real calendar slots, and queues drafted replies/thank-yous/follow-ups in a "reply desk" — every send human-clicked, as always. |
+| X10 | **Ready-room — batch review for the overnight queue** | X1 merged | X1 fills Tracker "Ready" while the user sleeps; X10 makes the morning ritual: one screen to review→edit→approve→send the queued drafts (score, cover, warm path inline), one decision at a time. Cuts per-application friction from ~15 min to ~2; the send stays per-item and human. |
+| X11 | **Rejection→growth loop** | X4 merged | Rejections are today a dead end (stage change, nothing learned, morale hit). X11: on a rejection, RO offers a calm 2-minute post-mortem — what the funnel data actually says (X4 lifts + X3 calibration), one concrete adjustment (targeting/résumé/pace), structured reason captured to sharpen the outcome model. Wellbeing-first: rejection framed as data, never verdict; entirely opt-in per event. |
+| T2 | **Test-debt: OTP-budget-aware live harness** | — | The live suite seeds 40+ throwaway users per run and now exhausts Supabase's ~30-per-5-min OTP-verification budget mid-run (found in X1; every slice since runs the suite in hand-rolled chunks). T2: pool + reuse seeded users across specs (fixture-level), single-session per worker, and a budget-aware runner — full suite back to ONE green command. Pays for itself every future slice. |
+
+Suggested order: **T2 first** (every later slice's gate gets faster/safer), then X10 → X9 → X11.
