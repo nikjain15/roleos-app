@@ -8,6 +8,7 @@ import roAsk from "@/agent/skills/ro_ask";
 import { logAgentRuns } from "@/lib/agent-runs";
 import { parseModelJson } from "@/lib/json";
 import { validateAct, type RawAct } from "@/lib/dock-acts";
+import { logError } from "@/lib/log";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -111,7 +112,8 @@ export async function POST(req: Request): Promise<Response> {
     const act = validateAct(out?.act, topPursue);
 
     return NextResponse.json({ answer, action: act ? null : action, act, grounded: verdict.status });
-  } catch {
+  } catch (err) {
+    logError("ro_ask.failed", err, { screen });
     return NextResponse.json({ error: "RO couldn't answer that one — try again." }, { status: 500 });
   }
 }
