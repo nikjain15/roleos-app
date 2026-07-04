@@ -147,6 +147,36 @@ export async function getDemandStats(): Promise<DemandStats> {
   };
 }
 
+/** Ops summary for the /admin Ops card (slice H1). Cheap bounded reads. */
+export interface OpsSummary {
+  dbOk: boolean;
+  last24h: { runs: number; costUsd: number; gateFails: number };
+}
+
+export async function getOpsSummary(): Promise<OpsSummary> {
+  const db = supabaseService();
+  const since = new Date(Date.now() - 24 * 3600_000).toISOString();
+
+  const [ping, runs] = await Promise.all([
+    db.from("roles").select("id", { count: "exact", head: true }).limit(1),
+    db
+      .from("agent_runs")
+      .select("skill, cost_usd, judge_verdict")
+      .gte("created_at", since)
+      .limit(RUNS_WINDOW),
+  ]);
+
+  const rows = (runs.data ?? []) as Pick<Row, "skill" | "cost_usd" | "judge_verdict">[];
+  const num = (v: number | string) => (typeof v === "string" ? parseFloat(v) : v) || 0;
+  let costUsd = 0;
+  let gateFails = 0;
+  for (const r of rows) {
+    costUsd += num(r.cost_usd);
+    if (!isSubCall(r.skill) && r.judge_verdict?.status && r.judge_verdict.status !== "passed") gateFails += 1;
+  }
+  return { dbOk: !ping.error, last24h: { runs: rows.length, costUsd, gateFails } };
+}
+
 export async function getAdminStats(): Promise<AdminStats> {
   const db = supabaseService();
   const { data } = await db

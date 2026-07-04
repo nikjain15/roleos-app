@@ -65,6 +65,36 @@
 
 ## Slice entries (newest first)
 
+### H1 · Observability + error tracking · 2026-07-03 · branch `v2/h1-observability`
+- **Built:** the go-live visibility layer, zero paid deps (Workers observability reads stdout).
+  - **`lib/log.ts`** — structured JSON logging (one line per event, exactly what Workers Logs
+    indexes): `formatLog` (pure, unit-tested), `logInfo/Warn/Error`. Secret-looking KEYS are
+    redacted (`key|token|secret|password|authorization|cookie`), Errors normalize to
+    message/name/5-frame stack, circular fields degrade instead of throwing. Wired into
+    `/api/ro/ask`'s catch and `/api/health` as the pattern for every future route.
+  - **`GET /api/health`** — public, cheap, secret-free: DB ping → `{ok, checks, time}`, 200/503.
+    The uptime-probe + admin-Ops shape; leaks nothing beyond booleans (asserted in E2E).
+  - **Error boundaries** — `app/error.tsx` (honest recovery: retry + back-to-feed + digest ref)
+    and `app/global-error.tsx` (inline-styled — survives a broken CSS pipeline).
+  - **/admin Ops card** — DB health + last-24h runs/spend/gate-fails (`getOpsSummary`, bounded
+    reads over `agent_runs`), plus pointers to `/api/health` and Workers Logs.
+- **Audit:** D1 green. D2/D3 green — +6 vitest (JSON envelope, secret-key redaction incl. exact
+  siblings kept, Error normalization, undefined-skipping, circular-safety, stack capping) + 2 live
+  E2E (health 200 with EXACT response shape asserted — no leakage; anonymous + POST→405). D4 green
+  (opennextjs build; health route runs on Workers). D5/D7 green — error boundaries give every
+  failure state a way forward (retry + feed link, ≥44px). D6 green — health exposes booleans only;
+  logger REDACTS secrets by design; admin Ops behind requireAdmin; no new writable surface.
+  D8 green — NO migration. D9 green — health is one head-count ping; Ops is two bounded reads.
+  D10 green — invariants green (log lib imports nothing outbound).
+- **Test-count ratchet:** vitest 138→144 · live E2E 35→37 run · public 27→27 · scenarios +2.
+- **Deferrals (no silent gaps):** (1) adopting `logError` in EVERY route's catch — pattern is set;
+  sweep incrementally (H4's validation sweep is the natural vehicle); (2) `agent_runs` cost-budget
+  ALERTING (H5 owns thresholds/alerts; the 24h spend is now visible); (3) uptime monitor pointing
+  at /api/health — external service, human go-live checklist item.
+- **Learnings:** on Workers, "structured logging" is just disciplined console JSON — no SDK, no
+  paid dep; the win is a STABLE envelope (`t/level/event`) and key-based redaction so future logs
+  can never leak a secret by accident. `global-error.tsx` must carry inline styles — if the root
+  layout died, Tailwind may be gone with it.
 ### W7 · Goal switching UI + "also open to" wiring (multi-goal-lite) · 2026-07-03 · branch `v2/w7-goal-switching`
 - **Built:** Phase W's last slice.
   - **Multi-goal-lite:** `POST /api/goal` gains `save_as_new` (parks the active goal as a paused
@@ -97,7 +127,6 @@
   in tests — `{ exact: true }` or scope to the container.
 
 **Phase W complete** — W1–W7 all queued as PRs #18–#24. Next: Phase H (H1 observability first).
-
 ### E2E coverage expansion + prod verification · 2026-07-03 · branch `chore/expand-e2e-coverage`
 - **Prod check:** forged a live session and smoked EVERY authed surface on `ro.roleos.fyi` (feed/goal/
 ### W6 · Persist anon Explore conversation across page loads · 2026-07-03 · branch `v2/w6-anon-explore-convo`

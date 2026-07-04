@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { requireAdmin } from "@/lib/admin";
-import { getAdminStats, getDemandStats, RUNS_WINDOW, type DemandStats } from "@/lib/admin-stats";
+import { getAdminStats, getDemandStats, getOpsSummary, RUNS_WINDOW, type DemandStats } from "@/lib/admin-stats";
 import IngestRunner from "@/components/IngestRunner";
 
 /**
@@ -19,6 +19,7 @@ export default async function AdminDashboard() {
   await requireAdmin();
   const s = await getAdminStats();
   const d = await getDemandStats();
+  const ops = await getOpsSummary();
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-12">
@@ -40,6 +41,20 @@ export default async function AdminDashboard() {
         Every model call is metered in the path. {s.capped ? `Last ${RUNS_WINDOW.toLocaleString()} runs` : `All ${s.totals.runs.toLocaleString()} runs`}
         {s.capped && <span className="text-warn"> (window capped — older runs not shown)</span>}.
       </p>
+
+      {/* Ops (H1) — health + last-24h load; deep logs live in Workers Logs. */}
+      <section className="mt-6" aria-label="Operations">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Tile label="Database" value={ops.dbOk ? "✓ healthy" : "✗ DOWN"} />
+          <Tile label="Runs · 24h" value={String(ops.last24h.runs)} />
+          <Tile label="Spend · 24h" value={usd(ops.last24h.costUsd)} />
+          <Tile label="Gate fails · 24h" value={String(ops.last24h.gateFails)} />
+        </div>
+        <p className="mt-2 text-xs text-tx3">
+          Uptime probe: <code className="rounded bg-surf2 px-1">GET /api/health</code> · request-level logs &amp;
+          errors: Cloudflare dashboard → Workers Logs (structured JSON via lib/log).
+        </p>
+      </section>
 
       {/* Demand — what users are hunting for (drives ingestion) */}
       <DemandView d={d} />
