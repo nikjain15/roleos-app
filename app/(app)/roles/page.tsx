@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import { toVerdict, locationText, mhTexts, type WorkspaceRole } from "@/lib/workspace";
 import RolesWorkspace from "@/components/RolesWorkspace";
+import { adjustFit, loadOutcomeModel, roleFeatures } from "@/lib/outcome-learning";
 
 /**
  * Roles Workspace (Slice 5, Phase A) — the home for Discover + Match. Reads the
@@ -20,7 +21,15 @@ type MatchRow = {
   recommendation: string | null;
   status: string;
   created_at: string;
-  roles: { company: string; role_title: string; url: string | null; location: unknown; must_haves: unknown } | null;
+  roles: {
+    company: string;
+    role_title: string;
+    url: string | null;
+    location: unknown;
+    must_haves: unknown;
+    archetype: string | null;
+    keywords: unknown;
+  } | null;
 };
 
 export default async function RolesPage() {
@@ -32,7 +41,9 @@ export default async function RolesPage() {
 
   const { data: matches } = await supabase
     .from("matches")
-    .select("role_id, fit_score, reasoning, gaps, recommendation, status, created_at, roles(company, role_title, url, location, must_haves)")
+    .select(
+      "role_id, fit_score, reasoning, gaps, recommendation, status, created_at, roles(company, role_title, url, location, must_haves, archetype, keywords)",
+    )
     .limit(500)
     .order("fit_score", { ascending: false })
     .returns<MatchRow[]>();
@@ -40,6 +51,9 @@ export default async function RolesPage() {
   // The user's private per-role notes (P1, RLS-scoped — own rows only).
   const { data: noteRows } = await supabase.from("role_notes").select("role_id, note").limit(1000);
   const notes = new Map((noteRows ?? []).map((n) => [n.role_id as string, n.note as string]));
+
+  // X4: real outcomes nudge displayed fit — bounded ±8, explained, base always shown.
+  const { lifts } = await loadOutcomeModel(supabase);
 
   const rows: WorkspaceRole[] = (matches ?? []).map((m) => {
     const loc = locationText(m.roles?.location);
@@ -61,6 +75,7 @@ export default async function RolesPage() {
       created_at: m.created_at,
       mustHaves: mhTexts(m.roles?.must_haves),
       note: notes.get(m.role_id) ?? null,
+      fitAdjust: adjustFit(m.fit_score, roleFeatures(m.roles), lifts),
     };
   });
 
