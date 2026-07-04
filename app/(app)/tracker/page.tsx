@@ -2,6 +2,8 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import TrackerBoard, { type AppRow, type RoleArtifact, type TrackableRole } from "@/components/TrackerBoard";
+import HuntToggle from "@/components/HuntToggle";
+import type { HuntAmbient } from "@/lib/hunt";
 
 /**
  * Application Tracker (buildplan §3) — the funnel of record. Every role's real
@@ -51,6 +53,10 @@ export default async function Tracker() {
     artifactsByRole.set(a.role_id as string, list);
   }
 
+  // X1: the overnight hunt's user control (paused state lives in profiles.ambient).
+  const { data: prof } = await supabase.from("profiles").select("ambient").eq("id", user.id).single();
+  const huntPaused = Boolean((prof?.ambient as HuntAmbient | null)?.hunt_paused);
+
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
       <div className="flex items-center justify-between">
@@ -65,6 +71,8 @@ export default async function Tracker() {
         Every role you&apos;re pursuing and exactly where it stands. Advancing a stage keeps your
         pace honest — it&apos;s what tells RO if you&apos;re on track.
       </p>
+
+      <HuntToggle initialPaused={huntPaused} />
 
       <div className="mt-8">
         <TrackerBoard apps={apps ?? []} trackable={trackable} artifacts={Object.fromEntries(artifactsByRole)} />
