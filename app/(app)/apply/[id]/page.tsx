@@ -6,12 +6,9 @@ import ApplyPanel from "@/components/ApplyPanel";
 import CoverLetterCard, { type CoverArtifact } from "@/components/CoverLetterCard";
 import ApplyScoreCard, { type AppScore } from "@/components/ApplyScoreCard";
 import BriefCard, { type CompanyBriefView } from "@/components/BriefCard";
-<<<<<<< HEAD
 import { calibrateScores, loadOutcomeModel, type Calibration } from "@/lib/outcome-learning";
-=======
 import WarmPathsCard from "@/components/WarmPathsCard";
 import { warmPaths, CONNECTIONS_CAP, type ConnectionRow } from "@/lib/connections";
->>>>>>> 60b0282 (X6: referral & warm-intro finder (build after PRD, approved sources A+D) — user-owned connections (CSV export + manual, owner RLS, one-click delete), pure company matcher, warm paths on Apply, truth-gated intro_ask artifact with mailto handoff; zero external people calls; migration 0016 (applied))
 
 /**
  * Apply / Send (Slice 4) — the human-gated outward step. RO composes the bundle
