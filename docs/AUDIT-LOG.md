@@ -65,6 +65,55 @@
 
 ## Slice entries (newest first)
 
+### X8 · Voice mock interviews (BUILD, approved option A) · 2026-07-04 · branch `v2/x8-voice-mocks`
+- **Approval honored:** human approved **option A** — browser-native Web Speech API
+  (on-device/browser STT + `speechSynthesis` TTS), **flag-gated, zero new vendors, zero
+  new keys, zero new infra**. Options B/C stay unbuilt. Cost per mock = only the model
+  turns we already meter (~$0.15–0.40). **No audio ever leaves the browser** — only the
+  recognized text goes to the same `/api/coach` endpoint typing uses.
+- **Built:**
+  - **Flag:** `VOICE_MOCKS_ENABLED` (env; unset in prod until the human sets it). The
+    coach page became a thin server shell reading the flag; `CoachClient` renders
+    byte-identical text coach when off. Local `.env.local` has it on for the harness.
+  - **`components/VoiceMode.tsx`** — mic capture with live interim captions
+    (`aria-live`), spoken interviewer turns (cancelled on unmount/toggle-off), and TWO
+    honest degradation paths: constructor missing → plain fallback line; constructor
+    present but service/mic fails at runtime (headless, denied permission) → role=alert
+    explanation. The text box works in every state. Privacy line in the UI: "Your voice
+    never leaves the browser — only the words do."
+  - **`lib/voice-metrics.ts`** (pure) + debrief integration — transcript-grounded
+    delivery notes (filler density with counts, >250-word rambles, thin-answer patterns,
+    words/min only when actually timed, one honest positive when clean). Gains-oriented
+    copy, never shaming; applies to typed answers too.
+  - **`/api/coach` rate limit** (PRD acceptance #4; was missing): 60 calls/h per user via
+    `rate_events` — two long mocks fit, a runaway voice loop can't burn past it.
+- **Audit:** D1 green (tsc, lint 1 pre-existing warning, depcruise 0 violations). D2/D3
+  green — +8 vitest (filler word-boundaries, wpm edges incl. untimed/too-short, empty
+  transcript → no fabrication, ramble/thin thresholds, ≥2-timed-answers pace rule,
+  no-shaming copy sweep) + 2 live E2E (model-free: 401 + seeded 429 before model spend;
+  **model-gated FULL flow VERIFIED live**: flag shows the toggle → voice affordances +
+  privacy note → runtime degradation honest → text loop still works with voice on →
+  debrief renders transcript-grounded delivery notes). D4 green (opennextjs). D5/D7 green
+  — captions are first-class (live `aria-live` interim + persistent transcript), controls
+  are buttons with `aria-pressed`, coach page already in responsive sweeps. D6 green —
+  no new routes; coach gains the missing rate limit; no egress; flag default-off. D8
+  green — **NO migration**. D9 green — no new queries; every model call already metered.
+  D10 green — invariants untouched; the mock loop's brain didn't change, only its
+  transport.
+- **Test-count ratchet (vs main, this branch):** vitest 209→218 (+8 X8, +1 cherry-picked
+  CSP pin) · live E2E 99→101 by `--list` · public 33→33 · scenarios +4 (voice unavailable
+  degradation · runtime speech-service failure · coach 429 · voice-mode full-loop persona).
+- **Go-live note (human):** to enable in prod set `VOICE_MOCKS_ENABLED=1`
+  (`npx wrangler secret put VOICE_MOCKS_ENABLED` or a plain var) and redeploy — flag-off
+  prod behavior is byte-identical until then.
+- **Deferrals:** option C (Workers AI Whisper/TTS upgrade) awaits demand; voice pace from
+  audio timing beyond recognition windows; Safari-specific tuning (works via
+  webkitSpeechRecognition; not E2E-covered — Playwright WebKit lacks the API).
+- **Learnings:** headless Chromium EXPOSES `webkitSpeechRecognition` but its service
+  fails at runtime — feature-detecting the constructor is NOT enough; ship a runtime
+  onerror path with honest copy (and that's the branch E2E can actually verify).
+  `getByText("Debrief")` collides with busy copy + button text — use `{ exact: true }`.
+
 ### X6 · Referral & warm-intro finder (BUILD, approved A+D) · 2026-07-04 · branch `v2/x6-referral-finder`
 - **Approval honored:** human approved sources **A** (the user's own LinkedIn connections
   export — LinkedIn's own "Get a copy of your data", we never touch LinkedIn) + **D**
