@@ -2,7 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import type { DockAct } from "@/lib/dock-acts";
 
 /**
  * RO-everywhere dock (Slice 7) — a floating ask/act layer on every authenticated
@@ -17,11 +18,14 @@ type Action = { label: string; href: string };
 
 export default function RoDock() {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = useState(false);
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
   const [answer, setAnswer] = useState<string | null>(null);
   const [action, setAction] = useState<Action | null>(null);
+  const [act, setAct] = useState<DockAct | null>(null);
+  const [acting, setActing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -46,22 +50,53 @@ export default function RoDock() {
     setError(null);
     setAnswer(null);
     setAction(null);
+    setAct(null);
     try {
       const res = await fetch("/api/ro/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: text, screen: pathname }),
       });
-      const data = (await res.json()) as { answer?: string; action?: Action | null; error?: string };
+      const data = (await res.json()) as {
+        answer?: string;
+        action?: Action | null;
+        act?: DockAct | null;
+        error?: string;
+      };
       if (!res.ok) setError(data.error ?? "RO couldn't answer that one.");
       else {
         setAnswer(data.answer ?? "");
         setAction(data.action ?? null);
+        setAct(data.act ?? null);
       }
     } catch {
       setError("Network hiccup — try again.");
     } finally {
       setBusy(false);
+    }
+  }
+
+  async function runTailor() {
+    if (act?.kind !== "tailor" || acting) return;
+    setActing(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/tailor", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ roleId: act.roleId }),
+      });
+      const j = (await res.json()) as { artifactId?: string; error?: string };
+      if (res.ok && j.artifactId) {
+        setOpen(false);
+        router.push(`/studio/resume/${j.artifactId}`);
+      } else {
+        setError(j.error ?? "Couldn't tailor that one — try again.");
+      }
+    } catch {
+      setError("Network hiccup — try again.");
+    } finally {
+      setActing(false);
     }
   }
 
@@ -113,6 +148,25 @@ export default function RoDock() {
                   >
                     {action.label} →
                   </Link>
+                )}
+                {/* W3 act-verbs — proposals only; each runs on YOUR click. */}
+                {act?.kind === "filter" && (
+                  <Link
+                    href={act.href}
+                    onClick={() => setOpen(false)}
+                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-info px-3 text-xs font-medium text-white"
+                  >
+                    {act.label} →
+                  </Link>
+                )}
+                {act?.kind === "tailor" && (
+                  <button
+                    onClick={runTailor}
+                    disabled={acting}
+                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-info px-3 text-xs font-medium text-white disabled:opacity-60"
+                  >
+                    {acting ? "Tailoring…" : `${act.label} →`}
+                  </button>
                 )}
               </div>
             )}

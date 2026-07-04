@@ -7,6 +7,7 @@ import { runSkill } from "@/agent/skills/run";
 import roAsk from "@/agent/skills/ro_ask";
 import { logAgentRuns } from "@/lib/agent-runs";
 import { parseModelJson } from "@/lib/json";
+import { validateAct, type RawAct } from "@/lib/dock-acts";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -41,16 +42,32 @@ export async function POST(req: Request): Promise<Response> {
   // Gather the user's real state (RLS-scoped) — the only grounding for the answer.
   const { goal, plan } = await loadActiveGoal(supabase);
   const [matchAgg, appAgg, readyAgg] = await Promise.all([
-    supabase.from("matches").select("recommendation, status").limit(1000),
+    supabase.from("matches").select("role_id, recommendation, status, fit_score, roles(company, role_title)").limit(1000),
     supabase.from("applications").select("stage").limit(1000),
     supabase.from("artifacts").select("id", { count: "exact", head: true }).eq("status", "approved"),
   ]);
 
-  const matches = matchAgg.data ?? [];
+  type MatchRow = {
+    role_id: string;
+    recommendation: string | null;
+    status: string;
+    fit_score: number | null;
+    roles: { company: string; role_title: string } | null;
+  };
+  const matches = (matchAgg.data ?? []) as unknown as MatchRow[];
   const apps = appAgg.data ?? [];
   const stageCount = (s: string) => apps.filter((a) => a.stage === s).length;
 
+  // The user's own top pursue candidates — the ONLY roles a tailor act may name
+  // (W3: a model-proposed roleId outside this set is dropped by validateAct).
+  const topPursue = matches
+    .filter((m) => m.recommendation === "pursue" && m.status !== "dismissed" && m.roles)
+    .sort((a, b) => (b.fit_score ?? -1) - (a.fit_score ?? -1))
+    .slice(0, 5)
+    .map((m) => ({ id: m.role_id, company: m.roles!.company, title: m.roles!.role_title }));
+
   const state = {
+    top_pursue: topPursue,
     goal: goal
       ? {
           target: goal.target?.archetype ?? null,
@@ -77,17 +94,23 @@ export async function POST(req: Request): Promise<Response> {
     });
     await logAgentRuns(user.id, verdict.runs, { skill: roAsk.id });
 
-    const out = parseModelJson<{ answer?: string; action?: { label?: string; href?: string } | null }>(
-      verdict.finalOutput,
-    );
+    const out = parseModelJson<{
+      answer?: string;
+      action?: { label?: string; href?: string } | null;
+      act?: RawAct | null;
+    }>(verdict.finalOutput);
     const answer = out?.answer ?? verdict.finalOutput;
     // Whitelist the suggested action href (defense-in-depth: never a foreign link).
     const action =
       out?.action && out.action.href && ALLOWED_HREFS.has(out.action.href) && out.action.label
         ? { label: String(out.action.label).slice(0, 40), href: out.action.href }
         : null;
+    // W3 act-verbs: validate everything the model proposed. A tailor act may only
+    // name one of the user's OWN top-pursue roles; filter params are sanitized to
+    // a whitelisted /roles?… href. Executing either still takes a USER click.
+    const act = validateAct(out?.act, topPursue);
 
-    return NextResponse.json({ answer, action, grounded: verdict.status });
+    return NextResponse.json({ answer, action: act ? null : action, act, grounded: verdict.status });
   } catch {
     return NextResponse.json({ error: "RO couldn't answer that one — try again." }, { status: 500 });
   }
