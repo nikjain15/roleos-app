@@ -37,8 +37,9 @@ const RECALL_PER_QUERY = 18; // neighbours pulled per facet before union
 const SHORTLIST = 10; // roles sent to the rich reasoner
 
 /** Build the recall queries: the raw profile (anchor) + function-forward facets. */
-async function buildQueries(profileText: string): Promise<string[]> {
-  const queries = [profileText];
+async function buildQueries(profileText: string, extraQueries: string[] = []): Promise<string[]> {
+  // W7: goal-derived extras (target phrase + "also open to") widen recall.
+  const queries = [profileText, ...extraQueries.filter((q) => typeof q === "string" && q.trim().length > 2)];
   try {
     const res = await runSkill(searchFacetsSkill, { userId: "anon", data: { profile: profileText } });
     const facets = parseModelJson<string[]>(res.verdict.finalOutput);
@@ -85,8 +86,9 @@ async function shortlist(profileText: string, candidates: CandidateRole[]): Prom
 export async function matchProfile(
   profileText: string,
   count = 8,
+  extraQueries: string[] = [],
 ): Promise<{ matches: MatchedRole[]; scanned: number; gatePassed: boolean }> {
-  const queries = await buildQueries(profileText);
+  const queries = await buildQueries(profileText, extraQueries);
   const { candidates, poolSize } = await recallRolesMulti(queries, RECALL_TOTAL, RECALL_PER_QUERY);
   if (candidates.length === 0) return { matches: [], scanned: poolSize, gatePassed: true };
 

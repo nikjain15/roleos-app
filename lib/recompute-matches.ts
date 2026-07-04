@@ -1,5 +1,6 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { matchProfile } from "@/lib/run-match";
+import { goalQueryTexts, type GoalRow } from "@/lib/goal";
 
 /**
  * Recompute a user's matches from their saved profile and persist them.
@@ -29,7 +30,16 @@ export async function recomputeMatchesForUser(
   const raw = (mp.data as { raw?: string } | null)?.raw;
   if (!raw || raw.trim().length < 30) throw new Error("master_profile has no usable raw text");
 
-  const { matches, scanned } = await matchProfile(raw, 8);
+  // W7: the active goal widens recall — target phrase + "also open to" become
+  // extra recall queries, so switching goals genuinely re-aims sourcing.
+  const { data: activeGoal } = await db
+    .from("goals")
+    .select("target, also_open_to")
+    .eq("user_id", userId)
+    .eq("status", "active")
+    .maybeSingle<Pick<GoalRow, "target" | "also_open_to">>();
+
+  const { matches, scanned } = await matchProfile(raw, 8, goalQueryTexts(activeGoal));
   if (!matches.length) return { saved: 0, pursue: 0, scanned };
 
   // Clear stale auto-matches (untouched ones only), then write the fresh set.

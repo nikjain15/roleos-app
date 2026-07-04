@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import { loadActiveGoal } from "@/lib/goal";
 import GoalSetter from "@/components/GoalSetter";
+import GoalSwitcher, { type AltGoal } from "@/components/GoalSwitcher";
 
 /**
  * Goal Setter page (goal-engine.md §1) — the spine's entry point. Prefills the
@@ -20,6 +21,24 @@ export default async function GoalPage() {
 
   const { goal, plan } = await loadActiveGoal(supabase);
   const initial = goal ? { ...goal, plan } : null;
+
+  // W7: the user's alternate goals (paused/achieved; archived stay listed 10-max
+  // so they can be re-activated). RLS-scoped.
+  const { data: others } = await supabase
+    .from("goals")
+    .select("id, target, deadline_date, status")
+    .neq("status", "active")
+    .order("updated_at", { ascending: false })
+    .limit(10);
+  const alternates: AltGoal[] = (others ?? []).map((g) => {
+    const t = (g.target ?? {}) as { seniority?: string; archetype?: string };
+    return {
+      id: g.id as string,
+      label: [t.seniority, t.archetype].filter(Boolean).join(" ") || "Untitled goal",
+      status: g.status as string,
+      deadline: (g.deadline_date as string | null) ?? null,
+    };
+  });
 
   return (
     <main className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
@@ -42,6 +61,7 @@ export default async function GoalPage() {
       <div className="mt-8">
         <GoalSetter initial={initial} />
       </div>
+      <GoalSwitcher alternates={alternates} />
     </main>
   );
 }

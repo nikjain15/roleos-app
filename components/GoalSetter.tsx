@@ -30,6 +30,7 @@ export default function GoalSetter({ initial }: { initial: GoalRow | null }) {
     (initial?.also_open_to?.text as string | undefined) ?? "",
   );
 
+  const [saveAsNew, setSaveAsNew] = useState(false); // W7 multi-goal-lite
   const [plan, setPlan] = useState<Plan | null>(initial?.plan ?? null);
   const [saving, setSaving] = useState(false);
   const [err, setErr] = useState<string | null>(null);
@@ -58,11 +59,14 @@ export default function GoalSetter({ initial }: { initial: GoalRow | null }) {
             apps_per_week_ceiling: appsCeiling ? Number(appsCeiling) : undefined,
           },
           also_open_to: alsoOpenTo.trim() ? { text: alsoOpenTo.trim() } : null,
+          save_as_new: saveAsNew || undefined,
         }),
       });
       const j = (await res.json()) as { ok?: boolean; plan?: Plan; error?: string };
       if (res.ok && j.plan) {
         setPlan(j.plan);
+        setSaveAsNew(false);
+        router.refresh(); // keep the alternates list (W7) in sync
       } else {
         setErr(j.error ?? "Couldn't save the goal.");
       }
@@ -121,6 +125,13 @@ export default function GoalSetter({ initial }: { initial: GoalRow | null }) {
         <Field label="Also open to" hint="Widens sourcing, no separate plan">
           <input className={inputCls} value={alsoOpenTo} onChange={(e) => setAlsoOpenTo(e.target.value)} placeholder="BizOps, Chief of Staff" />
         </Field>
+
+        {initial && (
+          <label className="flex items-center gap-1.5 text-sm text-tx2">
+            <input type="checkbox" checked={saveAsNew} onChange={(e) => setSaveAsNew(e.target.checked)} />
+            Save as a new goal — keep my current one as an alternate
+          </label>
+        )}
 
         {err && <p className="text-sm text-dng">{err}</p>}
         <button
