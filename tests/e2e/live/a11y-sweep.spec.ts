@@ -24,7 +24,7 @@ test.describe("authed a11y + responsive sweep (375px)", () => {
     await page.setViewportSize({ width: 375, height: 812 });
 
     const screens = [
-      "/feed", "/goal", "/roles", "/tracker", "/settings", "/watch",
+      "/feed", "/goal", "/roles", "/tracker", "/settings", "/watch", "/review",
       `/studio/resume/${art}`, `/apply/${art}`,
     ];
 
