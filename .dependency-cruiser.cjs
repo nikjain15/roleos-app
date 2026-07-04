@@ -24,6 +24,7 @@ module.exports = {
           "node:net",
           "node:http$",
           "node:https$",
+          "^lib/email",
         ],
       },
     },
