@@ -8,9 +8,33 @@ import { logAgentRuns } from "@/lib/agent-runs";
 import coachPrep from "@/agent/skills/coach_prep";
 import mockInterview from "@/agent/skills/mock_interview";
 import debrief from "@/agent/skills/debrief";
+import { supabaseService } from "@/lib/supabase/service";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 90;
+
+// X8: every coach action is a model call — budget the hour per user. 60 turns
+// comfortably covers two long mocks; a runaway voice loop can't burn past it.
+const COACH_CALLS_PER_HOUR = 60;
+
+async function underLimit(userId: string): Promise<boolean> {
+  try {
+    const db = supabaseService();
+    const since = new Date(Date.now() - 3600_000).toISOString();
+    const { count, error } = await db
+      .from("rate_events")
+      .select("*", { count: "exact", head: true })
+      .eq("scope", "coach")
+      .eq("subject", userId)
+      .gte("created_at", since);
+    if (error) throw error;
+    if ((count ?? 0) >= COACH_CALLS_PER_HOUR) return false;
+    await db.from("rate_events").insert({ scope: "coach", subject: userId });
+    return true;
+  } catch {
+    return true; // fail-open: an outage never blocks practice
+  }
+}
 
 /**
  * Gate 4 — interview coach orchestration (journey.html §7). Coach mode: no
@@ -40,6 +64,13 @@ export async function POST(req: Request): Promise<Response> {
   const body: Record<string, unknown> = parsed.data;
   const action = parsed.data.action;
   const uid = user.id;
+
+  if (!(await underLimit(uid))) {
+    return NextResponse.json(
+      { error: "You've practiced hard this hour — take a breath; the coach resets soon." },
+      { status: 429 },
+    );
+  }
 
   const profileRaw = async () =>
     ((await supabase.from("master_profile").select("data").eq("user_id", uid).single()).data?.data as {

@@ -28,6 +28,9 @@ export interface RoleOSEnv {
   NEXT_PUBLIC_SUPABASE_ANON_KEY: string;
   // Shared secret the cron worker presents to /api/cron/* (digest scheduler).
   CRON_SECRET?: string;
+  // X8 (option A): voice mock interviews — browser-native STT/TTS behind this
+  // flag. Unset = text coach only, byte-identical. "1" enables the toggle.
+  VOICE_MOCKS_ENABLED?: string;
   // Google OAuth client (Gate 2) — used server-side to refresh Gmail/Calendar tokens.
   GOOGLE_OAUTH_CLIENT_ID?: string;
   GOOGLE_OAUTH_CLIENT_SECRET?: string;

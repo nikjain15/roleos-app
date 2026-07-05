@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { calibrationLine, type Calibration } from "@/lib/outcome-learning";
 
 /**
  * X3 — pre-send quality score on the Apply page. The user clicks to score
@@ -24,7 +25,16 @@ const LIKELIHOOD_STYLE: Record<string, string> = {
   low: "bg-warn-bg text-warn",
 };
 
-export default function ApplyScoreCard({ artifactId, initial }: { artifactId: string; initial: AppScore | null }) {
+export default function ApplyScoreCard({
+  artifactId,
+  initial,
+  calibration = {},
+}: {
+  artifactId: string;
+  initial: AppScore | null;
+  /** X4: how the user's past scores actually converted (server-computed, own rows). */
+  calibration?: Calibration;
+}) {
   const router = useRouter();
   const [score, setScore] = useState<AppScore | null>(initial);
   const [busy, setBusy] = useState(false);
@@ -80,6 +90,10 @@ export default function ApplyScoreCard({ artifactId, initial }: { artifactId: st
               {score.screen_likelihood} screen likelihood
             </span>
           </p>
+          {/* X4 calibration read-back — only when there's real history; n always shown. */}
+          {calibrationLine(calibration, score.screen_likelihood) && (
+            <p className="mt-1.5 text-xs text-tx3">{calibrationLine(calibration, score.screen_likelihood)}</p>
+          )}
           {score.note && <p className="mt-2 text-[13px] text-tx2">{score.note}</p>}
 
           {score.strengths.length > 0 && (

@@ -1,5 +1,6 @@
 import { test as base, type BrowserContext } from "@playwright/test";
 import { createUser, hasSecrets, type SeededUser } from "./seed";
+import { expectedOtpDelayMs } from "./otp-budget";
 
 /**
  * Live-suite fixtures. `newUser` creates a throwaway seeded user and auto-cleans it
@@ -8,9 +9,13 @@ import { createUser, hasSecrets, type SeededUser } from "./seed";
  * every spec guards on `hasSecrets`.
  */
 export const test = base.extend<{ newUser: (tag?: string) => Promise<SeededUser> }>({
-  newUser: async ({}, use) => {
+  newUser: async ({}, use, testInfo) => {
     const created: SeededUser[] = [];
     await use(async (tag) => {
+      // T2: a paced OTP-budget wait must not read as a test hang — stretch
+      // THIS test's timeout by the wait we're about to take (+ retry margin).
+      const wait = expectedOtpDelayMs();
+      if (wait > 0) testInfo.setTimeout(testInfo.timeout + wait + 30_000);
       const u = await createUser(tag);
       created.push(u);
       return u;

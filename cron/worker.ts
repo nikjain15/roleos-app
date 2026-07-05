@@ -38,8 +38,17 @@ async function fireDaily(env: Env) {
   return Promise.all([hit(env, "/api/cron/yc-sync")]);
 }
 
-// The daily cron expression (must match the "daily" entry in wrangler.jsonc).
+// Nightly (X1): the overnight autonomous hunt — re-match each eligible user,
+// pre-draft truth-gated résumés for their top fresh pursues, queue them in the
+// Tracker "Ready" lane. Server-side: ≤1 hunt per user per 20h, tight caps,
+// stands down over cost budget. Drafts only — sending stays a human click.
+async function fireNightly(env: Env) {
+  return Promise.all([hit(env, "/api/cron/hunt")]);
+}
+
+// Cron expressions (must match the "triggers" entries in wrangler.jsonc).
 const DAILY_CRON = "0 6 * * *";
+const NIGHTLY_CRON = "30 2 * * *";
 
 export default {
   // Cloudflare cron trigger. Branch on which schedule fired (event.cron).
@@ -48,10 +57,16 @@ export default {
     env: Env,
     ctx: { waitUntil(p: Promise<unknown>): void },
   ) {
-    ctx.waitUntil(event.cron === DAILY_CRON ? fireDaily(env) : fireHourly(env));
+    ctx.waitUntil(
+      event.cron === DAILY_CRON
+        ? fireDaily(env)
+        : event.cron === NIGHTLY_CRON
+          ? fireNightly(env)
+          : fireHourly(env),
+    );
   },
 
-  // Manual trigger for testing: GET /?secret=...[&only=ingest|digests|yc-sync]
+  // Manual trigger for testing: GET /?secret=...[&only=ingest|digests|nudges|yc-sync|hunt]
   async fetch(req: Request, env: Env): Promise<Response> {
     const u = new URL(req.url);
     if (u.searchParams.get("secret") !== env.CRON_SECRET) {
@@ -67,7 +82,9 @@ export default {
             ? [await hit(env, "/api/cron/nudges")]
             : only === "yc-sync"
               ? [await hit(env, "/api/cron/yc-sync")]
-              : await fireHourly(env);
+              : only === "hunt"
+                ? [await hit(env, "/api/cron/hunt")]
+                : await fireHourly(env);
     return new Response(JSON.stringify(r), { headers: { "content-type": "application/json" } });
   },
 };
