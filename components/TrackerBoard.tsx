@@ -159,6 +159,15 @@ export default function TrackerBoard({
                             </span>
                           ),
                         )}
+                        {/* X11: a quiet, opt-in reflection on a rejection — data, not a verdict. */}
+                        {a.stage === "rejected" && (
+                          <Link
+                            href={`/reflect/${a.id}`}
+                            className="rounded bg-surf2 px-1.5 py-0.5 text-tx2 underline-offset-2 hover:underline"
+                          >
+                            Reflect · 2 min →
+                          </Link>
+                        )}
                       </div>
                     </div>
                     <label className="flex items-center gap-1.5 text-xs text-tx3">
