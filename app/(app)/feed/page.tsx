@@ -67,6 +67,11 @@ export default async function Feed() {
     .select("id", { count: "exact", head: true })
     .eq("status", "approved");
   const sentThisWeek = plan ? await appsThisWeek(supabase) : 0;
+  // X10: the overnight queue's size — a non-empty queue leads the feed.
+  const { count: queueCount } = await supabase
+    .from("applications")
+    .select("id", { count: "exact", head: true })
+    .eq("stage", "ready");
   const agenda = plan
     ? computeAgenda({
         plan,
@@ -91,6 +96,24 @@ export default async function Feed() {
 
       {/* Proactive, wellbeing-gated pace nudge (only when off-pace) */}
       <PaceNudgeCard />
+
+      {/* X10: the overnight queue — real work waiting on real judgment. */}
+      {(queueCount ?? 0) > 0 && (
+        <section className="mt-6 rounded-xl border border-info bg-info-bg p-4">
+          <p className="text-[15px] font-medium text-info-tx">
+            Your overnight queue: {queueCount} ready for review.
+          </p>
+          <p className="mt-1 text-sm text-tx2">
+            Drafted and truth-checked while you were away — one decision at a time, sends stay yours.
+          </p>
+          <Link
+            href="/ready-room"
+            className="mt-3 inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white"
+          >
+            Open the ready-room →
+          </Link>
+        </section>
+      )}
 
       {/* The spine: goal status + Today agenda (or a set-your-goal CTA) */}
       <GoalCockpit plan={plan} agenda={agenda} />

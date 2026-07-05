@@ -65,6 +65,48 @@
 
 ## Slice entries (newest first)
 
+### X10 · Ready-room — the morning ritual for the overnight queue · 2026-07-05 · branch `v2/x10-ready-room`
+- **PRD-first** (`docs/specs/x10-ready-room.md`; round 3, approved via PR #42). X1 fills
+  Tracker "Ready" while the user sleeps; X10 drains it: ONE screen, FIFO (oldest first —
+  no cherry-picking anxiety), one honest decision per card. **No new send path, no batch
+  send, no auto-approve** — approve hands off to the existing human-gated Apply page,
+  per item; a "send all" button would gut the truth gate's point, so it doesn't exist.
+- **Built (zero model calls, zero migrations):**
+  - **`lib/ready-room.ts`** (pure): `assembleQueue` — `ready`-stage apps (+ `drafting`
+    ONLY when the artifact is the hunt's flagged output; manual drafts stay in the
+    studio), newest linked résumé wins, `sent` excluded, truth flags surfaced, and the
+    key invariant in data: **`approvable` = clean draft only** — a flagged card offers
+    NO one-click approve, its only forward path is the editor.
+  - **`/ready-room`** (server page, bounded RLS reads) + **`ReadyRoomClient`** — card
+    stack with fit + X3 score + "why" + résumé opening; actions reuse EXISTING routes
+    (artifact decision / applications PATCH) then route to `/apply/[id]` or the editor;
+    keyboard-first (A/E/S, never captures typing), `aria-live` progress ("2 of 5 ·
+    oldest first"), no countdowns; skip → `withdrawn` with the match + draft preserved
+    and honest copy saying so; empty queue explains what tonight's hunt will do.
+  - **Entries:** feed card when the queue is non-empty ("Your overnight queue: N ready");
+    tracker header link.
+- **Audit:** D1 green (tsc, lint, depcruise). D2/D3 green — +6 vitest (FIFO regardless of
+  input order; flagged-not-approvable + flags surfaced; approved→straight-to-apply +
+  sent excluded; hunt-only drafting rows; quiet exclusion of unreviewable rows; bullet
+  caps + null-content tolerance) + 5 live E2E (honest empty state; card render + FIFO
+  position; **flagged draft renders flags and offers no approve**; **full flow: keyboard S
+  skips → DB shows `withdrawn` → approve → artifact `approved` in DB → lands on the real
+  Apply page**; **cross-user RLS probe**). D4 green (opennextjs). D5/D7 green —
+  `/ready-room` added to the 375px+axe sweep; keyboard-first is the feature. D6 green —
+  no new routes, RLS-scoped reads, zod untouched (reused validated routes). D8 green —
+  NO migration (additive `artifactIds` param on the test seeder only). D9 green — three
+  bounded reads per render. D10 green — human-gated-outward strengthened, not just
+  preserved: the room makes the human gate FASTER, never thinner.
+- **Test-count ratchet (vs merged main):** vitest 263→269 (+6) · live E2E 124→129 by
+  `--list` (+5) · public 33→33 · scenarios +5 (empty-queue honesty · FIFO review ·
+  flagged-approval block · skip-withdrawal semantics · queue RLS isolation).
+- **Deferrals:** X1's notification deep-link text to /ready-room (notification copy lives
+  in X1's `huntSummary`; small follow-up); cover-letter surfacing on the card (Apply
+  already shows it post-handoff); re-queue affordance from the tracker for skipped rows.
+- **Learnings:** RSC serializes ALL client-component props into the HTML payload — a
+  request-level "not visible" assertion is meaningless for stacked UIs; assert visibility
+  in a browser context and keep request-level checks to what the server RENDERS.
+
 ### Prod-smoke expansion (coverage) · 2026-07-04 · branch `chore/prod-smoke-expansion`
 - **Why:** the prod health check (`prod.spec.ts`) predates the X-era merges — `/offers`,
   `/review`, `/api/comp-benchmark`, `/api/health` and the cron secret-gates were live in
