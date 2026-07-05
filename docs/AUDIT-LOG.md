@@ -65,6 +65,53 @@
 
 ## Slice entries (newest first)
 
+### X11 · Rejection → growth loop · 2026-07-05 · branch `v2/x11-rejection-growth`
+- **PRD-first** (`docs/specs/x11-rejection-growth.md`; approved via PR #55). A rejection was a
+  dead end — nothing learned, morale hit. X11 turns it into a calm, **opt-in** two-minute
+  reflection: what the funnel data actually says, one concrete adjustment, and a structured
+  reason captured to sharpen the outcome model. **Offered, never forced; no streak, no metric,
+  one-click exit.**
+- **Built — ZERO model calls, by design (a rejection is exactly the moment not to risk an
+  invented "silver lining"), NO migration:**
+  - **`lib/rejection-growth.ts`** (pure, deterministic): `buildReflection({features, lifts,
+    score})` → `{acknowledgment, dataPoints[], oneAdjustment, reasonOptions}`. Every line
+    traces to a real X4 lift (`learnLifts`), a real X3 `app_score`, or the stated base rate —
+    nothing fabricated. The adjustment is exactly one lever chosen by a ranked rule set
+    (weak-fixable feature → **résumé**; a stronger converting feature elsewhere → **targeting**;
+    healthy quality / high-fit near miss → **pace**), with a **safe floor**: zero evidence →
+    an honest base-rate reflection + steady-pace nudge, never a false trend.
+  - **`POST /api/reflection`**: zod-validated, owner + `rejected`-only; writes the reason as an
+    append-only **`reflection`-kind** decision-event using the **allowed `correct` action** (the
+    `action` check constraint has no `reflection` value — reusing `correct` avoids a migration,
+    honoring the append-only substrate's "corrections are new rows, never edits" rule). An
+    idempotency guard skips a duplicate insert when the latest reflection already holds the same
+    answer. Records only — no stage change, no other row, nothing sent.
+  - **`/reflect/[id]`** (server page, RLS-scoped) + **`ReflectionClient`**: the grounded
+    reflection + an optional reason picker (six buckets) with a free note; skip is one click;
+    save → warm ack, no nag. Non-owner/non-rejected → redirect to `/tracker`.
+  - **Entry:** a quiet "Reflect · 2 min →" link on rejected cards in the tracker's Closed lane
+    (link only — no auto-open, most respectful of the moment).
+- **Audit:** D1 green (tsc, lint, import-invariant). D2/D3 green — **+8 vitest** (data points
+  match real lifts; each adjustment branch incl. the résumé/targeting/pace split; high vs low
+  score calibration copy; the **no-evidence safe floor never fabricates a rate**; fixed reason
+  set; never-empty structure) + **5 live E2E** (rejected app renders reflection+picker not a
+  verdict; non-rejected → redirect; **submit writes exactly one `reflection` event, changes no
+  stage, sends nothing + append-only idempotency**; **cross-user RLS 404, no event written**;
+  API 401). D6 green — RLS-scoped, zod-validated, no new stage writer. D8 green — **NO migration**
+  (reason rides `decision_events`; `correct` action). D10 green — human-gated-outward untouched:
+  X11 reflects and records, it acts on nothing and sends nothing; wellbeing-first (data-not-
+  verdict, effort acknowledged, one-click exit, no engagement mechanics).
+- **Test-count ratchet (vs merged main):** vitest 279→287 (+8) · live E2E 133→138 by `--list`
+  (+5) · public 33→33.
+- **Deferrals (called out, not silently cut):** feeding the captured `reason` back into
+  `learnLifts` weighting (recorded + model-visible today; consuming it as a feature is a
+  follow-up); a cross-rejection "what your rejections are telling you" aggregate (belongs with
+  the X7 weekly review — this slice is per-event); warmer *generated* prose (intentionally out —
+  zero-model is the wellbeing choice); user-deletable reflections (retention kept simple for now).
+- **Defaults chosen for the PRD's 3 open questions (easy to flip):** six-option reason taxonomy
+  as specified; the reflect entry is **link-only** (no auto-open); reflections retained as model
+  signal (no delete path yet).
+
 ### X9 · Reply desk — scheduling + follow-up autopilot (drafts only) · 2026-07-05 · branch `v2/x9-reply-desk`
 - **PRD-first** (`docs/specs/x9-reply-desk.md`; approved via PR #53). The funnel's biggest
   silent drop is *after* a recruiter replies — slow scheduling and missed follow-ups kill
