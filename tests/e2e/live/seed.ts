@@ -217,13 +217,18 @@ export async function seedApplication(
   artifactIds?: string[],
 ) {
   const now = new Date().toISOString();
-  await db.from("applications").insert({
-    user_id: userId,
-    role_id: roleId,
-    goal_id: goalId,
-    stage,
-    stage_history: [{ stage, at: now }],
-    artifact_ids: artifactIds ?? null,
-    sent_at: stage === "applied" ? now : null,
-  });
+  const { data } = await db
+    .from("applications")
+    .insert({
+      user_id: userId,
+      role_id: roleId,
+      goal_id: goalId,
+      stage,
+      stage_history: [{ stage, at: now }],
+      artifact_ids: artifactIds ?? null,
+      sent_at: stage === "applied" ? now : null,
+    })
+    .select("id")
+    .single<{ id: string }>();
+  return data?.id ?? "";
 }
