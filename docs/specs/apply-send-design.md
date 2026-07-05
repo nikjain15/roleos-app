@@ -83,7 +83,28 @@ choice (next application / done for today), pace-aware.
    truth-gate path both directions; email variant. Invariant suites stay green
    (no-send-tool, apply-only path).
 
-## 6 · Non-goals
+## 6 · CORE addendum — the quality read, in depth (human-approved 2026-07-05)
+
+Deepens §3's advisory per the amended feature order. Proto: https://roleos.fyi/proto/apply-send/score.html
+· decisions v0.2. Four commitments:
+1. **Score + three named ingredients** (human combo): the number for a glance; beneath it
+   Evidence match / One story / Hygiene, each in WORDS (strong/almost/thin/clean — never
+   decimals). The user always sees which lever to pull.
+2. **Layered explanation** (human combo): the weakest ingredient's one-line reason is always
+   visible on its row; the full because-therefore + drafted one-tap fix behind "the full
+   why". Concise/detailed toggle applies.
+3. **Craftsman's pause + the firm word, ONCE** (human combo): default register = warm
+   hold-it-a-day; a genuinely weak bundle at a company the user marked as mattering gets ONE
+   firmer sentence ("I really would hold this one") — never repeated, never colder, never
+   blocking (the J6 rule stands).
+4. **Receipts once honest**: the read shows its track record from the user's OWN outcomes
+   when N is honest (~10–12 sends) — wins and misses alike; before that, explicitly labeled
+   benchmark-based. Accountability per the J8 wrong-answer rule.
+Acceptance additions: ingredient mapper unit-tested; firm-word fires at most once per
+bundle (state-tested); receipts switch benchmark→personal at the N threshold (tested);
+X3's scorer refactored to emit the three ingredients (extend, don't rebuild).
+
+## 7 · Non-goals
 
 Automating the final ATS submission (rejected on principle + ToS) · tracker views beyond
 the auto-advance (Tracker design, next) · recruiter reply drafting UX (Gate 2 exists;
