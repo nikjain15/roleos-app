@@ -22,12 +22,32 @@ test.describe("prod: authed surfaces are healthy", () => {
 
     const surfaces = [
       "/feed", "/goal", "/roles", "/tracker", "/settings", "/watch",
+      // X-era surfaces (merged + live): offer co-pilot, weekly review.
+      "/offers", "/review",
       `/studio/resume/${art}`, `/apply/${art}`, "/api/nudge", "/api/taste",
+      // X5's benchmark read (authed GET; unknown archetype must still be non-5xx).
+      "/api/comp-benchmark",
     ];
     const H = { headers: { cookie: u.cookie }, maxRedirects: 0 };
     for (const s of surfaces) {
       const res = await request.get(s, H);
       expect(res.status(), `prod ${s}`).toBeLessThan(500);
+    }
+  });
+
+  test("H1 health endpoint answers 200 with a real body", async ({ request }) => {
+    const res = await request.get("/api/health");
+    expect(res.status()).toBe(200);
+    const j = (await res.json()) as { ok?: boolean; status?: string };
+    expect(j.ok ?? j.status !== undefined).toBeTruthy();
+  });
+
+  test("cron endpoints are secret-gated in prod (403 to strangers)", async ({ request }) => {
+    // The ambient scheduler's work routes must never be publicly triggerable —
+    // this is the live check that the CRON_SECRET gate actually deployed.
+    for (const path of ["/api/cron/digests", "/api/cron/nudges", "/api/cron/ingest", "/api/cron/yc-sync"]) {
+      const res = await request.post(path, { headers: { "x-cron-secret": "not-the-secret" } });
+      expect(res.status(), `prod ${path}`).toBe(403);
     }
   });
 });

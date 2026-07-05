@@ -6,6 +6,9 @@ import ApplyPanel from "@/components/ApplyPanel";
 import CoverLetterCard, { type CoverArtifact } from "@/components/CoverLetterCard";
 import ApplyScoreCard, { type AppScore } from "@/components/ApplyScoreCard";
 import BriefCard, { type CompanyBriefView } from "@/components/BriefCard";
+import { calibrateScores, loadOutcomeModel, type Calibration } from "@/lib/outcome-learning";
+import WarmPathsCard from "@/components/WarmPathsCard";
+import { warmPaths, CONNECTIONS_CAP, type ConnectionRow } from "@/lib/connections";
 
 /**
  * Apply / Send (Slice 4) — the human-gated outward step. RO composes the bundle
@@ -97,10 +100,43 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
     brief = (hit?.payload as CompanyBriefView | null) ?? null;
   }
 
+  // X6: warm paths into THIS company from the user's own people (RLS rows).
+  let paths: ReturnType<typeof warmPaths> = [];
+  if (artifact.roles?.company) {
+    const { data: conns } = await supabase
+      .from("connections")
+      .select("id, name, company, title, email, source, note")
+      .limit(CONNECTIONS_CAP)
+      .returns<ConnectionRow[]>();
+    paths = warmPaths(conns ?? [], artifact.roles.company);
+  }
+
   const approved = artifact.status === "approved";
   const bundle = approved
     ? buildApplyBundle(artifact.content ?? {}, artifact.roles ?? {}, name, approvedCover)
     : null;
+
+  // X4: how did the user's PAST scores actually convert? Own rows only; an
+  // empty history renders nothing (never a fabricated stat).
+  let calibration: Calibration = {};
+  if (approved && artifact.role_id) {
+    const [{ data: scoreEvents }, { outcomes }] = await Promise.all([
+      supabase
+        .from("decision_events")
+        .select("payload, created_at")
+        .eq("kind", "app_score")
+        .order("created_at", { ascending: false })
+        .limit(200),
+      loadOutcomeModel(supabase),
+    ]);
+    calibration = calibrateScores(
+      (scoreEvents ?? []).map((e) => {
+        const p = e.payload as { role_id?: string; likelihood?: string } | null;
+        return { role_id: p?.role_id ?? null, likelihood: p?.likelihood ?? null, created_at: e.created_at as string };
+      }),
+      outcomes,
+    );
+  }
 
   return (
     <main className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
@@ -130,12 +166,17 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
       ) : (
         <div className="mt-6 space-y-5">
           {artifact.role_id && (
-            <ApplyScoreCard artifactId={artifact.id} initial={artifact.provenance?.app_score ?? null} />
+            <ApplyScoreCard
+              artifactId={artifact.id}
+              initial={artifact.provenance?.app_score ?? null}
+              calibration={calibration}
+            />
           )}
           {artifact.role_id && <CoverLetterCard roleId={artifact.role_id} cover={coverArt} />}
           {artifact.role_id && artifact.roles && (
             <BriefCard roleId={artifact.role_id} company={artifact.roles.company} initial={brief} />
           )}
+          {artifact.role_id && <WarmPathsCard roleId={artifact.role_id} paths={paths} />}
           <ApplyPanel artifactId={artifact.id} bundle={bundle} roleLabel={roleLabel} />
         </div>
       )}

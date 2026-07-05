@@ -25,6 +25,8 @@ export interface WorkspaceRole {
   mustHaves: string[];
   /** The user's private note on this role (P1 notes), null if none. */
   note: string | null;
+  /** X4: outcome-learning overlay on displayed fit (null = no evidence). */
+  fitAdjust?: { delta: number; adjusted: number; because: Array<{ feature: string; wins: number; n: number }> } | null;
 }
 
 /** Flatten a roles.must_haves jsonb entry (seed = objects, ats = strings) to text. */

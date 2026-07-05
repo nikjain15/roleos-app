@@ -70,10 +70,13 @@ export async function recomputeMatchesForUser(
   if (upErr) throw new Error(`matches upsert: ${upErr.message}`);
 
   // append-only event — keeps the taste-model substrate honest about refreshes.
+  // action must be one of the 0001 check-constraint verbs; 'recompute' violated
+  // it and every rematch event since W-era silently failed (found in X1's
+  // audit). 'edit' + kind 'rematch' keeps the semantic without a migration.
   await db.from("decision_events").insert({
     user_id: userId,
     kind: "rematch",
-    action: "recompute",
+    action: "edit",
     payload: { saved: rows.length, scanned },
   });
 

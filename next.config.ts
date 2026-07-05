@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
     return [
       {
         source: "/(.*)",
-        headers: securityHeaders(process.env.NEXT_PUBLIC_SUPABASE_URL),
+        headers: securityHeaders(
+          process.env.NEXT_PUBLIC_SUPABASE_URL,
+          process.env.NODE_ENV === "development", // dev-only 'unsafe-eval' (hydration)
+        ),
       },
     ];
   },
