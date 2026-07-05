@@ -65,6 +65,55 @@
 
 ## Slice entries (newest first)
 
+### X9 · Reply desk — scheduling + follow-up autopilot (drafts only) · 2026-07-05 · branch `v2/x9-reply-desk`
+- **PRD-first** (`docs/specs/x9-reply-desk.md`; approved via PR #53). The funnel's biggest
+  silent drop is *after* a recruiter replies — slow scheduling and missed follow-ups kill
+  live threads. X9 turns Gate-2's reactive, on-demand "scan + draft_reply" into one ranked
+  desk of threads *waiting on the user*. **No new send path, no auto-reply, no auto-booking**
+  — RO drafts, the human sends from their own inbox (Gate-2 you-send untouched); the desk
+  never writes a calendar event.
+- **Built (reuse-first — leans on `lib/google.ts`, the recruiter route + `classify_recruiter`
+  skill; no new vendor, no migration):**
+  - **`lib/reply-desk.ts`** (pure): `assembleDesk` — keeps only inbounds *waiting on the user*
+    (`needsReply`) in actionable categories (rejection→X11, offer→own flow, other→ignored);
+    ranks `followup_overdue → scheduling → question → thankyou`, oldest-waiting first within a
+    tier; best-effort links a thread to a tracked role by company name. **The invariant lives
+    in the data: every assembled row is `sendable: false`** — a row carries a *draft* to
+    review, never a send authorization. `proposeSlots` (pure over the fetched calendar + an
+    explicit `nowIso`, no ambient clock): business-day, working-hours-bounded, timezone-offset
+    aware, **conflict-free** (never overlaps a real event), N soonest options.
+  - **`POST /api/reply-desk`**: Gate-2 gated (returns `{connected:false}` with no token);
+    reads Gmail + Calendar (readonly), classifies each inbound via the existing Haiku skill,
+    assembles the desk. RLS-scoped role reads.
+  - **`/reply-desk`** (server page, Gate-2 gated) + **`ReplyDeskClient`**: card stack, one
+    waiting thread at a time, most-urgent-first; per card **Draft (D)** reuses the existing
+    `/api/recruiter draft_reply` (scheduling rows pass the proposed slots), **Copy (C)** to
+    paste into the user's own inbox, **Handled/next (H)**, **Not now (S)**. There is **no send
+    button** — the drafted text is the user's to send. Keyboard-first (never captures typing),
+    `aria-live` progress, honest not-connected + empty + error states.
+  - **Entries:** feed card (gated on Gmail-connected — a scan is model-work, so the count lives
+    on the desk, not the feed) + tracker header link.
+- **Audit:** D1 green (tsc, lint, import-invariant). D2/D3 green — **+10 vitest** (waiting-on-user
+  detection; category→reason mapping; rank order + oldest-first tiebreak; role linking + unlinked
+  rows never dropped; scheduling-only slots; `proposeSlots` conflict-avoidance + working-hours +
+  weekend-skip + future-only + bad-input; the **`sendable === false` invariant on every row**) +
+  **4 live E2E** (auth redirect; honest not-connected state; API `connected:false`+zero-rows for a
+  user without Google; API 401 for signed-out). D5/D7 green — `/reply-desk` added to the 375px+axe
+  sweep; keyboard-first is the feature. D6 green — no new routes beyond the gated read; RLS-scoped.
+  D8 green — **NO migration**. D10 green — human-gated-outward strengthened: the desk makes the
+  human send *faster and better-prepared*, never automatic; `sendable:false` is enforced in data.
+- **Test-count ratchet (vs merged main):** vitest 269→279 (+10) · live E2E 129→133 by `--list`
+  (+4) · public 33→33.
+- **Deferrals (called out, not silently cut):** SLA-derived `followup_overdue` / `thankyou` rows —
+  the pure assembler already accepts `signals` and they're unit-tested, but the SLA source isn't
+  wired, so the route passes none today (module header documents it); the connected-desk *render*
+  path (real Gmail token) is unit-covered + inverse-covered rather than E2E'd, since it needs a
+  live Google token; actual calendar-event creation on agreement; multi-round scheduling
+  re-proposal; non-Gmail providers.
+- **Open questions carried from the PRD (defaults chosen, easy to flip):** working-hours/timezone
+  reuse existing prefs (`DEFAULT_SLOT_PREFS`, offset 0 until a prefs source is wired); 3 slots
+  within 5 business days; thank-you drafts queued (not opt-in) once the SLA source lands.
+
 ### X10 · Ready-room — the morning ritual for the overnight queue · 2026-07-05 · branch `v2/x10-ready-room`
 - **PRD-first** (`docs/specs/x10-ready-room.md`; round 3, approved via PR #42). X1 fills
   Tracker "Ready" while the user sleeps; X10 drains it: ONE screen, FIFO (oldest first —

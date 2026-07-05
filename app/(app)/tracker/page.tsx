@@ -72,6 +72,9 @@ export default async function Tracker() {
         pace honest — it&apos;s what tells RO if you&apos;re on track.{" "}
         <Link href="/ready-room" className="font-medium text-info hover:underline">
           Review the overnight queue →
+        </Link>{" "}
+        <Link href="/reply-desk" className="font-medium text-info hover:underline">
+          Reply desk →
         </Link>
       </p>
 

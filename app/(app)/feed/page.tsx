@@ -8,6 +8,7 @@ import DigestCard from "@/components/DigestCard";
 import RematchButton from "@/components/RematchButton";
 import GoalCockpit from "@/components/GoalCockpit";
 import PaceNudgeCard from "@/components/PaceNudgeCard";
+import { hasGoogleConnected } from "@/lib/google-auth";
 import { loadActiveGoal, appsThisWeek } from "@/lib/goal";
 import { computeAgenda } from "@/lib/plan/agenda";
 import { adjustFit, loadOutcomeModel, roleFeatures, type FitAdjustment } from "@/lib/outcome-learning";
@@ -72,6 +73,9 @@ export default async function Feed() {
     .from("applications")
     .select("id", { count: "exact", head: true })
     .eq("stage", "ready");
+  // X9: does the reply desk apply to this user? (A scan is model-work, so the
+  // feed only links when Gmail is connected — the count lives on the desk.)
+  const replyDeskOn = await hasGoogleConnected(user.id);
   const agenda = plan
     ? computeAgenda({
         plan,
@@ -111,6 +115,23 @@ export default async function Feed() {
             className="mt-3 inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white"
           >
             Open the ready-room →
+          </Link>
+        </section>
+      )}
+
+      {/* X9: the reply desk — live threads where the ball's in your court. */}
+      {replyDeskOn && (
+        <section className="mt-6 rounded-xl border border-bd bg-surf2 p-4">
+          <p className="text-[15px] font-medium text-tx">Threads waiting on you</p>
+          <p className="mt-1 text-sm text-tx2">
+            I keep an eye on your recruiter mail. When one needs a reply, a scheduling answer, or a
+            nudge, I&apos;ll have a draft ready — you send it yourself.
+          </p>
+          <Link
+            href="/reply-desk"
+            className="mt-3 inline-flex min-h-10 items-center rounded-md border border-info px-4 text-sm font-medium text-info-tx"
+          >
+            Open the reply desk →
           </Link>
         </section>
       )}
