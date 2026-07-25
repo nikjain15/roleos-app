@@ -2,56 +2,146 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Design tokens — copied from journey.html / ro-voice.html so the app and the
-   design docs stay one visual system. Light = warm paper, dark = warm charcoal. */
+/* =============================================================================
+   RoleOS design system — tokens (source of truth)
+   -----------------------------------------------------------------------------
+   Direction (approved 2026-07): follow OpenRouter's *structure* — cool neutrals,
+   a grape-purple lead accent, a tidy type + radius scale, layered color depth —
+   while keeping RoleOS's calm, candid voice. Two faces, on purpose:
+     • App  = LIGHT (cool near-white surfaces, grape accent) — the default.
+     • Marketing = DARK (ink surfaces, volt spark) — opt in with `.theme-dark`.
+   Semantic names are stable; components reference these, never raw hex, so a
+   re-theme is a token swap. See docs/specs/design-system.md for the contract.
+   ============================================================================ */
+
 :root {
-  --bg: #fbfaf7;
-  --surf: #ffffff;
-  --surf2: #f4f2ec;
-  --tx: #1c1b19;
-  --tx2: #5f5e5a;
-  --tx3: #6b6a63; /* darkened from #8d8c85 → meets WCAG AA (≥4.5:1) on paper/white */
-  --bd: #e6e3da;
-  --info-bg: #e6f1fb;
-  --info: #185fa5;
-  --info-tx: #0c447c;
-  --suc-bg: #e1f5ee;
-  --suc: #0f6e56;
-  --warn-bg: #faeeda;
-  --warn: #854f0b;
-  --dng: #a32d2d;
+  /* --- Brand (the identity — 6 colors, like OpenRouter's) ------------------ */
+  --ink: #03080a;      /* near-black */
+  --cloud: #fcfcfe;    /* near-white */
+  --grape: #7624f4;    /* lead accent — buttons, links, RO's voice */
+  --volt: #c8ff00;     /* electric spark — highlights on dark, tiny accents */
+  --coral: #ff6849;    /* warm attention — sparingly */
+  --royal: #035ade;    /* informational blue */
+
+  /* --- Surfaces (cool neutral ramp, light) -------------------------------- */
+  --bg: #f9fafb;       /* page */
+  --surf: #ffffff;     /* card / panel */
+  --surf2: #f3f5f7;    /* subtle raised / hover fill */
+  --surf3: #e9edf1;    /* deeper inset */
+
+  /* --- Text (on light) — body/faint tuned to ≥4.5:1 on --surf ------------- */
+  --tx: #0b0f13;       /* headings + body */
+  --tx2: #49525b;      /* secondary */
+  --tx3: #6b747d;      /* faint (labels, meta) — 4.6:1 on white */
+
+  /* --- Borders ------------------------------------------------------------ */
+  --bd: #e4e8ec;       /* hairline */
+  --bd2: #d3d9df;      /* stronger / interactive */
+
+  /* --- Primary (grape) ---------------------------------------------------- */
+  --primary: #7624f4;
+  --primary-tx: #ffffff;      /* text on a grape fill */
+  --primary-hover: #6716df;
+  --primary-active: #590dc4;
+  --primary-bg: #7624f40f;    /* 6% tint — subtle fill */
+  --primary-bd: #7624f433;    /* 20% — tinted border */
+  --primary-ring: #7624f440;  /* focus ring */
+  --link: #6a1fe0;            /* grape, contrast-tuned for text on white (6.9:1) */
+
+  /* --- Spark (volt) — decorative only on light; never body text ----------- */
+  --spark: #c8ff00;
+  --spark-ink: #37401c;       /* readable text when on a volt fill */
+
+  /* --- Semantic states (state / text-on-light / faint bg / border) -------- */
+  --info: #1d63d1;   --info-tx: #0c449c;  --info-bg: #e8f0fd;  --info-bd: #c2d6f7;
+  --suc:  #0f8a5f;   --suc-tx:  #076046;  --suc-bg:  #e6f6ef;  --suc-bd:  #b7e4cf;
+  --warn: #b26a00;   --warn-tx: #8a5200;  --warn-bg: #fdf3e0;  --warn-bd: #f2d9a8;
+  --dng:  #d92d4e;   --dng-tx:  #b3123a;  --dng-bg:  #fdeaee;  --dng-bd:  #f6c2ce;
+
+  /* --- Radius ------------------------------------------------------------- */
+  --r-sm: 4px; --r-md: 6px; --r-lg: 8px; --r-xl: 12px; --r-2xl: 16px; --r-full: 9999px;
+
+  /* --- Elevation (light — soft, cool-cast) -------------------------------- */
+  --sh-sm: 0 1px 2px rgba(3, 8, 10, 0.06);
+  --sh-md: 0 2px 8px rgba(3, 8, 10, 0.08);
+  --sh-lg: 0 8px 28px rgba(3, 8, 10, 0.12);
+
+  /* --- Type: families ----------------------------------------------------- */
+  --font-display: var(--font-display-var), "Space Grotesk", system-ui, sans-serif;
+  --font-sans: var(--font-sans-var), "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-mono-var), "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* --- Type: size scale (semantic) ---------------------------------------- */
+  --t-display: 3.5rem;   /* 56 — marketing hero */
+  --t-h1: 2.25rem;       /* 36 */
+  --t-h2: 1.5rem;        /* 24 */
+  --t-h3: 1.25rem;       /* 20 */
+  --t-section: 1rem;     /* 16 — section label */
+  --t-body: 0.9375rem;   /* 15 — default body */
+  --t-small: 0.8125rem;  /* 13 */
+  --t-overline: 0.75rem; /* 12 — uppercase, tracked */
+
+  /* --- Type: weights ------------------------------------------------------ */
+  --w-body: 450; --w-medium: 500; --w-semibold: 600; --w-bold: 700; --w-display: 700;
+
+  /* --- Type: leading + tracking ------------------------------------------- */
+  --lh-tight: 1.15; --lh-snug: 1.3; --lh-body: 1.55; --lh-prose: 1.7;
+  --tr-display: -0.02em; --tr-tight: -0.01em; --tr-overline: 0.08em;
+
+  /* --- Motion ------------------------------------------------------------- */
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --dur-fast: 120ms; --dur: 180ms; --dur-slow: 260ms;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #161512;
-    --surf: #1f1e1a;
-    --surf2: #26241f;
-    --tx: #eceae3;
-    --tx2: #a8a69d;
-    --tx3: #928f85; /* lightened from #7a786f → meets WCAG AA on warm-charcoal */
-    --bd: #33312b;
-    --info-bg: #0c447c;
-    --info: #85b7eb;
-    --info-tx: #b5d4f4;
-    --suc-bg: #085041;
-    --suc: #9fe1cb;
-    --warn-bg: #633806;
-    --warn: #fac775;
-    --dng: #f09595;
-  }
+/* Dark face (marketing / hero). Opt in with `.theme-dark` on a wrapper — the
+   app stays light. Same semantic names, revalued for ink surfaces. */
+.theme-dark {
+  --bg: #03080a;
+  --surf: #0c1216;
+  --surf2: #141b20;
+  --surf3: #1c242a;
+
+  --tx: #fcfcfe;
+  --tx2: #a7b0b7;
+  --tx3: #78828a;
+
+  --bd: rgba(252, 252, 254, 0.10);
+  --bd2: rgba(252, 252, 254, 0.18);
+
+  --primary: #8b47ff;         /* lightened grape for fills on ink */
+  --primary-tx: #ffffff;
+  --primary-hover: #9a5cff;
+  --primary-active: #7a34f0;
+  --primary-bg: rgba(139, 71, 255, 0.14);
+  --primary-bd: rgba(139, 71, 255, 0.34);
+  --primary-ring: rgba(139, 71, 255, 0.45);
+  --link: #b18aff;            /* readable grape on ink */
+
+  --info: #7cb0f5; --info-tx: #bcd7fb; --info-bg: rgba(3, 90, 222, 0.18); --info-bd: rgba(124, 176, 245, 0.30);
+  --suc:  #57d3a2; --suc-tx:  #a7ead0; --suc-bg:  rgba(15, 138, 95, 0.20);  --suc-bd:  rgba(87, 211, 162, 0.30);
+  --warn: #f0b64d; --warn-tx: #f7d9a0; --warn-bg: rgba(178, 106, 0, 0.22);  --warn-bd: rgba(240, 182, 77, 0.30);
+  --dng:  #f26d84; --dng-tx:  #f8b8c4; --dng-bg:  rgba(217, 45, 78, 0.20);  --dng-bd:  rgba(242, 109, 132, 0.30);
+
+  --sh-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --sh-md: 0 2px 10px rgba(0, 0, 0, 0.5);
+  --sh-lg: 0 10px 34px rgba(0, 0, 0, 0.6);
 }
 
 body {
   background: var(--bg);
   color: var(--tx);
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  font-weight: var(--w-body);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
 }
 
 /* a11y — a visible focus ring for keyboard users (mouse clicks stay clean). */
 :focus-visible {
-  outline: 2px solid var(--info);
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: var(--r-sm);
 }
 
 /* a11y — respect users who ask for less motion (the pulse dots, transitions). */
