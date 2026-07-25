@@ -1,6 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { matchProfile } from "@/lib/run-match";
 import { goalQueryTexts, type GoalRow } from "@/lib/goal";
+import { tasteRerank } from "@/lib/taste-rerank";
 
 /**
  * Recompute a user's matches from their saved profile and persist them.
@@ -39,8 +40,13 @@ export async function recomputeMatchesForUser(
     .eq("status", "active")
     .maybeSingle<Pick<GoalRow, "target" | "also_open_to">>();
 
-  const { matches, scanned } = await matchProfile(raw, 8, goalQueryTexts(activeGoal));
-  if (!matches.length) return { saved: 0, pursue: 0, scanned };
+  const base = await matchProfile(raw, 8, goalQueryTexts(activeGoal));
+  const scanned = base.scanned;
+  if (!base.matches.length) return { saved: 0, pursue: 0, scanned };
+
+  // P3 — close the loop: the taste overlay reorders by what RO has learned the
+  // user cares about, transparently (each move is labeled). No taste → unchanged.
+  const matches = await tasteRerank(db, userId, base.matches);
 
   // Clear stale auto-matches (untouched ones only), then write the fresh set.
   // Preserves any role the user saved/dismissed/etc. so re-matching is safe.
@@ -61,7 +67,9 @@ export async function recomputeMatchesForUser(
     user_id: userId,
     role_id: m.id,
     fit_score: m.fit,
-    reasoning: { why: m.why },
+    // Store the taste overlay alongside the reasoning so any surface can show
+    // "↑ ranked up — you told me you want X" (transparent, per Decision 1 = A).
+    reasoning: { why: m.why, taste: m.taste ?? null },
     gaps: m.gaps,
     recommendation: m.recommendation,
     status: "new",
