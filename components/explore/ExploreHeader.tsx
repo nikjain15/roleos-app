@@ -18,7 +18,7 @@ export default function ExploreHeader({ crumbs }: { crumbs?: Array<{ label: stri
           <Link href="/explore/companies" className="text-tx3 hover:text-primary">Companies</Link>
           <Link href="/explore/roles" className="text-tx3 hover:text-primary">Role types</Link>
           <Link
-            href="/login?next=/onboarding"
+            href="/login?next=/start"
             className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white"
           >
             Hand RO your hunt

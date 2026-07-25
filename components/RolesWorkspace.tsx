@@ -245,7 +245,7 @@ export default function RolesWorkspace({ initial }: { initial: WorkspaceRole[] }
           {rows.length === 0 ? (
             <>
               No matches yet.{" "}
-              <a href="/onboarding" className="underline">Show RO your background</a> and it&apos;ll line
+              <a href="/start" className="underline">Show RO your background</a> and it&apos;ll line
               up roles worth your time.
             </>
           ) : (

@@ -11,7 +11,7 @@ import SignOut from "@/components/SignOut";
  * links scroll horizontally on mobile while the page body never does; ≥40px targets,
  * skip link, semantic <nav>, aria-current on the active tab.
  */
-const HIDE_ON = ["/login", "/onboarding"];
+const HIDE_ON = ["/login", "/start"];
 
 const NAV = [
   { href: "/feed", label: "Feed" },

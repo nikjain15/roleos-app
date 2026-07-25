@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Route rename: /onboarding → /start (product-voiced). Old links + shipped J1
+  // URLs keep working. (307 — not permanently cached, so it stays reversible.)
+  async redirects() {
+    return [{ source: "/onboarding", destination: "/start", permanent: false }];
+  },
   // OpenNext on Cloudflare supports the full App Router (SSR, server actions,
   // route handlers) — we deliberately do NOT pin `runtime = 'edge'` per route.
   reactStrictMode: true,

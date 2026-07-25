@@ -193,7 +193,7 @@ export default async function Feed() {
             I&apos;ll line up roles worth your time.
           </p>
           <Link
-            href="/onboarding"
+            href="/start"
             className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
           >
             Show RO your work
