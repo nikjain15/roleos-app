@@ -39,6 +39,11 @@ export interface RoleOSEnv {
   APIFY_LINKEDIN_ACTOR?: string; // actor slug, e.g. "owner~linkedin-profile-scraper"
   BRIGHTDATA_TOKEN?: string;
   BRIGHTDATA_DATASET_ID?: string;
+  /** Optional GitHub token — lifts the public-API rate limit from 60/hr (anon)
+   *  to 5,000/hr for the onboarding GitHub profile read (lib/github-fetch). The
+   *  fetch works without it; only the ceiling changes. A read-only/no-scope PAT
+   *  is enough (we only hit public endpoints). */
+  GITHUB_TOKEN?: string;
 }
 
 // Minimal DO namespace shape so we don't depend on @cloudflare/workers-types here.

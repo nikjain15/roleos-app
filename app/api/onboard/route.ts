@@ -7,6 +7,7 @@ import { parseModelJson } from "@/lib/json";
 import { assessProfileInput, thinInputMessage } from "@/lib/profile-input";
 import { normalizeProfileText } from "@/lib/normalize-profile";
 import { extractLinkedInUrl, getProfileFetcher } from "@/lib/profile-fetcher";
+import { extractGitHubUrl, fetchGitHubProfileText } from "@/lib/github-fetch";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -65,36 +66,45 @@ export async function POST(req: Request): Promise<Response> {
       try {
         send({ type: "status", text: "Reading what you sent…" });
 
+        // GitHub (free public API, ToS-clean) — kick off in parallel; it COMBINES
+        // with LinkedIn/CV/notes rather than replacing them. High signal for a
+        // builder audience: what they've actually shipped, in what languages.
+        const githubUrl = extractGitHubUrl(profile);
+        if (githubUrl) send({ type: "status", text: "Reading your GitHub…" });
+        const githubPromise: Promise<string> = githubUrl
+          ? fetchGitHubProfileText(githubUrl).catch(() => "")
+          : Promise.resolve("");
+
         // Honesty guard (ro-voice "thin input"): a bare URL / too-little text has
         // no real signal to match on. Don't fabricate a shortlist off noise.
-        let profileText = profile;
-        const assess = assessProfileInput(profileText);
-        if (!assess.ok) {
+        // Resolve the LinkedIn/paste "primary" content — may end up empty (e.g. a
+        // GitHub-URL-only input), in which case GitHub carries the signal.
+        let primary = profile;
+        if (!assessProfileInput(primary).ok) {
           // If it's a LinkedIn URL AND a scraper is configured, try to fetch the
-          // real profile; otherwise stay honest and ask for real content.
-          const url = extractLinkedInUrl(profileText);
+          // real profile; otherwise the primary is empty and GitHub must carry it.
+          const url = extractLinkedInUrl(primary);
           const fetcher = url ? getProfileFetcher() : null;
           if (url && fetcher) {
             try {
               send({ type: "status", text: "Pulling your profile from that link…" });
               const fetched = await fetcher.fetchProfileText(url);
-              if (assessProfileInput(fetched).ok) {
-                profileText = fetched;
-              } else {
-                send({ type: "needs_more", text: thinInputMessage(assess) });
-                send({ type: "done" });
-                return;
-              }
+              primary = assessProfileInput(fetched).ok ? fetched : "";
             } catch {
-              send({ type: "needs_more", text: thinInputMessage(assess) });
-              send({ type: "done" });
-              return;
+              primary = "";
             }
           } else {
-            send({ type: "needs_more", text: thinInputMessage(assess) });
-            send({ type: "done" });
-            return;
+            primary = "";
           }
+        }
+
+        // Combine every source RO was given. If nothing has real signal, stay honest.
+        const githubText = await githubPromise;
+        let profileText = [primary, githubText].filter((s) => s.trim().length > 0).join("\n\n");
+        if (!assessProfileInput(profileText).ok) {
+          send({ type: "needs_more", text: thinInputMessage(assessProfileInput(profile)) });
+          send({ type: "done" });
+          return;
         }
 
         // Strip extraction/boilerplate noise now — on the real content we match

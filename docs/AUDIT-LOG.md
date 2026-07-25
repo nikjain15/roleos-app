@@ -73,6 +73,27 @@
 
 ## Slice entries (newest first)
 
+### J1 · GitHub intake + progressive composer · 2026-07-25 · branch `slice/j1-onboarding`
+- **GitHub as a first-class source** (`lib/github-fetch.ts`): reads a public profile off
+  GitHub's free, ToS-clean REST API — profile + top repos (name/lang/stars) + languages +
+  the profile README — flattened to normalized text like the LinkedIn adapter. Token-optional
+  (`GITHUB_TOKEN` lifts 60/hr → 5,000/hr). `/api/onboard` detects a GitHub URL, fetches it **in
+  parallel**, and **combines** it with LinkedIn/CV/notes (a GitHub-only input can carry the whole
+  signal). +3 tests. High signal for a builder audience — what they've actually shipped.
+- **Progressive composer** (`onboarding/page.tsx`): replaced the single free-text box (which
+  stacked raw URLs) with **dedicated fields that appear as you add each source** — click LinkedIn
+  → a LinkedIn field; click GitHub → a GitHub field; Attach → the file chip; the free-text box is
+  now just optional notes. Each source is clean and unambiguous when combining all three. The
+  toolbar button becomes its field (and hides).
+- **Universal LinkedIn**: detection accepts any profile form — `/in/` or `/pub/`, country
+  subdomains, www-or-not, scheme-or-not (the scraper still needs an `/in/` link to actually fetch).
+- **Bug fix**: `workUrl()` previously returned the *entire* composer text (would store the wrong
+  `linkedin_url` on save); now sourced from the dedicated LinkedIn field.
+- **Login**: GitHub provider enabled in Supabase (Management API, verified 302 → github authorize);
+  provider layout reworked to Google-primary + LinkedIn/GitHub paired row.
+- **Audit**: typecheck 0 · lint 0 · **300 vitest**. Verified live: progressive fields appear on
+  add, both combine, run fetches GitHub in parallel ("reading: linkedin… · github…").
+
 ### J1 · Onboarding polish — wide results, progressive jobs, run continuity · 2026-07-25 · branch `slice/j1-onboarding`
 - **From live walkthrough feedback.** Four fixes, one model-backed run to verify:
   - **Wide results.** The two-column read/jobs section was trapped in the page's `max-w-2xl`

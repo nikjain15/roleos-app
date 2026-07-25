@@ -40,10 +40,17 @@ export default function Onboarding() {
   // ── inputs (conversational: goal → one composer for URL/file/text) ──
   const [step, setStep] = useState<1 | 2>(1);
   const [target, setTarget] = useState("");
-  const [work, setWork] = useState(""); // LinkedIn URL, pasted text, or a few lines
+  const [work, setWork] = useState(""); // free-text notes / pasted CV
+  // Dedicated source fields — each appears only once you add it (progressive).
+  const [linkedin, setLinkedin] = useState("");
+  const [github, setGithub] = useState("");
+  const [showLinkedin, setShowLinkedin] = useState(false);
+  const [showGithub, setShowGithub] = useState(false);
   const [attached, setAttached] = useState<{ name: string; text: string } | null>(null);
   const [parsing, setParsing] = useState(false);
   const workRef = useRef<HTMLTextAreaElement>(null);
+  const linkedinRef = useRef<HTMLInputElement>(null);
+  const githubRef = useRef<HTMLInputElement>(null);
 
   // ── run state ──
   const [status, setStatus] = useState<string[]>([]);
@@ -99,7 +106,8 @@ export default function Onboarding() {
     try {
       const saved = localStorage.getItem("roleos.linkedin_url");
       if (saved) {
-        setWork(saved); // prefill the composer with their remembered LinkedIn
+        setLinkedin(saved); // prefill their remembered LinkedIn
+        setShowLinkedin(true);
         setVariant((v) => (v === "default" ? "returning" : v));
       }
     } catch {
@@ -107,26 +115,36 @@ export default function Onboarding() {
     }
   }, []);
 
-  const isLinkedInUrl = (s: string) => /linkedin\.com\/in\//i.test(s.trim());
-  // The single profile RO reads = attached file text + whatever's in the composer
-  // (a LinkedIn URL, pasted CV, or a few lines) — mix and match, all sources combine.
-  const effectiveProfile = () => {
-    const parts: string[] = [];
-    if (attached?.text) parts.push(attached.text);
-    if (work.trim()) parts.push(work.trim());
-    return parts.join("\n\n");
-  };
-  const workUrl = () => (isLinkedInUrl(work) ? work.trim() : undefined);
-  // A short, human label for what RO is reading — keeps continuity while she
-  // works (so the ticker never floats context-free).
+  // Universal LinkedIn: any profile form (/in/, /pub/, country subdomains, www or
+  // not, scheme or not). The scraper still needs an /in/ link to actually fetch.
+  const isLinkedInUrl = (s: string) => /(?:^|\/\/|\.)linkedin\.com\/(in|pub)\//i.test(s.trim());
+  const linkedinVal = () => (showLinkedin ? linkedin.trim() : "");
+  const githubVal = () => (showGithub ? github.trim() : "");
+  // Everything RO reads, combined: attached file + LinkedIn + GitHub + free notes.
+  const effectiveProfile = () =>
+    [attached?.text ?? "", linkedinVal(), githubVal(), work.trim()].filter((s) => s.length > 0).join("\n\n");
+  // Just the LinkedIn URL — for the "reading" chip and the saved linkedin_url.
+  const workUrl = () => (linkedinVal() && isLinkedInUrl(linkedinVal()) ? linkedinVal() : undefined);
+  const cleanUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/i, "").replace(/\/$/, "");
+  // A short, human label for what RO is reading — keeps the ticker in context.
   const sourceSummary = () => {
     const parts: string[] = [];
-    if (workUrl()) parts.push(workUrl()!.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""));
+    if (linkedinVal()) parts.push(cleanUrl(linkedinVal()));
+    if (githubVal()) parts.push(cleanUrl(githubVal()));
     if (attached) parts.push(attached.name);
-    if (!isLinkedInUrl(work) && work.trim().length >= 30) parts.push("your notes");
+    if (work.trim().length >= 20) parts.push("your notes");
     return parts.join(" · ");
   };
-  const hasWork = work.trim().length >= 30 || isLinkedInUrl(work) || !!attached;
+  const hasWork =
+    !!attached ||
+    linkedinVal().length > 4 ||
+    githubVal().length > 4 ||
+    work.trim().length >= 30;
+
+  // Reveal a source field (once) and focus it — the toolbar button becomes the field.
+  const addLinkedin = () => { setShowLinkedin(true); setTimeout(() => linkedinRef.current?.focus(), 0); };
+  const addGithub = () => { setShowGithub(true); setTimeout(() => githubRef.current?.focus(), 0); };
+
   // Sharpness meter: 1 (base) → 3 (with work) → 4 (with a target too).
   const sharpness = 1 + (hasWork ? 2 : 0) + (target.trim() ? 1 : 0);
 
@@ -153,7 +171,9 @@ export default function Onboarding() {
 
   async function run() {
     const p = effectiveProfile();
-    if ((p.trim().length < 30 && !isLinkedInUrl(work)) || running) return;
+    // Enough to go on: real text, or a LinkedIn/GitHub URL RO can read for you.
+    const hasUrl = linkedinVal().length > 4 || githubVal().length > 4;
+    if ((p.trim().length < 30 && !hasUrl) || running) return;
     // Remember the LinkedIn URL on this device (returning-anon convenience).
     if (workUrl()) {
       try { localStorage.setItem("roleos.linkedin_url", workUrl()!); } catch { /* ignore */ }
@@ -361,16 +381,52 @@ export default function Onboarding() {
               </>
             ) : (
               <>
-                {/* Polished composer — LinkedIn URL and/or PDF/CV and/or text */}
+                {/* Progressive composer — a dedicated field appears for each source
+                    you add (LinkedIn / GitHub), so nothing gets stacked as raw URLs. */}
+                {showLinkedin && (
+                  <div className="mb-2.5 flex items-center gap-2.5 rounded-xl border border-bd bg-surf px-3.5 shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring">
+                    <span className="shrink-0" style={{ color: "#0A66C2" }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-[18px] w-[18px]" aria-hidden><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z" /></svg>
+                    </span>
+                    <input
+                      ref={linkedinRef}
+                      value={linkedin}
+                      onChange={(e) => setLinkedin(e.target.value)}
+                      onKeyDown={(e) => { if (e.key === "Enter") run(); }}
+                      aria-label="Your LinkedIn profile URL"
+                      placeholder="linkedin.com/in/your-handle"
+                      className="h-12 flex-1 bg-transparent text-body text-tx placeholder:text-tx3 outline-none"
+                    />
+                    <button onClick={() => { setShowLinkedin(false); setLinkedin(""); }} className="shrink-0 px-1 text-tx3 hover:text-tx" aria-label="Remove LinkedIn">✕</button>
+                  </div>
+                )}
+                {showGithub && (
+                  <div className="mb-2.5 flex items-center gap-2.5 rounded-xl border border-bd bg-surf px-3.5 shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring">
+                    <span className="shrink-0 text-tx">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-[18px] w-[18px]" aria-hidden><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.92 1.24 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z" /></svg>
+                    </span>
+                    <input
+                      ref={githubRef}
+                      value={github}
+                      onChange={(e) => setGithub(e.target.value)}
+                      onKeyDown={(e) => { if (e.key === "Enter") run(); }}
+                      aria-label="Your GitHub profile URL"
+                      placeholder="github.com/your-handle"
+                      className="h-12 flex-1 bg-transparent text-body text-tx placeholder:text-tx3 outline-none"
+                    />
+                    <button onClick={() => { setShowGithub(false); setGithub(""); }} className="shrink-0 px-1 text-tx3 hover:text-tx" aria-label="Remove GitHub">✕</button>
+                  </div>
+                )}
+
+                {/* Free-text notes / pasted CV + the add-a-source toolbar */}
                 <div className="overflow-hidden rounded-xl border border-bd bg-surf shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring">
                   <textarea
                     ref={workRef}
-                    autoFocus
                     value={work}
                     onChange={(e) => setWork(e.target.value)}
-                    rows={5}
-                    aria-label="Paste a LinkedIn URL, your CV text, or a few lines"
-                    placeholder="Paste a LinkedIn URL, your CV text, or just talk…"
+                    rows={showLinkedin || showGithub || attached ? 3 : 5}
+                    aria-label="Paste your CV text or a few lines about your work"
+                    placeholder={showLinkedin || showGithub || attached ? "Anything else RO should know? (optional)" : "Paste your CV text, or just tell me about your work…"}
                     className="w-full resize-none bg-transparent px-4 pt-4 pb-2 text-body leading-relaxed text-tx placeholder:text-tx3 outline-none"
                   />
 
@@ -385,15 +441,26 @@ export default function Onboarding() {
                   )}
 
                   <div className="flex items-center gap-1 border-t border-bd px-2 py-2">
-                    <button
-                      onClick={() => { if (!work.trim()) setWork("https://www.linkedin.com/in/"); workRef.current?.focus(); }}
-                      className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx"
-                    >
-                      <span style={{ color: "#0A66C2" }}>
-                        <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z" /></svg>
-                      </span>
-                      LinkedIn URL
-                    </button>
+                    {!showLinkedin && (
+                      <button
+                        onClick={addLinkedin}
+                        className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx"
+                      >
+                        <span style={{ color: "#0A66C2" }}>
+                          <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z" /></svg>
+                        </span>
+                        LinkedIn
+                      </button>
+                    )}
+                    {!showGithub && (
+                      <button
+                        onClick={addGithub}
+                        className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx"
+                      >
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-tx" aria-hidden><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.92 1.24 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z" /></svg>
+                        GitHub
+                      </button>
+                    )}
                     <button
                       onClick={() => fileRef.current?.click()}
                       disabled={parsing}
