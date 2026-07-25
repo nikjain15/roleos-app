@@ -66,41 +66,32 @@ export async function POST(req: Request): Promise<Response> {
       try {
         send({ type: "status", text: "Reading what you sent…" });
 
-        // GitHub (free public API, ToS-clean) — kick off in parallel; it COMBINES
-        // with LinkedIn/CV/notes rather than replacing them. High signal for a
-        // builder audience: what they've actually shipped, in what languages.
+        // Pull the URLs RO can read FOR you (a bare URL isn't useful content — the
+        // fetched profile is), then combine with whatever free text is left. All
+        // sources COMBINE; none is discarded. LinkedIn needs a configured scraper;
+        // GitHub is the free, ToS-clean public API.
+        const linkedinUrl = extractLinkedInUrl(profile);
         const githubUrl = extractGitHubUrl(profile);
+        const linkedinFetcher = linkedinUrl ? getProfileFetcher() : null;
+        if (linkedinUrl && linkedinFetcher) send({ type: "status", text: "Pulling your profile from that link…" });
         if (githubUrl) send({ type: "status", text: "Reading your GitHub…" });
-        const githubPromise: Promise<string> = githubUrl
-          ? fetchGitHubProfileText(githubUrl).catch(() => "")
-          : Promise.resolve("");
 
-        // Honesty guard (ro-voice "thin input"): a bare URL / too-little text has
-        // no real signal to match on. Don't fabricate a shortlist off noise.
-        // Resolve the LinkedIn/paste "primary" content — may end up empty (e.g. a
-        // GitHub-URL-only input), in which case GitHub carries the signal.
-        let primary = profile;
-        if (!assessProfileInput(primary).ok) {
-          // If it's a LinkedIn URL AND a scraper is configured, try to fetch the
-          // real profile; otherwise the primary is empty and GitHub must carry it.
-          const url = extractLinkedInUrl(primary);
-          const fetcher = url ? getProfileFetcher() : null;
-          if (url && fetcher) {
-            try {
-              send({ type: "status", text: "Pulling your profile from that link…" });
-              const fetched = await fetcher.fetchProfileText(url);
-              primary = assessProfileInput(fetched).ok ? fetched : "";
-            } catch {
-              primary = "";
-            }
-          } else {
-            primary = "";
-          }
-        }
+        const [linkedinText, githubText] = await Promise.all([
+          linkedinUrl && linkedinFetcher
+            ? linkedinFetcher.fetchProfileText(linkedinUrl).catch(() => "")
+            : Promise.resolve(""),
+          githubUrl ? fetchGitHubProfileText(githubUrl).catch(() => "") : Promise.resolve(""),
+        ]);
+
+        // Free text = what the user typed BEYOND the URLs (notes / pasted CV). Strip
+        // both URL forms (scheme or not) so the raw link doesn't pollute the signal.
+        const freeText = profile
+          .replace(/(?:https?:\/\/)?(?:[a-z]{2,3}\.)?linkedin\.com\/(?:in|pub)\/[^\s?#]+/gi, " ")
+          .replace(/(?:https?:\/\/)?(?:www\.)?github\.com\/[A-Za-z0-9][A-Za-z0-9-]*(?:\/[^\s?#]*)?/gi, " ")
+          .trim();
 
         // Combine every source RO was given. If nothing has real signal, stay honest.
-        const githubText = await githubPromise;
-        let profileText = [primary, githubText].filter((s) => s.trim().length > 0).join("\n\n");
+        let profileText = [linkedinText, githubText, freeText].filter((s) => s.trim().length > 0).join("\n\n");
         if (!assessProfileInput(profileText).ok) {
           send({ type: "needs_more", text: thinInputMessage(assessProfileInput(profile)) });
           send({ type: "done" });
