@@ -1,4 +1,4 @@
-import { matchProfile } from "@/lib/run-match";
+import { recallAndShortlist, reasonShortlist } from "@/lib/run-match";
 import { checkRateLimit, clientIp, rateLimitResponse } from "@/lib/rate-limit";
 import { runSkill } from "@/agent/skills/run";
 import mirrorSkill from "@/agent/skills/mirror";
@@ -124,23 +124,45 @@ export async function POST(req: Request): Promise<Response> {
         // verifiable source of truth and correctly refuse to work.
         send({ type: "resolved", profile: profileText });
 
-        // Mirror + matching run in parallel, but we EMIT the mirror the moment
-        // it's ready (~30s) instead of waiting for the full match reasoning
-        // (~2min) — so the page fills fast and the user reads while jobs land.
+        // Everything runs in parallel and streams the MOMENT each piece is ready
+        // (quality-first, latency-hidden — no model tier is cut):
+        //  · the mirror emits as soon as RO's read is done (~30–40s);
+        //  · matching is staged — recall+coarse-rank paints skeleton job cards
+        //    fast, then the expensive per-role reasoning upgrades them in place.
+        // So the jobs column fills early instead of sitting blank for ~2min.
+        const N_JOBS = 6;
         send({ type: "status", text: "Reading you back…" });
-        const mirrorPromise = runSkill(mirrorSkill, { userId: "anon", data: { profile: profileText } });
-        const matchPromise = matchProfile(profileText, 6, target ? [target] : []);
 
-        try {
-          const mirrorRes = await mirrorPromise;
-          const mirror = parseModelJson<{ statements: { lead: string; detail: string }[]; insight: string }>(mirrorRes.verdict.finalOutput);
-          if (mirror) send({ type: "mirror", statements: mirror.statements, insight: mirror.insight });
-        } catch {
-          /* mirror is best-effort — matches still deliver value */
-        }
+        // Mirror streams independently — don't block the jobs pipeline on it.
+        const mirrorPromise = (async () => {
+          try {
+            const mirrorRes = await runSkill(mirrorSkill, { userId: "anon", data: { profile: profileText } });
+            const mirror = parseModelJson<{ statements: { lead: string; detail: string }[]; insight: string }>(mirrorRes.verdict.finalOutput);
+            if (mirror) send({ type: "mirror", statements: mirror.statements, insight: mirror.insight });
+          } catch {
+            /* mirror is best-effort — matches still deliver value */
+          }
+        })();
 
         send({ type: "status", text: "Comparing you against every open role…" });
-        const matchRes = await matchPromise;
+        const { short, scanned } = await recallAndShortlist(profileText, N_JOBS, target ? [target] : []);
+
+        // Skeleton cards — real roles (company/title/comp) the instant recall is
+        // done, so the column fills while RO reasons each one through.
+        send({
+          type: "shortlist",
+          scanned,
+          roles: short.map((c) => ({
+            id: c.id,
+            company: c.company,
+            role_title: c.role_title,
+            url: c.url,
+            comp: c.comp,
+          })),
+        });
+
+        send({ type: "status", text: "Weighing each one against you…" });
+        const matchRes = await reasonShortlist(profileText, short);
 
         // Slim payload — the UI needs RO's reasoning, not the raw JD JSON.
         const slim = matchRes.matches.map((m) => ({
@@ -154,7 +176,9 @@ export async function POST(req: Request): Promise<Response> {
           why: m.why,
           gaps: m.gaps,
         }));
-        send({ type: "matches", matches: slim, scanned: matchRes.scanned });
+        send({ type: "matches", matches: slim, scanned });
+
+        await mirrorPromise; // make sure the read landed before we close
         send({ type: "done" });
       } catch (e) {
         send({

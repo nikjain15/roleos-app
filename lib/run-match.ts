@@ -83,16 +83,37 @@ async function shortlist(profileText: string, candidates: CandidateRole[]): Prom
   return candidates.slice(0, SHORTLIST);
 }
 
-export async function matchProfile(
+/**
+ * STAGE 1 (cheap, fast): query-expand → wide recall → coarse rerank → the top
+ * `count` roles worth deep reasoning. This is everything up to the expensive
+ * `match` pass, so callers that stream can paint skeleton cards the moment it
+ * returns (~30–40s) instead of waiting on the full reasoning (~90s+).
+ *
+ * We deliberately deep-reason ONLY the `count` we render (not a wider 10) — the
+ * coarse rank (Sonnet) already orders the pool, so reasoning the ones past the
+ * fold only bought latency, never a shown card.
+ */
+export async function recallAndShortlist(
   profileText: string,
-  count = 8,
+  count = 6,
   extraQueries: string[] = [],
-): Promise<{ matches: MatchedRole[]; scanned: number; gatePassed: boolean }> {
+): Promise<{ short: CandidateRole[]; scanned: number }> {
   const queries = await buildQueries(profileText, extraQueries);
   const { candidates, poolSize } = await recallRolesMulti(queries, RECALL_TOTAL, RECALL_PER_QUERY);
-  if (candidates.length === 0) return { matches: [], scanned: poolSize, gatePassed: true };
+  if (candidates.length === 0) return { short: [], scanned: poolSize };
+  const ranked = await shortlist(profileText, candidates);
+  return { short: ranked.slice(0, Math.max(count, 1)), scanned: poolSize };
+}
 
-  const short = await shortlist(profileText, candidates);
+/**
+ * STAGE 2 (expensive): RO's real reasoning over the shortlist — recommendation +
+ * why + gaps per role, through the quality gate. Sorted by fit, pursue-first.
+ */
+export async function reasonShortlist(
+  profileText: string,
+  short: CandidateRole[],
+): Promise<{ matches: MatchedRole[]; gatePassed: boolean }> {
+  if (short.length === 0) return { matches: [], gatePassed: true };
 
   const { verdict } = await runSkill(matchSkill, {
     userId: "anon",
@@ -113,11 +134,17 @@ export async function matchProfile(
     };
   });
 
-  // sort by RO's fit, pursue first; return the best `count` for the feed
   matches.sort((a, b) => b.fit - a.fit);
-  return {
-    matches: matches.slice(0, Math.max(count, 1)),
-    scanned: poolSize,
-    gatePassed: verdict.status === "passed",
-  };
+  return { matches, gatePassed: verdict.status === "passed" };
+}
+
+export async function matchProfile(
+  profileText: string,
+  count = 8,
+  extraQueries: string[] = [],
+): Promise<{ matches: MatchedRole[]; scanned: number; gatePassed: boolean }> {
+  const { short, scanned } = await recallAndShortlist(profileText, count, extraQueries);
+  if (short.length === 0) return { matches: [], scanned, gatePassed: true };
+  const { matches, gatePassed } = await reasonShortlist(profileText, short);
+  return { matches: matches.slice(0, Math.max(count, 1)), scanned, gatePassed };
 }

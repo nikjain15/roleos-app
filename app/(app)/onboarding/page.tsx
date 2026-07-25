@@ -26,6 +26,9 @@ type Match = {
   why: string;
   gaps: { gap: string; bridgeable: "yes" | "maybe" | "no" }[];
 };
+// A recalled role before RO has reasoned it — enough to paint a real card
+// (company/title/comp) while her verdict + why + gaps stream in.
+type ShortlistRole = Pick<Match, "id" | "company" | "role_title" | "url" | "comp">;
 type Statement = { lead: string; detail: string };
 type Mirror = { statements: Statement[]; insight: string };
 type Variant = "default" | "explore" | "returning" | "signedin-nodata";
@@ -52,6 +55,7 @@ export default function Onboarding() {
   // ── results ──
   const [mirror, setMirror] = useState<Mirror | null>(null);
   const [matches, setMatches] = useState<Match[] | null>(null);
+  const [shortlistRoles, setShortlistRoles] = useState<ShortlistRole[] | null>(null);
   const [scanned, setScanned] = useState<number | null>(null);
   const [resolvedProfile, setResolvedProfile] = useState<string | null>(null);
 
@@ -113,6 +117,15 @@ export default function Onboarding() {
     return parts.join("\n\n");
   };
   const workUrl = () => (isLinkedInUrl(work) ? work.trim() : undefined);
+  // A short, human label for what RO is reading — keeps continuity while she
+  // works (so the ticker never floats context-free).
+  const sourceSummary = () => {
+    const parts: string[] = [];
+    if (workUrl()) parts.push(workUrl()!.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, ""));
+    if (attached) parts.push(attached.name);
+    if (!isLinkedInUrl(work) && work.trim().length >= 30) parts.push("your notes");
+    return parts.join(" · ");
+  };
   const hasWork = work.trim().length >= 30 || isLinkedInUrl(work) || !!attached;
   // Sharpness meter: 1 (base) → 3 (with work) → 4 (with a target too).
   const sharpness = 1 + (hasWork ? 2 : 0) + (target.trim() ? 1 : 0);
@@ -149,6 +162,7 @@ export default function Onboarding() {
     setStatus([]);
     setMirror(null);
     setMatches(null);
+    setShortlistRoles(null);
     setNeedsMore(null);
     setError(null);
     setSavedNote(false);
@@ -183,6 +197,7 @@ export default function Onboarding() {
           else if (ev.type === "resolved") { gotResolved = ev.profile; setResolvedProfile(ev.profile); }
           else if (ev.type === "needs_more") setNeedsMore(ev.text);
           else if (ev.type === "mirror") { gotMirror = { statements: ev.statements, insight: ev.insight }; setMirror(gotMirror); }
+          else if (ev.type === "shortlist") { setShortlistRoles(ev.roles); if (typeof ev.scanned === "number") setScanned(ev.scanned); }
           else if (ev.type === "matches") { gotMatches = ev.matches; setMatches(ev.matches); if (typeof ev.scanned === "number") setScanned(ev.scanned); }
           else if (ev.type === "error") setError(ev.text);
         }
@@ -278,7 +293,8 @@ export default function Onboarding() {
   const weakPool = matches !== null && matches.every((m) => m.recommendation !== "pursue");
 
   return (
-    <main className="mx-auto max-w-2xl px-6 pt-14 pb-32">
+    <main className="px-6 pt-14 pb-32">
+     <div className="mx-auto max-w-2xl">
       <Link href="/" className="inline-flex items-center gap-2 text-small font-semibold text-tx">
         <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] font-bold text-white">RO</span>
         RoleOS
@@ -416,9 +432,38 @@ export default function Onboarding() {
         </>
       )}
 
-      {/* ── S2 · Working ticker ── */}
-      {status.length > 0 && !matches && (
-        <Card className="mt-8" elevation="flat">
+      {/* ── S2 · RO working — keep the conversation thread: who she's reading
+          for (goal) and what she's reading (source), so the ticker never floats
+          context-free after "Show me what RO sees". ── */}
+      {running && !mirror && !matches && (
+        <div className="mt-12">
+          <div className="flex items-start gap-3">
+            <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-overline font-bold text-white">RO</span>
+            <div className="flex-1">
+              <h1 className="font-display text-h2 font-semibold leading-snug text-tx">On it — reading your work.</h1>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                {target.trim() && (
+                  <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-bd bg-surf px-3 py-1 text-small text-tx2">
+                    <span className="text-tx3">goal</span>
+                    <span className="truncate text-tx">{target.trim()}</span>
+                  </span>
+                )}
+                {sourceSummary() && (
+                  <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-bd bg-surf px-3 py-1 text-small text-tx2">
+                    <span className="text-tx3">reading</span>
+                    <span className="truncate text-tx">{sourceSummary()}</span>
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Working ticker (only until RO's read lands; the jobs column then carries
+          its own "still comparing…" loader — no double indicator). */}
+      {status.length > 0 && !mirror && !matches && (
+        <Card className="ml-11 mt-5" elevation="flat">
           {status.map((s, i) => {
             const last = i === status.length - 1;
             return (
@@ -440,9 +485,11 @@ export default function Onboarding() {
         </Card>
       )}
 
-      {/* ── S3+4 · Her read & your jobs (two equal columns) ── */}
+     </div>{/* /narrow conversational column */}
+
+      {/* ── S3+4 · Her read & your jobs (two equal columns) — breaks out wide ── */}
       {mirror && (
-        <section className="mt-10">
+        <section className="mx-auto mt-10 max-w-5xl">
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
             {/* READ */}
             <div>
@@ -473,9 +520,10 @@ export default function Onboarding() {
             {/* JOBS */}
             <div>
               <h2 className="font-display text-h2 font-semibold text-tx">Jobs worth your time</h2>
-              {matches ? (
+              {matches || shortlistRoles ? (
                 <JobsColumn
                   matches={matches}
+                  shortlist={shortlistRoles}
                   scanned={scanned}
                   weakPool={weakPool}
                   reranking={reranking}
@@ -507,7 +555,7 @@ export default function Onboarding() {
       {/* Sticky primary CTA — always reachable once results are in */}
       {matches && (
         <div className="fixed inset-x-0 bottom-0 z-30 border-t border-bd bg-surf/95 backdrop-blur">
-          <div className="mx-auto flex max-w-2xl items-center gap-3 px-6 py-3">
+          <div className="mx-auto flex max-w-5xl items-center gap-3 px-6 py-3">
             {signedIn ? (
               <>
                 <Button className="flex-1" onClick={() => (window.location.href = "/feed")}>Go to your feed &rarr;</Button>
@@ -626,8 +674,18 @@ function ReadCard({
   );
 }
 
+function CompLine({ comp }: { comp: Match["comp"] }) {
+  if (!comp?.base_range_usd) return null;
+  return (
+    <span className="font-mono">
+      ${Math.round(comp.base_range_usd[0] / 1000)}k–${Math.round(comp.base_range_usd[1] / 1000)}k base
+    </span>
+  );
+}
+
 function JobsColumn({
   matches,
+  shortlist,
   scanned,
   weakPool,
   reranking,
@@ -637,7 +695,8 @@ function JobsColumn({
   setShowAll,
   rerankNote,
 }: {
-  matches: Match[];
+  matches: Match[] | null;
+  shortlist: ShortlistRole[] | null;
   scanned: number | null;
   weakPool: boolean;
   reranking: boolean;
@@ -647,10 +706,50 @@ function JobsColumn({
   setShowAll: (v: boolean) => void;
   rerankNote: string | null;
 }) {
-  const filtered = matches.filter((m) => filter === "all" || m.recommendation === filter);
-  const shown = showAll ? filtered : filtered.slice(0, 3);
   const tone = { pursue: "bg-suc-bg text-suc-tx", maybe: "bg-warn-bg text-warn-tx", skip: "bg-surf2 text-tx3" } as const;
   const label = { pursue: "go for it", maybe: "maybe", skip: "skip" } as const;
+
+  // ── Pending: recall's done, RO is still reasoning each role. Paint real
+  //    skeleton cards (company/title/comp) so the column fills immediately. ──
+  if (!matches) {
+    const roles = shortlist ?? [];
+    const shown = showAll ? roles : roles.slice(0, 3);
+    return (
+      <>
+        <p className="mt-2 text-small text-tx3">
+          Found {roles.length} worth a real look in {(scanned ?? 0).toLocaleString()} roles — RO&rsquo;s weighing each against you now.
+        </p>
+        <div className="mt-4 space-y-3">
+          {shown.map((m) => (
+            <div key={m.id} className="rounded-xl bg-surf p-5 shadow-sm">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="font-semibold text-tx">{m.company}</p>
+                  <p className="text-small text-tx2">{m.role_title}</p>
+                </div>
+                <span className="mt-1 inline-block h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-primary" aria-label="reasoning" />
+              </div>
+              <div className="mt-3 flex items-center gap-2 text-overline text-tx3">
+                <CompLine comp={m.comp} />
+              </div>
+              <p className="mt-2 text-small italic text-tx3">Reading this one against you…</p>
+            </div>
+          ))}
+        </div>
+        {roles.length > 3 && !showAll && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="mt-3 w-full rounded-xl py-2.5 text-small font-medium text-tx3 transition-colors hover:bg-surf2 hover:text-tx2"
+          >
+            Show {roles.length - 3} more {roles.length - 3 === 1 ? "role" : "roles"} ↓
+          </button>
+        )}
+      </>
+    );
+  }
+
+  const filtered = matches.filter((m) => filter === "all" || m.recommendation === filter);
+  const shown = showAll ? filtered : filtered.slice(0, 3);
   return (
     <>
       <div className="mt-2 flex items-center justify-between gap-3">

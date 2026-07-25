@@ -73,6 +73,24 @@
 
 ## Slice entries (newest first)
 
+### J1 · Onboarding polish — wide results, progressive jobs, run continuity · 2026-07-25 · branch `slice/j1-onboarding`
+- **From live walkthrough feedback.** Four fixes, one model-backed run to verify:
+  - **Wide results.** The two-column read/jobs section was trapped in the page's `max-w-2xl`
+    (288px columns → skinny towers). Results now break out to `max-w-5xl` (488px columns) while
+    S1/S2 stay narrow/conversational; sticky CTA bar widened to match.
+  - **Progressive jobs (perceived latency, no tier cut).** `lib/run-match.ts` split into
+    `recallAndShortlist` (cheap) + `reasonShortlist` (expensive); `matchProfile` composes both.
+    `/api/onboard` emits a `shortlist` event → real skeleton cards (company/title/comp) paint the
+    instant recall's done, then the per-role reasoning upgrades them in place. Jobs column fills
+    early instead of sitting blank ~2min.
+  - **Reason 6, not 10.** The `match` pass now reasons exactly the rendered count (Sonnet coarse-rank
+    still orders the full pool first) — a real latency cut, no model tier changed.
+  - **Run continuity.** After "Show me what RO sees" the composer hid and the ticker floated
+    context-free. Now a working header pins RO + the **goal** chip + a **reading:** source chip
+    above the ticker, and the redundant top ticker is dropped once the read lands.
+- **Audit:** typecheck 0 · lint 0 · 297 vitest green. Verified live end-to-end (continuity header →
+  wide columns → skeleton→full jobs, "Compared all 1,519 — top 6").
+
 ### J1 · Onboarding v2 — value-first, taste-from-minute-one · 2026-07-24 · branch `slice/j1-onboarding`
 - **First Phase-J slice** — the onboarding rebuilt to spec (`docs/specs/onboarding-design.md`)
   on the new design system (grape · Space Grotesk · `components/ui/` primitives). First screen
