@@ -70,6 +70,19 @@ Live at **[ro.roleos.fyi](https://ro.roleos.fyi)**.
 | `docs/security-audit.md` | Phase-5 RLS + secrets audit (green) |
 | `docs/specs/design-system.md` | **Visual design system** — tokens, type, components (the contract for every screen) |
 
+## Docs
+
+Technical-PM / FDE documentation for this repo (grounded in the actual code):
+
+| Doc | What's inside |
+|---|---|
+| [`docs/PRD.md`](docs/PRD.md) | Personas, jobs-to-be-done (the five gates), success metrics, tradeoffs, Now/Next/Later roadmap |
+| [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) | System overview + component and matching-flow Mermaid diagrams; the metered multi-model registry, pgvector matching, quality gate, and the human-gated-outward invariant |
+| [`docs/EVALS.md`](docs/EVALS.md) | Eval ladder (unit → LLM-judge → offline model evals → A/B); named metrics; what's implemented vs roadmap |
+| [`docs/TECHNICAL_NOTES.md`](docs/TECHNICAL_NOTES.md) | 12-point Technical-AI-PM / FDE scorecard with file-level evidence, model/orchestration details, guardrails, cost |
+| [`docs/FDE_JOURNEY.md`](docs/FDE_JOURNEY.md) | Deploying into a real environment: integration, secrets/security, rollout/cutover, observability, de-risking |
+| [`evals/`](evals/) | Self-contained offline eval harness (retrieval precision/recall/F1/MRR) — `npx tsx evals/retrieval/run.ts` |
+
 ## Non-negotiables
 
 - **Human-gated outward** — no send tool exists in the agent; enforced by `tests/invariants/`.
