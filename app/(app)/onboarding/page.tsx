@@ -26,7 +26,8 @@ type Match = {
   why: string;
   gaps: { gap: string; bridgeable: "yes" | "maybe" | "no" }[];
 };
-type Mirror = { statements: string[]; insight: string };
+type Statement = { lead: string; detail: string };
+type Mirror = { statements: Statement[]; insight: string };
 type Variant = "default" | "explore" | "returning" | "signedin-nodata";
 
 const SAMPLE =
@@ -58,6 +59,8 @@ export default function Onboarding() {
   const [reactions, setReactions] = useState<Record<number, MirrorReaction>>({});
   const [rerankNote, setRerankNote] = useState<string | null>(null);
   const [reranked, setReranked] = useState(false);
+  const [showAllMatches, setShowAllMatches] = useState(false);
+  const [jobFilter, setJobFilter] = useState<"all" | "pursue" | "maybe">("all");
 
   // ── context ──
   const [variant, setVariant] = useState<Variant>("default");
@@ -197,13 +200,13 @@ export default function Onboarding() {
     }
   }
 
-  // The mirror includes a visually distinct target-guess. If the user told RO a
-  // target, it's confirmable; if not, RO's guess is drawn from her top verdict —
-  // honest (it's literally what she ranked toward) and correctable → re-rank.
-  const guessText = target.trim()
-    ? `You're after: ${target.trim()}`
+  // A visually distinct target-guess. If the user told RO a target, it's confirmable;
+  // if not, RO's guess is drawn from her top verdict — honest (it's literally what
+  // she ranked toward) and correctable → re-rank.
+  const guess: Statement | null = target.trim()
+    ? { lead: "Your target", detail: target.trim() }
     : matches && matches[0]
-      ? `Looks like you're aiming for roles like ${matches[0].role_title}`
+      ? { lead: "Her guess", detail: `roles like ${matches[0].role_title}` }
       : null;
   const guessIndex = mirror ? mirror.statements.length : -1;
 
@@ -275,7 +278,7 @@ export default function Onboarding() {
   const weakPool = matches !== null && matches.every((m) => m.recommendation !== "pursue");
 
   return (
-    <main className="mx-auto max-w-2xl px-6 py-14">
+    <main className="mx-auto max-w-2xl px-6 pt-14 pb-32">
       <Link href="/" className="inline-flex items-center gap-2 text-small font-semibold text-tx">
         <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] font-bold text-white">RO</span>
         RoleOS
@@ -437,139 +440,117 @@ export default function Onboarding() {
         </Card>
       )}
 
-      {/* ── S3+4 · Her read & your jobs ── */}
+      {/* ── S3+4 · Her read & your jobs (two equal columns) ── */}
       {mirror && (
         <section className="mt-10">
-          <h2 className="font-display text-h3 font-semibold text-tx">How I read you</h2>
-          <p className="mt-1 text-small text-tx3">Tap ✓ if it&rsquo;s you, ✗ if it&rsquo;s off &mdash; every correction makes her sharper, right now.</p>
-          <ul className="mt-4 space-y-2">
-            {mirror.statements.map((s, i) => (
-              <MirrorRow key={i} statement={s} reaction={reactions[i]} onReact={(v, c) => react(i, s, v, false, c)} />
-            ))}
-            {guessText && guessIndex >= 0 && (
-              <MirrorRow
-                statement={guessText}
-                isGuess
-                reaction={reactions[guessIndex]}
-                onReact={(v, c) => {
-                  react(guessIndex, guessText, v, true, c);
-                  if (v === "correct" && c) rerank(c);
-                }}
-              />
-            )}
-          </ul>
-          <Card className="mt-4 border-l-[3px] border-l-primary bg-primary-bg" elevation="flat">
-            <span className="mb-1 block text-overline font-semibold uppercase text-primary">One thing worth knowing</span>
-            <p className="text-body text-tx">{mirror.insight}</p>
-          </Card>
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
+            {/* READ */}
+            <div>
+              <div className="flex items-center gap-2.5">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary text-overline font-bold text-white">RO</span>
+                <h2 className="font-display text-h2 font-semibold text-tx">How I read you</h2>
+              </div>
+              <p className="mt-2 text-small text-tx3">Skim the bold; tap ✓/✗ on anything to sharpen her.</p>
+              <div className="mt-4 space-y-2.5">
+                {mirror.statements.map((s, i) => (
+                  <ReadCard key={i} lead={s.lead} detail={s.detail} reaction={reactions[i]} onReact={(v, c) => react(i, `${s.lead} — ${s.detail}`, v, false, c)} />
+                ))}
+                {guess && guessIndex >= 0 && (
+                  <ReadCard
+                    lead={guess.lead}
+                    detail={guess.detail}
+                    isGuess
+                    reaction={reactions[guessIndex]}
+                    onReact={(v, c) => {
+                      react(guessIndex, `${guess.lead} — ${guess.detail}`, v, true, c);
+                      if (v === "correct" && c) rerank(c);
+                    }}
+                  />
+                )}
+              </div>
+            </div>
+
+            {/* JOBS */}
+            <div>
+              <h2 className="font-display text-h2 font-semibold text-tx">Jobs worth your time</h2>
+              {matches ? (
+                <JobsColumn
+                  matches={matches}
+                  scanned={scanned}
+                  weakPool={weakPool}
+                  reranking={reranking}
+                  filter={jobFilter}
+                  setFilter={setJobFilter}
+                  showAll={showAllMatches}
+                  setShowAll={setShowAllMatches}
+                  rerankNote={rerankNote}
+                />
+              ) : (
+                <div className="mt-6 flex items-center gap-2 rounded-xl bg-surf p-5 text-small text-tx2 shadow-sm">
+                  <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+                  Still comparing you against every open role…
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* full-width row — equal weight, at the bottom */}
+          <div className="mt-12 rounded-2xl border border-primary-bd bg-primary-bg px-6 py-6 sm:px-8">
+            <div className="mx-auto max-w-4xl">
+              <p className="text-overline font-semibold uppercase text-primary">One thing worth knowing</p>
+              <p className="mt-2 text-h3 font-medium leading-relaxed text-tx">{mirror.insight}</p>
+            </div>
+          </div>
         </section>
       )}
 
-      {/* Matches */}
+      {/* Sticky primary CTA — always reachable once results are in */}
       {matches && (
-        <section className="mt-10">
-          <h2 className="font-display text-h3 font-semibold text-tx">
-            Jobs worth your time{" "}
-            <span className="text-small font-normal text-tx3">&middot; compared all {(scanned ?? 0).toLocaleString()} &mdash; these came out on top</span>
-          </h2>
-
-          {weakPool && (
-            <Card className="mt-4 border-l-[3px] border-l-warn" elevation="flat">
-              <p className="text-body leading-relaxed text-tx">
-                Straight with you: nothing&rsquo;s a strong fit this week &mdash; my index runs deep on AI &amp; software and thinner elsewhere. I&rsquo;d rather say that than pad your list. Widen the criteria, or hold the bar? Save this and I&rsquo;ll keep watch either way.
-              </p>
-            </Card>
-          )}
-
-          <div className="mt-4 space-y-3">
-            {matches.map((m) => (
-              <Card key={m.id} elevation="flat" className={reranking ? "opacity-60 transition-opacity" : "transition-opacity"}>
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="font-semibold text-tx">{m.company} &mdash; {m.role_title}</p>
-                    {m.comp?.base_range_usd && (
-                      <p className="mt-0.5 font-mono text-overline text-tx3">
-                        ${Math.round(m.comp.base_range_usd[0] / 1000)}k&ndash;${Math.round(m.comp.base_range_usd[1] / 1000)}k base
-                      </p>
-                    )}
-                  </div>
-                  <Rec rec={m.recommendation} fit={m.fit} />
-                </div>
-                <p className="mt-3 text-body leading-relaxed text-tx2">{m.why}</p>
-                {m.gaps?.length > 0 && (
-                  <div className="mt-3 flex flex-wrap gap-2">
-                    {m.gaps.map((g, i) => (
-                      <span key={i} className="rounded-md bg-surf2 px-2 py-1 text-overline text-tx3" title={`bridgeable: ${g.bridgeable}`}>
-                        gap: {g.gap}
-                      </span>
-                    ))}
-                  </div>
-                )}
-              </Card>
-            ))}
-          </div>
-
-          {/* Re-rank nudge — the correction payoff */}
-          <Card className="mt-4 border-l-[3px] border-l-primary" elevation="flat">
-            {rerankNote ? (
-              <p className="text-body text-tx">{rerankNote}</p>
-            ) : (
-              <>
-                <p className="text-body text-tx">
-                  These are ranked against my guess of what you want. Tell me the real thing and I&rsquo;ll re-rank in seconds.
-                </p>
-                <RerankInline disabled={reranking} onSubmit={rerank} />
-              </>
-            )}
-          </Card>
-
-          {/* ── S5 · Save ── */}
-          <Card className="mt-8" elevation="raised">
-            {!weakPool && matches[0] && (
-              <div className="mb-4 rounded-lg border border-bd bg-surf2 p-4">
-                <p className="text-overline font-semibold uppercase text-tx3">A taste of what happens next</p>
-                <p className="mt-2 text-body leading-relaxed text-tx">
-                  I&rsquo;ll retell one line of your résumé for <span className="font-semibold">{matches[0].company}</span> &mdash; the exact outcome their posting asks for first &mdash; then draft the rest. You approve every word before anything leaves the building.
-                </p>
-              </div>
-            )}
-
+        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-bd bg-surf/95 backdrop-blur">
+          <div className="mx-auto flex max-w-2xl items-center gap-3 px-6 py-3">
             {signedIn ? (
               <>
-                <p className="text-body text-tx">
-                  {savedNote ? "Saved to your hunt — I'm holding onto it and I won't ask again." : "This is yours now."}{" "}
-                  Next I&rsquo;ll retell your résumé for each match, draft the applications, and learn your taste as you react. You press send on anything that leaves the building.
-                </p>
-                <Button className="mt-4" onClick={() => (window.location.href = "/feed")}>Go to your feed &rarr;</Button>
+                <Button className="flex-1" onClick={() => (window.location.href = "/feed")}>Go to your feed &rarr;</Button>
+                <span className="hidden text-small text-tx3 sm:block">{savedNote ? "Saved — I won't ask again." : "Saved to your hunt."}</span>
               </>
             ) : (
               <>
-                <p className="text-body text-tx font-medium">Save free, and I start on:</p>
-                <ul className="mt-3 space-y-2 text-body text-tx2">
-                  <li className="flex gap-2"><span className="text-suc">✓</span> Your résumé, retold for each of your matches</li>
-                  <li className="flex gap-2"><span className="text-suc">✓</span> Cover letters, drafted &mdash; you approve every send</li>
-                  <li className="flex gap-2"><span className="text-suc">✓</span> A week-by-week plan toward an offer</li>
-                </ul>
-                <Button className="mt-4" onClick={saveAndSignIn}>Save my results &mdash; free</Button>
-                <p className="mt-3 text-small text-tx3">
-                  Leave without saving and this genuinely disappears &mdash; nothing is stored without your say-so. Google or a magic email link. No password, ever.
-                </p>
+                <Button className="flex-1" onClick={saveAndSignIn}>Save my results &mdash; free</Button>
+                <span className="hidden text-small text-tx3 sm:block">Nothing is stored unless you save. No password, ever.</span>
               </>
             )}
-          </Card>
-        </section>
+          </div>
+        </div>
       )}
     </main>
   );
 }
 
-function MirrorRow({
-  statement,
+function FilterPills({ opts, val, set }: { opts: [string, string][]; val: string; set: (v: string) => void }) {
+  return (
+    <div className="flex shrink-0 gap-1">
+      {opts.map(([v, label]) => (
+        <button
+          key={v}
+          onClick={() => set(v)}
+          className={`rounded-full px-2.5 py-1 text-overline font-medium transition-colors ${val === v ? "bg-tx text-cloud" : "bg-surf2 text-tx2 hover:bg-surf3"}`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+function ReadCard({
+  lead,
+  detail,
   reaction,
   onReact,
   isGuess = false,
 }: {
-  statement: string;
+  lead: string;
+  detail: string;
   reaction?: MirrorReaction;
   onReact: (verdict: "confirm" | "correct", correction?: string) => void;
   isGuess?: boolean;
@@ -578,33 +559,42 @@ function MirrorRow({
   const [text, setText] = useState("");
   const confirmed = reaction?.verdict === "confirm";
   const corrected = reaction?.verdict === "correct";
+  const base = isGuess
+    ? "bg-primary-bg"
+    : confirmed
+      ? "bg-suc-bg"
+      : corrected
+        ? "bg-warn-bg"
+        : "bg-surf shadow-sm hover:bg-surf2/60";
   return (
-    <li className={`rounded-lg border p-3 ${isGuess ? "border-primary-bd bg-primary-bg" : confirmed ? "border-suc-bd bg-suc-bg" : corrected ? "border-warn-bd bg-warn-bg" : "border-bd bg-surf"}`}>
+    <div className={`rounded-xl p-4 transition-colors ${base}`}>
       <div className="flex items-start justify-between gap-3">
-        <div className="text-body text-tx">
-          {isGuess && <span className="mr-2 rounded bg-primary px-1.5 py-0.5 text-overline font-semibold uppercase text-white">her guess</span>}
-          {statement}
+        <p className="text-body leading-relaxed text-tx2">
+          {isGuess && <span className="mr-2 align-middle rounded bg-primary px-1.5 py-0.5 text-overline font-semibold uppercase text-white">guess</span>}
+          <span className="font-semibold text-tx">{lead}</span>
+          <span className="text-tx3"> — </span>
+          {detail}
           {corrected && reaction?.correction && <span className="mt-1 block text-small text-warn-tx">you: {reaction.correction}</span>}
-        </div>
-        <div className="flex shrink-0 gap-1">
+        </p>
+        <div className="flex shrink-0 gap-0.5">
           <button
             aria-label="Confirm — that's me"
             onClick={() => onReact("confirm")}
-            className={`flex h-7 w-7 items-center justify-center rounded-md border text-sm ${confirmed ? "border-suc bg-suc text-white" : "border-bd2 bg-surf text-tx2 hover:bg-surf2"}`}
+            className={`flex h-7 w-7 items-center justify-center rounded-md text-sm transition-colors ${confirmed ? "bg-suc text-white" : "text-tx3 hover:bg-suc-bg hover:text-suc-tx"}`}
           >
             &#10003;
           </button>
           <button
             aria-label="Correct — that's off"
             onClick={() => setCorrecting((c) => !c)}
-            className={`flex h-7 w-7 items-center justify-center rounded-md border text-sm ${corrected ? "border-warn bg-warn text-white" : "border-bd2 bg-surf text-tx2 hover:bg-surf2"}`}
+            className={`flex h-7 w-7 items-center justify-center rounded-md text-sm transition-colors ${corrected ? "bg-warn text-white" : "text-tx3 hover:bg-warn-bg hover:text-warn-tx"}`}
           >
             &#10007;
           </button>
         </div>
       </div>
       {correcting && (
-        <div className="mt-2 flex gap-2">
+        <div className="mt-2.5 flex gap-2">
           <input
             autoFocus
             value={text}
@@ -632,36 +622,89 @@ function MirrorRow({
           </Button>
         </div>
       )}
-    </li>
-  );
-}
-
-function RerankInline({ disabled, onSubmit }: { disabled: boolean; onSubmit: (t: string) => void }) {
-  const [text, setText] = useState("");
-  return (
-    <div className="mt-3 flex gap-2">
-      <input
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        onKeyDown={(e) => e.key === "Enter" && text.trim() && onSubmit(text.trim())}
-        placeholder="the job you actually want…"
-        disabled={disabled}
-        className="flex-1 rounded-md border border-bd2 bg-surf px-3 py-2 text-small text-tx placeholder:text-tx3 outline-none focus:border-primary focus:shadow-ring disabled:opacity-60"
-      />
-      <Button size="sm" disabled={disabled || !text.trim()} onClick={() => text.trim() && onSubmit(text.trim())}>
-        {disabled ? "Re-ranking…" : "Re-rank"}
-      </Button>
     </div>
   );
 }
 
-function Rec({ rec, fit }: { rec: Match["recommendation"]; fit: number }) {
+function JobsColumn({
+  matches,
+  scanned,
+  weakPool,
+  reranking,
+  filter,
+  setFilter,
+  showAll,
+  setShowAll,
+  rerankNote,
+}: {
+  matches: Match[];
+  scanned: number | null;
+  weakPool: boolean;
+  reranking: boolean;
+  filter: "all" | "pursue" | "maybe";
+  setFilter: (v: "all" | "pursue" | "maybe") => void;
+  showAll: boolean;
+  setShowAll: (v: boolean) => void;
+  rerankNote: string | null;
+}) {
+  const filtered = matches.filter((m) => filter === "all" || m.recommendation === filter);
+  const shown = showAll ? filtered : filtered.slice(0, 3);
+  const tone = { pursue: "bg-suc-bg text-suc-tx", maybe: "bg-warn-bg text-warn-tx", skip: "bg-surf2 text-tx3" } as const;
   const label = { pursue: "go for it", maybe: "maybe", skip: "skip" } as const;
-  const tone = { pursue: "bg-suc-bg text-suc-tx border-suc-bd", maybe: "bg-warn-bg text-warn-tx border-warn-bd", skip: "bg-surf2 text-tx3 border-bd" } as const;
   return (
-    <div className="flex shrink-0 flex-col items-end gap-1">
-      <span className={`rounded-full border px-2.5 py-0.5 text-overline font-semibold ${tone[rec]}`}>{label[rec]}</span>
-      <span className="font-mono text-overline text-tx3">{fit} fit</span>
-    </div>
+    <>
+      <div className="mt-2 flex items-center justify-between gap-3">
+        <p className="text-small text-tx3">Compared all {(scanned ?? 0).toLocaleString()} — top {filtered.length}.</p>
+        <FilterPills opts={[["all", "All"], ["pursue", "Go for it"], ["maybe", "Maybe"]]} val={filter} set={(v) => setFilter(v as "all" | "pursue" | "maybe")} />
+      </div>
+
+      {weakPool && (
+        <div className="mt-4 rounded-xl border-l-2 border-warn bg-surf p-4 shadow-sm">
+          <p className="text-small leading-relaxed text-tx2">
+            Straight with you: nothing&rsquo;s a strong fit this week &mdash; my index runs deep on AI &amp; software and thinner elsewhere. I&rsquo;d rather say that than pad your list. Save this and I&rsquo;ll keep watch.
+          </p>
+        </div>
+      )}
+
+      <div className={`mt-4 space-y-3 ${reranking ? "opacity-60 transition-opacity" : "transition-opacity"}`}>
+        {shown.map((m) => (
+          <div key={m.id} className="rounded-xl bg-surf p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="font-semibold text-tx">{m.company}</p>
+                <p className="text-small text-tx2">{m.role_title}</p>
+              </div>
+              <div className="flex shrink-0 items-center gap-2">
+                <span className="font-mono text-overline text-tx3">{m.fit}</span>
+                <span className={`rounded-full px-2.5 py-0.5 text-overline font-semibold ${tone[m.recommendation]}`}>{label[m.recommendation]}</span>
+              </div>
+            </div>
+            <p className="mt-3 text-small leading-relaxed text-tx2">{m.why}</p>
+            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-overline text-tx3">
+              {m.comp?.base_range_usd && (
+                <span className="font-mono">
+                  ${Math.round(m.comp.base_range_usd[0] / 1000)}k–${Math.round(m.comp.base_range_usd[1] / 1000)}k base
+                </span>
+              )}
+              {m.gaps?.slice(0, 1).map((g, i) => (
+                <span key={i} className="flex items-center gap-1"><span className="text-warn">△</span> {g.gap}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {filtered.length > 3 && !showAll && (
+        <button
+          onClick={() => setShowAll(true)}
+          className="mt-3 w-full rounded-xl py-2.5 text-small font-medium text-tx3 transition-colors hover:bg-surf2 hover:text-tx2"
+        >
+          Show {filtered.length - 3} more {filtered.length - 3 === 1 ? "role" : "roles"} ↓
+        </button>
+      )}
+
+      {rerankNote && <p className="mt-3 text-small text-tx3">{rerankNote}</p>}
+    </>
   );
 }
+

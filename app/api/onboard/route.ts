@@ -124,19 +124,23 @@ export async function POST(req: Request): Promise<Response> {
         // verifiable source of truth and correctly refuse to work.
         send({ type: "resolved", profile: profileText });
 
-        // Mirror + full matching in parallel (both through the quality gate).
-        // matchProfile = rank all 557 by similarity → reason over the closest.
-        send({ type: "status", text: "Comparing you against every open role…" });
-        send({ type: "status", text: "Reading you back, and reasoning about the closest fits…" });
-        const [mirrorRes, matchRes] = await Promise.all([
-          runSkill(mirrorSkill, { userId: "anon", data: { profile: profileText } }),
-          matchProfile(profileText, 8, target ? [target] : []),
-        ]);
+        // Mirror + matching run in parallel, but we EMIT the mirror the moment
+        // it's ready (~30s) instead of waiting for the full match reasoning
+        // (~2min) — so the page fills fast and the user reads while jobs land.
+        send({ type: "status", text: "Reading you back…" });
+        const mirrorPromise = runSkill(mirrorSkill, { userId: "anon", data: { profile: profileText } });
+        const matchPromise = matchProfile(profileText, 6, target ? [target] : []);
 
-        const mirror = parseModelJson<{ statements: string[]; insight: string }>(
-          mirrorRes.verdict.finalOutput,
-        );
-        if (mirror) send({ type: "mirror", statements: mirror.statements, insight: mirror.insight });
+        try {
+          const mirrorRes = await mirrorPromise;
+          const mirror = parseModelJson<{ statements: { lead: string; detail: string }[]; insight: string }>(mirrorRes.verdict.finalOutput);
+          if (mirror) send({ type: "mirror", statements: mirror.statements, insight: mirror.insight });
+        } catch {
+          /* mirror is best-effort — matches still deliver value */
+        }
+
+        send({ type: "status", text: "Comparing you against every open role…" });
+        const matchRes = await matchPromise;
 
         // Slim payload — the UI needs RO's reasoning, not the raw JD JSON.
         const slim = matchRes.matches.map((m) => ({
