@@ -43,7 +43,8 @@ Live at **[ro.roleos.fyi](https://ro.roleos.fyi)**.
 
 - **First build / deploy:** [`SETUP.md`](SETUP.md) then [`docs/setup-deploy.md`](docs/setup-deploy.md)
 - **Picking up development:** [`docs/HANDOFF.md`](docs/HANDOFF.md)
-- **Design source-of-truth:** `../roleos-design/architecture.md`
+- **Design source-of-truth (visual):** [`docs/specs/design-system.md`](docs/specs/design-system.md) — the tokens, type, and components every screen is built on. Live style guide at `/design`.
+- **Design source-of-truth (product/arch):** `../roleos-design/architecture.md`
 
 ### Docs index
 
@@ -58,9 +59,11 @@ Live at **[ro.roleos.fyi](https://ro.roleos.fyi)**.
 | `docs/admin-ingestion.md` | Admin-driven ingestion pipeline (finalized) |
 | `docs/explore-index.md` | Public browsable role index (spec) |
 | `docs/security-audit.md` | Phase-5 RLS + secrets audit (green) |
+| `docs/specs/design-system.md` | **Visual design system** — tokens, type, components (the contract for every screen) |
 
 ## Non-negotiables
 
 - **Human-gated outward** — no send tool exists in the agent; enforced by `tests/invariants/`.
 - **Quality over latency** — never trade output quality for speed; optimize speed separately.
 - **Truth-gated** — drafted claims must trace to your real profile or they're flagged for your eyes.
+- **One design system** — every screen is built on [`docs/specs/design-system.md`](docs/specs/design-system.md) (grape accent · cool neutrals · Space Grotesk + Plus Jakarta Sans · two faces). No warm-paper, no Inter, no ad-hoc palettes. Each Phase-J slice rebuilds its screen fully on it.

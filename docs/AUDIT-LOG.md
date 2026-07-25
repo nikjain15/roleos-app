@@ -17,6 +17,14 @@
 
 ## Standing learnings (inherit these — don't relearn)
 
+- **One design system (`docs/specs/design-system.md`, approved 2026-07-24).** Every screen
+  is built on the tokens in `app/globals.css` + `tailwind.config.ts`: grape accent
+  (`primary`, not `info`-blue), cool neutrals, Space Grotesk display + Plus Jakarta Sans
+  body, tidy type/radius scale, light app + dark `.theme-dark` marketing. Use `components/ui/`
+  primitives; never hard-code hex or arbitrary px. **Each Phase-J slice rebuilds its screen
+  fully on this system** (a clean replacement, not a half-migration). Legacy screens not yet
+  rebuilt still render on the new neutrals but keep `info`-blue where they hard-coded it —
+  that's expected until their slice lands. Keep `/design` current when adding a new primitive.
 - **Never run two `tsc`/`vitest` concurrently** in this repo — it hangs and can corrupt
   `node_modules` (fix: `npm ci`). Run checks **sequentially**. `npm run typecheck` exits 0
   silently on success; `tsc` takes ~30–60s — be patient, it's not hung.
