@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Button } from "@/components/ui";
 import {
   parseThread,
   serializeThread,
@@ -11,15 +12,105 @@ import {
 } from "@/lib/explore-thread";
 
 /**
- * Conversational "Ask RO about the Index" (Slice 6 rewrite). Multi-turn: each Q&A
- * stays in a thread, follow-up chips continue the conversation, and cited roles are
- * clickable. Answers are grounded by `/api/explore/ask` (index_qa) — RO never
- * invents. The convert door (share profile → your fit) stays in view.
+ * Conversational "Ask RO about the Index" — a real chat surface (rebuilt on the
+ * J1 design system). Your messages sit right; RO answers on the left with her
+ * avatar and a live typing indicator while she reads. Answers are grounded by
+ * `/api/explore/ask` (index_qa) — RO never invents — with cited roles + follow-ups.
  *
- * W6: the thread persists across page loads (localStorage, browser-only — nothing
- * server-side for anon visitors; validated on read, capped, clearable).
+ * Memory: the thread persists across page loads (localStorage, browser-only for
+ * anon visitors — validated, capped, clearable) and the last turns ride along as
+ * context so follow-ups actually follow up. The convert door stays in view.
  */
 type Scope = { company?: string; archetype?: string };
+
+function Avatar() {
+  return (
+    <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-overline font-bold text-white">
+      RO
+    </span>
+  );
+}
+
+function TypingDots() {
+  return (
+    <span className="flex items-center gap-1 py-1" aria-label="RO is reading">
+      {[0, 1, 2].map((i) => (
+        <span
+          key={i}
+          className="h-1.5 w-1.5 animate-bounce rounded-full bg-tx3"
+          style={{ animationDelay: `${i * 0.15}s` }}
+        />
+      ))}
+    </span>
+  );
+}
+
+// Inline **bold** → <strong> (React-escaped; no HTML injection).
+function inline(text: string) {
+  return text.split(/(\*\*[^*]+\*\*)/g).map((p, i) => {
+    const m = p.match(/^\*\*([^*]+)\*\*$/);
+    return m ? (
+      <strong key={i} className="font-semibold text-tx">{m[1]}</strong>
+    ) : (
+      <span key={i}>{p}</span>
+    );
+  });
+}
+
+// Minimal markdown for chat answers: paragraphs, bullet lists, bold, line breaks.
+function Answer({ text }: { text: string }) {
+  const blocks = text.trim().split(/\n{2,}/);
+  return (
+    <div className="space-y-2.5 text-body leading-relaxed text-tx">
+      {blocks.map((block, bi) => {
+        const lines = block.split("\n").filter((l) => l.trim());
+        const isList = lines.length > 0 && lines.every((l) => /^\s*[-•*]\s+/.test(l));
+        if (isList) {
+          return (
+            <ul key={bi} className="ml-1 space-y-1">
+              {lines.map((l, li) => (
+                <li key={li} className="flex gap-2">
+                  <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-tx3" />
+                  <span>{inline(l.replace(/^\s*[-•*]\s+/, ""))}</span>
+                </li>
+              ))}
+            </ul>
+          );
+        }
+        return (
+          <p key={bi}>
+            {block.split("\n").map((l, li, arr) => (
+              <span key={li}>
+                {inline(l)}
+                {li < arr.length - 1 && <br />}
+              </span>
+            ))}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
+function CitedRoles({ cited }: { cited: Cited[] }) {
+  if (cited.length === 0) return null;
+  return (
+    <div className="mt-3 border-t border-bd pt-3">
+      <p className="mb-1.5 text-overline font-semibold uppercase text-tx3">Roles RO looked at</p>
+      <div className="flex flex-wrap gap-1.5">
+        {cited.map((c) => (
+          <Link
+            key={c.id}
+            href={`/explore/posting/${c.id}`}
+            className="rounded-full bg-surf2 px-2.5 py-0.5 text-small text-tx2 transition-colors hover:text-primary"
+          >
+            {c.role_title} · {c.company}
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function AskRo({
   scope,
@@ -33,11 +124,15 @@ export default function AskRo({
   const [q, setQ] = useState("");
   const [busy, setBusy] = useState(false);
   const [turns, setTurns] = useState<Turn[]>([]);
+  const [pending, setPending] = useState<string | null>(null); // in-flight question (shown instantly)
   const [error, setError] = useState<string | null>(null);
   const threadEnd = useRef<HTMLDivElement>(null);
   const about = label ? ` about ${label}` : " about the Index";
 
-  // W6: restore the thread after mount (hydration-safe), persist on change.
+  const scrollToEnd = () =>
+    setTimeout(() => threadEnd.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 50);
+
+  // Restore the thread after mount (hydration-safe), persist on change.
   const [restored, setRestored] = useState(false);
   useEffect(() => {
     try {
@@ -68,6 +163,8 @@ export default function AskRo({
     setBusy(true);
     setError(null);
     setQ("");
+    setPending(text);
+    scrollToEnd();
     try {
       const history = turns.slice(-3).map((t) => ({ q: t.q, a: t.a }));
       const res = await fetch("/api/explore/ask", {
@@ -88,118 +185,132 @@ export default function AskRo({
           ...t,
           { q: text, a: data.answer ?? "", cited: data.cited ?? [], followups: data.followups ?? [] },
         ]);
-        setTimeout(() => threadEnd.current?.scrollIntoView({ behavior: "smooth", block: "nearest" }), 50);
+        scrollToEnd();
       }
     } catch {
       setError("Network hiccup — try again.");
     } finally {
+      setPending(null);
       setBusy(false);
     }
   }
 
   const started = turns.length > 0;
   const latestFollowups = started ? turns[turns.length - 1].followups : [];
+  const chips = busy ? [] : started ? latestFollowups : suggestions;
 
   return (
-    <div className="mt-8 rounded-xl border border-bd bg-surf2 p-5">
-      <p className="text-sm font-semibold text-tx">Ask RO{about}</p>
-      <p className="mt-1 text-[13px] text-tx2">
-        RO answers from what it&apos;s actually read — requirements, who sponsors visas, what they pay
-        when they say. Ask follow-ups; it remembers the thread.
-      </p>
+    <div className="mt-8 overflow-hidden rounded-2xl border border-bd bg-surf2">
+      {/* Header */}
+      <div className="flex items-start gap-3 border-b border-bd px-5 py-4">
+        <Avatar />
+        <div className="flex-1">
+          <p className="font-display text-h3 font-semibold text-tx">Ask RO{about}</p>
+          <p className="mt-0.5 text-small leading-relaxed text-tx2">
+            She answers from what she&apos;s actually read — requirements, who sponsors visas, what they pay when
+            they say. Ask follow-ups; she remembers the thread.
+          </p>
+        </div>
+        {started && (
+          <button onClick={clearThread} className="shrink-0 text-small text-tx3 underline hover:text-tx">
+            clear
+          </button>
+        )}
+      </div>
 
-      {/* Conversation thread */}
-      {started && (
-        <div className="mt-4 space-y-4">
-          <div className="flex items-center justify-between">
-            <p className="text-[10px] uppercase tracking-wide text-tx3">
-              Your conversation — saved in this browser only
-            </p>
-            <button onClick={clearThread} className="text-[11px] text-tx3 underline hover:text-tx">
-              clear conversation
-            </button>
-          </div>
+      {/* Conversation */}
+      <div className="px-5 py-4">
+        {started && (
+          <p className="mb-3 text-center text-overline text-tx3">
+            Picking up where you left off — saved in this browser only
+          </p>
+        )}
+        <div className="space-y-4">
           {turns.map((t, i) => (
-            <div key={i}>
-              <p className="text-[13px] font-medium text-tx2">
-                <span className="text-tx3">You:</span> {t.q}
-              </p>
-              <div className="mt-1.5 rounded-lg border border-bd bg-surf p-3">
-                <p className="whitespace-pre-wrap text-[14px] leading-relaxed text-tx">{t.a}</p>
-                {t.cited.length > 0 && (
-                  <div className="mt-3 border-t border-bd pt-3">
-                    <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wide text-tx3">
-                      Roles RO looked at
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {t.cited.map((c) => (
-                        <Link
-                          key={c.id}
-                          href={`/explore/posting/${c.id}`}
-                          className="rounded-full bg-surf2 px-2 py-0.5 text-[11px] text-tx2 hover:text-primary"
-                        >
-                          {c.role_title} · {c.company}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
+            <div key={i} className="space-y-2.5">
+              {/* You */}
+              <div className="flex justify-end">
+                <p className="max-w-[80%] rounded-2xl rounded-br-md bg-primary px-4 py-2.5 text-body leading-relaxed text-white">
+                  {t.q}
+                </p>
+              </div>
+              {/* RO */}
+              <div className="flex gap-2.5">
+                <Avatar />
+                <div className="max-w-[85%] rounded-2xl rounded-tl-md bg-surf px-4 py-3 shadow-sm">
+                  <Answer text={t.a} />
+                  <CitedRoles cited={t.cited} />
+                </div>
               </div>
             </div>
           ))}
+
+          {/* In-flight: your message + RO typing */}
+          {pending && (
+            <div className="space-y-2.5">
+              <div className="flex justify-end">
+                <p className="max-w-[80%] rounded-2xl rounded-br-md bg-primary px-4 py-2.5 text-body leading-relaxed text-white">
+                  {pending}
+                </p>
+              </div>
+              <div className="flex gap-2.5">
+                <Avatar />
+                <div className="rounded-2xl rounded-tl-md bg-surf px-4 py-3 shadow-sm">
+                  <TypingDots />
+                </div>
+              </div>
+            </div>
+          )}
           <div ref={threadEnd} />
         </div>
-      )}
 
-      {/* Input */}
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          ask(q);
-        }}
-        className="mt-3 flex gap-2"
-      >
-        <input
-          value={q}
-          onChange={(e) => setQ(e.target.value)}
-          aria-label={`Ask RO${about}`}
-          placeholder={started ? "Ask a follow-up…" : `Ask RO${about}…`}
-          className="flex-1 rounded-lg border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none placeholder:text-tx3 focus:border-primary"
-        />
-        <button
-          type="submit"
-          disabled={busy || q.trim().length < 3}
-          className="rounded-md bg-primary px-4 py-2 text-xs font-medium text-white disabled:opacity-40"
+        {error && <p className="mt-3 text-small text-warn-tx">{error}</p>}
+
+        {/* Chips */}
+        {chips.length > 0 && (
+          <div className="mt-4 flex flex-wrap gap-2">
+            {chips.map((s) => (
+              <button
+                key={s}
+                onClick={() => ask(s)}
+                className="rounded-full border border-bd bg-surf px-3 py-1.5 text-small text-tx2 transition-colors hover:border-primary hover:text-primary"
+              >
+                {s}
+              </button>
+            ))}
+          </div>
+        )}
+
+        {/* Composer */}
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            ask(q);
+          }}
+          className="mt-4 flex items-center gap-2 rounded-xl border border-bd bg-surf px-2 py-1.5 shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring"
         >
-          {busy ? "RO's reading…" : started ? "Send" : "Ask"}
-        </button>
-      </form>
+          <input
+            value={q}
+            onChange={(e) => setQ(e.target.value)}
+            aria-label={`Ask RO${about}`}
+            placeholder={started ? "Ask a follow-up…" : `Ask RO${about}…`}
+            className="flex-1 bg-transparent px-2 py-1.5 text-body text-tx outline-none placeholder:text-tx3"
+          />
+          <Button type="submit" size="sm" disabled={busy || q.trim().length < 3}>
+            {busy ? "Reading…" : "Send"}
+          </Button>
+        </form>
+      </div>
 
-      {/* Chips: starter suggestions before the thread, follow-ups after each answer */}
-      {!busy && (started ? latestFollowups : suggestions).length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-2">
-          {(started ? latestFollowups : suggestions).map((s) => (
-            <button
-              key={s}
-              onClick={() => ask(s)}
-              className="rounded-full border border-bd bg-surf px-2.5 py-1 text-xs text-tx2 hover:text-primary"
-            >
-              {s}
-            </button>
-          ))}
-        </div>
-      )}
-
-      {error && <p className="mt-3 text-[13px] text-warn">{error}</p>}
-
-      <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-bd pt-4">
+      {/* Convert door */}
+      <div className="flex flex-wrap items-center gap-3 border-t border-bd bg-surf px-5 py-3">
         <Link
-          href="/login?next=/onboarding"
-          className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white"
+          href="/onboarding"
+          className="rounded-lg bg-primary px-3.5 py-2 text-small font-semibold text-white transition-colors hover:bg-primary-hover"
         >
           Share your profile → see your fit
         </Link>
-        <span className="text-[11px] text-tx3">RO scores your fit on every role.</span>
+        <span className="text-small text-tx3">RO scores your fit on every role.</span>
       </div>
     </div>
   );
