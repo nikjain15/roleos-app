@@ -73,6 +73,30 @@
 
 ## Slice entries (newest first)
 
+### J1 · Onboarding v2 — value-first, taste-from-minute-one · 2026-07-24 · branch `slice/j1-onboarding`
+- **First Phase-J slice** — the onboarding rebuilt to spec (`docs/specs/onboarding-design.md`)
+  on the new design system (grape · Space Grotesk · `components/ui/` primitives). First screen
+  fully replaced, not re-skinned (per the design-system policy).
+- **Built:** S1 arrive (three inputs + why-lines · optional target · reactive **sharpness meter**
+  1→4 · Explore-arrival `?from=role:` + returning-anon + signed-in-no-data variants · ephemerality
+  note) → S2 plain-English ticker → S3+4 **tappable mirror** (✓/✗ per statement, free-text
+  corrections) + a visually distinct **target-guess** whose correction triggers a live **re-rank**
+  (`/api/onboard/rerank`, instant-ack + async re-sort) → weak-pool + thin/junk recoveries → S5 save
+  (taste-of-next-work + 3 cards + ephemerality). S1 target now biases `matchProfile` recall.
+- **Data contract (the moat):** `lib/onboarding-events.ts` maps every pre-save action — ✓/✗,
+  corrections, target, re-rank — to `decision_events` (corrections weight 3, confirms 1, target 3,
+  re-rank 2). `/api/save` writes the batch **first-auth-only (idempotent)**, zod-validated, RLS-scoped,
+  append-only. Pending-work handoff (`SaveOnboarding`) carries the actions through login unchanged.
+- **Guards:** `lib/jargon.ts` blocklist + `isPlainEnglish` (ticker copy honesty). Human-gated-outward
+  untouched (no send path). Nothing persists pre-auth.
+- **Audit:** typecheck 0 · lint 0 · **297 vitest** (10 net-new: jargon + save-payload mapper incl.
+  weights/idempotency/determinism). Page DOM verified live (S1 renders, sharpness meter reactive,
+  grape tokens); full run→mirror→match→re-rank is model-backed (~150s) so covered by unit contracts.
+- **Deferred within-slice (noted in PR):** the live **retold-résumé-bullet** taste line (draft-tier
+  call, PRD §7 flag) ships as honest framing here — live call is a fast follow-up; **S7 feed
+  first-minute** (goal-seam card) lands with J3 (feed is J3's surface). E2E specs to add in the J1
+  follow-up. Screenshot compositor in the harness was flaky — verified via DOM + reactive JS instead.
+
 ### X11 · Rejection → growth loop · 2026-07-05 · branch `v2/x11-rejection-growth`
 - **PRD-first** (`docs/specs/x11-rejection-growth.md`; approved via PR #55). A rejection was a
   dead end — nothing learned, morale hit. X11 turns it into a calm, **opt-in** two-minute

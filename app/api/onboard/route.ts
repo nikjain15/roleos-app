@@ -38,10 +38,13 @@ export async function POST(req: Request): Promise<Response> {
   }
 
 
-  const body = (await req.json().catch(() => ({}))) as { profile?: string };
+  const body = (await req.json().catch(() => ({}))) as { profile?: string; target?: string };
   if (typeof body.profile === "string" && body.profile.length > 200_000) {
     return Response.json({ error: "that's too much text — trim it to the CV itself" }, { status: 400 });
   }
+  // Optional S1 target ("What job do you want next?") — biases recall so the
+  // shortlist reflects what they told us, not just their history (PRD §4).
+  const target = typeof body.target === "string" ? body.target.trim().slice(0, 500) : "";
   // Keep the RAW input through the gate + assess + URL-detection (normalizing
   // here would strip a URL-only input to empty). Noise-stripping happens later,
   // on the actual content we match on (real paste or a fetched profile).
@@ -127,7 +130,7 @@ export async function POST(req: Request): Promise<Response> {
         send({ type: "status", text: "Reading you back, and reasoning about the closest fits…" });
         const [mirrorRes, matchRes] = await Promise.all([
           runSkill(mirrorSkill, { userId: "anon", data: { profile: profileText } }),
-          matchProfile(profileText, 8),
+          matchProfile(profileText, 8, target ? [target] : []),
         ]);
 
         const mirror = parseModelJson<{ statements: string[]; insight: string }>(

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
+import { onboardingEvents, type OnboardingActions } from "@/lib/onboarding-events";
 
 /**
  * Save what RO found during onboarding, once the user has signed up. Writes are
@@ -39,10 +40,31 @@ export async function POST(req: Request): Promise<Response> {
       mirror: z.unknown().optional(),
       linkedin_url: z.string().max(300).nullable().optional(),
       matches: z.array(z.record(z.string(), z.unknown())).max(50).optional(),
+      // J1: the pre-save actions (✓/✗ per statement, corrections, target, re-rank)
+      // that become the taste model's first decision_events (PRD §5.2).
+      onboarding: z
+        .object({
+          target: z.string().max(500).nullable().optional(),
+          reranked: z.boolean().optional(),
+          scanned: z.number().int().nonnegative().optional(),
+          savedMatches: z.number().int().nonnegative().optional(),
+          mirrorReactions: z
+            .array(
+              z.object({
+                statement: z.string().max(2000),
+                verdict: z.enum(["confirm", "correct"]),
+                correction: z.string().max(2000).optional(),
+                isGuess: z.boolean().optional(),
+              }),
+            )
+            .max(40)
+            .optional(),
+        })
+        .optional(),
     }),
   );
   if (!parsed.ok) return parsed.response;
-  const body = parsed.data as unknown as SaveBody;
+  const body = parsed.data as unknown as SaveBody & { onboarding?: OnboardingActions };
 
   // master_profile (projection) — the living source of truth starts here.
   const { error: mpErr } = await supabase.from("master_profile").upsert(
@@ -70,13 +92,24 @@ export async function POST(req: Request): Promise<Response> {
     if (mErr) return NextResponse.json({ error: mErr.message }, { status: 500 });
   }
 
-  // append-only decision_event — the substrate the taste model is built from.
-  await supabase.from("decision_events").insert({
-    user_id: user.id,
-    kind: "onboarding",
-    action: "view",
-    payload: { scanned: 557, saved_matches: body.matches?.length ?? 0 },
-  });
+  // append-only decision_events — the substrate the taste model is built from.
+  // Idempotent on retry: only write the onboarding batch on FIRST save (no prior
+  // onboarding events for this user). Corrections land at high weight (PRD §5.2).
+  const { count: priorOnboarding } = await supabase
+    .from("decision_events")
+    .select("id", { count: "exact", head: true })
+    .eq("kind", "onboarding");
+
+  if ((priorOnboarding ?? 0) === 0) {
+    const actions: OnboardingActions = {
+      ...(body.onboarding ?? {}),
+      scanned: body.onboarding?.scanned ?? 557,
+      savedMatches: body.matches?.length ?? 0,
+    };
+    const rows = onboardingEvents(actions).map((r) => ({ ...r, user_id: user.id }));
+    const { error: deErr } = await supabase.from("decision_events").insert(rows);
+    if (deErr) return NextResponse.json({ error: deErr.message }, { status: 500 });
+  }
 
   return NextResponse.json({ ok: true });
 }
