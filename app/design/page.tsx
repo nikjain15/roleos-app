@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Button, Badge, Card, Input } from "@/components/ui";
 
 /**
  * RoleOS design system — living style guide. Public route (/design). Renders the
@@ -103,57 +104,48 @@ export default function DesignSystem() {
             </div>
           </Section>
 
-          {/* Buttons */}
-          <Section label="Buttons">
+          {/* Buttons — components/ui/Button */}
+          <Section label="Buttons · components/ui/Button">
             <div className="flex flex-wrap items-center gap-3">
-              <button className="rounded-md bg-primary text-primary-tx px-4 py-2 text-small font-semibold hover:bg-primary-hover transition-colors">Primary</button>
-              <button className="rounded-md border border-bd2 bg-surf text-tx px-4 py-2 text-small font-semibold hover:bg-surf2 transition-colors">Secondary</button>
-              <button className="rounded-md text-primary px-4 py-2 text-small font-semibold hover:bg-primary-bg transition-colors">Ghost</button>
-              <button className="rounded-md bg-spark text-spark-ink px-4 py-2 text-small font-bold hover:opacity-90 transition-opacity">Spark CTA</button>
-              <button className="rounded-md bg-dng text-white px-4 py-2 text-small font-semibold hover:opacity-90 transition-opacity">Danger</button>
-              <button disabled className="rounded-md bg-surf2 text-tx3 px-4 py-2 text-small font-semibold cursor-not-allowed">Disabled</button>
+              <Button variant="primary">Primary</Button>
+              <Button variant="secondary">Secondary</Button>
+              <Button variant="ghost">Ghost</Button>
+              <Button variant="spark">Spark CTA</Button>
+              <Button variant="danger">Danger</Button>
+              <Button disabled>Disabled</Button>
+              <Button size="sm">Small</Button>
             </div>
           </Section>
 
-          {/* Inputs */}
-          <Section label="Inputs">
+          {/* Inputs — components/ui/Input */}
+          <Section label="Inputs · components/ui/Input">
             <div className="grid sm:grid-cols-2 gap-3 max-w-xl">
-              <input placeholder="Default input" className="rounded-md border border-bd2 bg-surf px-3 py-2 text-body text-tx placeholder:text-tx3 focus:outline-none focus:border-primary focus:shadow-ring transition-shadow" />
-              <input placeholder="Focus me (grape ring)" className="rounded-md border border-bd2 bg-surf px-3 py-2 text-body text-tx placeholder:text-tx3 focus:outline-none focus:border-primary focus:shadow-ring transition-shadow" />
+              <Input placeholder="Default input" />
+              <Input placeholder="Invalid (danger border)" invalid />
             </div>
           </Section>
 
-          {/* Badges / states */}
-          <Section label="Status — pill · text · faint bg · border, per state">
+          {/* Badges / states — components/ui/Badge */}
+          <Section label="Status · components/ui/Badge">
             <div className="flex flex-wrap gap-2">
-              {[
-                ["Info", "info"],
-                ["Pursue", "suc"],
-                ["Aging", "warn"],
-                ["Closed", "dng"],
-              ].map(([label, k]) => (
-                <span key={k} className="inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-small font-medium border"
-                  style={{ background: `var(--${k}-bg)`, color: `var(--${k}-tx)`, borderColor: `var(--${k}-bd)` }}>
-                  <span className="h-1.5 w-1.5 rounded-full" style={{ background: `var(--${k})` }} />
-                  {label}
-                </span>
-              ))}
+              <Badge tone="info" dot>Info</Badge>
+              <Badge tone="suc" dot>Pursue</Badge>
+              <Badge tone="warn" dot>Aging</Badge>
+              <Badge tone="dng" dot>Closed</Badge>
+              <Badge tone="primary" dot>RO</Badge>
+              <Badge tone="neutral">Neutral</Badge>
             </div>
           </Section>
 
-          {/* Cards + elevation */}
-          <Section label="Cards & elevation">
+          {/* Cards + elevation — components/ui/Card */}
+          <Section label="Cards & elevation · components/ui/Card">
             <div className="grid sm:grid-cols-3 gap-4">
-              {[
-                ["Flat", "border border-bd"],
-                ["Raised", "border border-bd shadow-md"],
-                ["Floating", "shadow-lg"],
-              ].map(([label, cls]) => (
-                <div key={label} className={`rounded-xl bg-surf p-5 ${cls}`}>
-                  <div className="text-section font-semibold text-tx">{label} card</div>
-                  <p className="text-small text-tx2 mt-1">Radius xl · surface · {label.toLowerCase()} depth. The unit everything sits in.</p>
-                  <button className="mt-4 rounded-md bg-primary text-primary-tx px-3 py-1.5 text-small font-semibold">Action</button>
-                </div>
+              {(["flat", "raised", "floating"] as const).map((el) => (
+                <Card key={el} elevation={el}>
+                  <div className="text-section font-semibold text-tx capitalize">{el} card</div>
+                  <p className="text-small text-tx2 mt-1">Radius xl · surface · {el} depth. The unit everything sits in.</p>
+                  <Button size="sm" className="mt-4">Action</Button>
+                </Card>
               ))}
             </div>
           </Section>

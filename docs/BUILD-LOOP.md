@@ -21,12 +21,16 @@ to `main` auto-deploys (`deploy.yml`). Nothing reaches `ro.roleos.fyi` without y
 
 ## Per-iteration algorithm
 
-1. **Orient.** Read `docs/specs/architecture-buildplan.md` (build order),
-   `docs/specs/goal-engine.md`, `docs/AUDIT-DIMENSIONS.md`, `docs/AUDIT-LOG.md` (learnings so
-   far), and auto-memory. Find the **next unstarted slice** (or resume the in-progress one).
+1. **Orient.** Read `docs/specs/design-system.md` (the visual contract),
+   `docs/specs/architecture-buildplan.md` (build order), `docs/specs/goal-engine.md`,
+   `docs/AUDIT-DIMENSIONS.md`, `docs/AUDIT-LOG.md` (learnings so far), and auto-memory. Find
+   the **next unstarted slice** (or resume the in-progress one).
 2. **Branch.** `git checkout main && git pull && git checkout -b slice/<n>-<name>`. Never
    commit to `main`.
-3. **Build** the slice against its spec + acceptance criteria. Thin, coherent commits.
+3. **Build** the slice against its spec + acceptance criteria, **fully on the design system**
+   (`docs/specs/design-system.md` — grape tokens, type scale, `components/ui/` primitives; no
+   `info`-blue-as-accent, no hard-coded hex/px). Each slice **replaces** its old screen on the
+   new system — a clean rebuild, not a partial re-skin. Thin, coherent commits.
 4. **Audit — run D1–D10** (`docs/AUDIT-DIMENSIONS.md`) **sequentially** (never concurrent
    tsc/vitest — it corrupts node_modules). Fix until green. Cover the scenario library for
    this surface (personas + edge/negative + cross-user RLS + injection + mobile + a11y).

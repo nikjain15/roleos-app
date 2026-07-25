@@ -70,7 +70,12 @@ and tracking are baked into each step. Weights: `body` 450 · `medium` 500 · `s
 - **Motion:** `--ease` (cubic-bezier(.2,0,0,1)), durations `--dur-fast/–dur/–dur-slow`
   (120/180/260ms). Respect `prefers-reduced-motion` (handled globally).
 
-## 6 · Component conventions (from the style guide)
+## 6 · Component conventions — use the primitives
+
+**Build on `components/ui/` — don't hand-roll these.** `import { Button, Badge, Card, Input }
+from "@/components/ui"`. They encode the rules below on the tokens, so every screen matches
+and a rule change is one edit. The `/design` style guide renders them.
+
 
 - **Buttons:** primary = `bg-primary text-primary-tx`, hover `bg-primary-hover`; secondary =
   `border-bd2 bg-surf`; ghost = `text-primary hover:bg-primary-bg`; spark CTA (rare) =
@@ -86,13 +91,19 @@ and tracking are baked into each step. Weights: `body` 450 · `medium` 500 · `s
 - Volt is decorative — never rely on it for text contrast or as the only signal.
 - State is never color-only — pair with a label/icon (pills already do).
 
-## 8 · Migration (how existing screens adopt this)
+## 8 · Migration — replace, don't re-skin (per J-slice)
 
-The previous warm-paper tokens were replaced in place; legacy screens keep working because
-they reference the same names (`bg-surf`, `text-tx2`, `info`…). They render on the new cool
-neutrals immediately but still use blue where they hard-coded `info` — those turn grape as
-each surface is **rebuilt in its Phase-J slice**. Auto dark-mode (`prefers-color-scheme`) was
-replaced by the intentional `.theme-dark` marketing face; the app is light-first by decision.
+**Policy (approved 2026-07-24):** there is one design system, and each screen adopts it by
+being **rebuilt on it in its Phase-J slice** — a clean replacement using these tokens and the
+`components/ui/` primitives, not a partial find-replace. New work follows the system entirely.
 
-**Do, per J-slice:** build against these tokens, add nothing to `globals.css` without a
-reason noted here, and keep `/design` current when a genuinely new primitive is introduced.
+The old warm-paper tokens were replaced in place, so legacy screens not yet rebuilt keep
+working — they render on the new cool neutrals immediately, but still show `info`-blue where
+they hard-coded it (the old accent). That's expected and temporary: it disappears when that
+screen's slice lands. Auto dark-mode (`prefers-color-scheme`) was replaced by the intentional
+`.theme-dark` marketing face; the app is light-first by decision.
+
+**Do, per J-slice:** rebuild the screen fully on the tokens + primitives (grape accent, the
+type scale, `Button`/`Badge`/`Card`/`Input`); use `info` only for genuinely informational
+messaging, never as the action accent. Add nothing to `globals.css` without a reason noted
+here, and keep `/design` current when a genuinely new primitive is introduced.

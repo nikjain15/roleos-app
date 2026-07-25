@@ -6,10 +6,11 @@ full-stack engineer: design before code, proven/boring tech, security + data
 model right from day one, thin verifiable slices, no quality compromises.
 
 ## STEP 1 — read these before doing anything (absolute paths)
-1. `/Users/nikjain/Documents/Applying for AI Roles/roleos-design/architecture.md` — THE CONTRACT (approved). Implement it; flag + ask before diverging.
-2. `/Users/nikjain/Documents/Applying for AI Roles/roleos-design/journey.html` — product model.
-3. `/Users/nikjain/Documents/Applying for AI Roles/roleos-design/ro-voice.html` — RO's voice; governs EVERY user-facing string (candid-never-cold; no generic SaaS copy).
-4. Your auto-memory `MEMORY.md` + linked files (esp. `roleos-phase1.md` = the live build log, `roleos-build-decisions.md`, `roleos-quality-over-time.md`).
+1. `docs/specs/design-system.md` — **THE VISUAL CONTRACT (approved 2026-07-24).** Every screen is built on these tokens/type/components (grape accent · cool neutrals · Space Grotesk + Plus Jakarta Sans · light app + dark marketing). Live style guide at `/design`. No warm-paper, no Inter, no ad-hoc palettes.
+2. `/Users/nikjain/Documents/Applying for AI Roles/roleos-design/architecture.md` — THE PRODUCT/ARCH CONTRACT (approved). Implement it; flag + ask before diverging. (Its visual palette/type is superseded by design-system.md.)
+3. `/Users/nikjain/Documents/Applying for AI Roles/roleos-design/journey.html` — product model.
+4. `/Users/nikjain/Documents/Applying for AI Roles/roleos-design/ro-voice.html` — RO's voice; governs EVERY user-facing string (candid-never-cold; no generic SaaS copy).
+5. Your auto-memory `MEMORY.md` + linked files (esp. `roleos-phase1.md` = the live build log, `roleos-build-decisions.md`, `roleos-quality-over-time.md`, `roleos-design-system.md`).
 
 ## Repo + how to run
 - Repo: `/Users/nikjain/Documents/Applying for AI Roles/roleos/` (git; commit per slice, end messages with `Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>`).
@@ -17,7 +18,7 @@ model right from day one, thin verifiable slices, no quality compromises.
 - Secrets are on disk, gitignored: `roleos/.dev.vars` (Worker/scripts) + `roleos/.env.local` (Next dev). Both hold Anthropic + Supabase (url/anon/service_role) + Cloudflare (account id `430f00d6622c766342f89a4e6a2261f6` + Workers AI token). **CLOUDFLARE_API_TOKEN is deliberately NOT in .env.local** (wrangler grabs it for dev and it lacks dev perms; dev uses wrangler OAuth). Supabase project ref `qaubhkrgcdllnqvtrccr`; a Supabase PAT for migrations: ask the user (don't hardcode).
 
 ## Stack (don't re-decide — see architecture.md + roleos-build-decisions)
-Next.js App Router + TS + Tailwind on Cloudflare via `@opennextjs/cloudflare`. Supabase (Postgres + pgvector + Auth + RLS). Claude via raw Anthropic SDK, tiered (registry: reason=opus-4-8, draft=sonnet-4-6, quick_tag=haiku-4-5, critic=opus). Embeddings = Cloudflare Workers AI `bge` everywhere (no Ollama). Skills = one file each (prompt+model+tools) run by stateless fns; **Durable Objects only for the build-studio sandbox session + a per-user ambient scheduler.**
+Next.js App Router + TS + Tailwind on Cloudflare via `@opennextjs/cloudflare`. Supabase (Postgres + pgvector + Auth + RLS). Claude via raw Anthropic SDK, tiered (registry: reason=opus-4-8, draft=sonnet-4-6, quick_tag=haiku-4-5, critic=opus). Embeddings = Cloudflare Workers AI `bge` everywhere (no Ollama). Skills = one file each (prompt+model+tools) run by stateless fns; **Durable Objects only for the build-studio sandbox session + a per-user ambient scheduler.** **Design system:** tokens in `app/globals.css` + `tailwind.config.ts` (grape accent · cool neutrals · Space Grotesk + Plus Jakarta Sans + JetBrains Mono · light app / dark marketing) — the contract is `docs/specs/design-system.md`; shared primitives in `components/ui/`.
 
 ## INVARIANTS — never break (tests enforce some)
 - **Human-gated outward:** NO send tool exists in any skill; sending is a separate user-clicked `app/api/dispatch` route the agent layer can't import. `tests/invariants/no-send-tool.test.ts` + `.dependency-cruiser.cjs` enforce it. Keep them green.
