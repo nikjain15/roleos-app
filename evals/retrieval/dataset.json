@@ -1,0 +1,36 @@
+{
+  "_comment": "Offline retrieval eval fixtures. Each case = a labeled query, the role ids a retriever returned (best-first), and the human-judged relevant set. Ids are synthetic (r-*) so this harness runs with zero dependency on the live corpus. Replace `ranked` with real `recallRolesMulti` output (mapped to these ids) to score the production retriever. Grow this set as roles are labeled.",
+  "k": 5,
+  "cases": [
+    {
+      "id": "senior-ai-pm",
+      "query": "Senior AI product manager, LLM products, shipped agent features, 10y experience",
+      "ranked": ["r-aipm-1", "r-plat-2", "r-aipm-3", "r-growth-9", "r-aipm-4", "r-ops-7"],
+      "relevant": ["r-aipm-1", "r-aipm-3", "r-aipm-4"]
+    },
+    {
+      "id": "forward-deployed-engineer",
+      "query": "Forward-deployed engineer, customer-facing, enterprise deployments, TypeScript + Python",
+      "ranked": ["r-fde-1", "r-fde-2", "r-sales-eng-5", "r-backend-8", "r-fde-3", "r-pm-6"],
+      "relevant": ["r-fde-1", "r-fde-2", "r-fde-3", "r-sales-eng-5"]
+    },
+    {
+      "id": "career-switcher-pm",
+      "query": "Ex-founder moving into product management, strong on 0-to-1, weak keyword overlap",
+      "ranked": ["r-founder-pm-2", "r-aipm-1", "r-pm-6", "r-strategy-4", "r-eng-lead-3"],
+      "relevant": ["r-founder-pm-2", "r-pm-6", "r-aipm-1"]
+    },
+    {
+      "id": "applied-ai-leadership",
+      "query": "Applied AI lead, owns evals and model quality, manages a small team",
+      "ranked": ["r-applied-1", "r-ml-2", "r-aipm-3", "r-research-9", "r-applied-4"],
+      "relevant": ["r-applied-1", "r-applied-4", "r-ml-2"]
+    },
+    {
+      "id": "over-qualified-senior",
+      "query": "Senior director in transition, risk of ATS keyword filtering, wants depth roles",
+      "ranked": ["r-vp-prod-1", "r-staff-pm-2", "r-growth-9", "r-aipm-4", "r-ops-7"],
+      "relevant": ["r-vp-prod-1", "r-staff-pm-2", "r-aipm-4"]
+    }
+  ]
+}
