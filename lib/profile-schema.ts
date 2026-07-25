@@ -141,11 +141,11 @@ export function parseCanonicalProfile(
       },
     },
     experience: arr(o.experience)
-      .map((e) => {
+      .flatMap((e): ExperienceItem[] => {
         const title = str(e.title);
         const company = str(e.company);
-        if (!title || !company) return null;
-        return {
+        if (!title || !company) return [];
+        return [{
           title,
           company,
           start: str(e.start, 40),
@@ -153,52 +153,48 @@ export function parseCanonicalProfile(
           highlights: strList(e.highlights, 12, 600),
           source: source(e.source, src),
           confidence: conf(e.confidence),
-        } satisfies ExperienceItem;
+        }];
       })
-      .filter((x): x is ExperienceItem => !!x)
       .slice(0, 20),
     education: arr(o.education)
-      .map((e) => {
+      .flatMap((e): EducationItem[] => {
         const school = str(e.school);
-        if (!school) return null;
-        return {
+        if (!school) return [];
+        return [{
           school,
           degree: str(e.degree, 200),
           field: str(e.field, 200),
           year: str(e.year, 40),
           source: source(e.source, src),
-        } satisfies EducationItem;
+        }];
       })
-      .filter((x): x is EducationItem => !!x)
       .slice(0, 10),
     skills: arr(o.skills)
-      .map((s) => {
-        const canonical = str(s.canonical ?? s.name ?? s.value, 80);
-        if (!canonical) return null;
-        return {
+      .flatMap((sk): SkillItem[] => {
+        const canonical = str(sk.canonical ?? sk.name ?? sk.value, 80);
+        if (!canonical) return [];
+        return [{
           canonical,
-          raw: str(s.raw, 80),
-          evidence: str(s.evidence, 300),
-          source: source(s.source, src),
-          confidence: conf(s.confidence),
-        } satisfies SkillItem;
+          raw: str(sk.raw, 80),
+          evidence: str(sk.evidence, 300),
+          source: source(sk.source, src),
+          confidence: conf(sk.confidence),
+        }];
       })
-      .filter((x): x is SkillItem => !!x)
       .slice(0, 60),
     projects: arr(o.projects)
-      .map((p) => {
+      .flatMap((p): ProjectItem[] => {
         const name = str(p.name, 200);
-        if (!name) return null;
-        return {
+        if (!name) return [];
+        return [{
           name,
           description: str(p.description, 600),
           tech: strList(p.tech, 20, 40),
           stars: typeof p.stars === "number" && p.stars >= 0 ? Math.floor(p.stars) : undefined,
           url: str(p.url, 300),
           source: source(p.source, src),
-        } satisfies ProjectItem;
+        }];
       })
-      .filter((x): x is ProjectItem => !!x)
       .slice(0, 20),
     signals: {
       seniority: str(sig.seniority, 80),
