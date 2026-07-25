@@ -143,7 +143,7 @@ export default function VoiceControls({
             type="button"
             onClick={start}
             disabled={disabled}
-            className="min-h-10 rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-50"
+            className="min-h-10 rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-50"
           >
             🎙 Speak your answer
           </button>

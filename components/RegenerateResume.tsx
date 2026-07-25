@@ -43,7 +43,7 @@ export default function RegenerateResume({ roleId }: { roleId: string | null }) 
         <button
           onClick={regenerate}
           disabled={busy || !roleId}
-          className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+          className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
         >
           {busy ? "Redrafting…" : "Redraft it"}
         </button>

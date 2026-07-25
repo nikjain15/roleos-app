@@ -53,7 +53,7 @@ export default function ReviewRunner({
   return (
     <div>
       <div className="flex flex-wrap items-center gap-3">
-        <button onClick={run} disabled={busy} className="min-h-11 rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-50">
+        <button onClick={run} disabled={busy} className="min-h-11 rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-50">
           {busy ? "RO's reviewing your week…" : review ? "Run a fresh review" : "Run my weekly review"}
         </button>
         {generatedAt && <span className="text-xs text-tx3">last run {generatedAt.slice(0, 10)}</span>}
@@ -97,7 +97,7 @@ export default function ReviewRunner({
           </div>
 
           {review.pivots.length > 0 && (
-            <section className="rounded-xl border-l-[3px] border-info bg-info-bg p-4">
+            <section className="rounded-xl border-l-[3px] border-primary bg-info-bg p-4">
               <h3 className="text-[11px] font-semibold uppercase tracking-wide text-info-tx">Pivots worth making</h3>
               <ul className="mt-2 space-y-2 text-[13px] text-tx2">
                 {review.pivots.map((p, i) => (

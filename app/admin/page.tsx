@@ -25,7 +25,7 @@ export default async function AdminDashboard() {
     <main className="mx-auto max-w-3xl px-6 py-12">
       <div className="flex items-center justify-between">
         <span className="inline-flex items-center gap-2 text-sm font-semibold">
-          <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">RO</span>
+          <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] text-white">RO</span>
           RoleOS
           <span className="ml-1 rounded-full bg-warn-bg px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-warn">
             admin
@@ -305,7 +305,7 @@ function Bars({
             {r.key.replace("claude-", "")}
           </span>
           <div className="h-2 flex-1 overflow-hidden rounded-full bg-surf2">
-            <div className="h-full bg-info" style={{ width: `${(r.costUsd / max) * 100}%` }} />
+            <div className="h-full bg-primary" style={{ width: `${(r.costUsd / max) * 100}%` }} />
           </div>
           <span className="w-16 shrink-0 text-right text-xs text-tx2">{usd(r.costUsd)}</span>
           <span className="w-10 shrink-0 text-right text-[11px] text-tx3">{r.runs}×</span>

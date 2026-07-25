@@ -145,7 +145,7 @@ export default function ReplyDeskClient() {
           keep watching your recruiter mail and surface anything that needs a reply, a scheduling
           answer, or a nudge here.
         </p>
-        <Link href="/tracker" className="mt-3 inline-block text-sm font-medium text-info hover:underline">
+        <Link href="/tracker" className="mt-3 inline-block text-sm font-medium text-primary hover:underline">
           See where every thread stands →
         </Link>
       </section>
@@ -224,14 +224,14 @@ export default function ReplyDeskClient() {
             <button
               onClick={makeDraft}
               disabled={!!busy}
-              className="min-h-10 rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-50"
+              className="min-h-10 rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-50"
             >
               {busy === "draft" ? "Drafting…" : "Draft a reply (D)"}
             </button>
           ) : (
             <button
               onClick={copy}
-              className="min-h-10 rounded-md bg-info px-4 text-sm font-medium text-white"
+              className="min-h-10 rounded-md bg-primary px-4 text-sm font-medium text-white"
             >
               {copied ? "Copied ✓" : "Copy draft (C)"}
             </button>

@@ -368,4 +368,4 @@ export default function RolesWorkspace({ initial }: { initial: WorkspaceRole[] }
 
 const ctl = "mt-0.5 min-h-9 rounded-md border border-bd bg-surf2 px-2 text-[13px] text-tx";
 const btn = "min-h-9 rounded-md border border-bd px-2.5 text-xs text-tx hover:bg-surf2 disabled:opacity-50";
-const btnPrimary = "min-h-9 rounded-md bg-info px-2.5 text-xs font-medium text-white disabled:opacity-50";
+const btnPrimary = "min-h-9 rounded-md bg-primary px-2.5 text-xs font-medium text-white disabled:opacity-50";

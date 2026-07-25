@@ -54,7 +54,7 @@ export default function OfferCompare() {
           <h2 className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Your offers ({offers.length}/3)</h2>
           <div className="flex gap-2">
             {offers.length < 3 && (
-              <button onClick={() => setOffers((os) => [...os, { ...EMPTY }])} className="min-h-9 rounded-md bg-info px-3 text-xs font-medium text-white">
+              <button onClick={() => setOffers((os) => [...os, { ...EMPTY }])} className="min-h-9 rounded-md bg-primary px-3 text-xs font-medium text-white">
                 + Add offer
               </button>
             )}

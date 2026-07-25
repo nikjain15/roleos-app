@@ -106,7 +106,7 @@ export default function RoDock() {
         <button
           onClick={() => setOpen(true)}
           aria-label="Ask RO about your hunt"
-          className="fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-info text-sm font-bold text-white shadow-lg hover:opacity-90"
+          className="fixed bottom-4 right-4 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-primary text-sm font-bold text-white shadow-lg hover:opacity-90"
         >
           RO
         </button>
@@ -120,7 +120,7 @@ export default function RoDock() {
         >
           <div className="flex items-center justify-between border-b border-bd px-4 py-2.5">
             <span className="flex items-center gap-2 text-sm font-semibold text-tx">
-              <span className="rounded bg-info px-1.5 py-0.5 text-[11px] text-white">RO</span>
+              <span className="rounded bg-primary px-1.5 py-0.5 text-[11px] text-white">RO</span>
               Ask me anything
             </span>
             <button onClick={() => setOpen(false)} aria-label="Close" className="text-tx3 hover:text-tx">
@@ -144,7 +144,7 @@ export default function RoDock() {
                   <Link
                     href={action.href}
                     onClick={() => setOpen(false)}
-                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-info px-3 text-xs font-medium text-white"
+                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-primary px-3 text-xs font-medium text-white"
                   >
                     {action.label} →
                   </Link>
@@ -154,7 +154,7 @@ export default function RoDock() {
                   <Link
                     href={act.href}
                     onClick={() => setOpen(false)}
-                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-info px-3 text-xs font-medium text-white"
+                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-primary px-3 text-xs font-medium text-white"
                   >
                     {act.label} →
                   </Link>
@@ -163,7 +163,7 @@ export default function RoDock() {
                   <button
                     onClick={runTailor}
                     disabled={acting}
-                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-info px-3 text-xs font-medium text-white disabled:opacity-60"
+                    className="mt-3 inline-flex min-h-9 items-center rounded-md bg-primary px-3 text-xs font-medium text-white disabled:opacity-60"
                   >
                     {acting ? "Tailoring…" : `${act.label} →`}
                   </button>
@@ -186,12 +186,12 @@ export default function RoDock() {
               onChange={(e) => setQ(e.target.value)}
               aria-label="Ask RO"
               placeholder="Ask RO…"
-              className="min-h-10 flex-1 rounded-md border border-bd bg-surf2 px-3 text-sm text-tx outline-none focus:border-info"
+              className="min-h-10 flex-1 rounded-md border border-bd bg-surf2 px-3 text-sm text-tx outline-none focus:border-primary"
             />
             <button
               type="submit"
               disabled={busy || q.trim().length < 2}
-              className="min-h-10 rounded-md bg-info px-3 text-xs font-medium text-white disabled:opacity-40"
+              className="min-h-10 rounded-md bg-primary px-3 text-xs font-medium text-white disabled:opacity-40"
             >
               Ask
             </button>

@@ -137,7 +137,7 @@ export default function GoalSetter({ initial }: { initial: GoalRow | null }) {
         <button
           type="submit"
           disabled={saving}
-          className="min-h-11 w-full rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-50"
+          className="min-h-11 w-full rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-50"
         >
           {saving ? "Building your plan…" : plan ? "Update goal & re-plan" : "Set goal & build my plan"}
         </button>
@@ -157,7 +157,7 @@ export default function GoalSetter({ initial }: { initial: GoalRow | null }) {
 }
 
 const inputCls =
-  "mt-1 w-full rounded-md border border-bd bg-surf p-2 text-[15px] text-tx focus:border-info";
+  "mt-1 w-full rounded-md border border-bd bg-surf p-2 text-[15px] text-tx focus:border-primary";
 
 function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
   return (

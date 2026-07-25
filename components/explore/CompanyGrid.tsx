@@ -18,7 +18,7 @@ export default function CompanyGrid({ companies }: { companies: CompanyRow[] }) 
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="Search companies…"
-        className="mb-4 w-full rounded-lg border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none placeholder:text-tx3 focus:border-info"
+        className="mb-4 w-full rounded-lg border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none placeholder:text-tx3 focus:border-primary"
       />
       <p className="mb-3 text-xs text-tx3">{filtered.length} of {companies.length}</p>
       <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">

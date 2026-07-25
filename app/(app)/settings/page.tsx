@@ -75,7 +75,7 @@ export default function Settings() {
     <main className="mx-auto max-w-2xl px-6 py-12">
       <div className="flex items-center justify-between">
         <span className="inline-flex items-center gap-2 text-sm font-semibold">
-          <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">RO</span>
+          <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] text-white">RO</span>
           RoleOS
         </span>
         <Link href="/feed" className="text-sm text-tx3">← feed</Link>
@@ -99,7 +99,7 @@ export default function Settings() {
                   key={c.id}
                   onClick={() => { setCadence(c.id); setSaved(false); }}
                   className={`block w-full rounded-xl border p-4 text-left ${
-                    cadence === c.id ? "border-info bg-info-bg/40" : "border-bd bg-surf"
+                    cadence === c.id ? "border-primary bg-info-bg/40" : "border-bd bg-surf"
                   }`}
                 >
                   <p className="text-sm font-semibold text-tx">{c.label}</p>
@@ -146,7 +146,7 @@ export default function Settings() {
             <button
               onClick={save}
               disabled={busy}
-              className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+              className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
             >
               {busy ? "Saving…" : "Save"}
             </button>

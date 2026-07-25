@@ -38,7 +38,7 @@ export default function AppNav() {
       <header className="sticky top-0 z-30 border-b border-bd bg-surf/95 backdrop-blur">
         <div className="mx-auto flex max-w-5xl items-center gap-2 px-3 sm:px-4">
           <Link href="/feed" className="flex min-h-11 shrink-0 items-center gap-1.5 font-semibold text-tx">
-            <span className="rounded-md bg-info px-1.5 py-0.5 text-[12px] text-white">RO</span>
+            <span className="rounded-md bg-primary px-1.5 py-0.5 text-[12px] text-white">RO</span>
             <span className="hidden sm:inline">RoleOS</span>
           </Link>
 
@@ -67,7 +67,7 @@ export default function AppNav() {
           </nav>
 
           <div className="flex shrink-0 items-center gap-2">
-            <Link href="/settings" className="hidden text-xs text-tx2 hover:text-info sm:inline">
+            <Link href="/settings" className="hidden text-xs text-tx2 hover:text-primary sm:inline">
               Settings
             </Link>
             <SignOut />

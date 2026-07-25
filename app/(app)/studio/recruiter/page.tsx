@@ -131,7 +131,7 @@ export default function RecruiterStudio() {
           </p>
           <button
             onClick={connectGoogle}
-            className="mt-4 rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+            className="mt-4 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
           >
             Connect Gmail &amp; Calendar
           </button>
@@ -150,12 +150,12 @@ export default function RecruiterStudio() {
               rows={2}
               aria-label="Application screening question"
               placeholder="e.g. Tell us about a time you shipped an AI product under ambiguity."
-              className="mt-3 w-full rounded-lg border border-bd bg-surf2 p-3 text-sm text-tx outline-none focus:border-info"
+              className="mt-3 w-full rounded-lg border border-bd bg-surf2 p-3 text-sm text-tx outline-none focus:border-primary"
             />
             <button
               onClick={draftScreening}
               disabled={busy === "screening" || question.trim().length < 5}
-              className="mt-2 rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
+              className="mt-2 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
             >
               {busy === "screening" ? "Drafting…" : "Draft my answer"}
             </button>
@@ -213,7 +213,7 @@ export default function RecruiterStudio() {
                             href={gmailComposeUrl(e, draft)}
                             target="_blank"
                             rel="noreferrer"
-                            className="rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white"
+                            className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white"
                           >
                             Open in Gmail to send ↗
                           </a>

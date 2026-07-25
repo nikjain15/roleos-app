@@ -52,7 +52,7 @@ export default function ReflectionClient({
         </p>
         <button
           onClick={() => router.push("/tracker")}
-          className="mt-3 min-h-10 rounded-md bg-info px-4 text-sm font-medium text-white"
+          className="mt-3 min-h-10 rounded-md bg-primary px-4 text-sm font-medium text-white"
         >
           Back to the tracker
         </button>
@@ -72,7 +72,7 @@ export default function ReflectionClient({
             onClick={() => setReason(o.value)}
             aria-pressed={reason === o.value}
             className={`min-h-10 rounded-md border px-3 text-sm ${
-              reason === o.value ? "border-info bg-info-bg text-info-tx" : "border-bd text-tx2"
+              reason === o.value ? "border-primary bg-info-bg text-info-tx" : "border-bd text-tx2"
             }`}
           >
             {o.label}
@@ -94,7 +94,7 @@ export default function ReflectionClient({
         <button
           onClick={save}
           disabled={!reason || busy}
-          className="min-h-10 rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-50"
+          className="min-h-10 rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-50"
         >
           {busy ? "Saving…" : "Save reason"}
         </button>

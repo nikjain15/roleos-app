@@ -96,7 +96,7 @@ export default function CoverLetterCard({ roleId, cover }: { roleId: string; cov
           <button
             onClick={draft}
             disabled={busy === "draft"}
-            className="mt-3 inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-60"
+            className="mt-3 inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-60"
           >
             {busy === "draft" ? "Drafting…" : "Draft my cover letter"}
           </button>
@@ -137,7 +137,7 @@ export default function CoverLetterCard({ roleId, cover }: { roleId: string; cov
               <button
                 onClick={approve}
                 disabled={busy === "approve" || body.trim().length < 40}
-                className="inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-60"
+                className="inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-60"
               >
                 {busy === "approve" ? "Saving…" : "Approve — use this letter"}
               </button>

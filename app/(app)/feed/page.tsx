@@ -92,7 +92,7 @@ export default async function Feed() {
       {/* Primary nav (logo · sections · settings · sign-out) is the app shell's AppNav. */}
       {admin && (
         <div className="flex justify-end">
-          <Link href="/admin" className="text-xs text-tx3 hover:text-info">
+          <Link href="/admin" className="text-xs text-tx3 hover:text-primary">
             Admin →
           </Link>
         </div>
@@ -103,7 +103,7 @@ export default async function Feed() {
 
       {/* X10: the overnight queue — real work waiting on real judgment. */}
       {(queueCount ?? 0) > 0 && (
-        <section className="mt-6 rounded-xl border border-info bg-info-bg p-4">
+        <section className="mt-6 rounded-xl border border-primary bg-info-bg p-4">
           <p className="text-[15px] font-medium text-info-tx">
             Your overnight queue: {queueCount} ready for review.
           </p>
@@ -112,7 +112,7 @@ export default async function Feed() {
           </p>
           <Link
             href="/ready-room"
-            className="mt-3 inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white"
+            className="mt-3 inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white"
           >
             Open the ready-room →
           </Link>
@@ -129,7 +129,7 @@ export default async function Feed() {
           </p>
           <Link
             href="/reply-desk"
-            className="mt-3 inline-flex min-h-10 items-center rounded-md border border-info px-4 text-sm font-medium text-info-tx"
+            className="mt-3 inline-flex min-h-10 items-center rounded-md border border-primary px-4 text-sm font-medium text-info-tx"
           >
             Open the reply desk →
           </Link>
@@ -146,7 +146,7 @@ export default async function Feed() {
         <div className="flex flex-wrap gap-2">
           <Link
             href="/roles"
-            className="rounded-md border border-info bg-info-bg px-3 py-1.5 text-xs font-medium text-info-tx"
+            className="rounded-md border border-primary bg-info-bg px-3 py-1.5 text-xs font-medium text-info-tx"
           >
             Roles →
           </Link>
@@ -194,7 +194,7 @@ export default async function Feed() {
           </p>
           <Link
             href="/onboarding"
-            className="mt-4 inline-block rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+            className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
           >
             Show RO your work
           </Link>
@@ -234,7 +234,7 @@ export default async function Feed() {
                   Nothing&apos;s a slam-dunk &ldquo;pursue&rdquo; against your profile this week, and I&apos;d
                   rather say that than pad the list. But these are real maybes — open any one and I&apos;ll
                   tailor your résumé to it, build a portfolio piece, or run a mock. Or{" "}
-                  <Link href="/watch" className="font-medium text-info hover:underline">
+                  <Link href="/watch" className="font-medium text-primary hover:underline">
                     tell me exactly what you&apos;re after
                   </Link>{" "}
                   and I&apos;ll widen the hunt.
@@ -286,13 +286,13 @@ function Card({ m, adj }: { m: MatchRow; adj?: FitAdjustment | null }) {
         <TailorButton roleId={m.role_id} />
         <Link
           href={`/studio/build?role=${m.role_id}`}
-          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-info"
+          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-primary"
         >
           Build a piece →
         </Link>
         <Link
           href={`/studio/coach?role=${m.role_id}`}
-          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-info"
+          className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-primary"
         >
           Practice the interview →
         </Link>
@@ -301,7 +301,7 @@ function Card({ m, adj }: { m: MatchRow; adj?: FitAdjustment | null }) {
             href={m.roles.url}
             target="_blank"
             rel="noreferrer"
-            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-info"
+            className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-primary"
           >
             View posting ↗
           </a>

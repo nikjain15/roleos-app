@@ -111,7 +111,7 @@ export default function BuildStudio() {
               key={t}
               onClick={() => setCanvasType(t)}
               className={`rounded-md border px-3 py-1.5 ${
-                canvasType === t ? "border-info bg-info-bg text-info-tx" : "border-bd text-tx2"
+                canvasType === t ? "border-primary bg-info-bg text-info-tx" : "border-bd text-tx2"
               }`}
             >
               {t === "prd"
@@ -133,13 +133,13 @@ export default function BuildStudio() {
           onChange={(e) => setBrief(e.target.value)}
           rows={6}
           placeholder="Paste the take-home / case brief…"
-          className="mt-4 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] text-tx outline-none focus:border-info"
+          className="mt-4 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] text-tx outline-none focus:border-primary"
         />
         <div className="mt-3 flex items-center gap-3">
           <button
             onClick={start}
             disabled={!!busy || brief.trim().length < 30}
-            className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
           >
             {busy ? busy : "Start with RO"}
           </button>
@@ -173,11 +173,11 @@ export default function BuildStudio() {
       <div className="mt-4">
         <div className="flex h-2 overflow-hidden rounded-full bg-surf2">
           <div className="bg-suc" style={{ width: `${prov}%` }} />
-          <div className="bg-info" style={{ width: `${100 - prov}%` }} />
+          <div className="bg-primary" style={{ width: `${100 - prov}%` }} />
         </div>
         <div className="mt-1 flex justify-between text-[11px] text-tx3">
           <span className="text-suc">{prov}% your thinking</span>
-          <span className="text-info">{100 - prov}% RO-built</span>
+          <span className="text-primary">{100 - prov}% RO-built</span>
         </div>
       </div>
 
@@ -246,7 +246,7 @@ export default function BuildStudio() {
                       href={content.prototype.preview_url}
                       target="_blank"
                       rel="noreferrer"
-                      className="ml-auto text-[11px] text-info underline"
+                      className="ml-auto text-[11px] text-primary underline"
                     >
                       open ↗
                     </a>
@@ -269,7 +269,7 @@ export default function BuildStudio() {
                 <ul className="mt-3 space-y-1 text-sm text-tx2">
                   {content.prototype.walkthrough.map((w, i) => (
                     <li key={i} className="flex gap-2">
-                      <span className="text-info">→</span>
+                      <span className="text-primary">→</span>
                       <span>{w}</span>
                     </li>
                   ))}
@@ -300,7 +300,7 @@ export default function BuildStudio() {
         <aside className="space-y-4">
           {busy && (
             <div className="rounded-xl border border-bd bg-surf2 p-4 text-sm text-tx2">
-              <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-info" />
+              <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
               {busy}
             </div>
           )}
@@ -316,7 +316,7 @@ export default function BuildStudio() {
                     key={i}
                     onClick={() => chooseBet(i)}
                     disabled={!!busy}
-                    className="w-full rounded-lg border border-bd p-3 text-left hover:border-info"
+                    className="w-full rounded-lg border border-bd p-3 text-left hover:border-primary"
                   >
                     <p className="text-sm font-semibold text-tx">{a.name}</p>
                     <p className="mt-1 text-xs text-tx2">{a.thesis}</p>
@@ -339,12 +339,12 @@ export default function BuildStudio() {
                 onChange={(e) => setAnswer(e.target.value)}
                 rows={4}
                 placeholder="Your real story / judgment — this becomes the part that&apos;s yours…"
-                className="mt-3 w-full rounded-lg border border-bd bg-surf p-3 text-sm text-tx outline-none focus:border-info"
+                className="mt-3 w-full rounded-lg border border-bd bg-surf p-3 text-sm text-tx outline-none focus:border-primary"
               />
               <button
                 onClick={answerEdge}
                 disabled={!!busy || answer.trim().length < 10}
-                className="mt-2 rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
+                className="mt-2 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
               >
                 Weave it in
               </button>
@@ -362,7 +362,7 @@ export default function BuildStudio() {
               <button
                 onClick={buildProto}
                 disabled={!!busy}
-                className="mt-3 rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
+                className="mt-3 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
               >
                 Build the prototype
               </button>
@@ -429,7 +429,7 @@ export default function BuildStudio() {
                 <button
                   onClick={submit}
                   disabled={!!busy}
-                  className="mt-3 rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+                  className="mt-3 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
                 >
                   Check & submit
                 </button>

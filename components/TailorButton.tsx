@@ -36,7 +36,7 @@ export default function TailorButton({ roleId }: { roleId: string }) {
     <button
       onClick={tailor}
       disabled={busy}
-      className="rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-50"
+      className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white disabled:opacity-50"
     >
       {busy ? "RO is tailoring…" : err ? "Try again" : "Tailor my résumé →"}
     </button>
