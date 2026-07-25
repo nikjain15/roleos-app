@@ -33,12 +33,13 @@ const SAMPLE =
   "I'm a senior product manager with 8 years of experience, the last 4 on AI/ML products. I led a 0-to-1 launch of an LLM-powered support assistant that cut response time 40% and deflected 30% of tickets, and before that shipped a fraud-detection ML platform. Strong on technical PM, eval frameworks, and working with ML engineers. Looking for senior/staff AI PM roles. SF, open to hybrid.";
 
 export default function Onboarding() {
-  // ── inputs ──
-  const [profile, setProfile] = useState("");
+  // ── inputs (conversational: goal → one composer for URL/file/text) ──
+  const [step, setStep] = useState<1 | 2>(1);
   const [target, setTarget] = useState("");
-  const [linkedinUrl, setLinkedinUrl] = useState("");
+  const [work, setWork] = useState(""); // LinkedIn URL, pasted text, or a few lines
+  const [attached, setAttached] = useState<{ name: string; text: string } | null>(null);
   const [parsing, setParsing] = useState(false);
-  const [fileNote, setFileNote] = useState<string | null>(null);
+  const workRef = useRef<HTMLTextAreaElement>(null);
 
   // ── run state ──
   const [status, setStatus] = useState<string[]>([]);
@@ -91,7 +92,7 @@ export default function Onboarding() {
     try {
       const saved = localStorage.getItem("roleos.linkedin_url");
       if (saved) {
-        setLinkedinUrl(saved);
+        setWork(saved); // prefill the composer with their remembered LinkedIn
         setVariant((v) => (v === "default" ? "returning" : v));
       }
     } catch {
@@ -100,26 +101,23 @@ export default function Onboarding() {
   }, []);
 
   const isLinkedInUrl = (s: string) => /linkedin\.com\/in\//i.test(s.trim());
-  const hasProfile = profile.trim().length >= 30 || isLinkedInUrl(linkedinUrl);
-  // Sharpness meter: 1 bar (base) → 3 (with a profile) → 4 (with a target).
-  const sharpness = 1 + (hasProfile ? 2 : 0) + (target.trim() ? 1 : 0);
-
-  function pullLinkedIn() {
-    const url = linkedinUrl.trim();
-    if (!isLinkedInUrl(url) || running || parsing) return;
-    try {
-      localStorage.setItem("roleos.linkedin_url", url);
-    } catch {
-      /* ignore */
-    }
-    run(url);
-  }
+  // The single profile RO reads = attached file text + whatever's in the composer
+  // (a LinkedIn URL, pasted CV, or a few lines) — mix and match, all sources combine.
+  const effectiveProfile = () => {
+    const parts: string[] = [];
+    if (attached?.text) parts.push(attached.text);
+    if (work.trim()) parts.push(work.trim());
+    return parts.join("\n\n");
+  };
+  const workUrl = () => (isLinkedInUrl(work) ? work.trim() : undefined);
+  const hasWork = work.trim().length >= 30 || isLinkedInUrl(work) || !!attached;
+  // Sharpness meter: 1 (base) → 3 (with work) → 4 (with a target too).
+  const sharpness = 1 + (hasWork ? 2 : 0) + (target.trim() ? 1 : 0);
 
   async function onFile(file: File | undefined) {
     if (!file) return;
     setParsing(true);
     setError(null);
-    setFileNote(null);
     try {
       const text = await extractDocumentText(file);
       if (text.trim().length < 30) {
@@ -127,8 +125,7 @@ export default function Onboarding() {
           "I couldn't pull readable text from that — it may be a scanned image. Try the LinkedIn “Save to PDF” export, or paste your text.",
         );
       } else {
-        setProfile(text);
-        setFileNote(`Read ${file.name} — ${text.length.toLocaleString()} characters. Looks good? Hit the button below.`);
+        setAttached({ name: file.name, text });
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : "I couldn't read that file — try a PDF or paste the text.");
@@ -138,9 +135,13 @@ export default function Onboarding() {
     }
   }
 
-  async function run(override?: string) {
-    const p = (override ?? profile).trim();
-    if ((p.length < 30 && !isLinkedInUrl(p)) || running) return;
+  async function run() {
+    const p = effectiveProfile();
+    if ((p.trim().length < 30 && !isLinkedInUrl(work)) || running) return;
+    // Remember the LinkedIn URL on this device (returning-anon convenience).
+    if (workUrl()) {
+      try { localStorage.setItem("roleos.linkedin_url", workUrl()!); } catch { /* ignore */ }
+    }
     setRunning(true);
     setStatus([]);
     setMirror(null);
@@ -185,7 +186,7 @@ export default function Onboarding() {
       }
 
       if (signedIn && gotMatches?.length) {
-        await persist(gotResolved ?? p, gotMirror, gotMatches, isLinkedInUrl(p) ? p.trim() : undefined)
+        await persist(gotResolved ?? p, gotMirror, gotMatches, workUrl())
           .then(() => setSavedNote(true))
           .catch(() => {});
       }
@@ -212,7 +213,7 @@ export default function Onboarding() {
 
   async function rerank(newTarget: string) {
     const t = newTarget.trim();
-    const source = resolvedProfile ?? profile;
+    const source = resolvedProfile ?? effectiveProfile();
     if (!t || reranking || source.trim().length < 30) return;
     setTarget(t);
     setReranked(true);
@@ -258,14 +259,13 @@ export default function Onboarding() {
   }
 
   function saveAndSignIn() {
-    const srcUrl = isLinkedInUrl(linkedinUrl) ? linkedinUrl.trim() : isLinkedInUrl(profile) ? profile.trim() : undefined;
     sessionStorage.setItem(
       "roleos.pending",
       JSON.stringify({
-        profile: resolvedProfile ?? profile,
+        profile: resolvedProfile ?? effectiveProfile(),
         mirror,
         matches,
-        linkedin_url: srcUrl,
+        linkedin_url: workUrl(),
         onboarding: collectActions(), // carry ALL pre-save actions through login (§5.2)
       }),
     );
@@ -281,112 +281,135 @@ export default function Onboarding() {
         RoleOS
       </Link>
 
-      {/* ── S1 · Arrive ── */}
-      {!matches && (
+      {/* ── S1 · Arrive (conversational: goal → one composer) ── */}
+      {!matches && !running && (
         <>
-          {variant === "explore" && (
-            <p className="mt-8 rounded-lg border border-primary-bd bg-primary-bg px-4 py-3 text-body text-tx">
-              You were looking at a role. Show me your work and I&rsquo;ll tell you straight &mdash; worth your time or not.
-            </p>
-          )}
-          {variant === "returning" && (
-            <p className="mt-8 rounded-lg border border-bd bg-surf2 px-4 py-3 text-body text-tx2">
-              Welcome back. I still have your LinkedIn from last time &mdash; pull it fresh, or start over below.
-            </p>
-          )}
-
-          <h1 className="mt-6 font-display text-h1 font-bold tracking-tight text-tx">
-            {firstName ? `Welcome, ${firstName}.` : "Show RO your work."}
-            {!firstName && <> She&rsquo;ll show you what it&rsquo;s worth.</>}
-          </h1>
-          <p className="mt-3 text-tx2">
-            {variant === "signedin-nodata"
-              ? "Signing in told me who you are — not what you've built. LinkedIn won't hand over your experience; drop your profile below and I'll pull the rest."
-              : "No sign-up. She works first — you decide after."}
-          </p>
-
-          {/* Option 1 — LinkedIn */}
-          <Card className="mt-6" elevation="flat">
-            <div className="text-section font-semibold text-tx">LinkedIn &mdash; one tap, best results</div>
-            <p className="mt-0.5 text-small text-tx3">She reads your whole career, not keywords.</p>
-            <div className="mt-3 flex flex-col gap-2 sm:flex-row">
-              <input
-                value={linkedinUrl}
-                onChange={(e) => setLinkedinUrl(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && pullLinkedIn()}
-                placeholder="linkedin.com/in/your-name"
-                aria-label="Your LinkedIn profile URL"
-                disabled={running || parsing}
-                className="flex-1 rounded-md border border-bd2 bg-surf px-3 py-2 text-body text-tx placeholder:text-tx3 outline-none focus:border-primary focus:shadow-ring disabled:opacity-60"
-              />
-              <Button onClick={pullLinkedIn} disabled={running || parsing || !isLinkedInUrl(linkedinUrl)}>
-                {running ? "Pulling…" : "Pull my profile"}
-              </Button>
-            </div>
-            <p className="mt-2 text-overline text-tx3">Remembered on this device only &mdash; one pull, one fetch.</p>
-          </Card>
-
-          {/* Option 2 — CV file + Option 3 — free text */}
-          <div className="mt-3 grid gap-3 sm:grid-cols-2">
-            <Card elevation="flat">
-              <div className="text-section font-semibold text-tx">CV or resume file</div>
-              <p className="mt-0.5 text-small text-tx3">Every bullet counts. Read on your device &mdash; never uploaded.</p>
-              <Button variant="secondary" size="sm" className="mt-3" disabled={running || parsing} onClick={() => fileRef.current?.click()}>
-                {parsing ? "Reading your file…" : "Choose a PDF or CV"}
-              </Button>
-              {fileNote && <p className="mt-2 text-small text-suc">{fileNote}</p>}
-            </Card>
-            <Card elevation="flat">
-              <div className="text-section font-semibold text-tx">Or just tell her</div>
-              <p className="mt-0.5 text-small text-tx3">A few honest lines work &mdash; she&rsquo;ll ask for what&rsquo;s missing.</p>
-            </Card>
-          </div>
-
-          <textarea
-            value={profile}
-            onChange={(e) => setProfile(e.target.value)}
-            placeholder="Paste your CV / LinkedIn text, or just talk…"
-            aria-label="Your CV, LinkedIn text, or a few lines about your work"
-            rows={5}
-            disabled={running}
-            className="mt-3 w-full rounded-xl border border-bd2 bg-surf p-4 text-body leading-relaxed text-tx placeholder:text-tx3 outline-none focus:border-primary focus:shadow-ring disabled:opacity-60"
-          />
-          <input ref={fileRef} type="file" accept={ACCEPTED_TYPES} className="hidden" onChange={(e) => onFile(e.target.files?.[0])} />
-
-          {/* Optional target */}
-          <div className="mt-3 rounded-xl border border-bd bg-surf2 p-4">
-            <label htmlFor="target" className="text-small font-medium text-tx">
-              What job do you want next? <span className="text-tx3">(optional &mdash; skip and I&rsquo;ll guess)</span>
-            </label>
-            <input
-              id="target"
-              value={target}
-              onChange={(e) => setTarget(e.target.value)}
-              placeholder="Senior AI PM, $220k+, SF or remote"
-              disabled={running}
-              className="mt-2 w-full rounded-md border border-bd2 bg-surf px-3 py-2 text-body text-tx placeholder:text-tx3 outline-none focus:border-primary focus:shadow-ring disabled:opacity-60"
-            />
-            <div className="mt-3 flex items-center gap-2 text-small text-tx3" aria-label={`Read sharpness ${sharpness} of 4`}>
-              How sharp will her read be?
-              <span className="font-mono tracking-widest text-primary">
-                {"▮".repeat(sharpness)}
-                <span className="text-bd2">{"▯".repeat(4 - sharpness)}</span>
-              </span>
-              {!target.trim() && <span>&mdash; answer above and she starts sharper</span>}
+          {/* RO speaking */}
+          <div className="mt-12 flex items-start gap-3">
+            <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-overline font-bold text-white">RO</span>
+            <div className="flex-1">
+              <h1 className="font-display text-h2 font-semibold leading-snug text-tx">
+                {step === 1
+                  ? firstName
+                    ? `First, ${firstName} — what job do you want next?`
+                    : "First — what job do you want next?"
+                  : "Great. Now show me your work."}
+              </h1>
+              <p className="mt-2 text-body leading-relaxed text-tx2">
+                {step === 1
+                  ? "The more you tell me, the sharper everything I make for you. Plain English is perfect."
+                  : variant === "signedin-nodata"
+                    ? "Signing in told me who you are — not what you've built. Paste your LinkedIn, attach a CV, or type a few lines — I'll read it all."
+                    : "Paste your LinkedIn, attach a CV, or type a few lines — or all three. I'll read it all."}
+              </p>
+              {step === 1 && variant === "explore" && (
+                <p className="mt-2 text-small text-primary">Picking up where you left off &mdash; I&rsquo;ll be sure to weigh in on that role.</p>
+              )}
             </div>
           </div>
 
-          <div className="mt-4 flex flex-wrap items-center gap-3">
-            <Button onClick={() => run()} disabled={running || parsing || !hasProfile}>
-              {running ? "RO is working…" : "Show me what RO sees"}
-            </Button>
-            {!running && !parsing && (
-              <button onClick={() => setProfile(SAMPLE)} className="text-small text-tx3 underline underline-offset-2">
-                or use a sample
-              </button>
+          {/* Answered goal — quiet continuity */}
+          {step === 2 && target.trim() && (
+            <button onClick={() => setStep(1)} className="mt-5 ml-11 inline-flex max-w-[calc(100%-2.75rem)] items-center gap-2 rounded-full border border-bd bg-surf px-3 py-1 text-small text-tx2 hover:bg-surf2">
+              <span className="text-tx3">goal</span>
+              <span className="truncate text-tx">{target.trim()}</span>
+              <span className="shrink-0 text-tx3">edit</span>
+            </button>
+          )}
+
+          <div className="ml-11 mt-6">
+            {step === 1 ? (
+              <>
+                <textarea
+                  autoFocus
+                  value={target}
+                  onChange={(e) => setTarget(e.target.value)}
+                  rows={3}
+                  aria-label="What job do you want next?"
+                  placeholder="e.g. Senior AI PM at an AI-native company, ~$220k base, SF or remote — I care about shipping real product, not managing roadmaps."
+                  className="w-full resize-none rounded-xl border border-bd bg-surf px-4 py-3.5 text-body leading-relaxed text-tx placeholder:text-tx3 shadow-sm outline-none transition-shadow focus:border-primary focus:shadow-ring"
+                />
+                <p className="mt-2 text-small text-tx3">
+                  Include the <span className="text-tx2">role</span>, <span className="text-tx2">level</span>, <span className="text-tx2">pay</span>, <span className="text-tx2">location</span>, and <span className="text-tx2">what you care about</span> — plain English is fine.
+                </p>
+                <button
+                  onClick={() => setStep(2)}
+                  disabled={target.trim().length < 2}
+                  className="mt-6 w-full rounded-xl bg-primary px-6 py-3.5 text-body font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Continue →
+                </button>
+              </>
+            ) : (
+              <>
+                {/* Polished composer — LinkedIn URL and/or PDF/CV and/or text */}
+                <div className="overflow-hidden rounded-xl border border-bd bg-surf shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring">
+                  <textarea
+                    ref={workRef}
+                    autoFocus
+                    value={work}
+                    onChange={(e) => setWork(e.target.value)}
+                    rows={5}
+                    aria-label="Paste a LinkedIn URL, your CV text, or a few lines"
+                    placeholder="Paste a LinkedIn URL, your CV text, or just talk…"
+                    className="w-full resize-none bg-transparent px-4 pt-4 pb-2 text-body leading-relaxed text-tx placeholder:text-tx3 outline-none"
+                  />
+
+                  {attached && (
+                    <div className="mx-4 mb-2 inline-flex items-center gap-2 rounded-lg border border-bd bg-surf2 px-2.5 py-1.5 text-small text-tx">
+                      <span className="text-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className="h-4 w-4"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" /><path d="M13 3v5h5" /></svg>
+                      </span>
+                      <span className="max-w-[16rem] truncate">{attached.name}</span>
+                      <button onClick={() => setAttached(null)} className="text-tx3 hover:text-tx" aria-label="Remove file">✕</button>
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-1 border-t border-bd px-2 py-2">
+                    <button
+                      onClick={() => { if (!work.trim()) setWork("https://www.linkedin.com/in/"); workRef.current?.focus(); }}
+                      className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx"
+                    >
+                      <span style={{ color: "#0A66C2" }}>
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z" /></svg>
+                      </span>
+                      LinkedIn URL
+                    </button>
+                    <button
+                      onClick={() => fileRef.current?.click()}
+                      disabled={parsing}
+                      className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx disabled:opacity-50"
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M21.44 11.05 12.25 20.24a5 5 0 0 1-7.07-7.07l9.19-9.19a3 3 0 0 1 4.24 4.24l-9.2 9.19a1 1 0 0 1-1.41-1.41l8.49-8.49" /></svg>
+                      {parsing ? "Reading…" : "Attach file"}
+                    </button>
+                    <span className="ml-auto shrink-0 whitespace-nowrap pr-1 text-overline text-tx3">read on your device</span>
+                  </div>
+                </div>
+                <input ref={fileRef} type="file" accept={ACCEPTED_TYPES} className="hidden" onChange={(e) => onFile(e.target.files?.[0])} />
+
+                <button
+                  onClick={() => run()}
+                  disabled={!hasWork}
+                  className="mt-6 w-full rounded-xl bg-primary px-6 py-3.5 text-body font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Show me what RO sees →
+                </button>
+
+                <div className="mt-4 flex items-center justify-between">
+                  <button onClick={() => setStep(1)} className="text-small text-tx3 transition-colors hover:text-tx2">← back</button>
+                  <span className="flex items-center gap-2 text-small text-tx3" aria-label={`Read sharpness ${sharpness} of 4`}>
+                    sharpness
+                    <span className="font-mono tracking-widest text-primary">{"▮".repeat(sharpness)}<span className="text-bd2">{"▯".repeat(4 - sharpness)}</span></span>
+                  </span>
+                </div>
+                {!work.trim() && !attached && (
+                  <button onClick={() => setWork(SAMPLE)} className="mt-3 text-small text-tx3 underline underline-offset-2">or use a sample</button>
+                )}
+                <p className="mt-4 text-small text-tx3">Nothing is stored unless you choose to save at the end.</p>
+              </>
             )}
           </div>
-          <p className="mt-2 text-small text-tx3">Nothing is stored unless you choose to save at the end.</p>
         </>
       )}
 
