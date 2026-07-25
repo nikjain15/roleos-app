@@ -26,12 +26,15 @@ export interface ProfileFetcher {
   fetchProfileText(linkedinUrl: string): Promise<string>;
 }
 
-const LINKEDIN_PROFILE_RE = /https?:\/\/(?:[a-z]{2,3}\.)?linkedin\.com\/in\/[^/\s?#]+/i;
+// Universal: any LinkedIn profile form — /in/ or /pub/, country subdomains, and
+// with OR without the scheme/www (people paste "linkedin.com/in/x" just as often).
+const LINKEDIN_PROFILE_RE = /(?:https?:\/\/)?(?:[a-z]{2,3}\.)?linkedin\.com\/(?:in|pub)\/[^/\s?#]+/i;
 
-/** Pull a LinkedIn /in/ profile URL out of an input, if present. */
+/** Pull a LinkedIn profile URL out of an input, normalized to an https:// URL. */
 export function extractLinkedInUrl(text: string): string | null {
   const m = text.match(LINKEDIN_PROFILE_RE);
-  return m ? m[0] : null;
+  if (!m) return null;
+  return /^https?:\/\//i.test(m[0]) ? m[0] : `https://${m[0]}`;
 }
 
 /**
