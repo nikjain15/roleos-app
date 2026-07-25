@@ -9,14 +9,14 @@ export default function ExploreHeader({ crumbs }: { crumbs?: Array<{ label: stri
   return (
     <header className="border-b border-bd">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/explore" className="inline-flex items-center gap-2 text-sm font-semibold">
+        <Link href="/the-index" className="inline-flex items-center gap-2 text-sm font-semibold">
           <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] text-white">RO</span>
           RoleOS
           <span className="ml-1 text-tx3">· the Index</span>
         </Link>
         <div className="flex items-center gap-3 text-sm">
-          <Link href="/explore/companies" className="text-tx3 hover:text-primary">Companies</Link>
-          <Link href="/explore/roles" className="text-tx3 hover:text-primary">Role types</Link>
+          <Link href="/the-index/companies" className="text-tx3 hover:text-primary">Companies</Link>
+          <Link href="/the-index/roles" className="text-tx3 hover:text-primary">Role types</Link>
           <Link
             href="/login?next=/start"
             className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white"

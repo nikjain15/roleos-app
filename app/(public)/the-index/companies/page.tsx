@@ -13,7 +13,7 @@ export default async function CompaniesPage() {
   const companies = await listCompanies();
   return (
     <>
-      <ExploreHeader crumbs={[{ label: "Index", href: "/explore" }, { label: "Companies" }]} />
+      <ExploreHeader crumbs={[{ label: "Index", href: "/the-index" }, { label: "Companies" }]} />
       <main className="mx-auto max-w-5xl px-6 py-12">
         <h1 className="text-2xl font-bold tracking-tight">Companies we&apos;re tracking</h1>
         <p className="mt-1 text-sm text-tx2">{companies.length} companies with open senior roles in the Index.</p>

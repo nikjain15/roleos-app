@@ -33,12 +33,12 @@ export default async function IndexHome() {
           <section>
             <div className="mb-3 flex items-center justify-between">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Top companies</p>
-              <Link href="/explore/companies" className="text-xs text-primary">See all {companies.length} →</Link>
+              <Link href="/the-index/companies" className="text-xs text-primary">See all {companies.length} →</Link>
             </div>
             <ul className="divide-y divide-bd overflow-hidden rounded-xl border border-bd">
               {companies.slice(0, 12).map((c) => (
                 <li key={c.slug}>
-                  <Link href={`/explore/company/${c.slug}`} className="flex items-center justify-between bg-surf px-4 py-2.5 text-sm hover:bg-surf2">
+                  <Link href={`/the-index/company/${c.slug}`} className="flex items-center justify-between bg-surf px-4 py-2.5 text-sm hover:bg-surf2">
                     <span className="truncate text-tx">{c.company}</span>
                     <span className="shrink-0 text-tx3">{c.count}</span>
                   </Link>
@@ -50,12 +50,12 @@ export default async function IndexHome() {
           <section>
             <div className="mb-3 flex items-center justify-between">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Role types</p>
-              <Link href="/explore/roles" className="text-xs text-primary">See all {archetypes.length} →</Link>
+              <Link href="/the-index/roles" className="text-xs text-primary">See all {archetypes.length} →</Link>
             </div>
             <ul className="divide-y divide-bd overflow-hidden rounded-xl border border-bd">
               {archetypes.slice(0, 12).map((a) => (
                 <li key={a.slug}>
-                  <Link href={`/explore/role/${a.slug}`} className="flex items-center justify-between bg-surf px-4 py-2.5 text-sm hover:bg-surf2">
+                  <Link href={`/the-index/role/${a.slug}`} className="flex items-center justify-between bg-surf px-4 py-2.5 text-sm hover:bg-surf2">
                     <span className="truncate text-tx">{a.name}</span>
                     <span className="shrink-0 text-tx3">{a.count} · {a.pct}%</span>
                   </Link>

@@ -31,7 +31,7 @@ export default function RoleList({ roles, fit }: { roles: RoleLite[]; fit?: Expl
       {roles.map((r) => (
         <li key={r.id} className="flex items-center justify-between gap-4 bg-surf px-4 py-3">
           <div className="min-w-0">
-            <Link href={`/explore/posting/${r.id}`} className="block truncate text-sm font-medium text-tx hover:text-primary">
+            <Link href={`/the-index/posting/${r.id}`} className="block truncate text-sm font-medium text-tx hover:text-primary">
               {r.role_title}
             </Link>
             <p className="mt-0.5 truncate text-xs text-tx3">

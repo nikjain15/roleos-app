@@ -101,7 +101,7 @@ function CitedRoles({ cited }: { cited: Cited[] }) {
         {cited.map((c) => (
           <Link
             key={c.id}
-            href={`/explore/posting/${c.id}`}
+            href={`/the-index/posting/${c.id}`}
             className="rounded-full bg-surf2 px-2.5 py-0.5 text-small text-tx2 transition-colors hover:text-primary"
           >
             {c.role_title} · {c.company}

@@ -25,7 +25,7 @@ export default function CompanyGrid({ companies }: { companies: CompanyRow[] }) 
         {filtered.map((c) => (
           <li key={c.slug}>
             <Link
-              href={`/explore/company/${c.slug}`}
+              href={`/the-index/company/${c.slug}`}
               className="flex items-center justify-between rounded-lg border border-bd bg-surf px-4 py-3 hover:bg-surf2"
             >
               <span className="min-w-0 truncate text-sm font-medium text-tx">{c.company}</span>

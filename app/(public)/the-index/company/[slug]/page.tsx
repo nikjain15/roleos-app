@@ -25,7 +25,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
-      <ExploreHeader crumbs={[{ label: "Index", href: "/explore" }, { label: "Companies", href: "/explore/companies" }, { label: company }]} />
+      <ExploreHeader crumbs={[{ label: "Index", href: "/the-index" }, { label: "Companies", href: "/the-index/companies" }, { label: company }]} />
       <main className="mx-auto max-w-3xl px-6 py-12">
         <h1 className="text-2xl font-bold tracking-tight">{company}</h1>
         <p className="mt-1 text-sm text-tx2">

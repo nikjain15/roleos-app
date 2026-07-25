@@ -22,7 +22,7 @@ export const PRIMARY_NAV: NavItem[] = [
   { href: "/roles", label: "Roles" },
   { href: "/tracker", label: "Tracker" },
   { href: "/studio", label: "Studio" },
-  { href: "/explore", label: "Explore" },
+  { href: "/the-index", label: "Explore" },
 ];
 
 export function AppShell({
