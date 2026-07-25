@@ -27,8 +27,8 @@ export default async function PostingPage({ params }: { params: Promise<{ id: st
     <>
       <ExploreHeader
         crumbs={[
-          { label: "Index", href: "/explore" },
-          { label: p.company, href: `/explore/company/${p.companySlug}` },
+          { label: "Index", href: "/the-index" },
+          { label: p.company, href: `/the-index/company/${p.companySlug}` },
           { label: p.role_title },
         ]}
       />
@@ -96,7 +96,7 @@ export default async function PostingPage({ params }: { params: Promise<{ id: st
           suggestions={["Am I a fit for this?", `What else is open at ${p.company}?`]}
         />
         <p className="mt-6 text-xs text-tx3">
-          <Link href="/explore/companies" className="hover:text-primary">← Back to all companies</Link>
+          <Link href="/the-index/companies" className="hover:text-primary">← Back to all companies</Link>
         </p>
       </main>
     </>

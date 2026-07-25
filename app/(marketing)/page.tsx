@@ -83,7 +83,7 @@ export default function Landing() {
           Hand RO your hunt
         </Link>
         <Link
-          href="/explore"
+          href="/the-index"
           className="rounded-md border border-bd px-4 py-2 text-sm text-tx2"
         >
           Ask RO about a real posting

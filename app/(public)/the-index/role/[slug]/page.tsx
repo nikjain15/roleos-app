@@ -23,7 +23,7 @@ export default async function RoleTypePage({ params }: { params: Promise<{ slug:
   const fit = await exploreFitForRoles(roles.map((r) => r.id)); // null for anon — index unchanged (P0-7)
   return (
     <>
-      <ExploreHeader crumbs={[{ label: "Index", href: "/explore" }, { label: "Role types", href: "/explore/roles" }, { label: name }]} />
+      <ExploreHeader crumbs={[{ label: "Index", href: "/the-index" }, { label: "Role types", href: "/the-index/roles" }, { label: name }]} />
       <main className="mx-auto max-w-3xl px-6 py-12">
         <h1 className="text-2xl font-bold tracking-tight">{name}</h1>
         <p className="mt-1 text-sm text-tx2">{roles.length} open {roles.length === 1 ? "role" : "roles"} of this type in the Index.</p>

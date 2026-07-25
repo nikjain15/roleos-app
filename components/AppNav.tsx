@@ -18,7 +18,7 @@ const NAV = [
   { href: "/goal", label: "Goal" },
   { href: "/roles", label: "Roles" },
   { href: "/tracker", label: "Tracker" },
-  { href: "/explore", label: "Explore" },
+  { href: "/the-index", label: "Explore" },
 ];
 
 export default function AppNav() {
