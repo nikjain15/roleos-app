@@ -82,7 +82,7 @@ export default function WarmPathsCard({ roleId, paths }: { roleId: string; paths
       {paths.length === 0 ? (
         <p className="mt-2 text-[13px] text-tx2">
           No one in your list works here (yet). A referral multiplies your odds —{" "}
-          <Link href="/connections" className="font-medium text-info hover:underline">
+          <Link href="/connections" className="font-medium text-primary hover:underline">
             add your people
           </Link>{" "}
           and I&apos;ll spot the path next time.
@@ -126,7 +126,7 @@ export default function WarmPathsCard({ roleId, paths }: { roleId: string; paths
                           href={`mailto:${encodeURIComponent(d.email)}?subject=${encodeURIComponent(
                             d.draft.subject ?? "",
                           )}&body=${encodeURIComponent(d.draft.body ?? "")}`}
-                          className="min-h-9 rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white"
+                          className="min-h-9 rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white"
                         >
                           Open in your email →
                         </a>

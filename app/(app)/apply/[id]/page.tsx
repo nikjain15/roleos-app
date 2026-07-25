@@ -158,7 +158,7 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
           </p>
           <Link
             href={`/studio/resume/${id}`}
-            className="mt-3 inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white"
+            className="mt-3 inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white"
           >
             Open the résumé editor →
           </Link>

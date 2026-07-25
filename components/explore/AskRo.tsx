@@ -136,7 +136,7 @@ export default function AskRo({
                         <Link
                           key={c.id}
                           href={`/explore/posting/${c.id}`}
-                          className="rounded-full bg-surf2 px-2 py-0.5 text-[11px] text-tx2 hover:text-info"
+                          className="rounded-full bg-surf2 px-2 py-0.5 text-[11px] text-tx2 hover:text-primary"
                         >
                           {c.role_title} · {c.company}
                         </Link>
@@ -164,12 +164,12 @@ export default function AskRo({
           onChange={(e) => setQ(e.target.value)}
           aria-label={`Ask RO${about}`}
           placeholder={started ? "Ask a follow-up…" : `Ask RO${about}…`}
-          className="flex-1 rounded-lg border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none placeholder:text-tx3 focus:border-info"
+          className="flex-1 rounded-lg border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none placeholder:text-tx3 focus:border-primary"
         />
         <button
           type="submit"
           disabled={busy || q.trim().length < 3}
-          className="rounded-md bg-info px-4 py-2 text-xs font-medium text-white disabled:opacity-40"
+          className="rounded-md bg-primary px-4 py-2 text-xs font-medium text-white disabled:opacity-40"
         >
           {busy ? "RO's reading…" : started ? "Send" : "Ask"}
         </button>
@@ -182,7 +182,7 @@ export default function AskRo({
             <button
               key={s}
               onClick={() => ask(s)}
-              className="rounded-full border border-bd bg-surf px-2.5 py-1 text-xs text-tx2 hover:text-info"
+              className="rounded-full border border-bd bg-surf px-2.5 py-1 text-xs text-tx2 hover:text-primary"
             >
               {s}
             </button>
@@ -195,7 +195,7 @@ export default function AskRo({
       <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-bd pt-4">
         <Link
           href="/login?next=/onboarding"
-          className="rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white"
+          className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white"
         >
           Share your profile → see your fit
         </Link>

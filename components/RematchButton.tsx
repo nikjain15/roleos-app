@@ -44,7 +44,7 @@ export default function RematchButton() {
       <button
         onClick={refresh}
         disabled={busy}
-        className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-info disabled:opacity-50"
+        className="rounded-md border border-bd px-3 py-1.5 text-xs text-tx2 hover:border-primary disabled:opacity-50"
       >
         {busy ? "Refreshing…" : "Refresh my matches →"}
       </button>

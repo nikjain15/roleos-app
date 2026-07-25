@@ -54,12 +54,12 @@ export default function Negotiate() {
         onChange={(e) => setOffer(e.target.value)}
         rows={5}
         placeholder="e.g. Stripe — Staff PM. Base $235k, equity $180k/4yr, 15% bonus, level L5, start in 6 weeks…"
-        className="mt-5 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] text-tx outline-none focus:border-info"
+        className="mt-5 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] text-tx outline-none focus:border-primary"
       />
       <button
         onClick={run}
         disabled={busy || offer.trim().length < 20}
-        className="mt-3 rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+        className="mt-3 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
       >
         {busy ? "RO is working the numbers…" : "Work the negotiation"}
       </button>
@@ -67,7 +67,7 @@ export default function Negotiate() {
       {result && (
         <div className="mt-8 space-y-4">
           {result.benchmark && (
-            <div className="rounded-xl border-l-[3px] border-info bg-info-bg p-4 text-[15px] text-info-tx">
+            <div className="rounded-xl border-l-[3px] border-primary bg-info-bg p-4 text-[15px] text-info-tx">
               <span className="text-[11px] font-semibold uppercase tracking-wide">Benchmark</span>
               <p className="mt-1">{result.benchmark}</p>
             </div>
@@ -100,7 +100,7 @@ export default function Negotiate() {
               <div className="mt-4 flex items-center gap-3">
                 <button
                   disabled
-                  className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white opacity-50"
+                  className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white opacity-50"
                   title="Sending is the separate, user-clicked dispatch — RO never sends."
                 >
                   Send it ↗

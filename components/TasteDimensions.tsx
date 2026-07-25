@@ -114,7 +114,7 @@ export default function TasteDimensions() {
                         <button
                           onClick={() => save(d.id, true, note.trim() || null)}
                           disabled={busy}
-                          className="min-h-9 rounded-md bg-info px-3 text-xs font-medium text-white disabled:opacity-50"
+                          className="min-h-9 rounded-md bg-primary px-3 text-xs font-medium text-white disabled:opacity-50"
                         >
                           This is me
                         </button>
@@ -145,7 +145,7 @@ function ConfidenceBar({ value, confirmed }: { value: number; confirmed: boolean
     <span className="flex items-center gap-1" title={`${Math.round(value * 100)}% confident`}>
       <span className="h-1.5 w-16 overflow-hidden rounded-full bg-surf2">
         <span
-          className={`block h-full ${confirmed ? "bg-suc" : "bg-info"}`}
+          className={`block h-full ${confirmed ? "bg-suc" : "bg-primary"}`}
           style={{ width: `${Math.round(value * 100)}%` }}
         />
       </span>

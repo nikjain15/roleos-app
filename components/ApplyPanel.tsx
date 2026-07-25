@@ -59,7 +59,7 @@ export default function ApplyPanel({
 
   return (
     <div className="mt-6 space-y-5">
-      <p className="rounded-lg border-l-[3px] border-info bg-info-bg p-3 text-[13px] text-info-tx">
+      <p className="rounded-lg border-l-[3px] border-primary bg-info-bg p-3 text-[13px] text-info-tx">
         RO never sends — you do. Open your application, submit it there, then mark it applied so I
         can track your pace.
       </p>
@@ -75,7 +75,7 @@ export default function ApplyPanel({
               href={bundle.atsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-11 items-center rounded-md bg-info px-4 text-sm font-medium text-white"
+              className="flex min-h-11 items-center rounded-md bg-primary px-4 text-sm font-medium text-white"
             >
               Open the application (company site) ↗
             </a>

@@ -113,7 +113,7 @@ function CoachInner({ voiceEnabled }: { voiceEnabled: boolean }) {
 
       {busy && (
         <div className="mt-6 rounded-xl border border-bd bg-surf2 p-4 text-sm text-tx2">
-          <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-info" />
+          <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
           {busy}
         </div>
       )}
@@ -168,7 +168,7 @@ function CoachInner({ voiceEnabled }: { voiceEnabled: boolean }) {
             <button
               onClick={() => mockTurn()}
               disabled={!!busy}
-              className="mt-3 rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+              className="mt-3 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
             >
               Start the mock
             </button>
@@ -195,13 +195,13 @@ function CoachInner({ voiceEnabled }: { voiceEnabled: boolean }) {
                 onChange={(e) => setAnswer(e.target.value)}
                 rows={3}
                 placeholder="Your answer…"
-                className="w-full rounded-lg border border-bd bg-surf p-3 text-sm text-tx outline-none focus:border-info"
+                className="w-full rounded-lg border border-bd bg-surf p-3 text-sm text-tx outline-none focus:border-primary"
               />
               <div className="flex gap-2">
                 <button
                   onClick={() => answer.trim() && mockTurn(answer)}
                   disabled={!!busy || answer.trim().length < 2}
-                  className="rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
+                  className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
                 >
                   Answer
                 </button>
@@ -258,7 +258,7 @@ function CoachInner({ voiceEnabled }: { voiceEnabled: boolean }) {
             </div>
           )}
           {debriefData.one_thing && (
-            <div className="mt-4 rounded-lg border-l-[3px] border-info bg-info-bg p-3 text-[14px] text-info-tx">
+            <div className="mt-4 rounded-lg border-l-[3px] border-primary bg-info-bg p-3 text-[14px] text-info-tx">
               <span className="font-semibold">The one thing before your real round: </span>{debriefData.one_thing}
             </div>
           )}

@@ -144,7 +144,7 @@ export default function ConnectionsManager({ total }: { total: number }) {
             <button
               type="submit"
               disabled={busy !== null || !manual.name.trim()}
-              className="min-h-10 rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-50"
+              className="min-h-10 rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-50"
             >
               {busy === "manual" ? "Adding…" : "Add person"}
             </button>

@@ -226,7 +226,7 @@ export default function TrackerBoard({
                 key={m.role_id}
                 disabled={busy === m.role_id}
                 onClick={() => m.role_id && track(m.role_id)}
-                className="min-h-10 rounded-md border border-info bg-info-bg px-3 text-[13px] text-info-tx disabled:opacity-50"
+                className="min-h-10 rounded-md border border-primary bg-info-bg px-3 text-[13px] text-info-tx disabled:opacity-50"
               >
                 + {m.roles?.role_title} · {m.roles?.company}
               </button>

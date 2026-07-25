@@ -22,7 +22,7 @@ export default function AppError({ error, reset }: { error: Error & { digest?: s
         The page hit an unexpected error. Your data is safe — try again, or head back to your feed.
       </p>
       <div className="mt-6 flex items-center justify-center gap-3">
-        <button onClick={reset} className="min-h-11 rounded-md bg-info px-4 text-sm font-medium text-white">
+        <button onClick={reset} className="min-h-11 rounded-md bg-primary px-4 text-sm font-medium text-white">
           Try again
         </button>
         <Link href="/feed" className="min-h-11 rounded-md border border-bd px-4 py-2.5 text-sm text-tx2">

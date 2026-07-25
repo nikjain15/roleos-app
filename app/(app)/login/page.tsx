@@ -62,7 +62,7 @@ function LoginInner() {
   return (
     <main className="mx-auto max-w-md px-6 py-16 sm:py-20">
       <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold">
-        <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">RO</span>
+        <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] text-white">RO</span>
         RoleOS
       </Link>
 
@@ -109,12 +109,12 @@ function LoginInner() {
             onKeyDown={(e) => e.key === "Enter" && magicLink()}
             aria-label="Your email address"
             placeholder="you@email.com"
-            className="min-h-11 w-full rounded-md border border-bd bg-surf px-4 text-[15px] text-tx outline-none focus:border-info"
+            className="min-h-11 w-full rounded-md border border-bd bg-surf px-4 text-[15px] text-tx outline-none focus:border-primary"
           />
           <button
             onClick={magicLink}
             disabled={busy || !email.includes("@")}
-            className="min-h-11 w-full rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-40"
+            className="min-h-11 w-full rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-40"
           >
             {busy ? "Sending…" : "Email me a sign-in link"}
           </button>

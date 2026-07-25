@@ -24,7 +24,7 @@ export default async function RolesPage() {
               <Link href={`/explore/role/${a.slug}`} className="flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-surf2">
                 <span className="w-56 shrink-0 truncate text-sm text-tx">{a.name}</span>
                 <span className="h-2 flex-1 overflow-hidden rounded-full bg-surf2">
-                  <span className="block h-full rounded-full bg-info" style={{ width: `${(a.count / max) * 100}%` }} />
+                  <span className="block h-full rounded-full bg-primary" style={{ width: `${(a.count / max) * 100}%` }} />
                 </span>
                 <span className="w-20 shrink-0 text-right text-xs text-tx3">{a.count} · {a.pct}%</span>
               </Link>

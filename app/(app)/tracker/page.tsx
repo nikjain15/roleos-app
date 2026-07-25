@@ -70,10 +70,10 @@ export default async function Tracker() {
       <p className="mt-2 max-w-2xl text-[15px] text-tx2">
         Every role you&apos;re pursuing and exactly where it stands. Advancing a stage keeps your
         pace honest — it&apos;s what tells RO if you&apos;re on track.{" "}
-        <Link href="/ready-room" className="font-medium text-info hover:underline">
+        <Link href="/ready-room" className="font-medium text-primary hover:underline">
           Review the overnight queue →
         </Link>{" "}
-        <Link href="/reply-desk" className="font-medium text-info hover:underline">
+        <Link href="/reply-desk" className="font-medium text-primary hover:underline">
           Reply desk →
         </Link>
       </p>

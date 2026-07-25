@@ -9,7 +9,7 @@ export default function Landing() {
   return (
     <main className="mx-auto max-w-3xl px-6 py-20">
       <span className="inline-flex items-center gap-2 text-sm font-semibold">
-        <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">
+        <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] text-white">
           RO
         </span>
         RoleOS
@@ -28,7 +28,7 @@ export default function Landing() {
       <div className="mt-8 flex gap-3">
         <Link
           href="/onboarding"
-          className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+          className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
         >
           Hand RO your hunt
         </Link>

@@ -180,7 +180,7 @@ export default function ResumeEditor({
             aria-disabled={!grounded}
             className={[
               "flex min-h-10 items-center rounded-md px-3 text-sm font-medium",
-              grounded ? "bg-info text-white hover:opacity-90" : "pointer-events-none bg-info opacity-40 text-white",
+              grounded ? "bg-primary text-white hover:opacity-90" : "pointer-events-none bg-primary opacity-40 text-white",
             ].join(" ")}
           >
             Export PDF
@@ -273,7 +273,7 @@ export default function ResumeEditor({
                         <button
                           onClick={() => void applyGrounded(i, flag.reasons)}
                           disabled={regrounding === i}
-                          className="min-h-9 rounded-md bg-info px-2.5 text-xs font-medium text-white disabled:opacity-50"
+                          className="min-h-9 rounded-md bg-primary px-2.5 text-xs font-medium text-white disabled:opacity-50"
                         >
                           {regrounding === i ? "grounding…" : "Use RO's grounded version"}
                         </button>
