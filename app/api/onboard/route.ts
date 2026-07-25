@@ -7,7 +7,8 @@ import { parseModelJson } from "@/lib/json";
 import { assessProfileInput, thinInputMessage } from "@/lib/profile-input";
 import { normalizeProfileText } from "@/lib/normalize-profile";
 import { extractLinkedInUrl, getProfileFetcher } from "@/lib/profile-fetcher";
-import { extractGitHubUrl, fetchGitHubProfileText } from "@/lib/github-fetch";
+import { extractGitHubUrl, fetchGitHubStructured, githubStructuredToText } from "@/lib/github-fetch";
+import { structureProfile } from "@/lib/profile-structure";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -76,12 +77,16 @@ export async function POST(req: Request): Promise<Response> {
         if (linkedinUrl && linkedinFetcher) send({ type: "status", text: "Pulling your profile from that link…" });
         if (githubUrl) send({ type: "status", text: "Reading your GitHub…" });
 
-        const [linkedinText, githubText] = await Promise.all([
+        // One structured fetch per source → derive BOTH the matching text and the
+        // canonical profile (no second paid scrape).
+        const [linkedinRes, githubStruct] = await Promise.all([
           linkedinUrl && linkedinFetcher
-            ? linkedinFetcher.fetchProfileText(linkedinUrl).catch(() => "")
-            : Promise.resolve(""),
-          githubUrl ? fetchGitHubProfileText(githubUrl).catch(() => "") : Promise.resolve(""),
+            ? linkedinFetcher.fetchProfile(linkedinUrl).catch(() => null)
+            : Promise.resolve(null),
+          githubUrl ? fetchGitHubStructured(githubUrl).catch(() => null) : Promise.resolve(null),
         ]);
+        const linkedinText = linkedinRes?.text ?? "";
+        const githubText = githubStruct ? githubStructuredToText(githubStruct) : "";
 
         // Free text = what the user typed BEYOND the URLs (notes / pasted CV). Strip
         // both URL forms (scheme or not) so the raw link doesn't pollute the signal.
@@ -145,6 +150,24 @@ export async function POST(req: Request): Promise<Response> {
           }
         })();
 
+        // Build the canonical structured profile in parallel (docs/specs/profile-
+        // data-layer.md): deterministic LinkedIn/GitHub mappers + résumé structurer
+        // + merge. Rides alongside matching; emitted for the client to persist on
+        // save. The one model call (résumé structurer) only fires if there's free
+        // text — a LinkedIn/GitHub-only input maps deterministically, no added call.
+        const canonicalPromise = structureProfile({
+          linkedin: linkedinRes?.structured ?? null,
+          github: githubStruct,
+          resumeText: freeText,
+          target: target || undefined,
+          at: new Date().toISOString(),
+        })
+          .then((canonical) => {
+            send({ type: "profile_canonical", profile: canonical });
+            return canonical;
+          })
+          .catch(() => null);
+
         send({ type: "status", text: "Comparing you against every open role…" });
         const { short, scanned } = await recallAndShortlist(profileText, N_JOBS, target ? [target] : []);
 
@@ -179,7 +202,7 @@ export async function POST(req: Request): Promise<Response> {
         }));
         send({ type: "matches", matches: slim, scanned });
 
-        await mirrorPromise; // make sure the read landed before we close
+        await Promise.all([mirrorPromise, canonicalPromise]); // read + canonical landed
         send({ type: "done" });
       } catch (e) {
         send({

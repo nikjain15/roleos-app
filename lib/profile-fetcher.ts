@@ -1,5 +1,6 @@
 import { env } from "@/lib/env";
 import { normalizeProfileText } from "@/lib/normalize-profile";
+import type { LinkedInStructured } from "@/lib/profile-map";
 
 /**
  * URL → profile-text fetcher (the optional, swappable scraper layer).
@@ -24,6 +25,12 @@ export interface ProfileFetcher {
   readonly name: string;
   /** Fetch a LinkedIn profile URL → readable, normalized profile text. */
   fetchProfileText(linkedinUrl: string): Promise<string>;
+  /**
+   * One fetch → both the matching text AND the structured item (when the adapter
+   * exposes one), so the caller can build text + canonical profile without a
+   * second paid scrape. `structured` is null when the adapter can't map a shape.
+   */
+  fetchProfile(linkedinUrl: string): Promise<{ text: string; structured: LinkedInStructured | null }>;
 }
 
 // Universal: any LinkedIn profile form — /in/ or /pub/, country subdomains, and
@@ -130,26 +137,36 @@ function apimaestroProfileToText(item: Record<string, unknown>): string | null {
 // POST .../acts/<actor>/run-sync-get-dataset-items?token=… → array of items.
 // Default actor: apimaestro/linkedin-profile-detail (verified live).
 function apifyFetcher(token: string, actor: string): ProfileFetcher {
+  async function fetchRaw(url: string): Promise<Record<string, unknown>> {
+    const actorPath = actor.replace("/", "~"); // Apify API form: username~actor
+    const endpoint = `https://api.apify.com/v2/acts/${encodeURIComponent(
+      actorPath,
+    )}/run-sync-get-dataset-items?token=${encodeURIComponent(token)}`;
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      // apimaestro takes `username` (a profile URL or handle); extras are ignored.
+      body: JSON.stringify({ username: url, profileUrl: url, url }),
+    });
+    if (!res.ok) throw new Error(`apify ${res.status}`);
+    const items = (await res.json()) as unknown;
+    const first = Array.isArray(items) ? items[0] : items;
+    if (!first || typeof first !== "object") throw new Error("apify: empty result");
+    return first as Record<string, unknown>;
+  }
   return {
     name: "apify",
     async fetchProfileText(url: string): Promise<string> {
-      const actorPath = actor.replace("/", "~"); // Apify API form: username~actor
-      const endpoint = `https://api.apify.com/v2/acts/${encodeURIComponent(
-        actorPath,
-      )}/run-sync-get-dataset-items?token=${encodeURIComponent(token)}`;
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        // apimaestro takes `username` (a profile URL or handle); extras are ignored.
-        body: JSON.stringify({ username: url, profileUrl: url, url }),
-      });
-      if (!res.ok) throw new Error(`apify ${res.status}`);
-      const items = (await res.json()) as unknown;
-      const first = Array.isArray(items) ? items[0] : items;
-      if (!first || typeof first !== "object") throw new Error("apify: empty result");
-      const obj = first as Record<string, unknown>;
-      const text = apimaestroProfileToText(obj) ?? profileObjectToText(obj);
-      return normalizeProfileText(text);
+      const obj = await fetchRaw(url);
+      return normalizeProfileText(apimaestroProfileToText(obj) ?? profileObjectToText(obj));
+    },
+    // One scrape → text + the structured apimaestro item (the mapper's input).
+    async fetchProfile(url: string) {
+      const obj = await fetchRaw(url);
+      const text = normalizeProfileText(apimaestroProfileToText(obj) ?? profileObjectToText(obj));
+      // The apimaestro shape IS LinkedInStructured (basic_info/experience/education).
+      const structured = obj.basic_info || obj.experience ? (obj as unknown as LinkedInStructured) : null;
+      return { text, structured };
     },
   };
 }
@@ -178,6 +195,10 @@ function brightDataFetcher(token: string, datasetId: string): ProfileFetcher {
       const first = Array.isArray(data) ? data[0] : data;
       if (!first || typeof first !== "object") throw new Error("brightdata: empty result");
       return normalizeProfileText(profileObjectToText(first as Record<string, unknown>));
+    },
+    // Bright Data's shape isn't mapped to LinkedInStructured — text only.
+    async fetchProfile(url: string) {
+      return { text: await this.fetchProfileText(url), structured: null };
     },
   };
 }

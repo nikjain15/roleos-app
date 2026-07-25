@@ -3,6 +3,7 @@ import { z } from "zod";
 import { validateBody } from "@/lib/validate";
 import { supabaseServer } from "@/lib/supabase/server";
 import { onboardingEvents, type OnboardingActions } from "@/lib/onboarding-events";
+import { parseCanonicalProfile } from "@/lib/profile-schema";
 
 /**
  * Save what RO found during onboarding, once the user has signed up. Writes are
@@ -24,6 +25,8 @@ interface SaveBody {
     why: string;
     gaps: unknown;
   }>;
+  /** The canonical structured profile (re-coerced server-side before storage). */
+  profile_canonical?: Record<string, unknown> | null;
 }
 
 export async function POST(req: Request): Promise<Response> {
@@ -39,6 +42,9 @@ export async function POST(req: Request): Promise<Response> {
       profile: z.string().min(1, "nothing to save").max(200_000),
       mirror: z.unknown().optional(),
       linkedin_url: z.string().max(300).nullable().optional(),
+      // The canonical structured profile (docs/specs/profile-data-layer.md). Shape
+      // is re-coerced server-side below — client input is never trusted.
+      profile_canonical: z.record(z.string(), z.unknown()).nullable().optional(),
       matches: z.array(z.record(z.string(), z.unknown())).max(50).optional(),
       // J1: the pre-save actions (✓/✗ per statement, corrections, target, re-rank)
       // that become the taste model's first decision_events (PRD §5.2).
@@ -66,11 +72,22 @@ export async function POST(req: Request): Promise<Response> {
   if (!parsed.ok) return parsed.response;
   const body = parsed.data as unknown as SaveBody & { onboarding?: OnboardingActions };
 
-  // master_profile (projection) — the living source of truth starts here.
+  // master_profile (projection) — the living source of truth starts here. Store
+  // the raw text (re-processable) + the canonical structured profile (re-coerced,
+  // never trusting the client shape) per docs/specs/profile-data-layer.md.
+  const canonical = body.profile_canonical
+    ? parseCanonicalProfile(body.profile_canonical, { defaultSource: "user", at: new Date().toISOString() })
+    : null;
   const { error: mpErr } = await supabase.from("master_profile").upsert(
     {
       user_id: user.id,
-      data: { raw: body.profile, mirror: body.mirror ?? null, linkedin_url: body.linkedin_url ?? null },
+      data: {
+        raw: body.profile,
+        mirror: body.mirror ?? null,
+        linkedin_url: body.linkedin_url ?? null,
+        profile: canonical,
+        profile_version: canonical ? 1 : null,
+      },
       updated_at: new Date().toISOString(),
     },
     { onConflict: "user_id" },

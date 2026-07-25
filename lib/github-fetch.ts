@@ -70,6 +70,14 @@ interface GitHubRepo {
   fork?: boolean;
   archived?: boolean;
   updated_at?: string;
+  html_url?: string;
+}
+
+/** The raw structured pull from GitHub — one fetch, feeds both text + canonical. */
+export interface GitHubStructured {
+  user: GitHubUser;
+  repos: GitHubRepo[];
+  readme: string | null;
 }
 
 function ghHeaders(): Record<string, string> {
@@ -102,22 +110,29 @@ async function fetchProfileReadme(handle: string): Promise<string | null> {
 }
 
 /**
- * Read a public GitHub profile → readable, normalized profile text. Combines
- * cleanly with LinkedIn/CV/notes upstream. Returns "" when there's nothing
- * usable (unknown handle, empty account) so the caller can just skip it.
+ * One structured pull from GitHub (user + repos + profile README). Feeds BOTH the
+ * matching text (githubStructuredToText) and the canonical profile (githubToProfile
+ * in lib/profile-map) — so we fetch once and derive both. Returns null when there's
+ * no usable account.
  */
-export async function fetchGitHubProfileText(input: string): Promise<string> {
+export async function fetchGitHubStructured(input: string): Promise<GitHubStructured | null> {
   const handle = githubHandle(input);
-  if (!handle) return "";
+  if (!handle) return null;
 
   const user = await ghJson<GitHubUser>(`https://api.github.com/users/${handle}`);
-  if (!user || !user.login) return "";
+  if (!user || !user.login) return null;
 
-  // Top repos by stars — skip forks/archived, they're not "their work".
   const repos =
     (await ghJson<GitHubRepo[]>(
       `https://api.github.com/users/${handle}/repos?per_page=100&sort=pushed`,
     )) ?? [];
+  const readme = await fetchProfileReadme(handle);
+  return { user, repos, readme };
+}
+
+/** Structured GitHub → readable, normalized matching text (unchanged output). */
+export function githubStructuredToText({ user, repos, readme }: GitHubStructured): string {
+  // Top repos by stars — skip forks/archived, they're not "their work".
   const own = repos.filter((r) => !r.fork && !r.archived);
   const top = [...own].sort((a, b) => (b.stargazers_count ?? 0) - (a.stargazers_count ?? 0)).slice(0, 8);
 
@@ -146,14 +161,21 @@ export async function fetchGitHubProfileText(input: string): Promise<string> {
     }
   }
 
-  // The profile README is often the richest self-description — include a trimmed cut.
-  const readme = await fetchProfileReadme(handle);
   if (readme && readme.trim().length > 40) {
     parts.push("Profile README:");
     parts.push(readme.trim().slice(0, 2500));
   }
 
-  // Nothing beyond the handle line? Not worth returning.
-  if (parts.length <= 2) return "";
+  if (parts.length <= 2) return ""; // nothing beyond the handle line
   return normalizeProfileText(parts.join("\n"));
+}
+
+/**
+ * Read a public GitHub profile → readable, normalized profile text. Combines
+ * cleanly with LinkedIn/CV/notes upstream. Returns "" when there's nothing
+ * usable (unknown handle, empty account) so the caller can just skip it.
+ */
+export async function fetchGitHubProfileText(input: string): Promise<string> {
+  const s = await fetchGitHubStructured(input);
+  return s ? githubStructuredToText(s) : "";
 }
