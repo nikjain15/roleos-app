@@ -4,11 +4,15 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { extractDocumentText, ACCEPTED_TYPES } from "@/lib/parse-document";
 import { supabaseBrowser } from "@/lib/supabase/client";
+import { Button, Card } from "@/components/ui";
+import type { MirrorReaction } from "@/lib/onboarding-events";
 
 /**
- * Value-first onboarding (journey.html §3 A→B→C). One input → watch RO reason
- * (streamed) → the mirror (she reads you back + one insight) → your matches with
- * her reasoning. No signup wall — value before friction. Voice per ro-voice.html.
+ * Onboarding v2 (J1 — docs/specs/onboarding-design.md). Value-first, taste from
+ * minute one: one input → RO works (plain-English ticker) → her tappable read of
+ * you beside jobs that re-rank when you correct her → save with a taste of the
+ * work. Built on the design system (grape · Space Grotesk · ui/ primitives).
+ * No signup wall; nothing persists until save (privacy §5.1). Voice per ro-voice.
  */
 
 type Match = {
@@ -22,34 +26,66 @@ type Match = {
   why: string;
   gaps: { gap: string; bridgeable: "yes" | "maybe" | "no" }[];
 };
-type Mirror = { statements: string[]; insight: string };
+// A recalled role before RO has reasoned it — enough to paint a real card
+// (company/title/comp) while her verdict + why + gaps stream in.
+type ShortlistRole = Pick<Match, "id" | "company" | "role_title" | "url" | "comp">;
+type Statement = { lead: string; detail: string };
+type Mirror = { statements: Statement[]; insight: string };
+type Variant = "default" | "explore" | "returning" | "signedin-nodata";
 
 const SAMPLE =
   "I'm a senior product manager with 8 years of experience, the last 4 on AI/ML products. I led a 0-to-1 launch of an LLM-powered support assistant that cut response time 40% and deflected 30% of tickets, and before that shipped a fraud-detection ML platform. Strong on technical PM, eval frameworks, and working with ML engineers. Looking for senior/staff AI PM roles. SF, open to hybrid.";
 
 export default function Onboarding() {
-  const [profile, setProfile] = useState("");
+  // ── inputs (conversational: goal → one composer for URL/file/text) ──
+  const [step, setStep] = useState<1 | 2>(1);
+  const [target, setTarget] = useState("");
+  const [work, setWork] = useState(""); // free-text notes / pasted CV
+  // Dedicated source fields — each appears only once you add it (progressive).
+  const [linkedin, setLinkedin] = useState("");
+  const [github, setGithub] = useState("");
+  const [showLinkedin, setShowLinkedin] = useState(false);
+  const [showGithub, setShowGithub] = useState(false);
+  const [attached, setAttached] = useState<{ name: string; text: string } | null>(null);
+  const [parsing, setParsing] = useState(false);
+  const workRef = useRef<HTMLTextAreaElement>(null);
+  const linkedinRef = useRef<HTMLInputElement>(null);
+  const githubRef = useRef<HTMLInputElement>(null);
+
+  // ── run state ──
   const [status, setStatus] = useState<string[]>([]);
+  const [running, setRunning] = useState(false);
+  const [reranking, setReranking] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [needsMore, setNeedsMore] = useState<string | null>(null);
+
+  // ── results ──
   const [mirror, setMirror] = useState<Mirror | null>(null);
   const [matches, setMatches] = useState<Match[] | null>(null);
-  const [needsMore, setNeedsMore] = useState<string | null>(null);
-  const [running, setRunning] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [parsing, setParsing] = useState(false);
-  const [fileNote, setFileNote] = useState<string | null>(null);
-  // The RESOLVED profile text (fetched/normalized) — what we save, so the
-  // master_profile is real content, not the URL the user typed.
+  const [shortlistRoles, setShortlistRoles] = useState<ShortlistRole[] | null>(null);
+  const [scanned, setScanned] = useState<number | null>(null);
   const [resolvedProfile, setResolvedProfile] = useState<string | null>(null);
+
+  // ── the taste-from-minute-one signals (become decision_events on save) ──
+  const [reactions, setReactions] = useState<Record<number, MirrorReaction>>({});
+  const [rerankNote, setRerankNote] = useState<string | null>(null);
+  const [reranked, setReranked] = useState(false);
+  const [showAllMatches, setShowAllMatches] = useState(false);
+  const [jobFilter, setJobFilter] = useState<"all" | "pursue" | "maybe">("all");
+
+  // ── context ──
+  const [variant, setVariant] = useState<Variant>("default");
   const [firstName, setFirstName] = useState<string | null>(null);
-  const [linkedinUrl, setLinkedinUrl] = useState("");
   const [signedIn, setSignedIn] = useState(false);
   const [savedNote, setSavedNote] = useState(false);
-  // How many roles RO compared against (the embedded pool) — sent with matches.
-  const [scanned, setScanned] = useState<number | null>(null);
-  const resultsRef = useRef<HTMLDivElement>(null);
   const fileRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
+    // Explore arrival: ?from=role:<id> — RO continues the conversation.
+    const q = new URLSearchParams(window.location.search);
+    const from = q.get("from");
+    if (from?.startsWith("role:")) setVariant("explore");
+
     const sb = supabaseBrowser();
     (async () => {
       const { data } = await sb.auth.getUser();
@@ -58,54 +94,72 @@ export default function Onboarding() {
         const m = data.user.user_metadata as Record<string, unknown> | undefined;
         const name = (m?.name ?? m?.full_name ?? m?.given_name) as string | undefined;
         if (name) setFirstName(String(name).split(" ")[0]);
-        // RO remembers: if we already saved their work, don't re-ask — send them
-        // to their feed (their saved profile + matches live there).
-        const { count } = await sb
-          .from("matches")
-          .select("role_id", { count: "exact", head: true });
+        const { count } = await sb.from("matches").select("role_id", { count: "exact", head: true });
         if ((count ?? 0) > 0) {
-          window.location.replace("/feed");
+          window.location.replace("/feed"); // never re-onboard someone with saved work
           return;
         }
+        setVariant((v) => (v === "explore" ? v : "signedin-nodata"));
       }
     })().catch(() => {});
-    // Pre-fill the last LinkedIn URL on this device (one-time convenience).
+
     try {
       const saved = localStorage.getItem("roleos.linkedin_url");
-      if (saved) setLinkedinUrl(saved);
+      if (saved) {
+        setLinkedin(saved); // prefill their remembered LinkedIn
+        setShowLinkedin(true);
+        setVariant((v) => (v === "default" ? "returning" : v));
+      }
     } catch {
       /* localStorage unavailable — fine */
     }
   }, []);
 
-  const isLinkedInUrl = (s: string) => /linkedin\.com\/in\//i.test(s.trim());
+  // Universal LinkedIn: any profile form (/in/, /pub/, country subdomains, www or
+  // not, scheme or not). The scraper still needs an /in/ link to actually fetch.
+  const isLinkedInUrl = (s: string) => /(?:^|\/\/|\.)linkedin\.com\/(in|pub)\//i.test(s.trim());
+  const linkedinVal = () => (showLinkedin ? linkedin.trim() : "");
+  const githubVal = () => (showGithub ? github.trim() : "");
+  // Everything RO reads, combined: attached file + LinkedIn + GitHub + free notes.
+  const effectiveProfile = () =>
+    [attached?.text ?? "", linkedinVal(), githubVal(), work.trim()].filter((s) => s.length > 0).join("\n\n");
+  // Just the LinkedIn URL — for the "reading" chip and the saved linkedin_url.
+  const workUrl = () => (linkedinVal() && isLinkedInUrl(linkedinVal()) ? linkedinVal() : undefined);
+  const cleanUrl = (u: string) => u.replace(/^https?:\/\/(www\.)?/i, "").replace(/\/$/, "");
+  // A short, human label for what RO is reading — keeps the ticker in context.
+  const sourceSummary = () => {
+    const parts: string[] = [];
+    if (linkedinVal()) parts.push(cleanUrl(linkedinVal()));
+    if (githubVal()) parts.push(cleanUrl(githubVal()));
+    if (attached) parts.push(attached.name);
+    if (work.trim().length >= 20) parts.push("your notes");
+    return parts.join(" · ");
+  };
+  const hasWork =
+    !!attached ||
+    linkedinVal().length > 4 ||
+    githubVal().length > 4 ||
+    work.trim().length >= 30;
 
-  function pullLinkedIn() {
-    const url = linkedinUrl.trim();
-    if (!isLinkedInUrl(url) || running || parsing) return;
-    try {
-      localStorage.setItem("roleos.linkedin_url", url);
-    } catch {
-      /* ignore */
-    }
-    run(url);
-  }
+  // Reveal a source field (once) and focus it — the toolbar button becomes the field.
+  const addLinkedin = () => { setShowLinkedin(true); setTimeout(() => linkedinRef.current?.focus(), 0); };
+  const addGithub = () => { setShowGithub(true); setTimeout(() => githubRef.current?.focus(), 0); };
+
+  // Sharpness meter: 1 (base) → 3 (with work) → 4 (with a target too).
+  const sharpness = 1 + (hasWork ? 2 : 0) + (target.trim() ? 1 : 0);
 
   async function onFile(file: File | undefined) {
     if (!file) return;
     setParsing(true);
     setError(null);
-    setFileNote(null);
     try {
       const text = await extractDocumentText(file);
       if (text.trim().length < 30) {
-        // likely an image-only / scanned PDF — be honest, don't pretend we read it
         setError(
           "I couldn't pull readable text from that — it may be a scanned image. Try the LinkedIn “Save to PDF” export, or paste your text.",
         );
       } else {
-        setProfile(text);
-        setFileNote(`Read ${file.name} — ${text.length.toLocaleString()} characters. Looks good? Show me what I see.`);
+        setAttached({ name: file.name, text });
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : "I couldn't read that file — try a PDF or paste the text.");
@@ -115,26 +169,34 @@ export default function Onboarding() {
     }
   }
 
-  async function run(override?: string) {
-    const p = (override ?? profile).trim();
-    // Allow a short LinkedIn URL through (it auto-fetches); else require real text.
-    if ((p.length < 30 && !isLinkedInUrl(p)) || running) return;
+  async function run() {
+    const p = effectiveProfile();
+    // Enough to go on: real text, or a LinkedIn/GitHub URL RO can read for you.
+    const hasUrl = linkedinVal().length > 4 || githubVal().length > 4;
+    if ((p.trim().length < 30 && !hasUrl) || running) return;
+    // Remember the LinkedIn URL on this device (returning-anon convenience).
+    if (workUrl()) {
+      try { localStorage.setItem("roleos.linkedin_url", workUrl()!); } catch { /* ignore */ }
+    }
     setRunning(true);
     setStatus([]);
     setMirror(null);
     setMatches(null);
+    setShortlistRoles(null);
     setNeedsMore(null);
     setError(null);
     setSavedNote(false);
+    setReactions({});
+    setRerankNote(null);
+    setReranked(false);
 
     try {
       const res = await fetch("/api/onboard", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ profile: p }),
+        body: JSON.stringify({ profile: p, target: target.trim() || undefined }),
       });
       if (!res.body) throw new Error("no stream");
-
       const reader = res.body.getReader();
       const decoder = new TextDecoder();
       let buf = "";
@@ -155,31 +217,16 @@ export default function Onboarding() {
           else if (ev.type === "resolved") { gotResolved = ev.profile; setResolvedProfile(ev.profile); }
           else if (ev.type === "needs_more") setNeedsMore(ev.text);
           else if (ev.type === "mirror") { gotMirror = { statements: ev.statements, insight: ev.insight }; setMirror(gotMirror); }
+          else if (ev.type === "shortlist") { setShortlistRoles(ev.roles); if (typeof ev.scanned === "number") setScanned(ev.scanned); }
           else if (ev.type === "matches") { gotMatches = ev.matches; setMatches(ev.matches); if (typeof ev.scanned === "number") setScanned(ev.scanned); }
           else if (ev.type === "error") setError(ev.text);
         }
       }
 
-      // RO remembers: a signed-in user's work is saved automatically — no
-      // re-asking next time. (Anon users save via sign-in; see the CTA below.)
       if (signedIn && gotMatches?.length) {
-        try {
-          await fetch("/api/save", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              // Save the RESOLVED content (fetched profile), not the URL the
-              // user typed — so the master_profile is a real source of truth.
-              profile: gotResolved ?? p,
-              mirror: gotMirror,
-              matches: gotMatches,
-              linkedin_url: isLinkedInUrl(p) ? p.trim() : undefined,
-            }),
-          });
-          setSavedNote(true);
-        } catch {
-          /* best-effort — the user can still save from the feed */
-        }
+        await persist(gotResolved ?? p, gotMirror, gotMatches, workUrl())
+          .then(() => setSavedNote(true))
+          .catch(() => {});
       }
     } catch {
       setError("That didn't go through on my end — not you. Try again in a moment.");
@@ -188,267 +235,642 @@ export default function Onboarding() {
     }
   }
 
+  // A visually distinct target-guess. If the user told RO a target, it's confirmable;
+  // if not, RO's guess is drawn from her top verdict — honest (it's literally what
+  // she ranked toward) and correctable → re-rank.
+  const guess: Statement | null = target.trim()
+    ? { lead: "Your target", detail: target.trim() }
+    : matches && matches[0]
+      ? { lead: "Her guess", detail: `roles like ${matches[0].role_title}` }
+      : null;
+  const guessIndex = mirror ? mirror.statements.length : -1;
+
+  function react(index: number, statement: string, verdict: "confirm" | "correct", isGuess = false, correction?: string) {
+    setReactions((r) => ({ ...r, [index]: { statement, verdict, correction, isGuess } }));
+  }
+
+  async function rerank(newTarget: string) {
+    const t = newTarget.trim();
+    const source = resolvedProfile ?? effectiveProfile();
+    if (!t || reranking || source.trim().length < 30) return;
+    setTarget(t);
+    setReranked(true);
+    setRerankNote("Noted — I'll remember that. Re-ranking against the real thing…");
+    setReranking(true);
+    try {
+      const res = await fetch("/api/onboard/rerank", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ profile: source, target: t }),
+      });
+      const data = (await res.json()) as { matches?: Match[]; scanned?: number; error?: string };
+      if (data.matches) {
+        setMatches(data.matches);
+        if (typeof data.scanned === "number") setScanned(data.scanned);
+        setRerankNote("Done — your list moved. It's ranked against what you actually want now.");
+      } else {
+        setRerankNote("That re-rank didn't go through — not you. Try once more in a moment.");
+      }
+    } catch {
+      setRerankNote("That re-rank didn't go through — not you. Try once more in a moment.");
+    } finally {
+      setReranking(false);
+    }
+  }
+
+  function collectActions() {
+    const mirrorReactions = Object.values(reactions);
+    return {
+      target: target.trim() || null,
+      reranked,
+      scanned: scanned ?? undefined,
+      mirrorReactions,
+    };
+  }
+
+  async function persist(prof: string, mir: Mirror | null, ms: Match[], linkedin?: string) {
+    await fetch("/api/save", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ profile: prof, mirror: mir, matches: ms, linkedin_url: linkedin, onboarding: collectActions() }),
+    });
+  }
+
+  function saveAndSignIn() {
+    sessionStorage.setItem(
+      "roleos.pending",
+      JSON.stringify({
+        profile: resolvedProfile ?? effectiveProfile(),
+        mirror,
+        matches,
+        linkedin_url: workUrl(),
+        onboarding: collectActions(), // carry ALL pre-save actions through login (§5.2)
+      }),
+    );
+    window.location.href = "/login?next=/feed";
+  }
+
+  const weakPool = matches !== null && matches.every((m) => m.recommendation !== "pursue");
+
   return (
-    <main className="mx-auto max-w-2xl px-6 py-16">
-      <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold">
-        <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] text-white">RO</span>
+    <main className="px-6 pt-14 pb-32">
+     <div className="mx-auto max-w-2xl">
+      <Link href="/" className="inline-flex items-center gap-2 text-small font-semibold text-tx">
+        <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] font-bold text-white">RO</span>
         RoleOS
       </Link>
 
-      <h1 className="mt-8 text-3xl font-bold tracking-tight">
-        {firstName
-          ? `Welcome, ${firstName} — let's get RO your work.`
-          : "Tell RO about your work. Watch what she sees."}
-      </h1>
-      <p className="mt-3 text-tx2">
-        {firstName
-          ? "Signing in tells me who you are, not what you've built — LinkedIn won't hand over your experience. Drop your profile URL and I'll pull the rest."
-          : "Paste your CV, your LinkedIn, or just a few honest lines. No sign-up — RO works first, you decide after."}
-      </p>
+      {/* ── S1 · Arrive (conversational: goal → one composer) ── */}
+      {!matches && !running && (
+        <>
+          {/* RO speaking */}
+          <div className="mt-12 flex items-start gap-3">
+            <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-overline font-bold text-white">RO</span>
+            <div className="flex-1">
+              <h1 className="font-display text-h2 font-semibold leading-snug text-tx">
+                {step === 1
+                  ? firstName
+                    ? `First, ${firstName} — what job do you want next?`
+                    : "First — what job do you want next?"
+                  : "Great. Now show me your work."}
+              </h1>
+              <p className="mt-2 text-body leading-relaxed text-tx2">
+                {step === 1
+                  ? "The more you tell me, the sharper everything I make for you. Plain English is perfect."
+                  : variant === "signedin-nodata"
+                    ? "Signing in told me who you are — not what you've built. Paste your LinkedIn, attach a CV, or type a few lines — I'll read it all."
+                    : "Paste your LinkedIn, attach a CV, or type a few lines — or all three. I'll read it all."}
+              </p>
+              {step === 1 && variant === "explore" && (
+                <p className="mt-2 text-small text-primary">Picking up where you left off &mdash; I&rsquo;ll be sure to weigh in on that role.</p>
+              )}
+            </div>
+          </div>
 
-      {/* LinkedIn URL — one-tap auto-fetch (via Apify). The fastest path now. */}
-      <div className="mt-6 rounded-xl border border-primary/40 bg-info-bg/40 p-4">
-        <label className="text-[11px] font-semibold uppercase tracking-wide text-info-tx">
-          Pull straight from LinkedIn
-        </label>
-        <div className="mt-2 flex flex-col gap-2 sm:flex-row">
-          <input
-            value={linkedinUrl}
-            onChange={(e) => setLinkedinUrl(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && pullLinkedIn()}
-            placeholder="https://www.linkedin.com/in/your-handle/"
-            aria-label="Your LinkedIn profile URL"
-            disabled={running || parsing}
-            className="flex-1 rounded-md border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none focus:border-primary disabled:opacity-60"
-          />
-          <button
-            onClick={pullLinkedIn}
-            disabled={running || parsing || !isLinkedInUrl(linkedinUrl)}
-            className="shrink-0 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
-          >
-            {running ? "Pulling…" : "Pull my profile"}
-          </button>
+          {/* Answered goal — quiet continuity */}
+          {step === 2 && target.trim() && (
+            <button onClick={() => setStep(1)} className="mt-5 ml-11 inline-flex max-w-[calc(100%-2.75rem)] items-center gap-2 rounded-full border border-bd bg-surf px-3 py-1 text-small text-tx2 hover:bg-surf2">
+              <span className="text-tx3">goal</span>
+              <span className="truncate text-tx">{target.trim()}</span>
+              <span className="shrink-0 text-tx3">edit</span>
+            </button>
+          )}
+
+          <div className="ml-11 mt-6">
+            {step === 1 ? (
+              <>
+                <textarea
+                  autoFocus
+                  value={target}
+                  onChange={(e) => setTarget(e.target.value)}
+                  rows={3}
+                  aria-label="What job do you want next?"
+                  placeholder="e.g. Senior AI PM at an AI-native company, ~$220k base, SF or remote — I care about shipping real product, not managing roadmaps."
+                  className="w-full resize-none rounded-xl border border-bd bg-surf px-4 py-3.5 text-body leading-relaxed text-tx placeholder:text-tx3 shadow-sm outline-none transition-shadow focus:border-primary focus:shadow-ring"
+                />
+                <p className="mt-2 text-small text-tx3">
+                  Include the <span className="text-tx2">role</span>, <span className="text-tx2">level</span>, <span className="text-tx2">pay</span>, <span className="text-tx2">location</span>, and <span className="text-tx2">what you care about</span> — plain English is fine.
+                </p>
+                <button
+                  onClick={() => setStep(2)}
+                  disabled={target.trim().length < 2}
+                  className="mt-6 w-full rounded-xl bg-primary px-6 py-3.5 text-body font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Continue →
+                </button>
+              </>
+            ) : (
+              <>
+                {/* Progressive composer — a dedicated field appears for each source
+                    you add (LinkedIn / GitHub), so nothing gets stacked as raw URLs. */}
+                {showLinkedin && (
+                  <div className="mb-2.5 flex items-center gap-2.5 rounded-xl border border-bd bg-surf px-3.5 shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring">
+                    <span className="shrink-0" style={{ color: "#0A66C2" }}>
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-[18px] w-[18px]" aria-hidden><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z" /></svg>
+                    </span>
+                    <input
+                      ref={linkedinRef}
+                      value={linkedin}
+                      onChange={(e) => setLinkedin(e.target.value)}
+                      onKeyDown={(e) => { if (e.key === "Enter") run(); }}
+                      aria-label="Your LinkedIn profile URL"
+                      placeholder="linkedin.com/in/your-handle"
+                      className="h-12 flex-1 bg-transparent text-body text-tx placeholder:text-tx3 outline-none"
+                    />
+                    <button onClick={() => { setShowLinkedin(false); setLinkedin(""); }} className="shrink-0 px-1 text-tx3 hover:text-tx" aria-label="Remove LinkedIn">✕</button>
+                  </div>
+                )}
+                {showGithub && (
+                  <div className="mb-2.5 flex items-center gap-2.5 rounded-xl border border-bd bg-surf px-3.5 shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring">
+                    <span className="shrink-0 text-tx">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-[18px] w-[18px]" aria-hidden><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.92 1.24 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z" /></svg>
+                    </span>
+                    <input
+                      ref={githubRef}
+                      value={github}
+                      onChange={(e) => setGithub(e.target.value)}
+                      onKeyDown={(e) => { if (e.key === "Enter") run(); }}
+                      aria-label="Your GitHub profile URL"
+                      placeholder="github.com/your-handle"
+                      className="h-12 flex-1 bg-transparent text-body text-tx placeholder:text-tx3 outline-none"
+                    />
+                    <button onClick={() => { setShowGithub(false); setGithub(""); }} className="shrink-0 px-1 text-tx3 hover:text-tx" aria-label="Remove GitHub">✕</button>
+                  </div>
+                )}
+
+                {/* Free-text notes / pasted CV + the add-a-source toolbar */}
+                <div className="overflow-hidden rounded-xl border border-bd bg-surf shadow-sm transition-shadow focus-within:border-primary focus-within:shadow-ring">
+                  <textarea
+                    ref={workRef}
+                    value={work}
+                    onChange={(e) => setWork(e.target.value)}
+                    rows={showLinkedin || showGithub || attached ? 3 : 5}
+                    aria-label="Paste your CV text or a few lines about your work"
+                    placeholder={showLinkedin || showGithub || attached ? "Anything else RO should know? (optional)" : "Paste your CV text, or just tell me about your work…"}
+                    className="w-full resize-none bg-transparent px-4 pt-4 pb-2 text-body leading-relaxed text-tx placeholder:text-tx3 outline-none"
+                  />
+
+                  {attached && (
+                    <div className="mx-4 mb-2 inline-flex items-center gap-2 rounded-lg border border-bd bg-surf2 px-2.5 py-1.5 text-small text-tx">
+                      <span className="text-primary">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className="h-4 w-4"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" /><path d="M13 3v5h5" /></svg>
+                      </span>
+                      <span className="max-w-[16rem] truncate">{attached.name}</span>
+                      <button onClick={() => setAttached(null)} className="text-tx3 hover:text-tx" aria-label="Remove file">✕</button>
+                    </div>
+                  )}
+
+                  <div className="flex items-center gap-1 border-t border-bd px-2 py-2">
+                    {!showLinkedin && (
+                      <button
+                        onClick={addLinkedin}
+                        className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx"
+                      >
+                        <span style={{ color: "#0A66C2" }}>
+                          <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z" /></svg>
+                        </span>
+                        LinkedIn
+                      </button>
+                    )}
+                    {!showGithub && (
+                      <button
+                        onClick={addGithub}
+                        className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx"
+                      >
+                        <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4 text-tx" aria-hidden><path d="M12 .5C5.37.5 0 5.87 0 12.5c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58 0-.28-.01-1.04-.02-2.04-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.39 1.24-3.23-.13-.3-.54-1.53.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.25 2.88.12 3.18.77.84 1.24 1.92 1.24 3.23 0 4.62-2.81 5.64-5.49 5.94.43.37.81 1.1.81 2.22 0 1.61-.01 2.9-.01 3.29 0 .32.22.7.83.58A12 12 0 0 0 24 12.5C24 5.87 18.63.5 12 .5z" /></svg>
+                        GitHub
+                      </button>
+                    )}
+                    <button
+                      onClick={() => fileRef.current?.click()}
+                      disabled={parsing}
+                      className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-md px-2.5 py-1.5 text-small font-medium text-tx2 transition-colors hover:bg-surf2 hover:text-tx disabled:opacity-50"
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><path d="M21.44 11.05 12.25 20.24a5 5 0 0 1-7.07-7.07l9.19-9.19a3 3 0 0 1 4.24 4.24l-9.2 9.19a1 1 0 0 1-1.41-1.41l8.49-8.49" /></svg>
+                      {parsing ? "Reading…" : "Attach file"}
+                    </button>
+                    <span className="ml-auto shrink-0 whitespace-nowrap pr-1 text-overline text-tx3">read on your device</span>
+                  </div>
+                </div>
+                <input ref={fileRef} type="file" accept={ACCEPTED_TYPES} className="hidden" onChange={(e) => onFile(e.target.files?.[0])} />
+
+                <button
+                  onClick={() => run()}
+                  disabled={!hasWork}
+                  className="mt-6 w-full rounded-xl bg-primary px-6 py-3.5 text-body font-semibold text-white shadow-sm transition-colors hover:bg-primary-hover disabled:cursor-not-allowed disabled:opacity-40"
+                >
+                  Show me what RO sees →
+                </button>
+
+                <div className="mt-4 flex items-center justify-between">
+                  <button onClick={() => setStep(1)} className="text-small text-tx3 transition-colors hover:text-tx2">← back</button>
+                  <span className="flex items-center gap-2 text-small text-tx3" aria-label={`Read sharpness ${sharpness} of 4`}>
+                    sharpness
+                    <span className="font-mono tracking-widest text-primary">{"▮".repeat(sharpness)}<span className="text-bd2">{"▯".repeat(4 - sharpness)}</span></span>
+                  </span>
+                </div>
+                {!work.trim() && !attached && (
+                  <button onClick={() => setWork(SAMPLE)} className="mt-3 text-small text-tx3 underline underline-offset-2">or use a sample</button>
+                )}
+                <p className="mt-4 text-small text-tx3">Nothing is stored unless you choose to save at the end.</p>
+              </>
+            )}
+          </div>
+        </>
+      )}
+
+      {/* ── S2 · RO working — keep the conversation thread: who she's reading
+          for (goal) and what she's reading (source), so the ticker never floats
+          context-free after "Show me what RO sees". ── */}
+      {running && !mirror && !matches && (
+        <div className="mt-12">
+          <div className="flex items-start gap-3">
+            <span className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary text-overline font-bold text-white">RO</span>
+            <div className="flex-1">
+              <h1 className="font-display text-h2 font-semibold leading-snug text-tx">On it — reading your work.</h1>
+              <div className="mt-3 flex flex-wrap items-center gap-2">
+                {target.trim() && (
+                  <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-bd bg-surf px-3 py-1 text-small text-tx2">
+                    <span className="text-tx3">goal</span>
+                    <span className="truncate text-tx">{target.trim()}</span>
+                  </span>
+                )}
+                {sourceSummary() && (
+                  <span className="inline-flex max-w-full items-center gap-2 rounded-full border border-bd bg-surf px-3 py-1 text-small text-tx2">
+                    <span className="text-tx3">reading</span>
+                    <span className="truncate text-tx">{sourceSummary()}</span>
+                  </span>
+                )}
+              </div>
+            </div>
+          </div>
         </div>
-        <p className="mt-1.5 text-[11px] text-tx3">
-          I fetch your public profile and match on it — full experience, one tap. (One pull = one fetch.)
-        </p>
-      </div>
+      )}
 
-      <div className="my-4 flex items-center gap-3 text-xs text-tx3">
-        <span className="h-px flex-1 bg-bd" /> or paste / upload <span className="h-px flex-1 bg-bd" />
-      </div>
-
-      <textarea
-        value={profile}
-        onChange={(e) => setProfile(e.target.value)}
-        placeholder="Paste your CV / LinkedIn text, or just talk… (or drop a PDF below)"
-        aria-label="Your CV, LinkedIn text, or a few lines about your work"
-        rows={6}
-        disabled={running}
-        className="mt-6 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] leading-relaxed text-tx outline-none focus:border-primary disabled:opacity-60"
-      />
-
-      <input
-        ref={fileRef}
-        type="file"
-        accept={ACCEPTED_TYPES}
-        className="hidden"
-        onChange={(e) => onFile(e.target.files?.[0])}
-      />
-
-      <div className="mt-3 flex flex-wrap items-center gap-3">
-        <button
-          onClick={() => run()}
-          disabled={running || parsing || profile.trim().length < 30}
-          className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
-        >
-          {running ? "RO is working…" : "Show me what RO sees"}
-        </button>
-        <button
-          onClick={() => fileRef.current?.click()}
-          disabled={running || parsing}
-          className="rounded-md border border-bd px-3 py-2 text-sm text-tx2 disabled:opacity-40"
-        >
-          {parsing ? "Reading your file…" : "Upload LinkedIn PDF or CV"}
-        </button>
-        {!running && !parsing && !matches && (
-          <button onClick={() => setProfile(SAMPLE)} className="text-sm text-tx3 underline">
-            or use a sample
-          </button>
-        )}
-      </div>
-
-      <p className="mt-2 text-xs text-tx3">
-        Tip: on LinkedIn, open your profile → <span className="text-tx2">More → Save to PDF</span>, then drop it here.
-        Your file is read in your browser — it never leaves your device.
-      </p>
-      {fileNote && <p className="mt-2 text-sm text-suc">{fileNote}</p>}
-
-      {/* Watch RO reason */}
-      {status.length > 0 && (
-        <div className="mt-8 rounded-xl border border-bd bg-surf2 p-4">
+      {/* Working ticker (only until RO's read lands; the jobs column then carries
+          its own "still comparing…" loader — no double indicator). */}
+      {status.length > 0 && !mirror && !matches && (
+        <Card className="ml-11 mt-5" elevation="flat">
           {status.map((s, i) => {
             const last = i === status.length - 1;
             return (
-              <div key={i} className="flex items-center gap-2 py-1 text-sm text-tx2">
-                <span
-                  className={`inline-block h-1.5 w-1.5 rounded-full ${
-                    last && running ? "animate-pulse bg-primary" : "bg-suc"
-                  }`}
-                />
+              <div key={i} className="flex items-center gap-2 py-1 text-small text-tx2">
+                <span className={`inline-block h-1.5 w-1.5 rounded-full ${last && running ? "animate-pulse bg-primary" : "bg-suc"}`} />
                 {s}
               </div>
             );
           })}
-        </div>
+        </Card>
       )}
 
-      {error && <p className="mt-6 text-sm text-dng">{error}</p>}
+      {error && <p className="mt-6 text-small text-dng">{error}</p>}
 
-      {/* Honest thin-input recovery — RO asks for real content instead of faking matches */}
+      {/* Thin-input recovery */}
       {needsMore && (
-        <div className="mt-8 rounded-xl border-l-[3px] border-warn bg-warn-bg p-4 text-[15px] leading-relaxed text-tx">
-          {needsMore}
-        </div>
+        <Card className="mt-8 border-l-[3px] border-l-warn" elevation="flat">
+          <p className="text-body leading-relaxed text-tx">{needsMore}</p>
+        </Card>
       )}
 
-      <div ref={resultsRef}>
-        {/* The mirror */}
-        {mirror && (
-          <section className="mt-10">
-            <h2 className="text-lg font-semibold">Here&apos;s how I read you</h2>
-            <p className="mt-1 text-sm text-tx3">React to anything that&apos;s off — that&apos;s how I get sharper.</p>
-            <ul className="mt-4 space-y-2">
-              {mirror.statements.map((s, i) => (
-                <li key={i} className="rounded-lg border border-bd bg-surf p-3 text-[15px] text-tx">
-                  {s}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-4 rounded-lg border-l-[3px] border-primary bg-info-bg p-4 text-[15px] text-info-tx">
-              <span className="mb-1 block text-[11px] font-semibold uppercase tracking-wide">
-                One thing worth knowing
-              </span>
-              {mirror.insight}
-            </div>
-          </section>
-        )}
+     </div>{/* /narrow conversational column */}
 
-        {/* Matches */}
-        {matches && (
-          <section className="mt-10">
-            <h2 className="text-lg font-semibold">
-              Roles worth your time{" "}
-              <span className="font-normal text-tx3">
-                · compared all {(scanned ?? 0).toLocaleString()}, these {matches.length} are closest — reasoned through, not just ranked
-              </span>
-            </h2>
-            <div className="mt-4 space-y-3">
-              {matches.map((m) => (
-                <article key={m.id} className="rounded-xl border border-bd bg-surf p-4">
-                  <div className="flex items-start justify-between gap-3">
-                    <div>
-                      <p className="font-semibold text-tx">
-                        {m.company} — {m.role_title}
-                      </p>
-                      {m.comp?.base_range_usd && (
-                        <p className="mt-0.5 font-mono text-xs text-tx3">
-                          ${Math.round(m.comp.base_range_usd[0] / 1000)}k–$
-                          {Math.round(m.comp.base_range_usd[1] / 1000)}k base
-                        </p>
-                      )}
-                    </div>
-                    <Rec rec={m.recommendation} fit={m.fit} />
-                  </div>
-                  <p className="mt-3 text-[15px] leading-relaxed text-tx2">{m.why}</p>
-                  {m.gaps?.length > 0 && (
-                    <div className="mt-3 flex flex-wrap gap-2">
-                      {m.gaps.map((g, i) => (
-                        <span
-                          key={i}
-                          className="rounded-md bg-surf2 px-2 py-1 text-xs text-tx3"
-                          title={`bridgeable: ${g.bridgeable}`}
-                        >
-                          gap: {g.gap}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                </article>
-              ))}
-            </div>
-
-            <div className="mt-8 rounded-xl border border-bd bg-surf2 p-5">
-              {signedIn ? (
-                <>
-                  <p className="text-[15px] text-tx">
-                    {savedNote
-                      ? "Saved to your hunt — I'll keep this and build on it. I won't ask you again."
-                      : "This is yours now — I'm holding onto it."}{" "}
-                    Next I&apos;ll tailor your résumé to these, draft the applications, and learn
-                    your taste as you react. You press send on anything that leaves the building.
-                  </p>
-                  <Link
-                    href="/feed"
-                    className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
-                  >
-                    Go to your feed →
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <p className="text-[15px] text-tx">
-                    This is what I found in seconds. Sign up and I&apos;ll keep going — tailor your
-                    résumé to these, draft the applications, and learn your taste as you react. You
-                    press send on anything that leaves the building.
-                  </p>
-                  <button
-                    onClick={() => {
-                      // Keep the source LinkedIn URL so RO can re-fetch later.
-                      // The direct-pull path already saves this; the sign-up
-                      // path must too, or master_profile.linkedin_url ends up null.
-                      const srcUrl = isLinkedInUrl(linkedinUrl)
-                        ? linkedinUrl.trim()
-                        : isLinkedInUrl(profile)
-                          ? profile.trim()
-                          : undefined;
-                      sessionStorage.setItem(
-                        "roleos.pending",
-                        JSON.stringify({
-                          profile: resolvedProfile ?? profile,
-                          mirror,
-                          matches,
-                          linkedin_url: srcUrl,
-                        }),
-                      );
-                      window.location.href = "/login?next=/feed";
+      {/* ── S3+4 · Her read & your jobs (two equal columns) — breaks out wide ── */}
+      {mirror && (
+        <section className="mx-auto mt-10 max-w-5xl">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
+            {/* READ */}
+            <div>
+              <div className="flex items-center gap-2.5">
+                <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary text-overline font-bold text-white">RO</span>
+                <h2 className="font-display text-h2 font-semibold text-tx">How I read you</h2>
+              </div>
+              <p className="mt-2 text-small text-tx3">Skim the bold; tap ✓/✗ on anything to sharpen her.</p>
+              <div className="mt-4 space-y-2.5">
+                {mirror.statements.map((s, i) => (
+                  <ReadCard key={i} lead={s.lead} detail={s.detail} reaction={reactions[i]} onReact={(v, c) => react(i, `${s.lead} — ${s.detail}`, v, false, c)} />
+                ))}
+                {guess && guessIndex >= 0 && (
+                  <ReadCard
+                    lead={guess.lead}
+                    detail={guess.detail}
+                    isGuess
+                    reaction={reactions[guessIndex]}
+                    onReact={(v, c) => {
+                      react(guessIndex, `${guess.lead} — ${guess.detail}`, v, true, c);
+                      if (v === "correct" && c) rerank(c);
                     }}
-                    className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
-                  >
-                    Save what RO found
-                  </button>
-                </>
+                  />
+                )}
+              </div>
+            </div>
+
+            {/* JOBS */}
+            <div>
+              <h2 className="font-display text-h2 font-semibold text-tx">Jobs worth your time</h2>
+              {matches || shortlistRoles ? (
+                <JobsColumn
+                  matches={matches}
+                  shortlist={shortlistRoles}
+                  scanned={scanned}
+                  weakPool={weakPool}
+                  reranking={reranking}
+                  filter={jobFilter}
+                  setFilter={setJobFilter}
+                  showAll={showAllMatches}
+                  setShowAll={setShowAllMatches}
+                  rerankNote={rerankNote}
+                />
+              ) : (
+                <div className="mt-6 flex items-center gap-2 rounded-xl bg-surf p-5 text-small text-tx2 shadow-sm">
+                  <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
+                  Still comparing you against every open role…
+                </div>
               )}
             </div>
-          </section>
-        )}
-      </div>
+          </div>
+
+          {/* full-width row — equal weight, at the bottom */}
+          <div className="mt-12 rounded-2xl border border-primary-bd bg-primary-bg px-6 py-6 sm:px-8">
+            <div className="mx-auto max-w-4xl">
+              <p className="text-overline font-semibold uppercase text-primary">One thing worth knowing</p>
+              <p className="mt-2 text-h3 font-medium leading-relaxed text-tx">{mirror.insight}</p>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Sticky primary CTA — always reachable once results are in */}
+      {matches && (
+        <div className="fixed inset-x-0 bottom-0 z-30 border-t border-bd bg-surf/95 backdrop-blur">
+          <div className="mx-auto flex max-w-5xl items-center gap-3 px-6 py-3">
+            {signedIn ? (
+              <>
+                <Button className="flex-1" onClick={() => (window.location.href = "/feed")}>Go to your feed &rarr;</Button>
+                <span className="hidden text-small text-tx3 sm:block">{savedNote ? "Saved — I won't ask again." : "Saved to your hunt."}</span>
+              </>
+            ) : (
+              <>
+                <Button className="flex-1" onClick={saveAndSignIn}>Save my results &mdash; free</Button>
+                <span className="hidden text-small text-tx3 sm:block">Nothing is stored unless you save. No password, ever.</span>
+              </>
+            )}
+          </div>
+        </div>
+      )}
     </main>
   );
 }
 
-function Rec({ rec, fit }: { rec: Match["recommendation"]; fit: number }) {
-  const map = {
-    pursue: "bg-suc-bg text-suc",
-    maybe: "bg-warn-bg text-warn",
-    skip: "bg-surf2 text-tx3",
-  } as const;
+function FilterPills({ opts, val, set }: { opts: [string, string][]; val: string; set: (v: string) => void }) {
   return (
-    <div className="flex shrink-0 flex-col items-end gap-1">
-      <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${map[rec]}`}>
-        {rec}
-      </span>
-      <span className="font-mono text-xs text-tx3">{fit} fit</span>
+    <div className="flex shrink-0 gap-1">
+      {opts.map(([v, label]) => (
+        <button
+          key={v}
+          onClick={() => set(v)}
+          className={`rounded-full px-2.5 py-1 text-overline font-medium transition-colors ${val === v ? "bg-tx text-cloud" : "bg-surf2 text-tx2 hover:bg-surf3"}`}
+        >
+          {label}
+        </button>
+      ))}
     </div>
   );
 }
+
+function ReadCard({
+  lead,
+  detail,
+  reaction,
+  onReact,
+  isGuess = false,
+}: {
+  lead: string;
+  detail: string;
+  reaction?: MirrorReaction;
+  onReact: (verdict: "confirm" | "correct", correction?: string) => void;
+  isGuess?: boolean;
+}) {
+  const [correcting, setCorrecting] = useState(false);
+  const [text, setText] = useState("");
+  const confirmed = reaction?.verdict === "confirm";
+  const corrected = reaction?.verdict === "correct";
+  const base = isGuess
+    ? "bg-primary-bg"
+    : confirmed
+      ? "bg-suc-bg"
+      : corrected
+        ? "bg-warn-bg"
+        : "bg-surf shadow-sm hover:bg-surf2/60";
+  return (
+    <div className={`rounded-xl p-4 transition-colors ${base}`}>
+      <div className="flex items-start justify-between gap-3">
+        <p className="text-body leading-relaxed text-tx2">
+          {isGuess && <span className="mr-2 align-middle rounded bg-primary px-1.5 py-0.5 text-overline font-semibold uppercase text-white">guess</span>}
+          <span className="font-semibold text-tx">{lead}</span>
+          <span className="text-tx3"> — </span>
+          {detail}
+          {corrected && reaction?.correction && <span className="mt-1 block text-small text-warn-tx">you: {reaction.correction}</span>}
+        </p>
+        <div className="flex shrink-0 gap-0.5">
+          <button
+            aria-label="Confirm — that's me"
+            onClick={() => onReact("confirm")}
+            className={`flex h-7 w-7 items-center justify-center rounded-md text-sm transition-colors ${confirmed ? "bg-suc text-white" : "text-tx3 hover:bg-suc-bg hover:text-suc-tx"}`}
+          >
+            &#10003;
+          </button>
+          <button
+            aria-label="Correct — that's off"
+            onClick={() => setCorrecting((c) => !c)}
+            className={`flex h-7 w-7 items-center justify-center rounded-md text-sm transition-colors ${corrected ? "bg-warn text-white" : "text-tx3 hover:bg-warn-bg hover:text-warn-tx"}`}
+          >
+            &#10007;
+          </button>
+        </div>
+      </div>
+      {correcting && (
+        <div className="mt-2.5 flex gap-2">
+          <input
+            autoFocus
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === "Enter" && text.trim()) {
+                onReact("correct", text.trim());
+                setCorrecting(false);
+              }
+            }}
+            placeholder={isGuess ? "the role you actually want…" : "what's the real story?"}
+            className="flex-1 rounded-md border border-bd2 bg-surf px-2.5 py-1.5 text-small text-tx placeholder:text-tx3 outline-none focus:border-primary focus:shadow-ring"
+          />
+          <Button
+            size="sm"
+            variant="secondary"
+            onClick={() => {
+              if (text.trim()) {
+                onReact("correct", text.trim());
+                setCorrecting(false);
+              }
+            }}
+          >
+            Save
+          </Button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function CompLine({ comp }: { comp: Match["comp"] }) {
+  if (!comp?.base_range_usd) return null;
+  return (
+    <span className="font-mono">
+      ${Math.round(comp.base_range_usd[0] / 1000)}k–${Math.round(comp.base_range_usd[1] / 1000)}k base
+    </span>
+  );
+}
+
+function JobsColumn({
+  matches,
+  shortlist,
+  scanned,
+  weakPool,
+  reranking,
+  filter,
+  setFilter,
+  showAll,
+  setShowAll,
+  rerankNote,
+}: {
+  matches: Match[] | null;
+  shortlist: ShortlistRole[] | null;
+  scanned: number | null;
+  weakPool: boolean;
+  reranking: boolean;
+  filter: "all" | "pursue" | "maybe";
+  setFilter: (v: "all" | "pursue" | "maybe") => void;
+  showAll: boolean;
+  setShowAll: (v: boolean) => void;
+  rerankNote: string | null;
+}) {
+  const tone = { pursue: "bg-suc-bg text-suc-tx", maybe: "bg-warn-bg text-warn-tx", skip: "bg-surf2 text-tx3" } as const;
+  const label = { pursue: "go for it", maybe: "maybe", skip: "skip" } as const;
+
+  // ── Pending: recall's done, RO is still reasoning each role. Paint real
+  //    skeleton cards (company/title/comp) so the column fills immediately. ──
+  if (!matches) {
+    const roles = shortlist ?? [];
+    const shown = showAll ? roles : roles.slice(0, 3);
+    return (
+      <>
+        <p className="mt-2 text-small text-tx3">
+          Found {roles.length} worth a real look in {(scanned ?? 0).toLocaleString()} roles — RO&rsquo;s weighing each against you now.
+        </p>
+        <div className="mt-4 space-y-3">
+          {shown.map((m) => (
+            <div key={m.id} className="rounded-xl bg-surf p-5 shadow-sm">
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  <p className="font-semibold text-tx">{m.company}</p>
+                  <p className="text-small text-tx2">{m.role_title}</p>
+                </div>
+                <span className="mt-1 inline-block h-1.5 w-1.5 shrink-0 animate-pulse rounded-full bg-primary" aria-label="reasoning" />
+              </div>
+              <div className="mt-3 flex items-center gap-2 text-overline text-tx3">
+                <CompLine comp={m.comp} />
+              </div>
+              <p className="mt-2 text-small italic text-tx3">Reading this one against you…</p>
+            </div>
+          ))}
+        </div>
+        {roles.length > 3 && !showAll && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="mt-3 w-full rounded-xl py-2.5 text-small font-medium text-tx3 transition-colors hover:bg-surf2 hover:text-tx2"
+          >
+            Show {roles.length - 3} more {roles.length - 3 === 1 ? "role" : "roles"} ↓
+          </button>
+        )}
+      </>
+    );
+  }
+
+  const filtered = matches.filter((m) => filter === "all" || m.recommendation === filter);
+  const shown = showAll ? filtered : filtered.slice(0, 3);
+  return (
+    <>
+      <div className="mt-2 flex items-center justify-between gap-3">
+        <p className="text-small text-tx3">Compared all {(scanned ?? 0).toLocaleString()} — top {filtered.length}.</p>
+        <FilterPills opts={[["all", "All"], ["pursue", "Go for it"], ["maybe", "Maybe"]]} val={filter} set={(v) => setFilter(v as "all" | "pursue" | "maybe")} />
+      </div>
+
+      {weakPool && (
+        <div className="mt-4 rounded-xl border-l-2 border-warn bg-surf p-4 shadow-sm">
+          <p className="text-small leading-relaxed text-tx2">
+            Straight with you: nothing&rsquo;s a strong fit this week &mdash; my index runs deep on AI &amp; software and thinner elsewhere. I&rsquo;d rather say that than pad your list. Save this and I&rsquo;ll keep watch.
+          </p>
+        </div>
+      )}
+
+      <div className={`mt-4 space-y-3 ${reranking ? "opacity-60 transition-opacity" : "transition-opacity"}`}>
+        {shown.map((m) => (
+          <div key={m.id} className="rounded-xl bg-surf p-5 shadow-sm transition-shadow hover:shadow-md">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0">
+                <p className="font-semibold text-tx">{m.company}</p>
+                <p className="text-small text-tx2">{m.role_title}</p>
+              </div>
+              <div className="flex shrink-0 items-center gap-2">
+                <span className="font-mono text-overline text-tx3">{m.fit}</span>
+                <span className={`rounded-full px-2.5 py-0.5 text-overline font-semibold ${tone[m.recommendation]}`}>{label[m.recommendation]}</span>
+              </div>
+            </div>
+            <p className="mt-3 text-small leading-relaxed text-tx2">{m.why}</p>
+            <div className="mt-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-overline text-tx3">
+              {m.comp?.base_range_usd && (
+                <span className="font-mono">
+                  ${Math.round(m.comp.base_range_usd[0] / 1000)}k–${Math.round(m.comp.base_range_usd[1] / 1000)}k base
+                </span>
+              )}
+              {m.gaps?.slice(0, 1).map((g, i) => (
+                <span key={i} className="flex items-center gap-1"><span className="text-warn">△</span> {g.gap}</span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {filtered.length > 3 && !showAll && (
+        <button
+          onClick={() => setShowAll(true)}
+          className="mt-3 w-full rounded-xl py-2.5 text-small font-medium text-tx3 transition-colors hover:bg-surf2 hover:text-tx2"
+        >
+          Show {filtered.length - 3} more {filtered.length - 3 === 1 ? "role" : "roles"} ↓
+        </button>
+      )}
+
+      {rerankNote && <p className="mt-3 text-small text-tx3">{rerankNote}</p>}
+    </>
+  );
+}
+
