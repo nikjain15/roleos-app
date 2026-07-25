@@ -73,6 +73,69 @@
 
 ## Slice entries (newest first)
 
+### J1 · GitHub intake + progressive composer · 2026-07-25 · branch `slice/j1-onboarding`
+- **GitHub as a first-class source** (`lib/github-fetch.ts`): reads a public profile off
+  GitHub's free, ToS-clean REST API — profile + top repos (name/lang/stars) + languages +
+  the profile README — flattened to normalized text like the LinkedIn adapter. Token-optional
+  (`GITHUB_TOKEN` lifts 60/hr → 5,000/hr). `/api/onboard` detects a GitHub URL, fetches it **in
+  parallel**, and **combines** it with LinkedIn/CV/notes (a GitHub-only input can carry the whole
+  signal). +3 tests. High signal for a builder audience — what they've actually shipped.
+- **Progressive composer** (`onboarding/page.tsx`): replaced the single free-text box (which
+  stacked raw URLs) with **dedicated fields that appear as you add each source** — click LinkedIn
+  → a LinkedIn field; click GitHub → a GitHub field; Attach → the file chip; the free-text box is
+  now just optional notes. Each source is clean and unambiguous when combining all three. The
+  toolbar button becomes its field (and hides).
+- **Universal LinkedIn**: detection accepts any profile form — `/in/` or `/pub/`, country
+  subdomains, www-or-not, scheme-or-not (the scraper still needs an `/in/` link to actually fetch).
+- **Bug fix**: `workUrl()` previously returned the *entire* composer text (would store the wrong
+  `linkedin_url` on save); now sourced from the dedicated LinkedIn field.
+- **Login**: GitHub provider enabled in Supabase (Management API, verified 302 → github authorize);
+  provider layout reworked to Google-primary + LinkedIn/GitHub paired row.
+- **Audit**: typecheck 0 · lint 0 · **300 vitest**. Verified live: progressive fields appear on
+  add, both combine, run fetches GitHub in parallel ("reading: linkedin… · github…").
+
+### J1 · Onboarding polish — wide results, progressive jobs, run continuity · 2026-07-25 · branch `slice/j1-onboarding`
+- **From live walkthrough feedback.** Four fixes, one model-backed run to verify:
+  - **Wide results.** The two-column read/jobs section was trapped in the page's `max-w-2xl`
+    (288px columns → skinny towers). Results now break out to `max-w-5xl` (488px columns) while
+    S1/S2 stay narrow/conversational; sticky CTA bar widened to match.
+  - **Progressive jobs (perceived latency, no tier cut).** `lib/run-match.ts` split into
+    `recallAndShortlist` (cheap) + `reasonShortlist` (expensive); `matchProfile` composes both.
+    `/api/onboard` emits a `shortlist` event → real skeleton cards (company/title/comp) paint the
+    instant recall's done, then the per-role reasoning upgrades them in place. Jobs column fills
+    early instead of sitting blank ~2min.
+  - **Reason 6, not 10.** The `match` pass now reasons exactly the rendered count (Sonnet coarse-rank
+    still orders the full pool first) — a real latency cut, no model tier changed.
+  - **Run continuity.** After "Show me what RO sees" the composer hid and the ticker floated
+    context-free. Now a working header pins RO + the **goal** chip + a **reading:** source chip
+    above the ticker, and the redundant top ticker is dropped once the read lands.
+- **Audit:** typecheck 0 · lint 0 · 297 vitest green. Verified live end-to-end (continuity header →
+  wide columns → skeleton→full jobs, "Compared all 1,519 — top 6").
+
+### J1 · Onboarding v2 — value-first, taste-from-minute-one · 2026-07-24 · branch `slice/j1-onboarding`
+- **First Phase-J slice** — the onboarding rebuilt to spec (`docs/specs/onboarding-design.md`)
+  on the new design system (grape · Space Grotesk · `components/ui/` primitives). First screen
+  fully replaced, not re-skinned (per the design-system policy).
+- **Built:** S1 arrive (three inputs + why-lines · optional target · reactive **sharpness meter**
+  1→4 · Explore-arrival `?from=role:` + returning-anon + signed-in-no-data variants · ephemerality
+  note) → S2 plain-English ticker → S3+4 **tappable mirror** (✓/✗ per statement, free-text
+  corrections) + a visually distinct **target-guess** whose correction triggers a live **re-rank**
+  (`/api/onboard/rerank`, instant-ack + async re-sort) → weak-pool + thin/junk recoveries → S5 save
+  (taste-of-next-work + 3 cards + ephemerality). S1 target now biases `matchProfile` recall.
+- **Data contract (the moat):** `lib/onboarding-events.ts` maps every pre-save action — ✓/✗,
+  corrections, target, re-rank — to `decision_events` (corrections weight 3, confirms 1, target 3,
+  re-rank 2). `/api/save` writes the batch **first-auth-only (idempotent)**, zod-validated, RLS-scoped,
+  append-only. Pending-work handoff (`SaveOnboarding`) carries the actions through login unchanged.
+- **Guards:** `lib/jargon.ts` blocklist + `isPlainEnglish` (ticker copy honesty). Human-gated-outward
+  untouched (no send path). Nothing persists pre-auth.
+- **Audit:** typecheck 0 · lint 0 · **297 vitest** (10 net-new: jargon + save-payload mapper incl.
+  weights/idempotency/determinism). Page DOM verified live (S1 renders, sharpness meter reactive,
+  grape tokens); full run→mirror→match→re-rank is model-backed (~150s) so covered by unit contracts.
+- **Deferred within-slice (noted in PR):** the live **retold-résumé-bullet** taste line (draft-tier
+  call, PRD §7 flag) ships as honest framing here — live call is a fast follow-up; **S7 feed
+  first-minute** (goal-seam card) lands with J3 (feed is J3's surface). E2E specs to add in the J1
+  follow-up. Screenshot compositor in the harness was flaky — verified via DOM + reactive JS instead.
+
 ### X11 · Rejection → growth loop · 2026-07-05 · branch `v2/x11-rejection-growth`
 - **PRD-first** (`docs/specs/x11-rejection-growth.md`; approved via PR #55). A rejection was a
   dead end — nothing learned, morale hit. X11 turns it into a calm, **opt-in** two-minute
