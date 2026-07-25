@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://ro.roleos.fyi"><img src="assets/hero.png" alt="RoleOS" width="820"></a>
+</p>
+
+<p align="center"><b>RoleOS — RO runs your job hunt. You make the calls.</b><br>
+  <a href="https://ro.roleos.fyi">Live at ro.roleos.fyi ↗</a></p>
+
+---
+
 # RoleOS
 
 **An AI-first agent that runs your senior job hunt.** RO finds roles that fit your
