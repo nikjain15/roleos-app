@@ -27,6 +27,9 @@ export interface MatchedRole extends CandidateRole {
   recommendation: "pursue" | "maybe" | "skip";
   why: string;
   gaps: Array<{ gap: string; bridgeable: "yes" | "maybe" | "no" }>;
+  /** The transparent taste overlay (P3): how the user's learned taste moved this
+   *  role's fit, and why. Absent when no taste applied. */
+  taste?: { delta: number; reason: string };
 }
 
 // Recall WIDE, reason on the genuine top. Tuned to the matcher's token budget:
