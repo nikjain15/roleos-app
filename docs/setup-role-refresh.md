@@ -1,24 +1,24 @@
 # Recurring role/company freshness loop
 
-> **Status: largely SUPERSEDED — see [`admin-ingestion.md`](admin-ingestion.md).**
+> **Status: largely SUPERSEDED - see [`admin-ingestion.md`](admin-ingestion.md).**
 > The freshness loop shipped as the durable Cloudflare **IngestWorkflow** +
 > `roleos-cron` (hourly scan/extract/embed, prune-closed archives to
 > `roles_archive`). The corpus is live and grown to ~1,500+. This doc is retained
 > for the **design rationale** (cadence, lifecycle columns, coverage strategy);
 > the "today's state / gap" section below is historical (pre-Workflow).
 > Still open: a hybrid Ollama-first pass (Claude-only for new/changed JDs) was the
-> planned cost optimization — the shipped version uses Claude `extract_role` for
+> planned cost optimization - the shipped version uses Claude `extract_role` for
 > new roles; Ollama first-pass is not wired.
 
 Keeps the live `public.roles` data current: re-scan enabled companies, extract
-new/changed JDs, **detect closed postings**, and expand coverage — on a schedule.
+new/changed JDs, **detect closed postings**, and expand coverage - on a schedule.
 
 ## Decisions locked (2026-06-28)
 - **Scope now:** plan first, build after approval.
-- **Engine:** hybrid — Ollama first-pass / re-checks, Claude only for *new* or
+- **Engine:** hybrid - Ollama first-pass / re-checks, Claude only for *new* or
   *materially changed* JDs (cost control + keeps quality where it matters).
 - **Cadence:** **scan daily** (free), **extract weekly**.
-- **Coverage:** both — enable the disabled companies that have a working ATS,
+- **Coverage:** both - enable the disabled companies that have a working ATS,
   *and* research net-new companies to add.
 
 ## Today's state (the gap)
@@ -29,14 +29,14 @@ new/changed JDs, **detect closed postings**, and expand coverage — on a schedu
 - The only cron (`roleos/cron`) fires **user digests**, not a data refresh.
 - `companies.yml`: 186 companies, **136 enabled / 50 off** (mostly Workday +
   `unknown`; Workday is now supported in `scripts/lib/ats.mjs`).
-- `public.roles` has **no lifecycle columns** — no `status`, `last_seen_open`, or
+- `public.roles` has **no lifecycle columns** - no `status`, `last_seen_open`, or
   content hash. Seeding is upsert-on-`source_path`; a removed posting just lingers.
 
 ---
 
 ## Design
 
-### 1. Freshness loop — daily scan, the core new logic
+### 1. Freshness loop - daily scan, the core new logic
 Today's scan answers "what's new?" We need "what's **new / still-open / closed**?"
 Add a per-company **open-set diff**:
 
@@ -46,7 +46,7 @@ Add a per-company **open-set diff**:
    - **new** → queue for extraction.
    - **still-open** → bump `last_seen_open`; if a cheap content hash of the JD
      changed, flag **changed** → queue for re-extraction.
-   - **gone** → mark **closed** (do not delete — users may have it in a digest).
+   - **gone** → mark **closed** (do not delete - users may have it in a digest).
 3. Persist snapshot per company (e.g. `data/open-snapshots/<company>.json`) so the
    diff is deterministic across runs. `scan-history.tsv` stays as the append-only
    audit log.
@@ -54,7 +54,7 @@ Add a per-company **open-set diff**:
 New artifact: `scripts/01b-diff-open-set.mjs` (or fold into `01`), writing a
 **delta queue** (`data/delta-queue.json`: `{new:[], changed:[], closed:[]}`).
 
-### 2. Weekly extraction — hybrid routing
+### 2. Weekly extraction - hybrid routing
 Consume the week's accumulated delta queue:
 - **new** JDs → fetch (`02`) → extract. **Route by confidence:** Ollama first
   (`roleos-admin/extract.mjs`); if the eval-style guard finds thin output
@@ -66,10 +66,10 @@ Then `04` render, `05` enrich (only for newly-added companies), `06` embeddings
 for new/changed roles only.
 
 Reuses what exists: `roleos-admin` already has Ollama extract + an eval harness to
-define the "thin output → escalate" rule. No new extractor needed — just a router.
+define the "thin output → escalate" rule. No new extractor needed - just a router.
 
 ### 3. Where it runs (the hybrid/cadence tension, resolved)
-Ollama is **local-only** — it cannot run on Cloudflare cron. So split by cost/locality:
+Ollama is **local-only** - it cannot run on Cloudflare cron. So split by cost/locality:
 - **Daily scan + diff → cloud.** Pure `fetch` + JSON diff, no model. Add a
   `scheduled` handler to the existing `roleos/cron` worker (or a sibling worker)
   hitting a new secret-gated `POST /api/cron/scan`. Free, unattended. It writes
@@ -83,7 +83,7 @@ Ollama is **local-only** — it cannot run on Cloudflare cron. So split by cost/
     weekly job **Claude-only** on a Cloudflare cron / scheduled agent. The router
     interface is identical; only the first-pass engine changes.
 
-### 4. DB changes — role lifecycle (migration `0006_role_lifecycle.sql`)
+### 4. DB changes - role lifecycle (migration `0006_role_lifecycle.sql`)
 ```sql
 alter table public.roles
   add column status         text not null default 'open'
@@ -101,7 +101,7 @@ create index roles_status_idx on public.roles (status);
 ### 5. Coverage expansion
 - **Enable existing (50 off):** run `scripts/verify-companies.mjs` to health-check
   each disabled slug/ATS; flip `enabled: true` only where it returns jobs. Most are
-  Workday (now supported) — biggest easy win.
+  Workday (now supported) - biggest easy win.
 - **Discover net-new:** research task (WebSearch) for AI-lab / agent-AI / AI-infra /
   fintech / voice-AI companies founded or scaled since the May list, that post
   senior PM / TPM / Growth / CoS / Strategy & Ops roles on a supported ATS
@@ -114,7 +114,7 @@ create index roles_status_idx on public.roles (status);
 - Daily scan + diff: **$0** (CF cron, fetch only).
 - Weekly extract: Ollama first-pass **$0**; Claude only on escalations. At ~tens of
   new/changed senior roles/week and a few cents/JD, **< ~$1–3/week** typical.
-- Discovery: WebSearch, monthly — negligible.
+- Discovery: WebSearch, monthly - negligible.
 
 ## Build order (when approved)
 1. `0006_role_lifecycle.sql` + open-set snapshot/diff (`01b`) + delta queue.

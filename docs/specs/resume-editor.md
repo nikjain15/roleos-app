@@ -1,4 +1,4 @@
-# PRD — Résumé Editor
+# PRD - Résumé Editor
 
 > Status: **DRAFT for build** · Roadmap slot: **Now #3** · Owner: Nik
 > Journey stage: Tailor (stage 3). Upgrades `/studio/resume/[id]` from a
@@ -7,16 +7,16 @@
 ## Problem statement
 
 Today RO produces a truth-gated tailored résumé at `/studio/resume/[id]` that the
-user can only **accept ("make it mine") or reject** — there's no editing. Because the
+user can only **accept ("make it mine") or reject** - there's no editing. Because the
 Sonnet drafter reliably over-embellishes, most drafts land **"needs your eyes,"** and
-the user has no in-product way to fix a flagged line — they're stuck. There's also **no
+the user has no in-product way to fix a flagged line - they're stuck. There's also **no
 export**, so even an approved résumé can't leave the app as a PDF or DOCX. The stage
 that should feel like *craft* feels like a gate.
 
 ## Goals
 
-1. Turn the résumé into an **editable, side-by-side canvas** — original CV ↔ tailored
-   draft — where the user resolves flags and edits inline.
+1. Turn the résumé into an **editable, side-by-side canvas** - original CV ↔ tailored
+   draft - where the user resolves flags and edits inline.
 2. Make the **truth gate a helper, not a wall**: flagged lines are actionable in place
    (accept RO's grounded rewrite, edit yourself, or revert).
 3. Ship **PDF and DOCX export** so an approved résumé is usable immediately.
@@ -25,10 +25,10 @@ that should feel like *craft* feels like a gate.
 
 ## Non-goals
 
-- **Multi-template / heavy visual design system** — one clean, ATS-safe layout for v1.
-- **Cover letters / other artifacts** — separate specs; this is the résumé only.
-- **Real-time multi-device co-editing** — single user, single session.
-- **Removing the truth gate** — it stays; we make it *resolvable*, not absent.
+- **Multi-template / heavy visual design system** - one clean, ATS-safe layout for v1.
+- **Cover letters / other artifacts** - separate specs; this is the résumé only.
+- **Real-time multi-device co-editing** - single user, single session.
+- **Removing the truth gate** - it stays; we make it *resolvable*, not absent.
 
 ## User stories
 
@@ -73,7 +73,7 @@ that should feel like *craft* feels like a gate.
 
 ## Design intent
 
-- The **truth gate becomes interactive** rather than terminal — this directly attacks
+- The **truth gate becomes interactive** rather than terminal - this directly attacks
   the "everything lands needs-your-eyes" stall noted in the build log. The grounded
   rewrite already exists (truth-driven auto-revise); we surface it per line instead of
   as a batch pass.
@@ -91,7 +91,7 @@ satisfaction on the tailoring step.
 
 ## Open questions
 
-- **(eng)** PDF path — headless render vs. client print-to-PDF; which gives ATS-safe,
+- **(eng)** PDF path - headless render vs. client print-to-PDF; which gives ATS-safe,
   selectable text most cheaply on Cloudflare?
 - **(eng)** Is the stored artifact granular enough to mark flags at the **line** level,
   or do we need to persist line ids in the tailor output?
@@ -100,6 +100,6 @@ satisfaction on the tailoring step.
 
 ## Timeline / phasing
 
-**Phase A (P0-1..6):** editable two-pane canvas + resolvable flags + autosave — the
+**Phase A (P0-1..6):** editable two-pane canvas + resolvable flags + autosave - the
 core unlock. **Phase B (P0-7):** export. Export can trail the editor by a short beat,
 but both are needed before this counts as "done" for the journey.

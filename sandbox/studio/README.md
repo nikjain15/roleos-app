@@ -14,7 +14,7 @@ Proven in the spike (`sandbox/spike/RECOMMENDATION.md`, 2026-06-27): secure exec
 Needs Docker running (`wrangler dev` builds the container image).
 
 ```bash
-# one-time: stale Docker symlink fix (see HANDOFF.md gotchas)
+# one-time: stale Docker symlink fix
 sudo ln -sf /Applications/Docker.app/Contents/Resources/bin/docker /usr/local/bin/docker
 
 cd sandbox/studio
@@ -28,7 +28,7 @@ Then point the app at it (in `roleos/.env.local` / `.dev.vars`):
 SANDBOX_URL=http://localhost:8788
 ```
 
-Without `SANDBOX_URL`, the studio runs in **graceful offline mode** — the
+Without `SANDBOX_URL`, the studio runs in **graceful offline mode** - the
 prototype's code is still generated, shown, and gated; only the live preview is
 off. Live preview is a bonus, never a hard dependency (`lib/sandbox.ts`).
 
@@ -40,12 +40,12 @@ GET  /        health check
 ```
 
 Preview-subdomain requests (e.g. `http://8080-<session>.localhost:8788/`) are
-routed into the container by `proxyToSandbox` — that's what the studio iframe
+routed into the container by `proxyToSandbox` - that's what the studio iframe
 loads.
 
 ## Deploy (prod)
 
-Costs CF Containers usage — enable only when deploying the prototype canvas to
+Costs CF Containers usage - enable only when deploying the prototype canvas to
 prod (user decision: pay only if it proves out).
 
 ```bash

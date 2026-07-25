@@ -1,14 +1,14 @@
-# Runbook — secret rotation
+# Runbook - secret rotation
 
 > **Rotation is a HUMAN action (hard-stop).** Keys have historically been shared in chat, so
 > every one of them should be rotated before real go-live. This runbook is the exact recipe;
-> the loop never executes it. Order matters — rotate, deploy, then verify with the checks below.
+> the loop never executes it. Order matters - rotate, deploy, then verify with the checks below.
 
 ## Where secrets live
 
 | Location | What | Notes |
 |---|---|---|
-| `.dev.vars` (local, gitignored) | all server secrets for local dev | values are double-quoted — strip quotes before `wrangler secret put` |
+| `.dev.vars` (local, gitignored) | all server secrets for local dev | values are double-quoted - strip quotes before `wrangler secret put` |
 | `.env.local` (local, gitignored) | Supabase URL + anon + service-role for local/live-E2E | never add `CLOUDFLARE_API_TOKEN` here (deploy-token trap) |
 | Cloudflare Worker secrets | prod runtime (`wrangler secret put NAME`) | `wrangler secret list` to inventory |
 | GitHub Actions secrets | CI e2e job (public keys) + deploy | repo → Settings → Secrets |
@@ -19,7 +19,7 @@
 1. Supabase dashboard → Settings → API → *Rotate* the `service_role` key.
 2. Update: `.dev.vars`, `.env.local`, `wrangler secret put SUPABASE_SERVICE_ROLE_KEY`.
 3. Verify: `curl -s https://ro.roleos.fyi/api/health` → `{"ok":true}`; run `npm run test:e2e:live` locally.
-4. The OLD key is dead the moment you rotate — do steps 2–3 immediately (brief write-path outage otherwise).
+4. The OLD key is dead the moment you rotate - do steps 2–3 immediately (brief write-path outage otherwise).
 
 ### 2 · Supabase anon key
 Rotates together with the service key on Supabase ("JWT secret" rotation rotates BOTH). Update
@@ -33,7 +33,7 @@ Rotates together with the service key on Supabase ("JWT secret" rotation rotates
 
 ### 4 · Cloudflare API token (Workers AI REST fallback + Supabase embeddings scripts)
 1. CF dashboard → My Profile → API Tokens → roll the token (scope: Workers AI read/run only).
-2. `.dev.vars` only. **Never** in `.env.local`; strip from `.dev.vars` before any `opennextjs-cloudflare deploy` (auth error 10000 trap — see docs/setup-deploy.md).
+2. `.dev.vars` only. **Never** in `.env.local`; strip from `.dev.vars` before any `opennextjs-cloudflare deploy` (auth error 10000 trap - see docs/setup-deploy.md).
 
 ### 5 · CRON_SECRET
 1. Generate: `openssl rand -hex 32`.
@@ -49,7 +49,7 @@ Rotates together with the service key on Supabase ("JWT secret" rotation rotates
 1. Apify console → Integrations → rotate.
 2. `.dev.vars` + Worker secret. Verify: onboarding with a LinkedIn URL still fetches (or degrades honestly).
 
-### 8 · Supabase access token (management API — used by the loop to apply migrations)
+### 8 · Supabase access token (management API - used by the loop to apply migrations)
 1. supabase.com/dashboard/account/tokens → revoke + create.
 2. `.dev.vars` only. Verify: `curl -s -H "Authorization: Bearer <new>" https://api.supabase.com/v1/projects | head -c 100`.
 

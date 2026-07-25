@@ -1,4 +1,4 @@
-# Runbook — enable email delivery (H2 go-live checklist)
+# Runbook - enable email delivery (H2 go-live checklist)
 
 > The code is READY and flag-gated (lib/email.ts; digests already call it as a no-op).
 > **Every step below is yours (hard-stop):** it enables an external service on the domain.
@@ -16,14 +16,14 @@ In `wrangler.jsonc`, uncomment the prepared block:
 "send_email": [{ "name": "SEND_EMAIL", "allowed_destination_addresses": [] }]
 ```
 (Leave `allowed_destination_addresses` empty = any recipient; RO only ever sends to the
-signed-in user's own auth email — the code has no arbitrary `to` path.)
+signed-in user's own auth email - the code has no arbitrary `to` path.)
 
 ## 3 · Flip the flags
 ```
 wrangler secret put EMAIL_FROM            # e.g. ro@roleos.fyi (the DKIM-verified sender)
 wrangler secret put EMAIL_DELIVERY_ENABLED  # value: 1
 ```
-(Local: add both to `.dev.vars` if you want dev sends — usually don't.)
+(Local: add both to `.dev.vars` if you want dev sends - usually don't.)
 
 ## 4 · Deploy + verify
 1. Merge/deploy as usual (`main` auto-deploys).
@@ -33,5 +33,5 @@ wrangler secret put EMAIL_DELIVERY_ENABLED  # value: 1
 4. Check the inbox: subject `RO · <digest title>`, plain text, from your EMAIL_FROM.
 
 ## Rollback
-Set `EMAIL_DELIVERY_ENABLED` to `0` (or delete the secret) and redeploy — delivery reverts to
+Set `EMAIL_DELIVERY_ENABLED` to `0` (or delete the secret) and redeploy - delivery reverts to
 the logged no-op instantly; in-feed digests are unaffected (they were never coupled).

@@ -1,11 +1,11 @@
-# X4 — Outcome-learning fit model (PRD)
+# X4 - Outcome-learning fit model (PRD)
 
-> Roadmap-v2 Phase X, slice X4. Needs: X3 (merged — its stored score-at-send +
+> Roadmap-v2 Phase X, slice X4. Needs: X3 (merged - its stored score-at-send +
 > outcome pairs are this slice's substrate). First commit of `v2/x4-outcome-learning`.
 
 ## Problem
 
-RO's fit scores and X3's screen-likelihood scores are calibrated opinions — but they never
+RO's fit scores and X3's screen-likelihood scores are calibrated opinions - but they never
 learn from what actually happens to THIS user. A candidate whose applications convert to
 screens only in platform-PM roles keeps seeing the same fit ordering as day one; a "high"
 X3 score that keeps losing to silence stays confidently "high". The funnel already records
@@ -14,47 +14,47 @@ the truth (`applications.stage_history`); nothing reads it back into recommendat
 ## Goals
 
 1. **Fit learns from outcomes.** Real per-user outcomes (reached screen or further vs
-   rejected/withdrawn at applied) adjust the fit score shown on future recommendations —
+   rejected/withdrawn at applied) adjust the fit score shown on future recommendations -
    bounded, deterministic, and **always explained** ("+4 · roles like this converted 2/3
    for you").
 2. **X3 scores get a calibration read-back.** The apply-score card shows how the user's
-   past scores actually converted ("your 'high' scores: 3/4 reached a screen") — honest n
+   past scores actually converted ("your 'high' scores: 3/4 reached a screen") - honest n
    always visible.
 3. **Transparent + cheap.** Zero model calls, zero migration, RLS-scoped reads only;
    derived at render time so it always reflects the latest funnel truth.
 
 ## Non-goals
 
-- No black-box ML and no model calls — this is counting with shrinkage, shown in the open.
+- No black-box ML and no model calls - this is counting with shrinkage, shown in the open.
 - No mutation of stored `matches.fit_score` (the model's raw opinion stays honest
   provenance; the adjustment is a labelled overlay).
 - No auto re-ranking of recommendations past the pursue/maybe boundary (the chip informs;
-  RO doesn't silently flip its verdicts — verdict changes stay with the match reasoner).
+  RO doesn't silently flip its verdicts - verdict changes stay with the match reasoner).
 - No cross-user learning (each user's outcomes are theirs alone; n is small and personal).
 
 ## Approach (deterministic, read-time)
 
-**`lib/outcome-learning.ts`** — pure core + thin server bridge:
+**`lib/outcome-learning.ts`** - pure core + thin server bridge:
 
-- `extractOutcomes(apps)` — from `applications.stage_history`: an application is a **win**
+- `extractOutcomes(apps)` - from `applications.stage_history`: an application is a **win**
   if it ever reached `screening|interviewing|onsite|offer`; a **loss** if `rejected`
   (or `withdrawn` after `applied`) without reaching a screen. In-flight (`applied`,
-  no verdict yet) is **excluded** — silence is not a loss yet.
-- `learnLifts(outcomes, roleFeatures)` — per feature (role `archetype` + top `keywords`,
+  no verdict yet) is **excluded** - silence is not a loss yet.
+- `learnLifts(outcomes, roleFeatures)` - per feature (role `archetype` + top `keywords`,
   bounded): wins/n vs the user's base rate, shrunk toward 0 with a small-n prior
   (`lift = (wins − n·base) / (n + K)`, K=2). Features with n<2 contribute nothing.
-- `adjustFit(baseFit, features, lifts)` — sum of matching feature lifts, clamped to ±8
+- `adjustFit(baseFit, features, lifts)` - sum of matching feature lifts, clamped to ±8
   fit points, with `because: [{feature, wins, n}]` for the UI. Never crosses 0/100.
-- `calibrateScores(scoreEvents, outcomes)` — X3's `decision_events` (kind `app_score`)
+- `calibrateScores(scoreEvents, outcomes)` - X3's `decision_events` (kind `app_score`)
   joined to outcomes by role: per likelihood bucket {n, wins}. Rendered only when n≥1,
   always with n.
 
-**Surfaces (server-rendered — no client JS needed):**
+**Surfaces (server-rendered - no client JS needed):**
 - `/roles` workspace + `/feed` match cards: adjusted fit + a small chip
   (`+4 · your track record`) with the because-list in the existing detail area. Base fit
   stays visible (e.g. `72 → 76`).
 - `/apply/[id]` score card: one calibration line under X3's score
-  ("Your past 'high' scores converted 3/4 — small sample, read gently.").
+  ("Your past 'high' scores converted 3/4 - small sample, read gently.").
 
 ## Data / sources
 

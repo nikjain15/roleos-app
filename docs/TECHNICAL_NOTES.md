@@ -1,4 +1,4 @@
-# RoleOS — Technical Notes & Scorecard
+# RoleOS - Technical Notes & Scorecard
 
 > A candid technical teardown scored against a 12-point Technical-AI-PM / FDE rubric.
 > Each score is 0–5 with file-level evidence and the honest gap. Scores describe the

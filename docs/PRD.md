@@ -1,4 +1,4 @@
-# RoleOS — Product Requirements (PRD)
+# RoleOS - Product Requirements (PRD)
 
 > RO runs your job hunt. You make the calls.
 > Status: live at [ro.roleos.fyi](https://ro.roleos.fyi) · early-access / waitlist · no external active users yet. This PRD describes the product as built and where it goes next. Anything not yet in code is marked **Roadmap**.
@@ -55,7 +55,7 @@ RO is a five-gate agent under a simple surface. Each gate is a set of declarativ
 - Wellbeing invariant: engagement-bait notification kinds can never fire (`tests/invariants/wellbeing.test.ts`).
 
 **Roadmap (scaffolded but not fully wired):**
-- Live transport in `app/api/dispatch` (email / ATS send behind the human click) — currently returns 501.
+- Live transport in `app/api/dispatch` (email / ATS send behind the human click) - currently returns 501.
 - Agent tool `run` implementations are Phase-1 placeholders returning `{ todo: "phase 2" }` in `agent/tools/index.ts`; the skill surface and the invariant are what is enforced today.
 - Durable overnight hunt / research-brief / weekly-review flows exist as specs under `docs/specs/` and feature branches; treat as Now/Next/Later below.
 
@@ -78,7 +78,7 @@ Because there are no external active users yet, near-term success is **build-qua
 - **Grounded recall over recall breadth.** Matching is bounded to an embedded corpus; a role not in the corpus cannot be surfaced. Multi-query facet expansion mitigates domain bias (`lib/run-match.ts`) but the corpus is the ceiling.
 - **Config-swappable models over a single provider abstraction.** The registry is Anthropic-first by design; swapping a model is a config edit, swapping providers is a code change.
 
-## 8. Roadmap — Now / Next / Later
+## 8. Roadmap - Now / Next / Later
 
 **Now (in code, hardening):**
 - Five gates functioning through the quality gate; multi-model registry metered; pgvector matching; invariant + RLS + wellbeing guards green.

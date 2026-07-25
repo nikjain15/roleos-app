@@ -1,4 +1,4 @@
-# Gate-3 sandbox spike — CF Sandbox SDK vs e2b
+# Gate-3 sandbox spike - CF Sandbox SDK vs e2b
 
 architecture.md §10. Build the **same tiny target** on both runtimes, score, recommend.
 This directory is isolated from the app build (excluded in tsconfig + .gitignore).
@@ -28,11 +28,11 @@ Both implement `SandboxRuntime` (see `target.ts`) so scoring is apples-to-apples
 
 ## Status
 
-- `target.ts` — the shared interface + the test project + the rubric harness.
-- `cf-sandbox/` — Cloudflare Sandbox SDK implementation (runnable; needs Docker
+- `target.ts` - the shared interface + the test project + the rubric harness.
+- `cf-sandbox/` - Cloudflare Sandbox SDK implementation (runnable; needs Docker
   locally / Containers on deploy).
-- `e2b/` — e2b implementation (runnable; needs `E2B_API_KEY`).
-- `RECOMMENDATION.md` — the writeup + the call. **Phase-1 checkpoint item.**
+- `e2b/` - e2b implementation (runnable; needs `E2B_API_KEY`).
+- `RECOMMENDATION.md` - the writeup + the call. **Phase-1 checkpoint item.**
 
 Running the live comparison needs a CF account with Containers enabled and an
-e2b key — see RECOMMENDATION.md for which numbers are proven vs. pending those.
+e2b key - see RECOMMENDATION.md for which numbers are proven vs. pending those.

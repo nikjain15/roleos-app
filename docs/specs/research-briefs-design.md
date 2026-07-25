@@ -1,4 +1,4 @@
-# Design PRD — CORE · Interview prep: research briefs (the dossier with a calm face)
+# Design PRD - CORE · Interview prep: research briefs (the dossier with a calm face)
 
 > Status: **APPROVED design → READY to build** (human approved 2026-07-05, design-depth loop).
 > Source of truth: **https://roleos.fyi/proto/research-briefs/** (4 personas) · decisions:
@@ -19,7 +19,7 @@ about professionally"; NO LinkedIn scraping (X6 ruling holds); user-pasted conte
 out loud. Delivery: T-24h full brief with the prep, 30-second morning refresher, on-demand
 always.
 
-## 2 · Behavior spec — per the prototype
+## 2 · Behavior spec - per the prototype
 
 Layered dossier (calm-UX: one section at a time) · thin-company degradation (honest, ask-bar
 as the path deeper) · ask flow (source choice → provenance-carrying answer → persisted) ·
@@ -29,12 +29,12 @@ walking in") calendar-aware or tracker-stage-triggered.
 
 ## 3 · Data & guardrails
 
-All claims trace to sources (corpus rows, fetched pages, or user uploads — labeled).
+All claims trace to sources (corpus rows, fetched pages, or user uploads - labeled).
 Uploads RLS-scoped + deletable. Person research: allowlisted public-professional source
 types only; opt-out honored; no person data persisted beyond the brief. Verified-before-
 shown + "not right?" (J8) apply. Warm-copy bar.
 
-## 4 · Infrastructure flag — live external research
+## 4 · Infrastructure flag - live external research
 
 X2 is corpus-only. Dossier depth + ask-bar require **flag-gated live fetching**: egress
 allowlist + source-type review (the roadmap's anticipated v2), fetch costs metered, every

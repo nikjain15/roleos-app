@@ -1,4 +1,4 @@
-# PRD — Roles Workspace
+# PRD - Roles Workspace
 
 > Status: **DRAFT for build** · Roadmap slot: **Now #1** · Owner: Nik
 > Journey stage: Discover + Match (stages 1–2). Supersedes the one-shot match list.
@@ -6,7 +6,7 @@
 ## Problem statement
 
 After onboarding, RO returns a strong but **static** list of match cards. The user
-can't sort, filter, save, dismiss, compare, or re-rank — so the moment the list
+can't sort, filter, save, dismiss, compare, or re-rank - so the moment the list
 appears, momentum stops. Separately, `/explore` lets anyone browse the corpus but
 with **no personal fit**, so "browsing roles" and "my matches" are two disconnected
 worlds. The result: a user who wants to *work a shortlist* has nowhere to do it, and
@@ -16,7 +16,7 @@ a user who wants to *explore more* drops out of their personalized context.
 
 1. A signed-in user can go from "here are my matches" to a **worked, prioritized
    shortlist** in one surface, without leaving to a second tool.
-2. Every role in the corpus is viewable **with the user's fit attached** — browsing
+2. Every role in the corpus is viewable **with the user's fit attached** - browsing
    and matching become one experience.
 3. Re-ranking on new signal (dismiss, save, edit profile) feels **live**, not a
    restart of onboarding.
@@ -26,12 +26,12 @@ a user who wants to *explore more* drops out of their personalized context.
 
 ## Non-goals
 
-- **Applying / sending** — that's the Apply spec (Next). This surface ends at
+- **Applying / sending** - that's the Apply spec (Next). This surface ends at
   "pursue this" handoff to the résumé/studio.
-- **Re-running the full Opus onboarding reasoning** on every interaction — too slow
+- **Re-running the full Opus onboarding reasoning** on every interaction - too slow
   and costly; we re-rank over the already-reasoned shortlist (`/api/rematch`).
-- **New corpus ingestion** — out of scope; the workspace reads existing `roles`.
-- **Team/shared shortlists** — single-user only for v1.
+- **New corpus ingestion** - out of scope; the workspace reads existing `roles`.
+- **Team/shared shortlists** - single-user only for v1.
 
 ## User stories
 
@@ -41,7 +41,7 @@ a user who wants to *explore more* drops out of their personalized context.
   so my list sharpens instead of staying noisy.
 - As a **job seeker**, I want to see **why RO ranked a role for me** (the calibrated
   reasons + gaps) inline, so I trust the order.
-- As a **job seeker**, I want to browse *beyond* my top matches — the whole index —
+- As a **job seeker**, I want to browse *beyond* my top matches - the whole index -
   but still see my fit on each, so exploring doesn't lose my context.
 - As a **returning user**, I want the list to **re-rank when I dismiss or update my
   profile**, so it reflects my latest signal without a full re-onboard.
@@ -96,11 +96,11 @@ who worked a shortlist vs. those who saw the old static list.
 - **(data)** Do we have reliable comp on enough roles to sort by it, or is comp a P1
   filter only where present?
 - **(eng)** Does `/api/rematch` return enough to re-rank client-side, or do we page?
-- **(design)** Fit badge on `/explore` for anon users — teaser ("sign in to see your
+- **(design)** Fit badge on `/explore` for anon users - teaser ("sign in to see your
   fit") or hidden entirely?
 
 ## Timeline / phasing
 
-**Phase A (P0-1..6):** the authenticated board + curate + live re-rank — the core value.
+**Phase A (P0-1..6):** the authenticated board + curate + live re-rank - the core value.
 **Phase B (P0-7 + P1):** fit-on-browse across `/explore` + compare/notes. Phase A is
 shippable alone and is the higher-leverage half.

@@ -1,17 +1,17 @@
-# Setup — Google sign-in + Gmail/Calendar (Gate 2 + Flag C)
+# Setup - Google sign-in + Gmail/Calendar (Gate 2 + Flag C)
 
 > **Status: DONE and live.** Google sign-in + Gmail/Calendar (readonly) are
 > configured and verified end-to-end. Project "RoleOS" (roleos-500804), OAuth
 > web client "RoleOS Web". This doc is kept as the **reference** for how it was
 > set up / how to reconfigure. The app requests the Gmail/Calendar scopes
-> directly in `signInWithOAuth(options.scopes)` — Supabase "Additional scopes"
+> directly in `signInWithOAuth(options.scopes)` - Supabase "Additional scopes"
 > is NOT required.
 
 Gate 2 (screening answers + recruiter replies) reads your **Gmail + Calendar**
 with permission (Flag C: real OAuth in v1). This also enables "Continue with
 Google" sign-in. ~15 minutes of setup in two consoles.
 
-## 1 · Google Cloud — create an OAuth client
+## 1 · Google Cloud - create an OAuth client
 
 1. Go to **https://console.cloud.google.com/** → create a project (e.g. "RoleOS").
 2. **APIs & Services → Enabled APIs → + Enable APIs**: enable **Gmail API** and
@@ -21,30 +21,30 @@ Google" sign-in. ~15 minutes of setup in two consoles.
    - **Scopes → Add**: `.../auth/userinfo.email`, `.../auth/userinfo.profile`,
      `openid`, **`.../auth/gmail.readonly`**, **`.../auth/calendar.readonly`**.
    - **Test users → Add**: add **your own email**. (Sensitive scopes work for
-     test users immediately; non-test users need Google verification — see §3.)
+     test users immediately; non-test users need Google verification - see §3.)
 4. **APIs & Services → Credentials → + Create Credentials → OAuth client ID**:
    - Type: **Web application**.
    - **Authorized redirect URI** (exactly):
      `https://qaubhkrgcdllnqvtrccr.supabase.co/auth/v1/callback`
    - Create → copy the **Client ID** and **Client secret**.
 
-## 2 · Supabase — enable the Google provider
+## 2 · Supabase - enable the Google provider
 
 1. Supabase dashboard → **Authentication → Sign In / Providers → Google** → enable.
 2. Paste the **Client ID** + **Client secret** from step 1.4.
 3. Under **Additional scopes**, add: `https://www.googleapis.com/auth/gmail.readonly https://www.googleapis.com/auth/calendar.readonly`
 4. Save. (The redirect URLs / site URL are already configured for localhost.)
 
-This is configured — "Continue with Google" works for the owner + added test
+This is configured - "Continue with Google" works for the owner + added test
 users, and Gate 2 reads recruiter mail + calendar via the Google provider token
 (captured as a refresh token at `/auth/callback`, minted on demand by
 `lib/google-auth.ts`).
 
-## 3 · Google verification (only for non-test users — later)
+## 3 · Google verification (only for non-test users - later)
 
 The Gmail/Calendar scopes are **sensitive**, so before *other* people can grant
 them, Google requires **app verification** (privacy policy URL, a recorded demo,
 sometimes a security assessment). It can take days–weeks. **Not on the critical
-path** — you and added test users work without it. Kick it off from the OAuth
+path** - you and added test users work without it. Kick it off from the OAuth
 consent screen ("Publish app" → "Prepare for verification") whenever you want to
 open it beyond test users.

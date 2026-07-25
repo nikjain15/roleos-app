@@ -1,4 +1,4 @@
-# Funnel priors — the starting conversion benchmarks
+# Funnel priors - the starting conversion benchmarks
 
 > Resolves the Goal Engine open question (`goal-engine.md` §7b·A, "which public
 > source for the senior-PM conversion priors"). These are the **starting** rates
@@ -8,7 +8,7 @@
 
 ## The key framing: targeted, not spray-and-pray
 
-RoleOS applies **selectively to matched roles with a tailored résumé** — that is its
+RoleOS applies **selectively to matched roles with a tailored résumé** - that is its
 whole value proposition. So the right benchmark is the **qualified / targeted**
 funnel, *not* the job-board aggregate (which is dragged down to ~3% application→
 interview by mass, generic, often-unqualified applications). Using the aggregate
@@ -29,23 +29,23 @@ conservative (honest) than the spec's earlier optimistic ~25–40.
 
 ## Uncertainty & personalization
 
-Each prior carries a pseudo-count (`strength` 8–12 in `rates.ts`) — roughly "how
+Each prior carries a pseudo-count (`strength` 8–12 in `rates.ts`) - roughly "how
 many of your real attempts it takes to outweigh the prior." Small, so a user's own
 conversions dominate within a few dozen data points. The engine always surfaces
 **ranges**, never point precision.
 
 ## Sources
 
-- [Career.IO / The Interview Guys — how many applications it takes to get hired (2025), aggregating multiple studies](https://blog.theinterviewguys.com/how-many-applications-it-takes-to-get-hired-in-2025/)
-- [CareerPlug — Recruiting Metrics & Benchmarks 2025 (application→interview ~3%, interview→hire ~27% aggregate)](https://www.careerplug.com/recruiting-metrics-and-kpis/)
-- [Pin — Recruitment Funnel Benchmarks 2026 (screen→onsite, onsite→offer targets)](https://www.pin.com/blog/recruitment-funnel-benchmarks/)
-- [NACE — Interview-to-Offer / Offer-to-Acceptance rates](https://www.naceweb.org/talent-acquisition/trends-and-predictions/calculating-and-using-interview-to-offer-offer-to-acceptance-rates/)
-- [TailorForge — State of Resume Tailoring 2026 (tailored vs generic response-rate lift)](https://tailorforge.com/blog/state-of-resume-tailoring-2026)
-- [Monster — Job Application Behavior Report (48% "spray & pray")](https://www.monster.com/career-advice/research/job-application-behavior-report)
+- [Career.IO / The Interview Guys - how many applications it takes to get hired (2025), aggregating multiple studies](https://blog.theinterviewguys.com/how-many-applications-it-takes-to-get-hired-in-2025/)
+- [CareerPlug - Recruiting Metrics & Benchmarks 2025 (application→interview ~3%, interview→hire ~27% aggregate)](https://www.careerplug.com/recruiting-metrics-and-kpis/)
+- [Pin - Recruitment Funnel Benchmarks 2026 (screen→onsite, onsite→offer targets)](https://www.pin.com/blog/recruitment-funnel-benchmarks/)
+- [NACE - Interview-to-Offer / Offer-to-Acceptance rates](https://www.naceweb.org/talent-acquisition/trends-and-predictions/calculating-and-using-interview-to-offer-offer-to-acceptance-rates/)
+- [TailorForge - State of Resume Tailoring 2026 (tailored vs generic response-rate lift)](https://tailorforge.com/blog/state-of-resume-tailoring-2026)
+- [Monster - Job Application Behavior Report (48% "spray & pray")](https://www.monster.com/career-advice/research/job-application-behavior-report)
 
 ## Revisit when
 
 - Enough real cross-user data accrues to publish RoleOS's **own** observed senior-PM
   funnel (replace the literature priors with in-product empirical priors).
 - A domain/seniority split is worth it (e.g. separate priors for Staff+ vs Senior,
-  or by company stage) — currently one shared prior set, personalized per user.
+  or by company stage) - currently one shared prior set, personalized per user.

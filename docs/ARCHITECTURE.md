@@ -1,12 +1,12 @@
-# RoleOS — Architecture
+# RoleOS - Architecture
 
 > How RO is built, grounded in actual code paths. Two diagrams below: a component view and a request/data-flow sequence for the matching gate.
 
 ## 1. Stack (verified in `package.json`, `wrangler.jsonc`, `db/`)
 
 - **Frontend / app:** Next.js 15 (App Router), React 19, TypeScript, Tailwind. Deployed on **Cloudflare Workers** via `@opennextjs/cloudflare`.
-- **Data:** Supabase — Postgres + **pgvector** + row-level security + auth (magic-link, Google, LinkedIn OIDC). Migrations in `db/migrations/`.
-- **Models:** Anthropic API (`@anthropic-ai/sdk`) — Opus 4.8, Sonnet 4.6, Haiku 4.5 — plus **Cloudflare Workers AI** `@cf/baai/bge-base-en-v1.5` for embeddings (768-dim).
+- **Data:** Supabase - Postgres + **pgvector** + row-level security + auth (magic-link, Google, LinkedIn OIDC). Migrations in `db/migrations/`.
+- **Models:** Anthropic API (`@anthropic-ai/sdk`) - Opus 4.8, Sonnet 4.6, Haiku 4.5 - plus **Cloudflare Workers AI** `@cf/baai/bge-base-en-v1.5` for embeddings (768-dim).
 - **Durable / background:** Cloudflare Workflows for ingestion (`ingest/`), a scheduled Worker (`cron/`), and a Cloudflare Sandbox SDK worker for live prototype previews (`sandbox/`).
 - **Quality bar:** `npm run check` = typecheck + lint + `invariant:imports` (dependency-cruiser) + vitest. Playwright for E2E, including a live harness (`playwright.live.config.ts`).
 
@@ -61,7 +61,7 @@ graph TD
   class TOOLS,GATE,DISPATCH guard
 ```
 
-Note that `agent/**` never touches `app/api/dispatch` — that edge is a human gesture only, and the disallowed import is enforced by CI (see §6).
+Note that `agent/**` never touches `app/api/dispatch` - that edge is a human gesture only, and the disallowed import is enforced by CI (see §6).
 
 ## 3. The metered multi-model registry (`agent/registry.json`, `agent/registry.ts`)
 
@@ -86,7 +86,7 @@ Matching is a three-stage pipeline built to beat domain bias, not a single simil
 2. **Multi-query pgvector recall** (`recallRolesMulti`): embed every query with the same `bge` vector space as the corpus, run the `match_roles` cosine-distance RPC per query, and **union** the neighbours keeping each role's best distance (`mergeHits`, pure and unit-tested). Wide, diverse pool.
 3. **Rerank then reason** (`match_rank` Sonnet → `match` Opus): a cheap pass scores the whole pool; only the genuine top ~10 go to the token-bounded reasoner, which writes `fit`, `pursue/maybe/skip`, `why`, and bridgeable `gaps`, calibrated to a confidence ladder.
 
-Query and corpus embeddings **must** share one provider or cosine distance is meaningless — enforced by construction in `lib/embeddings/index.ts` (one provider, one vector space, dev and prod).
+Query and corpus embeddings **must** share one provider or cosine distance is meaningless - enforced by construction in `lib/embeddings/index.ts` (one provider, one vector space, dev and prod).
 
 ```mermaid
 sequenceDiagram
@@ -124,11 +124,11 @@ sequenceDiagram
 
 Nothing reaches the user raw. Cheap deterministic checks first, the expensive smart check last:
 
-1. **Shape check** — output is structurally right (`skill.expects`).
-2. **Guardrails** — deterministic, network-free: a no-send output-marker scan (RO never claims to have sent anything) and a voice blocklist (hype, guilt, manufactured urgency, emoji-spam). Exported as `inspectGuardrails` for tests.
-3. **Critic (LLM-judge)** — a *separate* Opus call grading the draft against the ro-voice ship checklist.
-4. **Truth gate** — for résumé-class outputs, a separate Opus call that flags any claim not traceable to the master profile; it **fails closed** (unparseable judge = not a pass).
-5. **Revise loop** — auto-fix once and re-judge; structured JSON gets a truth-driven re-ground instead of a prose revise (prose revise corrupts JSON). Still failing → surfaced honestly as `needs_your_eyes`, never silently shipped.
+1. **Shape check** - output is structurally right (`skill.expects`).
+2. **Guardrails** - deterministic, network-free: a no-send output-marker scan (RO never claims to have sent anything) and a voice blocklist (hype, guilt, manufactured urgency, emoji-spam). Exported as `inspectGuardrails` for tests.
+3. **Critic (LLM-judge)** - a *separate* Opus call grading the draft against the ro-voice ship checklist.
+4. **Truth gate** - for résumé-class outputs, a separate Opus call that flags any claim not traceable to the master profile; it **fails closed** (unparseable judge = not a pass).
+5. **Revise loop** - auto-fix once and re-judge; structured JSON gets a truth-driven re-ground instead of a prose revise (prose revise corrupts JSON). Still failing → surfaced honestly as `needs_your_eyes`, never silently shipped.
 
 Every verdict returns the metered model runs so the caller writes cost to `agent_runs`.
 
@@ -136,9 +136,9 @@ Every verdict returns the metered model runs so the caller writes cost to `agent
 
 This is the architectural heart, and it is defended three ways so no single change can break it:
 
-- **Layer 1 — no send tool exists.** `agent/tools/index.ts` exposes a fixed allowlist of six read/derive-only tools. `tests/invariants/no-send-tool.test.ts` asserts no tool name or description matches `send|email|dispatch|http|fetch|post|submit|sms|webhook`.
-- **Layer 2 — one outbound module.** `app/api/dispatch/route.ts` is the only route that may ever perform an external send; it is a different module the agent layer cannot import, and today it returns 501 (contract without a live transport).
-- **Layer 3 — CI-enforced import ban.** `.dependency-cruiser.cjs` fails the build if anything under `agent/**` imports an outbound transport (`nodemailer`, `resend`, `@sendgrid`, `twilio`, `node:http`, `lib/email`, …) or the dispatch route. Run via `npm run invariant:imports`.
+- **Layer 1 - no send tool exists.** `agent/tools/index.ts` exposes a fixed allowlist of six read/derive-only tools. `tests/invariants/no-send-tool.test.ts` asserts no tool name or description matches `send|email|dispatch|http|fetch|post|submit|sms|webhook`.
+- **Layer 2 - one outbound module.** `app/api/dispatch/route.ts` is the only route that may ever perform an external send; it is a different module the agent layer cannot import, and today it returns 501 (contract without a live transport).
+- **Layer 3 - CI-enforced import ban.** `.dependency-cruiser.cjs` fails the build if anything under `agent/**` imports an outbound transport (`nodemailer`, `resend`, `@sendgrid`, `twilio`, `node:http`, `lib/email`, …) or the dispatch route. Run via `npm run invariant:imports`.
 
 ## 7. Safety & data integrity guards (in code)
 
@@ -152,7 +152,7 @@ This is the architectural heart, and it is defended three ways so no single chan
 
 - Unit / invariant / stress: 51 unit files, 4 invariant files, 1 stress harness (>320 `it/test` cases).
 - Live E2E: `tests/e2e/live/` (>100 test cases), including a real prompt-injection-through-a-CV test, cross-user RLS probe, a11y sweep, and a production smoke spec against `ro.roleos.fyi`.
-- The build-loop audit matrix (`docs/AUDIT-DIMENSIONS.md`) defines 10 dimensions each slice must pass before its PR opens.
+- The build process audit matrix (`docs/AUDIT-DIMENSIONS.md`) defines 10 dimensions each slice must pass before its PR opens.
 
 ---
 

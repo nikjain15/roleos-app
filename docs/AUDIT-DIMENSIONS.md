@@ -1,7 +1,7 @@
-# Audit Dimensions — how every functionality is tested
+# Audit Dimensions - how every functionality is tested
 
 > The standard each slice must pass before its PR opens. Ten dimensions, each with a
-> concrete check + pass bar. The autonomous build loop (`docs/BUILD-LOOP.md`) runs this
+> concrete check + pass bar. The build process runs this
 > matrix on every slice and records results in `docs/AUDIT-LOG.md`.
 
 ## The 10 dimensions
