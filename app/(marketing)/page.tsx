@@ -77,7 +77,7 @@ export default function Landing() {
 
       <div className="mt-10 flex gap-3">
         <Link
-          href="/onboarding"
+          href="/start"
           className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
         >
           Hand RO your hunt

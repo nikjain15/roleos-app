@@ -12,7 +12,7 @@ import type { DockAct } from "@/lib/dock-acts";
  * are links you click (human-gated). a11y: dialog semantics, Escape to close, focus
  * moves to the input on open, ≥44px trigger. Self-hides on pre-auth surfaces.
  */
-const HIDE_ON = ["/login", "/onboarding"];
+const HIDE_ON = ["/login", "/start"];
 
 type Action = { label: string; href: string };
 

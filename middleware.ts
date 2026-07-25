@@ -3,7 +3,7 @@ import { NextResponse, type NextRequest } from "next/server";
 
 /**
  * Refreshes the Supabase session on every request (the SSR pattern) and gates
- * the private areas. Public: /, /onboarding, /login, /auth/*. Private: /feed,
+ * the private areas. Public: /, /start, /login, /auth/*. Private: /feed,
  * /studio, /admin → redirect to /login when signed out. Admin role is RE-checked
  * server-side in admin routes (RLS + server check, never UI alone) — this is
  * just the convenience redirect.

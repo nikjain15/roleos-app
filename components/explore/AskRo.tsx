@@ -305,7 +305,7 @@ export default function AskRo({
       {/* Convert door */}
       <div className="flex flex-wrap items-center gap-3 border-t border-bd bg-surf px-5 py-3">
         <Link
-          href="/onboarding"
+          href="/start"
           className="rounded-lg bg-primary px-3.5 py-2 text-small font-semibold text-white transition-colors hover:bg-primary-hover"
         >
           Share your profile → see your fit

@@ -21,7 +21,7 @@ export default function RoleList({ roles, fit }: { roles: RoleLite[]; fit?: Expl
       {fit?.needsProfile && (
         <p className="mb-3 rounded-lg border border-bd bg-surf2 px-3 py-2 text-xs text-tx2">
           You&apos;re signed in, but RO doesn&apos;t have your profile yet —{" "}
-          <Link href="/onboarding" className="font-medium text-primary hover:underline">
+          <Link href="/start" className="font-medium text-primary hover:underline">
             finish onboarding
           </Link>{" "}
           to see your fit on every role here.
