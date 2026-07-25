@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import RoDock from "@/components/RoDock";
 import AppNav from "@/components/AppNav";
+import ExploreCapture from "@/components/explore/ExploreCapture";
 
 /**
  * Layout for the authenticated app group (Slice 10) — the single app shell: one nav
@@ -12,6 +13,7 @@ export default function AppGroupLayout({ children }: { children: ReactNode }) {
     <>
       <AppNav />
       <div id="app-content">{children}</div>
+      <ExploreCapture />
       <RoDock />
     </>
   );
