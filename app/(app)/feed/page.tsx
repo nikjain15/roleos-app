@@ -25,7 +25,7 @@ type MatchRow = {
   role_id: string;
   fit_score: number | null;
   recommendation: string | null;
-  reasoning: { why?: string } | null;
+  reasoning: { why?: string; taste?: { delta: number; reason: string } | null } | null;
   status: string;
   roles: {
     company: string;
@@ -280,6 +280,12 @@ function Card({ m, adj }: { m: MatchRow; adj?: FitAdjustment | null }) {
         </p>
       )}
       {m.reasoning?.why && <p className="mt-2 text-[15px] leading-relaxed text-tx2">{m.reasoning.why}</p>}
+      {/* P3 taste overlay — transparent: show how what RO learned moved this role. */}
+      {m.reasoning?.taste && m.reasoning.taste.delta !== 0 && (
+        <p className="mt-1.5 text-[13px] text-primary">
+          {m.reasoning.taste.delta > 0 ? "↑ ranked up" : "↓ ranked down"} — {m.reasoning.taste.reason}
+        </p>
+      )}
       {/* Actions on EVERY match — RO recommends, you decide (ro-voice: your */}
       {/* judgment always overrides). Drafting is RO; sending stays human-gated. */}
       <div className="mt-3 flex flex-wrap gap-2">
