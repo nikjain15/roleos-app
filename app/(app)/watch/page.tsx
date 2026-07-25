@@ -112,12 +112,12 @@ export default function Watch() {
             step={1}
             value={intensity}
             onChange={(e) => setIntensity(Number(e.target.value))}
-            className="w-full accent-[var(--info)]"
+            className="w-full accent-[var(--primary)]"
           />
         </Field>
 
         <label className="flex items-center gap-3 text-sm text-tx2">
-          <input type="checkbox" checked={notify} onChange={(e) => setNotify(e.target.checked)} className="h-4 w-4 accent-[var(--info)]" />
+          <input type="checkbox" checked={notify} onChange={(e) => setNotify(e.target.checked)} className="h-4 w-4 accent-[var(--primary)]" />
           Keep me posted when I find new fits (respects your quiet hours)
         </label>
 
@@ -125,7 +125,7 @@ export default function Watch() {
           <button
             onClick={save}
             disabled={busy}
-            className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+            className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
           >
             {busy ? "Saving…" : saved ? "Saved — I'm on it" : "Keep me in the loop"}
           </button>
@@ -137,7 +137,7 @@ export default function Watch() {
 }
 
 const inputCls =
-  "mt-1 w-full rounded-md border border-bd bg-surf px-3 py-2 text-[15px] text-tx outline-none focus:border-info";
+  "mt-1 w-full rounded-md border border-bd bg-surf px-3 py-2 text-[15px] text-tx outline-none focus:border-primary";
 
 function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
   // Wrap the control in the <label> so it's implicitly associated (a11y: every form

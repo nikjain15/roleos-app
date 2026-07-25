@@ -191,7 +191,7 @@ export default function Onboarding() {
   return (
     <main className="mx-auto max-w-2xl px-6 py-16">
       <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold">
-        <span className="rounded-md bg-info px-2 py-0.5 text-[13px] text-white">RO</span>
+        <span className="rounded-md bg-primary px-2 py-0.5 text-[13px] text-white">RO</span>
         RoleOS
       </Link>
 
@@ -207,7 +207,7 @@ export default function Onboarding() {
       </p>
 
       {/* LinkedIn URL — one-tap auto-fetch (via Apify). The fastest path now. */}
-      <div className="mt-6 rounded-xl border border-info/40 bg-info-bg/40 p-4">
+      <div className="mt-6 rounded-xl border border-primary/40 bg-info-bg/40 p-4">
         <label className="text-[11px] font-semibold uppercase tracking-wide text-info-tx">
           Pull straight from LinkedIn
         </label>
@@ -219,12 +219,12 @@ export default function Onboarding() {
             placeholder="https://www.linkedin.com/in/your-handle/"
             aria-label="Your LinkedIn profile URL"
             disabled={running || parsing}
-            className="flex-1 rounded-md border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none focus:border-info disabled:opacity-60"
+            className="flex-1 rounded-md border border-bd bg-surf px-3 py-2 text-sm text-tx outline-none focus:border-primary disabled:opacity-60"
           />
           <button
             onClick={pullLinkedIn}
             disabled={running || parsing || !isLinkedInUrl(linkedinUrl)}
-            className="shrink-0 rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+            className="shrink-0 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
           >
             {running ? "Pulling…" : "Pull my profile"}
           </button>
@@ -245,7 +245,7 @@ export default function Onboarding() {
         aria-label="Your CV, LinkedIn text, or a few lines about your work"
         rows={6}
         disabled={running}
-        className="mt-6 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] leading-relaxed text-tx outline-none focus:border-info disabled:opacity-60"
+        className="mt-6 w-full rounded-xl border border-bd bg-surf p-4 text-[15px] leading-relaxed text-tx outline-none focus:border-primary disabled:opacity-60"
       />
 
       <input
@@ -260,7 +260,7 @@ export default function Onboarding() {
         <button
           onClick={() => run()}
           disabled={running || parsing || profile.trim().length < 30}
-          className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
+          className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-40"
         >
           {running ? "RO is working…" : "Show me what RO sees"}
         </button>
@@ -293,7 +293,7 @@ export default function Onboarding() {
               <div key={i} className="flex items-center gap-2 py-1 text-sm text-tx2">
                 <span
                   className={`inline-block h-1.5 w-1.5 rounded-full ${
-                    last && running ? "animate-pulse bg-info" : "bg-suc"
+                    last && running ? "animate-pulse bg-primary" : "bg-suc"
                   }`}
                 />
                 {s}
@@ -325,7 +325,7 @@ export default function Onboarding() {
                 </li>
               ))}
             </ul>
-            <div className="mt-4 rounded-lg border-l-[3px] border-info bg-info-bg p-4 text-[15px] text-info-tx">
+            <div className="mt-4 rounded-lg border-l-[3px] border-primary bg-info-bg p-4 text-[15px] text-info-tx">
               <span className="mb-1 block text-[11px] font-semibold uppercase tracking-wide">
                 One thing worth knowing
               </span>
@@ -390,7 +390,7 @@ export default function Onboarding() {
                   </p>
                   <Link
                     href="/feed"
-                    className="mt-4 inline-block rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+                    className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
                   >
                     Go to your feed →
                   </Link>
@@ -423,7 +423,7 @@ export default function Onboarding() {
                       );
                       window.location.href = "/login?next=/feed";
                     }}
-                    className="mt-4 inline-block rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+                    className="mt-4 inline-block rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
                   >
                     Save what RO found
                   </button>

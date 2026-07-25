@@ -50,7 +50,7 @@ export default async function ReplyDesk() {
             </p>
             <Link
               href="/settings"
-              className="mt-3 inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white"
+              className="mt-3 inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white"
             >
               Connect Gmail →
             </Link>

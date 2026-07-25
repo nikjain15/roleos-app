@@ -31,7 +31,7 @@ export default function GoalCockpit({
 }) {
   if (!plan) {
     return (
-      <div className="mt-6 rounded-xl border border-info bg-info-bg p-5">
+      <div className="mt-6 rounded-xl border border-primary bg-info-bg p-5">
         <p className="text-[15px] font-medium text-info-tx">Give RO a goal to run toward.</p>
         <p className="mt-1 text-[13px] text-tx2">
           &quot;A Senior AI PM offer at a Series-B+ in 60 days&quot; — I&apos;ll build the plan, pace it,
@@ -39,7 +39,7 @@ export default function GoalCockpit({
         </p>
         <Link
           href="/goal"
-          className="mt-3 inline-flex min-h-10 items-center rounded-md bg-info px-4 text-sm font-medium text-white"
+          className="mt-3 inline-flex min-h-10 items-center rounded-md bg-primary px-4 text-sm font-medium text-white"
         >
           Set your goal →
         </Link>
@@ -62,7 +62,7 @@ export default function GoalCockpit({
             </span>
           )}
         </div>
-        <Link href="/goal" className="text-xs text-tx3 hover:text-info">
+        <Link href="/goal" className="text-xs text-tx3 hover:text-primary">
           view plan →
         </Link>
       </div>
@@ -76,7 +76,7 @@ export default function GoalCockpit({
             <span className="mt-0.5 text-sm font-semibold text-tx3">{i + 1}</span>
             <div className="min-w-0">
               {item.href ? (
-                <Link href={item.href} className="text-[14px] font-medium text-tx hover:text-info">
+                <Link href={item.href} className="text-[14px] font-medium text-tx hover:text-primary">
                   {item.title}
                 </Link>
               ) : (

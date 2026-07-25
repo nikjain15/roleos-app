@@ -43,7 +43,7 @@ export default function ArtifactActions({ id, status }: { id: string; status: st
             <div className="mt-3 flex items-center gap-3">
               <Link
                 href={`/apply/${id}`}
-                className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white"
+                className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
               >
                 Apply — you send ↗
               </Link>
@@ -75,7 +75,7 @@ export default function ArtifactActions({ id, status }: { id: string; status: st
       <button
         onClick={() => decide("approve")}
         disabled={busy !== null || status === "approved"}
-        className="rounded-md bg-info px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
+        className="rounded-md bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50"
       >
         {busy === "approve" ? "Saving…" : "Make it mine"}
       </button>

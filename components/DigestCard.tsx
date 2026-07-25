@@ -25,7 +25,7 @@ export default function DigestCard() {
   if (loading) {
     return (
       <div className="mt-6 rounded-xl border border-bd bg-surf2 p-5 text-sm text-tx2">
-        <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-info" />
+        <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
         Catching you up…
       </div>
     );

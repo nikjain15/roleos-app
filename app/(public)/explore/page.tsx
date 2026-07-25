@@ -33,7 +33,7 @@ export default async function IndexHome() {
           <section>
             <div className="mb-3 flex items-center justify-between">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Top companies</p>
-              <Link href="/explore/companies" className="text-xs text-info">See all {companies.length} →</Link>
+              <Link href="/explore/companies" className="text-xs text-primary">See all {companies.length} →</Link>
             </div>
             <ul className="divide-y divide-bd overflow-hidden rounded-xl border border-bd">
               {companies.slice(0, 12).map((c) => (
@@ -50,7 +50,7 @@ export default async function IndexHome() {
           <section>
             <div className="mb-3 flex items-center justify-between">
               <p className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Role types</p>
-              <Link href="/explore/roles" className="text-xs text-info">See all {archetypes.length} →</Link>
+              <Link href="/explore/roles" className="text-xs text-primary">See all {archetypes.length} →</Link>
             </div>
             <ul className="divide-y divide-bd overflow-hidden rounded-xl border border-bd">
               {archetypes.slice(0, 12).map((a) => (

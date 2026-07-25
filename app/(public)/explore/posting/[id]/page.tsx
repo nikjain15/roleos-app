@@ -44,7 +44,7 @@ export default async function PostingPage({ params }: { params: Promise<{ id: st
           {p.archetype ? ` · ${p.archetype}` : ""}
         </p>
         {p.url && (
-          <a href={p.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-info hover:underline">
+          <a href={p.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-primary hover:underline">
             View original posting ↗
           </a>
         )}
@@ -96,7 +96,7 @@ export default async function PostingPage({ params }: { params: Promise<{ id: st
           suggestions={["Am I a fit for this?", `What else is open at ${p.company}?`]}
         />
         <p className="mt-6 text-xs text-tx3">
-          <Link href="/explore/companies" className="hover:text-info">← Back to all companies</Link>
+          <Link href="/explore/companies" className="hover:text-primary">← Back to all companies</Link>
         </p>
       </main>
     </>

@@ -73,7 +73,7 @@ export default function IngestRunner() {
         <button
           onClick={() => run("demand", "demand")}
           disabled={!!busy}
-          className="rounded-md bg-info px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
+          className="rounded-md bg-primary px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
         >
           {busy === "demand" ? "Running…" : "Run — demand companies"}
         </button>

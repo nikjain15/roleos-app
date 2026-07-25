@@ -61,7 +61,7 @@ export default function GoalSwitcher({ alternates }: { alternates: AltGoal[] }) 
               <button
                 onClick={() => act(g.id, "activate")}
                 disabled={busy === g.id}
-                className="min-h-9 rounded-md bg-info px-2.5 text-xs font-medium text-white disabled:opacity-50"
+                className="min-h-9 rounded-md bg-primary px-2.5 text-xs font-medium text-white disabled:opacity-50"
               >
                 {busy === g.id ? "Switching…" : "Switch to this goal"}
               </button>

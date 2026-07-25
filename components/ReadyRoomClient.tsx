@@ -95,7 +95,7 @@ export default function ReadyRoomClient({ initialCards }: { initialCards: ReadyC
           pre-draft for your best new fits — that&apos;s the overnight hunt.
         </p>
         <div className="mt-3 flex flex-wrap gap-3 text-sm">
-          <Link href="/tracker" className="font-medium text-info hover:underline">
+          <Link href="/tracker" className="font-medium text-primary hover:underline">
             Check the hunt is on →
           </Link>
           <Link href="/roles" className="text-tx2 hover:underline">
@@ -177,7 +177,7 @@ export default function ReadyRoomClient({ initialCards }: { initialCards: ReadyC
             <button
               onClick={() => act("approve")}
               disabled={!!busy}
-              className="min-h-10 rounded-md bg-info px-4 text-sm font-medium text-white disabled:opacity-50"
+              className="min-h-10 rounded-md bg-primary px-4 text-sm font-medium text-white disabled:opacity-50"
             >
               {busy === "approve" ? "Opening…" : card.alreadyApproved ? "Continue to apply (A)" : "Approve & apply (A)"}
             </button>
