@@ -63,6 +63,7 @@ export default function Onboarding() {
   const [mirror, setMirror] = useState<Mirror | null>(null);
   const [matches, setMatches] = useState<Match[] | null>(null);
   const [shortlistRoles, setShortlistRoles] = useState<ShortlistRole[] | null>(null);
+  const [canonicalProfile, setCanonicalProfile] = useState<Record<string, unknown> | null>(null);
   const [scanned, setScanned] = useState<number | null>(null);
   const [resolvedProfile, setResolvedProfile] = useState<string | null>(null);
 
@@ -183,6 +184,7 @@ export default function Onboarding() {
     setMirror(null);
     setMatches(null);
     setShortlistRoles(null);
+    setCanonicalProfile(null);
     setNeedsMore(null);
     setError(null);
     setSavedNote(false);
@@ -203,6 +205,7 @@ export default function Onboarding() {
       let gotMirror: Mirror | null = null;
       let gotMatches: Match[] | null = null;
       let gotResolved: string | null = null;
+      let gotCanonical: Record<string, unknown> | null = null;
       for (;;) {
         const { value, done } = await reader.read();
         if (done) break;
@@ -219,12 +222,13 @@ export default function Onboarding() {
           else if (ev.type === "mirror") { gotMirror = { statements: ev.statements, insight: ev.insight }; setMirror(gotMirror); }
           else if (ev.type === "shortlist") { setShortlistRoles(ev.roles); if (typeof ev.scanned === "number") setScanned(ev.scanned); }
           else if (ev.type === "matches") { gotMatches = ev.matches; setMatches(ev.matches); if (typeof ev.scanned === "number") setScanned(ev.scanned); }
+          else if (ev.type === "profile_canonical") { gotCanonical = ev.profile; setCanonicalProfile(ev.profile); }
           else if (ev.type === "error") setError(ev.text);
         }
       }
 
       if (signedIn && gotMatches?.length) {
-        await persist(gotResolved ?? p, gotMirror, gotMatches, workUrl())
+        await persist(gotResolved ?? p, gotMirror, gotMatches, workUrl(), gotCanonical)
           .then(() => setSavedNote(true))
           .catch(() => {});
       }
@@ -288,11 +292,24 @@ export default function Onboarding() {
     };
   }
 
-  async function persist(prof: string, mir: Mirror | null, ms: Match[], linkedin?: string) {
+  async function persist(
+    prof: string,
+    mir: Mirror | null,
+    ms: Match[],
+    linkedin?: string,
+    canonical?: Record<string, unknown> | null,
+  ) {
     await fetch("/api/save", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ profile: prof, mirror: mir, matches: ms, linkedin_url: linkedin, onboarding: collectActions() }),
+      body: JSON.stringify({
+        profile: prof,
+        mirror: mir,
+        matches: ms,
+        linkedin_url: linkedin,
+        profile_canonical: canonical ?? null,
+        onboarding: collectActions(),
+      }),
     });
   }
 
@@ -304,6 +321,7 @@ export default function Onboarding() {
         mirror,
         matches,
         linkedin_url: workUrl(),
+        profile_canonical: canonicalProfile,
         onboarding: collectActions(), // carry ALL pre-save actions through login (§5.2)
       }),
     );
