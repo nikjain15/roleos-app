@@ -4,6 +4,7 @@ import {
   scorerBullets,
   scorerSections,
   flattenLines,
+  updateLineAt,
 } from "@/lib/resume/doc";
 
 /**
@@ -99,5 +100,22 @@ describe("scorer adapters — aligned ids for evidence + section strength", () =
     const flat = flattenLines(parseResumeDoc(sectioned));
     expect(flat.map((f) => f.globalIndex)).toEqual([0, 1, 2]);
     expect(flat[2]).toMatchObject({ expId: "exp1", expIndex: 1, lineIndex: 0, globalIndex: 2 });
+  });
+});
+
+describe("updateLineAt — change one line by global index (reground/edit)", () => {
+  it("replaces the targeted line's text across sections, leaving others intact", () => {
+    const doc = parseResumeDoc(sectioned);
+    const next = updateLineAt(doc, 2, (line) => ({ ...line, text: "REGROUNDED" }));
+    expect(next[0].lines.map((l) => l.text)).toEqual(["Built the ML platform", "Grew revenue 3x"]);
+    expect(next[1].lines[0].text).toBe("REGROUNDED");
+    // preserves id + other fields
+    expect(next[1].lines[0].id).toBe("exp1-l0");
+  });
+
+  it("is a no-op for an out-of-range index", () => {
+    const doc = parseResumeDoc(sectioned);
+    const next = updateLineAt(doc, 99, () => ({ id: "x", text: "no" }));
+    expect(next).toEqual(doc.experience);
   });
 });

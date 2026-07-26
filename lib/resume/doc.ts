@@ -132,6 +132,23 @@ export function scorerSections(doc: ResumeDoc): ResumeSection[] {
   }));
 }
 
+/**
+ * Return the experience array with the line at `globalIndex` (document order,
+ * matching flattenLines) replaced by `mutate`. Pure — used by reground/edit to
+ * change one line without disturbing the rest of the structure.
+ */
+export function updateLineAt(
+  doc: ResumeDoc,
+  globalIndex: number,
+  mutate: (line: ResumeLine) => ResumeLine,
+): ResumeExperience[] {
+  let g = 0;
+  return doc.experience.map((exp) => ({
+    ...exp,
+    lines: exp.lines.map((line) => (g++ === globalIndex ? mutate(line) : line)),
+  }));
+}
+
 /** A flat, index-addressable view of every line — for index-based consumers
  *  (the editor's flag/reground plumbing) during the migration off flat bullets. */
 export function flattenLines(

@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { Packer } from "docx";
 import { supabaseServer } from "@/lib/supabase/server";
 import { buildResumeDoc } from "@/lib/resume/docx";
+import { parseResumeDoc } from "@/lib/resume/doc";
 
 export const dynamic = "force-dynamic";
 
@@ -50,7 +51,8 @@ export async function GET(
   if (!artifact) return NextResponse.json({ error: "not found" }, { status: 404 });
 
   const c = artifact.content ?? {};
-  const hasBody = Boolean(c.summary) || (Array.isArray(c.bullets) && c.bullets.length > 0);
+  const parsed = parseResumeDoc(c);
+  const hasBody = Boolean(parsed.summary) || parsed.experience.some((e) => e.lines.length > 0);
   if (!hasBody) {
     return NextResponse.json({ error: "nothing to export yet" }, { status: 409 });
   }
@@ -60,9 +62,14 @@ export async function GET(
     : undefined;
   const doc = buildResumeDoc({
     headline,
-    summary: c.summary,
-    bullets: c.bullets,
-    keywords_injected: c.keywords_injected,
+    summary: parsed.summary,
+    experience: parsed.experience.map((e) => ({
+      company: e.company,
+      title: e.title,
+      dates: e.dates,
+      lines: e.lines.map((l) => ({ text: l.text })),
+    })),
+    keywords_injected: parsed.keywords_injected,
   });
 
   const base64 = await Packer.toBase64String(doc);

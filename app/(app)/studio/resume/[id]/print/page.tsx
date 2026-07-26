@@ -1,15 +1,16 @@
 import { redirect, notFound } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import AutoPrint from "@/components/AutoPrint";
+import { parseResumeDoc } from "@/lib/resume/doc";
 
 /**
- * Print-optimized résumé view → the client "Save as PDF" path (Slice 1, P0-7).
- * Clean single-column, black-on-white, selectable text (not an image), ATS-safe.
- * RLS-scoped read. Print CSS strips everything but the résumé.
+ * Print-optimized résumé view → the client "Save as PDF" path (résumé-editor v2).
+ * Clean single-column, black-on-white, selectable text (not an image), ATS-safe,
+ * grouped into experience sections (Company · Title · Dates → bullets) so it
+ * matches the DOCX export exactly (one layout). RLS-scoped read; print CSS strips
+ * everything but the résumé. Backward-compatible via parseResumeDoc.
  */
 export const dynamic = "force-dynamic";
-
-type Content = { summary?: string; bullets?: { text: string }[]; keywords_injected?: string[] };
 
 export default async function ResumePrint({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -23,11 +24,11 @@ export default async function ResumePrint({ params }: { params: Promise<{ id: st
     .from("artifacts")
     .select("id, content, roles(company, role_title)")
     .eq("id", id)
-    .single<{ id: string; content: Content; roles: { company: string; role_title: string } | null }>();
+    .single<{ id: string; content: unknown; roles: { company: string; role_title: string } | null }>();
   if (!artifact) notFound();
 
-  const c = artifact.content ?? {};
-  const bullets = (c.bullets ?? []).filter((b) => b.text?.trim());
+  const doc = parseResumeDoc(artifact.content);
+  const experience = doc.experience.filter((e) => e.lines.some((l) => l.text.trim()));
 
   return (
     <div className="mx-auto max-w-[8.5in] bg-white p-8 text-black print:p-0">
@@ -40,34 +41,44 @@ export default async function ResumePrint({ params }: { params: Promise<{ id: st
         </p>
       )}
 
-      {c.summary && (
+      {doc.summary && (
         <section className="mt-4">
           <h2 className="border-b border-neutral-300 pb-0.5 text-[13px] font-bold uppercase tracking-wide">
             Summary
           </h2>
-          <p className="mt-1.5 text-[13px] leading-relaxed">{c.summary}</p>
+          <p className="mt-1.5 text-[13px] leading-relaxed">{doc.summary}</p>
         </section>
       )}
 
-      {bullets.length > 0 && (
+      {experience.length > 0 && (
         <section className="mt-4">
           <h2 className="border-b border-neutral-300 pb-0.5 text-[13px] font-bold uppercase tracking-wide">
             Experience
           </h2>
-          <ul className="mt-1.5 list-disc space-y-1 pl-5 text-[13px] leading-relaxed">
-            {bullets.map((b, i) => (
-              <li key={i}>{b.text}</li>
-            ))}
-          </ul>
+          {experience.map((exp) => (
+            <div key={exp.id} className="mt-2.5">
+              <p className="text-[13px] font-bold">
+                {[exp.company, exp.title].filter(Boolean).join(" — ")}
+                {exp.dates && <span className="font-normal italic text-neutral-600">  ·  {exp.dates}</span>}
+              </p>
+              <ul className="mt-1 list-disc space-y-1 pl-5 text-[13px] leading-relaxed">
+                {exp.lines
+                  .filter((l) => l.text.trim())
+                  .map((l) => (
+                    <li key={l.id}>{l.text}</li>
+                  ))}
+              </ul>
+            </div>
+          ))}
         </section>
       )}
 
-      {c.keywords_injected && c.keywords_injected.length > 0 && (
+      {doc.keywords_injected.length > 0 && (
         <section className="mt-4">
           <h2 className="border-b border-neutral-300 pb-0.5 text-[13px] font-bold uppercase tracking-wide">
             Skills &amp; Keywords
           </h2>
-          <p className="mt-1.5 text-[13px] leading-relaxed">{c.keywords_injected.join(" · ")}</p>
+          <p className="mt-1.5 text-[13px] leading-relaxed">{doc.keywords_injected.join(" · ")}</p>
         </section>
       )}
     </div>

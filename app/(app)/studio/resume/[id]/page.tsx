@@ -6,6 +6,7 @@ import RegenerateResume from "@/components/RegenerateResume";
 import ResumeEditor, { type EditorContent } from "@/components/ResumeEditor";
 import ResumeReadiness from "@/components/resume/ResumeReadiness";
 import type { ResumeScore, ScoreLift } from "@/lib/resume/score";
+import { parseResumeDoc } from "@/lib/resume/doc";
 
 /**
  * Gate 1 — résumé studio (Slice 1: now an editable two-pane canvas, not review-only).
@@ -48,7 +49,8 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
   if (!artifact) notFound();
 
   const c = artifact.content ?? {};
-  const hasBody = Boolean(c.summary) || Boolean(c.bullets && c.bullets.length > 0);
+  const parsedDoc = parseResumeDoc(c);
+  const hasBody = Boolean(parsedDoc.summary) || parsedDoc.experience.some((e) => e.lines.length > 0);
   const violations = artifact.provenance?.truth?.violations ?? [];
   const roleLabel = artifact.roles
     ? `${artifact.roles.company} — ${artifact.roles.role_title}`
@@ -82,6 +84,7 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
             sourceText={mp?.data?.raw ?? ""}
             violations={violations}
             initialContent={c}
+            score={artifact.provenance?.score ?? null}
           />
           <ArtifactActions id={artifact.id} status={artifact.status} />
         </>
