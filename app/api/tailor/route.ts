@@ -9,7 +9,12 @@ import { logAgentRuns } from "@/lib/agent-runs";
 import { checkRateLimit, rateLimitResponse } from "@/lib/rate-limit";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+// Tailoring runs the full draft_resume skill: a draft model call + shape-repair +
+// the truth-gate (critic call + a revise loop) — minutes, not seconds. At the old
+// 60s cap this timed out and the button hung forever ("RO is tailoring…") with no
+// artifact saved. 300s matches the IDENTICAL draft run in the overnight hunt path
+// (lib/hunt.ts via /api/cron/hunt, maxDuration=300), the repo's proven ceiling.
+export const maxDuration = 300;
 
 /**
  * Gate 1 — tailor a résumé for one role (journey.html §5). Authenticated;
