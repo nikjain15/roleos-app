@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui";
 import ReadinessMeter from "./ReadinessMeter";
 import { meterView } from "@/lib/resume/meter";
-import type { ResumeScore } from "@/lib/resume/score";
+import type { ResumeScore, ScoreLift } from "@/lib/resume/score";
 
 /**
  * Client wrapper for the readiness meter (résumé-editor v2, P2). Renders a cached
@@ -13,8 +13,17 @@ import type { ResumeScore } from "@/lib/resume/score";
  * every page load, to respect cost). The view model (meterView) is pure, computed
  * client-side from the returned score.
  */
-export default function ResumeReadiness({ id, initialScore }: { id: string; initialScore: ResumeScore | null }) {
+export default function ResumeReadiness({
+  id,
+  initialScore,
+  initialLift,
+}: {
+  id: string;
+  initialScore: ResumeScore | null;
+  initialLift: ScoreLift | null;
+}) {
   const [score, setScore] = useState<ResumeScore | null>(initialScore);
+  const [lift, setLift] = useState<ScoreLift | null>(initialLift);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -23,9 +32,10 @@ export default function ResumeReadiness({ id, initialScore }: { id: string; init
     setError(null);
     try {
       const res = await fetch(`/api/artifact/${id}/score`, { method: "POST" });
-      const body = (await res.json()) as { score?: ResumeScore; error?: string };
+      const body = (await res.json()) as { score?: ResumeScore; lift?: ScoreLift | null; error?: string };
       if (!res.ok || !body.score) throw new Error(body.error ?? "couldn't score this résumé");
       setScore(body.score);
+      setLift(body.lift ?? null);
     } catch (e) {
       setError(e instanceof Error ? e.message : "couldn't score this résumé");
     } finally {
@@ -52,7 +62,7 @@ export default function ResumeReadiness({ id, initialScore }: { id: string; init
 
   return (
     <div className="space-y-2">
-      <ReadinessMeter view={meterView(score)} />
+      <ReadinessMeter view={meterView(score, { lift })} />
       <div className="flex items-center gap-3">
         <button onClick={computeScore} disabled={loading} className="text-small text-tx3 hover:text-tx2 disabled:opacity-50">
           {loading ? "Re-scoring…" : "Re-score"}

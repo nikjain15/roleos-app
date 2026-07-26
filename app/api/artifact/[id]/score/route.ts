@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { supabaseServer } from "@/lib/supabase/server";
 import { logAgentRuns } from "@/lib/agent-runs";
-import { scoreTailoredResume, bulletsFromArtifact, type RoleRow } from "@/lib/resume/judge";
+import { scoreTailoredResume, bulletsFromArtifact, bulletsFromProfile, type RoleRow } from "@/lib/resume/judge";
+import { scoreLift, type ScoreLift } from "@/lib/resume/score";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -50,14 +51,34 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   if (!role) return NextResponse.json({ error: "role not found" }, { status: 404 });
 
   const { score, runs } = await scoreTailoredResume(role, bullets);
-  await logAgentRuns(user.id, runs, { skill: "judge_coverage" });
 
-  // Cache the score on the artifact (merge — never clobber other provenance).
+  // `+N from your master`: run the SAME scorer on the untailored master profile
+  // against this role, then compare. Skipped (lift = null, honest) when there's
+  // no structured master to baseline against.
+  const { data: mp } = await supabase
+    .from("master_profile")
+    .select("data")
+    .eq("user_id", user.id)
+    .maybeSingle<{ data: { profile?: unknown } | null }>();
+  const masterBullets = bulletsFromProfile(mp?.data?.profile);
+  let lift: ScoreLift | null = null;
+  const allRuns = [...runs];
+  if (masterBullets.length > 0) {
+    const master = await scoreTailoredResume(role, masterBullets);
+    allRuns.push(...master.runs);
+    lift = scoreLift(master.score, score);
+  }
+
+  await logAgentRuns(user.id, allRuns, { skill: "judge_coverage" });
+
+  // Cache the score + lift on the artifact (merge — never clobber other provenance).
   const scoredAt = new Date().toISOString();
   await supabase
     .from("artifacts")
-    .update({ provenance: { ...(artifact.provenance ?? {}), score: { ...score, scoredAt } } })
+    .update({
+      provenance: { ...(artifact.provenance ?? {}), score: { ...score, scoredAt }, scoreLift: lift },
+    })
     .eq("id", id);
 
-  return NextResponse.json({ ok: true, score, scoredAt });
+  return NextResponse.json({ ok: true, score, lift, scoredAt });
 }

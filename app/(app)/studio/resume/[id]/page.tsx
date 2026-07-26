@@ -5,7 +5,7 @@ import ArtifactActions from "@/components/ArtifactActions";
 import RegenerateResume from "@/components/RegenerateResume";
 import ResumeEditor, { type EditorContent } from "@/components/ResumeEditor";
 import ResumeReadiness from "@/components/resume/ResumeReadiness";
-import type { ResumeScore } from "@/lib/resume/score";
+import type { ResumeScore, ScoreLift } from "@/lib/resume/score";
 
 /**
  * Gate 1 — résumé studio (Slice 1: now an editable two-pane canvas, not review-only).
@@ -19,6 +19,7 @@ type Provenance = {
   gate_status?: string;
   truth?: { ok: boolean; violations: string[] } | null;
   score?: (ResumeScore & { scoredAt?: string }) | null;
+  scoreLift?: ScoreLift | null;
 };
 
 export default async function ResumeStudio({ params }: { params: Promise<{ id: string }> }) {
@@ -69,7 +70,11 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
       ) : (
         <>
           <div className="mt-6">
-            <ResumeReadiness id={artifact.id} initialScore={artifact.provenance?.score ?? null} />
+            <ResumeReadiness
+              id={artifact.id}
+              initialScore={artifact.provenance?.score ?? null}
+              initialLift={artifact.provenance?.scoreLift ?? null}
+            />
           </div>
           <ResumeEditor
             id={artifact.id}

@@ -21,6 +21,7 @@
 import { callModel, type AgentRunRecord } from "@/agent/registry";
 import { embeddings } from "@/lib/embeddings";
 import { parseModelJson } from "@/lib/json";
+import { parseCanonicalProfile } from "@/lib/profile-schema";
 import { scoreResume, type ResumeScore } from "./score";
 import type {
   Requirement,
@@ -61,6 +62,25 @@ export function requirementsFromRole(role: RoleRow): Requirement[] {
     ...asStrings(role.must_haves).map((t, i) => mk(t, "must_have", i)),
     ...asStrings(role.nice_to_haves).map((t, i) => mk(t, "nice_to_have", i)),
   ];
+}
+
+/**
+ * The master profile's bullets — every experience highlight in the canonical
+ * profile (`master_profile.data.profile`), flattened. This is the untailored
+ * baseline the same scorer runs on to produce `+N from your master`. Tolerant:
+ * `parseCanonicalProfile` never throws, so a missing/garbage profile → no bullets
+ * → no lift (honest), never a crash.
+ */
+export function bulletsFromProfile(profileData: unknown): ResumeBullet[] {
+  const profile = parseCanonicalProfile(profileData, { defaultSource: "resume", at: "" });
+  const bullets: ResumeBullet[] = [];
+  let i = 0;
+  for (const exp of profile.experience) {
+    for (const h of exp.highlights) {
+      if (h.trim()) bullets.push({ id: `mp${i++}`, text: h.trim() });
+    }
+  }
+  return bullets;
 }
 
 /** The tailored artifact's bullet list (draft_resume `content.bullets`). */
