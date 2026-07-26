@@ -18,6 +18,15 @@ export default function ReadinessMeter({ view }: { view: MeterView }) {
             {view.tierLabel}
           </Badge>
           {lift && <span className="text-small font-medium text-tx2">↑ {lift}</span>}
+          <span
+            tabIndex={0}
+            role="img"
+            aria-label={view.caveat}
+            title={view.caveat}
+            className="flex h-4 w-4 cursor-help items-center justify-center rounded-full border border-bd text-[10px] leading-none text-tx3"
+          >
+            i
+          </span>
         </div>
         <div className="shrink-0 text-right">
           <span className="font-display text-2xl font-bold tracking-tight">{view.score}</span>
@@ -59,8 +68,6 @@ export default function ReadinessMeter({ view }: { view: MeterView }) {
           </span>
         </div>
       )}
-
-      <p className="mt-3 text-small text-tx3">{view.caveat}</p>
     </Card>
   );
 }
