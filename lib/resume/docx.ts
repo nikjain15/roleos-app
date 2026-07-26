@@ -8,20 +8,42 @@ import {
 import type { ResumeBullet } from "./flags";
 
 /**
- * Build an ATS-safe DOCX for a tailored résumé (Slice 1, P0-7).
+ * Build an ATS-safe DOCX for a tailored résumé (résumé-editor v2, export).
  *
  * One clean single-column layout (no tables, text boxes, or images — ATS parsers
  * choke on those). Real headings + bullet paragraphs so the text stays selectable
- * (not an image). Packing to bytes is the caller's job (route), because the
- * Workers-safe path (`Packer.toBase64String`) differs from Node — this module stays
- * pure so it unit-tests without a runtime.
+ * (not an image). Structured as EXPERIENCE sections (Company · Title · Dates →
+ * bullets), the layout recruiters + parsers expect. Packing to bytes is the
+ * caller's job (route), because the Workers-safe path (`Packer.toBase64String`)
+ * differs from Node — this module stays pure so it unit-tests without a runtime.
+ *
+ * Backward-compatible: a legacy flat `bullets[]` (no `experience`) still renders
+ * under one "Experience" heading.
  */
+export interface ResumeDocExperience {
+  company?: string;
+  title?: string;
+  dates?: string;
+  lines: { text: string }[];
+}
+
 export interface ResumeDocContent {
   name?: string;
   headline?: string; // e.g. "Tailored for Acme — Staff PM"
   summary?: string;
-  bullets?: ResumeBullet[];
+  experience?: ResumeDocExperience[];
+  bullets?: ResumeBullet[]; // legacy flat fallback
   keywords_injected?: string[];
+}
+
+/** "Company — Title  ·  Dates" as one bold header paragraph (ATS-safe: plain text). */
+function experienceHeader(exp: ResumeDocExperience): Paragraph {
+  const runs: TextRun[] = [];
+  const heading = [exp.company, exp.title].filter((s) => s?.trim()).join(" — ");
+  if (heading) runs.push(new TextRun({ text: heading, bold: true, size: 22 }));
+  if (exp.dates?.trim()) runs.push(new TextRun({ text: `  ·  ${exp.dates.trim()}`, italics: true, size: 20 }));
+  if (runs.length === 0) runs.push(new TextRun({ text: "Experience", bold: true, size: 22 }));
+  return new Paragraph({ spacing: { before: 120 }, children: runs });
 }
 
 /** The section/paragraph plan — exported so tests can assert structure w/o packing. */
@@ -50,11 +72,23 @@ export function resumeParagraphs(content: ResumeDocContent): Paragraph[] {
     paras.push(new Paragraph({ children: [new TextRun(content.summary)] }));
   }
 
-  const bullets = (content.bullets ?? []).filter((b) => b?.text?.trim());
-  if (bullets.length) {
+  const experience = (content.experience ?? []).filter((e) => e.lines.some((l) => l.text?.trim()));
+  if (experience.length) {
     paras.push(new Paragraph({ heading: HeadingLevel.HEADING_2, text: "Experience" }));
-    for (const b of bullets) {
-      paras.push(new Paragraph({ text: b.text, bullet: { level: 0 } }));
+    for (const exp of experience) {
+      paras.push(experienceHeader(exp));
+      for (const line of exp.lines) {
+        if (line.text?.trim()) paras.push(new Paragraph({ text: line.text, bullet: { level: 0 } }));
+      }
+    }
+  } else {
+    // Legacy flat fallback: bullets with no section structure.
+    const bullets = (content.bullets ?? []).filter((b) => b?.text?.trim());
+    if (bullets.length) {
+      paras.push(new Paragraph({ heading: HeadingLevel.HEADING_2, text: "Experience" }));
+      for (const b of bullets) {
+        paras.push(new Paragraph({ text: b.text, bullet: { level: 0 } }));
+      }
     }
   }
 

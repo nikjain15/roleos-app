@@ -31,10 +31,14 @@ export default skill({
         "Reword and reframe, but NEVER invent titles, employers, metrics, skills, or scope.",
         "If a reframe risks overstating, tone it down and note it in truth_note.",
         "Voice: candid, specific, no hype. Lead bullets with impact + a real metric where one exists.",
+        "Structure the résumé as EXPERIENCE SECTIONS — one per real role/employer from the master",
+        "profile (Company · Title · Dates), each with its tailored bullet lines. Keep the real",
+        "company, title, and dates; never invent a role or merge two employers into one.",
         "Return STRICT JSON only with keys:",
         '{"summary": "2-3 sentence tailored professional summary",',
-        '"bullets": [{"text": "résumé bullet", "rationale": "why this maps to a must_have / what changed",',
-        '"evidence": "the part of the master profile this is grounded in"}],',
+        '"experience": [{"company": "real employer", "title": "real title", "dates": "e.g. 2019–2022",',
+        '"lines": [{"text": "résumé bullet", "rationale": "why this maps to a must_have / what changed",',
+        '"evidence": "the part of the master profile this is grounded in"}]}],',
         '"keywords_injected": [string], "fit_lift": "one sentence on how this variant lifts fit",',
         '"truth_note": "any reframe that approaches overstatement, flagged honestly — or empty string"}',
       ].join(" "),
@@ -47,7 +51,11 @@ export default skill({
     };
   },
   expects: (text) => {
-    const o = parseModelJson<{ summary?: unknown; bullets?: unknown[] }>(text);
-    return !!o && typeof o.summary === "string" && Array.isArray(o.bullets) && o.bullets.length > 0;
+    const o = parseModelJson<{ summary?: unknown; experience?: unknown[]; bullets?: unknown[] }>(text);
+    if (!o || typeof o.summary !== "string") return false;
+    // New sectioned shape (preferred) OR legacy flat bullets (still accepted).
+    const sectioned = Array.isArray(o.experience) && o.experience.length > 0;
+    const flat = Array.isArray(o.bullets) && o.bullets.length > 0;
+    return sectioned || flat;
   },
 });

@@ -5,6 +5,7 @@ import { validateBody } from "@/lib/validate";
 import { callModel } from "@/agent/registry";
 import { logAgentRuns } from "@/lib/agent-runs";
 import { mapFlags } from "@/lib/resume/flags";
+import { parseResumeDoc, scorerBullets, updateLineAt } from "@/lib/resume/doc";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -54,7 +55,10 @@ export async function POST(
   if (!artifact) return NextResponse.json({ error: "not found" }, { status: 404 });
 
   const content = artifact.content ?? {};
-  const bullets = content.bullets ?? [];
+  // Flatten via the doc model (handles sectioned + legacy flat); bulletIndex is a
+  // global line index in document order.
+  const doc = parseResumeDoc(content);
+  const bullets = scorerBullets(doc);
   if (bulletIndex >= bullets.length) {
     return NextResponse.json({ error: "no such bullet" }, { status: 400 });
   }
@@ -74,6 +78,7 @@ export async function POST(
   }
 
   const original = bullets[bulletIndex].text;
+  if (!original) return NextResponse.json({ error: "no such bullet" }, { status: 400 });
   const { text, run } = await callModel(
     "draft",
     {
@@ -91,10 +96,12 @@ export async function POST(
     return NextResponse.json({ error: "could not reground" }, { status: 502 });
   }
 
-  // Apply: replace the bullet, mark its violations resolved, recompute status.
-  const nextBullets = bullets.map((b, i) => (i === bulletIndex ? { ...b, text: grounded } : b));
+  // Apply: replace that line (by global index) in the doc structure, mark its
+  // violations resolved, recompute status. Persist the sectioned experience.
+  const nextExperience = updateLineAt(doc, bulletIndex, (line) => ({ ...line, text: grounded }));
   const resolved = Array.from(new Set([...(content.resolved_violations ?? []), ...reasons]));
-  const nextContent = { ...content, bullets: nextBullets, resolved_violations: resolved };
+  const nextContent = { ...content, experience: nextExperience, resolved_violations: resolved };
+  const nextBullets = scorerBullets(parseResumeDoc(nextContent));
 
   // Derived truth state for the client; status stays the user's to set (see edit route).
   const violations = artifact.provenance?.truth?.violations ?? [];

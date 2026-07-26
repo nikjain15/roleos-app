@@ -23,6 +23,29 @@ describe("resumeParagraphs", () => {
     // no headings, no body → guard emits a single empty paragraph
     expect(paras.length).toBe(1);
   });
+
+  it("renders experience SECTIONS: an Experience heading + one header per block + its bullets", () => {
+    const paras = resumeParagraphs({
+      summary: "s",
+      experience: [
+        { company: "Acme", title: "PM", dates: "2019–2022", lines: [{ text: "Led ML platform" }, { text: "Grew rev 3x" }] },
+        { company: "Globex", title: "Product", lines: [{ text: "Shipped LLM assistant" }, { text: "  " }] },
+      ],
+      keywords_injected: ["llm"],
+    });
+    // Summary heading + body (2) + Experience heading (1) + [Acme header + 2 bullets] (3)
+    // + [Globex header + 1 non-empty bullet] (2) + Skills heading + body (2) = 10
+    expect(paras.length).toBe(10);
+  });
+
+  it("prefers sections over legacy bullets when both are present", () => {
+    const paras = resumeParagraphs({
+      experience: [{ company: "Acme", title: "PM", lines: [{ text: "one line" }] }],
+      bullets: [{ text: "legacy a" }, { text: "legacy b" }],
+    });
+    // Experience heading + Acme header + 1 bullet = 3 (legacy bullets ignored)
+    expect(paras.length).toBe(3);
+  });
 });
 
 describe("buildResumeDoc", () => {
