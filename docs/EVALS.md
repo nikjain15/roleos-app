@@ -41,10 +41,30 @@ The judge deliberately uses the **reasoning tier** so the judge is at least as s
 
   It exits non-zero if mean F1 drops below a threshold, so it can gate CI once real labels land. Fixtures use synthetic ids so it runs anywhere; `evals/README.md` documents how to feed real `recallRolesMulti` output in.
 
+- **Live-corpus retrieval eval** (`evals/retrieval/live/`), scores a real retriever over the **actual 689-role corpus** (`seed/roles/*.json`) — not synthetic ids — and runs in CI (`tests/unit/retrieval-live.test.ts`):
+
+  ```bash
+  npm run eval:retrieval:live
+  ```
+
+  It reports precision@k / recall / F1 / MRR for single- vs multi-query recall and the **A/B lift**. The production bge/pgvector retriever is scored by the same metrics via `evals/retrieval/live/capture.ts` when Supabase + Workers AI creds are present.
+
 **Named metrics this harness produces:** precision@k (how much of the top-k is genuinely relevant), recall@k (how many relevant roles were surfaced), F1 (their harmonic mean), MRR (how high the first good role ranks).
 
+### Matching-quality SLA (numeric floor, enforced)
+
+The flagship matcher ships against a **named numeric floor**, not a procedural "good enough". Enforced in CI by `evals/retrieval/live/run.ts` + `tests/unit/retrieval-live.test.ts`:
+
+| Metric | Floor | Rationale |
+|---|---|---|
+| multi-query **precision@10** | **≥ 0.50** | half the shortlist head must be genuinely relevant |
+| multi-query **MRR** | **≥ 0.70** | the first genuinely-relevant role ranks near the top |
+| multi-query vs single-query | **precision@10 and recall@36 must not regress** | proves the domain-bias fix (multi-query union) earns its keep |
+
+Below any floor, the build fails — the same discipline as the existing F1 gate. Current live-corpus run (TF-IDF baseline, 10 queries, 689 roles): precision@10 **0.650**, MRR **0.933**; multi-query beats single on precision (+0.010), MRR (+0.013) and recall@36 (+0.008). Thresholds are overridable via `RETRIEVAL_PRECISION_FLOOR` / `RETRIEVAL_MRR_FLOOR` for local exploration.
+
 **Roadmap for this layer:**
-- Grow the labeled role set from synthetic fixtures to real corpus ids with human relevance judgments.
+- Score the bge/pgvector retriever (via `capture.ts`) alongside the lexical baseline and record the semantic precision@10 here.
 - A **truth-gate eval set:** labeled (profile, draft, expected-violations) triples scoring the truth judge's precision/recall on catching fabrications.
 - A **calibration eval:** does `pursue/maybe/skip` agree with blind human judgment (agreement rate + confusion matrix)?
 
@@ -66,7 +86,9 @@ Every model call is metered (`agent/registry.ts` → `agent_runs`), and `lib/cos
 |---|---|---|
 | Unit / invariant | Implemented | `tests/unit`, `tests/invariants`, `tests/stress` |
 | LLM-judge (voice + truth) | Implemented, online | `agent/quality-gate.ts`, `tests/e2e/live/injection.spec.ts` |
-| Offline retrieval metrics | Harness implemented, dataset to grow | `evals/retrieval/` |
+| Offline retrieval metrics (synthetic) | Implemented | `evals/retrieval/` |
+| Live-corpus retrieval eval + matching SLA | Implemented, gates CI | `evals/retrieval/live/`, `tests/unit/retrieval-live.test.ts` |
+| SUQS surfaced from `agent_runs` | Implemented | `lib/admin-stats.ts` (`suqs`), `/admin` |
 | Truth-gate / calibration eval sets | Roadmap | `evals/` (planned) |
 | A/B / online | Roadmap (no users yet) |  |
 | Cost metering | Implemented | `agent/registry.ts`, `lib/cost-budget.ts` |

@@ -71,6 +71,9 @@ export interface AgentRunRecord {
   output_tokens: number;
   cost_usd: number;
   stop_reason: string | null;
+  /** Wall-clock latency of the model call (summed across tool-loop turns), ms.
+   *  The Speed leg of SUQS — persisted into agent_runs.trace by logAgentRuns. */
+  latency_ms?: number;
 }
 
 function costUsd(spec: JobSpec, inTok: number, outTok: number): number {
@@ -142,6 +145,7 @@ export async function callModel(
   let outTok = 0;
   let lastStop: string | null = null;
   const toolCalls: ToolCallTrace[] = [];
+  const startedAt = Date.now();
 
   for (let turn = 0; ; turn++) {
     const resp = await client.messages.create(req);
@@ -164,6 +168,7 @@ export async function callModel(
           output_tokens: outTok,
           cost_usd: costUsd(spec, inTok, outTok),
           stop_reason: lastStop,
+          latency_ms: Date.now() - startedAt,
         },
         ...(useTools ? { toolCalls } : {}),
       };

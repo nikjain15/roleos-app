@@ -19,6 +19,22 @@ export interface AdminStats {
   bySkill: { key: string; runs: number; costUsd: number }[];
   /** Quality-gate pass-rate over PRIMARY skill outputs (excludes critic/truth/revise sub-calls). */
   quality: { judged: number; passed: number; needsEyes: number; passRate: number | null };
+  /**
+   * SUQS — the four headline numbers (architecture.md §4.4), each derived from
+   * agent_runs so quality is observed, not asserted:
+   *  - Speed:      median model-call latency (ms) over primary outputs.
+   *  - Utility:    user-satisfaction — no signal pre-traction (null placeholder).
+   *  - Quality:    gate pass-rate (mirrors `quality.passRate`).
+   *  - Scalability:model calls in the window ($/call as the unit-economics tell).
+   */
+  suqs: {
+    speedMsP50: number | null;
+    speedSamples: number;
+    utility: number | null;
+    qualityPassRate: number | null;
+    scaleRuns: number;
+    costPerRunUsd: number | null;
+  };
   recent: {
     skill: string | null;
     model: string;
@@ -35,7 +51,16 @@ interface Row {
   output_tokens: number;
   cost_usd: number | string;
   judge_verdict: { status?: string } | null;
+  trace: { latency_ms?: number } | null;
   created_at: string;
+}
+
+/** Median of a numeric list (null if empty). */
+function median(xs: number[]): number | null {
+  if (xs.length === 0) return null;
+  const s = [...xs].sort((a, b) => a - b);
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 ? s[mid] : Math.round((s[mid - 1] + s[mid]) / 2);
 }
 
 /** Sub-calls the gate makes about another skill's output — not user-facing outputs. */
@@ -182,7 +207,7 @@ export async function getAdminStats(): Promise<AdminStats> {
   const db = supabaseService();
   const { data } = await db
     .from("agent_runs")
-    .select("skill, model, input_tokens, output_tokens, cost_usd, judge_verdict, created_at")
+    .select("skill, model, input_tokens, output_tokens, cost_usd, judge_verdict, trace, created_at")
     .order("created_at", { ascending: false })
     .limit(RUNS_WINDOW);
 
@@ -193,8 +218,12 @@ export async function getAdminStats(): Promise<AdminStats> {
   const model = new Map<string, { runs: number; costUsd: number }>();
   const skill = new Map<string, { runs: number; costUsd: number }>();
   const quality = { judged: 0, passed: 0, needsEyes: 0, passRate: null as number | null };
+  const latencies: number[] = []; // primary-output latencies for the Speed leg
 
   for (const r of rows) {
+    if (!isSubCall(r.skill) && typeof r.trace?.latency_ms === "number") {
+      latencies.push(r.trace.latency_ms);
+    }
     const cost = num(r.cost_usd);
     totals.costUsd += cost;
     totals.inTok += r.input_tokens;
@@ -230,6 +259,14 @@ export async function getAdminStats(): Promise<AdminStats> {
     byModel: sortByCost(model),
     bySkill: sortByCost(skill),
     quality,
+    suqs: {
+      speedMsP50: median(latencies),
+      speedSamples: latencies.length,
+      utility: null, // pre-traction: no user-satisfaction signal yet (honest placeholder)
+      qualityPassRate: quality.passRate,
+      scaleRuns: totals.runs,
+      costPerRunUsd: totals.runs > 0 ? totals.costUsd / totals.runs : null,
+    },
     recent: rows.slice(0, 20).map((r) => ({
       skill: r.skill,
       model: r.model,
