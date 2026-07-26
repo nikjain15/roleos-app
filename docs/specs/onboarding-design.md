@@ -1,9 +1,9 @@
-# Design PRD - Onboarding v2 (value-first, taste-from-minute-one)
+# Design PRD, Onboarding v2 (value-first, taste-from-minute-one)
 
 > Status: **APPROVED design → READY to build** (human approved 2026-07-04, design-depth loop).
 > Visual + microcopy source of truth: **https://roleos.fyi/proto/onboarding/** (clickable, all
 > personas via debug bar) · decisions log: https://roleos.fyi/proto/onboarding/decisions.html
-> Replaces/deepens the live `app/(app)/onboarding/page.tsx` flow - an upgrade, not a rewrite.
+> Replaces/deepens the live `app/(app)/onboarding/page.tsx` flow, an upgrade, not a rewrite.
 
 ## 1 · Problem & goal
 
@@ -21,7 +21,7 @@ ticker of RO actually working → one combined screen: her tappable read of you 
 target-guess + one insight, as bold as evidence allows) beside jobs that stream in and visibly
 re-rank when you correct her → a save-framed signup with a real taste of the work → a first
 feed minute where RO narrates next moves, asks for a goal, matches beneath. Every dead end
-(thin, junk, weak pool, returning) gets an honest scripted recovery in her voice - she never
+(thin, junk, weak pool, returning) gets an honest scripted recovery in her voice, she never
 fakes value.
 
 ## 3 · Flow map
@@ -49,7 +49,7 @@ fakes value.
   redirect `/feed` (keep current behavior).
 
 **S2 · Working ticker**
-- Only true pipeline steps, in plain English - rule: every line passes "would a non-tech
+- Only true pipeline steps, in plain English, rule: every line passes "would a non-tech
   friend understand this?" No jargon ("embeddings", "reranking" banned), no fake steps.
 - **Junk input** → honest stop, RO's junk line, no results path. **Thin input** → RO asks
   for exactly two things (target role + one thing built), inline, then proceeds.
@@ -62,7 +62,7 @@ fakes value.
   observation on thin evidence. Language must follow the confidence ladder.
 - Right: matches stream in (first 2 fast, "still comparing N more…" skeleton, rest follow).
   Verdict words are human ("go for it / maybe / skip"). Each carries the why + comp when
-  stated. Nudge card: "ranked against my guess - tell me the real thing and I'll re-rank."
+  stated. Nudge card: "ranked against my guess, tell me the real thing and I'll re-rank."
 - **Correction payoff**: any correction of the guess (chip or nudge input) visibly re-ranks
   the list with a one-line explanation of what moved and why. Latency decision: acknowledge
   instantly in-place, re-sort async when the model returns (no blocking spinner).
@@ -73,25 +73,25 @@ fakes value.
 - Leads with the **taste line**: one real resume bullet of theirs retold for their top match
   (⚑ cost flag §7). Then 3 plain cards (resume retold per match · cover letters drafted,
   you approve every send · week-by-week plan). Honest ephemerality: "leave without saving
-  and this disappears - nothing is stored without your say-so." Weak-pool variant: the
+  and this disappears, nothing is stored without your say-so." Weak-pool variant: the
   promise is watchfulness, not drafts.
 
-**S6 · Sign in** - existing passwordless (Google + magic link), copy per prototype ("Keep
+**S6 · Sign in:** existing passwordless (Google + magic link), copy per prototype ("Keep
 what she found… no password, ever"). Pending-work handoff extended per §5.
 
 **S7 · Feed first-minute** (feed top-state when arriving from onboarding save)
-- Order: RO narrates what she's doing next ("rewriting your resume for your top 3 - you
+- Order: RO narrates what she's doing next ("rewriting your resume for your top 3, you
   don't need to do anything yet") → **goal seam card** ("tell me the job you want and by
-  when - everything I do gets sharper" · 2 minutes · "not yet" dismisses gently) → saved
+  when, everything I do gets sharper" · 2 minutes · "not yet" dismisses gently) → saved
   matches → "what happens while you're away" reassurance card. Weak-pool variant: her first
   job is watching; no noise promise.
 
 ## 5 · Data requirements (the personalization contract)
 
 1. **Pre-save privacy (non-negotiable):** anonymous sessions store nothing server-side.
-2. **Save-payload completeness (NEW - required):** the signup handoff must carry ALL
-   pre-save actions - every ✓/✗, every correction text/chip, the target answer, re-rank
-   requests - not just profile/mirror/matches as today. On account creation each becomes a
+2. **Save-payload completeness (NEW, required):** the signup handoff must carry ALL
+   pre-save actions, every ✓/✗, every correction text/chip, the target answer, re-rank
+   requests, not just profile/mirror/matches as today. On account creation each becomes a
    `decision_events` row (corrections at high weight) so the taste model's first entries
    are the corrections made before signup.
 3. **Capture everything after save:** every onboarding interaction is a decision event
@@ -102,7 +102,7 @@ what she found… no password, ever"). Pending-work handoff extended per §5.
 ## 6 · Guardrails (unchanged, re-asserted)
 
 Human-gated outward untouched (nothing here sends). Truth gate: insight/mirror claims trace
-to profile + corpus evidence with calibrated language; no invented comp numbers - stated
+to profile + corpus evidence with calibrated language; no invented comp numbers, stated
 ranges vs estimates always labeled. No engagement bait anywhere (incl. the ephemerality note:
 factual, no countdown/urgency theater). `decision_events` append-only. RLS on all new
 reads/writes. `zod` on any new/changed route input.
@@ -126,7 +126,7 @@ reads/writes. `zod` on any new/changed route input.
 3. Recoveries: thin, junk, weak-pool, and all three returning-user variants reachable and
    correct (junk NEVER yields matches).
 4. Explore arrival: `?from=role:<id>` variant renders context copy + guaranteed verdict.
-5. **Tests (ratchet - net-new, all green):** unit: save-payload mapper → decision_events
+5. **Tests (ratchet, net-new, all green):** unit: save-payload mapper → decision_events
    (incl. weights, idempotency on retry); ticker copy passes a jargon blocklist; E2E:
    full happy path incl. tappable mirror + re-rank; junk recovery; explore param; pending
    handoff through login. Existing invariant/guardrail suites stay green (no-send-tool,

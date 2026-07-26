@@ -7,22 +7,22 @@ and can gate CI.
 ## Retrieval eval (`retrieval/`)
 
 Scores the matching gate's ranking quality with standard IR metrics -
-**precision@k, recall@k, F1, MRR** - over a labeled fixture set.
+**precision@k, recall@k, F1, MRR:** over a labeled fixture set.
 
 ```bash
 npx tsx evals/retrieval/run.ts
 ```
 
-- `dataset.json` - labeled cases: a query, the role ids a retriever returned
+- `dataset.json`, labeled cases: a query, the role ids a retriever returned
   (best-first), and the human-judged relevant set. Fixture ids are synthetic
   (`r-*`) so the harness runs with zero dependency on the live corpus.
-- `metrics.ts` - pure metric functions (unit-testable, no side effects).
-- `run.ts` - loads the dataset, prints a per-case table + aggregate, and exits
+- `metrics.ts`, pure metric functions (unit-testable, no side effects).
+- `run.ts`, loads the dataset, prints a per-case table + aggregate, and exits
   non-zero if mean F1 drops below the threshold.
 
 ### Wiring it to the real retriever
 
-`run.ts` scores a ranking against labels - it does not call the app. To evaluate
+`run.ts` scores a ranking against labels, it does not call the app. To evaluate
 the production retriever, replace each case's `ranked` array with the role ids
 `recallRolesMulti` (`lib/match.ts`) returns for that query, mapped to the same id
 space as `relevant`. Because the runner and metrics are decoupled from data

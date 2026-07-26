@@ -1,8 +1,8 @@
-# Phase 5 - security & RLS audit (2026-06-28)
+# Phase 5, security & RLS audit (2026-06-28)
 
 A pass over the production app (`ro.roleos.fyi`). All checks **green**.
 
-## RLS (the real per-tenant boundary) - verified live against the DB
+## RLS (the real per-tenant boundary), verified live against the DB
 All 13 public tables have RLS **enabled**, with the right policy shape:
 
 | Table | Policies | Verdict |
@@ -19,15 +19,15 @@ All 13 public tables have RLS **enabled**, with the right policy shape:
   **actual values** of the service-role key, Anthropic key, and Google client
   secret → **0 hits**. Only the RLS-safe anon key is inlined (expected).
 - New invariant test `tests/invariants/no-client-secret-imports.test.ts` fails
-  the build if any `"use client"` file imports a secret-bearing module - so it
+  the build if any `"use client"` file imports a secret-bearing module, so it
   can't regress.
 
-## Human-gated-outward (the core safety invariant) - intact
-- `tests/invariants/no-send-tool.test.ts` (3 tests) green - agent tool registry
+## Human-gated-outward (the core safety invariant), intact
+- `tests/invariants/no-send-tool.test.ts` (3 tests) green, agent tool registry
   has no send-capable tool.
-- `.dependency-cruiser.cjs` green - nothing under `agent/` imports an outbound
+- `.dependency-cruiser.cjs` green, nothing under `agent/` imports an outbound
   transport (31 modules cruised).
-- `app/api/dispatch/route.ts` is still a **501 stub** - no live send path exists.
+- `app/api/dispatch/route.ts` is still a **501 stub:** no live send path exists.
 - Gate 2 recruiter replies are **you-send**: drafts open in the user's own Gmail
   compose URL; the server never sends. We hold only **read-only** Google scopes.
 

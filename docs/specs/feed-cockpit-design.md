@@ -1,9 +1,9 @@
-# Design PRD - Feed / cockpit (the home: brief → Today → judge → trust)
+# Design PRD, Feed / cockpit (the home: brief → Today → judge → trust)
 
 > Status: **APPROVED design → READY to build** (human approved 2026-07-04, design-depth loop).
 > Visual + microcopy source of truth: **https://roleos.fyi/proto/feed-cockpit/** (5 personas +
 > arrange state via debug bar) · decisions: https://roleos.fyi/proto/feed-cockpit/decisions.html
-> The feed exists (slice 2 cockpit + 7 dock + 8 learning + 9 nudges) - this deepens the daily
+> The feed exists (slice 2 cockpit + 7 dock + 8 learning + 9 nudges), this deepens the daily
 > experience into the shape below. Re-organize the surface; reuse the engines.
 
 ## 1 · Problem & goal
@@ -11,7 +11,7 @@
 Today's feed is a stack of capable cards without a daily rhythm. Goal: every open answers
 "what needs me" and "am I on pace" in ten seconds, makes the day finishable, and turns RO's
 background work into visible, inspectable trust. Success (human-agreed after explicit
-pushback AGAINST raw engagement): **healthy engagement** - unprompted daily return rate,
+pushback AGAINST raw engagement): **healthy engagement:** unprompted daily return rate,
 Today-list completion rate, decision latency (surface → judgment). Explicitly NOT session
 length or scroll depth; the best visit is short.
 
@@ -19,47 +19,47 @@ length or scroll depth; the best visit is short.
 
 RO's 1–2 sentence morning brief flows into a capped, finishable, goal-aware Today list
 (decisions-led with a quiet goal invitation when no goal exists), then a full honest
-activity log - every line expandable to her reasoning. Light judgments happen on the card;
+activity log, every line expandable to her reasoning. Light judgments happen on the card;
 heavy work opens its full screen. Zones are user-arrangeable and RO proposes layout changes
 from observed behavior, never rearranging alone. Quiet days are honest calm plus at most one
 real optional move from actual gap analysis, with rest always legitimate.
 
 ## 3 · Zones & behavior (copy verbatim from the prototype)
 
-**Z1 · Brief + Today (pinned)** - brief is 1–2 sentences, warm, persona-aware (on-track /
+**Z1 · Brief + Today (pinned):** brief is 1–2 sentences, warm, persona-aware (on-track /
 catching-up / heavy / quiet / no-goal variants in the proto). Today: derived from the plan
-agenda (exists - `computeAgenda`), capped ~3, minutes labeled, checkable; completing all →
-celebration + permission to leave ("you're done for today - genuinely"). Goal strip beneath
+agenda (exists, `computeAgenda`), capped ~3, minutes labeled, checkable; completing all →
+celebration + permission to leave ("you're done for today, genuinely"). Goal strip beneath
 (pace chip + one next action). Heavy days: overflow waits with the honest line ("3 more for
-tomorrow - on purpose; nothing time-sensitive, I checked" + peek link).
+tomorrow, on purpose; nothing time-sensitive, I checked" + peek link).
 
-**Z2 · Needs your judgment** - cards with: her one-line why, mode tag (you send / co-create),
+**Z2 · Needs your judgment:** cards with: her one-line why, mode tag (you send / co-create),
 diff/evidence one tap away, inline actions (approve-send / skip / dismiss) + ALWAYS "open
 full view". Heavy artifacts (studio, mocks, full application) are doorways only. Skips invite
 an optional reason ("want to tell me what felt off? Either's fine").
 
-**Z3 · Activity log ("what I did while you were away · all of it")** - full visible log,
+**Z3 · Activity log ("what I did while you were away · all of it"):** full visible log,
 timestamped; routine batches = one honest line; EVERY line expands to plain-English reasoning
-(the existing agent_runs traces, translated to user voice - no jargon).
+(the existing agent_runs traces, translated to user voice, no jargon).
 
-**Personalization** - reorder / collapse / hide any non-pinned zone (persisted per user,
+**Personalization:** reorder / collapse / hide any non-pinned zone (persisted per user,
 `profiles` prefs). RO proposes layout changes from observed behavior with easy undo; she
 never auto-rearranges. Accept/decline = decision events.
 
-**Quiet day** - honest calm + proof of watch ("I checked 34 postings; none beat what you
+**Quiet day:** honest calm + proof of watch ("I checked 34 postings; none beat what you
 have") + max ONE real optional move sourced from actual gap analysis (e.g. story-bank gap
 from interview map) + rest endorsed. No manufactured busywork, ever.
 
-**No-goal** - same zones; decisions lead; goal invitation card in flow (J2's card). No
+**No-goal:** same zones; decisions lead; goal invitation card in flow (J2's card). No
 separate browse-mode.
 
 ## 4 · Flags resolved at approval
 
-- **Inline send friction:** approved as designed - send allowed from the card after the
+- **Inline send friction:** approved as designed, send allowed from the card after the
   summary (diff one tap away). Build behind a small flag (`require_diff_open_to_send`) so
   the stricter variant is a config flip if evidence demands it.
 - **Rough-patch brief register** (companion voice after e.g. 3 rejections in a week):
-  explicitly deferred to the Nudges & digests design - leave the brief copy source
+  explicitly deferred to the Nudges & digests design, leave the brief copy source
   pluggable so that slice can add registers without rework.
 
 ## 5 · Data & guardrails
@@ -86,13 +86,13 @@ separate browse-mode.
    usage signals, respect declines (never re-suggest a declined change).
 6. All five persona states reachable with real data conditions (on-track/behind/heavy/
    quiet/no-goal).
-7. **Tests (ratchet - net-new, all green):** unit: agenda→Today mapping + cap/overflow;
+7. **Tests (ratchet, net-new, all green):** unit: agenda→Today mapping + cap/overflow;
    suggestion-decline memory; decision-event writes (judgments, layout). E2E: morning flow
    incl. completion celebration; inline send → tracker; quiet-day state; no-goal state.
    Invariant/guardrail suites stay green.
 
 ## 7 · Non-goals
 
-Full-view workspaces themselves (Role workspace / Apply/Send / RO dock - later features) ·
+Full-view workspaces themselves (Role workspace / Apply/Send / RO dock, later features) ·
 rough-patch brief registers (Nudges & digests) · notification delivery (H2/Nudges) ·
 rebuilding agenda/pace engines.
