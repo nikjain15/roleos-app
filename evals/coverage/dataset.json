@@ -1,0 +1,46 @@
+{
+  "_comment": "Offline coverage-judge eval fixtures (docs/specs/resume-editor-v2.md §'Measured, not claimed'). Each case = one (résumé, role) with human GOLD coverage labels per requirement, plus a PREDICTED verdict. Ids are synthetic so the harness runs with zero live dependency. To score the LIVE judge, replace each requirement's `predicted` with what `judgeCoverage` (lib/resume/judge.ts) returns for that (role, bullets) pair, mapped to the same requirementId space. The eval optimises for one honest target: verdict agreement with a careful human read of 'is this genuinely evidenced?' — never interview odds. Grow this set as real (résumé, role) pairs are labeled; ship model/threshold changes behind it.",
+  "cases": [
+    {
+      "id": "senior-ai-pm-strong",
+      "requirements": [
+        { "requirementId": "m0", "kind": "must_have", "gold": "covered", "predicted": "covered" },
+        { "requirementId": "m1", "kind": "must_have", "gold": "covered", "predicted": "covered" },
+        { "requirementId": "m2", "kind": "must_have", "gold": "partial", "predicted": "partial" },
+        { "requirementId": "n0", "kind": "nice_to_have", "gold": "covered", "predicted": "covered" }
+      ]
+    },
+    {
+      "id": "thin-for-role",
+      "requirements": [
+        { "requirementId": "m0", "kind": "must_have", "gold": "gap", "predicted": "gap" },
+        { "requirementId": "m1", "kind": "must_have", "gold": "partial", "predicted": "partial" },
+        { "requirementId": "n0", "kind": "nice_to_have", "gold": "gap", "predicted": "gap" }
+      ]
+    },
+    {
+      "id": "judge-over-credits-a-partial",
+      "requirements": [
+        { "requirementId": "m0", "kind": "must_have", "gold": "partial", "predicted": "covered" },
+        { "requirementId": "m1", "kind": "must_have", "gold": "covered", "predicted": "covered" },
+        { "requirementId": "n0", "kind": "nice_to_have", "gold": "gap", "predicted": "partial" }
+      ]
+    },
+    {
+      "id": "adjacent-proof-boundary",
+      "requirements": [
+        { "requirementId": "m0", "kind": "must_have", "gold": "partial", "predicted": "partial" },
+        { "requirementId": "m1", "kind": "must_have", "gold": "gap", "predicted": "partial" },
+        { "requirementId": "m2", "kind": "must_have", "gold": "covered", "predicted": "covered" }
+      ]
+    },
+    {
+      "id": "fully-evidenced",
+      "requirements": [
+        { "requirementId": "m0", "kind": "must_have", "gold": "covered", "predicted": "covered" },
+        { "requirementId": "m1", "kind": "must_have", "gold": "covered", "predicted": "covered" },
+        { "requirementId": "n0", "kind": "nice_to_have", "gold": "covered", "predicted": "covered" }
+      ]
+    }
+  ]
+}

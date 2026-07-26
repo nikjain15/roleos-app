@@ -72,3 +72,31 @@ Not run in CI (no secrets there) — the lexical live eval gates CI.
 The original self-contained harness over synthetic `r-*` fixtures — still useful
 as a pure metrics smoke test. See `docs/EVALS.md` for the full strategy
 (unit → LLM-judge → model evals → A/B) and which layers are implemented vs. roadmap.
+
+## Coverage-judge eval (`coverage/`)
+
+Scores the résumé coverage judge (`lib/resume/judge.ts`) against human labels —
+the honest target is **verdict agreement** ("is this requirement genuinely
+evidenced?"), never interview odds (docs/specs/resume-editor-v2.md §"Measured,
+not claimed").
+
+```bash
+npx tsx evals/coverage/run.ts
+```
+
+- `dataset.json`, labeled cases: per requirement, a human **gold** verdict
+  (covered/partial/gap) and the judge's **predicted** verdict. Ids are synthetic
+  so the harness runs with zero live dependency.
+- `metrics.ts`, pure agreement functions — exact accuracy, mean ordinal error,
+  **over-credit rate** (the judge being more generous than the human, the
+  dangerous direction), and the rolled-up 0–100 score error the disagreement
+  causes (via the real scorer, `lib/resume/score.ts`).
+- `run.ts`, prints a per-case table + aggregate and exits non-zero below the
+  accuracy threshold.
+
+### Wiring it to the live judge
+
+Replace each requirement's `predicted` with what `judgeCoverage` returns for that
+(role, bullets) pair, mapped to the same `requirementId` space. Capturing live
+predictions needs Workers AI credentials, so do it in a separate script and feed
+the resulting JSON here — the runner and metrics stay decoupled from collection.
