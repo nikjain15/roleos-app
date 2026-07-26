@@ -48,6 +48,12 @@ export interface RoleOSEnv {
    *  Unset = the MCP server is closed by default (rejects every request). Local
    *  stdio needs no token; the OS process boundary is the trust boundary. */
   MCP_AUTH_TOKEN?: string;
+  /** Conduit gateway base URL for live-usage reporting (lib/conduit/reporter).
+   *  Unset = the reporter is a no-op (embedded metering is unchanged). */
+  CONDUIT_GATEWAY_URL?: string;
+  /** Bearer token the Conduit gateway authenticates decisions with; the tenant
+   *  is derived from it server-side. Unset = reporting off. */
+  CONDUIT_GATEWAY_TOKEN?: string;
 }
 
 // Minimal DO namespace shape so we don't depend on @cloudflare/workers-types here.
