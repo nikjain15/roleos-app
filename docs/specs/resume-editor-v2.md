@@ -123,6 +123,25 @@ labels)` tracks the scorer's agreement over time (the J8 §5 eval-ladder pattern
   page* (trim lowest-coverage lines), *more technical*, *punchier*, *surface X proof*
   (find the closest true evidence, or say honestly it isn't there). Re-scores after.
 
+## Export & formatting — industry standard (hard requirement)
+
+What leaves must look like a résumé a recruiter respects and an ATS can parse —
+**both DOCX and PDF**, identical layout. Not an afterthought; a P2 acceptance gate.
+
+- **Format rules (market-standard, ATS-safe):** single-column (no text in tables/
+  text-boxes/graphics that break parsers); clear hierarchy — Name + title + contact
+  → optional summary → Experience (Company · Title · Dates, then bullets) → Skills →
+  Education; standard fonts; consistent spacing/margins; **1 page (2 for senior)**.
+- **DOCX** — extend the existing `docx`-lib export (pack via
+  `Packer.toBase64String` per the Workers gotcha). **PDF** — the print route →
+  client-side PDF (no headless Chrome on Workers). Both render from ONE layout
+  definition so they never diverge.
+- **Validate against real market samples:** before shipping the export, gather
+  well-regarded professional résumé templates (the clean single-column style
+  recruiters + ATS handle) and check our output against them — section order,
+  spacing, typography, one-page discipline. Don't invent a format; match what wins.
+- Grounded only (truth-gate) — formatting never inflates content.
+
 ## Data model (mostly exists)
 
 - Tailored résumé = an **artifact** per role (`/studio/resume/[id]`). Store the
