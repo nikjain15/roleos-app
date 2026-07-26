@@ -1,5 +1,6 @@
 import { callModel } from "@/agent/registry";
 import { runQualityGate, type GateVerdict } from "@/agent/quality-gate";
+import { liveTools } from "@/agent/tools";
 import type { Skill, SkillInput } from "./skill";
 
 /**
@@ -18,11 +19,24 @@ export interface SkillRunResult {
 export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRunResult> {
   const { system, user } = skill.prompt(input);
 
-  const { text, run } = await callModel(
+  // Hand the model the skill's DECLARED tools that are actually DB-backed
+  // (liveTools filters out phase-2 placeholders). When a skill declares live
+  // tools, callModel runs a real tool loop — args validated, results fed back —
+  // instead of relying on prompt-stuffed grounding. Read/derive-only: the
+  // no-send invariant still holds (no send tool exists to hand over).
+  const skillTools = liveTools(skill.tools);
+
+  const { text, run, toolCalls } = await callModel(
     skill.model,
     { system, prompt: user },
-    { skill: skill.id },
+    {
+      skill: skill.id,
+      ...(skillTools.length > 0
+        ? { tools: skillTools, toolContext: { userId: input.userId } }
+        : {}),
+    },
   );
+  void toolCalls; // captured on the ModelResult for callers that log the trace
 
   // Shape-repair: a structured skill whose FIRST output doesn't parse into the
   // expected shape (Sonnet occasionally wraps JSON in prose / code fences / adds
