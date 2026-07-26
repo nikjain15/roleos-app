@@ -59,7 +59,7 @@ export default function ProfileView({ initial }: { initial: CanonicalProfile }) 
 
       {/* Identity */}
       <section>
-        <h2 className="font-display text-h3 font-semibold text-tx">You, in RO's words</h2>
+        <h2 className="font-display text-h3 font-semibold text-tx">You, in RO&rsquo;s words</h2>
         <div className="mt-3 space-y-2">
           <EditableRow
             label="Name" value={identity.name?.value} source={identity.name?.source}

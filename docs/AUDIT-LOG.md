@@ -73,6 +73,28 @@
 
 ## Slice entries (newest first)
 
+### Feed · gamified daily cockpit — win first, work second · 2026-07-26 · branch `slice/feed-gamified`
+- **From live design iteration with the user** (Co-Star + health-app inspired, kept
+  strictly on the design system). Rebuilds the cluttered feed into a motivation-first
+  cockpit: **streak → momentum → path → today's 3 → plays → transparency**. Spec:
+  `docs/specs/feed-gamified.md`.
+- **Motivation math (pure, tested):** `lib/feed/streak.ts` (streak = consecutive
+  active days, alive through today; momentum; week-dots) + `lib/feed/model.ts`
+  (`computePath` from real application stages, `weeklyMoves` pace ratio, `loadFeedStats`).
+  Derived from EXISTING `decision_events`/`applications`/`matches` — **no new tables**.
+- **Components (design system only):** `components/feed/Motivation.tsx` (`StreakCard`
+  w/ coral week-dots, `MomentumAspects` w/ volt energy, `PathConstellation` grape+volt,
+  `ProgressRing` grape→volt) + `TodayActions` (agenda + real moves-today ring). Tokens
+  only — `primary`/`volt`/`coral`, `font-display`, `<Card>`; zero hardcoded hex/px.
+- **Kept every feature:** matches (with the P3 taste line), digest, overnight queue,
+  reply desk — reorganized, none dropped. Nav (`AppNav`) untouched.
+- **Audit:** typecheck 0 · lint clean · **339 vitest** (+12 streak/path/pace). Verified
+  live end-to-end (seeded user: 4-day streak, real path stages, momentum, plays, all-done
+  state) → `/feed` 200, all sections render.
+- **States designed:** no-streak, no-data, all-done celebration, off-pace. ro-voice
+  (a break is kind), wellbeing gate holds (completion, not session length).
+
+
 ### J1 · GitHub intake + progressive composer · 2026-07-25 · branch `slice/j1-onboarding`
 - **GitHub as a first-class source** (`lib/github-fetch.ts`): reads a public profile off
   GitHub's free, ToS-clean REST API, profile + top repos (name/lang/stars) + languages +
