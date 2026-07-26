@@ -2,7 +2,13 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { supabaseServer } from "@/lib/supabase/server";
 import { logAgentRuns } from "@/lib/agent-runs";
-import { scoreTailoredResume, bulletsFromArtifact, bulletsFromProfile, type RoleRow } from "@/lib/resume/judge";
+import {
+  scoreTailoredResume,
+  bulletsFromArtifact,
+  sectionsFromArtifact,
+  bulletsFromProfile,
+  type RoleRow,
+} from "@/lib/resume/judge";
 import { scoreLift, type ScoreLift } from "@/lib/resume/score";
 
 export const dynamic = "force-dynamic";
@@ -50,7 +56,8 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
     .single<RoleRow>();
   if (!role) return NextResponse.json({ error: "role not found" }, { status: 404 });
 
-  const { score, runs } = await scoreTailoredResume(role, bullets);
+  const sections = sectionsFromArtifact(artifact.content);
+  const { score, runs } = await scoreTailoredResume(role, bullets, { sections });
 
   // `+N from your master`: run the SAME scorer on the untailored master profile
   // against this role, then compare. Skipped (lift = null, honest) when there's

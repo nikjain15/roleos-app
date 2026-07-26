@@ -30,15 +30,12 @@ import type {
   ResumeSection,
   CoverageVerdict,
 } from "./score";
+import { parseResumeDoc, scorerBullets, scorerSections, type ResumeBullet } from "./doc";
 import { DEFAULT_CALIBRATION, type ScoreCalibration } from "./calibration";
 
-// ── grounded inputs, structured from what already exists ─────────────────────
+export type { ResumeBullet } from "./doc";
 
-/** A résumé bullet to judge evidence against. */
-export interface ResumeBullet {
-  id: string;
-  text: string;
-}
+// ── grounded inputs, structured from what already exists ─────────────────────
 
 /** A role row (the columns we read). must_haves/nice_to_haves are jsonb arrays. */
 export interface RoleRow {
@@ -83,16 +80,18 @@ export function bulletsFromProfile(profileData: unknown): ResumeBullet[] {
   return bullets;
 }
 
-/** The tailored artifact's bullet list (draft_resume `content.bullets`). */
+/**
+ * The tailored artifact's scorer bullets, via the structured doc model — reads
+ * the new `experience[]` sections and the legacy flat `bullets[]` alike, with
+ * stable ids that line up with `sectionsFromArtifact` for section strength.
+ */
 export function bulletsFromArtifact(content: unknown): ResumeBullet[] {
-  const o = (content && typeof content === "object" ? content : {}) as Record<string, unknown>;
-  const raw = Array.isArray(o.bullets) ? o.bullets : [];
-  return raw
-    .map((b, i): ResumeBullet | null => {
-      const text = typeof b === "object" && b ? (b as Record<string, unknown>).text : b;
-      return typeof text === "string" && text.trim() ? { id: `b${i}`, text: text.trim() } : null;
-    })
-    .filter((b): b is ResumeBullet => b !== null);
+  return scorerBullets(parseResumeDoc(content));
+}
+
+/** The tailored artifact's experience blocks as scorer sections (id, title, line ids). */
+export function sectionsFromArtifact(content: unknown): ResumeSection[] {
+  return scorerSections(parseResumeDoc(content));
 }
 
 // ── stage 1: evidence retrieval (bge cosine) ─────────────────────────────────

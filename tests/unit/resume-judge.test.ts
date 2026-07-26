@@ -79,8 +79,8 @@ describe("requirementsFromRole — weighted, id'd, from jsonb arrays", () => {
   });
 });
 
-describe("bulletsFromArtifact — the draft_resume content shape", () => {
-  it("extracts bullet text with stable ids", () => {
+describe("bulletsFromArtifact — via the structured doc model", () => {
+  it("extracts bullet text with doc-model ids (legacy flat → one section)", () => {
     const bullets = bulletsFromArtifact({
       summary: "s",
       bullets: [
@@ -90,9 +90,15 @@ describe("bulletsFromArtifact — the draft_resume content shape", () => {
       ],
     });
     expect(bullets).toEqual([
-      { id: "b0", text: "Led ML platform" },
-      { id: "b2", text: "Grew revenue 3x" },
+      { id: "exp0-l0", text: "Led ML platform" },
+      { id: "exp0-l2", text: "Grew revenue 3x" }, // blank at l1 dropped; ids keep source position
     ]);
+  });
+  it("reads the new experience-section shape too", () => {
+    const bullets = bulletsFromArtifact({
+      experience: [{ company: "Acme", title: "PM", lines: [{ text: "Built ML platform" }] }],
+    });
+    expect(bullets).toEqual([{ id: "exp0-l0", text: "Built ML platform" }]);
   });
   it("tolerates a malformed artifact", () => {
     expect(bulletsFromArtifact(null)).toEqual([]);
