@@ -15,7 +15,8 @@ cloudflare-env.d.ts
 # misc
 .DS_Store
 *.log
-coverage/
+# test-coverage output at repo root only (not evals/coverage/, a tracked eval)
+/coverage/
 .vitest/
 # sandbox spike installs (kept out of the app build)
 sandbox/spike/**/node_modules/
