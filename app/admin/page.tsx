@@ -87,6 +87,45 @@ export default async function AdminDashboard() {
             />
           </div>
 
+          {/* SUQS — the four headline numbers, observed from agent_runs */}
+          <Section title="SUQS — Speed · Utility · Quality · Scalability">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <Tile
+                label="Speed (p50)"
+                value={s.suqs.speedMsP50 === null ? "—" : `${(s.suqs.speedMsP50 / 1000).toFixed(1)}s`}
+                hint={s.suqs.speedSamples ? `${s.suqs.speedSamples} primary calls` : "no latency yet"}
+              />
+              <Tile
+                label="Utility"
+                value={s.suqs.utility === null ? "n/a" : String(s.suqs.utility)}
+                hint="pre-traction — no user signal"
+              />
+              <Tile
+                label="Quality"
+                value={s.suqs.qualityPassRate === null ? "—" : `${s.suqs.qualityPassRate}%`}
+                hint="gate pass-rate"
+                tone={
+                  s.suqs.qualityPassRate === null
+                    ? "neutral"
+                    : s.suqs.qualityPassRate >= 70
+                      ? "good"
+                      : "warn"
+                }
+              />
+              <Tile
+                label="Scalability"
+                value={s.suqs.scaleRuns.toLocaleString()}
+                hint={s.suqs.costPerRunUsd === null ? "runs in window" : `${usd(s.suqs.costPerRunUsd)}/call`}
+              />
+            </div>
+            <p className="mt-2 text-xs text-tx3">
+              Speed = median wall-clock of the model call (agent_runs.trace). Utility is a
+              placeholder until there are users. Quality is the live gate pass-rate; Scalability
+              pairs call volume with $/call. Matching-accuracy floor is enforced offline —{" "}
+              <code className="rounded bg-surf2 px-1">npm run eval:retrieval:live</code>.
+            </p>
+          </Section>
+
           {/* cost by model */}
           <Section title="Cost by model">
             <Bars rows={s.byModel} total={s.totals.costUsd} />

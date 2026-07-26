@@ -78,9 +78,10 @@ describe("callModel · tool loop", () => {
     expect(toolResultTurn.content[0].type).toBe("tool_result");
     expect(toolResultTurn.content[0].is_error).toBeUndefined();
 
-    // Cost/tokens accumulated across BOTH turns.
+    // Cost/tokens accumulated across BOTH turns; latency (SUQS Speed) recorded.
     expect(res.run.input_tokens).toBe(15);
     expect(res.run.output_tokens).toBe(10);
+    expect(typeof res.run.latency_ms).toBe("number");
     expect(res.toolCalls).toEqual([
       { name: "search_roles", input: { query: "ai pm" }, ok: true, error: undefined },
     ]);

@@ -31,6 +31,9 @@ export async function logAgentRuns(
       output_tokens: r.output_tokens,
       cost_usd: r.cost_usd,
       stop_reason: r.stop_reason,
+      // Speed (SUQS) rides in the existing trace jsonb — no schema change. Only
+      // written when callModel measured it; read back by lib/admin-stats.
+      trace: typeof r.latency_ms === "number" ? { latency_ms: r.latency_ms } : null,
       judge_verdict,
     }));
     await db.from("agent_runs").insert(rows);
