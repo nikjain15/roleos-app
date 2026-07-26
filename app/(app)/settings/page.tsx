@@ -81,7 +81,21 @@ export default function Settings() {
         <Link href="/feed" className="text-sm text-tx3">← feed</Link>
       </div>
 
-      <h1 className="mt-8 text-2xl font-bold tracking-tight">How I reach you</h1>
+      <h1 className="mt-8 text-2xl font-bold tracking-tight">Settings</h1>
+
+      {/* Your setup — the surfaces that moved out of the top nav (nav restructure). */}
+      <section className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <Link href="/profile" className="rounded-xl border border-bd bg-surf p-4 transition-shadow hover:shadow-md">
+          <p className="font-semibold text-tx">What RO knows about you →</p>
+          <p className="mt-1 text-[13px] text-tx3">Your profile — fix anything and I learn from it.</p>
+        </Link>
+        <Link href="/goal" className="rounded-xl border border-bd bg-surf p-4 transition-shadow hover:shadow-md">
+          <p className="font-semibold text-tx">Your goal &amp; pace →</p>
+          <p className="mt-1 text-[13px] text-tx3">What you&apos;re aiming for, and the plan to get there.</p>
+        </Link>
+      </section>
+
+      <h2 className="mt-10 text-xl font-bold tracking-tight">How I reach you</h2>
       <p className="mt-2 text-tx2">
         I earn the right to interrupt — and when you go quiet, I go quieter. Set the terms; I&apos;ll
         respect them.

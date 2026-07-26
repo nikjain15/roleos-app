@@ -13,12 +13,14 @@ import SignOut from "@/components/SignOut";
  */
 const HIDE_ON = ["/login", "/start"];
 
+// IA (docs/specs — nav restructure 2026-07-26): fewer, clearer tabs + a real
+// home for the craft tools (Studio). Goal + Profile live under Settings; Explore
+// (the public index) is reachable from Roles, not a top tab.
 const NAV = [
-  { href: "/feed", label: "Feed" },
-  { href: "/goal", label: "Goal" },
+  { href: "/feed", label: "Today" },
   { href: "/roles", label: "Roles" },
+  { href: "/studio", label: "Studio" },
   { href: "/tracker", label: "Tracker" },
-  { href: "/the-index", label: "Explore" },
 ];
 
 export default function AppNav() {
