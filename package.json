@@ -22,6 +22,7 @@
     "eval:retrieval": "tsx evals/retrieval/run.ts",
     "eval:retrieval:live": "tsx evals/retrieval/live/run.ts",
     "eval:retrieval:capture": "tsx evals/retrieval/live/capture.ts",
+    "mcp:stdio": "tsx lib/mcp/stdio-entry.ts",
     "seed:roles": "tsx db/seed/seed-roles.ts",
     "seed:embeddings": "tsx db/seed/embed-roles.ts",
     "check": "npm run typecheck && npm run lint && npm run invariant:imports && npm run test",

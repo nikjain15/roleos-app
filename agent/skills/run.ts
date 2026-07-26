@@ -1,14 +1,20 @@
 import { callModel } from "@/agent/registry";
+import { inferViaConduit } from "@/agent/conduit";
 import { runQualityGate, type GateVerdict } from "@/agent/quality-gate";
 import { liveTools } from "@/agent/tools";
 import type { Skill, SkillInput } from "./skill";
 
 /**
- * The stateless skill runner. Loads a skill, runs the Anthropic call (raw SDK,
- * via callModel), then sends the output through the quality gate before it can
- * reach the user. This is the ONE path skill output takes. No send capability.
+ * The stateless skill runner. Loads a skill, runs the Anthropic call, then sends
+ * the output through the quality gate before it can reach the user. This is the
+ * ONE path skill output takes. No send capability.
  *
- * The build-studio Durable Object (gate 3) calls this same runner + gate — one
+ * The primary generation call now flows through `@conduit/client` in EMBEDDED
+ * mode (agent/conduit.ts): the transport is Conduit's unified `infer`, the core
+ * is RoleOS's own metered `callModel`, so cost accounting and behaviour are
+ * unchanged. The secondary shape-repair reformat stays a direct `callModel`.
+ *
+ * The build-studio Durable Object (gate 3) calls this same runner + gate: one
  * quality standard, two ways of running.
  */
 export interface SkillRunResult {
@@ -26,7 +32,7 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
   // no-send invariant still holds (no send tool exists to hand over).
   const skillTools = liveTools(skill.tools);
 
-  const { text, run, toolCalls } = await callModel(
+  const { text, run, toolCalls } = await inferViaConduit(
     skill.model,
     { system, prompt: user },
     {
