@@ -12,7 +12,11 @@ import {
 import { scoreLift, type ScoreLift } from "@/lib/resume/score";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+// Scoring runs TWO coverage passes (the tailored résumé + the master baseline for
+// `+N from your master`), each a bge retrieval + a reasoning-tier judge call. At
+// 60s this timed out and the meter hung on "Scoring…". 300s matches the ceiling
+// the other multi-model routes use (see /api/tailor, /api/cron/hunt).
+export const maxDuration = 300;
 
 /**
  * Compute the honest readiness score for one tailored résumé (résumé-editor v2,
