@@ -8,6 +8,7 @@ import { logAgentRuns } from "@/lib/agent-runs";
 import { parseModelJson } from "@/lib/json";
 import { parseResumeDoc, type ResumeExperience } from "@/lib/resume/doc";
 import { applyRevision, parseChanges, type ReviseChange } from "@/lib/resume/revise";
+import { tuneAcceptEvent } from "@/lib/resume/feedback";
 
 export const dynamic = "force-dynamic";
 // Revise runs the full skill + truth-gate (draft + critic + revise loop) — minutes.
@@ -76,6 +77,9 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   const nextContent = { ...(artifact.content as Record<string, unknown>), experience: nextExperience };
   const { error } = await supabase.from("artifacts").update({ content: nextContent }).eq("id", id);
   if (error) return NextResponse.json({ error: "save failed" }, { status: 500 });
+
+  // P4 calibration: accepting a tune is a directed correction of RO's draft.
+  await supabase.from("decision_events").insert({ ...tuneAcceptEvent(id, instruction, sectionId), user_id: user.id });
 
   return NextResponse.json({ ok: true, content: nextContent, changes });
 }
