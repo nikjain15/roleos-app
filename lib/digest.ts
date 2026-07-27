@@ -68,8 +68,8 @@ export async function buildAndStoreDigest(userId: string): Promise<DigestContent
   const state = await buildDigestState(userId);
   if (state.matches_total === 0) return null; // nothing real to digest yet
 
-  const { verdict } = await runSkill(digestSkill, { userId, data: { state } });
-  await logAgentRuns(userId, verdict.runs, { skill: "digest", judge: verdict });
+  const { verdict, routing } = await runSkill(digestSkill, { userId, data: { state } });
+  await logAgentRuns(userId, verdict.runs, { skill: "digest", judge: verdict, routing });
   const content = parseModelJson<DigestContent>(verdict.finalOutput);
   if (!content?.title || !Array.isArray(content.did)) return null;
 

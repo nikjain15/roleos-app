@@ -38,6 +38,8 @@ export interface RoutingTrace {
   tiers: AnthropicJob[];
   /** True when the answer moved off the statically assigned tier (up or down). */
   rerouted: boolean;
+  /** The confidence band of the final (accepted) verdict. */
+  confidence: GateVerdict["confidence"];
 }
 
 /**
@@ -71,8 +73,9 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
   // ── Dynamic difficulty-based routing ────────────────────────────────────
   // Start on the statically assigned tier, but let a runtime signal move it:
   //   DOWN: a trivially simple prose input takes the cheap fast path;
-  //   UP:   a failing / low-confidence gate verdict escalates to a stronger
-  //         tier and re-runs, bounded so it can never loop forever.
+  //   UP:   a failing gate verdict (needs_your_eyes) OR a pass that the gate
+  //         graded WEAK confidence escalates to a stronger tier and re-runs,
+  //         bounded so it can never loop forever.
   // The gate stays the safety net: a cheap fast path that underperforms is
   // caught and escalated straight back up, so quality never regresses.
   const eligible = dynamicEligible(skill);
@@ -134,13 +137,15 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
     // Meter EVERY hop: this attempt's generation (+ repair) and its gate calls.
     allRuns.push(run, ...repairRuns, ...verdict.runs);
 
-    // Escalate only when the gate is not satisfied and a stronger tier exists,
-    // within the hard attempt bound. `needs_your_eyes` covers a failed critic,
-    // a failed (fail-closed) truth gate, and low-confidence output alike.
+    // Escalate when the gate is not satisfied OR it passed but only at WEAK
+    // confidence, and a stronger tier exists, within the hard attempt bound.
+    // `needs_your_eyes` covers a failed critic and a failed (fail-closed) truth
+    // gate; the WEAK check is the graded signal: a thin-grounding / borderline
+    // pass that a stronger tier may firm up. Bounded by MAX_ESCALATIONS and the
+    // ladder top (strongerTier returns null), so it can never loop.
+    const needsStronger = verdict.status === "needs_your_eyes" || verdict.confidence === "weak";
     const next =
-      eligible && verdict.status === "needs_your_eyes" && attempt < MAX_ESCALATIONS
-        ? strongerTier(tier)
-        : null;
+      eligible && needsStronger && attempt < MAX_ESCALATIONS ? strongerTier(tier) : null;
     if (!next) break;
     tier = next; // route UP
   }
@@ -151,6 +156,11 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
   return {
     skillId: skill.id,
     verdict,
-    routing: { difficulty, tiers, rerouted: tiers.length > 1 || tiers[0] !== skill.model },
+    routing: {
+      difficulty,
+      tiers,
+      rerouted: tiers.length > 1 || tiers[0] !== skill.model,
+      confidence: verdict.confidence,
+    },
   };
 }

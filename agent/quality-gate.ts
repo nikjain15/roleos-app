@@ -41,7 +41,9 @@ export interface GateVerdict {
   critic: CriticVerdict | null;
   truth: TruthVerdict | null;
   revised: boolean;
-  confidence: "stated" | "strong" | "weak" | "unknown";
+  confidence: Confidence;
+  /** The 0..1 score the confidence band was derived from. Deterministic. */
+  confidenceScore: number;
   runs: AgentRunRecord[]; // critic + truth + revise model calls, for agent_runs
 }
 
@@ -60,6 +62,70 @@ interface GuardrailResult {
 interface CriticVerdict {
   pass: boolean;
   reasons: string[];
+}
+
+/** Confidence bands, weakest to strongest. "unknown" = we cannot vouch. */
+export type Confidence = "stated" | "strong" | "weak" | "unknown";
+
+/**
+ * The signals the gate already has, distilled into what the confidence model
+ * reads. All deterministic and network-free.
+ */
+export interface ConfidenceSignals {
+  /** Output is structurally the right shape. */
+  shapeOk: boolean;
+  /** Deterministic guardrails (no-send · voice blocklist · privacy) all passed. */
+  guardrailsOk: boolean;
+  /** The voice critic passed. null when the critic was skipped (role-play). */
+  criticPass: boolean | null;
+  /** Residual caveats the critic noted even on a pass. */
+  criticReasons: number;
+  /** The truth gate passed. null when no ground truth was supplied. */
+  truthOk: boolean | null;
+  /** Unsupported/overstated claims the truth gate still noted. */
+  truthViolations: number;
+  /** A prose or truth-driven revise had to run to reach this output. */
+  revised: boolean;
+  /** Length of the ground-truth slice the claims were checked against. null = none supplied. */
+  groundingChars: number | null;
+}
+
+/**
+ * Below this, a skill that IS grounded (ground truth supplied) is running on a
+ * thin slice: enough to pass the truth gate, not enough to be confident. This
+ * is the "critic passes but grounding is thin" path into `weak`.
+ */
+export const GROUNDING_MIN_CHARS = 400;
+
+/**
+ * Deterministically derive a confidence band (via a 0..1 score) from the signals
+ * the gate already computed. This replaces the old hard-coded "strong on pass /
+ * unknown on shape-fail" placeholder with a real, documented signal.
+ *
+ * Bands:
+ *  • unknown: a hard gate failed (shape, guardrails, critic, truth). We cannot
+ *    vouch for the output. This is the fail-closed floor.
+ *  • weak: the hard gates passed, but a soft concern remains: the first draft
+ *    needed a revise, the grounding slice was thin, or the judges noted residual
+ *    caveats. Reachable and meaningful: the caller escalates on it.
+ *  • strong: a clean pass on every signal.
+ */
+export function computeConfidence(s: ConfidenceSignals): { band: Confidence; score: number } {
+  // Fail-closed floor: if any hard gate did not pass, we cannot vouch.
+  if (!s.shapeOk || !s.guardrailsOk) return { band: "unknown", score: 0 };
+  if (s.criticPass === false) return { band: "unknown", score: 0 };
+  if (s.truthOk === false) return { band: "unknown", score: 0 };
+
+  // On a passing path, grade the strength of that pass.
+  let score = 1;
+  if (s.revised) score -= 0.3; // the first draft needed fixing
+  if (s.groundingChars !== null && s.groundingChars < GROUNDING_MIN_CHARS) score -= 0.35; // thin grounding
+  if (s.criticReasons > 0) score -= 0.15; // critic passed with caveats
+  if (s.truthViolations > 0) score -= 0.15; // truth passed with noted caveats
+  if (score < 0) score = 0;
+
+  const band: Confidence = score >= 0.8 ? "strong" : score >= 0.45 ? "weak" : "unknown";
+  return { band, score };
 }
 
 // ro-voice.html voice blocklist — banned phrasings (hype, toxic positivity,
@@ -155,7 +221,19 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   // 2 · guardrails
   const guardrails = runGuardrails(input);
 
+  const grounding = typeof input.groundTruth === "string" ? input.groundTruth.trim().length : null;
+
   if (input.expects && !shapeOk) {
+    const c = computeConfidence({
+      shapeOk,
+      guardrailsOk: guardrails.ok,
+      criticPass: null,
+      criticReasons: 0,
+      truthOk: null,
+      truthViolations: 0,
+      revised: false,
+      groundingChars: grounding,
+    });
     return {
       status: "needs_your_eyes",
       finalOutput: input.output,
@@ -164,13 +242,24 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
       critic: null,
       truth: null,
       revised: false,
-      confidence: "unknown",
+      confidence: c.band,
+      confidenceScore: c.score,
       runs,
     };
   }
 
   // Role-play personas (mock interviewer): shape + guardrails only, no voice critic.
   if (input.skipCritic) {
+    const c = computeConfidence({
+      shapeOk,
+      guardrailsOk: guardrails.ok,
+      criticPass: null, // no voice critic on a deliberate role-play persona
+      criticReasons: 0,
+      truthOk: null,
+      truthViolations: 0,
+      revised: false,
+      groundingChars: grounding,
+    });
     return {
       status: guardrails.ok ? "passed" : "needs_your_eyes",
       finalOutput: input.output,
@@ -179,7 +268,8 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
       critic: null,
       truth: null,
       revised: false,
-      confidence: "strong",
+      confidence: c.band,
+      confidenceScore: c.score,
       runs,
     };
   }
@@ -225,6 +315,16 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
       }
     }
     const truthOk2 = truthFinal ? truthFinal.ok : true;
+    const c = computeConfidence({
+      shapeOk,
+      guardrailsOk: guardrails.ok,
+      criticPass: verdict.pass,
+      criticReasons: verdict.reasons.length,
+      truthOk: truthFinal ? truthFinal.ok : null,
+      truthViolations: truthFinal ? truthFinal.violations.length : 0,
+      revised,
+      groundingChars: grounding,
+    });
     return {
       status: verdict.pass && guardrails.ok && truthOk2 ? "passed" : "needs_your_eyes",
       finalOutput,
@@ -233,7 +333,8 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
       critic: verdict,
       truth: truthFinal,
       revised,
-      confidence: "strong",
+      confidence: c.band,
+      confidenceScore: c.score,
       runs,
     };
   }
@@ -262,6 +363,17 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   const guardrails2 = runGuardrails({ ...input, output: finalOutput });
   const passed = verdict.pass && guardrails2.ok && truthOk;
 
+  const c = computeConfidence({
+    shapeOk,
+    guardrailsOk: guardrails2.ok,
+    criticPass: verdict.pass,
+    criticReasons: verdict.reasons.length,
+    truthOk: truth ? truth.ok : null,
+    truthViolations: truth ? truth.violations.length : 0,
+    revised,
+    groundingChars: grounding,
+  });
+
   return {
     status: passed ? "passed" : "needs_your_eyes",
     finalOutput,
@@ -270,7 +382,8 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
     critic: verdict,
     truth,
     revised,
-    confidence: "strong",
+    confidence: c.band,
+    confidenceScore: c.score,
     runs,
   };
 }

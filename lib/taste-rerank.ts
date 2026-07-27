@@ -67,8 +67,8 @@ export async function tasteRerank(
 
   try {
     const roles = matches.map((m) => ({ id: m.id, title: m.role_title, company: m.company, why: m.why }));
-    const { verdict } = await runSkill(tasteRerankSkill, { userId, data: { taste, roles } });
-    await logAgentRuns(userId, verdict.runs, { skill: "taste_rerank", judge: verdict });
+    const { verdict, routing } = await runSkill(tasteRerankSkill, { userId, data: { taste, roles } });
+    await logAgentRuns(userId, verdict.runs, { skill: "taste_rerank", judge: verdict, routing });
     const out = parseModelJson<Array<{ id?: string; delta?: number; reason?: string }>>(verdict.finalOutput);
     if (!Array.isArray(out)) return matches;
     const deltas = new Map<string, TasteDelta>();
