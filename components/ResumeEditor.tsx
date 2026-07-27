@@ -5,6 +5,7 @@ import { mapFlags } from "@/lib/resume/flags";
 import { Badge } from "@/components/ui";
 import { parseResumeDoc, flattenLines, type ResumeExperience } from "@/lib/resume/doc";
 import type { ResumeScore, SectionScore } from "@/lib/resume/score";
+import type { ReviseChange } from "@/lib/resume/revise";
 
 /**
  * The résumé editor (v2) — single-column, document-first, ONE experience section
@@ -62,6 +63,13 @@ export default function ResumeEditor({
   const [openWhy, setOpenWhy] = useState<number | null>(null);
   const [save, setSave] = useState<SaveState>("idle");
   const [regrounding, setRegrounding] = useState<number | null>(null);
+  // Revise-by-instruction (P3): busy = false | "all" (command bar) | sectionId (tune).
+  const [command, setCommand] = useState("");
+  const [tuneOpenId, setTuneOpenId] = useState<string | null>(null);
+  const [tuneText, setTuneText] = useState("");
+  const [reviseBusy, setReviseBusy] = useState<false | "all" | string>(false);
+  const [changes, setChanges] = useState<ReviseChange[] | null>(null);
+  const [reviseErr, setReviseErr] = useState<string | null>(null);
 
   const originalText = useRef<string[]>(
     flattenLines(parseResumeDoc((initialContent.original as EditorContent) ?? initialContent)).map((f) => f.line.text),
@@ -147,6 +155,36 @@ export default function ResumeEditor({
       setSave("error");
     } finally {
       setRegrounding(null);
+    }
+  }
+
+  // ── revise-by-instruction (P3): scoped + lock-aware, enforced server-side ──
+  async function revise(instruction: string, sectionId?: string) {
+    if (!instruction.trim() || reviseBusy !== false) return;
+    setReviseBusy(sectionId ?? "all");
+    setChanges(null);
+    setReviseErr(null);
+    try {
+      const res = await fetch(`/api/artifact/${id}/revise`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ instruction: instruction.trim(), sectionId }),
+      });
+      const j = (await res.json()) as { content?: unknown; changes?: ReviseChange[]; error?: string };
+      if (res.ok && j.content) {
+        setExperience(parseResumeDoc(j.content).experience);
+        setChanges(j.changes ?? []);
+        setSave("saved");
+        setCommand("");
+        setTuneText("");
+        setTuneOpenId(null);
+      } else {
+        setReviseErr(j.error ?? "couldn't revise");
+      }
+    } catch {
+      setReviseErr("couldn't revise");
+    } finally {
+      setReviseBusy(false);
     }
   }
 
@@ -335,14 +373,52 @@ export default function ResumeEditor({
                 ) : null;
               })()}
               <button
-                disabled
-                title="Coming next: tell RO to adjust just this section"
-                className="cursor-not-allowed rounded-md border border-bd px-2.5 py-1 text-xs text-tx3"
+                onClick={() => {
+                  setTuneOpenId((o) => (o === section.id ? null : section.id));
+                  setTuneText("");
+                }}
+                aria-expanded={tuneOpenId === section.id}
+                className="rounded-md border border-primary-bd bg-primary-bg px-2.5 py-1 text-xs font-medium text-primary hover:opacity-90"
               >
-                tune this section · soon
+                tune this section →
               </button>
             </div>
           </div>
+
+          {tuneOpenId === section.id && (
+            <div className="mt-3 flex items-center gap-2 rounded-lg border border-primary-bd bg-primary-bg p-2">
+              <input
+                autoFocus
+                value={tuneText}
+                onChange={(e) => setTuneText(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && revise(tuneText, section.id)}
+                placeholder={`Tune ${section.company || "this section"} — e.g. lead with the AI work, add a metric`}
+                disabled={reviseBusy !== false}
+                className="min-w-0 flex-1 bg-transparent px-2 py-1.5 text-sm text-tx placeholder:text-tx3 focus:outline-none"
+              />
+              <button
+                onClick={() => revise(tuneText, section.id)}
+                disabled={reviseBusy !== false || !tuneText.trim()}
+                className="rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-white disabled:opacity-50"
+              >
+                {reviseBusy === section.id ? "tuning…" : "tune"}
+              </button>
+            </div>
+          )}
+
+          {changes && changes.length > 0 && (
+            <div className="mt-3 rounded-lg border border-primary-bd bg-primary-bg p-3 text-xs">
+              <p className="font-semibold text-primary">What RO tuned · re-score to update the meter</p>
+              <ul className="mt-1 space-y-1">
+                {changes.map((c, i) => (
+                  <li key={i} className="text-tx2">
+                    <span className="font-medium capitalize">{c.type}</span>
+                    {c.target ? ` · ${c.target}` : ""} — {c.why}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="mt-4 space-y-3">
             {section.lines.map((line, li) => {
@@ -434,16 +510,27 @@ export default function ResumeEditor({
         </div>
       )}
 
-      {/* Command bar (revise-by-instruction, P3) */}
-      <div className="mt-6 flex items-center gap-2 rounded-xl border border-bd bg-surf p-2 opacity-70">
-        <input
-          disabled
-          placeholder="Tell RO to adjust — e.g. one page, more technical, surface the Gen-AI proof (coming next)"
-          className="min-w-0 flex-1 bg-transparent px-2 py-1.5 text-sm text-tx placeholder:text-tx3 focus:outline-none"
-        />
-        <button disabled title="Coming next: revise-by-instruction" className="cursor-not-allowed rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-white opacity-60">
-          ↑
-        </button>
+      {/* Command bar — revise the whole résumé in plain English (truth-gated, lock-aware) */}
+      <div className="mt-6">
+        <div className="flex items-center gap-2 rounded-xl border border-bd bg-surf p-2">
+          <input
+            value={command}
+            onChange={(e) => setCommand(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && revise(command)}
+            placeholder="Tell RO to adjust the whole résumé — e.g. one page, more technical, surface the Gen-AI proof"
+            disabled={reviseBusy !== false}
+            className="min-w-0 flex-1 bg-transparent px-2 py-1.5 text-sm text-tx placeholder:text-tx3 focus:outline-none disabled:opacity-60"
+          />
+          <button
+            onClick={() => revise(command)}
+            disabled={reviseBusy !== false || !command.trim()}
+            className="rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-white disabled:opacity-50"
+          >
+            {reviseBusy === "all" ? "revising…" : "↑"}
+          </button>
+        </div>
+        {reviseErr && <p className="mt-1 px-1 text-xs text-dng-tx">{reviseErr}</p>}
+        {reviseBusy !== false && <p className="mt-1 px-1 text-xs text-tx3">RO is revising — grounded to your real experience, keeping your ✓-locked lines…</p>}
       </div>
     </div>
   );
