@@ -48,7 +48,7 @@ export async function POST(req: Request): Promise<Response> {
   // One RLS-scoped read of the user's working context (M0). Unlike before, this
   // now includes their PROFILE — so RO on the dock grounds on who they are, not
   // just their pipeline. top_pursue stays the only roles a tailor act may name.
-  const ctx = await assembleContext(supabase, user.id);
+  const ctx = await assembleContext(supabase, user.id, { recallQuery: question });
   const state = toRoAskState(ctx);
 
   try {
