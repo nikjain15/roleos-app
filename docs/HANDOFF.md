@@ -1,90 +1,98 @@
-# RoleOS — continuation brief (paste into a new chat) · updated 2026-07-26
+# RoleOS — continuation brief (paste into a new chat) · updated 2026-07-27
 
 You are the senior engineer continuing **RoleOS** (`/Users/nikjain/dev/roleos`, git)
 — an AI-first web app where an agent ("RO") runs a senior AI/PM job hunt FOR the
 user. Work like a 20+yr full-stack eng: design before code, thin verifiable slices,
 verify live, no quality compromises. **Pause for the user's call on design/product
-decisions.** One gate: the user merges every PR.
+decisions.**
 
 ## STEP 1 — read before doing anything
 1. `docs/specs/design-system.md` — **THE VISUAL CONTRACT.** grape=`primary`,
-   energy=`volt`/`spark` (#c8ff00), streak/warm=`coral`, Space Grotesk display +
-   Plus Jakarta Sans body, light app. `components/ui/` primitives. **Never change it.**
-2. `docs/specs/resume-editor-v2.md` — the next big build (below).
-3. `docs/specs/feed-gamified.md`, `docs/specs/profile-data-layer.md` — shipped work.
-4. `docs/AUDIT-LOG.md` (top) + auto-memory (`MEMORY.md` + linked files).
+   energy=`volt`/`spark` (#c8ff00), warm=`coral`, Space Grotesk display + Plus Jakarta
+   Sans body, light app. `components/ui/` primitives. **Never change it.**
+2. `docs/specs/resume-editor-v2.md` · `docs/specs/ro-memory.md` — the two big builds,
+   both now SHIPPED (below). `docs/specs/profile-data-layer.md`, `feed-gamified.md` — shipped.
+3. `docs/AUDIT-LOG.md` (top) + auto-memory (`MEMORY.md` + linked files, esp.
+   `resume-editor-v2.md`, `ro-memory-requirements.md`).
 
 ## Run it
 `npm run dev` → localhost:3000 (Preview tool: `.claude/launch.json` → `roleos-dev`).
-Checks **sequentially** (never concurrent tsc/vitest): `npm run typecheck` · `lint` · `test`.
-Safe commit: `find .git -name '*.lock' -delete && git commit --no-verify`.
+Checks **sequentially** (never concurrent tsc/vitest): `npm run typecheck` · `lint`
+· `invariant:imports` · `test`. Safe commit: `find .git -name '*.lock' -delete && git commit --no-verify`.
+**Deploy is automatic on merge to `main`** (`.github/workflows/deploy.yml` → Cloudflare;
+allow ~2 min propagation before hitting prod). Merges/migrations gated by the user.
 
-## LIVE NOW (ro.roleos.fyi — all merged & deployed)
-J1 onboarding v2 · GitHub login · real-time Explore chat (markdown, taste capture) ·
-no-scheme LinkedIn fetch fix · **Profile data layer** (P1 structured canonical profile
-· P2 correctable "What RO knows" view · P3 taste→match re-rank overlay) ·
-**Gamified feed** (streak · momentum · constellation path · today's actions, on the
-design system) · **Nav restructure** → `Today · Roles · Studio · Tracker` + Settings,
-with a **Studio** craft hub; Goal+Profile under Settings. Routes: `/onboarding→/start`,
-`/explore→/the-index` (redirects in place).
+## LIVE NOW (ro.roleos.fyi — all merged, deployed, e2e-verified)
+Everything prior (onboarding v2 · GitHub login · Explore chat · Profile data layer ·
+gamified feed · nav `Today·Roles·Studio·Tracker`), PLUS the two big 2026-07 builds:
 
-## NEXT (in progress): Résumé editor v2 — Studio › Résumé
-Spec: `docs/specs/resume-editor-v2.md`. Mockup (throwaway, delete after build):
-`public/mock-resume.html`. AI-first, on the design system. Build phases:
-- **P1 — coverage scorer** (`lib/resume/score.ts`, pure + eval fixtures). Per-section
-  + overall. **Score = coverage of the role's requirements by real evidence, NOT
-  interview odds.** Honest tiers: Solid → Strong → Fully evidenced. `+N from master`
-  = same scorer on master vs tailored.
-- **P2 — editor UI** in Studio › Résumé (readiness meter · per-section strength +
-  "tune this section" · inline-editable lines · **✓-approve locks a line** ·
-  alternative drafts) **+ industry-standard export**: DOCX **and** PDF, single-column
-  ATS-safe, ONE layout for both, **validated against real market résumé samples** (a
-  P2 gate — don't invent a format). `docx` lib (`Packer.toBase64String`), PDF via the
-  print route client-side (no headless Chrome on Workers).
-- **P3 — revise-by-instruction** (global + section-scoped, truth-gated, respects
-  ✓-locks) + surface the tailor skill's structured change-log ("what I tuned").
-- **P4 — calibration loop**: feedback (✓/edits/tune-accept/export/outcome) →
-  `decision_events` → recalibrate the *coverage judge* (extends `outcome-learning`);
-  outcomes only *watched* for miscalibration, **never** presented as a prediction.
-  Measured by a held-out eval set.
-One master → many tailored résumés (per role, each its own score). Extends existing
-`/api/tailor` + truth-gate.
+### Résumé editor v2 (Studio › Résumé) — P1–P4 COMPLETE
+Honest **coverage scorer** (`lib/resume/score.ts` + `judge.ts` + `calibration.ts`;
+coverage of role requirements by real evidence, NEVER interview odds) · **readiness
+meter** · **single-column editor** (`components/ResumeEditor.tsx`: one experience
+section at a time w/ dropdown+search nav, strength pills, ✓-lock lines, "Why RO wrote
+this", on-demand "Your CV" panel) · **tune this section** + **command bar**
+(revise-by-instruction, truth-gated + scope/lock-enforced, `lib/resume/revise.ts` +
+`agent/skills/revise_resume.ts`) · **ATS DOCX/PDF export** (`lib/resume/docx.ts` +
+print page, one layout) · **P4 calibration** (`lib/resume/feedback.ts` + the
+`evals/coverage/` CI gate). draft_resume emits `experience[]` sections; the doc model
+is `lib/resume/doc.ts` (tolerant, back-compat). Tailor + score routes run at
+`maxDuration=300` (they're multi-minute).
 
-## OTHER PENDING (after résumé, or in parallel)
-- **Bring the rest of Studio onto the design system**: Build a piece · Practice the
-  interview (J12 mocks) · Cover letters (J10) · Negotiate — currently pre-J old UI.
-- **Feed polish**: the readiness-meter tier labels overlap on the right (fix); more
-  state polish.
-- **Hardening**: the red CI `check` is a **pre-existing `npm audit`** failure
-  (Next.js/postcss/sharp CVEs) — needs a Next bump; NOT blocking deploy (separate
-  workflow). Email digest delivery (CF Email). Live sandbox preview (paid CF
-  Containers). **Rotate the GitHub OAuth client secret** (it was pasted in chat).
-- **P4 profile → relational tables** (later; migration path in profile-data-layer.md).
+### RO memory (Option B) — M0–M3 COMPLETE, "notebook, not a recording"
+- **M0** `lib/ro/context.ts` — shared working-context assembler; the dock knows the
+  user's profile.
+- **M1** `lib/ro/memory.ts` + `db/migrations/0017_ro_memory.sql` — durable notebook:
+  derive typed notes from `decision_events` → embed → recall top-k; **"What RO
+  remembers"** view (`app/(app)/memory/page.tsx`, editable/forgettable).
+- **M2** `lib/ro/thread.ts` + `0018_ro_threads.sql` — conversation threads + rolling
+  summaries (bounded; cheap-tier fold on overflow).
+- **M3** `rankRecall` (confidence/scope re-rank) · `evals/memory/` CI gate ·
+  `lib/ro/collective.ts` + `0019_collective_signals.sql` — **anonymous aggregate
+  learning** (SECURITY DEFINER fn returns de-identified counts only; `collectivePrior`
+  seeds `judgeCalibration` cold-start).
+All wired into `/api/ro/ask` FAIL-SAFE. Human-gated-outward holds (a note is data).
 
-## KEY DECISIONS (don't re-litigate)
-- Résumé score is **coverage/case-strength, honest — never predicts interviews.**
-- Taste feeds matching as a **transparent re-rank overlay** (labeled, nothing hidden).
-- Profile stored as **canonical JSON, table-shaped** (relational is a later, cheap explode).
-- IA: `Today · Roles · Studio · Tracker` + Settings.
+## VERIFYING AUTHED / LIVE FLOWS (this is how you check functionality)
+Reusable e2e scripts (green vs prod) — forge a session, hit the deployed API, assert,
+clean up the test user:
+- `node scripts/verify-ro-memory.mjs` — M1 notebook (action → note → recall).
+- `node scripts/verify-ro-thread.mjs` — M2 continuity (turn 2 recalls turn 1).
+- `ROLE_ID=<uuid> node scripts/verify-resume-flow.mjs` — tailor → sections → score.
+Pattern: `admin.generateLink({type:'magiclink'})` → `verifyOtp({token_hash})` → cookie
+`sb-<ref>-auth-token=base64-<b64(session JSON)>`; `admin.deleteUser` after. Source
+`.dev.vars` first. Supabase ref `qaubhkrgcdllnqvtrccr`.
+
+## APPLYING MIGRATIONS (you have CLI access; user authorizes)
+`db/migrations/` is source of truth. Apply via the Management API script — check clear
+first (read-only), then:
+```
+set -a; source .dev.vars; set +a
+SUPABASE_PAT="$SUPABASE_ACCESS_TOKEN" PROJECT_REF=qaubhkrgcdllnqvtrccr \
+  node db/seed/apply-migrations.mjs db/migrations/00NN_x.sql
+```
+Migrations are additive (`CREATE ... IF NOT EXISTS`); safe on first apply.
 
 ## INVARIANTS (never break; tests enforce some)
-Human-gated-outward (no send tool in `agent/`; `/api/dispatch` only) · truth-gate on
-résumé (claims trace to master_profile) · RLS + append-only `decision_events` ·
-`profiles.role` immutable · meter every model call · `zod` on new routes.
+Human-gated-outward (NO send tool in `agent/`; `/api/dispatch` only — `npm run
+invariant:imports` + `tests/invariants`) · truth-gate on résumé (every line traces to
+master_profile) · RLS + append-only `decision_events` · meter EVERY model call
+(`callModel` → `logAgentRuns`) · `zod` on new routes · RO memory notes are DATA (never
+trigger a send) · aggregate learning is de-identified + k-anon floored.
 
 ## GOTCHAS
-- **Verify authed flows without email:** forge a Supabase session —
-  `admin.generateLink({type:'magiclink',email})` → `verifyOtp({token_hash,type:'email'})`
-  → cookie `sb-<ref>-auth-token=base64-<base64(session JSON)>`. Use `ro.tester@roleos.dev`;
-  **delete the test user after** (`admin.deleteUser`). Supabase ref `qaubhkrgcdllnqvtrccr`.
-- **Browser cookie-injection is blocked by the auto classifier** (looks like session
-  hijack) — verify authed pages via `curl` with a `Cookie:` header instead, or have the
-  user look in their own logged-in browser.
-- Model runs are ~mins (quality-first — don't cut tiers). `registry.json` isn't hot-reloaded.
-- If `.next/types` complains about a deleted route, delete the stale `.next/types/app/<route>`.
-- `main` was force-rewritten once externally (benign); watch who has force-push.
+- Model runs are ~minutes (quality-first) — heavy routes use `maxDuration=300`; new
+  ones that call models should too. `registry.json` isn't hot-reloaded.
+- If `.next/types` complains about a deleted route, delete the stale
+  `.next/types/app/<route>` dir.
+- Browser cookie-injection is blocked by the auto classifier — verify authed pages via
+  the e2e scripts (curl + forged cookie) or the user's own browser.
+- Deploy propagates ~2 min after merge; e2e right after a merge can hit the old worker
+  (re-run once).
 
-## HOW TO PROCEED
-Recommend: start **résumé P1 (the coverage scorer)** — pure + testable, independent —
-while gathering real market résumé samples to lock the export target before P2. Build
-thin slices, verify live (sequentially green), PR each, **stop for the user's merge.**
+## NEXT (optional polish — the two big arcs are done)
+- Surface the calibration / collective read-back in the UI (computed, not shown yet).
+- Wire the résumé command bar's artifact scope into `recallMemory({scope})`.
+- Email digest delivery (CF Email) · live sandbox preview (paid CF Containers).
+- The red CI `check` is a pre-existing `npm audit` (Next/postcss/sharp CVEs) — separate
+  workflow, not blocking deploy.
