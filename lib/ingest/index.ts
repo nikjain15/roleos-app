@@ -164,11 +164,11 @@ async function insertNew(db: Db, posts: AtsPosting[], cap: number, remaining: nu
       keywords?: unknown;
     } | null = null;
     try {
-      const { verdict } = await runSkill(extractRole, {
+      const { verdict, routing } = await runSkill(extractRole, {
         userId: "system",
         data: { title: p.title, company: p.company, description },
       });
-      await logAgentRuns(null, verdict.runs, { skill: extractRole.id });
+      await logAgentRuns(null, verdict.runs, { skill: extractRole.id, routing });
       structured = parseModelJson(verdict.finalOutput);
     } catch {
       /* keep going unstructured */

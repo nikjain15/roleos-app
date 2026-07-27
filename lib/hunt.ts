@@ -162,11 +162,11 @@ export async function huntForUser(
       if (!role) continue;
 
       // 3 · full quality gate — identical path to /api/tailor, identical bar.
-      const { verdict } = await runSkill(draftResume, {
+      const { verdict, routing } = await runSkill(draftResume, {
         userId,
         data: { role, profile: profileRaw, groundTruth: profileRaw },
       });
-      await logAgentRuns(userId, verdict.runs, { skill: "draft_resume", judge: verdict });
+      await logAgentRuns(userId, verdict.runs, { skill: "draft_resume", judge: verdict, routing });
 
       const passed = verdict.status === "passed";
       const { data: artifact, error: aErr } = await db

@@ -27,11 +27,11 @@ export async function projectTaste(
     .from("taste_model")
     .select("attribute, value, confidence, evidence, user_confirmed");
 
-  const { verdict } = await runSkill(tasteSkill, {
+  const { verdict, routing } = await runSkill(tasteSkill, {
     userId,
     data: { events, current: current ?? [] },
   });
-  await logAgentRuns(userId, verdict.runs, { skill: "taste", judge: verdict });
+  await logAgentRuns(userId, verdict.runs, { skill: "taste", judge: verdict, routing });
 
   const inferences = parseModelJson<Array<Record<string, unknown>>>(verdict.finalOutput);
   if (!inferences || !Array.isArray(inferences) || !inferences.length) return { updated: 0 };

@@ -107,8 +107,8 @@ export async function buildAndStoreReview(userId: string): Promise<WeeklyReview 
   const state = await buildReviewState(userId);
   if (!state.enough_signal) return null; // honest: no fabricated review off noise
 
-  const { verdict } = await runSkill(weeklyReviewSkill, { userId, data: { state } });
-  await logAgentRuns(userId, verdict.runs, { skill: "weekly_review", judge: verdict });
+  const { verdict, routing } = await runSkill(weeklyReviewSkill, { userId, data: { state } });
+  await logAgentRuns(userId, verdict.runs, { skill: "weekly_review", judge: verdict, routing });
   const review = parseModelJson<WeeklyReview>(verdict.finalOutput);
   if (!review?.headline || !Array.isArray(review.pivots)) return null;
 
