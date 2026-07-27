@@ -6,7 +6,8 @@ import { describe, it, expect, vi } from "vitest";
  * These tests mock `callModel` (so no network/secret is touched) and assert the
  * MODEL actually chosen at each hop:
  *   • a gate-failing answer escalates draft -> reason (stronger tier);
- *   • a truth-gate failure escalates and re-runs on the stronger tier;
+ *   • a TRUTH-gate failure does NOT escalate (an honest bound — the ground truth is
+ *     the ceiling; a stronger model can't clear it) — it surfaces at the current tier;
  *   • a trivial input takes the cheap fast path (draft -> quick_tag);
  *   • escalation is bounded, a gate that never passes cannot loop forever;
  *   • the sampling contract holds for every ladder tier.
@@ -136,17 +137,20 @@ describe("dynamic routing · escalation up the ladder", () => {
     expect(genModels).toContain(OPUS);
   });
 
-  it("escalates on a truth-gate failure and re-runs on the stronger tier", async () => {
+  it("does NOT escalate when the truth gate is the blocker — an honest bound surfaces fast", async () => {
+    // A truth violation means the GROUND TRUTH is the ceiling (a résumé can't
+    // exceed the candidate's real experience). A stronger model can't clear it, and
+    // the truth-revise loop already tried at this tier — so we surface it, not burn
+    // a second full pass (the latency fix). Escalation stays for voice/grounding.
     state.escalated = false;
     const res = await runSkill(structuredSkill, {
       userId: "u1",
       data: { groundTruth: "Real master profile: PM at Acme, 2019-2023." },
     });
 
-    expect(res.routing.tiers).toEqual(["draft", "reason"]);
-    expect(res.verdict.status).toBe("passed");
-    expect(res.verdict.truth?.ok).toBe(true);
-    expect(res.verdict.runs.some((r) => r.model === OPUS)).toBe(true);
+    expect(res.routing.tiers).toEqual(["draft"]); // no escalation on a truth block
+    expect(res.verdict.status).toBe("needs_your_eyes");
+    expect(res.verdict.truth?.ok).toBe(false);
   });
 });
 

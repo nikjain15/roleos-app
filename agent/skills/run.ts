@@ -131,6 +131,7 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
       expects: skill.expects,
       structured: skill.structured,
       skipCritic: skill.gate === "shape_only",
+      voiceCritic: skill.voiceCritic,
       groundTruth: typeof input.data.groundTruth === "string" ? input.data.groundTruth : undefined,
     });
 
@@ -143,7 +144,14 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
     // gate; the WEAK check is the graded signal: a thin-grounding / borderline
     // pass that a stronger tier may firm up. Bounded by MAX_ESCALATIONS and the
     // ladder top (strongerTier returns null), so it can never loop.
-    const needsStronger = verdict.status === "needs_your_eyes" || verdict.confidence === "weak";
+    // Don't escalate when the TRUTH gate is the blocker: a résumé's ceiling is the
+    // candidate's real experience, so a stronger model can't clear a genuine
+    // overstatement — the truth-revise loop already tried at this tier. Escalating
+    // there just doubles latency for an honestly-bounded draft. Escalate only for
+    // failures a stronger tier can plausibly fix (voice/thin-grounding weakness).
+    const truthBlocked = !!(verdict.truth && !verdict.truth.ok);
+    const needsStronger =
+      (verdict.status === "needs_your_eyes" || verdict.confidence === "weak") && !truthBlocked;
     const next =
       eligible && needsStronger && attempt < MAX_ESCALATIONS ? strongerTier(tier) : null;
     if (!next) break;

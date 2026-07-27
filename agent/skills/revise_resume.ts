@@ -18,6 +18,7 @@ export default skill({
   tools: ["get_master_profile", "get_role", "diff"],
   gate: "full",
   structured: true,
+  voiceCritic: false, // résumé content, not RO's voice — truth gate governs
   prompt: ({ data }) => {
     const role = data.role as Record<string, unknown>;
     const profile = data.profile as string;
