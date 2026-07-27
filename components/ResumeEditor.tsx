@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { mapFlags } from "@/lib/resume/flags";
 import { Badge } from "@/components/ui";
 import { parseResumeDoc, flattenLines, type ResumeExperience } from "@/lib/resume/doc";
@@ -287,22 +287,47 @@ export default function ResumeEditor({
           </h2>
           <div className="mt-2 max-h-[45vh] overflow-y-auto text-[13px] leading-relaxed text-tx2">
             {sourceText.trim() ? (
-              formatCv(sourceText).map((b, i) =>
-                b.type === "head" ? (
-                  <h3 key={i} className="mt-3.5 border-b border-bd pb-0.5 text-[12px] font-semibold text-tx first:mt-0">
-                    {b.text}
-                  </h3>
-                ) : b.type === "bullet" ? (
-                  <div key={i} className="mt-1 flex gap-2 pl-1">
-                    <span className="mt-[3px] h-1 w-1 shrink-0 rounded-full bg-tx3" />
-                    <span>{b.text}</span>
-                  </div>
-                ) : (
-                  <p key={i} className="mt-1.5">
-                    {b.text}
-                  </p>
-                ),
-              )
+              (() => {
+                // Group consecutive bullets into a native list so the dots align to
+                // their text (a manual dot floats out of line on wrapped bullets).
+                const out: ReactNode[] = [];
+                let bullets: string[] = [];
+                const flush = () => {
+                  if (bullets.length) {
+                    const items = bullets;
+                    out.push(
+                      <ul key={`ul-${out.length}`} className="mt-1.5 list-disc space-y-1 pl-5 marker:text-tx3">
+                        {items.map((t, i) => (
+                          <li key={i}>{t}</li>
+                        ))}
+                      </ul>,
+                    );
+                    bullets = [];
+                  }
+                };
+                for (const b of formatCv(sourceText)) {
+                  if (b.type === "bullet") {
+                    bullets.push(b.text);
+                    continue;
+                  }
+                  flush();
+                  if (b.type === "head") {
+                    out.push(
+                      <h3 key={`h-${out.length}`} className="mt-3.5 border-b border-bd pb-0.5 text-[12px] font-semibold text-tx first:mt-0">
+                        {b.text}
+                      </h3>,
+                    );
+                  } else {
+                    out.push(
+                      <p key={`p-${out.length}`} className="mt-1.5">
+                        {b.text}
+                      </p>,
+                    );
+                  }
+                }
+                flush();
+                return out;
+              })()
             ) : (
               <span>No source profile on file.</span>
             )}
