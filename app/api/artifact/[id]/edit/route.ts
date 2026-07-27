@@ -4,6 +4,7 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { validateBody } from "@/lib/validate";
 import { mapFlags } from "@/lib/resume/flags";
 import { parseResumeDoc, scorerBullets } from "@/lib/resume/doc";
+import { lockApproveEvents } from "@/lib/resume/feedback";
 
 export const dynamic = "force-dynamic";
 
@@ -106,6 +107,12 @@ export async function PATCH(
 
   const { error } = await supabase.from("artifacts").update({ content: merged }).eq("id", id);
   if (error) return NextResponse.json({ error: "save failed" }, { status: 500 });
+
+  // P4 calibration: a line the user just ✓-locked is a positive judge signal.
+  const lockEvents = lockApproveEvents(parseResumeDoc(existing).experience, parseResumeDoc(merged).experience, id);
+  if (lockEvents.length) {
+    await supabase.from("decision_events").insert(lockEvents.map((e) => ({ ...e, user_id: user.id })));
+  }
 
   return NextResponse.json({ ok: true, status: artifact.status, grounded });
 }

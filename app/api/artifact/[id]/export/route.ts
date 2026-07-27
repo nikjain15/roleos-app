@@ -3,6 +3,7 @@ import { Packer } from "docx";
 import { supabaseServer } from "@/lib/supabase/server";
 import { buildResumeDoc } from "@/lib/resume/docx";
 import { parseResumeDoc } from "@/lib/resume/doc";
+import { exportEvent } from "@/lib/resume/feedback";
 
 export const dynamic = "force-dynamic";
 
@@ -71,6 +72,9 @@ export async function GET(
     })),
     keywords_injected: parsed.keywords_injected,
   });
+
+  // P4 calibration: exporting is trust — they used the draft. Best-effort, pre-stream.
+  await supabase.from("decision_events").insert({ ...exportEvent(id, format), user_id: user.id });
 
   const base64 = await Packer.toBase64String(doc);
   const bytes = Uint8Array.from(atob(base64), (ch) => ch.charCodeAt(0));
