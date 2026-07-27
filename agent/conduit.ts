@@ -15,6 +15,7 @@ import {
 } from "@/agent/registry";
 import { recallRolesMulti } from "@/lib/match";
 import { reportDecision } from "@/lib/conduit/reporter";
+import { pinModelFor, tierJobForModel } from "@/agent/routing";
 
 /**
  * The Conduit seam (architecture.md §4.0 + docs/conduit.md).
@@ -35,6 +36,13 @@ const TENANT = "roleos";
 interface Bind {
   call: ModelCall;
   opts?: Parameters<typeof callModel>[2];
+  /**
+   * Dynamic routing (agent/routing.ts): the tier to actually run on when it
+   * differs from the task's assigned job. Surfaced to the Conduit client as a
+   * `pinModel`, so the re-route travels the same unified seam as any hop and is
+   * resolved back to a registry job inside `resolve` before `callModel` runs.
+   */
+  pin?: { job: AnthropicJob; maxTokens?: number };
   /** Captures the full RoleOS ModelResult (metered run + tool trace) resolve produced. */
   onResult?: (result: ModelResult) => void;
 }
@@ -69,7 +77,16 @@ export function createRoleOsClient(bind: Bind = { call: {} }): ConduitClient {
               system: task.system,
               prompt: task.messages.map((m) => m.content).join("\n\n"),
             };
-      const result = await callModel(task.useCase as AnthropicJob, modelCall, bind.opts);
+      // Honor the pinModel seam: a pinned ModelRef re-routes the call to the
+      // ladder job that model names (dynamic routing). Absent a pin, the task's
+      // own useCase (the statically assigned job) drives the call as before.
+      const pinnedJob = task.pinModel ? tierJobForModel(task.pinModel) : undefined;
+      const job = pinnedJob ?? bind.pin?.job ?? (task.useCase as AnthropicJob);
+      const opts =
+        bind.pin?.maxTokens !== undefined
+          ? { ...bind.opts, maxTokensOverride: bind.pin.maxTokens }
+          : bind.opts;
+      const result = await callModel(job, modelCall, opts);
       bind.onResult?.(result);
       return {
         text: result.text,
@@ -101,9 +118,15 @@ export async function inferViaConduit(
   job: AnthropicJob,
   call: ModelCall,
   opts?: Parameters<typeof callModel>[2],
+  /**
+   * Dynamic routing: run this call on `pin.job` instead of `job`, preserving
+   * `pin.maxTokens` as the token budget. The re-route is expressed as a
+   * Conduit `pinModel` so it stays a metered hop on the unified seam.
+   */
+  pin?: { job: AnthropicJob; maxTokens?: number },
 ): Promise<ModelResult> {
   let captured: ModelResult | undefined;
-  const client = createRoleOsClient({ call, opts, onResult: (r) => (captured = r) });
+  const client = createRoleOsClient({ call, opts, pin, onResult: (r) => (captured = r) });
 
   const messages: ChatMessage[] =
     call.prompt !== undefined
@@ -117,7 +140,8 @@ export async function inferViaConduit(
     useCase: job,
     system: call.system,
     messages,
-    maxTokens: jobSpec(job).params?.max_tokens,
+    maxTokens: pin?.maxTokens ?? jobSpec(job).params?.max_tokens,
+    ...(pin ? { pinModel: pinModelFor(pin.job) } : {}),
   });
 
   if (!captured) throw new Error("conduit infer: resolve did not run");
