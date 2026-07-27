@@ -101,6 +101,14 @@ export async function callModel(
     tools?: Tool[];
     /** Context (userId) passed to every tool `run`. Required if `tools` is set. */
     toolContext?: ToolContext;
+    /**
+     * Override the job's declared `max_tokens` for this call. Used only by the
+     * dynamic router (agent/routing.ts): when the answer path re-routes to a
+     * different tier, it preserves the ORIGINAL task's token budget so a
+     * re-route never truncates below what the skill asked for. Never lets a
+     * value through that would 400 (it only ever raises or matches the budget).
+     */
+    maxTokensOverride?: number;
   } = {},
 ): Promise<ModelResult> {
   const spec = jobSpec(job);
@@ -120,7 +128,7 @@ export async function callModel(
   // Build params without temperature (would 400 on 4.8/4.6).
   const req: Anthropic.MessageCreateParamsNonStreaming = {
     model: spec.model,
-    max_tokens: spec.params?.max_tokens ?? 4096,
+    max_tokens: opts.maxTokensOverride ?? spec.params?.max_tokens ?? 4096,
     messages,
     ...(call.system ? { system: call.system } : {}),
   };
