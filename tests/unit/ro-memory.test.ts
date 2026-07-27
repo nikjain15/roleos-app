@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { deriveNotes, type DerivableEvent } from "@/lib/ro/memory";
+import { deriveNotes, newNotes, type DerivableEvent, type RoNoteDraft } from "@/lib/ro/memory";
 
 /**
  * M1 — the notebook's PURE derivation: real actions (decision_events) → typed
@@ -54,5 +54,22 @@ describe("deriveNotes", () => {
         { kind: "resume", action: "approve", payload: { signal: "lock" } },
       ]),
     ).toEqual([]);
+  });
+});
+
+describe("newNotes — idempotency filter (no duplicates across syncs)", () => {
+  const d = (text: string): RoNoteDraft => ({ scope: "global", kind: "target", text, confidence: 0.9 });
+
+  it("drops drafts whose text is already stored (case-insensitive)", () => {
+    const fresh = newNotes([d("Targets Staff AI PM"), d("Prefers remote")], ["targets staff ai pm"]);
+    expect(fresh.map((n) => n.text)).toEqual(["Prefers remote"]);
+  });
+
+  it("dedupes within the same batch too", () => {
+    expect(newNotes([d("Prefers remote"), d("prefers remote")], [])).toHaveLength(1);
+  });
+
+  it("returns all when nothing is stored yet", () => {
+    expect(newNotes([d("a"), d("b")], [])).toHaveLength(2);
   });
 });

@@ -93,6 +93,23 @@ export function deriveNotes(events: DerivableEvent[]): RoNoteDraft[] {
   return [...byText.values()];
 }
 
+/**
+ * Idempotency filter (PURE): of freshly-derived drafts, keep only those NOT already
+ * in the notebook (matched case-insensitively by text). So syncing repeatedly never
+ * duplicates a note — a repeated behavior stays one note, not many.
+ */
+export function newNotes(drafts: RoNoteDraft[], existingTexts: string[]): RoNoteDraft[] {
+  const seen = new Set(existingTexts.map((t) => t.trim().toLowerCase()));
+  const out: RoNoteDraft[] = [];
+  for (const d of drafts) {
+    const key = d.text.trim().toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key); // also dedupe within this batch
+    out.push(d);
+  }
+  return out;
+}
+
 // ── storage + recall (thin RLS-scoped bridges) ───────────────────────────────
 
 /** Embed the note texts and append them to the notebook (server-scoped user_id). */
@@ -128,4 +145,32 @@ export async function recallMemory(supabase: SupabaseClient, query: string, k = 
   const { data, error } = await supabase.rpc("match_ro_memory", { query_embedding: vec, match_count: k });
   if (error) throw new Error(`match_ro_memory: ${error.message}`);
   return (data ?? []) as RoNote[];
+}
+
+/**
+ * Bring the notebook up to date from the user's real actions: read recent
+ * decision_events → derive notes → keep only the ones not already stored → embed +
+ * write. Idempotent (safe to call repeatedly; usually writes 0 after the backfill).
+ * RLS-scoped. Returns how many new notes were written. Callers run this fail-safe.
+ */
+export async function syncMemory(supabase: SupabaseClient, userId: string): Promise<number> {
+  const { data: events } = await supabase
+    .from("decision_events")
+    .select("id, kind, action, payload")
+    .in("kind", ["profile", "resume"])
+    .order("created_at", { ascending: false })
+    .limit(300)
+    .returns<DerivableEvent[]>();
+
+  const drafts = deriveNotes(events ?? []);
+  if (drafts.length === 0) return 0;
+
+  const { data: existing } = await supabase
+    .from("ro_memory")
+    .select("text")
+    .is("superseded_by", null)
+    .returns<{ text: string }[]>();
+
+  const fresh = newNotes(drafts, (existing ?? []).map((r) => r.text));
+  return writeNotes(supabase, userId, fresh);
 }

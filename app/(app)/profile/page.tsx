@@ -40,6 +40,13 @@ export default async function ProfilePage() {
           </div>
         )}
       </div>
+
+      <div className="mt-8 border-t border-bd pt-6">
+        <Link href="/memory" className="text-body font-medium text-primary hover:underline">
+          What RO remembers about you &rarr;
+        </Link>
+        <p className="mt-1 text-small text-tx3">The lasting facts RO learned as you use it — see, fix, or forget them.</p>
+      </div>
     </main>
   );
 }
