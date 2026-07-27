@@ -5,6 +5,7 @@ import ArtifactActions from "@/components/ArtifactActions";
 import RegenerateResume from "@/components/RegenerateResume";
 import ResumeEditor, { type EditorContent } from "@/components/ResumeEditor";
 import ResumeReadiness from "@/components/resume/ResumeReadiness";
+import DraftingPoller from "@/components/resume/DraftingPoller";
 import type { ResumeScore, ScoreLift } from "@/lib/resume/score";
 import { parseResumeDoc } from "@/lib/resume/doc";
 
@@ -67,7 +68,16 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
 
       <h1 className="mt-6 text-2xl font-bold tracking-tight">Tailored for {roleLabel}</h1>
 
-      {!hasBody ? (
+      {artifact.status === "drafting" ? (
+        <DraftingPoller id={artifact.id} />
+      ) : artifact.status === "error" ? (
+        <div className="mt-8">
+          <p className="mb-3 rounded-lg border-l-[3px] border-dng bg-dng-bg px-3 py-2 text-[13px] text-dng-tx">
+            RO hit a snag drafting this one. Try again — nothing was sent.
+          </p>
+          <RegenerateResume roleId={artifact.role_id} />
+        </div>
+      ) : !hasBody ? (
         <RegenerateResume roleId={artifact.role_id} />
       ) : (
         <>
