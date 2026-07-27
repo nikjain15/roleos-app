@@ -61,23 +61,26 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
   if (!role) return NextResponse.json({ error: "role not found" }, { status: 404 });
 
   const sections = sectionsFromArtifact(artifact.content);
-  const { score, runs } = await scoreTailoredResume(role, bullets, { sections });
-
-  // `+N from your master`: run the SAME scorer on the untailored master profile
-  // against this role, then compare. Skipped (lift = null, honest) when there's
-  // no structured master to baseline against.
   const { data: mp } = await supabase
     .from("master_profile")
     .select("data")
     .eq("user_id", user.id)
     .maybeSingle<{ data: { profile?: unknown } | null }>();
   const masterBullets = bulletsFromProfile(mp?.data?.profile);
-  let lift: ScoreLift | null = null;
+
+  // Score the tailored résumé AND the master baseline (for `+N from your master`)
+  // in PARALLEL — they're independent, so there's no reason to wait sequentially.
+  // Lift is skipped (null, honest) when there's no structured master to baseline.
+  const [tailoredRes, masterRes] = await Promise.all([
+    scoreTailoredResume(role, bullets, { sections }),
+    masterBullets.length > 0 ? scoreTailoredResume(role, masterBullets) : Promise.resolve(null),
+  ]);
+  const { score, runs } = tailoredRes;
   const allRuns = [...runs];
-  if (masterBullets.length > 0) {
-    const master = await scoreTailoredResume(role, masterBullets);
-    allRuns.push(...master.runs);
-    lift = scoreLift(master.score, score);
+  let lift: ScoreLift | null = null;
+  if (masterRes) {
+    allRuns.push(...masterRes.runs);
+    lift = scoreLift(masterRes.score, score);
   }
 
   await logAgentRuns(user.id, allRuns, { skill: "judge_coverage" });
