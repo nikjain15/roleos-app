@@ -76,6 +76,14 @@ export default function ResumeEditor({
   );
   const lineRefs = useRef<(HTMLTextAreaElement | null)[]>([]);
 
+  // Grow a textarea to fit its content so no line/summary is ever cut off or
+  // trapped behind a tiny inner scrollbar.
+  const autoSize = (el: HTMLTextAreaElement | null) => {
+    if (!el) return;
+    el.style.height = "auto";
+    el.style.height = `${el.scrollHeight}px`;
+  };
+
   // Global-index view across ALL sections (flags + reground address by it).
   const flat = useMemo(() => {
     const out: Array<{ gi: number; ei: number; li: number }> = [];
@@ -275,7 +283,7 @@ export default function ResumeEditor({
         <div className="mt-3 rounded-lg border border-bd bg-surf2 p-3">
           <h2 className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Your CV — the source of truth</h2>
           <div className="mt-2 max-h-[40vh] overflow-y-auto whitespace-pre-wrap text-[13px] leading-relaxed text-tx2">
-            {sourceText || "No source profile on file."}
+            {(sourceText || "No source profile on file.").replace(/\*\*/g, "").replace(/^#+\s*/gm, "")}
           </div>
         </div>
       )}
@@ -284,10 +292,14 @@ export default function ResumeEditor({
       <label className="mt-5 block">
         <span className="text-xs font-medium text-tx2">Summary</span>
         <textarea
+          ref={autoSize}
           value={summary}
-          onChange={(e) => setSummary(e.target.value)}
-          rows={3}
-          className="mt-1 w-full resize-y rounded-lg border border-bd bg-surf p-2.5 text-[15px] leading-relaxed text-tx"
+          onChange={(e) => {
+            setSummary(e.target.value);
+            autoSize(e.currentTarget);
+          }}
+          rows={2}
+          className="mt-1 w-full resize-none overflow-hidden rounded-lg border border-bd bg-surf p-2.5 text-[15px] leading-relaxed text-tx"
         />
       </label>
 
@@ -433,11 +445,15 @@ export default function ResumeEditor({
                       <textarea
                         ref={(el) => {
                           if (gi >= 0) lineRefs.current[gi] = el;
+                          autoSize(el);
                         }}
                         value={line.text}
-                        onChange={(e) => editLine(gi, e.target.value)}
+                        onChange={(e) => {
+                          editLine(gi, e.target.value);
+                          autoSize(e.currentTarget);
+                        }}
                         rows={2}
-                        className="w-full resize-y rounded-md border border-bd bg-surf2/40 p-2 text-[15px] leading-relaxed text-tx focus:border-primary-bd focus:bg-surf"
+                        className="w-full resize-none overflow-hidden rounded-md border border-bd bg-surf2/40 p-2 text-[15px] leading-relaxed text-tx focus:border-primary-bd focus:bg-surf"
                       />
                     </label>
                     <button
