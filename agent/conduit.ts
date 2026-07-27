@@ -14,6 +14,7 @@ import {
   type ModelResult,
 } from "@/agent/registry";
 import { recallRolesMulti } from "@/lib/match";
+import { reportDecision } from "@/lib/conduit/reporter";
 
 /**
  * The Conduit seam (architecture.md §4.0 + docs/conduit.md).
@@ -120,6 +121,22 @@ export async function inferViaConduit(
   });
 
   if (!captured) throw new Error("conduit infer: resolve did not run");
+
+  // Live-usage tap: mirror the metered record to the Conduit gateway when it's
+  // configured. Fire-and-forget and pre-caught, so it can never block or fail
+  // the answer, and a NO-OP when the gateway env vars are unset. The record is
+  // untouched — we only read it.
+  const run = captured.run;
+  void reportDecision({
+    useCase: job,
+    model: run.model,
+    provider: "anthropic", // callModel is Anthropic-only (agent/registry.ts).
+    costUsd: run.cost_usd,
+    latencyMs: run.latency_ms ?? 0,
+    tokensIn: run.input_tokens,
+    tokensOut: run.output_tokens,
+  });
+
   // Thread the client's returned output through, keeping RoleOS's metered run.
   return { ...captured, text: res.output };
 }

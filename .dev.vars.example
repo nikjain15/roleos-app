@@ -23,3 +23,10 @@ CLOUDFLARE_API_TOKEN=""   # scope: Workers AI Read
 
 # --- Sandbox provider (gate 3) — decided post-spike, left blank for now ---
 # E2B_API_KEY=""
+
+# --- Conduit gateway (live-usage reporting) ---
+# When BOTH are set, each metered decision is mirrored to the gateway's
+# POST /v1/decisions (fire-and-forget). Unset = reporter is a no-op; embedded
+# metering is unchanged. Tenant is derived from the token server-side.
+CONDUIT_GATEWAY_URL=""
+CONDUIT_GATEWAY_TOKEN=""
