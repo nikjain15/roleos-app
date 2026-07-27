@@ -30,6 +30,30 @@ export const maxDuration = 300;
  */
 const Params = z.object({ id: z.string().uuid() });
 
+/**
+ * The cached score, for the client to POLL while a score computes (async scoring,
+ * same pattern as tailoring). Returns { score, lift } once cached, else pending.
+ * RLS-scoped read; no model call.
+ */
+export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> }): Promise<Response> {
+  const parsed = Params.safeParse(await ctx.params);
+  if (!parsed.success) return NextResponse.json({ error: "bad id" }, { status: 400 });
+  const supabase = await supabaseServer();
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+  if (!user) return NextResponse.json({ error: "not signed in" }, { status: 401 });
+
+  const { data: art } = await supabase
+    .from("artifacts")
+    .select("provenance")
+    .eq("id", parsed.data.id)
+    .single<{ provenance: { score?: unknown; scoreLift?: ScoreLift | null } | null }>();
+  if (!art) return NextResponse.json({ error: "not found" }, { status: 404 });
+  const score = art.provenance?.score ?? null;
+  return NextResponse.json({ score, lift: art.provenance?.scoreLift ?? null, pending: !score });
+}
+
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }): Promise<Response> {
   const parsed = Params.safeParse(await ctx.params);
   if (!parsed.success) return NextResponse.json({ error: "bad id" }, { status: 400 });

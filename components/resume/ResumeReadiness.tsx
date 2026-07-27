@@ -1,18 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui";
 import ReadinessMeter from "./ReadinessMeter";
 import { meterView } from "@/lib/resume/meter";
 import type { ResumeScore, ScoreLift } from "@/lib/resume/score";
 
 /**
- * Client wrapper for the readiness meter (résumé-editor v2, P2). Renders a cached
- * score if the artifact already has one; otherwise a single button computes it
- * on demand (POST /api/artifact/[id]/score — one metered model pass, not run on
- * every page load, to respect cost). The view model (meterView) is pure, computed
- * client-side from the returned score.
+ * Client wrapper for the readiness meter (résumé-editor v2, P2 + async). Renders a
+ * cached score if the artifact has one; otherwise scoring is client-driven async
+ * (same pattern as tailoring): a click kicks off the compute (POST) and we POLL the
+ * cached score (GET) with live progress, so the button never freezes for a minute.
+ * The view model (meterView) is pure, computed client-side from the score.
  */
+const STAGES = [
+  "Reading the role's requirements…",
+  "Matching your evidence…",
+  "Judging coverage line by line…",
+  "Comparing to your master…",
+  "Almost there…",
+];
+
 export default function ResumeReadiness({
   id,
   initialScore,
@@ -24,23 +32,69 @@ export default function ResumeReadiness({
 }) {
   const [score, setScore] = useState<ResumeScore | null>(initialScore);
   const [lift, setLift] = useState<ScoreLift | null>(initialLift);
-  const [loading, setLoading] = useState(false);
+  const [scoring, setScoring] = useState(false);
+  const [stage, setStage] = useState(0);
   const [error, setError] = useState<string | null>(null);
 
-  async function computeScore() {
-    setLoading(true);
+  useEffect(() => {
+    if (!scoring) return;
+    let cancelled = false;
+    const apply = (b: { score?: ResumeScore; lift?: ScoreLift | null } | undefined) => {
+      if (cancelled || !b?.score) return;
+      setScore(b.score);
+      setLift(b.lift ?? null);
+      setScoring(false);
+    };
+    // Kick off the compute (the server caches it); use its response if it returns.
+    fetch(`/api/artifact/${id}/score`, { method: "POST" })
+      .then((r) => r.json())
+      .then(apply)
+      .catch(() => {
+        /* the poll below still catches the cached result */
+      });
+    const cycle = setInterval(() => setStage((s) => Math.min(s + 1, STAGES.length - 1)), 12_000);
+    const poll = setInterval(async () => {
+      try {
+        const b = await fetch(`/api/artifact/${id}/score`).then((r) => r.json());
+        if (b?.score) apply(b);
+      } catch {
+        /* transient — keep polling */
+      }
+    }, 3000);
+    const stop = setTimeout(() => {
+      if (!cancelled) {
+        setScoring(false);
+        setError("Scoring took longer than expected — try again.");
+      }
+    }, 320_000);
+    return () => {
+      cancelled = true;
+      clearInterval(cycle);
+      clearInterval(poll);
+      clearTimeout(stop);
+    };
+  }, [scoring, id]);
+
+  function start() {
     setError(null);
-    try {
-      const res = await fetch(`/api/artifact/${id}/score`, { method: "POST" });
-      const body = (await res.json()) as { score?: ResumeScore; lift?: ScoreLift | null; error?: string };
-      if (!res.ok || !body.score) throw new Error(body.error ?? "couldn't score this résumé");
-      setScore(body.score);
-      setLift(body.lift ?? null);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "couldn't score this résumé");
-    } finally {
-      setLoading(false);
-    }
+    setStage(0);
+    setScoring(true);
+  }
+
+  if (scoring) {
+    return (
+      <div className="rounded-xl border border-bd bg-surf p-5">
+        <div className="flex items-center gap-3">
+          <div className="h-5 w-5 shrink-0 animate-spin rounded-full border-2 border-bd border-t-primary" />
+          <div>
+            <p className="text-small font-medium text-tx">Scoring your résumé…</p>
+            <p aria-live="polite" className="text-small text-tx3">
+              {STAGES[stage]}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
   }
 
   if (!score) {
@@ -51,9 +105,7 @@ export default function ResumeReadiness({
           evidence.
         </p>
         <div className="mt-3 flex items-center gap-3">
-          <Button onClick={computeScore} disabled={loading}>
-            {loading ? "Scoring…" : "Score readiness"}
-          </Button>
+          <Button onClick={start}>Score readiness</Button>
           {error && <span className="text-small text-dng-tx">{error}</span>}
         </div>
       </div>
@@ -64,8 +116,8 @@ export default function ResumeReadiness({
     <div className="space-y-2">
       <ReadinessMeter view={meterView(score, { lift })} />
       <div className="flex items-center gap-3">
-        <button onClick={computeScore} disabled={loading} className="text-small text-tx3 hover:text-tx2 disabled:opacity-50">
-          {loading ? "Re-scoring…" : "Re-score"}
+        <button onClick={start} className="text-small text-tx3 hover:text-tx2">
+          Re-score
         </button>
         {error && <span className="text-small text-dng-tx">{error}</span>}
       </div>
