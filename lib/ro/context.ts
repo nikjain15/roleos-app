@@ -13,6 +13,8 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { loadActiveGoal } from "@/lib/goal";
 import { parseCanonicalProfile, type CanonicalProfile } from "@/lib/profile-schema";
+import { recallMemory, type RoNote } from "@/lib/ro/memory";
+import { logError } from "@/lib/log";
 
 export interface RoProfileSummary {
   name?: string;
@@ -54,6 +56,8 @@ export interface RoContext {
   goal: RoGoal | null;
   pipeline: RoPipeline;
   topPursue: RoPursueRole[];
+  /** Top-k notes from the durable notebook (M1) relevant to the current query. */
+  memory: RoNote[];
 }
 
 const MAX_SKILLS = 8;
@@ -86,7 +90,11 @@ type MatchRow = {
  * a brand-new user gets a null profile, null goal, zeroed pipeline, and no
  * pursue roles — every surface renders exactly as before.
  */
-export async function assembleContext(supabase: SupabaseClient, userId: string): Promise<RoContext> {
+export async function assembleContext(
+  supabase: SupabaseClient,
+  userId: string,
+  opts: { recallQuery?: string } = {},
+): Promise<RoContext> {
   const [mpRes, goalRes, matchAgg, appAgg, readyAgg] = await Promise.all([
     supabase.from("master_profile").select("data").eq("user_id", userId).maybeSingle<{ data: { profile?: unknown } | null }>(),
     loadActiveGoal(supabase),
@@ -112,6 +120,18 @@ export async function assembleContext(supabase: SupabaseClient, userId: string):
     .slice(0, 5)
     .map((m) => ({ id: m.role_id, company: m.roles!.company, title: m.roles!.role_title }));
 
+  // M1 notebook recall — bounded top-k relevant notes. FAIL-SAFE: before the
+  // migration is applied (no table/RPC), or on any recall error, RO simply has
+  // no notes and every surface behaves exactly as in M0.
+  let memory: RoNote[] = [];
+  if (opts.recallQuery) {
+    try {
+      memory = await recallMemory(supabase, opts.recallQuery);
+    } catch (err) {
+      logError("ro_memory.recall_failed", err);
+    }
+  }
+
   return {
     profile,
     goal: goal
@@ -132,6 +152,7 @@ export async function assembleContext(supabase: SupabaseClient, userId: string):
       resumes_ready: readyAgg.count ?? 0,
     },
     topPursue,
+    memory,
   };
 }
 
@@ -142,6 +163,8 @@ export async function assembleContext(supabase: SupabaseClient, userId: string):
 export function toRoAskState(ctx: RoContext) {
   return {
     profile: ctx.profile,
+    // What RO remembers about them (from past sessions), most relevant first.
+    remembered: ctx.memory.map((n) => ({ note: n.text, kind: n.kind })),
     top_pursue: ctx.topPursue,
     goal: ctx.goal,
     pipeline: ctx.pipeline,

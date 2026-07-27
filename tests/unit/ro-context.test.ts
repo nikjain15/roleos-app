@@ -47,9 +47,11 @@ describe("toRoAskState — the dock's grounding shape", () => {
       goal: { target: "ai_pm", deadline: null, verdict: "ok", weekly_apps_target: 5, best_lever: null },
       pipeline: { pursue_matches: 3, saved: 1, applied: 2, interviewing: 1, offers: 0, resumes_ready: 1 },
       topPursue: [{ id: "r1", company: "Scale", title: "PM" }],
+      memory: [{ id: "n1", text: "Targets Staff AI PM", kind: "target", scope: "global", confidence: 0.9, distance: 0.1 }],
     };
     const state = toRoAskState(ctx);
     expect(state.profile?.topSkills).toEqual(["ML"]);
+    expect(state.remembered).toEqual([{ note: "Targets Staff AI PM", kind: "target" }]);
     expect(state.top_pursue).toEqual([{ id: "r1", company: "Scale", title: "PM" }]);
     expect(state.goal?.target).toBe("ai_pm");
     expect(state.pipeline.pursue_matches).toBe(3);
