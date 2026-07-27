@@ -3,6 +3,7 @@ import { z } from "zod";
 import { supabaseServer } from "@/lib/supabase/server";
 import { validateBody } from "@/lib/validate";
 import { assembleContext, toRoAskState } from "@/lib/ro/context";
+import { syncMemory } from "@/lib/ro/memory";
 import { runSkill } from "@/agent/skills/run";
 import roAsk from "@/agent/skills/ro_ask";
 import { logAgentRuns } from "@/lib/agent-runs";
@@ -48,6 +49,15 @@ export async function POST(req: Request): Promise<Response> {
   // One RLS-scoped read of the user's working context (M0). Unlike before, this
   // now includes their PROFILE — so RO on the dock grounds on who they are, not
   // just their pipeline. top_pursue stays the only roles a tailor act may name.
+  // M1b: bring the notebook up to date from the user's actions before we recall.
+  // FAIL-SAFE + idempotent — before the ro_memory migration is applied (or on any
+  // error) this is a no-op and the dock behaves exactly as M0.
+  try {
+    await syncMemory(supabase, user.id);
+  } catch (err) {
+    logError("ro_memory.sync_failed", err);
+  }
+
   const ctx = await assembleContext(supabase, user.id, { recallQuery: question });
   const state = toRoAskState(ctx);
 
