@@ -1,20 +1,50 @@
+<!-- DEMO_GIF -->
+
 <p align="center">
   <a href="https://ro.roleos.fyi"><img src="assets/hero.png" alt="RoleOS" width="820"></a>
 </p>
 
-<p align="center"><b>RoleOS, RO runs your job hunt. You make the calls.</b><br>
-  <a href="https://ro.roleos.fyi">Live at ro.roleos.fyi ↗</a></p>
+<h1 align="center">RoleOS</h1>
+
+<p align="center"><b>RO runs your job hunt end to end, Find to Apply to Land. You keep every decision.</b></p>
+
+<p align="center">
+  <a href="https://github.com/nikjain15/roleos-app/actions/workflows/ci.yml"><img src="https://github.com/nikjain15/roleos-app/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
+  <img src="https://img.shields.io/badge/tests-481%20passing-brightgreen" alt="Tests: 481 passing">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-view--only-blue" alt="License: view-only"></a>
+  <img src="https://img.shields.io/badge/status-early%20access-orange" alt="Status: early access">
+</p>
+
+<p align="center">
+  <a href="https://ro.roleos.fyi"><b>Live at ro.roleos.fyi ↗</b></a> &nbsp;·&nbsp; source-available, this repo is the code
+</p>
 
 ---
-
-# RoleOS
 
 **An AI-first agent that runs your senior job hunt.** RO finds roles that fit your
 trajectory, scores them honestly (pursue / maybe / skip), and co-creates tailored
 applications with you, résumés, PRDs, prototypes, screening answers, interview prep,
 and negotiation. Every outward action is human-gated: RO drafts, **you send**.
 
-Live at **[ro.roleos.fyi](https://ro.roleos.fyi)**.
+RoleOS is in **early access** (waitlist at [ro.roleos.fyi](https://ro.roleos.fyi)); this
+README is about how it is built.
+
+## How the AI works
+
+- **A five-gate agent, one path per answer.** Match, screening, build studio, coach, and
+  negotiation each run as skills over a single quality-gated model path (`agent/skills/run.ts`);
+  the gate can send a pass back for another attempt or flag it `needs_your_eyes`.
+- **Grounded matching over pgvector.** Roles are embedded (Cloudflare Workers AI `bge-base-en-v1.5`)
+  and recalled from Supabase pgvector, so ranking reasons over the retrieved corpus rather than free-associating.
+- **Metered multi-model routing with dynamic difficulty escalation.** A deterministic classifier
+  seeds a tier on a cheapest→strongest ladder (`quick_tag` Haiku → `draft` Sonnet → `reason` Opus)
+  and re-routes down for trivial inputs, up when the quality gate is unhappy; escalation is bounded
+  and every hop stays metered (`agent/routing.ts`).
+- **A no-send invariant.** No outbound send tool exists under `agent/`; the boundary is enforced by
+  dependency-cruiser and by `tests/invariants/`, so RO can never send on your behalf.
+- **Embedded Conduit client.** The primary answer path now generates through the vendored
+  `@conduit/client` in `mode: "embedded"`, a stable seam that can later point at a hosted gateway
+  with no call-site changes and no change to cost accounting (see [`docs/conduit.md`](docs/conduit.md)).
 
 ## Stack
 
