@@ -63,17 +63,25 @@ try {
   await admin.from("master_profile").upsert({ user_id: userId, data: { raw: RAW, profile: PROFILE } });
   pass = ok(true, "seeded a multi-role master profile (Fidelity · CredR · EdCast)") && pass;
 
-  console.log("· tailoring (multi-minute model job)…");
+  console.log("· tailoring (async: start → draft → poll)…");
   const tRes = await fetch(`${BASE}/api/tailor`, {
     method: "POST",
     headers: { "Content-Type": "application/json", Cookie: cookie },
     body: JSON.stringify({ roleId: ROLE_ID }),
-    signal: AbortSignal.timeout(320_000),
+    signal: AbortSignal.timeout(30_000),
   });
   const tBody = await tRes.json().catch(() => ({}));
-  pass = ok(tRes.ok && tBody.artifactId, `tailored (HTTP ${tRes.status}, artifact ${tBody.artifactId ?? "none"})`) && pass;
+  pass = ok(tRes.ok && tBody.artifactId && tBody.status === "drafting", `tailor started INSTANTLY (HTTP ${tRes.status}, ${tBody.status})`) && pass;
 
   if (tBody.artifactId) {
+    // Client-driven draft: kick it off, then poll status until ready.
+    fetch(`${BASE}/api/artifact/${tBody.artifactId}/draft`, { method: "POST", headers: { Cookie: cookie }, signal: AbortSignal.timeout(300_000) }).catch(() => {});
+    const start = Date.now();
+    while (Date.now() - start < 300_000) {
+      await new Promise((r) => setTimeout(r, 4000));
+      const s = await fetch(`${BASE}/api/artifact/${tBody.artifactId}/status`, { headers: { Cookie: cookie } }).then((r) => r.json()).catch(() => ({}));
+      if (s.status && s.status !== "drafting") break;
+    }
     const { data: art } = await admin.from("artifacts").select("content").eq("id", tBody.artifactId).single();
     const exp = art?.content?.experience ?? [];
     pass = ok(Array.isArray(exp) && exp.length >= 2, `draft is SECTIONED — ${exp.length} experience block(s): ${JSON.stringify(exp.map((e) => e.company))}`) && pass;
