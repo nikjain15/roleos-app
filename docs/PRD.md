@@ -49,14 +49,18 @@ RO is a five-gate agent under a simple surface. Each gate is a set of declarativ
 **Live / implemented in code:**
 - Metered multi-model registry (`agent/registry.json` + `agent/registry.ts`): Opus 4.8 for reasoning/critic, Sonnet 4.6 for drafting/code, Haiku 4.5 for tagging, Cloudflare Workers AI `bge-base-en-v1.5` for embeddings. Every call is metered and written to `agent_runs`.
 - Grounded matching: multi-query pgvector recall (`match_roles` RPC, `db/migrations/0003_auth_and_match.sql`) over a seeded role corpus, then LLM rerank + reasoning.
-- Quality gate on every skill output: shape → deterministic guardrails → LLM-judge critic → truth gate → bounded revise loop (`agent/quality-gate.ts`).
+- Quality gate on every skill output: shape → deterministic guardrails → LLM-judge critic → truth gate → bounded revise loop (`agent/quality-gate.ts`). Confidence is computed deterministically from the gate signals (`computeConfidence`), and the truth gate fails closed. The deterministic PII/privacy scan in the guardrails is still an honest stub; the LLM truth gate is real.
+- Primary answer path routed through an embedded `@conduit/client` seam (`agent/conduit.ts`, `lib/conduit/`): same metered `callModel` core, a stable interface that can later point at a hosted gateway with no call-site changes. Env-gated live-usage reporting mirrors each metered decision to a Conduit gateway when `CONDUIT_GATEWAY_URL`/`CONDUIT_GATEWAY_TOKEN` are set (`lib/conduit/reporter.ts`), a fire-and-forget no-op otherwise.
+- Dynamic difficulty routing (`agent/routing.ts`): a deterministic classifier seeds a starting tier on the Haiku→Sonnet→Opus ladder; trivial inputs route down, and a failing gate or weak computed confidence escalates up, bounded and metered. The `RoutingTrace` is persisted into `agent_runs.trace` on background/batch paths (not yet surfaced on the interactive routes).
+- Read-only MCP server exposing `search_roles` over the public role corpus (typed JSON-Schema args, validation, structured errors) over stdio (`lib/mcp/`, `npm run mcp:stdio`; `docs/MCP.md`).
 - Human-gated-outward invariant: no send tool in `agent/tools/index.ts`; enforced by `tests/invariants/no-send-tool.test.ts` and `.dependency-cruiser.cjs`. The single outbound route `app/api/dispatch` returns 501 (contract scaffolded, no live transport yet).
 - Row-level-security coverage invariant across all user-owned tables (`tests/invariants/rls-coverage.test.ts`).
 - Wellbeing invariant: engagement-bait notification kinds can never fire (`tests/invariants/wellbeing.test.ts`).
 
 **Roadmap (scaffolded but not fully wired):**
 - Live transport in `app/api/dispatch` (email / ATS send behind the human click), currently returns 501.
-- Agent tool `run` implementations are Phase-1 placeholders returning `{ todo: "phase 2" }` in `agent/tools/index.ts`; the skill surface and the invariant are what is enforced today.
+- The three read tools (`get_master_profile`, `get_role`, `search_roles`) are live-backed; the remaining agent tool `run` implementations are Phase-1 placeholders returning `{ todo: "phase 2" }` in `agent/tools/index.ts`; the skill surface and the invariant are what is enforced today.
+- MCP HTTP/SSE transport: the two-endpoint URL shape is documented (`docs/MCP.md`) but not yet mounted in an app route; the MCP SDK is an optional dependency imported only by a live transport. Stdio works today.
 - Durable overnight hunt / research-brief / weekly-review flows exist as specs under `docs/specs/` and feature branches; treat as Now/Next/Later below.
 
 ## 6. Success metrics

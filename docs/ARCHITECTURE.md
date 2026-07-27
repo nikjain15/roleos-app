@@ -12,7 +12,7 @@
 
 ## 2. The core idea: skills + one call path + one gate
 
-An "agent" in RO is not a framework object. A **skill** is a small declarative file (`agent/skills/skill.ts`) naming: which registry **job** (model), which tools, a grounded prompt builder, and which gate. The stateless runner (`agent/skills/run.ts`) executes it through **one** model call path (`agent/registry.ts::callModel`) and **one** quality gate (`agent/quality-gate.ts`) before any output reaches the user. Adding or changing an agent is a one-file change.
+An "agent" in RO is not a framework object. A **skill** is a small declarative file (`agent/skills/skill.ts`) naming: which registry **job** (model), which tools, a grounded prompt builder, and which gate. The stateless runner (`agent/skills/run.ts`) executes it through **one** model call path (`agent/registry.ts::callModel`, now driven through an embedded Conduit seam, §6, and steered by dynamic difficulty routing, §7) and **one** quality gate (`agent/quality-gate.ts`, §5) before any output reaches the user. Adding or changing an agent is a one-file change.
 
 ```mermaid
 graph TD
@@ -61,7 +61,7 @@ graph TD
   class TOOLS,GATE,DISPATCH guard
 ```
 
-Note that `agent/**` never touches `app/api/dispatch`, that edge is a human gesture only, and the disallowed import is enforced by CI (see §6).
+Note that `agent/**` never touches `app/api/dispatch`, that edge is a human gesture only, and the disallowed import is enforced by CI (see §9).
 
 ## 3. The metered multi-model registry (`agent/registry.json`, `agent/registry.ts`)
 
@@ -132,7 +132,54 @@ Nothing reaches the user raw. Cheap deterministic checks first, the expensive sm
 
 Every verdict returns the metered model runs so the caller writes cost to `agent_runs`.
 
-## 6. The human-gated-outward invariant (three independent layers)
+## 6. The Conduit seam (`agent/conduit.ts`, `lib/conduit/`)
+
+The primary answer path does not call the model directly, it routes through an embedded `@conduit/client` seam. `@conduit/client` presents one method surface whether the core runs in-process (`mode: "embedded"`) or behind an HTTP gateway (`mode: "gateway"`); RoleOS runs it embedded, injecting its own core so nothing goes over a network hop and cost accounting is unchanged.
+
+- `agent/skills/run.ts:runSkill` (the one path every user-facing skill answer takes) generates through `inferViaConduit` → `createClient({ mode: "embedded" })` → `client.infer` → the injected core's `resolve`, which wraps `agent/registry.ts:callModel`. The metered `ModelResult` (cost, tokens, latency, tool trace) is threaded straight back, so metering and the quality gate are untouched.
+- The core's `retrieve` wraps `lib/match.ts:recallRolesMulti`, exposing read-only role recall over the global/public corpus as Conduit's unified `retrieve`.
+- Only the primary generation call is switched. The secondary shape-repair reformat stays a direct `callModel`, and the quality gate is unchanged.
+
+```
+app route → runSkill → inferViaConduit → @conduit/client.infer (embedded)
+          → RoleOS core.resolve → callModel → Anthropic
+```
+
+**Env-gated live-usage reporting** (`lib/conduit/reporter.ts`): when `CONDUIT_GATEWAY_URL` and `CONDUIT_GATEWAY_TOKEN` are set, each metered decision is mirrored to the Conduit gateway (`POST /v1/decisions`) for live usage/cost visibility. It is a fire-and-forget, pre-caught tap with a short timeout: it never blocks or fails the answer, only reads the record that already ran, and is a NO-OP when the env vars are unset. It lives under `lib/` (not `agent/`) on purpose, so the agent layer's outbound-transport import ban (§9) still holds; the caller in `agent/conduit.ts` imports only the pure function.
+
+The seam also carries a `pinModel` hop used by dynamic routing (§7), and RoleOS's read-only MCP surface (`docs/MCP.md`) is built on the vendored `@conduit/mcp` package. See `docs/conduit.md` for the full write-up.
+
+## 7. Dynamic difficulty routing (`agent/routing.ts`)
+
+Static task→tier routing (§3) picks one model per task and never moves. Dynamic routing adds a runtime signal on top so an answer can route **down** (a cheap fast path for trivially simple inputs) or **up** (escalate to a stronger tier). The escalation ladder is cheapest→strongest and stays config-driven, each rung naming a registry job whose model defines the tier:
+
+```
+quick_tag = Haiku (cheap)  →  draft = Sonnet  →  reason = Opus (strong)
+```
+
+- **Deterministic difficulty classifier** (`classifyDifficulty`): heuristic and network-free, it reads the prompt text (length, question count, hard-work markers) and returns `trivial | normal | hard`. It only seeds the *starting* tier; it never relaxes the gate.
+- **Route down:** a `trivial`, non-structured input on an eligible skill starts one rung cheaper.
+- **Route up:** after the gate runs, the answer escalates when the verdict is `needs_your_eyes` (failed critic or fail-closed truth gate) **or** it passed but the gate graded it `weak` confidence (§8). The gate stays the authoritative signal: a cheap fast path that underperforms is caught and escalated straight back up.
+- **Bounded and metered:** escalation is capped by `MAX_ESCALATIONS` (the ladder height) and the ladder top, so it can never loop; every hop is a metered `agent_runs` row. Each re-route is expressed as a Conduit `pinModel` (§6), so it travels the same unified seam as any other call.
+- **Scope:** dynamic routing applies to the primary answer path only, full-gate skills assigned to `draft` or `reason`. Off-ladder tiers (`code`, `quick_tag`) and shape-only skills keep their static routing untouched.
+- **Sampling contract preserved:** no temperature/top_p is ever sent to the reasoning tiers (they reject it); pinning changes the tier and token budget, not the sampling params.
+
+## 8. Computed confidence & routing observability (`agent/quality-gate.ts`, `agent/skills/run.ts`)
+
+**Computed confidence** (`computeConfidence`): the gate derives a confidence band deterministically from the signals it already computed, rather than a hard-coded label. It builds a 0..1 score and maps it to a band:
+
+- **unknown** (fail-closed floor): a hard gate did not pass (shape, guardrails, critic, or truth), so the output cannot be vouched for.
+- **weak:** the hard gates passed but a soft concern remains (the first draft needed a revise, the grounding slice was thin, or a judge noted residual caveats). This band is what drives the route-up escalation in §7.
+- **strong:** a clean pass on every signal.
+
+**Routing trace** (`RoutingTrace`: `difficulty`, `tiers`, `rerouted`, `confidence`) records how each answer was routed and is persisted into the `agent_runs.trace` jsonb by `lib/agent-runs.ts:logAgentRuns`.
+
+Two honest limitations:
+
+- The trace is persisted only on the **background / batch paths** that pass it (`lib/hunt.ts`, `lib/digest.ts`, `lib/taste.ts`, `lib/taste-rerank.ts`, `lib/weekly-review.ts`, `lib/ingest/`). The interactive `app/api/*` routes compute the routing trace but log `verdict.runs` **without** it today, so it is not yet surfaced on the interactive routes.
+- Inside the deterministic guardrails, the **PII / privacy scan is an honest stub** (noted as such in `runGuardrails`); the no-send output-marker scan and voice blocklist are real, and the **LLM truth gate is real and fails closed**.
+
+## 9. The human-gated-outward invariant (three independent layers)
 
 This is the architectural heart, and it is defended three ways so no single change can break it:
 
@@ -140,7 +187,7 @@ This is the architectural heart, and it is defended three ways so no single chan
 - **Layer 2, one outbound module.** `app/api/dispatch/route.ts` is the only route that may ever perform an external send; it is a different module the agent layer cannot import, and today it returns 501 (contract without a live transport).
 - **Layer 3, CI-enforced import ban.** `.dependency-cruiser.cjs` fails the build if anything under `agent/**` imports an outbound transport (`nodemailer`, `resend`, `@sendgrid`, `twilio`, `node:http`, `lib/email`, …) or the dispatch route. Run via `npm run invariant:imports`.
 
-## 7. Safety & data integrity guards (in code)
+## 10. Safety & data integrity guards (in code)
 
 - **RLS coverage invariant** (`tests/invariants/rls-coverage.test.ts`): every user-owned migration table must enable row-level security, or the build fails.
 - **No client-side secret imports** (`tests/invariants/no-client-secret-imports.test.ts`).
@@ -148,7 +195,7 @@ This is the architectural heart, and it is defended three ways so no single chan
 - **Cost budget** (`lib/cost-budget.ts`): rolling 24h `agent_runs` spend vs. a daily budget, structured warn/exceeded alerts (default $25/day).
 - **Security headers** + rate limiting (`lib/security-headers.ts`, `lib/rate-limit.ts`, with unit + live E2E coverage).
 
-## 8. Testing surfaces
+## 11. Testing surfaces
 
 - Unit / invariant / stress: 51 unit files, 4 invariant files, 1 stress harness (>320 `it/test` cases).
 - Live E2E: `tests/e2e/live/` (>100 test cases), including a real prompt-injection-through-a-CV test, cross-user RLS probe, a11y sweep, and a production smoke spec against `ro.roleos.fyi`.
