@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 /**
@@ -20,8 +20,23 @@ const STAGES = [
 export default function DraftingPoller({ id }: { id: string }) {
   const router = useRouter();
   const [stage, setStage] = useState(0);
+  const kicked = useRef(false);
 
   useEffect(() => {
+    // Kick off the actual draft ONCE (a reload's soft lock + idempotency guard on
+    // the route means this is safe to fire again on remount).
+    if (!kicked.current) {
+      kicked.current = true;
+      fetch(`/api/artifact/${id}/draft`, { method: "POST" })
+        .then((r) => r.json())
+        .then((j: { status?: string }) => {
+          if (j.status && j.status !== "drafting") router.refresh();
+        })
+        .catch(() => {
+          /* the poll below still catches completion */
+        });
+    }
+
     const cycle = setInterval(() => setStage((s) => Math.min(s + 1, STAGES.length - 1)), 14_000);
     const poll = setInterval(async () => {
       try {
@@ -51,7 +66,7 @@ export default function DraftingPoller({ id }: { id: string }) {
         {STAGES[stage]}
       </p>
       <p className="mt-3 text-small text-tx3">
-        This takes a minute or two — you can leave this page and come back; it&rsquo;ll be here when it&rsquo;s ready.
+        This takes a minute or two — RO is grounding every line to your real experience. Hang tight.
       </p>
     </div>
   );
