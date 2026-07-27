@@ -29,6 +29,13 @@ export interface GateInput {
    * RO's own companion voice — still guardrailed, just not voice-judged.
    */
   skipCritic?: boolean;
+  /**
+   * Run the truth gate but SKIP the voice critic (default: run it). For structured
+   * artifacts that aren't RO's conversational voice — a tailored RÉSUMÉ is the
+   * candidate's bullets, not RO talking, so the ro-voice ship-checklist misapplies
+   * and just adds latency + spurious flags. The truth gate still governs.
+   */
+  voiceCritic?: boolean;
 }
 
 export type GateStatus = "passed" | "needs_your_eyes";
@@ -275,14 +282,18 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   }
 
   // 3 · critic (+ truth gate when ground truth is supplied — gate 1 résumé).
+  // The voice critic is skippable for non-conversational structured output (a
+  // tailored résumé); the truth gate always runs when ground truth is supplied.
+  const runVoice = input.voiceCritic !== false;
   const [first, truthRes] = await Promise.all([
-    critique(input.skillId, input.output),
+    runVoice ? critique(input.skillId, input.output) : Promise.resolve(null),
     input.groundTruth
       ? truthGate(input.skillId, input.output, input.groundTruth)
       : Promise.resolve(null),
   ]);
-  let verdict = first.verdict;
-  runs.push(first.run);
+  // No voice critic → treat as a voice pass; the truth gate is the governing check.
+  let verdict: CriticVerdict = first ? first.verdict : { pass: true, reasons: [] };
+  if (first) runs.push(first.run);
   const truth = truthRes?.verdict ?? null;
   if (truthRes) runs.push(truthRes.run);
 
@@ -318,8 +329,8 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
     const c = computeConfidence({
       shapeOk,
       guardrailsOk: guardrails.ok,
-      criticPass: verdict.pass,
-      criticReasons: verdict.reasons.length,
+      criticPass: runVoice ? verdict.pass : null,
+      criticReasons: runVoice ? verdict.reasons.length : 0,
       truthOk: truthFinal ? truthFinal.ok : null,
       truthViolations: truthFinal ? truthFinal.violations.length : 0,
       revised,
@@ -330,7 +341,7 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
       finalOutput,
       shapeOk,
       guardrails,
-      critic: verdict,
+      critic: runVoice ? verdict : null,
       truth: truthFinal,
       revised,
       confidence: c.band,
@@ -366,8 +377,8 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   const c = computeConfidence({
     shapeOk,
     guardrailsOk: guardrails2.ok,
-    criticPass: verdict.pass,
-    criticReasons: verdict.reasons.length,
+    criticPass: runVoice ? verdict.pass : null,
+    criticReasons: runVoice ? verdict.reasons.length : 0,
     truthOk: truth ? truth.ok : null,
     truthViolations: truth ? truth.violations.length : 0,
     revised,
@@ -379,7 +390,7 @@ export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
     finalOutput,
     shapeOk,
     guardrails: guardrails2,
-    critic: verdict,
+    critic: runVoice ? verdict : null,
     truth,
     revised,
     confidence: c.band,

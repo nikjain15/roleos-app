@@ -23,6 +23,13 @@ export interface Skill {
    * which would corrupt the JSON. Prose inside fields is still voice-judged.
    */
   structured?: boolean;
+  /**
+   * Run the truth gate but SKIP the ro-voice critic (default: run it). Set false
+   * for structured output that ISN'T RO's conversational voice — a tailored résumé
+   * is the candidate's bullets, so the voice checklist misapplies (adds latency +
+   * spurious flags that needlessly escalate). Truth gate still governs.
+   */
+  voiceCritic?: boolean;
   /** Shape check: does the raw output look structurally right? */
   expects?: (text: string) => boolean;
 }
