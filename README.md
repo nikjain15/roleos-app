@@ -35,7 +35,7 @@ Live at **[ro.roleos.fyi](https://ro.roleos.fyi)**.
 
 | Dir | Role |
 |---|---|
-| `agent/` | RO's skills, tools, quality gate, model registry |
+| `agent/` | RO's skills, tools, quality gate, model registry, Conduit seam + dynamic routing |
 | `app/` | Next.js routes (onboarding, feed, studio, admin, auth) |
 | `components/` | React UI |
 | `lib/` | Services: embeddings, matching, ingestion, google, digest, notifications |
@@ -79,6 +79,8 @@ Technical-PM / FDE documentation for this repo (grounded in the actual code):
 | [`docs/EVALS.md`](docs/EVALS.md) | Eval ladder (unit → LLM-judge → offline model evals → A/B); named metrics; what's implemented vs roadmap |
 | [`docs/TECHNICAL_NOTES.md`](docs/TECHNICAL_NOTES.md) | 12-point Technical-AI-PM / FDE scorecard with file-level evidence, model/orchestration details, guardrails, cost |
 | [`docs/FDE_JOURNEY.md`](docs/FDE_JOURNEY.md) | Deploying into a real environment: integration, secrets/security, rollout/cutover, observability, de-risking |
+| [`docs/conduit.md`](docs/conduit.md) | The embedded `@conduit/client` seam on the primary answer path, dynamic difficulty routing, and env-gated live-usage reporting to a Conduit gateway |
+| [`docs/MCP.md`](docs/MCP.md) | Read-only MCP server (`search_roles`) over the public role corpus: stdio today, HTTP/SSE URL shape documented (not yet mounted) |
 | [`evals/`](evals/) | Self-contained offline eval harness (retrieval precision/recall/F1/MRR), `npx tsx evals/retrieval/run.ts` |
 
 ## Non-negotiables

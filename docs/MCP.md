@@ -55,10 +55,23 @@ Example Claude Desktop config entry:
 }
 ```
 
+## Status (honest)
+
+Today the MCP surface runs over **stdio only**. The pure tool + registry logic
+and the stdio entry point are wired and tested; the HTTP/SSE transport is
+documented as a URL *shape* below but is **not yet mounted in an app route**
+(there is no `app/**` route that binds `createSseHandler`), so `mcp.roleos.fyi`
+describes the intended contract, not a live endpoint. The MCP SDK
+(`@modelcontextprotocol/sdk`) is an **optional dependency**: it is not in
+`package.json` and is imported only at call time by a live transport, so install
+it before running one (see below). The stdio and (future) HTTP paths share the
+same SDK-free tool + registry core.
+
 ## Hosted URL shape (HTTP/SSE)
 
 The vendored `createSseHandler` (`lib/conduit/mcp` → `http.ts`) implements the
-two-endpoint MCP SSE transport. A hosted deployment maps two routes onto it:
+two-endpoint MCP SSE transport. Once mounted, a hosted deployment would map two
+routes onto it:
 
 - `GET  https://mcp.roleos.fyi/sse` opens the long-lived event stream and, on
   connect, advertises the POST endpoint below (correlated by `sessionId`).
