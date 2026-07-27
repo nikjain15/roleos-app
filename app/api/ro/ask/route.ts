@@ -4,6 +4,8 @@ import { supabaseServer } from "@/lib/supabase/server";
 import { validateBody } from "@/lib/validate";
 import { assembleContext, toRoAskState } from "@/lib/ro/context";
 import { syncMemory } from "@/lib/ro/memory";
+import { loadThread, saveTurn, toConversation, summarizePrompt } from "@/lib/ro/thread";
+import { callModel, type AgentRunRecord } from "@/agent/registry";
 import { runSkill } from "@/agent/skills/run";
 import roAsk from "@/agent/skills/ro_ask";
 import { logAgentRuns } from "@/lib/agent-runs";
@@ -59,7 +61,9 @@ export async function POST(req: Request): Promise<Response> {
   }
 
   const ctx = await assembleContext(supabase, user.id, { recallQuery: question });
-  const state = toRoAskState(ctx);
+  // M2: the dock's rolling conversation thread (fail-safe: empty before migration).
+  const thread = await loadThread(supabase, user.id, "dock").catch(() => ({ surface: "dock", summary: "", turns: [] }));
+  const state = { ...toRoAskState(ctx), conversation: toConversation(thread) };
 
   try {
     const { verdict } = await runSkill(roAsk, {
@@ -83,6 +87,19 @@ export async function POST(req: Request): Promise<Response> {
     // name one of the user's OWN top-pursue roles; filter params are sanitized to
     // a whitelisted /roles?… href. Executing either still takes a USER click.
     const act = validateAct(out?.act, ctx.topPursue);
+
+    // M2: record this turn in the rolling thread (fail-safe; the summary fold runs
+    // on the cheap tier only when turns overflow, and is metered).
+    try {
+      const runs = await saveTurn(supabase, user.id, "dock", { q: question, a: answer }, thread, async (prev, overflow) => {
+        const { system, prompt } = summarizePrompt(prev, overflow);
+        const { text, run } = await callModel("quick_tag", { system, prompt }, { skill: "ro_thread_summary" });
+        return { text, run };
+      });
+      if (runs.length) await logAgentRuns(user.id, runs as AgentRunRecord[], { skill: "ro_thread_summary" });
+    } catch (err) {
+      logError("ro_thread.save_failed", err);
+    }
 
     return NextResponse.json({ answer, action: act ? null : action, act, grounded: verdict.status });
   } catch (err) {
