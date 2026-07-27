@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui";
 import { parseResumeDoc, flattenLines, type ResumeExperience } from "@/lib/resume/doc";
 import type { ResumeScore, SectionScore } from "@/lib/resume/score";
 import type { ReviseChange } from "@/lib/resume/revise";
+import { formatCv } from "@/lib/resume/cv-format";
 
 /**
  * The résumé editor (v2) — single-column, document-first, ONE experience section
@@ -280,10 +281,31 @@ export default function ResumeEditor({
 
       {/* On-demand CV reference (collapsible, not a side rail) */}
       {showCV && (
-        <div className="mt-3 rounded-lg border border-bd bg-surf2 p-3">
-          <h2 className="text-[11px] font-semibold uppercase tracking-wide text-tx3">Your CV — the source of truth</h2>
-          <div className="mt-2 max-h-[40vh] overflow-y-auto whitespace-pre-wrap text-[13px] leading-relaxed text-tx2">
-            {(sourceText || "No source profile on file.").replace(/\*\*/g, "").replace(/^#+\s*/gm, "")}
+        <div className="mt-3 rounded-lg border border-bd bg-surf2 p-4">
+          <h2 className="text-[11px] font-semibold uppercase tracking-wide text-tx3">
+            Your CV — the source of truth · your full career
+          </h2>
+          <div className="mt-2 max-h-[45vh] overflow-y-auto text-[13px] leading-relaxed text-tx2">
+            {sourceText.trim() ? (
+              formatCv(sourceText).map((b, i) =>
+                b.type === "head" ? (
+                  <h3 key={i} className="mt-3.5 border-b border-bd pb-0.5 text-[12px] font-semibold text-tx first:mt-0">
+                    {b.text}
+                  </h3>
+                ) : b.type === "bullet" ? (
+                  <div key={i} className="mt-1 flex gap-2 pl-1">
+                    <span className="mt-[3px] h-1 w-1 shrink-0 rounded-full bg-tx3" />
+                    <span>{b.text}</span>
+                  </div>
+                ) : (
+                  <p key={i} className="mt-1.5">
+                    {b.text}
+                  </p>
+                ),
+              )
+            ) : (
+              <span>No source profile on file.</span>
+            )}
           </div>
         </div>
       )}
