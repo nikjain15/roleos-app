@@ -135,16 +135,41 @@ export async function writeNotes(
 }
 
 /**
+ * Re-rank recalled notes (PURE, M3): pure cosine misses that a slightly-less-similar
+ * but high-CONFIDENCE note (hardened by repeated behavior) is often the better recall,
+ * and that a note IN the current scope (this role/artifact) is more relevant than a
+ * global one. Blend similarity with confidence, add a small in-scope bonus, and cap.
+ * Never surfaces stale: the RPC already excludes superseded notes.
+ */
+export function rankRecall(notes: RoNote[], opts: { scope?: string; limit?: number } = {}): RoNote[] {
+  const scored = notes.map((n) => {
+    const sim = 1 - (n.distance ?? 1); // cosine distance → similarity in ~[0,1]
+    const conf = typeof n.confidence === "number" ? n.confidence : 0.6;
+    const scopeBonus = opts.scope && n.scope === opts.scope ? 0.1 : 0;
+    return { n, score: sim * (0.6 + 0.4 * conf) + scopeBonus };
+  });
+  scored.sort((a, b) => b.score - a.score);
+  return scored.slice(0, opts.limit ?? notes.length).map((s) => s.n);
+}
+
+/**
  * Recall the top-k notes relevant to `query` (RLS: the caller's own notebook
  * only; superseded + unembedded notes skipped). Bounded — the O(1)-per-reply cost.
+ * Over-fetches then re-ranks by relevance × confidence (+ in-scope bonus).
  */
-export async function recallMemory(supabase: SupabaseClient, query: string, k = 6): Promise<RoNote[]> {
+export async function recallMemory(
+  supabase: SupabaseClient,
+  query: string,
+  k = 6,
+  opts: { scope?: string } = {},
+): Promise<RoNote[]> {
   const q = query.trim();
   if (!q) return [];
   const [vec] = await embeddings().embed([q.slice(0, 2000)]);
-  const { data, error } = await supabase.rpc("match_ro_memory", { query_embedding: vec, match_count: k });
+  // Pull a wider candidate set, then re-rank down to k (confidence/scope aware).
+  const { data, error } = await supabase.rpc("match_ro_memory", { query_embedding: vec, match_count: k * 2 });
   if (error) throw new Error(`match_ro_memory: ${error.message}`);
-  return (data ?? []) as RoNote[];
+  return rankRecall((data ?? []) as RoNote[], { scope: opts.scope, limit: k });
 }
 
 /**

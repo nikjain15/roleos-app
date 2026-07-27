@@ -94,7 +94,10 @@ const SHRINK_K = 2;
 /** Below this, we say nothing (never fabricate a calibration read). */
 const MIN_SIGNALS = 4;
 
-export function judgeCalibration(rows: ResumeFeedbackRow[]): JudgeCalibration {
+export function judgeCalibration(
+  rows: ResumeFeedbackRow[],
+  opts: { prior?: number } = {},
+): JudgeCalibration {
   let trusted = 0;
   let corrected = 0;
   for (const r of rows) {
@@ -104,7 +107,11 @@ export function judgeCalibration(rows: ResumeFeedbackRow[]): JudgeCalibration {
     else if (r.action === "correct") corrected++; // re-ground (from the reground route)
   }
   const signals = trusted + corrected;
-  const correctionRate = signals > 0 ? corrected / (signals + SHRINK_K) : 0;
+  // Shrink toward the ANONYMOUS COLLECTIVE prior (M3) instead of 0 — a new user
+  // starts from what worked across everyone, and their own signal takes over as it
+  // accrues. `prior` defaults to 0 (shrink to none), preserving prior behavior.
+  const prior = typeof opts.prior === "number" ? Math.max(0, Math.min(1, opts.prior)) : 0;
+  const correctionRate = (corrected + SHRINK_K * prior) / (signals + SHRINK_K);
   const note =
     signals < MIN_SIGNALS
       ? null

@@ -1,0 +1,32 @@
+{
+  "_comment": "Offline recall-quality fixtures for RO's notebook re-ranker (docs/specs/ro-memory.md M3). Each case = a query's candidate notes with a human 'relevant' label; the eval runs rankRecall and scores precision/recall @k. Candidates carry the RoNote fields (id/text/kind/scope/confidence/distance) so the SAME re-ranker used in prod is scored. 'distance' is cosine distance (lower = closer). Ids synthetic. Grow as real (query, notes, relevance) triples are labeled; ship re-ranker changes behind this gate.",
+  "cases": [
+    {
+      "id": "target-role-recall",
+      "scope": "global",
+      "k": 2,
+      "candidates": [
+        { "id": "n1", "text": "Targets Staff AI PM", "kind": "target", "scope": "global", "confidence": 0.9, "distance": 0.18, "relevant": true },
+        { "id": "n2", "text": "Prefers concise bullets", "kind": "style", "scope": "global", "confidence": 0.6, "distance": 0.62, "relevant": false },
+        { "id": "n3", "text": "Cares about comp $250k+", "kind": "target", "scope": "global", "confidence": 0.8, "distance": 0.30, "relevant": true }
+      ]
+    },
+    {
+      "id": "confidence-outranks-marginal-similarity",
+      "k": 1,
+      "candidates": [
+        { "id": "a", "text": "Wants remote-first roles", "kind": "preference", "scope": "global", "confidence": 0.95, "distance": 0.26, "relevant": true },
+        { "id": "b", "text": "Once mentioned an office role", "kind": "preference", "scope": "global", "confidence": 0.3, "distance": 0.24, "relevant": false }
+      ]
+    },
+    {
+      "id": "in-scope-note-preferred",
+      "scope": "artifact:x",
+      "k": 1,
+      "candidates": [
+        { "id": "s1", "text": "For this résumé, lead with the Gen-AI work", "kind": "style", "scope": "artifact:x", "confidence": 0.6, "distance": 0.34, "relevant": true },
+        { "id": "s2", "text": "Generally likes metrics up front", "kind": "style", "scope": "global", "confidence": 0.6, "distance": 0.30, "relevant": false }
+      ]
+    }
+  ]
+}
