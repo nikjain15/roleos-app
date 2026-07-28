@@ -29,6 +29,7 @@ export const LIMITS: Record<string, RateLimit> = {
   onboard: { max: 5, windowMin: 60 }, // anon, per IP — the most expensive public path
   ro_ask: { max: 30, windowMin: 60 }, // authed, per user
   tailor: { max: 12, windowMin: 60 }, // authed, per user — drafting is pricey
+  cover: { max: 12, windowMin: 60 }, // authed, per user — same model-heavy draft path
   rematch: { max: 6, windowMin: 60 }, // authed, per user — full pipeline run
 };
 

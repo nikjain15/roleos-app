@@ -6,9 +6,10 @@ import { parseResumeDoc } from "@/lib/resume/doc";
 export const dynamic = "force-dynamic";
 
 /**
- * Lightweight status poll for async tailoring. The studio page polls this while a
- * résumé is `drafting` and reloads once it's ready (or errored). RLS-scoped read —
- * only the owner sees their artifact's status. No model call.
+ * Lightweight status poll for async drafting (résumés and cover letters). The
+ * studio page polls this while an artifact is `drafting` and reloads once it's
+ * ready (or errored). RLS-scoped read — only the owner sees their artifact's
+ * status. No model call.
  */
 const Params = z.object({ id: z.string().uuid() });
 
@@ -24,12 +25,18 @@ export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> 
 
   const { data: art } = await supabase
     .from("artifacts")
-    .select("status, content")
+    .select("status, type, content")
     .eq("id", parsed.data.id)
-    .single<{ status: string; content: unknown }>();
+    .single<{ status: string; type: string; content: unknown }>();
   if (!art) return NextResponse.json({ error: "not found" }, { status: 404 });
 
-  const doc = parseResumeDoc(art.content);
-  const hasBody = Boolean(doc.summary) || doc.experience.some((e) => e.lines.length > 0);
+  let hasBody: boolean;
+  if (art.type === "cover") {
+    const body = (art.content as { body?: unknown } | null)?.body;
+    hasBody = typeof body === "string" && body.length > 0;
+  } else {
+    const doc = parseResumeDoc(art.content);
+    hasBody = Boolean(doc.summary) || doc.experience.some((e) => e.lines.length > 0);
+  }
   return NextResponse.json({ status: art.status, hasBody });
 }

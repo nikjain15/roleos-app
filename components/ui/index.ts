@@ -7,3 +7,4 @@ export { Button, type ButtonProps } from "./Button";
 export { Badge } from "./Badge";
 export { Card } from "./Card";
 export { Input, type InputProps } from "./Input";
+export { Textarea, type TextareaProps } from "./Textarea";
