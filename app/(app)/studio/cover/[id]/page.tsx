@@ -88,6 +88,7 @@ export default async function CoverStudio({ params }: { params: Promise<{ id: st
       ) : (
         <CoverEditor
           id={artifact.id}
+          roleId={artifact.role_id}
           applyHref={applyHref}
           status={artifact.status}
           content={c}

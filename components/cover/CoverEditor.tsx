@@ -16,12 +16,14 @@ import { parseCoverDoc, compileBody, toContent, COVER_TUNE_PRESETS, type CoverDo
  */
 export default function CoverEditor({
   id,
+  roleId,
   applyHref,
   status: initialStatus,
   content,
   truthFlags,
 }: {
   id: string;
+  roleId: string | null;
   applyHref: string | null;
   status: string;
   content: unknown;
@@ -98,6 +100,30 @@ export default function CoverEditor({
     }
   }
 
+  // Legacy (pre-sections) letters: start a fresh async draft to get the four
+  // sections. The old letter stays until the new one lands (human-gated).
+  async function redraft() {
+    if (busy || !roleId) return;
+    setBusy("redraft");
+    setErr(null);
+    try {
+      const res = await fetch("/api/cover", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ roleId }),
+      });
+      const j = (await res.json()) as { artifactId?: string; error?: string };
+      if (res.ok && j.artifactId) router.push(`/studio/cover/${j.artifactId}`);
+      else {
+        setErr(j.error ?? "Couldn't start a fresh draft.");
+        setBusy(null);
+      }
+    } catch {
+      setErr("Couldn't reach the server.");
+      setBusy(null);
+    }
+  }
+
   async function approve() {
     if (busy) return;
     setBusy("approve");
@@ -140,8 +166,14 @@ export default function CoverEditor({
           {doc.sections.length} section{doc.sections.length === 1 ? "" : "s"}
           {keptCount > 0 && ` · ${keptCount} kept`}
         </span>
-        {legacy && (
-          <span className="text-small text-tx3">· drafted before sections — re-draft from Apply for the full structure</span>
+        {legacy && roleId && (
+          <button
+            onClick={redraft}
+            disabled={!!busy}
+            className="text-small font-medium text-primary hover:underline disabled:opacity-50"
+          >
+            {busy === "redraft" ? "starting…" : "drafted before sections — draft a fresh sectioned letter →"}
+          </button>
         )}
       </div>
 
