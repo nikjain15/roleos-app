@@ -21,17 +21,22 @@ const STAGES = [
   "Almost there…",
 ];
 
+export type ScoreCalibration = { note: string | null; collectiveNote: string | null };
+
 export default function ResumeReadiness({
   id,
   initialScore,
   initialLift,
+  initialCalibration = null,
 }: {
   id: string;
   initialScore: ResumeScore | null;
   initialLift: ScoreLift | null;
+  initialCalibration?: ScoreCalibration | null;
 }) {
   const [score, setScore] = useState<ResumeScore | null>(initialScore);
   const [lift, setLift] = useState<ScoreLift | null>(initialLift);
+  const [calibration, setCalibration] = useState<ScoreCalibration | null>(initialCalibration);
   const [scoring, setScoring] = useState(false);
   const [stage, setStage] = useState(0);
   const [error, setError] = useState<string | null>(null);
@@ -39,10 +44,13 @@ export default function ResumeReadiness({
   useEffect(() => {
     if (!scoring) return;
     let cancelled = false;
-    const apply = (b: { score?: ResumeScore; lift?: ScoreLift | null } | undefined) => {
+    const apply = (
+      b: { score?: ResumeScore; lift?: ScoreLift | null; calibration?: ScoreCalibration | null } | undefined,
+    ) => {
       if (cancelled || !b?.score) return;
       setScore(b.score);
       setLift(b.lift ?? null);
+      setCalibration(b.calibration ?? null);
       setScoring(false);
     };
     // Kick off the compute (the server caches it); use its response if it returns.
@@ -114,7 +122,7 @@ export default function ResumeReadiness({
 
   return (
     <div className="space-y-2">
-      <ReadinessMeter view={meterView(score, { lift })} />
+      <ReadinessMeter view={meterView(score, { lift })} readback={[calibration?.note ?? null, calibration?.collectiveNote ?? null]} />
       <div className="flex items-center gap-3">
         <button onClick={start} className="text-small text-tx3 hover:text-tx2">
           Re-score

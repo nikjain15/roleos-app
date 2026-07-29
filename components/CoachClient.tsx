@@ -43,25 +43,73 @@ function CoachInner({ voiceEnabled }: { voiceEnabled: boolean }) {
   const [voiceOn, setVoiceOn] = useState(false);
   const candidateTurns = useRef<CandidateTurn[]>([]);
   const started = useRef(false);
+  const [prepError, setPrepError] = useState(false);
 
-  useEffect(() => {
-    if (started.current || !roleId) return;
-    started.current = true;
-    (async () => {
-      setBusy("RO is prepping your round — panel, questions, your stories…");
+  // ASYNC prep (fire-and-poll, like tailoring): /api/coach returns a `prepping`
+  // placeholder instantly; we kick the real run and poll status until the prep
+  // lands (or errors) — no multi-minute blocked fetch, no 90s cap.
+  const PREP_STAGES = [
+    "Reading the role — panel, format, focus…",
+    "Predicting the questions they'll ask…",
+    "Mapping your stories to their rubric…",
+    "Almost there…",
+  ];
+  const [prepStage, setPrepStage] = useState(0);
+
+  async function pollUntil(id: string, done: (s: Record<string, unknown>) => boolean): Promise<Record<string, unknown> | null> {
+    const start = Date.now();
+    while (Date.now() - start < 320_000) {
+      await new Promise((r) => setTimeout(r, 3000));
+      try {
+        const res = await fetch(`/api/coach/${id}/status`);
+        if (!res.ok) continue;
+        const s = (await res.json()) as Record<string, unknown>;
+        if (done(s)) return s;
+      } catch {
+        /* transient — keep polling */
+      }
+    }
+    return null;
+  }
+
+  async function startPrep() {
+    if (!roleId) return;
+    setPrepError(false);
+    setPrepStage(0);
+    setBusy("RO is prepping your round — panel, questions, your stories…");
+    const cycle = setInterval(() => setPrepStage((s) => Math.min(s + 1, PREP_STAGES.length - 1)), 14_000);
+    try {
       const res = await fetch("/api/coach", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ action: "prep", roleId }),
       });
       const j = await res.json();
+      if (!res.ok || !j.pipelineId) throw new Error(j.error ?? "couldn't start");
+      setPipelineId(j.pipelineId);
+      setRoleName(`${j.role?.company} — ${j.role?.role_title}`);
+      // Kick the real run (idempotent + soft-locked server-side), then poll.
+      fetch(`/api/coach/${j.pipelineId}/run`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phase: "prep" }),
+      }).catch(() => {});
+      const s = await pollUntil(j.pipelineId, (x) => x.status !== "prepping");
+      if (s?.status === "ready" && s.prep) setPrep(s.prep as Prep);
+      else setPrepError(true);
+    } catch {
+      setPrepError(true);
+    } finally {
+      clearInterval(cycle);
       setBusy(null);
-      if (j.prep) {
-        setPrep(j.prep);
-        setPipelineId(j.pipelineId);
-        setRoleName(`${j.role?.company} — ${j.role?.role_title}`);
-      }
-    })();
+    }
+  }
+
+  useEffect(() => {
+    if (started.current || !roleId) return;
+    started.current = true;
+    void startPrep();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [roleId]);
 
   async function mockTurn(message?: string, durationMs?: number) {
@@ -82,15 +130,20 @@ function CoachInner({ voiceEnabled }: { voiceEnabled: boolean }) {
   }
 
   async function runDebrief() {
+    if (!pipelineId) return;
     setBusy("RO is debriefing — scoring, readiness, what to sharpen…");
-    const res = await fetch("/api/coach", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ action: "debrief", pipelineId }),
-    });
-    const j = await res.json();
-    setBusy(null);
-    if (j.debrief) setDebrief(j.debrief);
+    try {
+      // Kick the async debrief (idempotent server-side) and poll until it lands.
+      fetch(`/api/coach/${pipelineId}/run`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ phase: "debrief" }),
+      }).catch(() => {});
+      const s = await pollUntil(pipelineId, (x) => x.debriefStatus === "ready" || x.debriefStatus === "error");
+      if (s?.debriefStatus === "ready" && s.debrief) setDebrief(s.debrief as Debrief);
+    } finally {
+      setBusy(null);
+    }
   }
 
   if (!roleId) {
@@ -115,6 +168,23 @@ function CoachInner({ voiceEnabled }: { voiceEnabled: boolean }) {
         <div className="mt-6 rounded-xl border border-bd bg-surf2 p-4 text-sm text-tx2">
           <span className="mr-2 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-primary" />
           {busy}
+          {!prep && (
+            <p aria-live="polite" className="mt-1.5 pl-4 text-xs text-tx3">
+              {PREP_STAGES[prepStage]}
+            </p>
+          )}
+        </div>
+      )}
+
+      {prepError && !busy && (
+        <div className="mt-6 rounded-xl border border-bd bg-surf2 p-4 text-sm">
+          <p className="text-tx">RO hit a snag prepping this round — nothing was lost. Run it again.</p>
+          <button
+            onClick={startPrep}
+            className="mt-3 rounded-md bg-primary px-4 py-2 text-sm font-medium text-white"
+          >
+            Retry the prep
+          </button>
         </div>
       )}
 

@@ -93,7 +93,7 @@ type MatchRow = {
 export async function assembleContext(
   supabase: SupabaseClient,
   userId: string,
-  opts: { recallQuery?: string } = {},
+  opts: { recallQuery?: string; recallScope?: string } = {},
 ): Promise<RoContext> {
   const [mpRes, goalRes, matchAgg, appAgg, readyAgg] = await Promise.all([
     supabase.from("master_profile").select("data").eq("user_id", userId).maybeSingle<{ data: { profile?: unknown } | null }>(),
@@ -126,7 +126,10 @@ export async function assembleContext(
   let memory: RoNote[] = [];
   if (opts.recallQuery) {
     try {
-      memory = await recallMemory(supabase, opts.recallQuery);
+      // M3 scope-aware recall: notes scoped to the surface the user is on (e.g.
+      // the résumé command bar's `artifact:<id>` tune notes) get the in-scope
+      // rank bonus, so RO answers with THAT artifact's context first.
+      memory = await recallMemory(supabase, opts.recallQuery, 6, { scope: opts.recallScope });
     } catch (err) {
       logError("ro_memory.recall_failed", err);
     }

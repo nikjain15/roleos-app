@@ -10,6 +10,9 @@ import {
   type RoleRow,
 } from "@/lib/resume/judge";
 import { scoreLift, type ScoreLift } from "@/lib/resume/score";
+import { judgeCalibration, type ResumeFeedbackRow } from "@/lib/resume/feedback";
+import { loadCollectivePrior } from "@/lib/ro/collective";
+import { supabaseService } from "@/lib/supabase/service";
 
 export const dynamic = "force-dynamic";
 // Scoring runs TWO coverage passes (the tailored résumé + the master baseline for
@@ -48,10 +51,21 @@ export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> 
     .from("artifacts")
     .select("provenance")
     .eq("id", parsed.data.id)
-    .single<{ provenance: { score?: unknown; scoreLift?: ScoreLift | null } | null }>();
+    .single<{
+      provenance: {
+        score?: unknown;
+        scoreLift?: ScoreLift | null;
+        calibration?: { note: string | null; collectiveNote: string | null } | null;
+      } | null;
+    }>();
   if (!art) return NextResponse.json({ error: "not found" }, { status: 404 });
   const score = art.provenance?.score ?? null;
-  return NextResponse.json({ score, lift: art.provenance?.scoreLift ?? null, pending: !score });
+  return NextResponse.json({
+    score,
+    lift: art.provenance?.scoreLift ?? null,
+    calibration: art.provenance?.calibration ?? null,
+    pending: !score,
+  });
 }
 
 export async function POST(req: Request, ctx: { params: Promise<{ id: string }> }): Promise<Response> {
@@ -109,14 +123,35 @@ export async function POST(req: Request, ctx: { params: Promise<{ id: string }> 
 
   await logAgentRuns(user.id, allRuns, { skill: "judge_coverage" });
 
+  // Calibration read-back (P4 follow-up): how often the user corrected vs kept
+  // RO's résumé lines, shrunk toward the anonymous collective prior. DERIVED and
+  // honest — a note about the judge, never a prediction. Fail-safe: scoring never
+  // breaks because the read-back couldn't load.
+  let calibration: { note: string | null; collectiveNote: string | null } | null = null;
+  try {
+    const [{ data: events }, prior] = await Promise.all([
+      supabase
+        .from("decision_events")
+        .select("action, payload")
+        .eq("kind", "resume")
+        .order("created_at", { ascending: false })
+        .limit(500),
+      loadCollectivePrior(supabaseService()),
+    ]);
+    const cal = judgeCalibration((events ?? []) as ResumeFeedbackRow[], { prior: prior.correctionRate });
+    calibration = { note: cal.note, collectiveNote: prior.note };
+  } catch {
+    /* read-back is optional; the score stands on its own */
+  }
+
   // Cache the score + lift on the artifact (merge — never clobber other provenance).
   const scoredAt = new Date().toISOString();
   await supabase
     .from("artifacts")
     .update({
-      provenance: { ...(artifact.provenance ?? {}), score: { ...score, scoredAt }, scoreLift: lift },
+      provenance: { ...(artifact.provenance ?? {}), score: { ...score, scoredAt }, scoreLift: lift, calibration },
     })
     .eq("id", id);
 
-  return NextResponse.json({ ok: true, score, lift, scoredAt });
+  return NextResponse.json({ ok: true, score, lift, scoredAt, calibration });
 }

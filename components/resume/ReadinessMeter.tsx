@@ -6,8 +6,12 @@ import { liftLabel, type MeterView } from "@/lib/resume/meter";
  * Presentational — renders a P1 score's honest view model: tier badge, tiered
  * track with the score marker, `+N from your master`, the one next move, and the
  * fixed caveat. No outcome/odds language. Built on the design-system primitives.
+ * `readback` (optional): the derived calibration lines — how often the user
+ * corrected vs kept RO's lines, and the anonymous collective base rate. Honest
+ * footnotes about the judge, never predictions.
  */
-export default function ReadinessMeter({ view }: { view: MeterView }) {
+export default function ReadinessMeter({ view, readback = [] }: { view: MeterView; readback?: (string | null)[] }) {
+  const notes = readback.filter((n): n is string => Boolean(n));
   const lift = liftLabel(view.lift);
 
   return (
@@ -66,6 +70,16 @@ export default function ReadinessMeter({ view }: { view: MeterView }) {
           <span className="ml-auto shrink-0 rounded-full bg-spark px-2 py-0.5 text-small font-medium text-spark-ink">
             +{view.nextMove.deltaPoints}
           </span>
+        </div>
+      )}
+
+      {notes.length > 0 && (
+        <div className="mt-3 border-t border-bd pt-2">
+          {notes.map((n, i) => (
+            <p key={i} className="text-[11px] leading-relaxed text-tx3">
+              {n}
+            </p>
+          ))}
         </div>
       )}
     </Card>

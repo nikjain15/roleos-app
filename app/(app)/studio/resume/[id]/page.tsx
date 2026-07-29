@@ -22,6 +22,7 @@ type Provenance = {
   truth?: { ok: boolean; violations: string[] } | null;
   score?: (ResumeScore & { scoredAt?: string }) | null;
   scoreLift?: ScoreLift | null;
+  calibration?: { note: string | null; collectiveNote: string | null } | null;
 };
 
 export default async function ResumeStudio({ params }: { params: Promise<{ id: string }> }) {
@@ -86,6 +87,7 @@ export default async function ResumeStudio({ params }: { params: Promise<{ id: s
               id={artifact.id}
               initialScore={artifact.provenance?.score ?? null}
               initialLift={artifact.provenance?.scoreLift ?? null}
+              initialCalibration={artifact.provenance?.calibration ?? null}
             />
           </div>
           <ResumeEditor
