@@ -5,17 +5,22 @@ import { useRouter } from "next/navigation";
 import type { ApplyBundle } from "@/lib/apply";
 
 /**
- * Apply panel (Slice 4). Presents the composed bundle + pre-filled compose/ATS
- * links, then lets the user confirm they applied. RO performs NO send — the honest
- * copy says so; the user opens their application, submits it there, then marks it
- * here so the tracker + pace engine see a real send. a11y: labelled, ≥40px targets.
+ * Apply panel (Slice 4 + the Apply kit). Presents the composed bundle +
+ * pre-filled compose/ATS links AND the files themselves (résumé + approved
+ * cover letter as ATS DOCX / print-PDF), then lets the user confirm they
+ * applied. RO performs NO send — the honest copy says so; the user opens their
+ * application, submits it there, then marks it here so the tracker + pace
+ * engine see a real send. a11y: labelled, ≥40px targets.
  */
 export default function ApplyPanel({
   artifactId,
+  coverId,
   bundle,
   roleLabel,
 }: {
   artifactId: string;
+  /** The APPROVED cover artifact, when one exists — enables its downloads. */
+  coverId?: string | null;
   bundle: ApplyBundle;
   roleLabel: string;
 }) {
@@ -91,11 +96,57 @@ export default function ApplyPanel({
         </div>
       </section>
 
-      {/* Step 2 — the composed note */}
+      {/* Step 2 — the files (the Apply kit): ATS DOCX + print-PDF, ready to upload */}
+      <section>
+        <h2 className="text-[11px] font-semibold uppercase tracking-wide text-tx3">
+          2 · Your files — download, then upload on their form
+        </h2>
+        <div className="mt-2 flex flex-wrap gap-2">
+          <a
+            href={`/api/artifact/${artifactId}/export?format=docx`}
+            className="flex min-h-11 items-center rounded-md border border-bd px-4 text-sm text-tx hover:bg-surf2"
+          >
+            Résumé · DOCX ↓
+          </a>
+          <a
+            href={`/studio/resume/${artifactId}/print`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex min-h-11 items-center rounded-md border border-bd px-4 text-sm text-tx hover:bg-surf2"
+          >
+            Résumé · PDF ↗
+          </a>
+          {coverId && (
+            <>
+              <a
+                href={`/api/artifact/${coverId}/export?format=docx`}
+                className="flex min-h-11 items-center rounded-md border border-bd px-4 text-sm text-tx hover:bg-surf2"
+              >
+                Cover letter · DOCX ↓
+              </a>
+              <a
+                href={`/studio/cover/${coverId}/print`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex min-h-11 items-center rounded-md border border-bd px-4 text-sm text-tx hover:bg-surf2"
+              >
+                Cover letter · PDF ↗
+              </a>
+            </>
+          )}
+        </div>
+        {!coverId && (
+          <p className="mt-1 text-xs text-tx3">
+            No approved cover letter yet — approve one above and its files appear here.
+          </p>
+        )}
+      </section>
+
+      {/* Step 3 — the composed note */}
       <section>
         <div className="flex items-center justify-between">
           <h2 className="text-[11px] font-semibold uppercase tracking-wide text-tx3">
-            2 · Your note ({bundle.subject})
+            3 · Your note ({bundle.subject})
           </h2>
           <button onClick={copyNote} className="text-xs text-tx3 underline">
             {copied ? "copied" : "copy"}
@@ -104,13 +155,12 @@ export default function ApplyPanel({
         <pre className="mt-2 whitespace-pre-wrap rounded-lg border border-bd bg-surf2 p-3 text-[13px] leading-relaxed text-tx">
           {bundle.note}
         </pre>
-        <p className="mt-1 text-xs text-tx3">Attach your exported résumé (DOCX/PDF) before sending.</p>
       </section>
 
-      {/* Step 3 — confirm */}
+      {/* Step 4 — confirm */}
       <section>
         <h2 className="text-[11px] font-semibold uppercase tracking-wide text-tx3">
-          3 · Track it
+          4 · Track it
         </h2>
         {err && <p className="mt-2 text-sm text-dng">{err}</p>}
         <button

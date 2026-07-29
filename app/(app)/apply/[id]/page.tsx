@@ -177,7 +177,12 @@ export default async function ApplyPage({ params }: { params: Promise<{ id: stri
             <BriefCard roleId={artifact.role_id} company={artifact.roles.company} initial={brief} />
           )}
           {artifact.role_id && <WarmPathsCard roleId={artifact.role_id} paths={paths} />}
-          <ApplyPanel artifactId={artifact.id} bundle={bundle} roleLabel={roleLabel} />
+          <ApplyPanel
+            artifactId={artifact.id}
+            coverId={coverArt?.status === "approved" ? coverArt.id : null}
+            bundle={bundle}
+            roleLabel={roleLabel}
+          />
         </div>
       )}
     </main>
