@@ -35,8 +35,26 @@ try {
   const letter=art?.content?.body??"";
   pass=ok(letter.length>80 && typeof art?.content?.subject==="string", `content shape ok (subject + ${letter.length}-char body)`)&&pass;
   pass=ok(!!art?.provenance?.truth, "provenance carries the truth verdict")&&pass;
+  // J10.2: the draft is SECTIONED (opening/why_them/why_you/closing)
+  const secs=art?.content?.sections??[];
+  pass=ok(Array.isArray(secs)&&secs.length>=3, `letter is SECTIONED — ${secs.length} sections: ${JSON.stringify(secs.map(s=>s.id))}`)&&pass;
+  // per-section tune (truth-gated, scope-enforced): tune the opening, others untouched
+  const before=secs.map(s=>s.text);
+  const tuneRes=await fetch(`${BASE}/api/artifact/${body.artifactId}/cover-tune`,{method:"POST",headers:{"Content-Type":"application/json",Cookie:cookie},body:JSON.stringify({sectionId:secs[0]?.id??"opening",instruction:"More direct"}),signal:AbortSignal.timeout(300000)});
+  const tune=await tuneRes.json();
+  pass=ok(tuneRes.ok&&tune.ok, `section tune ran (note: "${tune.note??""}")`)&&pass;
+  const after=(tune.content?.sections??[]).map(s=>s.text);
+  pass=ok(after[0]!==before[0], "target section text changed")&&pass;
+  pass=ok(before.slice(1).every((t,i)=>after[i+1]===t), "other sections untouched (scope enforced)")&&pass;
+  pass=ok(typeof tune.content?.body==="string"&&tune.content.body.includes(after[0]), "flat body recompiled from sections (apply-bundle compatible)")&&pass;
   const page=await fetch(`${BASE}/studio/cover/${body.artifactId}`,{headers:{Cookie:cookie},signal:AbortSignal.timeout(30000)});
   pass=ok(page.ok, `studio page /studio/cover/[id] serves (${page.status})`)&&pass;
+  // J10.2 export: ATS business-letter DOCX (+ the print page for PDF)
+  const exp=await fetch(`${BASE}/api/artifact/${body.artifactId}/export?format=docx`,{headers:{Cookie:cookie},signal:AbortSignal.timeout(30000)});
+  const buf=Buffer.from(await exp.arrayBuffer());
+  pass=ok(exp.ok&&buf.length>1000&&buf.slice(0,2).toString()==="PK"&&(exp.headers.get("content-disposition")??"").includes("cover-letter"), `DOCX export ok (${buf.length}b, real zip, cover-letter-*.docx)`)&&pass;
+  const printPage=await fetch(`${BASE}/studio/cover/${body.artifactId}/print`,{headers:{Cookie:cookie},signal:AbortSignal.timeout(30000)});
+  pass=ok(printPage.ok, `print/PDF page serves (${printPage.status})`)&&pass;
 } catch(e){ pass=ok(false,`threw: ${e?.message??e}`)&&pass; }
 finally{ if(uid) await admin.auth.admin.deleteUser(uid).then(()=>console.log("· cleaned up test user"),()=>{}); }
 console.log(pass?"\nCOVER FLOW E2E: PASS":"\nCOVER FLOW E2E: FAIL"); process.exit(pass?0:1);

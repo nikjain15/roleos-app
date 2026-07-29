@@ -2,7 +2,7 @@ import Link from "next/link";
 import { redirect, notFound } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import DraftingPoller from "@/components/resume/DraftingPoller";
-import CoverEditor, { type CoverContent } from "@/components/cover/CoverEditor";
+import CoverEditor from "@/components/cover/CoverEditor";
 import RetryCover from "@/components/cover/RetryCover";
 
 /**
@@ -69,13 +69,6 @@ export default async function CoverStudio({ params }: { params: Promise<{ id: st
     if (resumeArt) applyHref = `/apply/${resumeArt.id}`;
   }
 
-  const content: CoverContent = {
-    subject: typeof c.subject === "string" ? c.subject : "",
-    body: typeof c.body === "string" ? c.body : "",
-    angle: typeof c.angle === "string" ? c.angle : null,
-    truthNote: typeof c.truth_note === "string" ? c.truth_note : null,
-  };
-
   return (
     <main className="mx-auto max-w-2xl px-4 py-10 sm:px-6">
       <div className="flex items-center justify-between">
@@ -95,9 +88,10 @@ export default async function CoverStudio({ params }: { params: Promise<{ id: st
       ) : (
         <CoverEditor
           id={artifact.id}
+          roleId={artifact.role_id}
           applyHref={applyHref}
           status={artifact.status}
-          content={content}
+          content={c}
           truthFlags={truthFlags}
         />
       )}
