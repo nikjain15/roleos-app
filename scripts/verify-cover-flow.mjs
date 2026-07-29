@@ -35,6 +35,18 @@ try {
   const letter=art?.content?.body??"";
   pass=ok(letter.length>80 && typeof art?.content?.subject==="string", `content shape ok (subject + ${letter.length}-char body)`)&&pass;
   pass=ok(!!art?.provenance?.truth, "provenance carries the truth verdict")&&pass;
+  // J10.2: the draft is SECTIONED (opening/why_them/why_you/closing)
+  const secs=art?.content?.sections??[];
+  pass=ok(Array.isArray(secs)&&secs.length>=3, `letter is SECTIONED — ${secs.length} sections: ${JSON.stringify(secs.map(s=>s.id))}`)&&pass;
+  // per-section tune (truth-gated, scope-enforced): tune the opening, others untouched
+  const before=secs.map(s=>s.text);
+  const tuneRes=await fetch(`${BASE}/api/artifact/${body.artifactId}/cover-tune`,{method:"POST",headers:{"Content-Type":"application/json",Cookie:cookie},body:JSON.stringify({sectionId:secs[0]?.id??"opening",instruction:"More direct"}),signal:AbortSignal.timeout(300000)});
+  const tune=await tuneRes.json();
+  pass=ok(tuneRes.ok&&tune.ok, `section tune ran (note: "${tune.note??""}")`)&&pass;
+  const after=(tune.content?.sections??[]).map(s=>s.text);
+  pass=ok(after[0]!==before[0], "target section text changed")&&pass;
+  pass=ok(before.slice(1).every((t,i)=>after[i+1]===t), "other sections untouched (scope enforced)")&&pass;
+  pass=ok(typeof tune.content?.body==="string"&&tune.content.body.includes(after[0]), "flat body recompiled from sections (apply-bundle compatible)")&&pass;
   const page=await fetch(`${BASE}/studio/cover/${body.artifactId}`,{headers:{Cookie:cookie},signal:AbortSignal.timeout(30000)});
   pass=ok(page.ok, `studio page /studio/cover/[id] serves (${page.status})`)&&pass;
 } catch(e){ pass=ok(false,`threw: ${e?.message??e}`)&&pass; }

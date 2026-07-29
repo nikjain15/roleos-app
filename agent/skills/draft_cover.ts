@@ -42,9 +42,18 @@ export default skill({
         "NEVER invent titles, employers, metrics, skills, scope, or enthusiasm for facts you don't have.",
         "If the profile gives no company-specific hook, open with the strongest ROLE-specific one instead — do not fabricate familiarity.",
         "Voice: candid, warm, specific — a sharp colleague, not a supplicant.",
+        "STRUCTURE (J10.2): the letter is FOUR sections, each with ONE job:",
+        "opening = the hook (why this company/role, specific, no fabricated familiarity);",
+        "why_them = the homework (what about THEIR stage/product makes this a fit — role-specific if the profile gives no company hook);",
+        "why_you = the proof (their strongest REAL experience mapped to the must_haves — evidence, not adjectives);",
+        "closing = the ask (plain, confident close naming a next step).",
+        "Each section is 1 short paragraph; the four together read as one 120-220 word letter.",
         "Return STRICT JSON only with keys:",
         '{"subject": "email subject line for the application",',
-        '"body": "the full letter text, plain text with \\n\\n between paragraphs, starting with the greeting and ending with the sign-off",',
+        '"greeting": "the greeting line, e.g. Dear Acme team,",',
+        '"sections": [{"id": "opening|why_them|why_you|closing", "text": "the paragraph", "rationale": "one sentence on why RO wrote it this way, tied to the role"}] (exactly these four ids, in order),',
+        '"signoff": "the sign-off, e.g. Best,\\nTheir Name",',
+        '"body": "the FULL compiled letter: greeting + the four paragraphs + signoff, \\n\\n between parts",',
         '"angle": "one sentence on the strategic angle this letter takes",',
         '"truth_note": "any claim that approaches overstatement, flagged honestly — or empty string"}',
       ].join(" "),
@@ -57,13 +66,16 @@ export default skill({
     };
   },
   expects: (text) => {
-    const o = parseModelJson<{ subject?: unknown; body?: unknown }>(text);
+    const o = parseModelJson<{ subject?: unknown; body?: unknown; sections?: unknown }>(text);
     return (
       !!o &&
       typeof o.subject === "string" &&
       o.subject.trim().length > 0 &&
       typeof o.body === "string" &&
-      o.body.trim().length >= 80
+      o.body.trim().length >= 80 &&
+      Array.isArray(o.sections) &&
+      o.sections.length >= 3 &&
+      o.sections.every((s) => typeof (s as { text?: unknown })?.text === "string" && String((s as { text: string }).text).trim().length > 0)
     );
   },
 });
