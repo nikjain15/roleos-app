@@ -31,6 +31,11 @@ export interface EditorContent {
 
 type SaveState = "idle" | "saving" | "saved" | "error";
 
+// One-tap tune presets for a résumé section — same per-section tune grammar as
+// the cover letter (chips + freeform "tell RO how"); all go through the same
+// truth-gated, lock-aware revise.
+const RESUME_TUNE_PRESETS = ["Add a metric", "More senior framing", "Tighter", "Surface the AI work"];
+
 const TIER_TONE: Record<string, "suc" | "primary" | "info" | "warn"> = {
   fully: "suc",
   strong: "primary",
@@ -445,23 +450,38 @@ export default function ResumeEditor({
           </div>
 
           {tuneOpenId === section.id && (
-            <div className="mt-3 flex items-center gap-2 rounded-lg border border-primary-bd bg-primary-bg p-2">
-              <input
-                autoFocus
-                value={tuneText}
-                onChange={(e) => setTuneText(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && revise(tuneText, section.id)}
-                placeholder={`Tune ${section.company || "this section"} — e.g. lead with the AI work, add a metric`}
-                disabled={reviseBusy !== false}
-                className="min-w-0 flex-1 bg-transparent px-2 py-1.5 text-sm text-tx placeholder:text-tx3 focus:outline-none"
-              />
-              <button
-                onClick={() => revise(tuneText, section.id)}
-                disabled={reviseBusy !== false || !tuneText.trim()}
-                className="rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-white disabled:opacity-50"
-              >
-                {reviseBusy === section.id ? "tuning…" : "tune"}
-              </button>
+            <div className="mt-3 rounded-lg border border-primary-bd bg-primary-bg p-2">
+              {/* One-tap presets — same per-section tune grammar as the cover letter. */}
+              <div className="flex flex-wrap items-center gap-1.5 px-1 pb-2">
+                {RESUME_TUNE_PRESETS.map((p) => (
+                  <button
+                    key={p}
+                    onClick={() => revise(p, section.id)}
+                    disabled={reviseBusy !== false}
+                    className="rounded-full border border-primary-bd bg-surf px-2.5 py-1 text-xs text-tx2 transition-colors hover:border-primary hover:text-primary disabled:opacity-50"
+                  >
+                    {p}
+                  </button>
+                ))}
+              </div>
+              <div className="flex items-center gap-2">
+                <input
+                  autoFocus
+                  value={tuneText}
+                  onChange={(e) => setTuneText(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && revise(tuneText, section.id)}
+                  placeholder="Or tell RO how — e.g. lead with the AI work, add a metric"
+                  disabled={reviseBusy !== false}
+                  className="min-w-0 flex-1 bg-transparent px-2 py-1.5 text-sm text-tx placeholder:text-tx3 focus:outline-none"
+                />
+                <button
+                  onClick={() => revise(tuneText, section.id)}
+                  disabled={reviseBusy !== false || !tuneText.trim()}
+                  className="rounded-md bg-primary px-3 py-1.5 text-sm font-medium text-white disabled:opacity-50"
+                >
+                  {reviseBusy === section.id ? "tuning…" : "tune"}
+                </button>
+              </div>
             </div>
           )}
 

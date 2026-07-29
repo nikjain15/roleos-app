@@ -35,6 +35,9 @@ export default function CoverEditor({
   const [busy, setBusy] = useState<string | null>(null); // sectionId | "approve" | null
   const [err, setErr] = useState<string | null>(null);
   const [openRationale, setOpenRationale] = useState<string | null>(null);
+  // Progressive disclosure: one section "active" (editable + tune tools) at a
+  // time; the rest read as clean prose. Nothing is removed — one click away.
+  const [activeId, setActiveId] = useState<string | null>(null);
   const [tuneText, setTuneText] = useState<Record<string, string>>({});
   const [tuneNote, setTuneNote] = useState<{ sectionId: string; note: string; flags: string[] } | null>(null);
   const [preview, setPreview] = useState(false);
@@ -215,14 +218,14 @@ export default function CoverEditor({
               {doc.sections.length > 1 ? `${i + 1} · ` : ""}
               {section.label}
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-3">
               {section.rationale && (
                 <button
                   onClick={() => setOpenRationale((o) => (o === section.id ? null : section.id))}
                   aria-expanded={openRationale === section.id}
                   className="text-small text-tx3 hover:text-tx2"
                 >
-                  Why RO wrote this ✎
+                  why ✎
                 </button>
               )}
               {section.locked ? (
@@ -230,9 +233,9 @@ export default function CoverEditor({
                   <button onClick={() => toggleKeep(section.id, false)}>kept · unlock</button>
                 </Badge>
               ) : (
-                <Button variant="secondary" size="sm" onClick={() => toggleKeep(section.id, true)}>
+                <button onClick={() => toggleKeep(section.id, true)} className="text-small text-tx3 hover:text-tx2">
                   ✓ keep
-                </Button>
+                </button>
               )}
             </div>
           </div>
@@ -245,9 +248,26 @@ export default function CoverEditor({
             <p className="mt-3 whitespace-pre-wrap rounded-lg bg-surf2 p-3 text-small leading-relaxed text-tx2">
               {section.text}
             </p>
+          ) : activeId !== section.id ? (
+            // Rest state: clean prose — click the text (or Tune →) to work on it.
+            <>
+              <p
+                onClick={() => setActiveId(section.id)}
+                className="mt-2 cursor-text whitespace-pre-wrap text-body leading-relaxed text-tx"
+              >
+                {section.text}
+              </p>
+              <button
+                onClick={() => setActiveId(section.id)}
+                className="mt-2 text-small font-medium text-primary hover:underline"
+              >
+                Tune →
+              </button>
+            </>
           ) : (
             <>
               <Textarea
+                autoFocus
                 value={section.text}
                 onChange={(e) => setSection(section.id, { text: e.target.value })}
                 onBlur={() => patch({ sections: [{ id: section.id, text: section.text }] })}
@@ -263,7 +283,6 @@ export default function CoverEditor({
               ) : (
                 <>
                   <div className="mt-3 flex flex-wrap items-center gap-1.5">
-                    <span className="text-small text-tx3">Tune:</span>
                     {(COVER_TUNE_PRESETS[section.id] ?? COVER_TUNE_PRESETS.letter).map((p) => (
                       <button
                         key={p}
@@ -292,6 +311,9 @@ export default function CoverEditor({
                       Tune
                     </Button>
                   </div>
+                  <button onClick={() => setActiveId(null)} className="mt-2 text-small text-tx3 hover:text-tx2">
+                    done ↑
+                  </button>
                 </>
               )}
 
