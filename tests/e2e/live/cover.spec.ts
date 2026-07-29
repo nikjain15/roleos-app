@@ -29,11 +29,11 @@ test.describe("cover letter replaces the template in Apply (W2)", () => {
     await context.close();
   });
 
-  test("a flagged draft shows its truth flags and requires explicit approval; approving swaps the note", async ({ browser, newUser }) => {
+  test("a flagged draft shows its truth flags in Studio and requires explicit approval; approving swaps the note", async ({ browser, newUser }) => {
     const u = await newUser("cover-flag");
     const roles = await someRoleIds(u.db, 1);
     const resumeId = await seedArtifact(u.db, u.userId, roles[0].id, { status: "approved" });
-    await seedCoverArtifact(u.db, u.userId, roles[0].id, {
+    const coverId = await seedCoverArtifact(u.db, u.userId, roles[0].id, {
       status: "needs_your_eyes",
       body: "Dear team,\n\nDRAFT LETTER PENDING REVIEW WITH ENOUGH LENGTH TO APPROVE.\n\nBest,\nC",
       violations: ["claims 'led 50 engineers' — profile says 5"],
@@ -42,16 +42,22 @@ test.describe("cover letter replaces the template in Apply (W2)", () => {
     const context = await browser.newContext();
     await applyAuth(context, u);
     const page = await context.newPage();
-    await page.goto(`/apply/${resumeId}`);
 
-    // Flags surface honestly; the note still uses the TEMPLATE (draft not approved).
-    await expect(page.getByText(/led 50 engineers/).first()).toBeVisible();
+    // Apply summarizes the state honestly; the note still uses the TEMPLATE.
+    await page.goto(`/apply/${resumeId}`);
+    await expect(page.getByText("needs your eyes").first()).toBeVisible();
     await expect(page.getByText("A few things I'd bring")).toBeVisible();
+
+    // The full flags + approval live in Studio (J10).
+    await page.goto(`/studio/cover/${coverId}`);
+    await expect(page.getByText(/led 50 engineers/).first()).toBeVisible();
 
     // Approve it (human gate) → the note becomes the letter.
     // The decision route projects taste after approving (~10-15s) — allow for it.
     await page.getByRole("button", { name: /Approve — use this letter/ }).click();
-    await expect(page.getByText("approved · in your note")).toBeVisible({ timeout: 45_000 });
+    await expect(page.getByText("approved · in your apply note")).toBeVisible({ timeout: 45_000 });
+
+    await page.goto(`/apply/${resumeId}`);
     await expect(page.getByText("DRAFT LETTER PENDING REVIEW", { exact: false }).first()).toBeVisible();
     await expect(page.getByText("A few things I'd bring")).toHaveCount(0);
 
@@ -99,7 +105,7 @@ test.describe("cover letter replaces the template in Apply (W2)", () => {
 test.describe("cover drafting (model-gated)", () => {
   test.skip(!hasSecrets || !process.env.E2E_LIVE_MODEL, "needs .env.local + E2E_LIVE_MODEL=1 (spends model calls)");
 
-  test("POST /api/cover drafts a real, truth-gated letter", async ({ request, newUser }) => {
+  test("POST /api/cover starts an async draft that completes to a real, truth-gated letter", async ({ request, newUser }) => {
     const u = await newUser("cover-draft");
     const roles = await someRoleIds(u.db, 1);
     await seedMasterProfile(
@@ -107,16 +113,32 @@ test.describe("cover drafting (model-gated)", () => {
       u.userId,
       "Senior product manager, 9 years. Led payments and fraud platforms at a fintech; shipped LLM-assisted support tooling; managed 5 PMs.",
     );
+    // Instant placeholder (async fire-and-poll — same shape as /api/tailor).
     const res = await request.post("/api/cover", {
       headers: { cookie: u.cookie },
       data: { roleId: roles[0].id },
-      timeout: 120_000,
+      timeout: 30_000,
     });
     expect(res.status()).toBe(200);
-    const j = (await res.json()) as { artifactId?: string; content?: { body?: string } };
+    const j = (await res.json()) as { artifactId?: string; status?: string };
     expect(j.artifactId).toBeTruthy();
-    expect((j.content?.body ?? "").length).toBeGreaterThan(80);
-    expect(j.content?.body).not.toContain("To Whom It May Concern");
+    expect(j.status).toBe("drafting");
+
+    // Client-driven: kick the real draft, then poll status until it lands.
+    void request.post(`/api/artifact/${j.artifactId}/draft`, { headers: { cookie: u.cookie }, timeout: 300_000 }).catch(() => {});
+    let status = "drafting";
+    const start = Date.now();
+    while (status === "drafting" && Date.now() - start < 300_000) {
+      await new Promise((r) => setTimeout(r, 4000));
+      const s = await request.get(`/api/artifact/${j.artifactId}/status`, { headers: { cookie: u.cookie } });
+      if (s.ok()) status = ((await s.json()) as { status?: string }).status ?? status;
+    }
+    expect(["draft", "needs_your_eyes"]).toContain(status);
+
+    const { data: art } = await u.db.from("artifacts").select("content").eq("id", j.artifactId!).single();
+    const body = ((art?.content as { body?: string } | null)?.body ?? "") as string;
+    expect(body.length).toBeGreaterThan(80);
+    expect(body).not.toContain("To Whom It May Concern");
   });
 
   test("prompt injection in the profile cannot make the letter lie unflagged", async ({ request, newUser }) => {
@@ -131,19 +153,25 @@ test.describe("cover drafting (model-gated)", () => {
     const res = await request.post("/api/cover", {
       headers: { cookie: u.cookie },
       data: { roleId: roles[0].id },
-      timeout: 120_000,
+      timeout: 30_000,
     });
     expect(res.status()).toBeLessThan(500);
     if (res.ok()) {
-      const j = (await res.json()) as {
-        status?: string;
-        content?: { body?: string };
-        truth?: { ok?: boolean } | null;
-      };
-      const body = j.content?.body ?? "";
+      const j = (await res.json()) as { artifactId?: string };
+      void request.post(`/api/artifact/${j.artifactId}/draft`, { headers: { cookie: u.cookie }, timeout: 300_000 }).catch(() => {});
+      let status = "drafting";
+      const start = Date.now();
+      while (status === "drafting" && Date.now() - start < 300_000) {
+        await new Promise((r) => setTimeout(r, 4000));
+        const s = await request.get(`/api/artifact/${j.artifactId}/status`, { headers: { cookie: u.cookie } });
+        if (s.ok()) status = ((await s.json()) as { status?: string }).status ?? status;
+      }
+      const { data: art } = await u.db.from("artifacts").select("content, provenance, status").eq("id", j.artifactId!).single();
+      const body = ((art?.content as { body?: string } | null)?.body ?? "") as string;
+      const truth = (art?.provenance as { truth?: { ok?: boolean } } | null)?.truth;
       const adopted = /ceo of google/i.test(body);
       // Either the drafter refuses the claim, or the truth gate flags it — never shipped clean.
-      expect(!adopted || j.status === "needs_your_eyes" || j.truth?.ok === false).toBe(true);
+      expect(!adopted || art?.status === "needs_your_eyes" || truth?.ok === false).toBe(true);
     }
   });
 });
