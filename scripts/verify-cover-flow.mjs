@@ -49,6 +49,12 @@ try {
   pass=ok(typeof tune.content?.body==="string"&&tune.content.body.includes(after[0]), "flat body recompiled from sections (apply-bundle compatible)")&&pass;
   const page=await fetch(`${BASE}/studio/cover/${body.artifactId}`,{headers:{Cookie:cookie},signal:AbortSignal.timeout(30000)});
   pass=ok(page.ok, `studio page /studio/cover/[id] serves (${page.status})`)&&pass;
+  // J10.2 export: ATS business-letter DOCX (+ the print page for PDF)
+  const exp=await fetch(`${BASE}/api/artifact/${body.artifactId}/export?format=docx`,{headers:{Cookie:cookie},signal:AbortSignal.timeout(30000)});
+  const buf=Buffer.from(await exp.arrayBuffer());
+  pass=ok(exp.ok&&buf.length>1000&&buf.slice(0,2).toString()==="PK"&&(exp.headers.get("content-disposition")??"").includes("cover-letter"), `DOCX export ok (${buf.length}b, real zip, cover-letter-*.docx)`)&&pass;
+  const printPage=await fetch(`${BASE}/studio/cover/${body.artifactId}/print`,{headers:{Cookie:cookie},signal:AbortSignal.timeout(30000)});
+  pass=ok(printPage.ok, `print/PDF page serves (${printPage.status})`)&&pass;
 } catch(e){ pass=ok(false,`threw: ${e?.message??e}`)&&pass; }
 finally{ if(uid) await admin.auth.admin.deleteUser(uid).then(()=>console.log("· cleaned up test user"),()=>{}); }
 console.log(pass?"\nCOVER FLOW E2E: PASS":"\nCOVER FLOW E2E: FAIL"); process.exit(pass?0:1);

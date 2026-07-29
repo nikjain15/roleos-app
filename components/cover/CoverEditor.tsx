@@ -341,6 +341,20 @@ export default function CoverEditor({
         <Button variant="ghost" onClick={() => setPreview((p) => !p)}>
           {preview ? "Hide the full letter" : "Preview the full letter"}
         </Button>
+        <a
+          href={`/api/artifact/${id}/export?format=docx`}
+          className="text-small font-medium text-tx2 hover:text-tx"
+        >
+          Export DOCX
+        </a>
+        <a
+          href={`/studio/cover/${id}/print`}
+          target="_blank"
+          rel="noreferrer"
+          className="text-small font-medium text-tx2 hover:text-tx"
+        >
+          Print / PDF
+        </a>
         {applyHref && (
           <Link href={applyHref} className="ml-auto text-small font-medium text-primary hover:underline">
             Back to apply — you send ↗
