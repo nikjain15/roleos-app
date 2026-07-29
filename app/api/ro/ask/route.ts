@@ -60,7 +60,13 @@ export async function POST(req: Request): Promise<Response> {
     logError("ro_memory.sync_failed", err);
   }
 
-  const ctx = await assembleContext(supabase, user.id, { recallQuery: question });
+  // M3 follow-up: when the dock is asked from an artifact surface (the résumé
+  // editor / cover studio — where the command bar's tune notes are scoped
+  // `artifact:<id>`), recall with that scope so those notes outrank globals.
+  const artifactMatch = screen?.match(/^\/studio\/(?:resume|cover)\/([0-9a-f-]{36})/i);
+  const recallScope = artifactMatch ? `artifact:${artifactMatch[1]}` : undefined;
+
+  const ctx = await assembleContext(supabase, user.id, { recallQuery: question, recallScope });
   // M2: the dock's rolling conversation thread (fail-safe: empty before migration).
   const thread = await loadThread(supabase, user.id, "dock").catch(() => ({ surface: "dock", summary: "", turns: [] }));
   const state = { ...toRoAskState(ctx), conversation: toConversation(thread) };
