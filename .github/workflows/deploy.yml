@@ -1,9 +1,25 @@
 name: Deploy to Cloudflare
 
-# Auto-deploy on push to main (like the marketing site's Pages deploy). In CI the
-# environment is clean — no local .dev.vars/.env.local injecting an AI-scoped
-# CLOUDFLARE_API_TOKEN — so wrangler uses the deploy-scoped token from secrets
-# directly. No token-stripping needed (that was the local-only friction).
+# Deploys main to production ONLY behind a green CI run. In CI the environment is
+# clean (no local .dev.vars/.env.local injecting an AI-scoped CLOUDFLARE_API_TOKEN),
+# so wrangler uses the deploy-scoped token from secrets directly. No token-stripping
+# needed (that was the local-only friction).
+#
+# Why `workflow_run` and not `needs:`: `needs:` only orders jobs INSIDE one
+# workflow file, and CI lives in its own file (ci.yml). Triggering on the CI
+# workflow's completion is the only way GitHub lets one workflow gate another, and
+# it gates on the WHOLE workflow, both the `check` job (typecheck · lint · import
+# invariant · vitest · audit gate) and the `e2e` job must be green before a deploy
+# can start. Duplicating the check steps into this file would have gated on a copy
+# that can drift from ci.yml; this gates on the real thing.
+#
+# Two entry points, both gated:
+#   • push to main  → CI runs → on `conclusion == 'success'` this workflow deploys
+#                     the exact commit CI verified (`workflow_run.head_sha`).
+#   • workflow_dispatch → the `verify` job re-runs `npm run check` + the audit gate
+#                     in this workflow first, and deploy waits on it. (The
+#                     Playwright e2e suite is not re-run on a manual dispatch; the
+#                     push path covers it.)
 #
 # Required GitHub repo secrets:
 #   CLOUDFLARE_API_TOKEN          deploy-scoped ("Edit Cloudflare Workers" template)
@@ -14,7 +30,9 @@ name: Deploy to Cloudflare
 # already set on the worker via `wrangler secret put` and persist across deploys.
 
 on:
-  push:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
     branches: [main]
   workflow_dispatch: {}
 
@@ -23,10 +41,43 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  # Manual-dispatch path only: a dispatch has no CI run to point at, so re-run the
+  # same deterministic gates here before deploy is allowed to start.
+  verify:
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Typecheck · lint · import invariant · tests
+        run: npm run check
+      - name: Dependency audit (H4 gate, fail on high/critical in prod deps)
+        run: node scripts/audit-gate.mjs
+
+  deploy:
+    needs: [verify]
+    # `always()` so the push path (where `verify` is skipped) still evaluates; the
+    # conditions below are what actually admit a deploy. A red CI run, a cancelled
+    # one, or a failed manual verify all fall through to "no deploy".
+    if: >-
+      always() &&
+      (
+        (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
+        ||
+        (github.event_name == 'workflow_dispatch' && needs.verify.result == 'success')
+      )
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # On workflow_run the default checkout is the default branch tip, which
+          # may already be a newer (unverified) commit. Deploy exactly what CI
+          # went green on.
+          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22

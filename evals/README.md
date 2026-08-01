@@ -22,8 +22,10 @@ npx tsx evals/retrieval/run.ts
 
 ## Live-corpus retrieval eval (`retrieval/live/`)
 
-Scores a **real retriever over the REAL role corpus** — the 689 extracted
-postings in `seed/roles/*.json` that also seed the production `roles` table — so
+Scores a **real retriever over the REAL role corpus**. `seed/roles/**/*.json`
+holds 691 extracted postings, which `loadCorpus` dedupes by
+`company__title__ats_job_id` into the **689 unique roles** it scores; the same
+files seed the production `roles` table, so
 the numbers are on the actual corpus, not synthetic `r-*` fixtures. Runs offline
 in CI (no DB, no Workers AI, no secrets) and is asserted by
 `tests/unit/retrieval-live.test.ts`.

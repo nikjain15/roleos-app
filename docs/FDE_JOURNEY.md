@@ -26,7 +26,10 @@ Because models and embeddings are resolved through the registry, pointing RO at 
 - **Secrets** are Worker environment bindings, never in client code, enforced by `tests/invariants/no-client-secret-imports.test.ts`. Rotation runbook: `docs/runbooks/secret-rotation.md`. Example surface: `.dev.vars.example`.
 - **Row-level security** is mandatory on every user-owned table and machine-checked by `tests/invariants/rls-coverage.test.ts`, a migration that adds a `user_id` table without RLS fails the build before it can leak.
 - **Cross-user isolation** is proven live by `tests/e2e/live/rls.spec.ts` (user A cannot read user B's goals/applications/artifacts).
-- **Prompt injection** through candidate-supplied documents is a tested threat, not a hope: `tests/e2e/live/injection.spec.ts` verifies an injected CV cannot make RO fabricate.
+- **Prompt injection** through candidate-supplied documents is a tested threat, not a hope, and the two tests sit at different levels, so it is worth being exact about which one a reviewer can run:
+  - *Every pull request:* `tests/unit/injection-guard.test.ts` runs the real quality gate and the real coverage judge against a model that fully obeys an injected CV, and proves the shipped code fails closed, a truth judge steered out of its JSON contract lands on `needs_your_eyes` with `unknown` confidence, and a coverage verdict citing evidence it was never shown collapses to `gap`. No credentials needed.
+  - *Local, model-gated:* `tests/e2e/live/injection.spec.ts` runs the same attack end to end against real models, and requires `E2E_LIVE_MODEL=1` plus `.env.local`. It spends real model calls, so CI does not run it.
+  - *Named residual gap:* if retrieval surfaces an injected line as candidate evidence and the judge credits it, only the LLM truth gate stands in the way. Closing that deterministically is the next piece of work here.
 - **Egress is fixed-host.** The dependency-cruiser invariant forbids arbitrary outbound transport in the agent layer, so RO cannot be steered into exfiltrating data to an attacker-chosen endpoint.
 - **Phase-5 security audit** is documented green in `docs/security-audit.md` (RLS + secrets).
 

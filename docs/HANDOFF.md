@@ -19,9 +19,12 @@ decisions.**
 `npm run dev` → localhost:3000 (`.claude/launch.json` → `roleos-dev`). Checks
 **sequentially** (never concurrent tsc/vitest): `npm run typecheck` · `lint` ·
 `invariant:imports` · `test`. Safe commit: `find .git -name '*.lock' -delete && git
-commit --no-verify`. **Deploy is automatic on merge to `main`**
-(`.github/workflows/deploy.yml` → Cloudflare; allow ~2 min propagation before hitting
-prod — an e2e right after a merge can hit the old worker; re-run once).
+commit --no-verify`. **Deploy is automatic on merge to `main`, and only behind a green
+CI run**: `.github/workflows/deploy.yml` triggers on the CI workflow's completion and
+deploys `workflow_run.head_sha` only when `conclusion == 'success'`, so a red build
+never reaches Cloudflare. A manual `workflow_dispatch` runs `npm run check` + the audit
+gate in its own `verify` job first. Allow ~2 min propagation before hitting prod, an
+e2e right after a merge can hit the old worker; re-run once.
 
 ## LIVE NOW (ro.roleos.fyi — merged, deployed, e2e-verified)
 Onboarding v2 · GitHub login · Explore chat · Profile data layer · gamified feed ·

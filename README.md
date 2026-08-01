@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="https://github.com/nikjain15/roleos-app/actions/workflows/ci.yml"><img src="https://github.com/nikjain15/roleos-app/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
-  <img src="https://img.shields.io/badge/tests-481%20passing-brightgreen" alt="Tests: 481 passing">
+  <img src="https://img.shields.io/badge/tests-503%20passing-brightgreen" alt="Tests: 503 passing">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-view--only-blue" alt="License: view-only"></a>
   <img src="https://img.shields.io/badge/status-early%20access-orange" alt="Status: early access">
 </p>
@@ -73,10 +73,39 @@ README is about how it is built.
 | `ingest/` | Durable Cloudflare Workflow that hunts the role corpus |
 | `cron/` | Scheduled worker (hourly digests + bounded ingest) |
 | `sandbox/` | Cloudflare Sandbox SDK worker for live prototype previews |
-| `seed/` | Initial 557-role seed + embeddings |
+| `seed/` | Role corpus seed + embeddings: 691 extracted postings, 689 unique after id dedup |
 | `tests/` | Unit + invariant tests (incl. human-gated-outward guards) |
 | `docs/` | Setup runbooks, security audit, architecture handoff |
 | `archive/` | Parked role snapshots from the manual→automated ingestion migration |
+
+## Quickstart
+
+Node 20+ (CI runs 22). Clone, then:
+
+```bash
+npm ci
+npm run check          # typecheck · lint · import invariant · 503 tests (no secrets needed)
+npm run eval:retrieval:live   # scores the real role corpus offline (no DB, no model)
+cp .dev.vars.example .dev.vars   # fill in Supabase + Anthropic + Cloudflare,
+                                 # then mirror the NEXT_PUBLIC_* pair into .env.local
+npm run dev            # http://localhost:3000
+```
+
+`npm run check` and the offline evals run on a bare clone. The app itself needs the
+secrets above, [`SETUP.md`](SETUP.md) is the full path (Supabase project, Workers AI
+binding, Google OAuth), and [`docs/setup-deploy.md`](docs/setup-deploy.md) covers the
+Cloudflare deploy. Deploys are automatic on merge to `main` and only run behind a
+green CI workflow (`.github/workflows/deploy.yml`).
+
+**Status, honestly.** RoleOS is early access, and three things in this repo are
+scaffolding rather than finished surface, called out here so nobody has to find them
+the hard way: the single outbound route `app/api/dispatch` **returns 501** (the
+contract exists, no live transport, which is what makes "RO drafts, you send"
+structural); the three read tools are live-backed but the remaining agent tool `run`
+implementations in `agent/tools/index.ts` are **Phase-1 placeholders** returning
+`{ todo: "phase 2" }`; and the deterministic **PII / privacy scan inside the quality
+gate is a stub** (the no-send scan, the voice blocklist, and the LLM truth gate are
+real and fail closed). Full accounting in [`docs/PRD.md`](docs/PRD.md).
 
 ## Getting started
 

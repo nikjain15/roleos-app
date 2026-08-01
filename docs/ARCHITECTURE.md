@@ -197,8 +197,9 @@ This is the architectural heart, and it is defended three ways so no single chan
 
 ## 11. Testing surfaces
 
-- Unit / invariant / stress: 51 unit files, 4 invariant files, 1 stress harness (>320 `it/test` cases).
-- Live E2E: `tests/e2e/live/` (>100 test cases), including a real prompt-injection-through-a-CV test, cross-user RLS probe, a11y sweep, and a production smoke spec against `ro.roleos.fyi`.
+- Unit / invariant / stress: 83 unit files, 4 invariant files, 1 stress harness, 503 `it/test` cases in total, all green via `npm test`.
+- **Prompt injection, what runs where.** On every pull request: `tests/unit/injection-guard.test.ts` drives the real quality gate and the real coverage judge with the model transport replaced by a model that fully OBEYS an injected CV, and asserts the shipped code fails closed (a truth judge steered out of its JSON contract yields `needs_your_eyes` + `unknown` confidence; a coverage verdict citing evidence it was never shown collapses to `gap`). End to end, against real models: `tests/e2e/live/injection.spec.ts`, which needs `E2E_LIVE_MODEL=1` plus local credentials and is **not** run by CI. The residual gap is named in `tests/unit/injection-guard.test.ts` itself: if retrieval admits an injected line as candidate evidence and the judge credits it, only the LLM truth gate stands in the way.
+- Live E2E: `tests/e2e/live/` (29 spec files, >100 test cases), including the prompt-injection-through-a-CV test above, a cross-user RLS probe, an a11y sweep, and a production smoke spec against `ro.roleos.fyi`. This suite is local/model-gated; CI runs the fast Playwright smoke (`tests/e2e/*.spec.ts`) only.
 - The build process audit matrix (`docs/AUDIT-DIMENSIONS.md`) defines 10 dimensions each slice must pass before its PR opens.
 
 ---
