@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { supabaseBrowser } from "@/lib/supabase/client";
 import TasteDimensions from "@/components/TasteDimensions";
+import DeleteMyData from "@/components/DeleteMyData";
 import {
   type Cadence,
   type NotifSettings,
@@ -177,6 +178,18 @@ export default function Settings() {
       <section className="mt-12 border-t border-bd pt-8">
         <h2 className="text-xl font-bold tracking-tight">How I&apos;m learning you</h2>
         <TasteDimensions />
+      </section>
+
+      <section className="mt-12 border-t border-bd pt-8">
+        <h2 className="text-xl font-bold tracking-tight">Your data</h2>
+        <p className="mt-2 text-tx2">
+          What I hold, where it goes, and how to take it back.{" "}
+          <Link href="/privacy" className="text-primary underline underline-offset-2">
+            Read the privacy notice
+          </Link>
+          . It names the gaps as well as the guarantees.
+        </p>
+        <DeleteMyData />
       </section>
     </main>
   );

@@ -42,8 +42,13 @@ async function fireDaily(env: Env) {
 // pre-draft truth-gated résumés for their top fresh pursues, queue them in the
 // Tracker "Ready" lane. Server-side: ≤1 hunt per user per 20h, tight caps,
 // stands down over cost budget. Drafts only — sending stays a human click.
+//
+// The same nightly slot runs the retention purge, which deletes the time-boxed
+// operational rows past the windows in lib/retention.ts (IP-keyed rate counters,
+// read notifications, old cost telemetry). It is the job that makes the windows
+// stated in docs/PRIVACY.md real rather than aspirational.
 async function fireNightly(env: Env) {
-  return Promise.all([hit(env, "/api/cron/hunt")]);
+  return Promise.all([hit(env, "/api/cron/hunt"), hit(env, "/api/cron/purge")]);
 }
 
 // Cron expressions (must match the "triggers" entries in wrangler.jsonc).
@@ -66,7 +71,7 @@ export default {
     );
   },
 
-  // Manual trigger for testing: GET /?secret=...[&only=ingest|digests|nudges|yc-sync|hunt]
+  // Manual trigger for testing: GET /?secret=...[&only=ingest|digests|nudges|yc-sync|hunt|purge]
   async fetch(req: Request, env: Env): Promise<Response> {
     const u = new URL(req.url);
     if (u.searchParams.get("secret") !== env.CRON_SECRET) {
@@ -84,7 +89,9 @@ export default {
               ? [await hit(env, "/api/cron/yc-sync")]
               : only === "hunt"
                 ? [await hit(env, "/api/cron/hunt")]
-                : await fireHourly(env);
+                : only === "purge"
+                  ? [await hit(env, "/api/cron/purge")]
+                  : await fireHourly(env);
     return new Response(JSON.stringify(r), { headers: { "content-type": "application/json" } });
   },
 };

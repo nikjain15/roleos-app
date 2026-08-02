@@ -12,7 +12,10 @@ import type { MirrorReaction } from "@/lib/onboarding-events";
  * minute one: one input → RO works (plain-English ticker) → her tappable read of
  * you beside jobs that re-rank when you correct her → save with a taste of the
  * work. Built on the design system (grape · Space Grotesk · ui/ primitives).
- * No signup wall; nothing persists until save (privacy §5.1). Voice per ro-voice.
+ * No signup wall. No PROFILE data persists until save (privacy §5.1); the run
+ * itself still writes an IP-keyed rate-limit row and a cost-telemetry row, which
+ * is why the copy below says "nothing is saved to an account" rather than the
+ * old, overstated "nothing is stored". See docs/PRIVACY.md. Voice per ro-voice.
  */
 
 type Match = {
@@ -510,7 +513,20 @@ export default function Onboarding() {
                 {!work.trim() && !attached && (
                   <button onClick={() => setWork(SAMPLE)} className="mt-3 text-small text-tx3 underline underline-offset-2">or use a sample</button>
                 )}
-                <p className="mt-4 text-small text-tx3">Nothing is stored unless you choose to save at the end.</p>
+                {/* Accurate version of the old "nothing is stored" line. Files are
+                    parsed in your browser (lib/parse-document), and nothing is saved to
+                    an account until you press save. The text DOES reach our server and
+                    Anthropic so RO can work, and a rate-limit row with your IP is
+                    written on every run, so the blanket claim was overstated. */}
+                <p className="mt-4 text-small text-tx3">
+                  Your file is read in your browser and nothing is saved to an account unless you
+                  choose to save at the end. To do the work, RO does send the text to our server and
+                  to Anthropic.{" "}
+                  <Link href="/privacy" className="underline underline-offset-2 hover:text-tx2">
+                    What we store, and for how long
+                  </Link>
+                  .
+                </p>
               </>
             )}
           </div>
@@ -649,7 +665,10 @@ export default function Onboarding() {
             ) : (
               <>
                 <Button className="flex-1" onClick={saveAndSignIn}>Save my results &mdash; free</Button>
-                <span className="hidden text-small text-tx3 sm:block">Nothing is stored unless you save. No password, ever.</span>
+                <span className="hidden text-small text-tx3 sm:block">
+                  Nothing is saved to an account unless you save. No password, ever.{" "}
+                  <Link href="/privacy" className="underline underline-offset-2 hover:text-tx2">Privacy</Link>
+                </span>
               </>
             )}
           </div>

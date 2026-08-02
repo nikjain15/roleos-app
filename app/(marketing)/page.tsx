@@ -89,6 +89,14 @@ export default function Landing() {
           Ask RO about a real posting
         </Link>
       </div>
+
+      {/* RoleOS reads CVs, so the notice is one click from the front door, not
+          buried in settings. It names the gaps as well as the guarantees. */}
+      <footer className="mt-16 border-t border-bd pt-6 text-sm text-tx3">
+        <Link href="/privacy" className="underline underline-offset-2 hover:text-tx2">
+          What RoleOS stores about you
+        </Link>
+      </footer>
     </main>
   );
 }

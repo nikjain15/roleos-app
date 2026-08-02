@@ -13,6 +13,101 @@
 
 ---
 
+## 2026-08-02 · Privacy foundations: a notice, a delete path, an enforced retention window
+
+Closes the engineering half of findings A1 and A2 in `docs/STAKEHOLDERS.md` §4. The
+per-item status and what remains open are tabulated there; this entry records why the
+shape is what it is.
+
+### The framing decision, taken first
+
+**The notice describes behaviour. It does not claim compliance.** Nik is not a lawyer, no
+data protection adviser has been engaged, and a confident "RoleOS is GDPR compliant" would
+be a false statement about a product that holds strangers' CVs. So `docs/PRIVACY.md` opens
+by saying no external review has taken place, says explicitly that no lawful-basis
+statement exists because writing one properly is a legal exercise that has not happened,
+and describes what the code does table by table. An accurate inventory from a solo builder
+is worth something. A compliance claim from one would be worth less than nothing.
+
+The same rule was applied to the product copy. Where the notice would have had to describe
+something aspirational, the feature was built instead or the sentence was dropped.
+
+### The promise at `/start` was inaccurate, and the copy was changed rather than the code
+
+"Nothing is stored unless you choose to save" was checked against the code before a word of
+the notice was written. The account-data half is true: `/api/onboard` writes no
+`master_profile`, `matches`, or `artifacts` row, and `lib/parse-document.ts` parses the
+file in the browser so the document itself never transits the server. The blanket half is
+false. Every anonymous run writes a `rate_events` row keyed by the caller's IP, and one
+`agent_runs` cost row per model call, and the profile text goes to Anthropic (and to the
+scraper, if a key is configured).
+
+**Decision: fix the sentence, not the behaviour.** The IP-keyed rate limit is the only
+thing standing between an anonymous Opus-class pipeline and anyone who wants to spend the
+budget; removing it to make a marketing line true would be a bad trade. The copy now says
+the file is read in the browser, that nothing is saved to an account until save, and that
+the text does reach our server and Anthropic. The narrower claim survives because it is
+true; the blanket one is gone.
+
+### Why deletion runs with the service role
+
+`db/migrations/0002_rls.sql` grants owners select, insert and update, and no DELETE. On
+`decision_events` it grants no delete or update at all, on purpose, so the behaviour log
+stays append-only. A browser client therefore cannot erase its own rows, which is why no
+delete control could have been bolted onto the settings page as a client-side call. The
+route authenticates from the session cookie, then deletes with the service role filtered
+`.eq(user_id, thatId)` on every statement. There is no user-id parameter on the route, so
+the widened privilege never widens *whose* rows are reachable.
+
+The auth record is deleted too, so the email address goes with the data. It is done after
+the explicit table sweep rather than relying on ON DELETE CASCADE alone, so the response
+can report exactly what was removed and a partial failure surfaces as a partial failure
+instead of a green tick.
+
+### Why retention is enforced from a constant, not written in prose
+
+The failure this repo already recorded once is a retention window that existed only in a
+spec. So the windows live in `lib/retention.ts`; the nightly purge deletes from
+`purgePlan()`; and `/privacy` renders the same array. Changing a number changes the notice
+and the job in the same commit. `tests/unit/retention.test.ts` asserts the job is actually
+wired to a schedule, because an unenforced window is exactly the thing that looks fine in
+review.
+
+**Deliberate asymmetry: the operational rows are time-boxed and the authored rows are
+not.** IP counters, read notifications and cost telemetry age out. The CV, the drafts, the
+tracker and the decision log stay for as long as the account does. Deleting someone's
+half-finished job hunt on a 12-month timer would be a privacy theatre that costs the user
+something real. The control offered instead is an immediate, complete delete button, and
+the notice states the asymmetry in those words rather than quoting a window it does not
+apply.
+
+### What was deliberately not done
+
+- **No terms of service, no DPIA, no lawful-basis statement, no transfer analysis.** All
+  four need someone qualified. Inventing them here would recreate the exact problem this
+  work exists to fix.
+- **No backup scrubbing.** Supabase point-in-time recovery holds a copy until it rolls
+  off. There is no application-code path to it and no manual procedure was invented to
+  imply otherwise. The notice says this plainly.
+- **No export ("download my data") path.** It is the natural companion to deletion and it
+  is not built. It was not claimed either.
+- **No consent banner and no cookie notice.** The app sets an auth session cookie and
+  nothing analytical. A banner that consents to nothing would be noise.
+- **`agent_runs` was not made deletable.** The FK is ON DELETE SET NULL, the rows hold
+  counts and money and never prompt text, and an unattributed billing record is worth
+  keeping. It is listed as a residual instead of quietly reclassified as not personal data.
+
+### The honesty mechanism, because good intentions decay
+
+Three places could have drifted apart and now cannot: the settings screen imports
+`NOT_COVERED_BY_DELETE` from the module the route deletes from, the privacy page imports
+`RETENTION_RULES` from the module the purge job reads, and
+`tests/invariants/delete-coverage.test.ts` fails CI if a migration adds a table that
+references `auth.users` and nobody decides whether deletion covers it. The alternative was
+a document that is true on the day it is written.
+
+---
+
 ## 2026-08-02 · Simulated adversarial stakeholder reviews
 
 Three reviews run in character against commit `df54881` on `main`: security and data

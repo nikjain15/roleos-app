@@ -35,7 +35,7 @@ would need, what they would own, and what they would stop.
 
 | Role | What they need from RoleOS | Decision they own | What they block on |
 |---|---|---|---|
-| **Data protection adviser / DPO** | The full data inventory: what `master_profile` holds (raw CV text, read at `agent/tools/index.ts:96-102`), what leaves for Anthropic and Cloudflare Workers AI, what `agent_runs` retains, what the Apify/Bright Data scraper path sends (`app/api/onboard/route.ts:84`). Plus the sub-processor list and the transfer basis. | Lawful basis for processing, the retention window, the sub-processor list, and whether a DPIA is required. | Ships nothing to a candidate outside the waitlist until there is a published privacy notice, a working deletion path, and a written retention period. All three are absent today. |
+| **Data protection adviser / DPO** | The full data inventory: what `master_profile` holds (raw CV text, read at `agent/tools/index.ts:96-102`), what leaves for Anthropic and Cloudflare Workers AI, what `agent_runs` retains, what the Apify/Bright Data scraper path sends (`app/api/onboard/route.ts:84`). Plus the sub-processor list and the transfer basis. | Lawful basis for processing, the retention window, the sub-processor list, and whether a DPIA is required. | Ships nothing to a candidate outside the waitlist until there is a published privacy notice, a working deletion path, and a written retention period. As of 2026-08-02 all three exist in code and are described in `docs/PRIVACY.md`, and none of them has been read by anyone qualified. What is still absent is the lawful-basis statement, the terms, and the review itself. |
 | **Security engineer** | The threat model for a product whose primary input is an attacker-controllable document, the RLS policy set, the secret inventory and rotation state, and CI's scanning coverage. | Whether the current injection posture (LLM truth gate plus one unit test, no code-level input defence) is acceptable for the data at risk. Whether secrets scanning is required before more contributors touch the repo. | Any change that widens what an ingested document can reach. Would block on the unrotated setup secrets still listed open in `docs/security-audit.md:47-48`. |
 | **Design partner (a real senior job-seeker, mid-hunt)** | Access to the live flow with their own CV, on their own phone, on a genuinely bad week. | Whether the five-gate flow is usable under stress, and whether the honesty posture reads as respect or as discouragement. Nobody but the author has an opinion on this today. | Nothing formally. In practice they block the claim that the emotional design works, which is currently an assertion by its author. |
 | **Employment / recruiting adviser** | The truth gate's actual behaviour on a real tailored resume, the negotiation gate's outputs, and the screening-answer path. | Whether RO's drafted claims survive contact with an ATS, a recruiter, and a background check. Whether "truth-gated" holds up against how employers actually read a CV. Whether anything RO drafts could expose a candidate to a misrepresentation claim. | Enabling the Gate 5 negotiation surface, and any live transport behind `app/api/dispatch`. |
@@ -53,7 +53,16 @@ injection gap without being asked. That habit is real and it is rare.
 
 There is no equivalent paragraph anywhere about the legal basis for holding a stranger's
 CV. There is no privacy notice, no terms, no retention period, and no deletion path
-(section 3 below). A reader who has just watched this codebase flag its own stubs will
+(section 3 below).
+
+> **Update, 2026-08-02.** Three of those four now exist: `docs/PRIVACY.md` and `/privacy`,
+> an enforced retention window (`lib/retention.ts` plus the nightly purge), and a working
+> deletion path (`app/api/account/delete/route.ts`). The lawful basis is still absent, and
+> the notice says so rather than papering over it. The paragraph above is left standing
+> because the *shape* of the risk it describes is the thing to keep in view: honesty about
+> code still does not imply anything was reviewed. See §4, "What changed for A1 and A2".
+
+A reader who has just watched this codebase flag its own stubs will
 reasonably conclude that anything unflagged was checked and found fine. It was not
 checked. It was never considered as a category.
 
@@ -114,8 +123,8 @@ problems would have produced changes nobody reviewed.
 
 | # | Rank | Finding | File that would fix it | Status |
 |---|---|---|---|---|
-| A1 | **P0** | No privacy notice, no terms, no statement of lawful basis anywhere in the app, while `app/(app)/start/page.tsx:513` promises "Nothing is stored unless you choose to save" and `app/api/save/route.ts` then persists the full CV. | new `app/(public)/privacy/page.tsx`, linked from `app/(app)/start/page.tsx:513` | OPEN |
-| A2 | **P0** | No deletion path and no retention window. `app/(app)/settings/page.tsx` has no delete control; no purge job exists in `cron/`; grep for retention or erasure across `app lib db` hits only spec prose. | new `app/api/account/delete/route.ts` plus a `app/(app)/settings/page.tsx` control | OPEN |
+| A1 | **P0** | No privacy notice, no terms, no statement of lawful basis anywhere in the app, while `app/(app)/start/page.tsx:513` promises "Nothing is stored unless you choose to save" and `app/api/save/route.ts` then persists the full CV. | new `app/(public)/privacy/page.tsx`, linked from `app/(app)/start/page.tsx:513` | **PARTLY CLOSED** (see below) |
+| A2 | **P0** | No deletion path and no retention window. `app/(app)/settings/page.tsx` has no delete control; no purge job exists in `cron/`; grep for retention or erasure across `app lib db` hits only spec prose. | new `app/api/account/delete/route.ts` plus a `app/(app)/settings/page.tsx` control | **CLOSED as engineering, OPEN as review** (see below) |
 | A3 | P1 | No code-level prompt-injection defence on the ingest path. `lib/parse-document.ts:31-36` extracts PDF text and `app/api/onboard/route.ts:99-108` concatenates it into prompts with no delimiting or provenance marking. `runGuardrails` (`agent/quality-gate.ts:161-172`) scans output only, never input. | new `lib/untrusted.ts`, applied at `app/api/onboard/route.ts:108` | OPEN, already named in `docs/FDE_JOURNEY.md` §2 |
 | A4 | P1 | The stubbed PII scan is scored as a pass. `agent/quality-gate.ts:169-171` admits the stub; `computeConfidence` (`:122`) reads `guardrailsOk` as a satisfied hard gate, so a draft leaking a third party's phone number can still score `strong`. | `agent/quality-gate.ts:140-154` (detectors) or `:122` (cap at `weak` while stubbed) | OPEN |
 | A5 | P1 | No secret scanning and no SAST in CI. `.github/workflows/ci.yml` covers types, lint, deps, tests, and `npm audit` only. `docs/security-audit.md:47-48` still lists unrotated setup secrets as open. | `.github/workflows/ci.yml` (gitleaks + CodeQL) | OPEN |
@@ -137,6 +146,65 @@ problems would have produced changes nobody reviewed.
 | C7 | P2 | No `loading.tsx` and no `not-found.tsx` anywhere in `app/`. Route transitions hold blank, and a stale artifact link (which this product generates) gets the unstyled Next.js 404, outside the design system `README.md:150` calls non-negotiable. `app/error.tsx:32` also offers only "Back to the feed", which is a login redirect for signed-out visitors. | new `app/not-found.tsx` and `app/(app)/loading.tsx` | OPEN |
 | C8 | P2 | The sharpness meter grades the person, not the input. `app/(app)/start/page.tsx:505-508` renders "sharpness 1 of 4" beside the box where someone just pasted their career. It measures how many sources were supplied; it reads as a verdict on the material, and the material is them. | `app/(app)/start/page.tsx:506` (relabel to a source count) | OPEN |
 | C9 | P2 | `app/(app)/start/page.tsx:100` hard-redirects anyone with saved matches away from `/start` with no message. Someone whose situation changed and who deliberately came back to start over is bounced without explanation or a pointer to `/goal`. | `app/(app)/start/page.tsx:100` | OPEN |
+
+### What changed for A1 and A2 (2026-08-02)
+
+The status column above no longer reads OPEN for the two P0 data-protection items. What
+changed is code and a written notice. What did **not** change is the review status: no
+lawyer, no DPO, and no data protection adviser has read any of it. The approvals list in
+§3 is unchanged and still reads zero. These two items moved from "nothing exists" to
+"something honest exists and nobody qualified has checked it", which is a real improvement
+and is not the same thing as being closed.
+
+**A1, partly closed.**
+
+- `docs/PRIVACY.md` is the canonical notice, and `app/(public)/privacy/page.tsx` renders it
+  in the product. It carries the real inventory (table by table, why each exists, how long
+  it stays), the sub-processor list, what deletion does and does not reach, and an opening
+  paragraph stating plainly that no external review has taken place.
+- It is linked from the onboarding screen, the settings screen, and the marketing footer.
+- **Still open:** no lawful-basis statement, because writing one properly is a legal
+  exercise. The notice says so in those words rather than inventing one. No terms of
+  service. No DPIA. No transfer-basis analysis. Item 1 of the §3 approvals list is
+  untouched.
+
+**A1's underlying copy defect is fixed, and the promise was indeed inaccurate.** The line
+at `app/(app)/start/page.tsx` claimed "Nothing is stored unless you choose to save". The
+account-data half of that was true: `/api/onboard` writes no profile, match, or artifact
+row. The blanket half was not. Every anonymous onboarding run writes a `rate_events` row
+keyed by the caller's IP address (`lib/rate-limit.ts`) and one `agent_runs` cost row per
+model call, and the profile text is sent to Anthropic and, when a scraper key is set, to
+Apify or Bright Data. The copy was changed rather than the behaviour, because the
+behaviour is defensible and the sentence was not.
+
+**A2, closed as engineering.**
+
+- `app/api/account/delete/route.ts` plus `lib/account-delete.ts` delete all eighteen
+  user-owned tables and then the Supabase Auth record. The user id comes from the session
+  cookie and the route has no user-id parameter, so one account cannot delete another's.
+  It uses the service role because RLS grants users no DELETE on most of these tables and
+  `decision_events` is deliberately append-only, which is precisely why no client-side
+  delete was ever possible.
+- `components/DeleteMyData.tsx` is the settings control, with typed confirmation, and it
+  renders `NOT_COVERED_BY_DELETE` from the same module the route deletes from, so it
+  cannot claim a cleaner sweep than the code performs.
+- Retention: `lib/retention.ts` holds the windows, `app/api/cron/purge/route.ts` deletes on
+  them, and `cron/worker.ts` calls it nightly at 02:30 UTC. Four rules: `rate_events` and
+  `index_ask_events` at 7 days (they hold IP addresses), read or dismissed `notifications`
+  at 90 days, `agent_runs` at 180 days. The privacy page renders the same constants, so a
+  window nothing enforces cannot appear in the notice. That was the specific failure this
+  document recorded.
+- Tests: `tests/unit/account-delete.test.ts` (right rows, every statement filtered to one
+  user, idempotent, no silent skips), `tests/unit/retention.test.ts` (cutoff maths, the
+  authored tables are deliberately not on a timer, the job is actually wired), and
+  `tests/invariants/delete-coverage.test.ts` (a future migration adding a user-owned table
+  fails CI unless someone decides about deletion).
+- **Still open:** the CV and drafts have no time limit while the account exists, by
+  decision rather than by omission. `agent_runs` cost rows survive with a NULL user id.
+  IP-keyed counters are not deletable per user because they are not keyed by user. Supabase
+  backups are not reachable from application code and there is no manual scrubbing
+  procedure. The delete path has not been executed against the production database. Item 2
+  of the §3 approvals list is unchanged: nobody has verified this end to end but its author.
 
 ### Where Nik would defend the design
 

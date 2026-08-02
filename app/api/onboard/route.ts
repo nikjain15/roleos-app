@@ -28,9 +28,14 @@ const DISTILL_OVER_CHARS = 3500;
  * The "wow": RO narrates as she scans 557 roles, then delivers the mirror (reads
  * you back + one insight) and your matches with her reasoning. SSE.
  *
- * Privacy (architecture.md §3.2): nothing persists pre-signup. This route reads
- * global role data only and returns RO's work in the response — it saves nothing.
- * No send capability (human-gated-outward holds).
+ * Privacy (architecture.md §3.2, docs/PRIVACY.md): no PROFILE data persists
+ * pre-signup. This route reads global role data only and returns RO's work in the
+ * response; it writes no profile, match, or artifact row. Two operational rows are
+ * still written on every run and the notice says so: a `rate_events` row keyed by
+ * the caller's IP (the limiter below) and one `agent_runs` cost row per model call
+ * (token counts and money only, never prompt text). The profile text itself is
+ * sent to Anthropic, and to the scraper if a LinkedIn URL is supplied and a key is
+ * configured. No send capability (human-gated-outward holds).
  */
 export async function POST(req: Request): Promise<Response> {
   // H3: the most expensive PUBLIC path (full matching pipeline) — per-IP limit.
