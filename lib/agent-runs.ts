@@ -1,5 +1,6 @@
 import { supabaseService } from "@/lib/supabase/service";
 import { checkCostBudget } from "@/lib/cost-budget";
+import { checkQualityHealth } from "@/lib/quality-health";
 import type { AgentRunRecord } from "@/agent/registry";
 import type { GateVerdict } from "@/agent/quality-gate";
 import type { RoutingTrace } from "@/agent/skills/run";
@@ -28,7 +29,17 @@ export async function logAgentRuns(
   try {
     const db = supabaseService();
     const judge_verdict = meta.judge
-      ? { status: meta.judge.status, truth: meta.judge.truth, critic: meta.judge.critic }
+      ? {
+          status: meta.judge.status,
+          truth: meta.judge.truth,
+          critic: meta.judge.critic,
+          // SH3: the confidence band is recorded on the row so the rolling
+          // quality-health check (lib/quality-health.ts) can compute an
+          // unknown-confidence rate. A prompt change can keep `status` passing
+          // while collapsing confidence, and that is still RO getting worse.
+          confidence: meta.judge.confidence,
+          privacy: meta.judge.guardrails.privacy.status,
+        }
       : null;
     const rows = runs.map((r) => {
       // Speed (SUQS) + the routing decision ride in the existing trace jsonb,
@@ -50,6 +61,11 @@ export async function logAgentRuns(
     });
     await db.from("agent_runs").insert(rows);
     await checkCostBudget(); // H5: rolling-24h budget alert (throttled, never throws)
+    // SH3: rolling quality-health check. Emits a `quality_health.breached` line
+    // when RO's own gate stops vouching for its output at the rate that means
+    // something is wrong. Throttled, best-effort, never throws. Nothing pages on
+    // it yet, and lib/quality-health.ts says so rather than implying otherwise.
+    await checkQualityHealth();
   } catch {
     /* never block the user on telemetry */
   }

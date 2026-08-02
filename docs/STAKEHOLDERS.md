@@ -36,7 +36,7 @@ would need, what they would own, and what they would stop.
 | Role | What they need from RoleOS | Decision they own | What they block on |
 |---|---|---|---|
 | **Data protection adviser / DPO** | The full data inventory: what `master_profile` holds (raw CV text, read at `agent/tools/index.ts:96-102`), what leaves for Anthropic and Cloudflare Workers AI, what `agent_runs` retains, what the Apify/Bright Data scraper path sends (`app/api/onboard/route.ts:84`). Plus the sub-processor list and the transfer basis. | Lawful basis for processing, the retention window, the sub-processor list, and whether a DPIA is required. | Ships nothing to a candidate outside the waitlist until there is a published privacy notice, a working deletion path, and a written retention period. As of 2026-08-02 all three exist in code and are described in `docs/PRIVACY.md`, and none of them has been read by anyone qualified. What is still absent is the lawful-basis statement, the terms, and the review itself. |
-| **Security engineer** | The threat model for a product whose primary input is an attacker-controllable document, the RLS policy set, the secret inventory and rotation state, and CI's scanning coverage. | Whether the current injection posture (LLM truth gate plus one unit test, no code-level input defence) is acceptable for the data at risk. Whether secrets scanning is required before more contributors touch the repo. | Any change that widens what an ingested document can reach. Would block on the unrotated setup secrets still listed open in `docs/security-audit.md:47-48`. |
+| **Security engineer** | The threat model for a product whose primary input is an attacker-controllable document, the RLS policy set, the secret inventory and rotation state, and CI's scanning coverage. | Whether the current injection posture is acceptable for the data at risk. As of 2026-08-02 there IS a code-level input defence (`lib/untrusted.ts`, applied centrally in `agent/skills/run.ts`) and a real PII scan (`lib/privacy-scan.ts`), and neither has been reviewed by anyone who did not write them. Whether the envelope-plus-screen posture is sufficient, and whether CodeQL should be deploy-blocking, are still their calls. | Any change that widens what an ingested document can reach. Would block on the unrotated setup secrets still listed open in `docs/security-audit.md:47-48`. |
 | **Design partner (a real senior job-seeker, mid-hunt)** | Access to the live flow with their own CV, on their own phone, on a genuinely bad week. | Whether the five-gate flow is usable under stress, and whether the honesty posture reads as respect or as discouragement. Nobody but the author has an opinion on this today. | Nothing formally. In practice they block the claim that the emotional design works, which is currently an assertion by its author. |
 | **Employment / recruiting adviser** | The truth gate's actual behaviour on a real tailored resume, the negotiation gate's outputs, and the screening-answer path. | Whether RO's drafted claims survive contact with an ATS, a recruiter, and a background check. Whether "truth-gated" holds up against how employers actually read a CV. Whether anything RO drafts could expose a candidate to a misrepresentation claim. | Enabling the Gate 5 negotiation surface, and any live transport behind `app/api/dispatch`. |
 | **Support (whoever answers when it goes wrong)** | A runbook for "RO got my history wrong", "I want my data deleted", and "I applied with a draft that had an error in it". | The escalation path and the correction path. | Real users. There is no support surface, no contact route in the app, and no runbook. |
@@ -106,7 +106,7 @@ The order that matters:
 
 1. Privacy notice, retention window, and deletion path. These are prerequisites, not
    improvements, and items 1 to 3 above are cheap relative to what they de-risk.
-2. Secret scanning in CI, before the repo takes another contributor.
+2. ~~Secret scanning in CI, before the repo takes another contributor.~~ Done 2026-08-02: gitleaks over the full history, blocking. CodeQL runs but is not deploy-blocking until its first findings are triaged. The unrotated setup secrets in `docs/security-audit.md` are still open, and scanning does not rotate them.
 3. A design partner. This one costs nothing but asking, and it is the only item on the
    list that can tell the author whether the product's central bet is right.
 4. Everything else after there is a reason to believe anyone wants this.
@@ -125,13 +125,13 @@ problems would have produced changes nobody reviewed.
 |---|---|---|---|---|
 | A1 | **P0** | No privacy notice, no terms, no statement of lawful basis anywhere in the app, while `app/(app)/start/page.tsx:513` promises "Nothing is stored unless you choose to save" and `app/api/save/route.ts` then persists the full CV. | new `app/(public)/privacy/page.tsx`, linked from `app/(app)/start/page.tsx:513` | **PARTLY CLOSED** (see below) |
 | A2 | **P0** | No deletion path and no retention window. `app/(app)/settings/page.tsx` has no delete control; no purge job exists in `cron/`; grep for retention or erasure across `app lib db` hits only spec prose. | new `app/api/account/delete/route.ts` plus a `app/(app)/settings/page.tsx` control | **CLOSED as engineering, OPEN as review** (see below) |
-| A3 | P1 | No code-level prompt-injection defence on the ingest path. `lib/parse-document.ts:31-36` extracts PDF text and `app/api/onboard/route.ts:99-108` concatenates it into prompts with no delimiting or provenance marking. `runGuardrails` (`agent/quality-gate.ts:161-172`) scans output only, never input. | new `lib/untrusted.ts`, applied at `app/api/onboard/route.ts:108` | OPEN, already named in `docs/FDE_JOURNEY.md` §2 |
-| A4 | P1 | The stubbed PII scan is scored as a pass. `agent/quality-gate.ts:169-171` admits the stub; `computeConfidence` (`:122`) reads `guardrailsOk` as a satisfied hard gate, so a draft leaking a third party's phone number can still score `strong`. | `agent/quality-gate.ts:140-154` (detectors) or `:122` (cap at `weak` while stubbed) | OPEN |
-| A5 | P1 | No secret scanning and no SAST in CI. `.github/workflows/ci.yml` covers types, lint, deps, tests, and `npm audit` only. `docs/security-audit.md:47-48` still lists unrotated setup secrets as open. | `.github/workflows/ci.yml` (gitleaks + CodeQL) | OPEN |
-| A6 | P1 | The dependency allowlist review window has lapsed. All 12 entries in `scripts/audit-gate.mjs` say "review 2026-08"; today is 2026-08-02. The gate has no date logic, so entries persist silently forever. | `scripts/audit-gate.mjs` (expiry field, fail past it) | OPEN |
+| A3 | P1 | No code-level prompt-injection defence on the ingest path. `lib/parse-document.ts:31-36` extracts PDF text and `app/api/onboard/route.ts:99-108` concatenates it into prompts with no delimiting or provenance marking. `runGuardrails` (`agent/quality-gate.ts:161-172`) scans output only, never input. | new `lib/untrusted.ts`, applied at `app/api/onboard/route.ts:108` | **CLOSED as engineering** (2026-08-02): `lib/untrusted.ts` + central application in `agent/skills/run.ts` and the truth judge. Containment and labelling, not a filter, and the docs say so |
+| A4 | P1 | The stubbed PII scan is scored as a pass. `agent/quality-gate.ts:169-171` admits the stub; `computeConfidence` (`:122`) reads `guardrailsOk` as a satisfied hard gate, so a draft leaking a third party's phone number can still score `strong`. | `agent/quality-gate.ts:140-154` (detectors) or `:122` (cap at `weak` while stubbed) | **CLOSED** (2026-08-02): `lib/privacy-scan.ts` is a real scan; `indeterminate` can never be read as a pass |
+| A5 | P1 | No secret scanning and no SAST in CI. `.github/workflows/ci.yml` covers types, lint, deps, tests, and `npm audit` only. `docs/security-audit.md:47-48` still lists unrotated setup secrets as open. | `.github/workflows/ci.yml` (gitleaks + CodeQL) | **PARTLY CLOSED** (2026-08-02): gitleaks over full history is a blocking CI job; CodeQL runs but is deliberately NOT deploy-blocking until its first findings are triaged |
+| A6 | P1 | The dependency allowlist review window has lapsed. All 12 entries in `scripts/audit-gate.mjs` say "review 2026-08"; today is 2026-08-02. The gate has no date logic, so entries persist silently forever. | `scripts/audit-gate.mjs` (expiry field, fail past it) | **CLOSED** (2026-08-02): expiry enforced in `scripts/audit-gate.mjs`; all 12 entries re-triaged and retired; allowlist now empty |
 | A7 | P1 | Server error detail is streamed to unauthenticated clients. `app/api/onboard/route.ts:207-212` sends `detail: e.message` on the public SSE path; Supabase and Anthropic errors carry schema and request internals. | `app/api/onboard/route.ts:211` (log it, drop it from the wire) | OPEN |
 | A8 | P2 | The rate limiter fails open on the most expensive public path. `lib/rate-limit.ts:73-76` allows on any storage error; `app/api/onboard/route.ts:37` is the only guard on an anonymous Opus-class pipeline with a 200,000-char input ceiling. | `lib/rate-limit.ts:73` (fail closed for `onboard`) | OPEN, deliberate |
-| B1 | **P0** | The enforced matching SLA does not measure the shipped retriever. `docs/EVALS.md:59-69` gates CI on precision@10 and MRR, but `evals/retrieval/live/retriever.ts:9` is TF-IDF while production is bge over pgvector. `capture.ts` exists to close this and has never run: `dataset.semantic.json` is absent and `capture.ts` has one commit. A bge regression passes CI green, and CI now gates deploy. | run `npm run eval:retrieval:capture`, commit `evals/retrieval/live/dataset.semantic.json`, score it in `run.ts` | OPEN |
+| B1 | **P0** | The enforced matching SLA does not measure the shipped retriever. `docs/EVALS.md:59-69` gates CI on precision@10 and MRR, but `evals/retrieval/live/retriever.ts:9` is TF-IDF while production is bge over pgvector. `capture.ts` exists to close this and has never run: `dataset.semantic.json` is absent and `capture.ts` has one commit. A bge regression passes CI green, and CI now gates deploy. | run `npm run eval:retrieval:capture`, commit `evals/retrieval/live/dataset.semantic.json`, score it in `run.ts` | **PARTLY CLOSED** (2026-08-02): the false claim is corrected everywhere and the gap is asserted in a test; the shipped retriever is still not measured |
 | B2 | P1 | Eval labels are LLM-generated but documented as human. `evals/retrieval/live/build-queries.ts:4-7` says relevance comes from "the human `archetype` label"; `archetype` is produced by `agent/skills/extract_role.ts:20`. The floor scores a retriever against labels written by the same model stack. | `evals/retrieval/live/build-queries.ts:4-7` and `docs/EVALS.md:59` (correct the claim), or hand-label a subset | OPEN |
 | B3 | P1 | Placeholder tool bodies resolve instead of throwing. `agent/tools/index.ts:179` returns `{ todo: "phase 2" }`. `liveTools()` filters them correctly, but `tools` is exported complete, so a future direct caller gets a silent wrong answer that is valid JSON and invisible to the quality gate. | `agent/tools/index.ts:179` (throw) | OPEN |
 | B4 | P1 | 29 live e2e specs never run automated. `playwright.config.ts:16` ignores `**/live/**` and CI runs only `npm run test:e2e`, so the deploy gate rests on two public pages plus a headers spec. The RLS probe, the a11y sweep, and the API contract spec all self-skip. | new scheduled workflow running `test:e2e:live` against a preview environment | OPEN |
@@ -205,6 +205,71 @@ behaviour is defensible and the sentence was not.
   backups are not reachable from application code and there is no manual scrubbing
   procedure. The delete path has not been executed against the production database. Item 2
   of the §3 approvals list is unchanged: nobody has verified this end to end but its author.
+
+### What changed for A3, A4, A5, A6 and B1 (2026-08-02, second pass)
+
+Same caveat as the A1/A2 update above, and it is the important one: **what changed is
+code. Nothing here has been reviewed by anyone who did not write it.** The approvals list
+in §3 still reads zero. A security engineer has still not looked at the document ingest
+path or the RLS policy set. "Closed as engineering" is not "closed".
+
+**A6, closed.** The dependency allowlist now has enforced expiry. Each entry needs a
+machine-readable `expires` date, the gate fails past it, and an expiry more than 180 days
+out is itself a failure. All twelve entries were re-triaged rather than renewed, and all
+twelve were retired: the eight `next` advisories were already fixed upstream in the
+15.5.x line installed here and `npm audit` no longer reports them; the three `postcss`
+advisories and the one `sharp` advisory have upstream fixes that `package.json`
+`overrides` now pulls through `next`'s pins. `npm audit` reports zero vulnerabilities,
+dev and prod. The allowlist is empty, and the expiry rule is unit-tested anyway
+(`tests/unit/audit-gate-expiry.test.ts`) so it is not dead code the day it ships.
+
+**A5, partly closed.** gitleaks scans the **full git history** on every push and pull
+request, in `ci.yml`, so a leak blocks production. `scripts/verify-secret-scan.sh` plants
+a canary and asserts the scanner fires, because a scanner nobody has seen fail is
+indistinguishable from no scanner. Two history findings were reviewed and are the same
+false positive (job-posting prose reading as a key assignment); the allowlist entry is
+that exact phrase, not the directory. **Still open:** CodeQL runs in its own workflow and
+is deliberately NOT deploy-blocking, because its first findings are untriaged by
+definition; and this does nothing about the unrotated setup secrets still listed in
+`docs/security-audit.md:47-48`, which is a human action.
+
+**A3, closed as engineering.** `lib/untrusted.ts` wraps candidate-supplied document text
+in a delimited, labelled untrusted-data envelope with an unguessable per-call boundary id,
+strips invisible-character smuggling (zero-width, bidi overrides, the Unicode tag block),
+defangs boundary-shaped tokens, and screens for known injection shapes. It is applied
+centrally in `agent/skills/run.ts`, so a new skill is covered the day it is written, and
+in the quality gate before the truth judge reads the master profile. The ingest route
+sanitises before persisting. **Still open, and stated in the module itself:** this is
+containment and labelling, not filtering. It does not delete the payload, because
+deleting matched lines from a real CV silently corrupts someone's career history. A novel
+payload passes the screen. The residual gap pinned in `tests/unit/injection-guard.test.ts`
+is unchanged and still pinned.
+
+**A4, closed.** The privacy scan is real (`lib/privacy-scan.ts`). It classifies each hit
+against the ground-truth profile: the candidate's own contact details pass, third-party
+personal data fails the guardrails, and payment cards, national identifiers and bank
+accounts fail regardless. Where it cannot classify (no ground truth) it returns
+`indeterminate`, which caps confidence below `strong`. That last part is the actual fix
+for the finding: the danger was never the missing detectors, it was a stub returning a
+boolean that `computeConfidence` read as a satisfied hard gate.
+
+**B1, partly closed and honestly so.** `capture.ts` still has not been run, because it
+needs live credentials. What changed is that nothing claims to gate the shipped retriever
+any more: the test names, the runner's output, and the `docs/EVALS.md` section that was
+headed "Matching-quality SLA" now all state what the lexical baseline catches and what it
+cannot. `runSemanticEval()` will score and gate `dataset.semantic.json` at the same floors
+the moment it is committed, and the absence of that file is asserted in the test suite
+rather than described in a comment. **Still open:** a bge regression can still reach
+production without any gate noticing.
+
+**SH8 and SH3, new.** `docs/runbooks/rollback.md` is a RoleOS-specific rollback runbook
+for the "gates are producing wrong output" scenario, with a blast-radius-ordered ladder,
+what cannot be rolled back, and a mandatory step turning the incident into a permanent
+eval case. `lib/quality-health.ts` names the number that means broken. **Still open, and
+this is the biggest one:** nothing pages anyone. The threshold emits a structured log line
+into Workers Logs with no alert attached, no rotation, and no escalation policy. In
+practice the first report of a bad prompt will come from a person. The runbook's own §6
+lists that and four other gaps rather than leaving them to be discovered mid-incident.
 
 ### Where Nik would defend the design
 

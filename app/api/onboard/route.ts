@@ -6,6 +6,8 @@ import distillProfile from "@/agent/skills/distill_profile";
 import { parseModelJson } from "@/lib/json";
 import { assessProfileInput, thinInputMessage } from "@/lib/profile-input";
 import { normalizeProfileText } from "@/lib/normalize-profile";
+import { sanitizeUntrusted, screenUntrusted } from "@/lib/untrusted";
+import { logWarn } from "@/lib/log";
 import { extractLinkedInUrl, getProfileFetcher } from "@/lib/profile-fetcher";
 import { extractGitHubUrl, fetchGitHubStructured, githubStructuredToText } from "@/lib/github-fetch";
 import { structureProfile } from "@/lib/profile-structure";
@@ -111,6 +113,29 @@ export async function POST(req: Request): Promise<Response> {
         // Strip extraction/boilerplate noise now — on the real content we match
         // on (the paste or the fetched profile) — for fewer tokens, same signal.
         profileText = normalizeProfileText(profileText);
+
+        // Input-side injection defence, ingest half (SH1 / finding A3). Strip the
+        // characters that exist ONLY to hide text from a human reader (zero-width
+        // marks, bidi overrides, the Unicode tag block) and defang anything shaped
+        // like a prompt boundary, BEFORE this text is persisted as the master
+        // profile or handed to any model. Everything a person could actually read
+        // in their own CV survives: this removes smuggling, not content.
+        //
+        // The delimiting + labelling half happens at every model-facing call site
+        // (agent/skills/run.ts and the quality gate's truth judge), because the
+        // envelope belongs in the prompt, not in the stored profile.
+        const ingest = sanitizeUntrusted(profileText);
+        profileText = ingest.text;
+        const screen = screenUntrusted(profileText);
+        if (screen.flagged || ingest.invisibleRemoved > 0 || ingest.boundariesDefanged > 0) {
+          // Signal ids and counts only. Never the document text: this is a
+          // stranger's CV and the log is not a place for it.
+          logWarn("onboard.untrusted_input_screened", {
+            signals: screen.signals,
+            invisible_removed: ingest.invisibleRemoved,
+            boundaries_defanged: ingest.boundariesDefanged,
+          });
+        }
 
         // For LONG profiles, a cheap Haiku pass distills to a compact, faithful
         // structured form before the expensive Opus calls (fewer input tokens,

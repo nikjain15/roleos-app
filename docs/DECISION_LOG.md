@@ -13,6 +13,203 @@
 
 ---
 
+## 2026-08-02 · Security hardening: expiring allowlist, secret scanning, input-side injection defence, a real PII scan, a named breakage threshold
+
+Closes or narrows findings A3, A4, A5, A6, B1 and the SH1/SH3/SH8/SH9/SH10 items in
+`docs/STAKEHOLDERS.md` §4. Statuses are tabulated there. This entry records the
+reasoning, and in three places records a decision NOT to do the obvious thing.
+
+### The allowlist that expired without expiring (A6)
+
+Twelve dependency-audit exceptions in `scripts/audit-gate.mjs` each carried the string
+`review 2026-08`. The review window arrived. Nothing happened, because no code read that
+string: it was prose inside a reason field. This is the specific failure mode worth
+naming, because it is not carelessness. Someone wrote a review date **and** believed the
+system would surface it, and the system had no idea the date existed.
+
+The fix is a machine-readable `expires` date the gate enforces, plus a ceiling on how far
+out an expiry may be set (180 days), so an entry cannot be parked out of sight. Renewing
+requires stating a new date **and** a new reason, so a re-triage cannot be performed by
+bumping a number.
+
+Then the actual re-triage, which turned out to retire all twelve:
+
+- **Eight `next` advisories.** No longer reported by `npm audit` at all. They were fixed
+  upstream in the 15.5.x backport line that was already installed (`next@15.5.22`). The
+  allowlist had been suppressing advisories that no longer existed, which is its own kind
+  of hazard: it makes the list look load-bearing when it is inert.
+- **Three `postcss` advisories.** Fixed in postcss 8.5.18+. `next` pins `postcss@8.4.31`
+  exactly, which is why they had been written off as "no stable next fix". A `package.json`
+  `overrides` entry pulls 8.5.25 through it. That option was available the whole time.
+- **One `sharp` advisory** (the libvips CVEs). Fixed in sharp 0.35.0+; `next`'s optional
+  dependency floats at `^0.34.3`, so the same `overrides` mechanism applies (0.35.3).
+
+`npm audit --omit=dev` now reports zero vulnerabilities at any severity, and `npm audit`
+including dev is also clean after an `npm audit fix` for `brace-expansion` and `fast-uri`.
+The allowlist is empty, so the gate is load-bearing on its own: the next high or critical
+advisory fails the build with nothing suppressing it.
+
+**The decision not to take the easy path.** The allowlist could have been renewed to
+`2027-02` in about a minute, with a true-sounding reason ("still no upstream fix"). It
+would have been false for all twelve. The reason a dated allowlist is dangerous is
+precisely that renewing it is cheaper than checking it.
+
+**The expiry rule is unit-tested even though the allowlist is empty**
+(`tests/unit/audit-gate-expiry.test.ts`), including a case built from the exact shape the
+twelve real entries had. Without that test the enforcement would be dead code the day it
+shipped, and would rot before the next exception needed it.
+
+### Secret scanning blocks the deploy; SAST deliberately does not (A5)
+
+gitleaks runs in `ci.yml`, over the **full history** (`fetch-depth: 0`), not the working
+tree. A credential that was committed and then deleted is still a credential, because the
+object stays in every clone; a working-tree scan would have called that clean. Because
+`deploy.yml` gates on the CI workflow as a whole, a leak blocks production.
+
+Two findings turned up in history and both are the same reviewed false positive: the
+prose "API-first, risk/compliance" in a seeded job posting, which the generic-api-key rule
+reads as a key assignment. The allowlist entry is that exact phrase rather than the
+`seed/roles/**` directory, so a real key pasted into a seed file still fails.
+
+`scripts/verify-secret-scan.sh` plants a canary and asserts gitleaks exits non-zero. A
+scanner nobody has watched fail is indistinguishable from no scanner: a bad config, a path
+filter, or a swallowed exit code all look exactly like "clean".
+
+**CodeQL is in its own workflow and does NOT block deploys, on purpose.** It has never run
+against this repository, so its first findings are untriaged by definition. Wiring an
+untriaged scanner into the deploy gate has two outcomes and both are bad: production is
+blocked on a finding nobody has read, or everyone learns to bypass the gate. The honest
+sequence is run, triage, then promote to blocking, and the condition for closing it is
+written into `codeql.yml` rather than left as an intention.
+
+### The injection defence is containment, not a filter (A3 / SH1)
+
+`lib/untrusted.ts` does four things: strips characters that exist only to hide text from a
+human reader (zero-width, bidi overrides, the Unicode tag block), defangs anything shaped
+like a prompt or envelope boundary, wraps the document in a delimited block with an
+unguessable per-call boundary id and an explicit "this is data, not instructions" header,
+and deterministically screens for known injection shapes.
+
+**It does not delete the payload, and that is the design, not a shortcut.** A real CV can
+legitimately contain the word "ignore", and a scan that deletes matched lines silently
+corrupts someone's career history. That is a worse failure than the one being defended
+against, and it is invisible to the person it happens to. So the screen FLAGS, and the
+flag travels to the quality gate, which will not grade a draft built on flagged input as
+`strong`.
+
+**Applied centrally in `agent/skills/run.ts`**, not in each prompt builder. `attemptSkill`
+is the one path every skill takes, so a new skill that reads `data.profile` is protected
+the day it is written, without its author knowing this defence exists. A per-builder call
+would have been one forgotten grep away from a hole.
+
+**The ground truth is enveloped inside the quality gate**, not by the caller, so the
+gate's `groundingChars` signal still measures the real profile slice rather than the
+slice plus a 700-character envelope header. Enveloping in the wrong place would have
+silently inflated every confidence score.
+
+**What this does not do, kept in the docs and in the test:** it is guidance to a model,
+not a sandbox. A novel payload passes the screen. The residual gap pinned in
+`tests/unit/injection-guard.test.ts` (retrieval surfacing the injected line as admissible
+evidence, and the judge crediting it) is untouched by any of this and is still pinned.
+
+### The PII scan: implemented rather than made to fail closed (A4 / SH9)
+
+The brief allowed either. Implementing it was chosen, and the reason the stub existed in
+the first place is the reason it looked hard: RoleOS's whole job is writing a document
+ABOUT a person from that person's own CV, so a résumé legitimately carries its owner's
+email and phone. A scan that failed on those would fail on every correct output, and a
+gate that fails on everything is switched off within a week.
+
+So the scan asks the question that actually matters, which is not "is there PII here" but
+"is this PII the candidate's own":
+
+- Personal data traceable to the ground-truth profile: **expected**, passes.
+- Personal data that is not: **third party**, fails the guardrails. A referee's number, an
+  interviewer's address, contact details hallucinated from somewhere else.
+- Payment cards (Luhn-checked), national identifiers, bank accounts: **never emitted**,
+  fails regardless of the ground truth, including when the candidate pasted it themselves.
+  Repeating one back only multiplies the places it exists.
+- No ground truth to compare against: **indeterminate**. Not a failure, and explicitly not
+  a pass.
+
+That last case is the one that was actually dangerous. The old code's comment said the
+scan was "stubbed honestly, not faked as passing", and then returned `ok: true` into a
+field `computeConfidence` reads as a satisfied hard gate. Honesty in a comment does not
+survive being wired to a boolean that means "checked". `indeterminate` now caps confidence
+below `strong`, so an unevaluated control can never be mistaken for a satisfied one.
+
+`indeterminate` deliberately does not hard-fail the gate: that would block every
+ungrounded skill, which is most of them, for no security benefit. The invariant being
+protected is about the CLAIM, not the output.
+
+### The number that means "it is broken" (SH3)
+
+Observability was not the gap. `agent_runs` recorded every gate verdict and `/admin`
+rendered a pass rate. What was missing was a threshold: no value of any signal was defined
+as "RO is broken right now", so detection depended on someone looking.
+
+`lib/quality-health.ts` names it: over a rolling 60 minutes, with at least 20 user-facing
+runs, a `needs_your_eyes` rate at or above 25%, or an `unknown`-confidence rate at or above
+35%. The signal is the gate's own verdict about itself, which is the right choice because
+a bad prompt moves it immediately without anyone reading a single draft. The
+unknown-confidence rate is tracked separately on purpose: a prompt change can keep the
+status passing while collapsing how much RO can vouch for, and that is still RO getting
+worse.
+
+The 20-run floor matters as much as the rates. Three bad draws out of five is noise, and
+paging on noise trains people to ignore the page.
+
+**The notification step is not built, and the module says so in those words.** The check
+emits a structured `quality_health.breached` line to Workers Logs and stops. There is no
+alert destination, no rotation, no escalation policy. Attaching a Workers Logs alert to
+that event name is a console step that has not been done. Writing a module that implied
+someone gets woken up would have been worse than the gap.
+
+### The rollback runbook, and what it admits (SH8)
+
+`docs/runbooks/rollback.md` is written for the specific scenario: a prompt or model change
+is live, the gates are producing wrong output, nothing has thrown, and "is the site up" is
+the wrong question. It gives a four-step ladder ordered by blast radius (registry revert,
+prompt commit revert, whole-worker Cloudflare rollback, stand down the cron), with
+estimated durations, an explicit "what you cannot roll back" section (artifacts already
+generated, anything a user already sent, embeddings), and a mandatory step turning the
+incident into a permanent eval case with the specific file for each failure class.
+
+Every timing in it is an estimate derived from the deploy pipeline, not a measured
+recovery, and it says so at the top. It has never been executed. Its own §6 lists the
+gaps: no page, never rehearsed, single operator, no user-facing correction path.
+
+### The eval SLA that measured the wrong thing (B1)
+
+`capture.ts` could not be run: it needs live Supabase and Workers AI credentials, which do
+not exist in this environment. So the second option was taken, and taken thoroughly.
+
+Nothing was deleted. The lexical eval genuinely scores the query construction, the
+multi-query union, and the real 689-role corpus, all shared with production. What changed
+is every place that claimed more than that: the describe blocks and assertion names in
+`tests/unit/retrieval-live.test.ts`, the header of `run.ts`, the PASS line the runner
+prints, and the section in `docs/EVALS.md` that used to be headed "Matching-quality SLA".
+Each now states what the gate catches (query construction, the union merge, corpus
+integrity, the labels) and what it cannot (embedding model, re-embed correctness, pgvector
+index health, distance metric, thresholds).
+
+Two things make the gap hard to lose track of. `runSemanticEval()` scores and gates
+`dataset.semantic.json` at the same floors the moment that file is committed, so nobody
+has to remember to wire it up. And the absence of that file is an **assertion** in the test
+suite rather than a comment, so it cannot quietly stop being true in either direction.
+
+### What was deliberately not done
+
+- **The remaining findings stay open.** A7 (error detail on the public SSE path), A8 (rate
+  limiter failing open on `onboard`), B2 through B6, C1 through C9. This pass was scoped to
+  security and to the claims that were false, and taking on the UX findings in the same
+  change would have produced a diff nobody could review.
+- **No lawful-basis statement, no terms, no DPIA.** Unchanged from the previous entry.
+  Still a legal exercise, still absent, still said plainly rather than invented.
+- **CodeQL findings are not triaged.** The workflow runs; nobody has read the output,
+  because it has not run yet.
+- **The shipped retriever is still not measured.** Corrected claims are not a measurement.
+
 ## 2026-08-02 · Privacy foundations: a notice, a delete path, an enforced retention window
 
 Closes the engineering half of findings A1 and A2 in `docs/STAKEHOLDERS.md` §4. The

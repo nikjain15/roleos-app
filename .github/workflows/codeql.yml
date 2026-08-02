@@ -1,0 +1,66 @@
+name: CodeQL
+
+# SH10 / finding A5, the SAST half. Deliberately a SEPARATE workflow from CI, and
+# the difference matters, so it is written down rather than left to be inferred:
+#
+#   • ci.yml gates production. deploy.yml triggers on the CI workflow's
+#     conclusion, so anything in ci.yml (typecheck, lint, import invariant,
+#     vitest, the H4 audit gate, and now the gitleaks secret scan) BLOCKS a
+#     deploy when it goes red.
+#   • This workflow does NOT block a deploy. It uploads results to the repository's
+#     code scanning tab and nothing else.
+#
+# That is a deliberate, temporary choice and not a claim that SAST is enforced.
+# CodeQL has never run against this repository, so its first findings are
+# untriaged by definition. Wiring an untriaged scanner straight into the deploy
+# gate would either block production on a finding nobody has read, or teach
+# everyone to bypass the gate. The honest sequence is: run it, triage the first
+# results, THEN move it into ci.yml as a blocking job.
+#
+# The follow-up is recorded in docs/DECISION_LOG.md and docs/STAKEHOLDERS.md as
+# open, with the specific condition for closing it: first-run alerts triaged, and
+# this job moved into ci.yml with a non-zero exit on any open high or critical.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  schedule:
+    # Weekly, so a newly published CodeQL query reaches this code without waiting
+    # for someone to push. Monday 05:17 UTC (off the hour, to dodge the rush).
+    - cron: "17 5 * * 1"
+
+concurrency:
+  group: codeql-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze:
+    name: Analyze (javascript-typescript)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+          # JS/TS needs no compilation: CodeQL extracts from source. This keeps
+          # the scan independent of the Next.js build, so a build change cannot
+          # silently reduce SAST coverage.
+          build-mode: none
+          # security-extended over the default suite: more precision-tolerant
+          # queries, which is the right trade for a product whose primary input
+          # is an attacker-controllable document.
+          queries: security-extended
+
+      - name: Perform CodeQL analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+          category: /language:javascript-typescript

@@ -26,6 +26,36 @@ jobs:
       - name: Dependency audit (H4 gate — fail on high/critical in prod deps)
         run: node scripts/audit-gate.mjs
 
+  secrets:
+    # SH10 / finding A5, secret scanning. Deliberately its own job in THIS file,
+    # because deploy.yml gates on the CI workflow as a whole: a leak therefore
+    # blocks production, it is not an advisory annotation somewhere else.
+    #
+    # Scans the FULL history, not the working tree. A credential that was
+    # committed and then deleted is still a credential, because the object stays
+    # in every clone; a working-tree scan would call that clean. fetch-depth: 0
+    # is what makes that possible.
+    #
+    # Config and the reviewed false-positive allowlist live in .gitleaks.toml.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Install gitleaks (pinned)
+        run: |
+          set -euo pipefail
+          VERSION=8.30.1
+          curl -sSfL -o gitleaks.tar.gz \
+            "https://github.com/gitleaks/gitleaks/releases/download/v${VERSION}/gitleaks_${VERSION}_linux_x64.tar.gz"
+          tar -xzf gitleaks.tar.gz gitleaks
+          sudo install -m 0755 gitleaks /usr/local/bin/gitleaks
+          gitleaks version
+      - name: Prove the scanner actually fires (canary)
+        run: bash scripts/verify-secret-scan.sh
+      - name: Secret scan (full history)
+        run: gitleaks git --no-banner --redact --config .gitleaks.toml .
+
   e2e:
     # D2/D3/D5/D7 harness — E2E persona flows, responsive, and axe a11y.
     # Separate job (own runner) so it never runs concurrently with the tsc/vitest

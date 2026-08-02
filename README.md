@@ -103,9 +103,18 @@ the hard way: the single outbound route `app/api/dispatch` **returns 501** (the
 contract exists, no live transport, which is what makes "RO drafts, you send"
 structural); the three read tools are live-backed but the remaining agent tool `run`
 implementations in `agent/tools/index.ts` are **Phase-1 placeholders** returning
-`{ todo: "phase 2" }`; and the deterministic **PII / privacy scan inside the quality
-gate is a stub** (the no-send scan, the voice blocklist, and the LLM truth gate are
-real and fail closed). Full accounting in [`docs/PRD.md`](docs/PRD.md).
+`{ todo: "phase 2" }`; and the **shipped bge/pgvector retriever is not scored by any
+CI gate** (`evals/retrieval/live/` scores a TF-IDF stand-in, and
+`tests/unit/retrieval-live.test.ts` now says so in its own name). Full accounting in
+[`docs/PRD.md`](docs/PRD.md).
+
+The PII / privacy scan that used to be listed here as a stub **is now real**
+(`lib/privacy-scan.ts`): it fails the guardrails on personal data that is not the
+candidate's own and on categories RO must never emit at all, and where it cannot
+classify a hit it returns `indeterminate`, which is never counted as a pass. There is
+also now an **input-side prompt-injection defence** (`lib/untrusted.ts`): candidate
+documents are delimited, labelled as untrusted data, stripped of invisible-character
+smuggling, and screened before any prompt is built from them.
 
 ## Getting started
 

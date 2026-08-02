@@ -11,11 +11,28 @@
  * single-query with a number") — and exits non-zero if multi-query F1 drops
  * below the floor or fails to beat single-query.
  *
- * The similarity is a TF-IDF lexical baseline (no creds needed); the production
- * bge/pgvector retriever is scored by the SAME metrics via capture.ts when
- * Supabase + Workers AI creds are available. See README.
+ * WHAT THIS DOES AND DOES NOT GATE (finding B1). The similarity used here is a
+ * TF-IDF LEXICAL BASELINE. Production retrieval is bge embeddings over pgvector.
+ * They are different algorithms over the same corpus, so:
+ *
+ *   • CATCHES: a regression in the query construction, the multi-query union and
+ *     its best-score-per-role merge, the corpus itself (a role dropped, an id
+ *     collision, a mangled title), and the labelled relevance sets. These are
+ *     shared with production and they are the things that break most often.
+ *   • DOES NOT CATCH: anything specific to the shipped retriever. A changed
+ *     embedding model, a botched re-embed, a broken pgvector index, a distance
+ *     metric flipped, a similarity threshold set wrong. None of that moves a
+ *     single number in this file.
+ *
+ * That matters more than it used to, because CI now gates production deploys. A
+ * green run on this page is NOT evidence that the shipped matcher still works.
+ *
+ * `runSemanticEval` below closes it, and it needs `dataset.semantic.json`, which
+ * capture.ts produces from a real credentialled run and which has never been
+ * generated. Until it is, this file reports the gap loudly rather than letting
+ * the lexical floor be read as a matching-quality SLA.
  */
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { evaluate, type RankedCase } from "../metrics.ts";
 import { loadCorpus } from "./corpus.ts";
@@ -80,6 +97,56 @@ export function runLiveEval() {
   return { ds, corpusSize: corpus.length, single, multi, singleWide, multiWide };
 }
 
+/**
+ * THE SHIPPED RETRIEVER (bge over pgvector), scored from a captured dataset.
+ *
+ * `runLiveEval` above scores a TF-IDF stand-in. Production does not use TF-IDF.
+ * The only way to score what actually ships, offline and without credentials in
+ * CI, is to capture the production rankings once with real creds
+ * (`npm run eval:retrieval:capture`) and commit the result.
+ *
+ * That capture has never been run: `dataset.semantic.json` is absent. This
+ * function is what turns the capture into a scored, gated number the moment it
+ * lands, so nobody has to remember to wire it up. Until then it returns null,
+ * and `tests/unit/retrieval-live.test.ts` states that gap in its own name rather
+ * than letting the lexical floor stand in for it.
+ */
+export interface SemanticCase {
+  id: string;
+  singleRanked: string[];
+  multiRanked: string[];
+  relevant: string[];
+}
+export interface SemanticDataset {
+  k: number;
+  capturedAt: string;
+  retriever: string;
+  cases: SemanticCase[];
+}
+
+export function semanticDatasetPath(): string {
+  return fileURLToPath(new URL("./dataset.semantic.json", import.meta.url));
+}
+
+export function hasSemanticDataset(): boolean {
+  return existsSync(semanticDatasetPath());
+}
+
+/** Score the captured production retriever, or null when no capture exists yet. */
+export function runSemanticEval() {
+  if (!hasSemanticDataset()) return null;
+  const ds = JSON.parse(readFileSync(semanticDatasetPath(), "utf8")) as SemanticDataset;
+  const single = evaluate(
+    ds.cases.map((c) => ({ id: c.id, ranked: c.singleRanked, relevant: c.relevant })),
+    ds.k,
+  );
+  const multi = evaluate(
+    ds.cases.map((c) => ({ id: c.id, ranked: c.multiRanked, relevant: c.relevant })),
+    ds.k,
+  );
+  return { ds, single, multi };
+}
+
 function main(): void {
   const { ds, corpusSize, single, multi, singleWide, multiWide } = runLiveEval();
 
@@ -133,8 +200,36 @@ function main(): void {
     process.exit(1);
   }
   console.log(
-    `\nPASS: precision@${ds.k} ${multi.meanPrecisionAtK.toFixed(3)} ≥ ${PRECISION_FLOOR}, MRR ${multi.mrr.toFixed(3)} ≥ ${MRR_FLOOR}; multi-query ≥ single on precision & recall@${POOL_K}\n`,
+    `\nPASS (LEXICAL BASELINE ONLY): precision@${ds.k} ${multi.meanPrecisionAtK.toFixed(3)} ≥ ${PRECISION_FLOOR}, MRR ${multi.mrr.toFixed(3)} ≥ ${MRR_FLOOR}; multi-query ≥ single on precision & recall@${POOL_K}`,
   );
+
+  const semantic = runSemanticEval();
+  if (!semantic) {
+    console.log(
+      `\nNOT MEASURED: the SHIPPED retriever (bge over pgvector) is not scored here.\n` +
+        `Everything above is the TF-IDF stand-in in retriever.ts. A real semantic\n` +
+        `regression would not move any number on this page. To close it, run\n` +
+        `  npm run eval:retrieval:capture\n` +
+        `with live Supabase + Workers AI creds and commit dataset.semantic.json.\n`,
+    );
+    return;
+  }
+  console.log(
+    `\n--- SHIPPED retriever (${semantic.ds.retriever}, captured ${semantic.ds.capturedAt}) ---\n` +
+      `multi-query  P@${semantic.ds.k}=${semantic.multi.meanPrecisionAtK.toFixed(3)}  MRR=${semantic.multi.mrr.toFixed(3)}\n` +
+      `single-query P@${semantic.ds.k}=${semantic.single.meanPrecisionAtK.toFixed(3)}  MRR=${semantic.single.mrr.toFixed(3)}\n`,
+  );
+  const semFails: string[] = [];
+  if (semantic.multi.meanPrecisionAtK < PRECISION_FLOOR)
+    semFails.push(
+      `semantic precision@${semantic.ds.k} ${semantic.multi.meanPrecisionAtK.toFixed(3)} < floor ${PRECISION_FLOOR}`,
+    );
+  if (semantic.multi.mrr < MRR_FLOOR)
+    semFails.push(`semantic MRR ${semantic.multi.mrr.toFixed(3)} < floor ${MRR_FLOOR}`);
+  if (semFails.length) {
+    console.error(`\nFAIL (shipped retriever):\n  - ${semFails.join("\n  - ")}\n`);
+    process.exit(1);
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) main();

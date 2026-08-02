@@ -1,0 +1,42 @@
+# gitleaks configuration for RoleOS (finding A5, SH10).
+#
+# CI runs gitleaks over the FULL git history on every push and pull request, and
+# a leak fails the build. History matters more than the working tree here: a
+# secret committed and then deleted is still a secret, because the object stays
+# in every clone forever. A working-tree-only scan would have called that clean.
+#
+# Scope note, stated plainly: gitleaks proves that no secret matching a known
+# pattern is in this repository's git objects. It does not prove that the secrets
+# which DO exist (set via `wrangler secret put` and GitHub Actions secrets) have
+# been rotated. `docs/runbooks/secret-rotation.md` owns that, and
+# `docs/security-audit.md` still lists unrotated setup secrets as open.
+
+[extend]
+useDefault = true
+
+[[rules]]
+  # Deliberate tripwire: this is not a detector for a real credential format, it
+  # exists so the gate itself can be proven to work. `scripts/verify-secret-scan.sh`
+  # writes a file containing this marker, runs gitleaks, and asserts a non-zero
+  # exit. A scanner nobody has ever seen fail is indistinguishable from no scanner.
+  id = "roleos-canary"
+  description = "RoleOS secret-scan canary (proves the gate fires)"
+  regex = '''ROLEOS_SECRET_SCAN_CANARY_[A-Za-z0-9]{8,}'''
+  tags = ["canary", "test"]
+
+# Reviewed false positives. One block per reason, so each can be deleted
+# independently and none of them silently widens another.
+
+[[allowlists]]
+  description = "Lockfile integrity hashes are tarball content digests, not credentials"
+  paths = ['''(^|/)package-lock\.json$''']
+
+[[allowlists]]
+  # seed/roles/**: public job postings that seed the `roles` table. The
+  # generic-api-key rule fires on the prose "API-first, risk/compliance" because
+  # it reads `API` followed by a slug as a key assignment. Reviewed 2026-08-02:
+  # job-description text, no credential. Kept to this exact phrase rather than
+  # allowlisting the seed corpus, so a real key pasted into a seed file still fails.
+  description = "Job-posting prose that reads as an API key assignment"
+  regexTarget = "match"
+  regexes = ['''API-first,\s*risk/compliance''']

@@ -1,6 +1,8 @@
 import { callModel, MeteredRunsError, meteredRunsOf } from "@/agent/registry";
 import type { AgentRunRecord } from "@/agent/registry";
 import { parseModelJson } from "@/lib/json";
+import { scanPrivacy, type PrivacyResult } from "@/lib/privacy-scan";
+import { untrusted, type UntrustedScreen } from "@/lib/untrusted";
 
 /**
  * THE QUALITY GATE (architecture.md §4.4) — nothing reaches the user raw.
@@ -36,6 +38,14 @@ export interface GateInput {
    * and just adds latency + spurious flags. The truth gate still governs.
    */
   voiceCritic?: boolean;
+  /**
+   * The input-side injection screen for the candidate-supplied document this
+   * output was generated from (`lib/untrusted.ts`, supplied by `agent/skills/run.ts`).
+   * A flagged input never blocks generation on its own, because a genuine CV can
+   * legitimately contain the words that trip a detector. It does mean the gate
+   * cannot call the result a clean `strong` pass.
+   */
+  untrustedInput?: UntrustedScreen;
 }
 
 export type GateStatus = "passed" | "needs_your_eyes";
@@ -64,6 +74,13 @@ export interface TruthVerdict {
 interface GuardrailResult {
   ok: boolean;
   failures: string[];
+  /**
+   * The deterministic privacy scan's verdict. `indeterminate` means the scan
+   * found personal data but had no ground truth to classify it against, so it
+   * could not be evaluated. That is NOT a pass, and `computeConfidence` treats it
+   * as such. See lib/privacy-scan.ts.
+   */
+  privacy: PrivacyResult;
 }
 
 interface CriticVerdict {
@@ -95,6 +112,17 @@ export interface ConfidenceSignals {
   revised: boolean;
   /** Length of the ground-truth slice the claims were checked against. null = none supplied. */
   groundingChars: number | null;
+  /**
+   * The privacy scan found personal data it could NOT classify, because no ground
+   * truth was supplied to compare against. The control did not fail and it did not
+   * pass: it could not be evaluated. Defaults to false.
+   */
+  privacyIndeterminate?: boolean;
+  /**
+   * The candidate-supplied document that produced this output tripped the
+   * input-side injection screen (`lib/untrusted.ts`). Defaults to false.
+   */
+  untrustedInputFlagged?: boolean;
 }
 
 /**
@@ -125,6 +153,12 @@ export function computeConfidence(s: ConfidenceSignals): { band: Confidence; sco
 
   // On a passing path, grade the strength of that pass.
   let score = 1;
+  // A control that could not be evaluated is not a control that passed. Both of
+  // these cap the band below `strong` outright rather than shaving the score,
+  // because the point is the CLAIM: RO must not tell someone a draft is strong
+  // when a hard gate was unverifiable or the source document was suspect.
+  if (s.privacyIndeterminate) score = Math.min(score, 0.7);
+  if (s.untrustedInputFlagged) score = Math.min(score, 0.7);
   if (s.revised) score -= 0.3; // the first draft needed fixing
   if (s.groundingChars !== null && s.groundingChars < GROUNDING_MIN_CHARS) score -= 0.35; // thin grounding
   if (s.criticReasons > 0) score -= 0.15; // critic passed with caveats
@@ -154,8 +188,8 @@ const NO_SEND_MARKERS: RegExp[] = [
 ];
 
 /** Exported for unit testing — the deterministic, network-free guardrail pass. */
-export function inspectGuardrails(output: string): GuardrailResult {
-  return runGuardrails({ skillId: "", output });
+export function inspectGuardrails(output: string, groundTruth?: string): GuardrailResult {
+  return runGuardrails({ skillId: "", output, groundTruth });
 }
 
 function runGuardrails(input: GateInput): GuardrailResult {
@@ -166,9 +200,19 @@ function runGuardrails(input: GateInput): GuardrailResult {
   for (const re of VOICE_BLOCKLIST) {
     if (re.test(input.output)) failures.push(`voice-blocklist: ${re}`);
   }
-  // truth-gate + privacy are deepened per-gate in Phase 3 (they need the real
-  // master_profile + a PII scan). Stubbed honestly here, not faked as passing.
-  return { ok: failures.length === 0, failures };
+  // PRIVACY (findings SH9 / A4). This used to be a comment saying the check was
+  // stubbed. A comment is not a control: `ok` still came back true, and
+  // `computeConfidence` reads `guardrailsOk` as a satisfied hard gate, so a draft
+  // leaking a third party's contact details could still band `strong`.
+  //
+  // It is now a real deterministic scan. It fails the guardrails on personal data
+  // that is not the candidate's own, and on categories RO must never emit at all.
+  // Where it CANNOT decide (no ground truth to compare against) it returns
+  // `indeterminate`, which does not fail the gate but is never counted as a pass:
+  // computeConfidence caps such a run below `strong`. See lib/privacy-scan.ts.
+  const privacy = scanPrivacy(input.output, input.groundTruth);
+  failures.push(...privacy.failures);
+  return { ok: failures.length === 0, failures, privacy };
 }
 
 const SHIP_CHECKLIST = `You are RO's quality critic. Grade the draft against RO's ship-checklist (ro-voice.html):
@@ -208,7 +252,16 @@ async function truthGate(
 ): Promise<{ verdict: TruthVerdict; run: AgentRunRecord }> {
   const { text, run } = await callModel(
     "critic",
-    { system: TRUTH_SYSTEM, prompt: `MASTER PROFILE:\n${groundTruth}\n\nDRAFT:\n${output}` },
+    {
+      system: TRUTH_SYSTEM,
+      // The master profile IS the candidate-supplied document, and the truth gate
+      // is the one judge whose verdict an injected CV most wants to steer. Envelope
+      // it (SH1 / A3): delimited, labelled as data, invisible-character smuggling
+      // stripped, boundary-shaped tokens defanged. Enveloped here rather than by the
+      // caller so `grounding` upstream still measures the real profile slice and not
+      // the envelope header.
+      prompt: `MASTER PROFILE:\n${untrusted(groundTruth, "candidate master profile")}\n\nDRAFT:\n${output}`,
+    },
     { skill: `truth:${skillId}` },
   );
   const o = parseModelJson<{ ok?: boolean; violations?: unknown }>(text);
@@ -255,6 +308,8 @@ async function gate(input: GateInput, runs: AgentRunRecord[]): Promise<GateVerdi
       truthViolations: 0,
       revised: false,
       groundingChars: grounding,
+      privacyIndeterminate: guardrails.privacy.status === "indeterminate",
+      untrustedInputFlagged: !!input.untrustedInput?.flagged,
     });
     return {
       status: "needs_your_eyes",
@@ -281,6 +336,8 @@ async function gate(input: GateInput, runs: AgentRunRecord[]): Promise<GateVerdi
       truthViolations: 0,
       revised: false,
       groundingChars: grounding,
+      privacyIndeterminate: guardrails.privacy.status === "indeterminate",
+      untrustedInputFlagged: !!input.untrustedInput?.flagged,
     });
     return {
       status: guardrails.ok ? "passed" : "needs_your_eyes",
@@ -326,7 +383,7 @@ async function gate(input: GateInput, runs: AgentRunRecord[]): Promise<GateVerdi
         {
           system:
             "Revise this JSON résumé to FIX the flagged claims: change each flagged line so it traces strictly to the master profile, or drop it. Do NOT invent anything new. Return the SAME JSON shape, JSON only.",
-          prompt: `FLAGGED (must fix):\n${truth.violations.join("\n")}\n\nMASTER PROFILE (only source of truth):\n${input.groundTruth}\n\nDRAFT JSON:\n${input.output}`,
+          prompt: `FLAGGED (must fix):\n${truth.violations.join("\n")}\n\nMASTER PROFILE (only source of truth):\n${untrusted(input.groundTruth, "candidate master profile")}\n\nDRAFT JSON:\n${input.output}`,
         },
         { skill: `truth-revise:${input.skillId}` },
       );
@@ -350,6 +407,8 @@ async function gate(input: GateInput, runs: AgentRunRecord[]): Promise<GateVerdi
       truthViolations: truthFinal ? truthFinal.violations.length : 0,
       revised,
       groundingChars: grounding,
+      privacyIndeterminate: guardrails.privacy.status === "indeterminate",
+      untrustedInputFlagged: !!input.untrustedInput?.flagged,
     });
     return {
       status: verdict.pass && guardrails.ok && truthOk2 ? "passed" : "needs_your_eyes",
@@ -398,6 +457,8 @@ async function gate(input: GateInput, runs: AgentRunRecord[]): Promise<GateVerdi
     truthViolations: truth ? truth.violations.length : 0,
     revised,
     groundingChars: grounding,
+    privacyIndeterminate: guardrails2.privacy.status === "indeterminate",
+    untrustedInputFlagged: !!input.untrustedInput?.flagged,
   });
 
   return {

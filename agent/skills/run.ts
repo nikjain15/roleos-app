@@ -17,6 +17,7 @@ import {
   TIER_LADDER,
   type Difficulty,
 } from "@/agent/routing";
+import { wrapUntrusted, type UntrustedScreen } from "@/lib/untrusted";
 import type { Skill, SkillInput } from "./skill";
 
 /**
@@ -87,12 +88,68 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
   }
 }
 
+/**
+ * The `data` fields that carry CANDIDATE-SUPPLIED DOCUMENT TEXT: a pasted CV, a
+ * scraped LinkedIn profile, a fetched GitHub README, a recruiter's screening
+ * question. Every one of these is attacker-controllable, and every one of them is
+ * interpolated straight into a prompt by some skill's `prompt()` builder.
+ *
+ * Enveloping them HERE rather than in each builder is deliberate: `attemptSkill`
+ * is the single path every skill takes, so a new skill that reads `data.profile`
+ * is protected the day it is written, without its author having to know that this
+ * defence exists. A per-builder call would have been one grep away from being
+ * forgotten. See lib/untrusted.ts for what the envelope does and does not do.
+ *
+ * `groundTruth` is deliberately NOT in this list. It is enveloped inside the
+ * quality gate instead, so the gate can still measure the size of the real
+ * grounding slice rather than the size of the slice plus the envelope header.
+ */
+const UNTRUSTED_DATA_FIELDS: { key: string; label: string }[] = [
+  { key: "profile", label: "candidate-supplied profile or CV" },
+  { key: "resumeText", label: "candidate-supplied CV text" },
+  { key: "question", label: "employer-supplied screening question" },
+  { key: "offer", label: "employer-supplied offer text" },
+];
+
+/**
+ * Wrap every untrusted document field in `input.data` and return the screen
+ * result for the whole input. Non-string and empty fields pass through untouched.
+ */
+export function envelopeUntrustedInput(input: SkillInput): {
+  safe: SkillInput;
+  screen: UntrustedScreen;
+} {
+  const signals: string[] = [];
+  const excerpts: string[] = [];
+  let data: Record<string, unknown> | null = null;
+
+  for (const { key, label } of UNTRUSTED_DATA_FIELDS) {
+    const raw = input.data[key];
+    if (typeof raw !== "string" || raw.length === 0) continue;
+    const env = wrapUntrusted(raw, { label: `${label} (${key})` });
+    data ??= { ...input.data };
+    data[key] = env.text;
+    for (const s of env.screen.signals) if (!signals.includes(s)) signals.push(s);
+    excerpts.push(...env.screen.excerpts);
+  }
+
+  return {
+    safe: data ? { ...input, data } : input,
+    screen: { flagged: signals.length > 0, signals, excerpts },
+  };
+}
+
 async function attemptSkill(
   skill: Skill,
   input: SkillInput,
   allRuns: AgentRunRecord[],
 ): Promise<SkillRunResult> {
-  const { system, user } = skill.prompt(input);
+  // Input-side injection defence (SH1 / finding A3). The candidate's document is
+  // delimited, labelled as data, stripped of invisible smuggling characters, and
+  // screened BEFORE any prompt is built from it. The screen result rides along to
+  // the gate, which refuses to grade a draft built on flagged input as `strong`.
+  const { safe: safeInput, screen: inputScreen } = envelopeUntrustedInput(input);
+  const { system, user } = skill.prompt(safeInput);
 
   // Hand the model the skill's DECLARED tools that are actually DB-backed
   // (liveTools filters out phase-2 placeholders). When a skill declares live
@@ -172,6 +229,7 @@ async function attemptSkill(
       skipCritic: skill.gate === "shape_only",
       voiceCritic: skill.voiceCritic,
       groundTruth: typeof input.data.groundTruth === "string" ? input.data.groundTruth : undefined,
+      untrustedInput: inputScreen,
     });
 
     // Meter EVERY hop: the generation (+ repair) above, now its gate calls too.
