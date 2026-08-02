@@ -1,4 +1,12 @@
-import { callModel, jobSpec, type AgentRunRecord, type AnthropicJob } from "@/agent/registry";
+import {
+  callModel,
+  jobSpec,
+  MeteredRunsError,
+  meteredRunsOf,
+  type AgentRunRecord,
+  type AnthropicJob,
+} from "@/agent/registry";
+import { logAgentRuns } from "@/lib/agent-runs";
 import { inferViaConduit } from "@/agent/conduit";
 import { runQualityGate, type GateVerdict } from "@/agent/quality-gate";
 import { liveTools } from "@/agent/tools";
@@ -57,6 +65,33 @@ function dynamicEligible(skill: Skill): boolean {
 const MAX_ESCALATIONS = TIER_LADDER.length;
 
 export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRunResult> {
+  const allRuns: AgentRunRecord[] = [];
+  try {
+    return await attemptSkill(skill, input, allRuns);
+  } catch (err) {
+    // A provider outage that outlived the retry ladder (agent/retry.ts). RO does
+    // NOT invent an answer here: the failure still travels up and the caller
+    // still reports honestly. What we refuse to lose is the SPEND. Every hop
+    // already paid for is written to agent_runs right here, so the rolling-24h
+    // budget guard (lib/cost-budget.ts) counts failed work too and a job that
+    // keeps dying late in its tool loop cannot walk past the budget unseen.
+    // logAgentRuns is best-effort and never throws.
+    // Only hops that actually consumed tokens: a failure with no usage block is
+    // real spend of zero, and writing an empty row would just be noise in the
+    // budget query.
+    const spent = [...allRuns, ...meteredRunsOf(err)].filter(
+      (r) => r.input_tokens > 0 || r.output_tokens > 0,
+    );
+    if (spent.length) await logAgentRuns(input.userId || null, spent, { skill: skill.id });
+    throw new MeteredRunsError(err instanceof Error ? err.message : String(err), spent, err);
+  }
+}
+
+async function attemptSkill(
+  skill: Skill,
+  input: SkillInput,
+  allRuns: AgentRunRecord[],
+): Promise<SkillRunResult> {
   const { system, user } = skill.prompt(input);
 
   // Hand the model the skill's DECLARED tools that are actually DB-backed
@@ -89,7 +124,6 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
   }
 
   const tiers: AnthropicJob[] = [];
-  const allRuns: AgentRunRecord[] = [];
   let verdict!: GateVerdict;
 
   for (let attempt = 0; ; attempt++) {
@@ -125,6 +159,11 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
       if (skill.expects(repair.text)) output = repair.text;
     }
 
+    // Meter the generation (+ repair) BEFORE the gate runs. If the gate's own
+    // model calls then die at the provider, this attempt's spend is already
+    // banked and travels out on the error instead of vanishing.
+    allRuns.push(run, ...repairRuns);
+
     verdict = await runQualityGate({
       skillId: skill.id,
       output,
@@ -135,8 +174,8 @@ export async function runSkill(skill: Skill, input: SkillInput): Promise<SkillRu
       groundTruth: typeof input.data.groundTruth === "string" ? input.data.groundTruth : undefined,
     });
 
-    // Meter EVERY hop: this attempt's generation (+ repair) and its gate calls.
-    allRuns.push(run, ...repairRuns, ...verdict.runs);
+    // Meter EVERY hop: the generation (+ repair) above, now its gate calls too.
+    allRuns.push(...verdict.runs);
 
     // Escalate when the gate is not satisfied OR it passed but only at WEAK
     // confidence, and a stronger tier exists, within the hard attempt bound.

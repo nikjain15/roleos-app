@@ -2,6 +2,12 @@ import Anthropic from "@anthropic-ai/sdk";
 import registry from "./registry.json" assert { type: "json" };
 import { env } from "@/lib/env";
 import type { Tool, ToolContext } from "@/agent/tools";
+import {
+  createRetryRunner,
+  retryBudgetFor,
+  ProviderCallError,
+  type RetryDeps,
+} from "@/agent/retry";
 
 /**
  * The model registry + the single `callModel(job, input)` path that every
@@ -12,6 +18,12 @@ import type { Tool, ToolContext } from "@/agent/tools";
  * Per the Claude API reference: Opus 4.8 / Sonnet 4.6 do NOT accept
  * temperature/top_p/top_k or budget_tokens (they 400). Depth is steered with
  * `output_config.effort` + adaptive thinking. Haiku takes neither — plain call.
+ *
+ * Provider resilience (agent/retry.ts) wraps the round-trip inside this path,
+ * so every skill, every gate call and every tool-loop turn inherits the same
+ * bounded retry ladder. It sits in FRONT of the quality gate, it does not
+ * replace it: a blip is absorbed, a real outage still surfaces honestly as a
+ * `MeteredProviderError` carrying the tokens already spent.
  */
 
 export type AnthropicJob = "reason" | "draft" | "code" | "quick_tag" | "critic";
@@ -84,6 +96,63 @@ function costUsd(spec: JobSpec, inTok: number, outTok: number): number {
 }
 
 /**
+ * A model call that failed at the provider, carrying the metered record for the
+ * tokens it DID consume before failing.
+ *
+ * This exists because of a real accounting hole. `callModel` accumulates
+ * tokens across tool-loop turns and only builds an `AgentRunRecord` on the
+ * SUCCESS return. If turn 4 of a 6-turn loop fails, turns 1-3 were billed by
+ * the provider but the throw discarded the counters, so no `agent_runs` row was
+ * ever written and `checkCostBudget`'s rolling-24h sum never saw the spend.
+ * Retry makes that hole wider (more billed round-trips per failure), so the
+ * partial record travels with the error and the caller meters it exactly like a
+ * successful run. The daily budget guard therefore counts failed work too, and
+ * cannot be walked past by a job that keeps failing late in its loop.
+ *
+ * Note on failed ATTEMPTS: a provider error response carries no usage, so a
+ * 429 or a 5xx contributes 0 tokens and that is honest, not a gap. What is
+ * recorded is every turn that actually returned a usage block.
+ */
+export class MeteredProviderError extends ProviderCallError {
+  readonly run: AgentRunRecord;
+
+  constructor(cause: ProviderCallError, run: AgentRunRecord) {
+    super(cause.message, {
+      kind: cause.kind,
+      status: cause.status,
+      attempts: cause.attempts,
+      retryable: cause.retryable,
+      cause: cause.cause,
+    });
+    this.name = "MeteredProviderError";
+    this.run = run;
+  }
+}
+
+/**
+ * A failure further up the stack that is still carrying metered runs (the gate
+ * had already paid for a critic call, the runner had already paid for an
+ * earlier tier, and so on). Same principle as MeteredProviderError: spend that
+ * happened must reach `agent_runs` even when the job as a whole did not finish.
+ */
+export class MeteredRunsError extends Error {
+  readonly runs: AgentRunRecord[];
+
+  constructor(message: string, runs: AgentRunRecord[], cause?: unknown) {
+    super(message, { cause });
+    this.name = "MeteredRunsError";
+    this.runs = runs;
+  }
+}
+
+/** Every metered run an error is carrying, whatever shape it arrived in. */
+export function meteredRunsOf(err: unknown): AgentRunRecord[] {
+  if (err instanceof MeteredProviderError) return [err.run];
+  if (err instanceof MeteredRunsError) return err.runs;
+  return [];
+}
+
+/**
  * THE single Anthropic entry point. No skill talks to the SDK directly.
  * Deliberately has NO send capability — see architecture.md §6.
  */
@@ -109,6 +178,12 @@ export async function callModel(
      * value through that would 400 (it only ever raises or matches the budget).
      */
     maxTokensOverride?: number;
+    /**
+     * Injected clock/timers for the retry ladder. Tests only; production uses
+     * real timers. Exposed here so the resilience path is unit-testable without
+     * wall-clock waits or fake global timers.
+     */
+    retryDeps?: Partial<RetryDeps>;
   } = {},
 ): Promise<ModelResult> {
   const spec = jobSpec(job);
@@ -116,7 +191,15 @@ export async function callModel(
     throw new Error(`callModel is Anthropic-only; '${job}' is ${spec.provider}`);
   }
 
-  const client = new Anthropic({ apiKey: env().ANTHROPIC_API_KEY });
+  // maxRetries is set EXPLICITLY to 0. The SDK retries twice by default, which
+  // would silently multiply against our own ladder (3 x 3 = 9 round-trips for
+  // one turn) and would ignore our per-tier budgets and whole-call deadline.
+  // One retry layer, ours, deliberately chosen rather than inherited.
+  const client = new Anthropic({ apiKey: env().ANTHROPIC_API_KEY, maxRetries: 0 });
+
+  // One runner per callModel invocation: its deadline is shared across every
+  // tool-loop turn, so total elapsed is bounded for the JOB, not per turn.
+  const retry = createRetryRunner(retryBudgetFor(job), opts.retryDeps, `callModel(${job})`);
 
   const messages: Anthropic.MessageParam[] =
     call.messages ?? [{ role: "user", content: call.prompt ?? "" }];
@@ -155,8 +238,28 @@ export async function callModel(
   const toolCalls: ToolCallTrace[] = [];
   const startedAt = Date.now();
 
+  /** The metered record as it stands right now: valid mid-loop, not just at
+   *  the end, so a failure can still be costed. */
+  const meteredSoFar = (): AgentRunRecord => ({
+    skill: opts.skill,
+    model: spec.model,
+    input_tokens: inTok,
+    output_tokens: outTok,
+    cost_usd: costUsd(spec, inTok, outTok),
+    stop_reason: lastStop,
+    latency_ms: Date.now() - startedAt,
+  });
+
   for (let turn = 0; ; turn++) {
-    const resp = await client.messages.create(req);
+    let resp: Anthropic.Message;
+    try {
+      resp = await retry.run((signal) => client.messages.create(req, { signal }));
+    } catch (err) {
+      // Attach the spend already incurred by earlier turns so the caller can
+      // still write it to agent_runs. See MeteredProviderError.
+      if (err instanceof ProviderCallError) throw new MeteredProviderError(err, meteredSoFar());
+      throw err;
+    }
     inTok += resp.usage.input_tokens;
     outTok += resp.usage.output_tokens;
     lastStop = resp.stop_reason;
@@ -169,15 +272,7 @@ export async function callModel(
         .join("");
       return {
         text,
-        run: {
-          skill: opts.skill,
-          model: spec.model,
-          input_tokens: inTok,
-          output_tokens: outTok,
-          cost_usd: costUsd(spec, inTok, outTok),
-          stop_reason: lastStop,
-          latency_ms: Date.now() - startedAt,
-        },
+        run: meteredSoFar(),
         ...(useTools ? { toolCalls } : {}),
       };
     }

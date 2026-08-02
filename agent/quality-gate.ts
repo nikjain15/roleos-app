@@ -1,4 +1,4 @@
-import { callModel } from "@/agent/registry";
+import { callModel, MeteredRunsError, meteredRunsOf } from "@/agent/registry";
 import type { AgentRunRecord } from "@/agent/registry";
 import { parseModelJson } from "@/lib/json";
 
@@ -221,6 +221,21 @@ async function truthGate(
 
 export async function runQualityGate(input: GateInput): Promise<GateVerdict> {
   const runs: AgentRunRecord[] = [];
+  try {
+    return await gate(input, runs);
+  } catch (err) {
+    // The gate makes several model calls. If a later one dies at the provider
+    // (after the retry ladder gave up), the ones already paid for must still
+    // reach agent_runs, so they ride out on the error. See MeteredRunsError.
+    throw new MeteredRunsError(
+      err instanceof Error ? err.message : String(err),
+      [...runs, ...meteredRunsOf(err)],
+      err,
+    );
+  }
+}
+
+async function gate(input: GateInput, runs: AgentRunRecord[]): Promise<GateVerdict> {
 
   // 1 · shape
   const shapeOk = input.expects ? input.expects(input.output) : input.output.trim().length > 0;

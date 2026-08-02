@@ -78,6 +78,42 @@ Routing is **real and config-driven**. Each *job* names a provider, model, and p
 
 Two implementation details worth flagging (both encoded in code + tests): Opus 4.8 / Sonnet 4.6 reject `temperature`/`top_p`/`budget_tokens` (they 400), so depth is steered with `output_config.effort` + adaptive thinking; Haiku takes no effort param. `tests/unit/registry.test.ts` asserts the model-per-job mapping and that no temperature is ever sent.
 
+## 3.1 Provider resilience (`agent/retry.ts`)
+
+Because there is exactly one call path, retry is added exactly once and every skill, every gate call and every tool-loop turn inherits it. The ladder sits **in front of** the quality gate; it does not replace it.
+
+**What is retried.** Only genuinely transient conditions: HTTP `429`, `500`, `502`, `503`, `504`, `529`, plus network failures and our own per-attempt aborts. Everything else fails fast, and `400`/`401` are refused explicitly. That matters here: the models RoleOS uses 400 on the wrong sampling params (see §3), so a `400` means *we* built a bad request. Retrying it would burn three round-trips and then report an outage for our own bug, so it is surfaced immediately and loudly.
+
+**What bounds the waiting.** Three separate limits, because any one alone leaks:
+
+| Bound | Why it exists |
+|---|---|
+| Attempt cap (2 to 3, per tier) | A provider that is really down should be reported, not hammered. |
+| Per-attempt timeout via `AbortSignal` | A hung socket must not become an infinite request. The runner races the call against its own abort, so a transport that ignores the signal cannot hang us either. |
+| Whole-call deadline | The tool loop makes up to `MAX_TOOL_TURNS` (6) provider calls, so a per-turn bound compounds six-fold. The deadline is shared across every turn, retry and backoff wait of one `callModel` invocation. |
+
+Backoff is exponential with **full jitter** (a uniformly random slice of the current window), so isolates retrying after a load-shed event do not resynchronise into a second herd. A server `Retry-After` wins over our own backoff but is capped at 20s: a provider may honestly say "come back in an hour", and parking a user behind a spinner for an hour is not an answer. A backoff that would not fit inside the remaining deadline is refused rather than slept through.
+
+**Budgets are per tier**, because the tiers differ in what a healthy call costs and how expensive a wasted attempt is:
+
+| Job | Attempts | Per attempt | Whole call |
+|---|---|---|---|
+| `quick_tag` (Haiku, 1k out) | 3 | 20s | 60s |
+| `draft` (Sonnet, 8k out) | 3 | 90s | 240s |
+| `code` (Sonnet, 16k out) | 2 | 180s | 300s |
+| `reason` (Opus + thinking) | 3 | 120s | 300s |
+| `critic` (Opus, 1.5k out) | 3 | 60s | 180s |
+
+`quick_tag` runs on interactive paths where a healthy call is about a second, so it retries fast and cheap. `code` gets the widest window and the fewest retries: it is the longest single generation and the most expensive to throw away twice.
+
+**The SDK's own `maxRetries` is set explicitly to `0`.** The Anthropic SDK retries by default; left alone it would multiply against our ladder (3 x 3 = 9 round-trips for one turn) while ignoring our budgets and deadline. One retry layer, deliberately chosen rather than silently inherited.
+
+**Retry and the spend budget.** Retry made an existing accounting hole worth fixing. `callModel` accumulates tokens across tool-loop turns and only built an `AgentRunRecord` on the success return, so a failure on turn 4 of 6 discarded the counters for turns 1 to 3 that the provider had already billed: no `agent_runs` row, and the rolling-24h guard in `lib/cost-budget.ts` never saw the spend. Now the partial record travels out on a typed `MeteredProviderError`, the gate does the same with `MeteredRunsError` for calls it had already paid for, and `runSkill` writes them to `agent_runs` before rethrowing. Failed work counts against the daily budget. (A failed *attempt* contributes zero tokens because an error response carries no usage block; that is honest, and asserted rather than guessed.)
+
+**What the user sees.** Nothing changes for a transient blip: it is absorbed and the answer arrives. When the ladder is genuinely exhausted, RO still does not invent an answer. The failure travels up as a typed error naming what happened and how many attempts were made, the surface reports honestly, and the spend is recorded. The honest-failure guarantee is unchanged; retry only removes the failures that were never real.
+
+Covered by `tests/unit/provider-retry.test.ts` and `tests/unit/skill-run-resilience.test.ts` (injected clock, no real timers).
+
 ## 4. Retrieval / grounded matching (`lib/match.ts`, `lib/run-match.ts`)
 
 Matching is a three-stage pipeline built to beat domain bias, not a single similarity score:
@@ -197,7 +233,7 @@ This is the architectural heart, and it is defended three ways so no single chan
 
 ## 11. Testing surfaces
 
-- Unit / invariant / stress: 83 unit files, 4 invariant files, 1 stress harness, 503 `it/test` cases in total, all green via `npm test`.
+- Unit / invariant / stress: 85 unit files, 4 invariant files, 1 stress harness, 532 `it/test` cases in total, all green via `npm test`.
 - **Prompt injection, what runs where.** On every pull request: `tests/unit/injection-guard.test.ts` drives the real quality gate and the real coverage judge with the model transport replaced by a model that fully OBEYS an injected CV, and asserts the shipped code fails closed (a truth judge steered out of its JSON contract yields `needs_your_eyes` + `unknown` confidence; a coverage verdict citing evidence it was never shown collapses to `gap`). End to end, against real models: `tests/e2e/live/injection.spec.ts`, which needs `E2E_LIVE_MODEL=1` plus local credentials and is **not** run by CI. The residual gap is named in `tests/unit/injection-guard.test.ts` itself: if retrieval admits an injected line as candidate evidence and the judge credits it, only the LLM truth gate stands in the way.
 - Live E2E: `tests/e2e/live/` (29 spec files, >100 test cases), including the prompt-injection-through-a-CV test above, a cross-user RLS probe, an a11y sweep, and a production smoke spec against `ro.roleos.fyi`. This suite is local/model-gated; CI runs the fast Playwright smoke (`tests/e2e/*.spec.ts`) only.
 - The build process audit matrix (`docs/AUDIT-DIMENSIONS.md`) defines 10 dimensions each slice must pass before its PR opens.
