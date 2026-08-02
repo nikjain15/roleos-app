@@ -11,6 +11,6 @@
     "@cloudflare/sandbox": "^0.7.0"
   },
   "devDependencies": {
-    "wrangler": "^4.42.0"
+    "wrangler": "^4.118.0"
   }
 }
