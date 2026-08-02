@@ -223,6 +223,16 @@ advisories and the one `sharp` advisory have upstream fixes that `package.json`
 dev and prod. The allowlist is empty, and the expiry rule is unit-tested anyway
 (`tests/unit/audit-gate-expiry.test.ts`) so it is not dead code the day it ships.
 
+**Correction, 2026-08-02.** "`npm audit` reports zero vulnerabilities, dev and prod" was a
+root-directory result stated as a repository-wide one. This repo has three lockfiles and the
+gate audited one, while Dependabot reported two high `sharp` advisories in `sandbox/studio`
+and `sandbox/spike/cf-sandbox`. The gate now iterates all three trees, prints a per-tree line
+on every run, and separately reports dev-only high advisories so its count reconciles with
+GitHub's. `tests/unit/audit-gate-trees.test.ts` fails if a new lockfile is added and not
+registered. The two sandbox advisories remain open and ungated on purpose: `sharp` reaches
+those trees through `miniflare` inside `wrangler`, a dev dependency of a private spike
+package, and is not in the deployed worker. See `docs/DECISION_LOG.md` for the long form.
+
 **A5, partly closed.** gitleaks scans the **full git history** on every push and pull
 request, in `ci.yml`, so a leak blocks production. `scripts/verify-secret-scan.sh` plants
 a canary and asserts the scanner fires, because a scanner nobody has seen fail is
