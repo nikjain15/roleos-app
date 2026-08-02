@@ -140,6 +140,8 @@ Technical-PM / FDE documentation for this repo (grounded in the actual code):
 | [`docs/FDE_JOURNEY.md`](docs/FDE_JOURNEY.md) | Deploying into a real environment: integration, secrets/security, rollout/cutover, observability, de-risking |
 | [`docs/conduit.md`](docs/conduit.md) | The embedded `@conduit/client` seam on the primary answer path, dynamic difficulty routing, and env-gated live-usage reporting to a Conduit gateway |
 | [`docs/MCP.md`](docs/MCP.md) | Read-only MCP server (`search_roles`) over the public role corpus: stdio today, HTTP/SSE URL shape documented (not yet mounted) |
+| [`docs/STAKEHOLDERS.md`](docs/STAKEHOLDERS.md) | **Simulated** adversarial stakeholder reviews (security/privacy, architecture, design): who would need to sign off, which approvals are outstanding (all of them), and the ranked open findings. No external party reviewed this product; the doc says so at the top. |
+| [`docs/DECISION_LOG.md`](docs/DECISION_LOG.md) | Reasoning behind cross-cutting decisions: assumptions, what was defended, scope cuts, and why there are no kill criteria yet. Complements the per-slice record in `docs/AUDIT-LOG.md`. |
 | [`evals/`](evals/) | Self-contained offline eval harness (retrieval precision/recall/F1/MRR), `npx tsx evals/retrieval/run.ts` |
 
 ## Non-negotiables
