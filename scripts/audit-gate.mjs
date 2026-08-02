@@ -14,6 +14,68 @@
 // To renew an entry you must state a NEW expiry and a NEW reason. To retire one,
 // delete it. Both are deliberate acts; neither happens by the calendar moving.
 import { execSync } from "node:child_process";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const REPO_ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+
+/**
+ * Every dependency tree in this repository, by directory.
+ *
+ * This list exists because the gate used to be a single `npm audit` in the repo root,
+ * and reported "0 vulnerabilities" while GitHub reported two high advisories. Both were
+ * true. There are three lockfiles here and the gate was reading one of them, so its
+ * silence was about scope, not about safety. A gate that audits a subset of the repo
+ * and prints a whole-repo verdict is worse than no gate, because the number looks
+ * complete.
+ *
+ * Adding a lockfile to the repo and not to this list will not be caught automatically.
+ * `tests/unit/audit-gate-trees.test.ts` walks the working tree for package-lock.json
+ * files and fails if any is missing here, which is the closest thing to automatic that
+ * does not require a network call.
+ *
+ * @type {string[]}
+ */
+export const TREES = [".", "sandbox/studio", "sandbox/spike/cf-sandbox"];
+
+/** Per-tree line for the pass message, so the scope of the verdict is visible. */
+function countAdvisories(audit) {
+  const totals = audit?.metadata?.vulnerabilities ?? {};
+  const high = (totals.high ?? 0) + (totals.critical ?? 0);
+  const rest = (totals.moderate ?? 0) + (totals.low ?? 0);
+  return `${high} high/critical, ${rest} moderate/low (prod deps)`;
+}
+
+/** @type {string[]} */
+const treeSummaries = [];
+
+/**
+ * High/critical advisories that exist only in DEV dependencies, per tree.
+ *
+ * These do not gate, and that is the deliberate policy: a libvips CVE inside the local
+ * Workers emulator is a fact about a laptop, not about anything a user loads. But they
+ * are printed, because GitHub's Dependabot does NOT split prod from dev, so the repo
+ * and the security tab will show different numbers and somebody has to be able to see
+ * why without re-deriving it. Silence here is what made "npm audit says zero" and
+ * "Dependabot says two highs" both true and mutually unintelligible.
+ *
+ * @type {string[]}
+ */
+const devOnlyHighs = [];
+
+/** Every high/critical GHSA id in an audit payload. */
+function highIdsOf(audit) {
+  const out = new Map();
+  for (const [pkg, info] of Object.entries(audit?.vulnerabilities || {})) {
+    if (!["high", "critical"].includes(info.severity)) continue;
+    for (const via of info.via) {
+      if (typeof via !== "object") continue;
+      const id = (via.url || "").split("/").pop();
+      if (id) out.set(id, `${info.severity}: ${pkg} (${id})`);
+    }
+  }
+  return out;
+}
 
 /**
  * GHSA id -> { reason, expires (YYYY-MM-DD), triaged (YYYY-MM-DD) }.
@@ -37,7 +99,12 @@ const ALLOWLIST = {
   //     package.json `overrides` pulls 8.5.25 through it.
   //   - one sharp advisory (the libvips CVEs): fixed in sharp 0.35.0+. next's
   //     optional dep floats at ^0.34.3, so `overrides` pulls 0.35.3.
-  // `npm audit --omit=dev` now reports zero vulnerabilities at any severity.
+  // `npm audit --omit=dev` reports zero vulnerabilities at any severity across
+  // all three trees in TREES. Corrected 2026-08-02: that sentence used to say
+  // "zero" on the strength of a root-only audit, while Dependabot reported two
+  // high sharp advisories in the sandbox trees this gate never opened. Both
+  // numbers were right. See TREES above and docs/DECISION_LOG.md.
+  //
   // The gate below is therefore load-bearing on its own: the next high or
   // critical advisory to appear fails the build with nothing suppressing it.
 };
@@ -116,27 +183,64 @@ function main() {
     process.exit(1);
   }
 
-  // 2 - run the audit.
-  let audit;
-  try {
-    audit = JSON.parse(
-      execSync("npm audit --omit=dev --json", { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }),
-    );
-  } catch (e) {
-    // npm audit exits non-zero when vulns exist; it still prints JSON to stdout.
-    audit = JSON.parse(e.stdout || "{}");
-  }
-
+  // 2 - run the audit, once per dependency tree.
   const ghsaOf = (v) => (v.url || "").split("/").pop();
   const blocking = [];
   const suppressed = new Set();
-  for (const [pkg, info] of Object.entries(audit.vulnerabilities || {})) {
-    if (!["high", "critical"].includes(info.severity)) continue;
-    for (const via of info.via) {
-      if (typeof via !== "object") continue;
-      const id = ghsaOf(via);
-      if (ALLOWLIST[id]) suppressed.add(id);
-      else blocking.push(`${info.severity}: ${pkg} (${id || via.title || "unknown"})`);
+
+  for (const tree of TREES) {
+    let audit;
+    try {
+      audit = JSON.parse(
+        execSync("npm audit --omit=dev --json", {
+          cwd: resolve(REPO_ROOT, tree),
+          encoding: "utf8",
+          stdio: ["ignore", "pipe", "ignore"],
+        }),
+      );
+    } catch (e) {
+      // npm audit exits non-zero when vulns exist; it still prints JSON to stdout.
+      // An empty stdout means the command itself failed (missing lockfile, no network),
+      // which must not read as a clean tree.
+      if (!e.stdout) {
+        console.error(`H4 gate FAILED: could not audit ${tree}. npm audit produced no JSON.`);
+        console.error(String(e.stderr || e.message || e).trim());
+        process.exit(1);
+      }
+      audit = JSON.parse(e.stdout);
+    }
+
+    const label = tree === "." ? "root" : tree;
+    treeSummaries.push(`${label}: ${countAdvisories(audit)}`);
+
+    // The same tree again, dev included, purely to report. Never gates.
+    let full;
+    try {
+      full = JSON.parse(
+        execSync("npm audit --json", {
+          cwd: resolve(REPO_ROOT, tree),
+          encoding: "utf8",
+          stdio: ["ignore", "pipe", "ignore"],
+        }),
+      );
+    } catch (e) {
+      full = e.stdout ? JSON.parse(e.stdout) : null;
+    }
+    if (full) {
+      const prodHighs = highIdsOf(audit);
+      for (const [id, desc] of highIdsOf(full)) {
+        if (!prodHighs.has(id)) devOnlyHighs.push(`${desc} in ${label}`);
+      }
+    }
+
+    for (const [pkg, info] of Object.entries(audit.vulnerabilities || {})) {
+      if (!["high", "critical"].includes(info.severity)) continue;
+      for (const via of info.via) {
+        if (typeof via !== "object") continue;
+        const id = ghsaOf(via);
+        if (ALLOWLIST[id]) suppressed.add(id);
+        else blocking.push(`${info.severity}: ${pkg} (${id || via.title || "unknown"}) in ${label}`);
+      }
     }
   }
 
@@ -147,7 +251,20 @@ function main() {
     process.exit(1);
   }
 
-  // 3 - report.
+  // 3 - report. The per-tree lines are printed on a pass as well as a failure, so the
+  // scope of "0 vulnerabilities" is never left to the reader's assumption.
+  console.log(`H4 gate audited ${TREES.length} dependency trees:`);
+  treeSummaries.forEach((s) => console.log("  - " + s));
+
+  if (devOnlyHighs.length) {
+    console.log(
+      `\nNot gated, and reported so the number reconciles with GitHub's security tab.\n` +
+        `Dependabot counts dev dependencies; this gate does not. ${devOnlyHighs.length} high/critical\n` +
+        `advisor${devOnlyHighs.length === 1 ? "y is" : "ies are"} dev-only:`,
+    );
+    devOnlyHighs.forEach((d) => console.log("  - " + d));
+  }
+
   const entries = Object.entries(ALLOWLIST);
   if (entries.length === 0) {
     console.log("H4 gate passed: 0 high/critical prod advisories, and the allowlist is empty.");

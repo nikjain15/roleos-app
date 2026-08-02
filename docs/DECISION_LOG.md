@@ -49,6 +49,36 @@ including dev is also clean after an `npm audit fix` for `brace-expansion` and `
 The allowlist is empty, so the gate is load-bearing on its own: the next high or critical
 advisory fails the build with nothing suppressing it.
 
+**Correction, 2026-08-02: that "zero" was true of one third of the repository.** Both
+sentences above describe `npm audit` run in the repository root, which is where the gate ran
+it. There are three `package-lock.json` files here. While the paragraph above said zero,
+GitHub's security tab reported **two high advisories**, both `sharp` GHSA-f88m-g3jw-g9cj, in
+`sandbox/studio` and `sandbox/spike/cf-sandbox`. Neither number was wrong. The gate was
+reading one lockfile and printing a verdict on the repository.
+
+That is a nastier failure than the expired-allowlist one it replaced, because it produces
+confidence rather than merely failing to remove it, and the two numbers cannot be reconciled
+by a reader who does not already know the gate's scope. Three changes:
+
+- `scripts/audit-gate.mjs` now iterates a `TREES` list covering all three lockfiles, and
+  prints a per-tree line on every run, pass or fail, so the scope of the verdict is never
+  left to assumption. A tree whose audit produces no JSON exits 1 rather than counting as
+  clean.
+- `tests/unit/audit-gate-trees.test.ts` walks the working tree for `package-lock.json` files
+  and fails if any is absent from `TREES`. Verified by deleting a tree from the list and
+  watching two assertions go red. The expiry test stops an exception from rotting; this one
+  stops the scope from rotting, which is the same failure one level up.
+- The gate now also runs each tree **with** dev dependencies, purely to report, and prints
+  any high or critical advisory that is dev-only. It does not gate on them.
+
+**The two sandbox highs are dev-only, and stay open on purpose.** `sharp` arrives in both
+sandbox trees through `miniflare`, the local Workers emulator inside `wrangler`, as a dev
+dependency. It is not in the deployed worker. A libvips CVE reachable only from the local
+emulator is a fact about a laptop, not about anything a user loads, so it does not block a
+merge. What changed is that this is now a stated policy printed on every gate run rather
+than an accident of where `npm audit` happened to be invoked. Dependabot will keep counting
+two, the gate will keep gating zero, and the run output now explains the gap in place.
+
 **The decision not to take the easy path.** The allowlist could have been renewed to
 `2027-02` in about a minute, with a true-sounding reason ("still no upstream fix"). It
 would have been false for all twelve. The reason a dated allowlist is dangerous is
