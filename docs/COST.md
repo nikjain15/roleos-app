@@ -96,6 +96,43 @@ not bolted on.
 So one day of live traffic makes this script redundant for everything except forecasting. Until
 that traffic exists, this is a model, and it says so.
 
+## Run budget
+
+Everything above prices calls. A tool-loop run is many calls, and until 2026-08-02 the only thing
+bounding one was `MAX_TOOL_TURNS = 6`. A turn cap is not a cost bound: every turn resends the whole
+transcript plus every tool result so far, so the sixth turn is far more expensive than the first.
+The cap fixes how many times you pay and says nothing about how much.
+
+`lib/cost-budget.ts` does not close that gap either. It is a rolling-24h alert that explicitly never
+throws. It tells you about yesterday's money after it is gone; it cannot stop the run in front of it.
+Both are useful and they answer different questions.
+
+So a run now carries a ceiling of its own, passed per call as `opts.runBudget`:
+
+| Field | Bounds | Trips when |
+|---|---|---|
+| `maxTokens` | input + output tokens across every turn of the loop | the running total reaches the ceiling |
+| `maxCostUsd` | USD across every turn, priced by the job's own `cost_per_mtok` | the running total reaches the ceiling |
+
+Both optional and independent. Neither set means the turn cap is the only bound, which is what every
+skill had before, so nothing changed underneath an existing caller.
+
+**Checked after a turn is charged, before another is bought.** A run may finish one turn over its
+ceiling; it may not start another. Bounding it earlier would need a per-turn cost estimate taken
+before the call, and an estimate is a guess. This page does not trade a measured number for a guessed
+one, and neither does the loop.
+
+**The cost figure the budget reads is a real one.** Unlike the volume model above, `costUsd` here is
+computed from the job's actual `cost_per_mtok` against token counts the provider returned, not from a
+characters/4 approximation. What stays estimated is only the forecasting on this page.
+
+**No default budget ships.** Choosing a defensible number needs a distribution of real run costs, and
+there is no live traffic yet. A default picked without that would be exactly the invented threshold
+this document exists to avoid. When `agent_runs` holds real loop costs, the p95 of that distribution
+is the number to set, and it should land in the same commit as the query that produced it.
+
+See `docs/ARCHITECTURE.md` §3.2 for the other two bounds and what the user sees when each trips.
+
 ## Two things this document does not claim
 
 **The tiering has not been validated, only chosen.** `quick_tag` runs on Haiku because Haiku is
