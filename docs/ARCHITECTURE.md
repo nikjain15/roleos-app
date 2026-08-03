@@ -114,6 +114,61 @@ Backoff is exponential with **full jitter** (a uniformly random slice of the cur
 
 Covered by `tests/unit/provider-retry.test.ts` and `tests/unit/skill-run-resilience.test.ts` (injected clock, no real timers).
 
+## 3.2 Stopping: what ends a run besides the model (`agent/stop.ts`)
+
+`callModel` runs a tool loop. Until 2026-08-02 exactly one thing bounded it, `MAX_TOOL_TURNS = 6`,
+and a turn cap is a weaker bound than it looks.
+
+**It did not bound cost.** Every turn resends the whole transcript plus every tool result so far, so
+the sixth turn of a loop is far more expensive than the first, and six turns on a long resume is not
+a fixed price. The loop already accumulated `inTok`/`outTok` and already knew the per-token price, so
+it could compute what a run had spent at any moment. It never consulted that number to decide whether
+to continue. `lib/cost-budget.ts` is not this: it is a rolling-24h **alert** that explicitly never
+throws, so it notices yesterday's money after it is gone and cannot stop the run in front of it.
+
+**It did not notice repetition.** A model calling the same tool with the same arguments and getting
+the same answer back would do it until the cap. Six wasted turns cost the same as six useful ones.
+
+**And when it tripped, the user saw nothing.** At the cap the loop returned the text of a response
+whose `stop_reason` was `tool_use`. That response is the model asking for another tool, so its text
+block is usually empty. The run ended by handing back an empty string with no indication it had been
+cut short, which is precisely the silent death a step cap is meant to prevent.
+
+Three bounds now, each naming itself on `ModelResult.loopStop` and each carrying a `notice`:
+
+| `loopStop` | Ends the run when | What the user sees |
+|---|---|---|
+| `completed` | the model stops asking for tools | the answer, no notice |
+| `max_tool_turns` | `MAX_TOOL_TURNS` is reached | "I stopped at the tool-step limit (6 tool turns) before finishing. Here is how far I got..." |
+| `budget_exhausted` | `opts.runBudget` tokens or USD reached | "I stopped because this run reached its cost budget: $x of $y used..." |
+| `loop_detected` | a (tool, args, result) state repeats | "I stopped because the run was repeating itself... Continuing would have returned the same thing until the step limit." |
+
+The notice is folded into `text` as well as exposed separately, so a caller that only reads `text`
+still shows an explanation rather than a blank. Where partial text exists the notice is appended to
+it; where there is none the notice **is** the answer.
+
+**Why the loop state includes the tool's result.** The obvious implementation keys on the call
+alone: same tool, same arguments, halt. That breaks working systems. A tool that reads a row someone
+else is writing, or the same search issued again as a conversation moves on, legitimately repeats and
+legitimately returns something new. What cannot be productive is an identical call returning an
+identical result: the next turn sees content it has already seen, has nothing new to act on, and
+proposes the same thing again. Both cases are tested, the moving-result one explicitly.
+
+**Why a repeated tool error is not a loop.** Detection runs on successful calls only. A repeated
+validation failure looks like repetition and is not: the error text is exactly the information the
+model needs to fix its arguments, and halting on the second identical failure would kill runs that
+were one turn from recovering. Tested.
+
+**Why the budget is checked after a turn, not before.** It bounds what a run is allowed to have
+spent, not what the next turn will cost. A run may finish one turn over its ceiling; it may not start
+another. Bounding it earlier means estimating the next turn in advance, and an estimate is a guess.
+
+No default budget ships. `runBudget` is optional and unset, so every existing skill behaves exactly
+as before. Choosing a defensible default needs a distribution of real run costs, which RoleOS does
+not have yet; see `docs/COST.md` §Run budget.
+
+Covered by `tests/unit/stop-conditions.test.ts` (SDK mocked, no network, no key).
+
 ## 4. Retrieval / grounded matching (`lib/match.ts`, `lib/run-match.ts`)
 
 Matching is a three-stage pipeline built to beat domain bias, not a single similarity score:

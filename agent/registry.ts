@@ -8,6 +8,14 @@ import {
   ProviderCallError,
   type RetryDeps,
 } from "@/agent/retry";
+import {
+  budgetBreach,
+  stopNotice,
+  textWithNotice,
+  toolStateKey,
+  type LoopStop,
+  type RunBudget,
+} from "@/agent/stop";
 
 /**
  * The model registry + the single `callModel(job, input)` path that every
@@ -62,6 +70,19 @@ export interface ModelResult {
   run: AgentRunRecord;
   /** One entry per tool the model invoked during the loop (empty if none). */
   toolCalls?: ToolCallTrace[];
+  /**
+   * Which bound ended the tool loop. "completed" means the model finished on
+   * its own; anything else means the answer is partial. Distinct from
+   * `run.stop_reason`, which is the provider's word for the last turn only and
+   * cannot say whether OUR limits cut the run short. See agent/stop.ts.
+   */
+  loopStop: LoopStop;
+  /**
+   * User-facing explanation when a bound tripped, empty otherwise. Already
+   * folded into `text`, and exposed separately so a caller can style it apart
+   * from the answer.
+   */
+  notice: string;
 }
 
 /** A single tool invocation the model made — captured for logging/eval. */
@@ -184,6 +205,21 @@ export async function callModel(
      * wall-clock waits or fake global timers.
      */
     retryDeps?: Partial<RetryDeps>;
+    /**
+     * Token and/or USD ceiling for this whole call, across every tool-loop
+     * turn. Omitted means MAX_TOOL_TURNS is the only bound, which is what every
+     * caller had before, so an existing skill is unchanged. Distinct from
+     * `checkCostBudget`, which alerts on a rolling 24h total after the fact and
+     * never stops a run. See agent/stop.ts.
+     */
+    runBudget?: RunBudget;
+    /**
+     * Halt when the loop repeats a (tool, args, result) state. On by default:
+     * a repeated state cannot produce anything new and would otherwise burn the
+     * remaining turns. Set false only where an identical call returning an
+     * identical result is genuinely productive.
+     */
+    detectLoops?: boolean;
   } = {},
 ): Promise<ModelResult> {
   const spec = jobSpec(job);
@@ -250,6 +286,28 @@ export async function callModel(
     latency_ms: Date.now() - startedAt,
   });
 
+  const seenToolStates = new Set<string>();
+  const detectLoops = opts.detectLoops ?? true;
+
+  /** Assemble the return. One place, so every exit reports the same shape and
+   *  a cut-short run can never hand back a bare empty string again. */
+  const finish = (stop: LoopStop, detail: string, rawText: string, turnsTaken: number): ModelResult => {
+    const notice = stopNotice(stop, detail, turnsTaken);
+    return {
+      text: textWithNotice(rawText, notice),
+      run: meteredSoFar(),
+      ...(useTools ? { toolCalls } : {}),
+      loopStop: stop,
+      notice,
+    };
+  };
+
+  const textOf = (resp: Anthropic.Message): string =>
+    resp.content
+      .filter((b): b is Anthropic.TextBlock => b.type === "text")
+      .map((b) => b.text)
+      .join("");
+
   for (let turn = 0; ; turn++) {
     let resp: Anthropic.Message;
     try {
@@ -265,23 +323,24 @@ export async function callModel(
     lastStop = resp.stop_reason;
 
     const stopForTools = useTools && resp.stop_reason === "tool_use";
-    if (!stopForTools || turn >= MAX_TOOL_TURNS) {
-      const text = resp.content
-        .filter((b): b is Anthropic.TextBlock => b.type === "text")
-        .map((b) => b.text)
-        .join("");
-      return {
-        text,
-        run: meteredSoFar(),
-        ...(useTools ? { toolCalls } : {}),
-      };
+    if (!stopForTools) {
+      // The model finished on its own. No bound was involved.
+      return finish("completed", "", textOf(resp), turn);
     }
+    if (turn >= MAX_TOOL_TURNS) {
+      return finish("max_tool_turns", `${MAX_TOOL_TURNS} tool turns`, textOf(resp), turn);
+    }
+
+    // The turn is charged, so check the ceiling before buying another one.
+    const breach = budgetBreach({ tokens: inTok + outTok, costUsd: costUsd(spec, inTok, outTok) }, opts.runBudget);
+    if (breach) return finish("budget_exhausted", breach, textOf(resp), turn);
 
     // Execute each requested tool and build the tool_result turn.
     const toolUses = resp.content.filter(
       (b): b is Anthropic.ToolUseBlock => b.type === "tool_use",
     );
     const results: Anthropic.ToolResultBlockParam[] = [];
+    let repeated: string | null = null;
     for (const use of toolUses) {
       const trace = await runOneTool(toolByName.get(use.name), use.input, toolContext);
       toolCalls.push({ name: use.name, input: use.input, ok: trace.ok, error: trace.error });
@@ -291,7 +350,23 @@ export async function callModel(
         content: trace.content,
         ...(trace.ok ? {} : { is_error: true }),
       });
+
+      // Successful calls only. A repeated tool ERROR is not a loop worth
+      // halting: the error text is precisely the new information the model
+      // needs to fix its arguments, and halting on the second identical
+      // validation failure would kill runs that were about to recover.
+      if (detectLoops && trace.ok) {
+        const key = toolStateKey(use.name, use.input, trace.content);
+        if (seenToolStates.has(key)) {
+          repeated = `\`${use.name}\` returned an identical result for identical arguments a second time`;
+        } else {
+          seenToolStates.add(key);
+        }
+      }
     }
+    // Checked after every tool in the turn has run, so the traces and the
+    // tool_result blocks stay complete rather than half-built.
+    if (repeated) return finish("loop_detected", repeated, textOf(resp), turn + 1);
 
     messages.push({ role: "assistant", content: resp.content });
     messages.push({ role: "user", content: results });
