@@ -463,34 +463,47 @@ recorded as not obtained.
 
 ### Kill criteria
 
-**There are none, and none are invented here.**
+**Set 2026-08-02.** This section previously said there were none, worked out what a real one
+would have to be, and ended with: "cost per journey is already instrumented and could carry a
+real threshold today. That is the one to write first." That is what happened.
 
-Nothing in `docs/PRD.md`, `docs/EVALS.md`, or `docs/AUDIT-LOG.md` states a condition under
-which RoleOS should be stopped rather than iterated. `docs/PRD.md:66-76` names quality
-metrics and a north star ("offers landed per activated candidate") but no floor and no
-date. Putting a number here would be worse than the absence, because an invented threshold
-looks like a decision somebody made.
+**Kill or narrow if the MEDIAN cost per journey exceeds $2.00 across a rolling 30 days, over at
+least 10 journeys.**
 
-What a real kill criterion would have to be, so that one can be written when there is
-evidence to write it from:
+**Consequence: narrow to one gate.** Stop running five gates per candidate and keep the one
+carrying the most signal, or hand the corpus to something else. Explicitly not "re-tune the
+prompts and re-measure": that is the branch that makes every criterion toothless, and
+`evaluateKillLine` says so in the action text.
 
-- **A metric that already exists and is already collected.** Cost per journey is the only
-  candidate today (`agent/registry.ts` writes every call to `agent_runs`, and
-  `lib/cost-budget.ts` compares rolling spend to a daily budget). Match quality has a
-  harness but no production series. Everything user-facing has no data at all, because
-  there are no external users.
-- **A threshold set before the measurement, not after.** A number chosen once results are
-  in is a rationalisation.
-- **A date.** "If X is still below Y on date Z" is a criterion. "If X stays low" is a mood.
-- **A named consequence that is not 'try harder'.** Stop, narrow to one gate, or hand the
-  corpus to something else. If every branch is "keep going", it is not a kill criterion.
-- **An owner who is allowed to call it.** On a solo project that is the same person who
-  built it, which is exactly why it has to be written down in advance.
+Evaluated by `evaluateKillLine` in [`lib/kill-criteria.ts`](../lib/kill-criteria.ts), covered by
+`tests/unit/kill-criteria.test.ts`. It needs no new instrumentation: `agent/registry.ts` already
+writes every model call to `agent_runs` with a real `cost_usd` and a `user_id`, and `toJourneys`
+groups runs by user because a journey is one candidate.
 
-The honest position: RoleOS cannot have a meaningful kill criterion until it has users,
-because five of its six candidate metrics require them. The one that does not, cost per
-journey, is already instrumented and could carry a real threshold today. That is the one to
-write first.
+**Why $2.00.** `docs/COST.md` models a typical journey at **$0.80** and bounds it at **$1.31** with
+every call at its ceiling. The line sits above the all-at-ceiling bound on purpose: crossing it
+cannot be explained by heavy-but-legitimate usage, so it means something structural (retry storms,
+tier drift, a gate that grew). A line at $1.31 would fire on a legitimately expensive month, get
+rationalised away once, and never be believed again.
+
+**Why the median and not the mean.** The mean is what the bill is made of and the wrong statistic
+here. One pathological journey drags a mean over any threshold, and that case is already covered by
+the rolling-24h alert in `lib/cost-budget.ts`. The median asks "is the TYPICAL candidate too
+expensive", which is the question that decides whether the design works. Both are reported; only
+the median is compared. `tests/unit/kill-criteria.test.ts` pins this: nineteen candidates at $0.80
+and one that burned $500 is **holding**, not crossed, with the mean still reported so the incident
+stays visible.
+
+**Result so far: not enough data.** No 30-day window has been evaluated, because there are no
+external users. `evaluateKillLine` returns `not_enough_data` rather than a reassuring "holding",
+and the median is reported without being acted on.
+
+**What this criterion is not.** It is a cost line, and cost is the weakest of the six candidate
+metrics. The five that would actually test whether RoleOS is any good, match quality among them,
+all require users that do not exist. Writing the weak one now is better than waiting indefinitely
+for the strong one, and pretending it is the strong one would be worse than either. When there is
+a production series for match quality, that criterion should be added alongside this one rather
+than replacing it.
 
 ### What each review did NOT look at
 
