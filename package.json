@@ -26,7 +26,8 @@
     "seed:roles": "tsx db/seed/seed-roles.ts",
     "seed:embeddings": "tsx db/seed/embed-roles.ts",
     "check": "npm run typecheck && npm run lint && npm run invariant:imports && npm run test",
-    "audit:high": "node scripts/audit-gate.mjs"
+    "audit:high": "node scripts/audit-gate.mjs",
+    "cost:model": "node scripts/cost-model.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.68.0",
