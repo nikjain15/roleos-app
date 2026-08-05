@@ -22,8 +22,9 @@ dead → extract new via Claude → upsert + embed**, with run status in `/admin
   there's **no control to run ingestion**. This adds the trigger + the engine.
 - A prior session flagged the gap: *"No live role-ingestion pipeline. The
   always-on hunt needs a feed of fresh postings."* This closes it.
-- The whole flow was validated today (557→404 prune+archive, +375 backfill, +60
-  from disabled-company enablement → **691 live roles, all embedded**). The Node
+- The whole flow was validated at the time (557→404 prune+archive, +375 backfill, +60
+  from disabled-company enablement → **691 live roles, all embedded** — a snapshot of
+  that run, not the current index; ro.roleos.fyi/explore has the live count). The Node
   scripts in `role-os-archive/pipeline/` + `roleos/db/seed/` are the reference impl.
 
 ## The hard constraint
