@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { RESCAN_INTERVAL_MS, nextScanAt } from "@/lib/ingest/scan";
+import { RESCAN_INTERVAL_MS, nextScanAt, pageAll } from "@/lib/ingest/scan";
 
 /**
  * Re-scan cadence. The corpus is only as fresh as this: before it existed a
@@ -35,5 +35,39 @@ describe("nextScanAt", () => {
 
   it("returns an ISO timestamp Postgres can compare against next_scan_at", () => {
     expect(nextScanAt(0, NOW)).toBe("2026-08-11T14:00:00.000Z");
+  });
+});
+
+/**
+ * Company-list paging. The scan used to read a flat `.limit(500)` and the YC
+ * enable ceiling was sized to stay under it — so growing the company list past
+ * 500 would have silently dropped companies from every sweep rather than failing.
+ */
+describe("pageAll", () => {
+  const pageOf = (rows: number[], from: number, to: number) => rows.slice(from, to + 1);
+
+  it("drains a list larger than one page", async () => {
+    const rows = Array.from({ length: 2350 }, (_, i) => i);
+    const got = await pageAll(async (f, t) => pageOf(rows, f, t), 1000);
+    expect(got).toHaveLength(2350);
+    expect(got[0]).toBe(0);
+    expect(got[2349]).toBe(2349);
+  });
+
+  it("returns everything when the list fits in one page", async () => {
+    const rows = Array.from({ length: 12 }, (_, i) => i);
+    expect(await pageAll(async (f, t) => pageOf(rows, f, t), 1000)).toHaveLength(12);
+  });
+
+  it("handles an exact multiple of the page size without looping forever", async () => {
+    const rows = Array.from({ length: 2000 }, (_, i) => i);
+    let calls = 0;
+    const got = await pageAll(async (f, t) => { calls++; return pageOf(rows, f, t); }, 1000);
+    expect(got).toHaveLength(2000);
+    expect(calls).toBe(3); // two full pages, then an empty one proves the end
+  });
+
+  it("is empty, not stuck, when there are no rows", async () => {
+    expect(await pageAll(async () => [], 1000)).toEqual([]);
   });
 });

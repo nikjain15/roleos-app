@@ -37,9 +37,14 @@ async function callApp(env: Env, body: unknown): Promise<Record<string, unknown>
  * subrequests". Separate instances sidestep that deterministically.)
  */
 const BATCH = 12;
-/** Hard stop on the chain length — backstop against a runaway (real sweeps need
- *  ~30 hops for the whole enabled set). */
-const MAX_DEPTH = 80;
+/**
+ * Hard stop on the chain length — a backstop against a runaway, not a work
+ * budget. It has to exceed ceil(enabled / BATCH) or the sweep stops early and
+ * silently leaves companies unscanned: at 80 it capped out at 960 companies,
+ * which was fine for 426 but truncates the full YC set (~1,650 → 138 hops).
+ * Sized with room for the company list to keep growing.
+ */
+const MAX_DEPTH = 400;
 
 export class IngestWorkflow extends WorkflowEntrypoint<Env> {
   async run(event: WorkflowEvent<unknown>, step: WorkflowStep) {

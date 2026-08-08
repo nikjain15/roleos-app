@@ -24,18 +24,65 @@ export type IngestScope =
   | { kind: "company"; companies: string[] } // by name
   | { kind: "demand" }; // companies from active intents
 
+/**
+ * Page size for reading the company list. The old code read it with a flat
+ * `.limit(500)` and capped how many companies could be enabled to stay under
+ * that — a silent truncation waiting to happen the moment the list grew (YC
+ * alone has 1,578 companies). Paging removes the cap as the binding constraint.
+ * PostgREST won't return more than 1000 rows per request regardless.
+ */
+const COMPANY_PAGE = 1000;
+
+/**
+ * Drain a paged read. Stops on an empty page or a short one (the last page), so
+ * a caller can't spin forever on a source that keeps returning full pages by
+ * mistake — a short page is the only honest end-of-list signal PostgREST gives.
+ */
+export async function pageAll<T>(
+  fetchPage: (from: number, to: number) => Promise<T[]>,
+  pageSize: number = COMPANY_PAGE,
+): Promise<T[]> {
+  const out: T[] = [];
+  for (let from = 0; ; from += pageSize) {
+    const page = await fetchPage(from, from + pageSize - 1);
+    if (!page.length) break;
+    out.push(...page);
+    if (page.length < pageSize) break;
+  }
+  return out;
+}
+
+/**
+ * Read every row a company query matches, a page at a time. Ordered by id so the
+ * pages don't overlap or skip as rows change underneath a long sweep.
+ */
+function pageCompanies<T>(build: () => PostgrestPage<T>): Promise<T[]> {
+  return pageAll<T>(async (from, to) => {
+    const { data, error } = await build().order("id").range(from, to);
+    if (error) throw new Error(`companies read: ${error.message}`);
+    return data ?? [];
+  });
+}
+
+/** The slice of the supabase-js builder pageCompanies needs. */
+interface PostgrestPage<T> {
+  order(col: string): PostgrestPage<T>;
+  range(from: number, to: number): PromiseLike<{ data: T[] | null; error: { message: string } | null }>;
+}
+
 /** Resolve the scope to a list of enabled companies to scan. */
 export async function companiesForScope(scope: IngestScope): Promise<Company[]> {
   const db = supabaseService();
-  const sel = db
-    .from("companies")
-    .select("id, name, slug, ats_provider, yc_slug, barren_streak")
-    .eq("enabled", true);
+  const enabled = () =>
+    db
+      .from("companies")
+      .select("id, name, slug, ats_provider, yc_slug, barren_streak")
+      .eq("enabled", true) as unknown as PostgrestPage<Company>;
 
   if (scope.kind === "company") {
     const wanted = new Set(scope.companies.map((c) => c.toLowerCase().trim()));
-    const { data } = await sel.limit(500);
-    return (data ?? []).filter((c) => wanted.has(c.name.toLowerCase()));
+    const all = await pageCompanies(enabled);
+    return all.filter((c) => wanted.has(c.name.toLowerCase()));
   }
 
   if (scope.kind === "demand") {
@@ -49,19 +96,20 @@ export async function companiesForScope(scope: IngestScope): Promise<Company[]> 
     const wanted = new Set(
       (intents ?? []).flatMap((r) => (r.companies as string[] | null) ?? []).map((c) => c.toLowerCase().trim()),
     );
-    const { data } = await sel.limit(500);
-    return (data ?? []).filter((c) => wanted.has(c.name.toLowerCase()));
+    const all = await pageCompanies(enabled);
+    return all.filter((c) => wanted.has(c.name.toLowerCase()));
   }
 
-  const { data } = await sel.limit(500);
-  return data ?? [];
+  return pageCompanies(enabled);
 }
 
 /** Enabled company names — the durable Workflow iterates these (one step each). */
 export async function listEnabledCompanyNames(): Promise<string[]> {
   const db = supabaseService();
-  const { data } = await db.from("companies").select("name").eq("enabled", true).limit(500);
-  return (data ?? []).map((c) => c.name as string);
+  const rows = await pageCompanies<{ name: string }>(
+    () => db.from("companies").select("name").eq("enabled", true) as unknown as PostgrestPage<{ name: string }>,
+  );
+  return rows.map((c) => c.name);
 }
 
 /**

@@ -13,9 +13,10 @@
  *    resolve the same way they do for seed rows; ats_provider stays null (try-all).
  *  • Net-new only: existing slugs (seed config or already-synced YC rows) are left
  *    untouched, so admin enable/disable + seed ATS providers are never clobbered.
- *  • ENABLE BUDGET: the scan reads enabled companies with a 500-row ceiling
- *    (scan.ts), so we never auto-enable more than MAX_ENABLE_YC. The rest land as
- *    `enabled:false` candidates the admin can promote — no silent truncation.
+ *  • ENABLE BUDGET: scan.ts now pages the company list instead of reading a flat
+ *    500 rows, so the old truncation risk is gone and the budget exists only to
+ *    pace growth. Anything over it lands as an `enabled:false` candidate the
+ *    admin can promote — still no silent truncation.
  *    Enabled picks are prioritized: relevant (senior product / AI / ML / data /
  *    dev-tools) first, YC "top companies" and larger teams ahead of the long tail.
  *
@@ -31,10 +32,12 @@ const ENDPOINT = {
 
 export type YcDataset = keyof typeof ENDPOINT;
 
-/** Cumulative ceiling on auto-enabled YC companies. Kept well under scan.ts's
- *  500-row read so seed + demand companies still fit and nothing is silently
- *  dropped at scan time. Tune up only alongside the scan limit. */
-const MAX_ENABLE_YC = 250;
+/** Cumulative ceiling on auto-enabled YC companies. Was 250, sized to keep the
+ *  enabled set under scan.ts's old flat 500-row read; scan.ts pages now, so this
+ *  covers the full YC universe (~1,600 and growing). Measured yield on the tail
+ *  is 0.52 in-scope roles per company, and the barren backoff moves the empty
+ *  ones to a 24-day cadence after one sweep, so carrying them is cheap. */
+const MAX_ENABLE_YC = 2000;
 
 /** The shape we read from a yc-oss company record (subset of its many fields). */
 interface YcCompany {
@@ -195,10 +198,10 @@ export async function syncYcCompanies(
   };
 }
 
-/** Hard ceiling on total enabled companies — scan.ts reads enabled with a
- *  500-row limit, so we keep total enabled below this so nothing is silently
- *  dropped at scan time. Leaves headroom for seed + demand rows. */
-const SCAN_ENABLE_CEILING = 480;
+/** Hard ceiling on total enabled companies. This used to be the scan's 500-row
+ *  read limit minus headroom; scan.ts pages now, so it's a sanity bound on how
+ *  much work one sweep can be asked to do, not a correctness constraint. */
+const SCAN_ENABLE_CEILING = 3000;
 
 export interface YcPromoteSummary {
   requested: number;
