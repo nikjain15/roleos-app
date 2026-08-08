@@ -273,10 +273,22 @@ export async function demandKeywords(): Promise<string[]> {
   return [...new Set((data ?? []).flatMap((r) => (r.keywords as string[] | null) ?? []))];
 }
 
-/** Fetch + filter one company's open roles. */
-export async function scanCompany(c: Company, keywords: string[] = []): Promise<AtsPosting[]> {
-  const posts = await fetchCompanyPostings(c.name, c.slug || undefined, c.yc_slug || undefined);
-  if (posts.length === 0) return [];
+/**
+ * Fetch + filter one company's open roles. `truncated` means the board was cut
+ * short by a page cap (large Workday boards) — the caller must not prune on it,
+ * since unseen postings are still open, not closed.
+ */
+export async function scanCompany(
+  c: Company,
+  keywords: string[] = [],
+): Promise<{ posts: AtsPosting[]; truncated: boolean }> {
+  const { posts, truncated } = await fetchCompanyPostings(
+    c.name,
+    c.slug || undefined,
+    c.yc_slug || undefined,
+    c.ats_provider,
+  );
+  if (posts.length === 0) return { posts: [], truncated };
   const kwRe = keywords.length ? new RegExp(keywords.map(escapeRe).join("|"), "i") : null;
-  return posts.filter((p) => isRelevantTitle(p.title, kwRe));
+  return { posts: posts.filter((p) => isRelevantTitle(p.title, kwRe)), truncated };
 }
