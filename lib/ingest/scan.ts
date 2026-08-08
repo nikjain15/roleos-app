@@ -184,7 +184,7 @@ export async function recordScan(
   company: Company,
   foundRelevant: number,
   now: number = Date.now(),
-  opts: { dueNow?: boolean } = {},
+  opts: { dueNow?: boolean; provisional?: boolean } = {},
 ): Promise<void> {
   const streak = foundRelevant > 0 ? 0 : (company.barren_streak ?? 0) + 1;
   const db = supabaseService();
@@ -193,12 +193,39 @@ export async function recordScan(
     .update({
       last_scanned_at: new Date(now).toISOString(),
       barren_streak: streak,
-      // dueNow: this company has more new roles than one request can process, so
-      // it goes back on the queue for the next hop instead of the next cadence.
-      next_scan_at: opts.dueNow ? new Date(now).toISOString() : nextScanAt(streak, now),
+      next_scan_at: new Date(scheduleAfterScan(streak, now, opts)).toISOString(),
     })
     .eq("id", company.id);
 }
+
+/**
+ * When to look at a company again, given how a scan ended.
+ *
+ * `provisional` is the stamp written BEFORE the insert loop. It used to write
+ * the full cadence, which meant a request dying mid-loop parked the company for
+ * three days with work left. Now it parks it for PROVISIONAL_RETRY_MS, so the
+ * worst case of losing the final write is a short delay rather than a lost
+ * cycle — the schedule is correct even if only the first write lands.
+ *
+ * `dueNow` is the final stamp for a company with more new roles than one request
+ * can process: come straight back on the next hop.
+ */
+export function scheduleAfterScan(
+  streak: number,
+  now: number,
+  opts: { dueNow?: boolean; provisional?: boolean } = {},
+): number {
+  if (opts.dueNow) return now;
+  if (opts.provisional) return now + PROVISIONAL_RETRY_MS;
+  return Date.parse(nextScanAt(streak, now));
+}
+
+/**
+ * How long a company waits if a reconcile starts but never records its outcome.
+ * Short enough that a lost tail-write costs one hop, long enough that a company
+ * failing repeatedly can't monopolise the sweep.
+ */
+export const PROVISIONAL_RETRY_MS = 15 * 60_000;
 
 /**
  * Should a company go straight back on the queue instead of waiting for its next
