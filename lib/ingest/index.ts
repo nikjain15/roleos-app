@@ -11,7 +11,7 @@ import { runSkill } from "@/agent/skills/run";
 import extractRole from "@/agent/skills/extract_role";
 import { parseModelJson } from "@/lib/json";
 import { logAgentRuns } from "@/lib/agent-runs";
-import { companiesForScope, scanCompany, demandKeywords, recordScan, type IngestScope } from "./scan";
+import { companiesForScope, scanCompany, demandKeywords, recordScan, shouldRequeue, type IngestScope } from "./scan";
 import { normalizeArchetype } from "./archetype";
 import { fetchYcJobDescription, type AtsPosting } from "@/lib/ats";
 
@@ -27,6 +27,14 @@ export { syncYcCompanies, promoteYcCandidates, type YcSyncSummary, type YcDatase
 type Db = ReturnType<typeof supabaseService>;
 
 const MAX_PER_COMPANY = 8;
+/**
+ * New roles one reconcile call will fully process. Sized from measurement, not
+ * taste: a role costs ~6s (Claude extract + embed) and the request is cut around
+ * 60s of wall clock, so anything above ~9 is silently dropped. 8 leaves headroom
+ * for the board fetch and prune. Companies with more waiting are re-queued
+ * immediately rather than held to the normal cadence.
+ */
+const MAX_NEW_PER_RECONCILE = 8;
 /** Cap NEW roles fully processed (insert + Claude extract + embed) per run, to
  * stay within a bounded HTTP request. The durable Workflow (Phase 2b) lifts it. */
 const MAX_NEW_PER_RUN = 15;
@@ -66,7 +74,7 @@ export async function runIngestion(
       scanned += posts.length;
       await recordScan(c, posts.length);
       if (added >= budget) continue; // keep scanning (counts) but stop adding
-      added += await insertNew(db, posts, opts.maxPerCompany ?? MAX_PER_COMPANY, budget - added);
+      added += (await insertNew(db, posts, opts.maxPerCompany ?? MAX_PER_COMPANY, budget - added)).added;
     }
     await db
       .from("ingestion_runs")
@@ -85,25 +93,43 @@ export async function runIngestion(
 /**
  * Reconcile ONE company end-to-end — the durable unit the IngestWorkflow runs as
  * a single retryable step (docs/admin-ingestion.md Phase 2b). Scan its board,
- * insert+structure+embed the new roles (no per-run cap — it's one company), and
- * prune the ones that have closed. PRUNE SAFETY: only prune when the scan
- * actually returned postings — a transient fetch failure (0 posts) must never be
- * read as "every role closed" and mass-delete the company.
+ * insert+structure+embed the new roles, and prune the ones that have closed.
+ *
+ * PRUNE SAFETY: only prune when the scan actually returned postings — a transient
+ * fetch failure (0 posts) must never be read as "every role closed" and
+ * mass-delete the company.
+ *
+ * PARTIAL SAFETY: the old cap was 50 new roles per call, but the request dies
+ * around 60s of wall clock and each role costs ~6s (Claude extract + embed), so
+ * a big board silently ingested ~8 and returned HTTP 200 saying so. Databricks
+ * reported `{scanned:114, added:8}` three times in a row, each run adding 8 more
+ * — 65 roles that would have dripped in over three weeks of sweeps, because the
+ * company was stamped 3 days out regardless. Now the cap is explicit, and a
+ * company with work left is marked due immediately so the NEXT Workflow hop
+ * continues it instead of waiting for the next cadence.
  */
 export async function reconcileCompany(
   name: string,
-): Promise<{ company: string; scanned: number; added: number; closed: number }> {
+): Promise<{ company: string; scanned: number; added: number; closed: number; pending: number }> {
   const db = supabaseService();
   const [company] = await companiesForScope({ kind: "company", companies: [name] });
-  if (!company) return { company: name, scanned: 0, added: 0, closed: 0 };
+  if (!company) return { company: name, scanned: 0, added: 0, closed: 0, pending: 0 };
 
   const kws = await demandKeywords();
   const posts = await scanCompany(company, kws);
+  // Stamp first: if the insert loop dies mid-flight the company is still recorded
+  // as scanned, so a persistent failure can't wedge the sweep on one company.
   await recordScan(company, posts.length);
 
-  const added = await insertNew(db, posts, 50, 50);
+  const { added, pending } = await insertNew(db, posts, MAX_NEW_PER_RECONCILE);
   const closed = posts.length > 0 ? await pruneClosed(db, company.name, posts.map((p) => p.url)) : 0;
-  return { company: company.name, scanned: posts.length, added, closed };
+
+  // More new roles than one request can process: come straight back to this
+  // company. Gated on `added > 0` so a company whose inserts always fail can't
+  // requeue itself forever — progress is the condition for another turn.
+  if (shouldRequeue(added, pending)) await recordScan(company, posts.length, Date.now(), { dueNow: true });
+
+  return { company: company.name, scanned: posts.length, added, closed, pending };
 }
 
 /** Archive + remove this company's ATS roles that are no longer on the board. */
@@ -143,12 +169,21 @@ async function pruneClosed(db: Db, company: string, openUrls: string[]): Promise
  * embedded into the bge space. If embedding fails the role is rolled back so it
  * can't surface unmatched.
  */
-async function insertNew(db: Db, posts: AtsPosting[], cap: number, remaining: number): Promise<number> {
-  if (posts.length === 0 || remaining <= 0) return 0;
+async function insertNew(
+  db: Db,
+  posts: AtsPosting[],
+  cap: number,
+  remaining: number = cap,
+): Promise<{ added: number; pending: number }> {
+  if (posts.length === 0 || remaining <= 0) return { added: 0, pending: 0 };
   const urls = posts.map((p) => p.url);
   const { data: existing } = await db.from("roles").select("url").in("url", urls);
   const have = new Set((existing ?? []).map((r) => r.url as string));
-  const fresh = posts.filter((p) => !have.has(p.url)).slice(0, Math.min(cap, remaining));
+  const candidates = posts.filter((p) => !have.has(p.url));
+  const take = Math.min(cap, remaining);
+  const fresh = candidates.slice(0, take);
+  // What we're knowingly deferring — the caller decides whether to come back.
+  const pending = Math.max(0, candidates.length - fresh.length);
 
   let added = 0;
   for (const p of fresh) {
@@ -217,5 +252,5 @@ async function insertNew(db: Db, posts: AtsPosting[], cap: number, remaining: nu
       await db.from("roles").delete().eq("id", (role as { id: string }).id);
     }
   }
-  return added;
+  return { added, pending };
 }
