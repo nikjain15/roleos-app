@@ -138,14 +138,26 @@ export async function reconcileCompany(
   return { company: company.name, scanned: posts.length, added, closed, pending };
 }
 
-/** Archive + remove this company's ATS roles that are no longer on the board. */
+/**
+ * Archive + remove this company's roles that are no longer on the board.
+ *
+ * Seed roles are pruned too. They used to be exempt (`source = 'ats'` only), so
+ * the 691 hand-seeded roles were never once checked against a live board after
+ * being fetched in May/June. Measured 2026-08-08 against the real boards: 103 of
+ * 222 checkable seed roles — 46% — were already gone, including every Whatnot and
+ * Notion role and 35 of Stripe's 65. Users were being shown dead links.
+ *
+ * "Archive" is literal: every pruned role is copied to `roles_archive` with its
+ * full `doc` (description, archetype, seniority, must_haves, keywords) before it
+ * leaves `roles`, so the closed-role corpus stays available to learn from.
+ */
 async function pruneClosed(db: Db, company: string, openUrls: string[]): Promise<number> {
   const open = new Set(openUrls);
   const { data: existing } = await db
     .from("roles")
     .select("id, url, role_title, ats_provider, source, doc")
     .eq("company", company)
-    .eq("source", "ats")
+    .in("source", ["ats", "seed"])
     .limit(1000);
   const toClose = (existing ?? []).filter((r) => !open.has(r.url as string));
   if (toClose.length === 0) return 0;
