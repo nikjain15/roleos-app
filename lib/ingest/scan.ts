@@ -184,6 +184,7 @@ export async function recordScan(
   company: Company,
   foundRelevant: number,
   now: number = Date.now(),
+  opts: { dueNow?: boolean } = {},
 ): Promise<void> {
   const streak = foundRelevant > 0 ? 0 : (company.barren_streak ?? 0) + 1;
   const db = supabaseService();
@@ -192,9 +193,22 @@ export async function recordScan(
     .update({
       last_scanned_at: new Date(now).toISOString(),
       barren_streak: streak,
-      next_scan_at: nextScanAt(streak, now),
+      // dueNow: this company has more new roles than one request can process, so
+      // it goes back on the queue for the next hop instead of the next cadence.
+      next_scan_at: opts.dueNow ? new Date(now).toISOString() : nextScanAt(streak, now),
     })
     .eq("id", company.id);
+}
+
+/**
+ * Should a company go straight back on the queue instead of waiting for its next
+ * cadence? Only when it both has work left AND made progress this time —
+ * progress is the termination condition. Without it, a company whose inserts
+ * always fail (bad board, embed outage) would requeue itself forever and starve
+ * the rest of the sweep.
+ */
+export function shouldRequeue(added: number, pending: number): boolean {
+  return pending > 0 && added > 0;
 }
 
 /**

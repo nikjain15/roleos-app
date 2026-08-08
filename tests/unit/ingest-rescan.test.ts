@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { RESCAN_INTERVAL_MS, nextScanAt, pageAll } from "@/lib/ingest/scan";
+import { RESCAN_INTERVAL_MS, nextScanAt, pageAll, shouldRequeue } from "@/lib/ingest/scan";
 
 /**
  * Re-scan cadence. The corpus is only as fresh as this: before it existed a
@@ -69,5 +69,28 @@ describe("pageAll", () => {
 
   it("is empty, not stuck, when there are no rows", async () => {
     expect(await pageAll(async () => [], 1000)).toEqual([]);
+  });
+});
+
+/**
+ * Partial-ingest re-queue. A reconcile request dies around 60s of wall clock and
+ * each role costs ~6s, so a big board only ever gets ~8 roles in — and used to
+ * report HTTP 200 with `added: 8` and stamp itself 3 days out, dripping a
+ * 65-role backlog in over three weeks. Companies with work left now come
+ * straight back, but only while they're actually making progress.
+ */
+describe("shouldRequeue", () => {
+  it("comes back for a company with more roles waiting", () => {
+    expect(shouldRequeue(8, 57)).toBe(true);
+  });
+
+  it("does not requeue when the board is fully ingested", () => {
+    expect(shouldRequeue(8, 0)).toBe(false);
+    expect(shouldRequeue(0, 0)).toBe(false);
+  });
+
+  it("refuses to requeue a company making no progress, however much is pending", () => {
+    // Every insert failing (dead board, embed outage) must not starve the sweep.
+    expect(shouldRequeue(0, 500)).toBe(false);
   });
 });
