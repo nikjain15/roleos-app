@@ -7,17 +7,33 @@
  * pairs an AI/ML term with a real role word — and NEVER if it hits the exclusions.
  */
 
-/** Product / program / ops titles that are in-scope on their own. */
+/**
+ * Product / program / ops titles that are in-scope on their own.
+ *
+ * `products?` and `head of products` matter more than they look: enterprises
+ * pluralise ("Head of Digital Products") where startups don't, and the singular-
+ * only pattern dropped those outright. Same for "platform owner", which is what
+ * several banks call a product owner.
+ */
 const CORE_TITLE =
-  /\b(product manager|product lead|product owner|head of product|director of product|vp,? ?product|group product|principal product|staff product|founding product|chief product(?: officer)?|\bpm\b|data product|product strateg\w*|technical program manager|program manager|\btpm\b|biz ?ops|business operations|strategy & ops|strategy and operations|rev ?ops|revenue operations|chief of staff|head of operations|growth (?:pm|product|lead|manager))\b/i;
+  /\b(product manager|product lead|product owner|platform owner|head of (?:\w+ ){0,2}products?|director of (?:\w+ ){0,2}products?|vp,? ?products?|group product|principal product|staff product|founding product|chief product(?: officer)?|\bpm\b|data product|product strateg\w*|technical program manager|program manager|\btpm\b|biz ?ops|business operations|strategy & ops|strategy and operations|rev ?ops|revenue operations|chief of staff|head of operations|growth (?:pm|product|lead|manager))\b/i;
 
-/** AI/ML term + a substantive role word ⇒ in-scope (AI/ML engineering & science). */
-const AI_TERM = /\b(a\.?i\.?|ml|machine learning|gen ?ai|generative|\bllm\b|deep learning|nlp|computer vision|applied ai|artificial intelligence)\b/i;
+/**
+ * AI/ML term + a substantive role word ⇒ in-scope (AI/ML engineering & science).
+ *
+ * "data"/"analytics" are deliberately in AI_TERM. Measured on the finance boards:
+ * banks and asset managers title this work "Data Scientist" or "Data Engineer"
+ * where AI-native companies write "ML Engineer", so requiring an explicit AI/ML
+ * word silently dropped the exact roles we source those firms for. The role word
+ * is still required, so "data entry" and "analytics ambassador" stay out — and
+ * the exclusions run first regardless.
+ */
+const AI_TERM = /\b(a\.?i\.?|ml|machine learning|gen ?ai|generative|\bllm\b|deep learning|nlp|computer vision|applied ai|artificial intelligence|data|analytics|quantitative|\bquant\b)\b/i;
 const AI_ROLE = /\b(engineer|scientist|research(?:er)?|fellows?|architect|developer|product|platform|infrastructure|\blead\b|head|director|\bvp\b|principal|staff|founding|manager|strateg\w*)\b/i;
 
 /** Off-target families to never ingest, even when an AI/ML term is present. */
 export const EXCLUDE_TITLE =
-  /\b(trainer|annotat\w*|labell?er|labell?ing|\brater\b|evaluator|tutor|teacher|data entry|transcrib\w*|transcription|voice[ -]?(?:actor|acting|over)|linguist|proofread\w*|account executive|account manager|\bsales\b|business development|\bbdr\b|\bsdr\b|commercial associate|customer (?:success|support|experience)|technical support|support specialist|ambassador|campus|\bintern(?:ship)?\b|recruit\w*|talent acquisition|community manager|content (?:writer|creator)|copywriter|social media|marketing|executive assistant|paralegal|bookkeep\w*|accountant)\b/i;
+  /\b(trainer|annotat\w*|labell?er|labell?ing|\brater\b|evaluator|tutor|teacher|data entry|data cent(?:er|re)|transcrib\w*|transcription|voice[ -]?(?:actor|acting|over)|linguist|proofread\w*|account executive|account manager|\bsales\b|business development|\bbdr\b|\bsdr\b|commercial associate|customer (?:success|support|experience)|technical support|support specialist|ambassador|campus|\bintern(?:ship)?\b|recruit\w*|talent acquisition|community manager|content (?:writer|creator)|copywriter|social media|marketing|executive assistant|paralegal|bookkeep\w*|accountant)\b/i;
 
 /** A role title is in-scope iff it hits a core/AI pattern and not the exclusions. */
 export function isRelevantTitle(title: string, kwRe: RegExp | null = null): boolean {

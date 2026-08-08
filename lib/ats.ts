@@ -8,7 +8,17 @@
  * board endpoints. Description is normalised to plain text for embedding.
  */
 
-export type AtsProvider = "greenhouse" | "ashby" | "lever" | "yc";
+export type AtsProvider = "greenhouse" | "ashby" | "lever" | "yc" | "workday";
+
+/**
+ * Postings fetched per Workday board before we stop paging (20 per request).
+ * Large enterprise boards run to thousands; a reconcile request only survives
+ * ~60s of wall clock and has to leave room to actually extract roles, so we take
+ * the newest slice rather than the whole board. Workday returns newest-first, so
+ * on a 3-day cadence this still catches everything newly posted; depth beyond
+ * the cap accrues over successive sweeps.
+ */
+const WORKDAY_PAGE_CAP = 15;
 
 export interface AtsPosting {
   externalId: string;
@@ -212,23 +222,95 @@ function decodeHtmlAttr(s: string): string {
 }
 
 /**
- * Fetch a company's open roles — try each public ATS against the slug, then fall
- * back to the YC Work-at-a-Startup board (when a yc_slug is known) for YC
- * companies not on a standard ATS. Returns [] if none answer.
+ * Workday board fetcher — how most large enterprises post (banks, asset
+ * managers, F500). Public `wday/cxs` JSON API, no auth, same terms as the other
+ * fetchers: it's the company's own public board endpoint.
+ *
+ * Workday needs three coordinates rather than one slug — tenant, datacenter and
+ * site path (`capgroup` + `wd1` + `capitalgroupcareers`) — and they can't be
+ * derived from the company name (Apollo Global's board lives under Athene's
+ * tenant). So a Workday company stores `"tenant/wd1/site"` in `companies.slug`
+ * with `ats_provider='workday'`; no schema change, and the coordinates stay
+ * admin-editable like every other company field.
+ *
+ * `truncated` reports whether we stopped at WORKDAY_PAGE_CAP with more to come.
+ * The caller MUST NOT prune on a truncated scan: the postings past the cap are
+ * still open, and treating them as closed would archive live roles.
+ */
+export async function fetchWorkday(
+  coord: string,
+  company: string,
+): Promise<{ posts: AtsPosting[]; truncated: boolean }> {
+  const [tenant, wd, ...rest] = coord.split("/");
+  const site = rest.join("/");
+  if (!tenant || !wd || !site) return { posts: [], truncated: false };
+
+  const base = `https://${tenant}.${wd}.myworkdayjobs.com`;
+  const posts: AtsPosting[] = [];
+  let truncated = false;
+
+  for (let page = 0; page < WORKDAY_PAGE_CAP; page++) {
+    let batch: Array<Record<string, unknown>>;
+    try {
+      const r = await fetch(`${base}/wday/cxs/${tenant}/${site}/jobs`, {
+        method: "POST",
+        headers: { "content-type": "application/json", accept: "application/json", "user-agent": "Mozilla/5.0 (RoleOS sourcing bot)" },
+        body: JSON.stringify({ appliedFacets: {}, limit: 20, offset: page * 20, searchText: "" }),
+        signal: AbortSignal.timeout(15_000),
+      });
+      if (!r.ok) break;
+      batch = ((await r.json()) as { jobPostings?: Array<Record<string, unknown>> }).jobPostings ?? [];
+    } catch {
+      break;
+    }
+    for (const job of batch) {
+      const path = String(job.externalPath ?? "");
+      const title = String(job.title ?? "");
+      if (!path || !title) continue;
+      const ids = Array.isArray(job.bulletFields) ? (job.bulletFields as unknown[]).map(String) : [];
+      posts.push({
+        externalId: `wd_${ids[0] || path}`,
+        company,
+        title,
+        location: (job.locationsText as string) || null,
+        url: `${base}/${site}${path}`,
+        description: [title, String(job.locationsText ?? ""), String(job.postedOn ?? ""), String(job.timeType ?? "")]
+          .filter(Boolean)
+          .join(" · "),
+        provider: "workday" as const,
+      });
+    }
+    if (batch.length < 20) break;
+    if (page === WORKDAY_PAGE_CAP - 1) truncated = true;
+  }
+  return { posts, truncated };
+}
+
+/**
+ * Fetch a company's open roles — Workday when the company is configured for it,
+ * otherwise try each public ATS against the slug, then fall back to the YC
+ * Work-at-a-Startup board (when a yc_slug is known) for YC companies not on a
+ * standard ATS. `truncated` is true only when a board was cut short by a page
+ * cap, and tells the caller not to prune (see fetchWorkday).
  */
 export async function fetchCompanyPostings(
   company: string,
   slug?: string,
   ycSlug?: string,
-): Promise<AtsPosting[]> {
+  provider?: string | null,
+): Promise<{ posts: AtsPosting[]; truncated: boolean }> {
   const s = slug || companySlug(company);
+  if (provider === "workday") {
+    const { posts, truncated } = await fetchWorkday(s, company);
+    return { posts: posts.filter((p) => p.url && p.title), truncated };
+  }
   for (const fetcher of [fetchGreenhouse, fetchAshby, fetchLever]) {
     const posts = await fetcher(s, company);
-    if (posts.length) return posts.filter((p) => p.url && p.title);
+    if (posts.length) return { posts: posts.filter((p) => p.url && p.title), truncated: false };
   }
   if (ycSlug) {
     const posts = await fetchYcWaas(ycSlug, company);
-    if (posts.length) return posts.filter((p) => p.url && p.title);
+    if (posts.length) return { posts: posts.filter((p) => p.url && p.title), truncated: false };
   }
-  return [];
+  return { posts: [], truncated: false };
 }

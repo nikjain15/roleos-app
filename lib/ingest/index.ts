@@ -23,6 +23,7 @@ export {
   RESCAN_INTERVAL_MS,
 } from "./scan";
 export { syncYcCompanies, promoteYcCandidates, type YcSyncSummary, type YcDataset } from "./yc";
+export { syncSpeedrunCompanies, fetchSpeedrunJobs, type SpeedrunSyncSummary } from "./speedrun";
 
 type Db = ReturnType<typeof supabaseService>;
 
@@ -70,7 +71,7 @@ export async function runIngestion(
     let scanned = 0;
     let added = 0;
     for (const c of companies) {
-      const posts = await scanCompany(c, kws);
+      const { posts } = await scanCompany(c, kws);
       scanned += posts.length;
       await recordScan(c, posts.length);
       if (added >= budget) continue; // keep scanning (counts) but stop adding
@@ -116,7 +117,7 @@ export async function reconcileCompany(
   if (!company) return { company: name, scanned: 0, added: 0, closed: 0, pending: 0 };
 
   const kws = await demandKeywords();
-  const posts = await scanCompany(company, kws);
+  const { posts, truncated } = await scanCompany(company, kws);
   // Stamp provisionally first, so a request that dies mid-loop leaves the
   // company due again shortly rather than parked for a full cadence with work
   // left. The final stamp below sets the real schedule; if it never lands, the
@@ -124,7 +125,10 @@ export async function reconcileCompany(
   await recordScan(company, posts.length, Date.now(), { provisional: true });
 
   const { added, pending } = await insertNew(db, posts, MAX_NEW_PER_RECONCILE);
-  const closed = posts.length > 0 ? await pruneClosed(db, company.name, posts.map((p) => p.url)) : 0;
+  // Never prune a truncated scan: postings past the page cap are still open, and
+  // treating them as closed would archive live roles wholesale.
+  const closed =
+    posts.length > 0 && !truncated ? await pruneClosed(db, company.name, posts.map((p) => p.url)) : 0;
 
   // More new roles than one request can process: come straight back to this
   // company. Gated on `added > 0` so a company whose inserts always fail can't
