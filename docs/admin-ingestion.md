@@ -218,12 +218,32 @@ hourly cron started no instance for six weeks, and the corpus froze: newest role
 pass didn't cover for it either — it only scans companies named by *active*
 intents, and there were none.
 
-`listDueCompanyNames` now treats **stale as due**: `last_scanned_at IS NULL OR
-last_scanned_at < now() - RESCAN_INTERVAL_MS` (3 days), ordered oldest-first, so
-the existing hourly cron + self-chaining Workflow re-sweep the whole enabled set
-roughly every 3 days with no new pipeline. Each `reconcile` stamps
-`last_scanned_at`, so a company drops out for the rest of the sweep and rejoins
-once it goes stale again.
+`listDueCompanyNames` now treats **stale as due**, and each company carries its
+own due time: `next_scan_at IS NULL OR next_scan_at < now()`, soonest-due first,
+so the existing hourly cron + self-chaining Workflow re-sweep the enabled set
+with no new pipeline. Every `reconcile` writes a fresh `next_scan_at`, so a
+company drops out for the rest of the sweep and rejoins on its own cadence.
+
+**Adaptive cadence (migration 0021).** The boards are not equally worth
+revisiting. Probing 24 enabled companies against the live corpus: 22 answered,
+and ~a quarter of those yielded zero in-scope roles — doola (8 postings, 0
+relevant), GrowthBook (5, 0), Oxygen, Streak, Conta Simples — plus 2 with no
+reachable board at all. Re-fetching those every 3 days costs no Claude spend
+(the fetch is free, dedupe runs before extract) but it lengthens the sweep and
+spends Workflow subrequests the productive companies queue behind.
+
+So `companies.barren_streak` counts consecutive scans returning zero in-scope
+postings, and `nextScanAt(streak)` backs the cadence off **3d → 6d → 12d → 24d**,
+capped. Any single in-scope hit resets the streak to 0 and the cadence to 3d.
+The cap is the point: a company quiet for a quarter can still start hiring, and
+24 days still catches it within a month. Expected effect is ~25% off sweep length
+with no loss of corpus coverage.
+
+A transient fetch failure reads as barren (the fetcher can't distinguish "no
+board" from "board down") and costs one delayed cycle — accepted, because the
+backoff is capped and self-resetting. Note barren is measured on **in-scope**
+postings, not raw board size: the companies worth backing off mostly do answer
+with jobs, just never product/AI ones.
 
 Because a full sweep (~426 companies, 12 per instance) outlasts the hourly tick,
 `sweepInProgress()` guards the start: if any enabled company was scanned in the

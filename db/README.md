@@ -17,6 +17,7 @@ All migrations below are **applied**; the role corpus is seeded and grown.
 0008_public_index_stats.sql  anon-safe aggregate stats for the marketing site
 0009_index_ask_rate.sql   index Ask-RO rate limiting
 0009_yc_source.sql        'yc' source columns (YC feeder)
+0021_scan_backoff.sql     per-company scan cadence (barren_streak, next_scan_at)
 ```
 
 Apply via the Supabase SQL editor or CLI:

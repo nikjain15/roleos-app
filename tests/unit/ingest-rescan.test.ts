@@ -1,31 +1,39 @@
 import { describe, it, expect } from "vitest";
-import { RESCAN_INTERVAL_MS, staleCutoff } from "@/lib/ingest/scan";
+import { RESCAN_INTERVAL_MS, nextScanAt } from "@/lib/ingest/scan";
 
 /**
- * Re-scan cadence. The corpus is only as fresh as this cutoff: before it existed
- * a company scanned once was never revisited, so closed roles lingered and
- * anything posted after the first sweep never landed.
+ * Re-scan cadence. The corpus is only as fresh as this: before it existed a
+ * company scanned once was never revisited, so closed roles lingered and
+ * anything posted after the first sweep never landed. The adaptive half keeps
+ * that sweep short — boards that never yield in-scope roles step back so the
+ * productive ones aren't queued behind them.
  */
 const NOW = Date.parse("2026-08-08T14:00:00Z");
+const DAY = 24 * 3_600_000;
+const daysOut = (streak: number) => (Date.parse(nextScanAt(streak, NOW)) - NOW) / DAY;
 
-describe("staleCutoff", () => {
-  it("sits exactly one rescan interval behind now", () => {
-    expect(Date.parse(staleCutoff(NOW))).toBe(NOW - RESCAN_INTERVAL_MS);
+describe("nextScanAt", () => {
+  it("puts a productive company back in three days", () => {
+    expect(daysOut(0)).toBe(3);
+    expect(RESCAN_INTERVAL_MS).toBe(3 * DAY);
   });
 
-  it("is an ISO timestamp Postgres can compare against last_scanned_at", () => {
-    expect(staleCutoff(NOW)).toBe("2026-08-05T14:00:00.000Z");
+  it("doubles the wait for each consecutive empty scan", () => {
+    expect(daysOut(1)).toBe(6);
+    expect(daysOut(2)).toBe(12);
+    expect(daysOut(3)).toBe(24);
   });
 
-  it("keeps a just-scanned company fresh and marks an old one due", () => {
-    const cutoff = Date.parse(staleCutoff(NOW));
-    const scannedAnHourAgo = NOW - 3_600_000;
-    const scannedSixWeeksAgo = NOW - 42 * 24 * 3_600_000;
-    expect(scannedAnHourAgo < cutoff).toBe(false);
-    expect(scannedSixWeeksAgo < cutoff).toBe(true);
+  it("caps the backoff so a quiet company is still checked monthly", () => {
+    expect(daysOut(9)).toBe(24);
+    expect(daysOut(100)).toBe(24);
   });
 
-  it("re-scans every company at least twice a week", () => {
-    expect(RESCAN_INTERVAL_MS).toBeLessThanOrEqual(3.5 * 24 * 3_600_000);
+  it("treats a negative or missing streak as fresh rather than compounding", () => {
+    expect(daysOut(-1)).toBe(3);
+  });
+
+  it("returns an ISO timestamp Postgres can compare against next_scan_at", () => {
+    expect(nextScanAt(0, NOW)).toBe("2026-08-11T14:00:00.000Z");
   });
 });
