@@ -73,7 +73,7 @@ README is about how it is built.
 | `ingest/` | Durable Cloudflare Workflow that hunts the role corpus |
 | `cron/` | Scheduled worker (hourly digests + bounded ingest) |
 | `sandbox/` | Cloudflare Sandbox SDK worker for live prototype previews |
-| `seed/` | Role corpus seed + embeddings: 691 extracted postings, 689 unique after id dedup |
+| `seed/` | Role corpus seed + embeddings: 691 extracted postings across 89 companies, 689 unique after id dedup. Repo snapshot; the live index is larger (1,536 postings / 294 companies) |
 | `tests/` | Unit + invariant tests (incl. human-gated-outward guards) |
 | `docs/` | Setup runbooks, security audit, architecture handoff |
 | `archive/` | Parked role snapshots from the manual→automated ingestion migration |
