@@ -22,8 +22,9 @@ dead → extract new via Claude → upsert + embed**, with run status in `/admin
   there's **no control to run ingestion**. This adds the trigger + the engine.
 - A prior session flagged the gap: *"No live role-ingestion pipeline. The
   always-on hunt needs a feed of fresh postings."* This closes it.
-- The whole flow was validated today (557→404 prune+archive, +375 backfill, +60
-  from disabled-company enablement → **691 live roles, all embedded**). The Node
+- The whole flow was validated at the time (557→404 prune+archive, +375 backfill, +60
+  from disabled-company enablement → **691 live roles, all embedded** — a snapshot of
+  that run, not the current index; ro.roleos.fyi/explore has the live count). The Node
   scripts in `role-os-archive/pipeline/` + `roleos/db/seed/` are the reference impl.
 
 ## The hard constraint
@@ -196,16 +197,59 @@ reached the `done`/`error` update, every hour left an orphaned
 1. runs the **bounded synchronous `demand` pass** (only companies users are
    actively hunting, small, safe, records an `ingestion_runs` row); then
 2. hands the rest to the durable **`IngestWorkflow`:** it `POST`s
-   `roleos-ingest…/start` **only when `listUnscannedCompanyNames(1).remaining > 0`**
-   (no no-op instance per hour once the corpus is caught up).
+   `roleos-ingest…/start` **only when `listDueCompanyNames(1).remaining > 0`**
+   (no no-op instance per hour once the corpus is caught up) **and no sweep is
+   already in flight** (`sweepInProgress()` — see the freshness loop below).
 
 **The Workflow itself** was upgraded from "loop every enabled company in one
 instance" (which hit *Too many subrequests* on a 366-company sweep) to a
-**self-chaining batch**: `BATCH=12` never-scanned companies per instance
-(`listUnscannedCompanyNames`, `last_scanned_at IS NULL`), a `chain-next` step
+**self-chaining batch**: `BATCH=12` due companies per instance
+(`listDueCompanyNames`), a `chain-next` step
 spawns the `depth+1` instance while a full batch remains (`MAX_DEPTH=80`), and
 each company is one isolated, retried `reconcile` step. Each instance gets a fresh
 subrequest budget, so a 300+ company sweep can't exhaust one invocation.
+
+### Freshness loop (2026-08-08)
+
+The due set was originally `last_scanned_at IS NULL` — **scan-once**. Once every
+enabled company had been swept (2026-06-30), `remaining` was permanently 0, the
+hourly cron started no instance for six weeks, and the corpus froze: newest role
+2026-06-30, closed July postings still live, nothing new ingested. The demand
+pass didn't cover for it either — it only scans companies named by *active*
+intents, and there were none.
+
+`listDueCompanyNames` now treats **stale as due**, and each company carries its
+own due time: `next_scan_at IS NULL OR next_scan_at < now()`, soonest-due first,
+so the existing hourly cron + self-chaining Workflow re-sweep the enabled set
+with no new pipeline. Every `reconcile` writes a fresh `next_scan_at`, so a
+company drops out for the rest of the sweep and rejoins on its own cadence.
+
+**Adaptive cadence (migration 0021).** The boards are not equally worth
+revisiting. Probing 24 enabled companies against the live corpus: 22 answered,
+and ~a quarter of those yielded zero in-scope roles — doola (8 postings, 0
+relevant), GrowthBook (5, 0), Oxygen, Streak, Conta Simples — plus 2 with no
+reachable board at all. Re-fetching those every 3 days costs no Claude spend
+(the fetch is free, dedupe runs before extract) but it lengthens the sweep and
+spends Workflow subrequests the productive companies queue behind.
+
+So `companies.barren_streak` counts consecutive scans returning zero in-scope
+postings, and `nextScanAt(streak)` backs the cadence off **3d → 6d → 12d → 24d**,
+capped. Any single in-scope hit resets the streak to 0 and the cadence to 3d.
+The cap is the point: a company quiet for a quarter can still start hiring, and
+24 days still catches it within a month. Expected effect is ~25% off sweep length
+with no loss of corpus coverage.
+
+A transient fetch failure reads as barren (the fetcher can't distinguish "no
+board" from "board down") and costs one delayed cycle — accepted, because the
+backoff is capped and self-resetting. Note barren is measured on **in-scope**
+postings, not raw board size: the companies worth backing off mostly do answer
+with jobs, just never product/AI ones.
+
+Because a full sweep (~426 companies, 12 per instance) outlasts the hourly tick,
+`sweepInProgress()` guards the start: if any enabled company was scanned in the
+last 20 minutes a chain is still hopping, and the cron skips
+(`durable.skipped = "sweep-in-progress"`). The cron samples it **before** its own
+demand pass, whose stamps would otherwise read as a live sweep.
 
 **Deployed + proven (2026-06-30):** app `roleos` `v e05863d6` + `roleos-ingest`
 `v f283417a`. Live cron path returns `{durable:{started:true}}`. The 60 staged
@@ -214,8 +258,8 @@ subrequest budget, so a 300+ company sweep can't exhaust one invocation.
 (cleaned zombies) / 0 scanning.
 
 **Still open (non-blocking):** the durable path writes no `ingestion_runs` row
-(admin won't show those sweeps, could open one per instance); a second hourly
-cron can briefly run a concurrent chain over the same unscanned set
-(harmless, dedup by URL + guarded prune); the backfill is sequential
-(~12 companies/instance). Recurring re-scan freshness (re-null `last_scanned_at`
-on a cadence) is the separate role-refresh loop, see `docs/setup-role-refresh.md`.
+(admin won't show those sweeps, could open one per instance); the backfill is
+sequential (~12 companies/instance), so a full re-sweep takes hours of wall
+clock. The richer per-role lifecycle (content hash, `last_seen_open`, edited-JD
+re-extract) is still the separate role-refresh design, see
+`docs/setup-role-refresh.md`.

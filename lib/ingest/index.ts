@@ -11,11 +11,17 @@ import { runSkill } from "@/agent/skills/run";
 import extractRole from "@/agent/skills/extract_role";
 import { parseModelJson } from "@/lib/json";
 import { logAgentRuns } from "@/lib/agent-runs";
-import { companiesForScope, scanCompany, demandKeywords, type IngestScope } from "./scan";
+import { companiesForScope, scanCompany, demandKeywords, recordScan, type IngestScope } from "./scan";
 import { normalizeArchetype } from "./archetype";
 import { fetchYcJobDescription, type AtsPosting } from "@/lib/ats";
 
-export { listEnabledCompanyNames, listUnscannedCompanyNames } from "./scan";
+export {
+  listEnabledCompanyNames,
+  listDueCompanyNames,
+  sweepInProgress,
+  nextScanAt,
+  RESCAN_INTERVAL_MS,
+} from "./scan";
 export { syncYcCompanies, promoteYcCandidates, type YcSyncSummary, type YcDataset } from "./yc";
 
 type Db = ReturnType<typeof supabaseService>;
@@ -58,7 +64,7 @@ export async function runIngestion(
     for (const c of companies) {
       const posts = await scanCompany(c, kws);
       scanned += posts.length;
-      await db.from("companies").update({ last_scanned_at: new Date().toISOString() }).eq("id", c.id);
+      await recordScan(c, posts.length);
       if (added >= budget) continue; // keep scanning (counts) but stop adding
       added += await insertNew(db, posts, opts.maxPerCompany ?? MAX_PER_COMPANY, budget - added);
     }
@@ -93,7 +99,7 @@ export async function reconcileCompany(
 
   const kws = await demandKeywords();
   const posts = await scanCompany(company, kws);
-  await db.from("companies").update({ last_scanned_at: new Date().toISOString() }).eq("id", company.id);
+  await recordScan(company, posts.length);
 
   const added = await insertNew(db, posts, 50, 50);
   const closed = posts.length > 0 ? await pruneClosed(db, company.name, posts.map((p) => p.url)) : 0;

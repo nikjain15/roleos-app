@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin";
-import { runIngestion, reconcileCompany, listEnabledCompanyNames, listUnscannedCompanyNames, syncYcCompanies, promoteYcCandidates } from "@/lib/ingest";
+import { runIngestion, reconcileCompany, listEnabledCompanyNames, listDueCompanyNames, syncYcCompanies, promoteYcCandidates } from "@/lib/ingest";
 import { type IngestScope } from "@/lib/ingest/scan";
 import { env } from "@/lib/env";
 
@@ -24,7 +24,7 @@ export async function POST(req: Request): Promise<Response> {
   const internal = !!expected && secret === expected;
 
   const body = (await req.json().catch(() => ({}))) as {
-    op?: "companies" | "unscanned" | "reconcile" | "yc-sync" | "yc-promote";
+    op?: "companies" | "unscanned" | "due" | "reconcile" | "yc-sync" | "yc-promote";
     company?: string;
     count?: number;
     limit?: number;
@@ -42,8 +42,11 @@ export async function POST(req: Request): Promise<Response> {
       if (body.op === "companies") {
         return NextResponse.json({ companies: await listEnabledCompanyNames() });
       }
-      if (body.op === "unscanned") {
-        return NextResponse.json(await listUnscannedCompanyNames(body.limit ?? 12));
+      // "unscanned" is the wire name the deployed IngestWorkflow sends; it now
+      // means "due for a scan" (never scanned OR stale). Kept as-is so the
+      // worker doesn't need a redeploy to pick this up.
+      if (body.op === "unscanned" || body.op === "due") {
+        return NextResponse.json(await listDueCompanyNames(body.limit ?? 12));
       }
       if (body.op === "reconcile" && body.company) {
         return NextResponse.json(await reconcileCompany(body.company));

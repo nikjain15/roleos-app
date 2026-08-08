@@ -45,7 +45,8 @@ export class IngestWorkflow extends WorkflowEntrypoint<Env> {
   async run(event: WorkflowEvent<unknown>, step: WorkflowStep) {
     const depth = Number((event.payload as { depth?: number } | undefined)?.depth ?? 0);
 
-    // Pull the next batch of never-scanned companies (+ how many remain total).
+    // Pull the next batch of companies due for a scan — never scanned, or gone
+    // stale since the last sweep — plus how many remain total, oldest first.
     const { companies, remaining } = (await step.do("list-unscanned", () =>
       callApp(this.env, { op: "unscanned", limit: BATCH }),
     )) as { companies: string[]; remaining: number };
@@ -71,7 +72,7 @@ export class IngestWorkflow extends WorkflowEntrypoint<Env> {
 
     // Chain the next instance while a full batch was processed (more likely remain)
     // and we're under the runaway guard. reconcile marks each company scanned, so
-    // the next instance's `unscanned` query naturally excludes everything done here.
+    // the next instance's due query naturally excludes everything done here.
     const more = companies.length === BATCH && remaining > companies.length && depth < MAX_DEPTH;
     if (more) {
       await step.do("chain-next", async () => {

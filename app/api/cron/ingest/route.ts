@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { runIngestion, listUnscannedCompanyNames } from "@/lib/ingest";
+import { runIngestion, listDueCompanyNames, sweepInProgress } from "@/lib/ingest";
 import { env } from "@/lib/env";
 
 export const dynamic = "force-dynamic";
@@ -26,15 +26,22 @@ export async function POST(req: Request): Promise<Response> {
     return NextResponse.json({ error: "forbidden" }, { status: 403 });
   }
   try {
+    // Sample sweep state BEFORE scanning anything ourselves — the demand pass
+    // below stamps `last_scanned_at` too, and would read as a live sweep.
+    const { remaining } = await listDueCompanyNames(1);
+    const busy = await sweepInProgress();
+
     // 1) Bounded demand pass — fresh, within the request budget.
     const demand = await runIngestion({ trigger: "cron", scope: { kind: "demand" }, maxPerCompany: 6 });
 
-    // 2) Backfill never-scanned enabled companies via the durable Workflow. Only
-    //    kick it off when something is actually unscanned, so we don't spawn a
-    //    no-op instance every hour once the corpus is caught up.
-    const { remaining } = await listUnscannedCompanyNames(1);
-    let durable: { started: boolean; id?: string } = { started: false };
-    if (remaining > 0) {
+    // 2) Sweep the enabled companies that are due for a scan — never scanned, or
+    //    last scanned over RESCAN_INTERVAL_MS ago — via the durable Workflow.
+    //    Only kick it off when something is actually due and no chain is already
+    //    working, so the hourly tick can't stack duplicate sweeps.
+    let durable: { started: boolean; id?: string; skipped?: string } = { started: false };
+    if (remaining > 0 && busy) {
+      durable = { started: false, skipped: "sweep-in-progress" };
+    } else if (remaining > 0) {
       const res = await fetch(`${INGEST_WORKER_URL}/start?secret=${encodeURIComponent(expected)}`, {
         method: "POST",
       });
