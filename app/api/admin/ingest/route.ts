@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { requireAdmin } from "@/lib/admin";
-import { runIngestion, reconcileCompany, listEnabledCompanyNames, listDueCompanyNames, syncYcCompanies, promoteYcCandidates } from "@/lib/ingest";
+import { runIngestion, reconcileCompany, listEnabledCompanyNames, listDueCompanyNames, syncYcCompanies, promoteYcCandidates, syncSpeedrunCompanies } from "@/lib/ingest";
 import { type IngestScope } from "@/lib/ingest/scan";
 import { env } from "@/lib/env";
 
@@ -24,7 +24,7 @@ export async function POST(req: Request): Promise<Response> {
   const internal = !!expected && secret === expected;
 
   const body = (await req.json().catch(() => ({}))) as {
-    op?: "companies" | "unscanned" | "due" | "reconcile" | "yc-sync" | "yc-promote";
+    op?: "companies" | "unscanned" | "due" | "reconcile" | "yc-sync" | "yc-promote" | "speedrun-sync";
     company?: string;
     count?: number;
     limit?: number;
@@ -53,6 +53,9 @@ export async function POST(req: Request): Promise<Response> {
       }
       if (body.op === "yc-sync") {
         return NextResponse.json(await syncYcCompanies());
+      }
+      if (body.op === "speedrun-sync") {
+        return NextResponse.json(await syncSpeedrunCompanies());
       }
       if (body.op === "yc-promote") {
         return NextResponse.json(await promoteYcCandidates(body.count ?? 100));

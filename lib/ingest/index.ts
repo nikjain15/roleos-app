@@ -23,6 +23,7 @@ export {
   RESCAN_INTERVAL_MS,
 } from "./scan";
 export { syncYcCompanies, promoteYcCandidates, type YcSyncSummary, type YcDataset } from "./yc";
+export { syncSpeedrunCompanies, fetchSpeedrunJobs, type SpeedrunSyncSummary } from "./speedrun";
 
 type Db = ReturnType<typeof supabaseService>;
 
