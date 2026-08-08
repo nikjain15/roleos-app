@@ -117,9 +117,11 @@ export async function reconcileCompany(
 
   const kws = await demandKeywords();
   const posts = await scanCompany(company, kws);
-  // Stamp first: if the insert loop dies mid-flight the company is still recorded
-  // as scanned, so a persistent failure can't wedge the sweep on one company.
-  await recordScan(company, posts.length);
+  // Stamp provisionally first, so a request that dies mid-loop leaves the
+  // company due again shortly rather than parked for a full cadence with work
+  // left. The final stamp below sets the real schedule; if it never lands, the
+  // provisional one is a safe fallback rather than a wrong answer.
+  await recordScan(company, posts.length, Date.now(), { provisional: true });
 
   const { added, pending } = await insertNew(db, posts, MAX_NEW_PER_RECONCILE);
   const closed = posts.length > 0 ? await pruneClosed(db, company.name, posts.map((p) => p.url)) : 0;
@@ -127,7 +129,7 @@ export async function reconcileCompany(
   // More new roles than one request can process: come straight back to this
   // company. Gated on `added > 0` so a company whose inserts always fail can't
   // requeue itself forever — progress is the condition for another turn.
-  if (shouldRequeue(added, pending)) await recordScan(company, posts.length, Date.now(), { dueNow: true });
+  await recordScan(company, posts.length, Date.now(), { dueNow: shouldRequeue(added, pending) });
 
   return { company: company.name, scanned: posts.length, added, closed, pending };
 }

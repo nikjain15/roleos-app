@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { RESCAN_INTERVAL_MS, nextScanAt, pageAll, shouldRequeue } from "@/lib/ingest/scan";
+import { RESCAN_INTERVAL_MS, nextScanAt, pageAll, shouldRequeue, scheduleAfterScan, PROVISIONAL_RETRY_MS } from "@/lib/ingest/scan";
 
 /**
  * Re-scan cadence. The corpus is only as fresh as this: before it existed a
@@ -92,5 +92,39 @@ describe("shouldRequeue", () => {
   it("refuses to requeue a company making no progress, however much is pending", () => {
     // Every insert failing (dead board, embed outage) must not starve the sweep.
     expect(shouldRequeue(0, 500)).toBe(false);
+  });
+});
+
+/**
+ * Scan scheduling. reconcileCompany writes twice — a provisional stamp before
+ * the insert loop and the real one after — so the schedule has to be sane if
+ * only the first write lands. It previously wrote the full 3-day cadence up
+ * front, which parked a company with work left for three days if the request
+ * died mid-loop.
+ */
+describe("scheduleAfterScan", () => {
+  const NOW2 = Date.parse("2026-08-08T16:00:00Z");
+  const minutesOut = (opts: Parameters<typeof scheduleAfterScan>[2]) =>
+    (scheduleAfterScan(0, NOW2, opts) - NOW2) / 60_000;
+
+  it("brings a company with roles still pending straight back", () => {
+    expect(minutesOut({ dueNow: true })).toBe(0);
+  });
+
+  it("parks a provisional stamp for minutes, not days", () => {
+    expect(minutesOut({ provisional: true })).toBe(15);
+    expect(PROVISIONAL_RETRY_MS).toBe(15 * 60_000);
+  });
+
+  it("falls back to the normal cadence once the scan completes", () => {
+    expect(minutesOut({})).toBe(3 * 24 * 60);
+  });
+
+  it("prefers dueNow over provisional if both are somehow set", () => {
+    expect(minutesOut({ dueNow: true, provisional: true })).toBe(0);
+  });
+
+  it("still backs a barren company off from the final stamp", () => {
+    expect((scheduleAfterScan(2, NOW2, {}) - NOW2) / 3_600_000).toBe(12 * 24);
   });
 });
