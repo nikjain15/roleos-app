@@ -107,6 +107,20 @@ const ALLOWLIST = {
   //
   // The gate below is therefore load-bearing on its own: the next high or
   // critical advisory to appear fails the build with nothing suppressing it.
+  //
+  // 2026-08-08: the dev-scope column is now zero too, which is why the
+  // devOnlyHighs section prints nothing. Eighteen Dependabot alerts (all
+  // dev-scope, all transitive) were cleared by version, not by exception:
+  //   - js-yaml 4.3.0 -> 4.3.1 under @eslint/eslintrc, which floats at ^4.1.1,
+  //     so a plain `npm update` moved it. No override needed.
+  //   - undici 7.28.0 -> 7.29.0 under wrangler -> miniflare. miniflare pins
+  //     undici EXACTLY, and no stable miniflare ships 7.29.0 yet (only the
+  //     5.x alpha), so `overrides` is the only route that does not put an
+  //     alpha emulator on the dev/deploy path. Added to all three trees.
+  //   - sharp 0.34.5 -> 0.35.3 in the two sandbox trees, which lacked the
+  //     override the root has had since the libvips CVEs.
+  // Drop the undici override once a stable miniflare ships >= 7.29.0; it is a
+  // fix pulled forward, not a suppression, so nothing here expires.
 };
 
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
