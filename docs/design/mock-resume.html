@@ -1,0 +1,240 @@
+<!doctype html>
+<!--
+  RECONSTRUCTION, not the original file.
+
+  The original public/mock-resume.html was destroyed (uncommitted, unrecoverable)
+  on 2026-08-08. This is a rebuild from three surviving sources:
+    - the original's :root token block + header/meter CSS, recovered verbatim from
+      a terminal read (everything from `.top` down to `.track .tick` is original);
+    - docs/specs/design-system.md for the token contract and type/radius scale;
+    - docs/specs/resume-editor-v2.md §"The editor UX" + the SHIPPED scorer
+      (lib/resume/calibration.ts, lib/resume/meter.ts) for the meter's real
+      structure — tiers Thin(0) / Solid(55) / Strong(78) / Fully evidenced(100,
+      evidence-gated), the `+N from your master` lift, the one next move, and the
+      READINESS_CAVEAT string, which is quoted exactly.
+
+  The layout below the meter is rebuilt to the spec, NOT recovered. It may differ
+  from what the original showed. Résumé content is placeholder, not real profile data.
+
+  This lives in docs/design/ deliberately: it is a static design artifact, not a
+  served page. Do not move it back to public/ — Next.js serves that at the site root.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RoleOS · craft with RO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f9fafb;--surf:#ffffff;--surf2:#f3f5f7;--surf3:#e9edf1;
+    --tx:#0b0f13;--tx2:#49525b;--tx3:#6b747d;--bd:#e4e8ec;--bd2:#d3d9df;
+    --grape:#7624f4;--grape-bg:#7624f40f;--grape-bd:#7624f433;
+    --volt:#c8ff00;--volt-ink:#37401c;--coral:#ff6849;
+    --suc:#0f8a5f;--suc-bg:#e6f6ef;--suc-bd:#b7e4cf;--warn:#b26a00;--warn-bg:#fdf3e0;--warn-bd:#f2d9a8;
+    --display:"Space Grotesk",system-ui,sans-serif;--body:"Plus Jakarta Sans",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--body);background:var(--bg);color:var(--tx);-webkit-font-smoothing:antialiased;line-height:1.5}
+  .wrap{max-width:720px;margin:0 auto;padding:22px 20px 120px}
+  h1,h2,h3{font-family:var(--display);letter-spacing:-.02em}
+  .lbl{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3)}
+
+  .top{display:flex;align-items:center;gap:11px;margin-bottom:14px}
+  .ro{width:28px;height:28px;border-radius:8px;background:var(--grape);color:#fff;display:grid;place-items:center;font-weight:700;font-size:12px;font-family:var(--display)}
+  .crumb{font-size:13px;color:var(--tx3)}.crumb b{color:var(--tx)}
+  .grounded{margin-left:auto;display:inline-flex;align-items:center;gap:6px;background:var(--suc-bg);color:var(--suc);border:1px solid var(--suc-bd);font-weight:700;font-size:12px;padding:5px 10px;border-radius:999px}
+
+  /* gamified readiness meter */
+  .overall{padding:16px 18px 14px;border-radius:16px;background:radial-gradient(120% 160% at 100% 0%,var(--grape-bg),transparent),var(--surf);border:1px solid var(--grape-bd);margin-bottom:8px}
+  .otop{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .tier{display:inline-flex;align-items:center;gap:7px;background:var(--suc-bg);color:var(--suc);border:1px solid var(--suc-bd);font-weight:800;font-size:14px;padding:6px 13px;border-radius:999px;font-family:var(--display)}
+  .otop .sc{font-family:var(--display);font-size:26px;font-weight:700;margin-left:auto}
+  .otop .sc small{font-size:14px;color:var(--tx3);font-weight:500}
+  .otop .lift{font-size:12.5px;color:var(--suc);font-weight:700}
+  /* the tiered track */
+  .track{position:relative;height:9px;border-radius:999px;background:var(--surf3);margin:2px 4px 0}
+  .track .f{position:absolute;left:0;top:0;height:100%;width:91%;border-radius:999px;background:linear-gradient(90deg,var(--grape),var(--volt))}
+  .track .tick{position:absolute;top:-3px;width:2px;height:15px;background:var(--bd2);border-radius:2px}
+
+  .bands{position:relative;height:18px;margin:7px 4px 0}
+  .bands span{position:absolute;font-size:11px;font-weight:600;color:var(--tx3);transform:translateX(-1px);white-space:nowrap}
+  .bands span.on{color:var(--suc);font-weight:700}
+
+  .nextmove{display:flex;align-items:center;gap:9px;margin:14px 0 0;padding:11px 13px;border-radius:12px;background:var(--surf2);border:1px solid var(--bd)}
+  .nextmove .spark{width:22px;height:22px;border-radius:7px;background:var(--volt);color:var(--volt-ink);display:grid;place-items:center;font-size:12px;font-weight:800;flex:none}
+  .nextmove .t{font-size:13.5px;font-weight:600}
+  .nextmove .d{margin-left:auto;font-size:12.5px;font-weight:800;color:var(--grape);background:var(--grape-bg);border:1px solid var(--grape-bd);padding:4px 9px;border-radius:999px;flex:none}
+  .caveat{font-size:12px;color:var(--tx3);margin:9px 4px 26px;line-height:1.45}
+
+  /* the document */
+  .doc{background:var(--surf);border:1px solid var(--bd);border-radius:16px;padding:30px 32px 34px}
+  .name{font-size:27px;font-weight:700;margin-bottom:3px}
+  .contact{font-size:12.5px;color:var(--tx3);margin-bottom:22px}
+  .sec{margin-top:25px}
+  .sechead{display:flex;align-items:center;gap:10px;padding-bottom:7px;border-bottom:1px solid var(--bd);margin-bottom:13px}
+  .sechead h2{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--tx3)}
+  .pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;padding:3px 9px;border-radius:999px;border:1px solid}
+  .pill.strong{background:var(--suc-bg);color:var(--suc);border-color:var(--suc-bd)}
+  .pill.thin{background:var(--warn-bg);color:var(--warn);border-color:var(--warn-bd)}
+  .tune{margin-left:auto;font-size:12px;font-weight:700;color:var(--grape);background:none;border:none;cursor:pointer;font-family:var(--body)}
+
+  .role{margin-bottom:15px}
+  .rtop{display:flex;align-items:baseline;gap:8px;margin-bottom:2px}
+  .rtop b{font-size:15px;font-weight:700}
+  .rtop .co{font-size:14px;color:var(--tx2)}
+  .rtop .when{margin-left:auto;font-size:12.5px;color:var(--tx3);white-space:nowrap}
+  ul{list-style:none}
+  li{position:relative;display:flex;align-items:flex-start;gap:9px;padding:6px 8px 6px 0;border-radius:8px;font-size:14.5px;line-height:1.55}
+  li:hover{background:var(--surf2)}
+  li .dot{width:5px;height:5px;border-radius:50%;background:var(--bd2);margin-top:9px;flex:none}
+  li .acts{margin-left:auto;display:flex;gap:4px;opacity:0;transition:opacity .12s}
+  li:hover .acts{opacity:1}
+  li.ok .acts{opacity:1}
+  .act{width:24px;height:24px;border-radius:7px;border:1px solid var(--bd2);background:var(--surf);color:var(--tx3);font-size:12px;display:grid;place-items:center;cursor:pointer;flex:none}
+  .act.on{background:var(--suc-bg);border-color:var(--suc-bd);color:var(--suc)}
+  li.ok{background:#0f8a5f08}
+
+  .roread{display:flex;gap:8px;margin:8px 0 2px;padding:10px 12px;border-radius:10px;background:var(--grape-bg);border:1px solid var(--grape-bd);font-size:13px;color:var(--tx2);line-height:1.5}
+  .roread .who{font-weight:800;color:var(--grape);flex:none}
+
+  /* pinned command bar */
+  .bar{position:fixed;left:0;right:0;bottom:0;background:color-mix(in srgb,var(--surf) 88%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--bd);padding:12px 20px 14px}
+  .barin{max-width:720px;margin:0 auto}
+  .cmd{display:flex;align-items:center;gap:10px;background:var(--surf);border:1px solid var(--bd2);border-radius:12px;padding:10px 12px}
+  .cmd .ro{width:22px;height:22px;border-radius:6px;font-size:10px}
+  .cmd input{flex:1;border:none;outline:none;font-family:var(--body);font-size:14px;color:var(--tx);background:none}
+  .cmd input::placeholder{color:var(--tx3)}
+  .send{background:var(--grape);color:#fff;border:none;border-radius:9px;padding:7px 13px;font-weight:700;font-size:13px;cursor:pointer;font-family:var(--body)}
+  .chips{display:flex;gap:7px;margin-top:9px;flex-wrap:wrap}
+  .chip{font-size:12px;font-weight:600;color:var(--tx2);background:var(--surf2);border:1px solid var(--bd);border-radius:999px;padding:5px 11px;cursor:pointer}
+  .chip:hover{border-color:var(--grape-bd);color:var(--grape)}
+  .barfoot{display:flex;align-items:center;gap:10px;margin-top:10px;font-size:12px;color:var(--tx3)}
+  .exp{margin-left:auto;display:inline-flex;align-items:center;gap:7px;background:var(--surf);border:1px solid var(--bd2);border-radius:9px;padding:7px 12px;font-weight:700;font-size:12.5px;color:var(--tx);cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div class="ro">RO</div>
+    <div class="crumb">Studio › Résumé · <b>Senior PM, AI</b> · Scale AI</div>
+    <span class="grounded">✓ Grounded</span>
+  </div>
+
+  <!-- 1 · readiness meter (slim) -->
+  <div class="overall">
+    <div class="otop">
+      <span class="tier">◆ Strong</span>
+      <span class="lift">+14 from your master</span>
+      <span class="sc">91<small>/100</small></span>
+    </div>
+    <div class="track">
+      <div class="f"></div>
+      <div class="tick" style="left:55%"></div>
+      <div class="tick" style="left:78%"></div>
+    </div>
+    <div class="bands">
+      <span style="left:0">Thin</span>
+      <span style="left:55%">Solid</span>
+      <span class="on" style="left:78%">Strong</span>
+    </div>
+
+    <div class="nextmove">
+      <div class="spark">↑</div>
+      <div class="t">Surface your Gen-AI evaluation proof — it's in your master, not in this draft</div>
+      <div class="d">+4</div>
+    </div>
+  </div>
+  <p class="caveat">How strongly your résumé makes your case for this role — not your odds of an interview.
+    <em>Fully evidenced</em> needs every stated requirement covered by real evidence — no partials.</p>
+
+  <!-- 2 · the document -->
+  <div class="doc">
+    <div class="name">Alex Rivera</div>
+    <div class="contact">San Francisco · alex@example.com · linkedin.com/in/example</div>
+
+    <div class="sec">
+      <div class="sechead">
+        <h2>Experience</h2>
+        <span class="pill strong">★ strong · 92</span>
+        <button class="tune">tune this section →</button>
+      </div>
+
+      <div class="role">
+        <div class="rtop"><b>Principal Product Manager, ML Platform</b><span class="co">· Northwind</span><span class="when">2022 — present</span></div>
+        <ul>
+          <li class="ok"><span class="dot"></span>
+            <span>Owned the model-evaluation platform used by 40+ engineers; cut time-to-ship for a new model from 3 weeks to 4 days by making eval gates a required, automated step.</span>
+            <span class="acts"><button class="act on" title="approved — RO won't touch this line">✓</button><button class="act" title="why RO wrote it">✎</button></span>
+          </li>
+          <li><span class="dot"></span>
+            <span>Defined the guardrail spec for a customer-facing LLM feature — refusal behaviour, escalation paths, and a human-review queue — shipped to 1.2M users with zero rollback.</span>
+            <span class="acts"><button class="act" title="approve this line">✓</button><button class="act" title="why RO wrote it">✎</button></span>
+          </li>
+          <li><span class="dot"></span>
+            <span>Built the offline→online quality harness that caught a 9-point regression before launch; it is now the default gate for every model promotion.</span>
+            <span class="acts"><button class="act" title="approve this line">✓</button><button class="act" title="why RO wrote it">✎</button></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="role">
+        <div class="rtop"><b>Senior Product Manager, Data</b><span class="co">· Meridian</span><span class="when">2019 — 2022</span></div>
+        <ul>
+          <li><span class="dot"></span>
+            <span>Led the labeling-quality program across 3 vendors; raised inter-annotator agreement from 0.61 to 0.86 and cut per-label cost 31%.</span>
+            <span class="acts"><button class="act" title="approve this line">✓</button><button class="act" title="why RO wrote it">✎</button></span>
+          </li>
+          <li><span class="dot"></span>
+            <span>Shipped the first self-serve dataset explorer; 70% of eligible teams onboarded in two quarters.</span>
+            <span class="acts"><button class="act" title="approve this line">✓</button><button class="act" title="why RO wrote it">✎</button></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sec">
+      <div class="sechead">
+        <h2>Earlier</h2>
+        <span class="pill thin">△ thin for this role · 61</span>
+        <button class="tune">tune this section →</button>
+      </div>
+      <div class="roread"><span class="who">RO</span><span>This block is real, but it's evidencing requirements the posting doesn't ask for. I'd compress it to two lines and give the space back to your eval work — that's what this role is actually testing for. Your call.</span></div>
+      <div class="role">
+        <div class="rtop"><b>Product Manager, Growth</b><span class="co">· Lantern</span><span class="when">2016 — 2019</span></div>
+        <ul>
+          <li><span class="dot"></span>
+            <span>Ran the activation experiment programme — 40+ tests/year, +18% week-4 retention.</span>
+            <span class="acts"><button class="act" title="approve this line">✓</button><button class="act" title="why RO wrote it">✎</button></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 3 · pinned command bar -->
+<div class="bar">
+  <div class="barin">
+    <div class="cmd">
+      <div class="ro">RO</div>
+      <input placeholder="Tell RO what to change — “make the eval work lead”, “one page”…" />
+      <button class="send">Adjust</button>
+    </div>
+    <div class="chips">
+      <span class="chip">Make the eval work lead</span>
+      <span class="chip">One page</span>
+      <span class="chip">Compress “Earlier”</span>
+      <span class="chip">Plainer language</span>
+    </div>
+    <div class="barfoot">
+      <span>1 of 6 lines ✓</span>
+      <button class="exp">↓ Export DOCX · grounded ✓</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
