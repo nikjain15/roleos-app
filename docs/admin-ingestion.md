@@ -197,16 +197,39 @@ reached the `done`/`error` update, every hour left an orphaned
 1. runs the **bounded synchronous `demand` pass** (only companies users are
    actively hunting, small, safe, records an `ingestion_runs` row); then
 2. hands the rest to the durable **`IngestWorkflow`:** it `POST`s
-   `roleos-ingest…/start` **only when `listUnscannedCompanyNames(1).remaining > 0`**
-   (no no-op instance per hour once the corpus is caught up).
+   `roleos-ingest…/start` **only when `listDueCompanyNames(1).remaining > 0`**
+   (no no-op instance per hour once the corpus is caught up) **and no sweep is
+   already in flight** (`sweepInProgress()` — see the freshness loop below).
 
 **The Workflow itself** was upgraded from "loop every enabled company in one
 instance" (which hit *Too many subrequests* on a 366-company sweep) to a
-**self-chaining batch**: `BATCH=12` never-scanned companies per instance
-(`listUnscannedCompanyNames`, `last_scanned_at IS NULL`), a `chain-next` step
+**self-chaining batch**: `BATCH=12` due companies per instance
+(`listDueCompanyNames`), a `chain-next` step
 spawns the `depth+1` instance while a full batch remains (`MAX_DEPTH=80`), and
 each company is one isolated, retried `reconcile` step. Each instance gets a fresh
 subrequest budget, so a 300+ company sweep can't exhaust one invocation.
+
+### Freshness loop (2026-08-08)
+
+The due set was originally `last_scanned_at IS NULL` — **scan-once**. Once every
+enabled company had been swept (2026-06-30), `remaining` was permanently 0, the
+hourly cron started no instance for six weeks, and the corpus froze: newest role
+2026-06-30, closed July postings still live, nothing new ingested. The demand
+pass didn't cover for it either — it only scans companies named by *active*
+intents, and there were none.
+
+`listDueCompanyNames` now treats **stale as due**: `last_scanned_at IS NULL OR
+last_scanned_at < now() - RESCAN_INTERVAL_MS` (3 days), ordered oldest-first, so
+the existing hourly cron + self-chaining Workflow re-sweep the whole enabled set
+roughly every 3 days with no new pipeline. Each `reconcile` stamps
+`last_scanned_at`, so a company drops out for the rest of the sweep and rejoins
+once it goes stale again.
+
+Because a full sweep (~426 companies, 12 per instance) outlasts the hourly tick,
+`sweepInProgress()` guards the start: if any enabled company was scanned in the
+last 20 minutes a chain is still hopping, and the cron skips
+(`durable.skipped = "sweep-in-progress"`). The cron samples it **before** its own
+demand pass, whose stamps would otherwise read as a live sweep.
 
 **Deployed + proven (2026-06-30):** app `roleos` `v e05863d6` + `roleos-ingest`
 `v f283417a`. Live cron path returns `{durable:{started:true}}`. The 60 staged
@@ -215,8 +238,8 @@ subrequest budget, so a 300+ company sweep can't exhaust one invocation.
 (cleaned zombies) / 0 scanning.
 
 **Still open (non-blocking):** the durable path writes no `ingestion_runs` row
-(admin won't show those sweeps, could open one per instance); a second hourly
-cron can briefly run a concurrent chain over the same unscanned set
-(harmless, dedup by URL + guarded prune); the backfill is sequential
-(~12 companies/instance). Recurring re-scan freshness (re-null `last_scanned_at`
-on a cadence) is the separate role-refresh loop, see `docs/setup-role-refresh.md`.
+(admin won't show those sweeps, could open one per instance); the backfill is
+sequential (~12 companies/instance), so a full re-sweep takes hours of wall
+clock. The richer per-role lifecycle (content hash, `last_seen_open`, edited-JD
+re-extract) is still the separate role-refresh design, see
+`docs/setup-role-refresh.md`.

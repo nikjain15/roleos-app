@@ -64,23 +64,67 @@ export async function listEnabledCompanyNames(): Promise<string[]> {
 }
 
 /**
- * The next batch of enabled companies that have never been scanned, plus the
- * total still outstanding. The self-chaining IngestWorkflow pulls a small batch
- * per instance (fresh subrequest budget each) and spawns the next instance while
- * `remaining > batch` — so a 300+ company sweep can't exhaust one invocation.
+ * How long a company's board stays fresh before it's due for another scan. The
+ * corpus is only as current as this: a company scanned once and never revisited
+ * keeps closed roles alive and misses everything posted since.
  */
-export async function listUnscannedCompanyNames(
+export const RESCAN_INTERVAL_MS = 3 * 24 * 3_600_000;
+
+/** The timestamp before which a `last_scanned_at` counts as stale. */
+export function staleCutoff(now: number = Date.now()): string {
+  return new Date(now - RESCAN_INTERVAL_MS).toISOString();
+}
+
+/**
+ * The next batch of enabled companies due for a scan — never scanned, or last
+ * scanned more than RESCAN_INTERVAL_MS ago — plus the total still outstanding,
+ * oldest first. The self-chaining IngestWorkflow pulls a small batch per
+ * instance (fresh subrequest budget each) and spawns the next instance while
+ * `remaining > batch` — so a 300+ company sweep can't exhaust one invocation.
+ * Each reconcile stamps `last_scanned_at`, so a company drops out of this set
+ * for the rest of the sweep and rejoins it once it goes stale again.
+ */
+export async function listDueCompanyNames(
   limit: number,
+  now: number = Date.now(),
 ): Promise<{ companies: string[]; remaining: number }> {
   const db = supabaseService();
   const { data, count } = await db
     .from("companies")
     .select("name", { count: "exact" })
     .eq("enabled", true)
-    .is("last_scanned_at", null)
-    .order("name")
+    .or(`last_scanned_at.is.null,last_scanned_at.lt.${staleCutoff(now)}`)
+    .order("last_scanned_at", { ascending: true, nullsFirst: true })
     .limit(limit);
   return { companies: (data ?? []).map((c) => c.name as string), remaining: count ?? 0 };
+}
+
+/**
+ * How quiet the scan log must go before a stalled sweep counts as finished. A
+ * running IngestWorkflow chain stamps `last_scanned_at` continuously as it hops,
+ * so recent activity means a sweep is still in flight.
+ */
+const SWEEP_IDLE_MS = 20 * 60_000;
+
+/**
+ * Is a durable sweep still running? The hourly cron fires far more often than a
+ * full sweep takes, and a second chain would re-scan the same due companies —
+ * idempotent, but pure wasted spend. Call this BEFORE any scan of your own, or
+ * your own stamps will look like someone else's sweep.
+ */
+export async function sweepInProgress(now: number = Date.now()): Promise<boolean> {
+  const db = supabaseService();
+  const { data } = await db
+    .from("companies")
+    .select("last_scanned_at")
+    .eq("enabled", true)
+    .not("last_scanned_at", "is", null)
+    .order("last_scanned_at", { ascending: false })
+    .limit(1);
+  const latest = data?.[0]?.last_scanned_at as string | undefined;
+  if (!latest) return false;
+  const t = Date.parse(latest);
+  return Number.isFinite(t) && now - t < SWEEP_IDLE_MS;
 }
 
 /** Keywords users are hunting — widen the relevance filter to include them. */

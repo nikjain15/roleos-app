@@ -15,7 +15,13 @@ import { companiesForScope, scanCompany, demandKeywords, type IngestScope } from
 import { normalizeArchetype } from "./archetype";
 import { fetchYcJobDescription, type AtsPosting } from "@/lib/ats";
 
-export { listEnabledCompanyNames, listUnscannedCompanyNames } from "./scan";
+export {
+  listEnabledCompanyNames,
+  listDueCompanyNames,
+  sweepInProgress,
+  RESCAN_INTERVAL_MS,
+  staleCutoff,
+} from "./scan";
 export { syncYcCompanies, promoteYcCandidates, type YcSyncSummary, type YcDataset } from "./yc";
 
 type Db = ReturnType<typeof supabaseService>;
