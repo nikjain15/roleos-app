@@ -8,7 +8,8 @@
   // sync (yc-oss rebuilds daily). Nightly (02:30 UTC): the overnight hunt (X1).
   // worker.ts branches on event.cron — keep "0 6 * * *" in sync with DAILY_CRON
   // and "30 2 * * *" with NIGHTLY_CRON there.
-  "triggers": { "crons": ["0 * * * *", "0 6 * * *", "30 2 * * *"] },
+  "triggers": { "crons": [
+      "*/5 * * * *","0 * * * *", "0 6 * * *", "30 2 * * *"] },
   "observability": { "enabled": true },
   // Public app origin the cron calls. CRON_SECRET is a secret (wrangler secret put).
   "vars": { "APP_URL": "https://ro.roleos.fyi" }
