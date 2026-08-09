@@ -16,7 +16,7 @@ export const metadata = {
 };
 
 export default async function IndexHome() {
-  const { totalRoles, companies, archetypes } = await indexStats();
+  const { totalRoles, companies, archetypes, monitoredCompanies } = await indexStats();
 
   return (
     <>
@@ -25,8 +25,11 @@ export default async function IndexHome() {
         <p className="text-[11px] font-semibold uppercase tracking-wide text-tx3">The Index</p>
         <h1 className="mt-2 text-3xl font-bold tracking-tight">Every role RO is tracking, in the open.</h1>
         <p className="mt-2 text-[15px] text-tx2">
-          <span className="font-semibold text-tx">{totalRoles.toLocaleString()}</span> roles across{" "}
-          <span className="font-semibold text-tx">{companies.length.toLocaleString()}</span> companies — updated as RO hunts.
+          RO monitors{" "}
+          <span className="font-semibold text-tx">{(monitoredCompanies || companies.length).toLocaleString()}</span>{" "}
+          company job boards. Right now{" "}
+          <span className="font-semibold text-tx">{companies.length.toLocaleString()}</span> of them have live roles —{" "}
+          <span className="font-semibold text-tx">{totalRoles.toLocaleString()}</span> in the index, updated as RO hunts.
         </p>
 
         <div className="mt-10 grid gap-8 sm:grid-cols-2">

@@ -81,6 +81,8 @@ function curatedFirst(rows: Array<Record<string, unknown>>): RoleLite[] {
 interface RpcStats {
   totalRoles?: number;
   totalCompanies?: number;
+  /** Company boards RO monitors on a cadence — not just those with live roles. */
+  monitoredCompanies?: number;
   allCompanies?: Array<{ slug: string; name: string; count: number }>;
   archetypes?: Array<{ name: string; count: number; pct: number }>;
 }
@@ -125,10 +127,19 @@ export async function listArchetypes(): Promise<ArchetypeRow[]> {
 }
 
 /** Everything the overview needs in ONE RPC call. */
-export async function indexStats(): Promise<{ totalRoles: number; companies: CompanyRow[]; archetypes: ArchetypeRow[] }> {
+export async function indexStats(): Promise<{
+  totalRoles: number;
+  companies: CompanyRow[];
+  archetypes: ArchetypeRow[];
+  /** Boards RO monitors on a cadence. Larger than `companies.length`, which only
+   *  counts companies with a live in-scope role today — stating both is the
+   *  honest version: the work is the monitoring, the index is the result. */
+  monitoredCompanies: number;
+}> {
   const s = await rpcStats();
   return {
     totalRoles: s.totalRoles ?? 0,
+    monitoredCompanies: s.monitoredCompanies ?? 0,
     companies: (s.allCompanies ?? []).map((c) => ({ company: c.name, slug: c.slug, count: c.count, curated: 0, hunted: 0 })),
     archetypes: (s.archetypes ?? []).map((a) => ({ name: a.name, slug: toSlug(a.name), count: a.count, pct: a.pct })),
   };
