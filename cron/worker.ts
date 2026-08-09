@@ -51,7 +51,15 @@ async function fireNightly(env: Env) {
   return Promise.all([hit(env, "/api/cron/hunt"), hit(env, "/api/cron/purge")]);
 }
 
+// Every 5 minutes: restart a dead ingest chain. The durable Workflow stops on
+// its own roughly every 156 companies; before this, recovery waited on the
+// hourly tick and a sweep could sit dead for the better part of an hour.
+async function fireWatchdog(env: Env) {
+  return Promise.all([hit(env, "/api/cron/watchdog")]);
+}
+
 // Cron expressions (must match the "triggers" entries in wrangler.jsonc).
+const WATCHDOG_CRON = "*/5 * * * *";
 const DAILY_CRON = "0 6 * * *";
 const NIGHTLY_CRON = "30 2 * * *";
 
@@ -63,7 +71,9 @@ export default {
     ctx: { waitUntil(p: Promise<unknown>): void },
   ) {
     ctx.waitUntil(
-      event.cron === DAILY_CRON
+      event.cron === WATCHDOG_CRON
+        ? fireWatchdog(env)
+        : event.cron === DAILY_CRON
         ? fireDaily(env)
         : event.cron === NIGHTLY_CRON
           ? fireNightly(env)
@@ -85,6 +95,8 @@ export default {
           ? [await hit(env, "/api/cron/digests")]
           : only === "nudges"
             ? [await hit(env, "/api/cron/nudges")]
+            : only === "watchdog"
+              ? [await hit(env, "/api/cron/watchdog")]
             : only === "yc-sync"
               ? [await hit(env, "/api/cron/yc-sync")]
               : only === "hunt"

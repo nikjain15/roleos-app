@@ -251,7 +251,10 @@ const SWEEP_IDLE_MS = 20 * 60_000;
  * idempotent, but pure wasted spend. Call this BEFORE any scan of your own, or
  * your own stamps will look like someone else's sweep.
  */
-export async function sweepInProgress(now: number = Date.now()): Promise<boolean> {
+export async function sweepInProgress(
+  now: number = Date.now(),
+  idleMs: number = SWEEP_IDLE_MS,
+): Promise<boolean> {
   const db = supabaseService();
   const { data } = await db
     .from("companies")
@@ -263,7 +266,7 @@ export async function sweepInProgress(now: number = Date.now()): Promise<boolean
   const latest = data?.[0]?.last_scanned_at as string | undefined;
   if (!latest) return false;
   const t = Date.parse(latest);
-  return Number.isFinite(t) && now - t < SWEEP_IDLE_MS;
+  return Number.isFinite(t) && now - t < idleMs;
 }
 
 /** Keywords users are hunting — widen the relevance filter to include them. */
