@@ -36,8 +36,23 @@ export async function checkCostBudget(now = Date.now()): Promise<void> {
   try {
     const db = supabaseService();
     const since = new Date(now - 24 * 3600_000).toISOString();
-    const { data } = await db.from("agent_runs").select("cost_usd").gte("created_at", since).limit(5000);
-    const spend = (data ?? []).reduce((s, r) => s + (Number(r.cost_usd) || 0), 0);
+    // Page it. Supabase caps a single select at 1000 rows and silently ignores a
+    // higher .limit(), so the old .limit(5000) could never see more than 1000
+    // runs — spend was under-counted and the daily cap could not bind. Measured
+    // 2026-08-09: guard saw $7.65 against a true $8.73, and the gap grows with
+    // volume, which is exactly backwards for a spend guard.
+    let spend = 0;
+    for (let from = 0; ; from += 1000) {
+      const { data } = await db
+        .from("agent_runs")
+        .select("cost_usd")
+        .gte("created_at", since)
+        .order("id")
+        .range(from, from + 999);
+      if (!data?.length) break;
+      spend += data.reduce((s, r) => s + (Number(r.cost_usd) || 0), 0);
+      if (data.length < 1000) break;
+    }
     const budget = dailyBudgetUsd();
     const level = budgetLevel(spend, budget);
     if (level !== "ok") {
