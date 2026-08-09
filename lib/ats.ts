@@ -287,6 +287,47 @@ export async function fetchWorkday(
 }
 
 /**
+ * Enrich a Workday posting with its full JD text. The board list carries no
+ * description — only title, location and posting date — so roles ingested from
+ * it were being classified by Claude from a title alone, which made archetypes
+ * unreliable at exactly the enterprises we added Workday for.
+ *
+ * The job's own cxs endpoint returns `jobPostingInfo.jobDescription` as HTML.
+ * Called per-role at insert time ONLY for roles that already passed the
+ * relevance filter, so the N+1 cost is bounded to roles we keep — the same shape
+ * as fetchYcJobDescription. Returns null on any failure; the caller keeps the
+ * composed-fields description.
+ */
+export async function fetchWorkdayJobDescription(jobUrl: string): Promise<string | null> {
+  // Rebuild the API path from the public url we constructed in fetchWorkday:
+  // https://{tenant}.{wd}.myworkdayjobs.com/{site}{externalPath}
+  let u: URL;
+  try {
+    u = new URL(jobUrl);
+  } catch {
+    return null;
+  }
+  const tenant = u.hostname.split(".")[0];
+  const parts = u.pathname.split("/").filter(Boolean);
+  const site = parts[0];
+  const path = parts.slice(1).join("/");
+  if (!tenant || !site || !path) return null;
+
+  try {
+    const r = await fetch(`${u.origin}/wday/cxs/${tenant}/${site}/${path}`, {
+      headers: { accept: "application/json", "user-agent": "Mozilla/5.0 (RoleOS sourcing bot)" },
+      signal: AbortSignal.timeout(15_000),
+    });
+    if (!r.ok) return null;
+    const info = ((await r.json()) as { jobPostingInfo?: { jobDescription?: string } }).jobPostingInfo;
+    const desc = htmlToText(String(info?.jobDescription ?? ""));
+    return desc || null;
+  } catch {
+    return null;
+  }
+}
+
+/**
  * Fetch a company's open roles — Workday when the company is configured for it,
  * otherwise try each public ATS against the slug, then fall back to the YC
  * Work-at-a-Startup board (when a yc_slug is known) for YC companies not on a

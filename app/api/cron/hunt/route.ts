@@ -75,8 +75,16 @@ export async function POST(req: Request): Promise<Response> {
 
   // H5 tie-in: a hunt is discretionary spend — stand down over budget.
   const since = new Date(started - 24 * 3_600_000).toISOString();
-  const { data: spendRows } = await db.from("agent_runs").select("cost_usd").gte("created_at", since).limit(5000);
-  const spend = (spendRows ?? []).reduce((s, r) => s + (Number(r.cost_usd) || 0), 0);
+  // Paged: Supabase caps a select at 1000 rows regardless of .limit(), so the
+  // old .limit(5000) under-counted spend and the stand-down could not bind.
+  let spend = 0;
+  for (let from = 0; ; from += 1000) {
+    const { data: rows } = await db
+      .from("agent_runs").select("cost_usd").gte("created_at", since).order("id").range(from, from + 999);
+    if (!rows?.length) break;
+    spend += rows.reduce((s, r) => s + (Number(r.cost_usd) || 0), 0);
+    if (rows.length < 1000) break;
+  }
   if (budgetLevel(spend, dailyBudgetUsd()) === "exceeded") {
     logWarn("hunt.skipped_budget", { spend_24h_usd: Math.round(spend * 100) / 100 });
     return NextResponse.json({ ok: true, skipped: "budget_exceeded", hunted: 0 });

@@ -13,7 +13,7 @@ import { parseModelJson } from "@/lib/json";
 import { logAgentRuns } from "@/lib/agent-runs";
 import { companiesForScope, scanCompany, demandKeywords, recordScan, shouldRequeue, type IngestScope } from "./scan";
 import { normalizeArchetype } from "./archetype";
-import { fetchYcJobDescription, type AtsPosting } from "@/lib/ats";
+import { fetchYcJobDescription, fetchWorkdayJobDescription, type AtsPosting } from "@/lib/ats";
 
 export {
   listEnabledCompanyNames,
@@ -210,6 +210,11 @@ async function insertNew(
     let raw = p.description;
     if (p.provider === "yc") {
       const full = await fetchYcJobDescription(p.url);
+      if (full) raw = `${full}\n\n${p.description}`;
+    } else if (p.provider === "workday") {
+      // Workday list rows carry no JD; without this the extractor classifies
+      // enterprise roles from a title alone.
+      const full = await fetchWorkdayJobDescription(p.url);
       if (full) raw = `${full}\n\n${p.description}`;
     }
     const description = raw.slice(0, 8000);
