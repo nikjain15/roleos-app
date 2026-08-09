@@ -11,24 +11,32 @@ import { isRelevantTitle } from "@/lib/ingest/relevance";
  * fell out. Widening "data"/"analytics"/"quantitative" roughly doubled the yield
  * (BlackRock 19 -> 44 in-scope), which is why the exclusions below matter more
  * than before.
+ *
+ * Superseded in part the same day: the scope pass removed hands-on engineering
+ * and science from the index entirely (see relevance-scope.test.ts), so the
+ * data-science titles this file once asserted as in-scope are now out. What
+ * survives here is the enterprise *product* vocabulary — plural product
+ * headings, platform owner, analytics management.
  */
 describe("isRelevantTitle — enterprise/finance titles", () => {
   const IN = [
-    "Data Scientist",
-    "Senior Data Scientist, Quantitative Research",
-    "Data Engineer",
-    "Quantitative Researcher",
     "Analytics Manager",
     "Technical Product Manager, Data Strategy",
     "Director, Data Product Management",
-    "Machine Learning Engineer, Risk",
     "Investments AI Enablement Lead",
+    "Product Marketing Manager, ETFs", // product marketing is in scope as of the 2026-08-09 scope pass
   ];
   const OUT = [
     "Portfolio Manager, Core - Associate",
     "Investment Analyst",
     "Institutional Sales, AVP",
-    "Product Marketing Manager, ETFs",
+    // Hands-on engineering/science left scope on 2026-08-09 — the index is
+    // product/program/ops/strategy. These were IN before that pass.
+    "Data Scientist",
+    "Senior Data Scientist, Quantitative Research",
+    "Data Engineer",
+    "Quantitative Researcher",
+    "Machine Learning Engineer, Risk",
     "Data Analyst", // analyst is not a role word we source for
     "Data Entry Clerk",
     "Data Annotation Specialist",
