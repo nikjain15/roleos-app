@@ -21,6 +21,12 @@ GOOGLE_OAUTH_CLIENT_SECRET=""
 CLOUDFLARE_ACCOUNT_ID=""
 CLOUDFLARE_API_TOKEN=""   # scope: Workers AI Read
 
+# --- Presence sourcing (lib/presence) ---
+# API Direct (apidirect.io) key for LinkedIn/X post SEARCH — $0.006/request,
+# ~12 requests/day on the lean source set. Read-only; nothing is ever posted.
+# Unset = the presence cron no-ops and /presence shows previously collected runs.
+API_DIRECT_KEY=""
+
 # --- Sandbox provider (gate 3) — decided post-spike, left blank for now ---
 # E2B_API_KEY=""
 

@@ -57,6 +57,11 @@ export const USER_DATA_TABLES: readonly string[] = [
   "taste_dimensions",
   "decision_events", // the append-only behaviour log
   "notifications",
+  "presence_sources", // their saved searches: keywords and people they watch
+  "presence_items", // posts collected for them, with scores
+  "presence_feedback", // their worth/maybe/no verdicts and drafted comments
+  "presence_runs", // per-run collection stats
+  "presence_settings", // their filter thresholds
   "google_tokens", // Gmail/Calendar refresh token, if they connected Google
   "profiles", // settings row; deleted last, it is what `is_admin()` reads
 ] as const;

@@ -21,6 +21,10 @@ const NAV = [
   { href: "/roles", label: "Roles" },
   { href: "/studio", label: "Studio" },
   { href: "/tracker", label: "Tracker" },
+  // Presence is the INBOUND half: Roles/Tracker are the user going to the
+  // market; Presence is the market coming to them. A peer tab, not a Studio
+  // tool (inbound measured at 4 approaches in ~20 months — the thinnest part).
+  { href: "/presence", label: "Presence" },
 ];
 
 export default function AppNav() {

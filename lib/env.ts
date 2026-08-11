@@ -39,6 +39,11 @@ export interface RoleOSEnv {
   APIFY_LINKEDIN_ACTOR?: string; // actor slug, e.g. "owner~linkedin-profile-scraper"
   BRIGHTDATA_TOKEN?: string;
   BRIGHTDATA_DATASET_ID?: string;
+  /** API Direct key for Presence sourcing (lib/presence) — LinkedIn/X post
+   *  search at $0.006/request, 20 posts/page. Unset = the presence cron
+   *  no-ops; the /presence UI still renders whatever was collected before.
+   *  Read-only search API; never used to post or send anything. */
+  API_DIRECT_KEY?: string;
   /** Optional GitHub token — lifts the public-API rate limit from 60/hr (anon)
    *  to 5,000/hr for the onboarding GitHub profile read (lib/github-fetch). The
    *  fetch works without it; only the ceiling changes. A read-only/no-scope PAT
