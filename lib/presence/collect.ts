@@ -185,7 +185,10 @@ export async function collectForUser(
   if (runErr) throw new Error(`presence_runs insert: ${runErr.message}`);
   const runId = runRow.id as string;
 
-  const toRow = (it: PresenceItem, status: "kept" | "dropped", extra: Record<string, unknown>) => ({
+  // Every row carries every column: supabase-js unifies the column set across
+  // a batched insert and fills missing keys with EXPLICIT nulls, which bypasses
+  // column defaults and violated hits' not-null on the first live run.
+  const toRow = (it: PresenceItem, status: "kept" | "dropped", extra: Partial<Record<"score" | "hits" | "age_hours" | "drop_reason", unknown>>) => ({
     user_id: userId,
     source_id: it.source_id,
     run_id: runId,
@@ -198,6 +201,10 @@ export async function collectForUser(
     posted_at: it.posted_at,
     engagement: it.engagement,
     status,
+    score: null as number | null,
+    hits: [] as string[],
+    age_hours: null as number | null,
+    drop_reason: null as string | null,
     ...extra,
   });
 
