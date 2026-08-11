@@ -24,11 +24,15 @@ async function hit(env: Env, path: string): Promise<{ path: string; status: numb
 
 // Hourly ambient jobs: build due digests + goal-anchored pace nudges + hunt new
 // roles. Nudges are throttled to ≤1/48h per user server-side, so hourly is safe.
+// Presence rides the hourly tick too: each source carries its own
+// interval_hours (default 24), so most ticks poll nothing, and the fill-rate
+// rule can shorten a hot source to 4-hourly without touching a cron trigger.
 async function fireHourly(env: Env) {
   return Promise.all([
     hit(env, "/api/cron/digests"),
     hit(env, "/api/cron/nudges"),
     hit(env, "/api/cron/ingest"),
+    hit(env, "/api/cron/presence"),
   ]);
 }
 
@@ -81,7 +85,7 @@ export default {
     );
   },
 
-  // Manual trigger for testing: GET /?secret=...[&only=ingest|digests|nudges|yc-sync|hunt|purge]
+  // Manual trigger for testing: GET /?secret=...[&only=ingest|digests|nudges|watchdog|presence|yc-sync|hunt|purge]
   async fetch(req: Request, env: Env): Promise<Response> {
     const u = new URL(req.url);
     if (u.searchParams.get("secret") !== env.CRON_SECRET) {
@@ -97,6 +101,8 @@ export default {
             ? [await hit(env, "/api/cron/nudges")]
             : only === "watchdog"
               ? [await hit(env, "/api/cron/watchdog")]
+            : only === "presence"
+              ? [await hit(env, "/api/cron/presence")]
             : only === "yc-sync"
               ? [await hit(env, "/api/cron/yc-sync")]
               : only === "hunt"
