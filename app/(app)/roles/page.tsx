@@ -3,6 +3,7 @@ import { redirect } from "next/navigation";
 import { supabaseServer } from "@/lib/supabase/server";
 import { toVerdict, locationText, mhTexts, type WorkspaceRole } from "@/lib/workspace";
 import RolesWorkspace from "@/components/RolesWorkspace";
+import AddLinkedInRole from "@/components/AddLinkedInRole";
 import { adjustFit, loadOutcomeModel, roleFeatures } from "@/lib/outcome-learning";
 
 /**
@@ -93,6 +94,10 @@ export default async function RolesPage() {
         Every role RO lined up for you, with the fit and the reasoning. Sort, filter, save the
         strong ones, dismiss the wrong ones — then pursue the best to tailor a résumé.
       </p>
+
+      <div className="mt-6">
+        <AddLinkedInRole />
+      </div>
 
       <div className="mt-8">
         <RolesWorkspace initial={rows} />
