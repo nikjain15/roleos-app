@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive, sans-serif; color: #1c1c1c; background: #f6f5f1; }
+    a { color: #2f5fc4; } a:hover { color: #1f45a0; }
+    .box { border: 1.5px solid #2a2a2a; border-radius: 4px; background: #fff; }
+    .dash { border: 1.5px dashed #6b6b6b; border-radius: 4px; background: #fff; }
+    .img { background: #e6e4dc; border: 1.5px solid #2a2a2a; border-radius: 4px; background-image: linear-gradient(to top right, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)), linear-gradient(to top left, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)); }
+    .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
+    .h1 { font-size: 24px; line-height: 1.15; margin: 0; }
+    .h2 { font-size: 18px; line-height: 1.2; margin: 0; }
+    .p { font-size: 15px; line-height: 1.35; margin: 0; }
+    .sm { font-size: 13px; line-height: 1.3; color: #555; margin: 0; }
+    .btn { min-height: 48px; display: flex; align-items: center; justify-content: center; border: 2px solid #1c1c1c; border-radius: 6px; font-size: 16px; background: #fff; padding: 0 16px; }
+    .btn-primary { background: #1c1c1c; color: #fff; }
+    .btn-accent { background: #fff; border-color: #2f5fc4; color: #2f5fc4; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .col { display: flex; flex-direction: column; gap: 10px; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; margin: 0; }
+    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
+    .chip-on { background: #1c1c1c; color: #fff; }
+    .chip-ai { border-color: #2f5fc4; color: #2f5fc4; }
+    .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
+    .fill { height: 100%; background: #2a2a2a; }
+    .screen { width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
+    .body { flex: 1; padding: 16px 16px 12px; display: flex; flex-direction: column; gap: 12px; }
+    .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 6px; text-align: left; vertical-align: top; }
+    .tbl th { background: #ecebe4; font-weight: 400; color: #444; }
+    .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+    .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
+    .on { background: #2a2a2a; }
+    .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
+    .topnav { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1.5px solid #2a2a2a; background: #fff; }
+    .segs { display: flex; gap: 0; border: 1.5px solid #2a2a2a; border-radius: 999px; overflow: hidden; }
+    .segs div { min-height: 34px; padding: 0 14px; display: flex; align-items: center; font-size: 14px; }
+    .segs .on { background: #1c1c1c; color: #fff; }
+    .kmark { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #2f5fc4; color: #2f5fc4; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: #fff; }
+    .coach { display: flex; gap: 8px; align-items: flex-start; }
+    .coach .box { padding: 12px; border-color: #2f5fc4; flex: 1; }
+    .user { align-self: flex-end; max-width: 85%; padding: 10px 12px; background: #ecebe4; border: 1.5px solid #2a2a2a; border-radius: 4px; }
+    .trace { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #f0f3fa; border: 1.5px dashed #2f5fc4; border-radius: 4px; }
+    .trace .sm { color: #2f4f8f; }
+    .inputbar { display: flex; align-items: center; gap: 10px; padding: 10px 16px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .inputbar .dash { flex: 1; min-height: 46px; display: flex; align-items: center; padding: 0 12px; color: #777; }
+    .ico { width: 20px; height: 20px; flex-shrink: 0; }
+    .approve { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .approve div { min-height: 44px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #2a2a2a; border-radius: 6px; font-size: 14px; background: #fff; }
+    .toggle { width: 40px; height: 22px; border: 1.5px solid #2a2a2a; border-radius: 999px; position: relative; background: #fff; flex-shrink: 0; }
+    .toggle::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #2a2a2a; }
+    .toggle.is-on { background: #1c1c1c; }
+    .toggle.is-on::after { left: 21px; background: #fff; }
+    .jgrid { display: grid; grid-template-columns: 170px repeat(6, minmax(0, 1fr)); gap: 8px; font-size: 13.5px; }
+    .jgrid .cell { padding: 9px 10px; line-height: 1.3; }
+    .jgrid .rlbl { align-self: start; padding-top: 9px; }
+    .jgrid .stage { background: #fff; }
+    .jgrid .status { background: #f2f0ea; border-color: #b8b5aa; color: #555; }
+    .jgrid .keel { background: #f0f3fa; border-color: #2f5fc4; }
+    .jgrid .prim { color: #2f5fc4; }
+    .quote { font-style: italic; }
+  </style>
+</helmet>
+<div style="width: 1760px; min-height: 1040px; padding: 28px; box-sizing: border-box; background: #f6f5f1; display: flex; flex-direction: column; gap: 18px;">
+  <div class="col" style="gap: 4px;">
+    <div class="lbl">Penny · the thinking on one page · v0.2</div>
+    <h1 class="h1" style="font-size: 30px;">People do not fail to improve their finances for lack of information. They fail between knowing and doing.</h1>
+    <p class="p" style="color: #555; max-width: 1100px;">Penny is a coach that closes that gap: it finds the moment, frames one decision in your numbers, and gets the action done with you. The unit of value is a completed action that improves an outcome. A conversation is a means, never the product.</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: 1fr 640px; gap: 24px; align-items: start;">
+    <div class="col" style="gap: 10px;">
+      <div class="lbl">AI-native, not AI-added</div>
+      <table class="tbl" style="font-size: 13.5px;">
+        <tr><th style="width: 16%;">Dimension</th><th style="width: 36%;">AI added to a finance app</th><th>AI-native (Mo)</th></tr>
+        <tr><td>Entry</td><td>An app you remember to open. A chatbot in the corner.</td><td>A moment that finds you, from your data, with a real deadline. The message is the entry point.</td></tr>
+        <tr><td>Understanding</td><td>Forms. You type what the system needs.</td><td>It reads your paystub and plan document, cites the page, and asks only what it cannot read.</td></tr>
+        <tr><td>Plan</td><td>A dashboard that is true the day you set it up.</td><td>A living plan the agent maintains, versioned, with a change log that says why it changed.</td></tr>
+        <tr><td>Decision</td><td>A list of tips. "Consider increasing your contribution."</td><td>One proposal in your numbers, with a reasoning trace, a confidence, what would change its mind, and a way to challenge it.</td></tr>
+        <tr><td>Action</td><td>A deep link to a portal. You do the work.</td><td>Approval cards. The agent prepares the exact change; you confirm; it executes and verifies.</td></tr>
+        <tr><td>Memory</td><td>None. Every session starts from zero.</td><td>Visible, editable, cited facts: what it knows, who said it, when. Stale facts are re-asked, never assumed.</td></tr>
+        <tr><td>Between sessions</td><td>Nothing happens.</td><td>The agent works: monitors accounts, verifies actions landed, prepares the next proposal, stays quiet otherwise.</td></tr>
+        <tr><td>Trust</td><td>Disclaimers.</td><td>Provenance on every number, undo on every action, an audit log, and an honest handoff to a licensed human.</td></tr>
+        <tr><td>Control</td><td>A settings page.</td><td>An autonomy dial with caps: what Penny may draft, what it may do alone, what always needs you.</td></tr>
+        <tr><td>Math</td><td>The model writes numbers into prose.</td><td>Deterministic calculators produce every number. The model explains, frames, drafts, asks. It never computes a customer figure.</td></tr>
+      </table>
+      <div class="dash" style="padding: 10px 12px;">
+        <p class="sm"><b>What Penny is not:</b> a chatbot with account access · a budgeting app with categories · a robo-advisor that picks funds · a notification engine. Each of those exists. None closes the knowing-doing gap.</p>
+      </div>
+    </div>
+
+    <div class="col" style="gap: 12px;">
+      <div class="lbl">The system under the loop · one coach, six specialists the customer can see</div>
+      <div class="box" style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 600 150" width="100%" height="150" role="img" aria-label="Plan, decide, act loop with observe closing it">
+          <rect x="0" y="0" width="600" height="150" fill="#fff"></rect>
+          <rect x="20" y="40" width="140" height="56" rx="6" fill="#fff" stroke="#2a2a2a" stroke-width="1.5"></rect>
+          <text x="90" y="74" font-size="18" text-anchor="middle" fill="#1c1c1c">Plan</text>
+          <rect x="230" y="40" width="140" height="56" rx="6" fill="#fff" stroke="#2a2a2a" stroke-width="1.5"></rect>
+          <text x="300" y="74" font-size="18" text-anchor="middle" fill="#1c1c1c">Decide</text>
+          <rect x="440" y="40" width="140" height="56" rx="6" fill="#1c1c1c" stroke="#2a2a2a" stroke-width="1.5"></rect>
+          <text x="510" y="74" font-size="18" text-anchor="middle" fill="#fff">Act</text>
+          <path d="M160 68 L228 68" stroke="#2a2a2a" stroke-width="1.5" fill="none"></path>
+          <path d="M370 68 L438 68" stroke="#2a2a2a" stroke-width="1.5" fill="none"></path>
+          <path d="M510 96 L510 125 L90 125 L90 98" stroke="#2f5fc4" stroke-width="1.5" fill="none" stroke-dasharray="5 4"></path>
+          <text x="300" y="142" font-size="13" text-anchor="middle" fill="#2f5fc4">observe: verify it landed, watch for drift, find the next moment</text>
+          <polygon points="222,63 230,68 222,73" fill="#2a2a2a"></polygon>
+          <polygon points="432,63 440,68 432,73" fill="#2a2a2a"></polygon>
+          <polygon points="85,106 90,98 95,106" fill="#2f5fc4"></polygon>
+        </svg>
+        <div class="col" style="gap: 6px;">
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Reader and Watcher</b> · the context layer: linked accounts, plan documents, paystubs, statements, and memory with provenance.</p></div>
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Planner</b> · deterministic calculators: match capture, payoff schedules, runway months, projections, paycheck effect. Unit-tested. The only source of customer numbers.</p></div>
+          <div class="box" style="padding: 8px 10px; border-color: #2f5fc4;"><p class="p"><b>Penny</b> · the coach the customer talks to. Finds the moment, frames the trade-off, writes the explanation, asks the clarifying question, revises on challenge. Reads calculator output; never replaces it.</p></div>
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Doer</b> · typed actions, a small vocabulary: change contribution, set autopay, open or move to savings, schedule a follow-up, book an advisor. Each has a schema, a confirm, an undo.</p></div>
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Guardian</b> · scope checks before every proposal, audit after every action: logged with before, after, who, when. An eval suite runs on every prompt change: numbers match calculators, scope rules hold, escalations fire.</p></div>
+        </div>
+      </div>
+      <div class="dash" style="padding: 10px 12px; border-color: #2f5fc4;">
+        <p class="sm"><b>Scope rule:</b> education and guidance, yes. Security selection and individualized investment advice, no. Those route to a licensed advisor with a brief Penny prepared, so the human call starts at minute one.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

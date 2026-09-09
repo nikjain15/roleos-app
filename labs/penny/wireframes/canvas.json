@@ -1,0 +1,31 @@
+{
+  "pages": [
+    { "id": "page-thinking", "name": "Thinking and journeys" },
+    { "id": "page-wireframes", "name": "Penny wireframes" }
+  ],
+  "artboards": [
+    { "file": "Main.dc.html", "title": "The thinking on one page", "page": "page-thinking", "x": 0, "y": 0, "w": 1760, "h": 1040 },
+    { "file": "MayaJourney.dc.html", "title": "Journey · Maya, 26, early career", "page": "page-thinking", "x": 0, "y": 1180, "w": 1760, "h": 1300 },
+    { "file": "JordanJourney.dc.html", "title": "Journey · Jordan, 34, mid career", "page": "page-thinking", "x": 0, "y": 2620, "w": 1760, "h": 1300 },
+    { "file": "T1Moment.dc.html", "title": "Penny tab · 1 Moment", "page": "page-wireframes", "x": 0, "y": 0, "w": 390, "h": 1060 },
+    { "file": "T2Understand.dc.html", "title": "Penny tab · 2 Understand", "page": "page-wireframes", "x": 470, "y": 0, "w": 390, "h": 1180 },
+    { "file": "T3Plan.dc.html", "title": "Penny tab · 3 Plan", "page": "page-wireframes", "x": 940, "y": 0, "w": 390, "h": 1180 },
+    { "file": "T4Decide.dc.html", "title": "Penny tab · 4 Decide", "page": "page-wireframes", "x": 1410, "y": 0, "w": 390, "h": 1220 },
+    { "file": "T5Act.dc.html", "title": "Penny tab · 5 Act", "page": "page-wireframes", "x": 1880, "y": 0, "w": 390, "h": 1220 },
+    { "file": "T6Away.dc.html", "title": "Penny tab · 6 Between sessions", "page": "page-wireframes", "x": 2350, "y": 0, "w": 390, "h": 1180 },
+    { "file": "TabOverview.dc.html", "title": "Overview tab", "page": "page-wireframes", "x": 0, "y": 1380, "w": 390, "h": 1060 },
+    { "file": "TabPlan.dc.html", "title": "Plan tab", "page": "page-wireframes", "x": 470, "y": 1380, "w": 390, "h": 1120 },
+    { "file": "TabActions.dc.html", "title": "Actions tab", "page": "page-wireframes", "x": 940, "y": 1380, "w": 390, "h": 1060 },
+    { "file": "TabYou.dc.html", "title": "You tab · memory, team, permissions", "page": "page-wireframes", "x": 1410, "y": 1380, "w": 390, "h": 1320 },
+    { "file": "DemoLayout.dc.html", "title": "Desktop demo layout for the CEO", "page": "page-wireframes", "x": 1880, "y": 1380, "w": 1440, "h": 900 }
+  ],
+  "annotations": [
+    { "id": "thesis", "page": "page-thinking", "x": 1840, "y": 0, "w": 300, "text": "Thesis\nThe unit of value is a completed action that improves an outcome, not a conversation. Everything here serves the loop: plan, decide, act, observe, repeat." },
+    { "id": "math-rule", "page": "page-thinking", "x": 1840, "y": 220, "w": 300, "text": "Rule\nPenny explains. Planner computes. No number reaches the customer that a deterministic function did not produce first." },
+    { "id": "trust-rule", "page": "page-thinking", "x": 1840, "y": 420, "w": 300, "text": "Rule\nOnly Doer can change anything, only after permission. Every action has before, after, who, when, and undo. Individualized investment advice goes to a licensed human via Advisor desk." },
+    { "id": "why-two-personas", "page": "page-thinking", "x": 1840, "y": 1180, "w": 300, "text": "Why these two personas\nMaya has never acted; the product must remove fear and friction. Jordan acts but does not sustain; the product must reason and stay out of the way. If the loop works for both, it generalizes." },
+    { "id": "flow-note", "page": "page-wireframes", "x": 2830, "y": 0, "w": 280, "text": "Top row: the Penny tab\nOne thread, six stretches, in order. It is the main tab and the only place anything gets decided.\n\nBottom row: the other tabs\nOverview, Plan, Actions, You. All downstream of the thread. None of them proposes anything." },
+    { "id": "team-note", "page": "page-wireframes", "x": 2830, "y": 320, "w": 280, "text": "The team, from the user's side\nPenny is the coach you talk to. Reader, Analyst, Planner, Guardian, Doer, Watcher, and Advisor desk are the specialists she calls. Their name is on every step, like a subagent in Claude Code. Only Doer can act, only after you allow it." }
+  ],
+  "launch": { "view": "canvas", "page": "page-wireframes" }
+}

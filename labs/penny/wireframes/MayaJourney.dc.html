@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive, sans-serif; color: #1c1c1c; background: #f6f5f1; }
+    a { color: #2f5fc4; } a:hover { color: #1f45a0; }
+    .box { border: 1.5px solid #2a2a2a; border-radius: 4px; background: #fff; }
+    .dash { border: 1.5px dashed #6b6b6b; border-radius: 4px; background: #fff; }
+    .img { background: #e6e4dc; border: 1.5px solid #2a2a2a; border-radius: 4px; background-image: linear-gradient(to top right, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)), linear-gradient(to top left, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)); }
+    .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
+    .h1 { font-size: 24px; line-height: 1.15; margin: 0; }
+    .h2 { font-size: 18px; line-height: 1.2; margin: 0; }
+    .p { font-size: 15px; line-height: 1.35; margin: 0; }
+    .sm { font-size: 13px; line-height: 1.3; color: #555; margin: 0; }
+    .btn { min-height: 48px; display: flex; align-items: center; justify-content: center; border: 2px solid #1c1c1c; border-radius: 6px; font-size: 16px; background: #fff; padding: 0 16px; }
+    .btn-primary { background: #1c1c1c; color: #fff; }
+    .btn-accent { background: #fff; border-color: #2f5fc4; color: #2f5fc4; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .col { display: flex; flex-direction: column; gap: 10px; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; margin: 0; }
+    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
+    .chip-on { background: #1c1c1c; color: #fff; }
+    .chip-ai { border-color: #2f5fc4; color: #2f5fc4; }
+    .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
+    .fill { height: 100%; background: #2a2a2a; }
+    .screen { width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
+    .body { flex: 1; padding: 16px 16px 12px; display: flex; flex-direction: column; gap: 12px; }
+    .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 6px; text-align: left; vertical-align: top; }
+    .tbl th { background: #ecebe4; font-weight: 400; color: #444; }
+    .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+    .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
+    .on { background: #2a2a2a; }
+    .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
+    .topnav { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1.5px solid #2a2a2a; background: #fff; }
+    .segs { display: flex; gap: 0; border: 1.5px solid #2a2a2a; border-radius: 999px; overflow: hidden; }
+    .segs div { min-height: 34px; padding: 0 14px; display: flex; align-items: center; font-size: 14px; }
+    .segs .on { background: #1c1c1c; color: #fff; }
+    .kmark { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #2f5fc4; color: #2f5fc4; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: #fff; }
+    .coach { display: flex; gap: 8px; align-items: flex-start; }
+    .coach .box { padding: 12px; border-color: #2f5fc4; flex: 1; }
+    .user { align-self: flex-end; max-width: 85%; padding: 10px 12px; background: #ecebe4; border: 1.5px solid #2a2a2a; border-radius: 4px; }
+    .trace { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #f0f3fa; border: 1.5px dashed #2f5fc4; border-radius: 4px; }
+    .trace .sm { color: #2f4f8f; }
+    .inputbar { display: flex; align-items: center; gap: 10px; padding: 10px 16px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .inputbar .dash { flex: 1; min-height: 46px; display: flex; align-items: center; padding: 0 12px; color: #777; }
+    .ico { width: 20px; height: 20px; flex-shrink: 0; }
+    .approve { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .approve div { min-height: 44px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #2a2a2a; border-radius: 6px; font-size: 14px; background: #fff; }
+    .toggle { width: 40px; height: 22px; border: 1.5px solid #2a2a2a; border-radius: 999px; position: relative; background: #fff; flex-shrink: 0; }
+    .toggle::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #2a2a2a; }
+    .toggle.is-on { background: #1c1c1c; }
+    .toggle.is-on::after { left: 21px; background: #fff; }
+    .jgrid { display: grid; grid-template-columns: 170px repeat(6, minmax(0, 1fr)); gap: 8px; font-size: 13.5px; }
+    .jgrid .cell { padding: 9px 10px; line-height: 1.3; }
+    .jgrid .rlbl { align-self: start; padding-top: 9px; }
+    .jgrid .stage { background: #fff; }
+    .jgrid .status { background: #f2f0ea; border-color: #b8b5aa; color: #555; }
+    .jgrid .keel { background: #f0f3fa; border-color: #2f5fc4; }
+    .jgrid .prim { color: #2f5fc4; }
+    .quote { font-style: italic; }
+  </style>
+</helmet>
+<div style="width: 1760px; min-height: 1300px; padding: 28px; box-sizing: border-box; background: #f6f5f1; display: flex; flex-direction: column; gap: 16px;">
+  <div class="row" style="justify-content: space-between; align-items: flex-end;">
+    <div class="col" style="gap: 4px;">
+      <div class="lbl">Journey · early career</div>
+      <h1 class="h1" style="font-size: 28px;">Maya, 26: "Help me stop feeling behind without becoming a finance person."</h1>
+    </div>
+    <span class="chip">14 months into her first job</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px;">
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">The numbers</div><p class="sm">Data analyst, 72k. Take-home 4,300 a month. Rent 1,650, essentials 3,000. Checking 3,400. Savings 1,200 at 0.5%. Student loans 28,400 at 5.5%, minimum 310. 401(k): eligible, not enrolled. Employer matches 100% up to 4%. Free cash about 420 a month, currently unallocated.</p></div>
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">Money story</div><p class="sm">Parents did not talk about money. What she knows came from short videos and one Reddit thread. She knows she "should invest" and is afraid of locking money away and of picking wrong. The benefits enrollment felt like a tax form, so she closed it.</p></div>
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">Anxieties</div><p class="sm">"What if I need the money and it is locked up?"<br>"What if I pick the wrong fund?"<br>"Am I already behind everyone?"<br>Runway is 0.4 months. She does not know that number, but she feels it.</p></div>
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">Tried and abandoned</div><p class="sm">A budgeting app (three weeks, too much categorizing). A savings challenge (two months). Opening the benefits portal at 11pm (gave up at fund selection).</p></div>
+    <div class="box" style="padding: 10px 12px; border-color: #2f5fc4;"><div class="lbl" style="color: #2f5fc4;">Trust threshold and success</div><p class="sm">Trusts it when the math is in her numbers, when she can undo, and when it never makes her feel judged. Success in 12 months: enrolled at the full match, fund automated, runway visibly climbing toward 3 months by month 34.</p></div>
+  </div>
+
+  <div class="jgrid">
+    <div class="lbl rlbl">Stage</div>
+    <div class="box cell stage"><div class="lbl">1 · Moment</div><b>Pay-day, second of the month.</b> Payroll notification lands. The benefits email from 14 months ago is still unread.</div>
+    <div class="box cell stage"><div class="lbl">2 · Understand</div><b>Full picture in 3 minutes.</b> Paystub, plan document, three accounts.</div>
+    <div class="box cell stage"><div class="lbl">3 · Plan</div><b>First time she sees the whole thing.</b> Runway, order of operations, ten-year path.</div>
+    <div class="box cell stage"><div class="lbl">4 · Decide</div><b>One decision.</b> Enroll at 4% now, or build the fund first?</div>
+    <div class="box cell stage"><div class="lbl">5 · Act</div><b>Two actions.</b> Enroll at 4%. Automate 230 a month to a 4.2% savings account.</div>
+    <div class="box cell stage"><div class="lbl">6 · Keep going</div><b>Month 8: fund hits one month. Month 9: a 6k raise.</b></div>
+
+    <div class="lbl rlbl">She thinks</div>
+    <div class="dash cell quote">"I know I should do something about the 401(k). I do not even know what the question is."</div>
+    <div class="dash cell quote">"Do not make me fill out a form. And do not make me admit how little I have."</div>
+    <div class="dash cell quote">"0.4 months. That is scary. But I can finally see it. And I am less behind than I feared."</div>
+    <div class="dash cell quote">"If I lock money away and then need it, I am stuck."</div>
+    <div class="dash cell quote">"Just do it for me. But tell me exactly what happens to my paycheck."</div>
+    <div class="dash cell quote">"It kept its word. What now?"</div>
+
+    <div class="lbl rlbl">Without Mo</div>
+    <div class="box cell status">Nothing happens. Another year of unclaimed match: 2,880 gone, plus what it would have grown into.</div>
+    <div class="box cell status">The benefits portal: 14 screens, jargon, a fund list. She abandons it again.</div>
+    <div class="box cell status">A 50/30/20 article. A spreadsheet she opens twice.</div>
+    <div class="box cell status">Reddit says both things. She does neither.</div>
+    <div class="box cell status">Enrollment at 11pm. Stops at fund selection. Savings stay manual, so they stay flat.</div>
+    <div class="box cell status">The raise is absorbed by lifestyle within two months. Savings stall at 1,200.</div>
+
+    <div class="lbl rlbl">Penny does</div>
+    <div class="box cell keel">Sees from payroll and the plan document that she is eligible and unenrolled. Computes the exact cost of waiting. Sends one message, timed to pay-day, in her numbers: "240 a month of free money."</div>
+    <div class="box cell keel">Reads the paystub and Summary Plan Description; extracts match formula, vesting, contribution (0), with page citations. Pulls balances. Derives essentials from 90 days. Asks two questions in plain words: buffer, one goal.</div>
+    <div class="box cell keel">Builds a living plan: starter buffer (done, 1,200) → match → 3-month fund → loans stay at minimum. Shows with and without over ten years. States assumptions. Maintains it as data changes.</div>
+    <div class="box cell keel">Frames one trade-off in her numbers. Answers the liquidity fear directly: the buffer stays, the fund lands in 34 months either way, the match is a 100% return on day one. Shows its reasoning. Lets her push back in her own words.</div>
+    <div class="box cell keel">Prepares two approval cards with the exact paycheck effect (190 less take-home), the effective date, and the undo. On approval, executes through the plan provider and the bank. Logs both. Schedules a check that it landed.</div>
+    <div class="box cell keel">Verifies the payroll change in week 2. Reports progress in one line. On the raise, proposes 60% of it to the fund, the rest untouched. Re-plans. Stays quiet otherwise.</div>
+
+    <div class="lbl rlbl">Interface moment</div>
+    <div class="box cell">A notification opens the thread. Penny's first turn shows the number, then its evidence, then three replies.</div>
+    <div class="box cell">In the thread: she drops a PDF; Penny shows its tool steps (read, extract, cross-check), the facts with page citations, one question with quick replies, and a visible "remembered" step.</div>
+    <div class="box cell">Penny posts Plan v1 as an artifact in the thread. What-if is just a message; the answer is a diff and an "apply as v2?" prompt.</div>
+    <div class="box cell">An agent turn with its thinking open, the trade-off table inline, a recommendation, and chips. Challenging it is typing a sentence.</div>
+    <div class="box cell">Permission prompts in the thread, one per action: allow once, always allow within a cap, deny. Then the tool result with a receipt and undo.</div>
+    <div class="box cell">Turns posted while she was away, timestamped: verified, reported, proposed. Each reversible. Then the next moment.</div>
+
+    <div class="lbl rlbl">AI-native primitive</div>
+    <div class="cell prim">Proactive trigger from data, at a moment of intent. Not a scheduled nudge.</div>
+    <div class="cell prim">Document understanding with provenance. Memory that shows its source.</div>
+    <div class="cell prim">Deterministic calculators. A living document the agent maintains.</div>
+    <div class="cell prim">Explainable proposal. A challenge loop that revises the proposal instead of repeating it.</div>
+    <div class="cell prim">Human-gated agentic execution. Typed actions. Audit trail.</div>
+    <div class="cell prim">Continuous observation. Re-planning on life events. Restraint.</div>
+
+    <div class="lbl rlbl">Outcome and metric</div>
+    <div class="cell sm">Opens it. <b>Moment open rate · time to first plan.</b></div>
+    <div class="cell sm">Whole picture, no form. <b>Documents and accounts linked per user · questions answered.</b></div>
+    <div class="cell sm">One goal set. <b>Plan viewed within 24h · what-if runs.</b></div>
+    <div class="cell sm">Decided in one sitting. <b>Decision-to-action rate · challenge rate (healthy at 20 to 40%).</b></div>
+    <div class="cell sm">Enrolled and automated. <b>North star: outcome-improving actions completed. Guard: 30-day reversal rate.</b></div>
+    <div class="cell sm">Runway 0.4 → 3 months by month 34. <b>Plan adherence at 90 days · runway months.</b></div>
+
+    <div class="lbl rlbl">Risk and guardrail</div>
+    <div class="cell sm">Nagging kills trust. One moment at a time; back off after two ignores; quiet hours she controls.</div>
+    <div class="cell sm">A wrong extraction is worse than none. Every fact shows its source; she can correct it in place; nothing inferred is hidden.</div>
+    <div class="cell sm">No number without a calculator. Assumptions editable. No fund or security recommendations.</div>
+    <div class="cell sm">Overconfidence. Confidence stated; "what would change my mind" listed; fund questions escalate to a licensed advisor.</div>
+    <div class="cell sm">Nothing moves without a confirm. The plan's own default investment applies; Penny picks nothing. Reversible.</div>
+    <div class="cell sm">Frequency cap. Loan refinancing and anything individualized go to a licensed human with a brief.</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
