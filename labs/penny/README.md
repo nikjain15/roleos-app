@@ -8,3 +8,10 @@ an AI-native coach that helps early- and mid-career customers plan, decide, and 
   and is not committed (it embeds a 2 MB editor payload).
 
 Concept only. Not a Fidelity product; no Fidelity trademarks or data are used.
+
+- `app/index.html`: the working prototype, one self-contained page. Persona picker, the Penny
+  thread with deterministic calculators behind every number, a visible specialist team on every
+  tool call, permission prompts before any action, a time-jump for the between-sessions turns,
+  the Overview, Plan, Actions, and You tabs, and the product-notes column. Free-text replies use
+  the artifact runtime's Claude access when available and a scripted fallback otherwise; both are
+  labelled. Published as a Claude artifact; open the file directly in a browser for a local run.
