@@ -1,4 +1,5 @@
 <title>Penny</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;450;500;600&family=JetBrains+Mono:wght@500&display=swap">
 <style>
   :root {
@@ -43,10 +44,19 @@
   .segs button { min-height: 30px; padding: 0 12px; border-radius: 999px; font-size: 13px; color: var(--ink-2); font-weight: 500; } .segs button.on { background: var(--accent); color: #fff; }
   .ghost { min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font-size: 13px; color: var(--ink-2); font-weight: 500; } .ghost.on { border-color: var(--ink); color: var(--ink); }
   .stage { display: flex; justify-content: center; align-items: flex-start; padding: 16px 20px 40px; gap: 24px; }
+  .notes-hint { display: none; }
   .notes { width: 400px; flex-shrink: 0; display: none; flex-direction: column; gap: 14px; } .notes.open { display: flex; }
-  @media (max-width: 900px) { .stage { flex-direction: column; align-items: center; } .notes { width: 100%; max-width: 560px; } .brand .tagline { display: none; } }
-  .phone { width: 390px; height: 800px; border-radius: 30px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--sh-lg); overflow: hidden; display: flex; flex-direction: column; position: relative; }
-  @media (max-width: 480px) { .top { padding: 10px 14px; flex-wrap: wrap; row-gap: 8px; } .top .right { flex: 1 0 100%; justify-content: flex-start; } .stage { padding: 0; } .phone { width: 100%; height: calc(100vh - 54px); border-radius: 0; border: 0; box-shadow: none; } }
+  /* Tablet and split-window: the notes move below the phone rather than squeezing it. */
+  @media (max-width: 900px) { .stage { flex-direction: column; align-items: center; padding: 12px 16px 32px; } .notes { width: 100%; max-width: 620px; } .brand .tagline { display: none; } }
+  /* The frame is fluid: it never exceeds the window, and never collapses below a
+     usable height. dvh so mobile browser chrome does not crop the tab bar. */
+  .phone { width: 390px; max-width: 100%; height: 800px; height: min(820px, calc(100vh - 104px)); height: min(820px, calc(100dvh - 104px)); min-height: 540px; border-radius: 30px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--sh-lg); overflow: hidden; display: flex; flex-direction: column; position: relative; }
+  @media (max-width: 900px) { .phone { height: min(760px, calc(100dvh - 96px)); } }
+  @media (max-width: 560px) { .top { padding: 10px 14px; flex-wrap: wrap; row-gap: 8px; } .top .right { flex: 1 0 100%; justify-content: flex-start; } .stage { padding: 0; gap: 0; }
+    .phone { width: 100%; border-radius: 0; border: 0; box-shadow: none; min-height: 0; height: calc(100vh - 96px); height: calc(100dvh - 96px); }
+    .notes { padding: 16px 16px 32px; max-width: 100%; }
+    .view { padding: 8px 18px 24px; } .appbar { padding: 16px 18px 8px; } }
+  @media (max-width: 380px) { .view { padding: 8px 14px 24px; } .appbar { padding: 14px 14px 8px; } .tiles { gap: 6px; } .tile { padding: 9px 8px; } .hbar { grid-template-columns: 92px 1fr 46px; gap: 8px; } }
   .appbar { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px 8px; } .appbar h1 { font-size: 18px; letter-spacing: var(--tr-tight); } .appbar .date { font-size: 12px; color: var(--muted); }
   .view { flex: 1; overflow-y: auto; padding: 8px 22px 24px; display: flex; flex-direction: column; gap: 22px; scroll-behavior: smooth; }
   @media (prefers-reduced-motion: reduce) { .view { scroll-behavior: auto; } .in { animation: none !important; } }
@@ -116,7 +126,25 @@
   .persona { border: 1px solid var(--line-2); border-radius: var(--r-2xl); padding: 16px; display: flex; flex-direction: column; gap: 4px; background: var(--surface); } .persona:hover { border-color: var(--accent); background: var(--accent-soft); box-shadow: var(--sh-sm); } .persona b { font-family: var(--display); font-weight: 600; font-size: 16px; }
   .notes .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-2xl); padding: 18px; display: flex; flex-direction: column; gap: 10px; box-shadow: var(--sh-sm); }
   .notes-tabs { display: flex; flex-wrap: wrap; gap: 6px; } .notes-tabs button { min-height: 28px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 12.5px; font-weight: 500; color: var(--ink-2); background: var(--surface); } .notes-tabs button.on { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .note-body { display: flex; flex-direction: column; gap: 10px; font-size: 14px; max-width: 60ch; } .note-body h3 { font-size: 15px; } .note-body ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
+  .note-body { display: flex; flex-direction: column; gap: 9px; font-size: 14px; line-height: 1.55; color: var(--ink-2); max-width: 62ch; }
+  .note-body h3 { font-size: 16px; color: var(--ink); letter-spacing: var(--tr-tight); }
+  .note-body p { max-width: 62ch; } .note-body b { color: var(--ink); font-weight: 600; }
+  .note-body ul { margin: 0; padding-left: 17px; display: flex; flex-direction: column; gap: 5px; }
+  .note-body li::marker { color: var(--line-2); }
+  /* A small overline that separates sections without another heading level. */
+  .nlab { font-size: 11px; letter-spacing: var(--tr-overline); text-transform: uppercase; color: var(--muted); font-weight: 600; margin-top: 6px; }
+  .kv { display: flex; flex-direction: column; }
+  .kv div { display: grid; grid-template-columns: 104px 1fr; gap: 12px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+  .kv div:last-child { border-bottom: 0; } .kv b { color: var(--ink); font-weight: 600; }
+  .flow { display: flex; flex-direction: column; counter-reset: fl; }
+  .flow div { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: baseline; padding: 7px 0 7px 13px; border-left: 2px solid var(--line); font-size: 13.5px; position: relative; }
+  .flow div::before { content: ""; position: absolute; left: -5px; top: 14px; width: 8px; height: 8px; border-radius: 50%; background: var(--line-2); }
+  .flow div.on::before { background: var(--accent); }
+  .flow div.on b { color: var(--accent-tx); }
+  .flow b { color: var(--ink); font-weight: 600; } .flow span { color: var(--ink-2); }
+  .flow.num div { grid-template-columns: 1fr; border-left: 0; padding-left: 26px; }
+  .flow.num div::before { display: none; }
+  .flow.num div::after { counter-increment: fl; content: counter(fl); position: absolute; left: 0; top: 7px; width: 18px; height: 18px; border-radius: 50%; background: var(--accent-soft); color: var(--accent-tx); font-size: 10.5px; font-weight: 600; display: grid; place-items: center; }
   .team-row { display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--ink-2); padding: 4px 0; } .team-row .st { color: var(--muted); font-size: 12px; } .team-row .st.busy { color: var(--accent); font-weight: 600; }
 </style>
 
@@ -223,7 +251,7 @@ function derive(p, contribPct, extraCard, autosave) {
 let S = null;
 function fresh(pid) {
   const p = PERSONAS[pid];
-  return { v: SCHEMA, persona: pid, tab: 'penny', notesTab: 'moment', stage: 'moment', date: 'Sept 9, 2026', thread: [], actions: [], events: [{ d: 'Sept 9, 2026', k: 'moment', t: pid === 'jordan' ? 'Benefits window opened. Penny raised the unclaimed match.' : 'Pay-day. Penny raised the unclaimed match.' }], rules: [], memory: p.memory.map(m => m.slice()),
+  return { v: SCHEMA, persona: pid, tab: 'penny', notesTab: 'journey', stage: 'moment', date: 'Sept 9, 2026', thread: [], actions: [], events: [{ d: 'Sept 9, 2026', k: 'moment', t: pid === 'jordan' ? 'Benefits window opened. Penny raised the unclaimed match.' : 'Pay-day. Penny raised the unclaimed match.' }], rules: [], memory: p.memory.map(m => m.slice()),
     sources: p.sources.map(x => x.slice()),
     plan: { version: pid === 'jordan' ? 3 : 0, contribPct: p.contribPct, cardPayment: p.cardMin, autosave: 0, hysa: false, redirect: false, homeMonthly: 0 },
     tryit: { contribPct: p.matchCap, extraCard: pid === 'jordan' ? 300 : 0, autosave: p.autosave || 0 }, assump: { ret: 0.06, apy: 0.042 },
@@ -530,7 +558,7 @@ function switchTab(tab) { S.tab = tab; save(); renderPhone(); renderNotes(); }
 function focusComposer(ph) { S.tab = 'penny'; S.ph = ph; renderPhone(); const i = phone.querySelector('#msg'); if (i) i.focus(); }
 function renderTop() {
   const el = document.getElementById('topRight'); const notesOpen = document.getElementById('notes').classList.contains('open');
-  el.innerHTML = S ? `<div class="segs"><button class="${S.persona === 'jordan' ? 'on' : ''}" data-persona="jordan">Jordan</button><button class="${S.persona === 'maya' ? 'on' : ''}" data-persona="maya">Maya</button></div><button class="ghost" id="resetBtn">Reset</button><button class="ghost ${notesOpen ? 'on' : ''}" id="notesBtn">Reviewer notes</button>` : `<button class="ghost ${notesOpen ? 'on' : ''}" id="notesBtn">Reviewer notes</button>`;
+  el.innerHTML = S ? `<div class="segs"><button class="${S.persona === 'jordan' ? 'on' : ''}" data-persona="jordan">Jordan</button><button class="${S.persona === 'maya' ? 'on' : ''}" data-persona="maya">Maya</button></div><button class="ghost" id="resetBtn">Reset</button><button class="ghost ${notesOpen ? 'on' : ''}" id="notesBtn">How this works</button>` : `<button class="ghost ${notesOpen ? 'on' : ''}" id="notesBtn">How this works</button>`;
   el.querySelectorAll('[data-persona]').forEach(b => b.onclick = () => {
     if (S && S.persona === b.dataset.persona) return;
     if (S && S.thread.length > 1 && !confirm('Switch to the other customer? This clears the journey you are in.')) return;
@@ -763,31 +791,62 @@ function renderYou() {
 
 /* ---------- reviewer notes ---------- */
 const NOTES = {
-  moment: () => {
-    const m = { moment: ['One number, one sentence, one button', 'No home screen. The first thing the customer sees is the figure that matters today and the deadline attached to it.', ['Guard: only real deadlines, one message at a time, back off after two ignores.']], understand: ['Documents, not forms', 'Reader does the work and cites the page. The customer corrects; they do not type.', []], decide: ['A suggestion, then a feeling', 'Penny suggests in one sentence, gives three plain consequences, and then asks how the cost feels before anything happens. Tight changes the plan to a smaller step. Unsure gets the numbers to feel it with.', ['Coaching stance: I would suggest, your call, no guarantees.']], act: ['Permission as a calm sheet', 'Three rows, Allow or Not now. One result line and an undo. Then one Next.', []], away: ['Episodes, not notifications', 'A raise, a balance-transfer offer, a recruiter, a car repair, a refinance letter. Each is one turn, one choice. Product decisions are named as such and offered to a licensed person.', ['Metric: adherence at 90 days; reversal rate.']] };
-    const tab = { money: ['The full picture', 'Accounts read this morning, three months of cash flow, spending by category you can tap to ask about, twelve months of history. Every figure here is what Analyst and Planner work from.', []], plan: ['Play with it', 'Sliders recompute the match, the take-home, the payoff, and the ten-year line as you drag. Make this my plan hands the result to Penny, who asks before doing anything. What-if scenarios show the diff, not a lecture.', []], activity: ['The whole story', 'Not just actions: what Penny noticed, suggested, was allowed to do, checked, and what you asked. A compliance reviewer sees this same list.', []], you: ['Who knows what, who may do what', 'Memory with sources, rules with revocation, the data Penny can see with when it was read, and the team.', []] };
-    const [h, body, bullets] = S && S.tab !== 'penny' ? tab[S.tab] : m[S ? S.stage : 'moment'] || m.moment;
-    return `<h3>${h}</h3><p>${body}</p>${bullets.length ? `<ul>${bullets.map(x => `<li>${x}</li>`).join('')}</ul>` : ''}`;
+  journey: () => {
+    const stage = { moment: ['The moment', 'No home screen. The first thing the customer sees is the number that matters today and the deadline attached to it. Finding the moment is the product; a dashboard is where good intentions go to be ignored.', ['Guard: only real deadlines, one message at a time, back off after two ignores.']],
+      understand: ['Documents, not forms', 'Reader does the work and cites the page it came from. The customer corrects what is wrong; they never type what a document already says.', []],
+      decide: ['One decision, in their numbers', 'One suggestion, three plain consequences, then a question about how the cost feels before anything happens. Tight changes the plan to a smaller step. Not sure gets the numbers to feel it with.', ['The cost is named out loud, including the part that gets worse.']],
+      act: ['Permission as a calm sheet', 'What changes, what it costs, how to undo it. Allow, Not now, or hand over a standing rule. One result line, and an undo that tells the truth about what it can and cannot reverse.', []],
+      away: ['Between sessions is the product', 'A raise, a balance-transfer offer, a recruiter, a car repair, a refinance letter. Each is one turn and one choice. Months with nothing worth saying collapse to a single line.', ['Metric: adherence at 90 days; reversal rate.']] };
+    const tab = { money: ['Money', 'Accounts, three months of cash flow, spending you can tap to ask about, and the history behind it. Everything Analyst and Planner work from, shown as it stands today rather than frozen at sign-up.', []],
+      plan: ['Plan', 'Sliders recompute the match, the take-home cost, the payoff and the ten-year line as you drag. Make this my plan hands the result to Penny, who still asks before doing anything. What-if scenarios show the difference, not a lecture.', []],
+      activity: ['Activity', 'What Penny noticed, suggested, was allowed to do, checked, and what you asked. The north-star metric is counted off this same list, and a compliance reviewer reads exactly what you read.', []],
+      you: ['You', 'Memory with sources, rules you can revoke, the data Penny can see and when it was last read, and the team that works on your money.', []] };
+    const [h, body, bullets] = S && S.tab !== 'penny' ? tab[S.tab] : stage[S ? S.stage : 'moment'] || stage.moment;
+    return `<h3>${h}</h3><p>${body}</p>${bullets.length ? `<ul>${bullets.map(x => `<li>${x}</li>`).join('')}</ul>` : ''}
+      <p class="nlab">The five stages</p><div class="flow">${[['Moment', 'find it'], ['Understand', 'read, cite, confirm'], ['Decide', 'one choice, their numbers'], ['Act', 'permission, then do it'], ['Keep going', 'verify, notice, stay quiet']].map(([a, b], i) => `<div${S && S.tab === 'penny' && ['moment', 'understand', 'decide', 'act', 'away'][i] === S.stage ? ' class="on"' : ''}><b>${a}</b><span>${b}</span></div>`).join('')}</div>`;
   },
-  voice: () => `<h3>Coaching voice</h3><ul><li>Ask before telling. After every suggestion, one question about how it feels.</li><li>Offer a choice where one exists: 5% now, 6% in January.</li><li>Say "I would suggest" and "your call". Never "you should".</li><li>No guarantees, no promised returns. Projections are called assumptions on the chart.</li><li>Product decisions (a card, a refinance, a fund) are named as product decisions and handed to a licensed person.</li><li>Silence is a feature. Months with nothing to say collapse to one line.</li></ul>`,
-  design: () => `<h3>Design principles</h3><ul><li><b>One tap, one answer.</b> Every tap returns exactly one turn and offers the next step. The only exceptions are the taps that open a tab, which navigate rather than answer.</li><li><b>Depth in the tabs, calm in the thread.</b> Money, Plan, and Activity carry the data; Penny carries one idea at a time.</li><li><b>Evidence on demand.</b> Who checked what is a question, not a banner.</li><li><b>Interactive where it teaches.</b> Sliders, tappable categories, what-if diffs.</li><li><b>Hairlines, not boxes.</b></li></ul>`,
-  problem: () => `<h3>The problem</h3><p>Most people know what would improve their finances. Most do not do it. The gap is not information. The decision is never framed in their own numbers, the action lives in a portal they dread, and nobody follows through.</p><p><b>The unit of value is a completed action that improves an outcome.</b> A conversation is a means, never the product.</p>`,
-  bet: () => `<h3>The bet</h3><p>An AI-native coach closes the gap if it finds the moment, frames one decision in the customer's numbers, asks how it feels, gets the action done with them, and keeps its word between sessions.</p><ul><li>Not a chatbot with account access.</li><li>Not a budgeting app.</li><li>Not a robo-advisor. Penny never picks funds or ranks products.</li></ul>`,
-  team: () => `<h3>The team</h3><p>The work is split into specialists so each step is checkable. The customer can see who did what by asking. It is never in their face.</p><ul><li><b>Penny</b> talks and explains. Never computes, never acts.</li><li><b>Reader, Analyst, Watcher</b> observe and cite.</li><li><b>Planner</b> is deterministic code. The only source of numbers.</li><li><b>Guardian</b> checks scope and decides when silence is right.</li><li><b>Doer</b> is the only agent that changes anything, after permission.</li><li><b>Advisor desk</b> hands off to a licensed human with a brief.</li></ul>`,
-  metrics: () => `<h3>Metrics</h3><p><b>North star:</b> outcome-improving actions completed per active customer per quarter, counted only if the projection improves and the action is not reversed within 30 days. Activity counts it live, from the same log a compliance reviewer reads.</p><p><b>Guards:</b> 30-day reversal rate, escalation rate, complaint rate.</p><p><b>By stage:</b> moment open rate; documents linked; feelings answered; decision-to-action; adherence at 90 days.</p>`,
-  guardrails: () => `<h3>Guardrails</h3><ul><li>Guidance yes; security selection, product ranking, and individualized advice no.</li><li>The model never computes a customer number. Planner does.</li><li>Only Doer changes anything, after Allow. Every action logged with who, when, undo.</li><li>Only real deadlines trigger a message. Quiet hours and a back-off after two ignores, both stated in You.</li><li>Memory is visible and cited; the customer can forget a fact or disconnect the source it came from.</li><li>Live replies are checked before they are shown: any guarantee language, any named product, and any number Planner did not produce holds the reply and falls back to the scripted answer, logged in Activity. In production that check is also an eval suite on every prompt change.</li></ul>`,
-  ninety: () => `<h3>First 90 days</h3><ul><li><b>Weeks 1 to 3:</b> the loop for real on one workplace plan; calculators reviewed with compliance; Doer wired to contribution changes only.</li><li><b>Weeks 4 to 8:</b> two cohorts of 200, unenrolled and under-contributing. Measure decision-to-action and 30-day reversals.</li><li><b>Weeks 9 to 12:</b> savings and autopay through bank rails; advisor handoff rated by the advisors who receive it.</li></ul><p><b>Day 90 decision:</b> does a permissioned coach collect more match per participant than the best nudge campaign? If not, stop.</p>`,
+  vision: () => `<h3>The problem</h3><p>Most people know what would improve their finances. Most do not do it. The gap is not information: the decision is never framed in their own numbers, the action lives in a portal they dread, and nobody follows through.</p>
+    <p class="nlab">The bet</p><p>A coach closes that gap if it finds the moment, frames one decision in the customer's numbers, asks how it feels, gets the action done with them, and keeps its word between sessions.</p>
+    <p class="nlab">What it is not</p><ul><li>Not a chatbot with account access.</li><li>Not a budgeting app. Nobody was ever short of charts.</li><li>Not a robo-advisor. Penny never picks funds or ranks products.</li></ul>
+    <p class="nlab">The unit of value</p><p>A completed action that improves an outcome. A conversation is a means, never the product.</p>`,
+  personas: () => `<h3>Two customers, two different failures</h3>
+    <p>Both are synthetic and internally consistent: every figure in the app is computed from the numbers below, not written by hand.</p>
+    <p class="nlab">Jordan, 34 · mid career</p><p>Contributes 3% into a plan that matches 6%. Card at 24.99%. Saving for a first home. He acts when asked, then drifts. His journey runs six years and asks the harder question: can a coach hold a plan together across a raise, a card offer, a job wobble and a milestone?</p>
+    <p class="nlab">Maya, 26 · early career</p><p>Eligible and not enrolled, 1,200 in savings, student loans, and afraid of locking money away. She has never acted. Her journey asks the first question: can a coach get one action out of someone the industry has never reached?</p>
+    <p class="nlab">Why two</p><p>One tests sustained adherence, the other tests activation. A product that only does one of those is a feature.</p>`,
+  agents: () => `<h3>Eight specialists, one conversation</h3>
+    <p>The work is split so every step is separately checkable, and so the compliance surface is code rather than a prompt. The customer sees one voice; they can ask who did what at any point.</p>
+    <div class="kv">${[['Penny', 'talks, explains, decides what to raise and when to stay quiet'], ['Reader', 'reads documents, cites the page'], ['Analyst', 'turns 90 days of spending into essentials, free cash, runway'], ['Planner', 'deterministic calculators — the only source of numbers'], ['Guardian', 'checks scope before anything reaches the customer'], ['Doer', 'the only agent that can change anything, and only after Allow'], ['Watcher', 'checks accounts between visits, verifies actions landed'], ['Advisor desk', 'hands off to a licensed human with a brief']].map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join('')}</div>
+    <p class="nlab">One turn, end to end</p>
+    <div class="flow num">${['Watcher notices something real — a deadline, a paystub change, a charge — and wakes the loop.', 'Reader and Analyst assemble the facts, each with a source.', 'Planner runs the calculators and emits a fact sheet.', 'Penny writes the turn from that fact sheet. It may not compute.', 'Guardian checks scope, and holds anything out of bounds.', 'Doer acts, but only after the customer allows it.'].map(t => `<div><span>${t}</span></div>`).join('')}</div>
+    <p class="nlab">The split that matters</p><p>The model handles sequencing, explanation, tone and timing. It does no arithmetic, selects no products, and takes no action. Every customer number comes from deterministic code a reviewer can read line by line.</p>`,
+  memory: () => `<h3>Context that survives the session</h3>
+    <p>A coach that forgets is a chatbot. Penny carries three kinds of memory, and every item shows where it came from and when.</p>
+    <div class="kv">${[['Stated', 'what the customer said — a buffer, a goal, a worry'], ['Derived', 'what the numbers show — essentials, free cash, runway'], ['Documented', 'what a source says — plan document, p.12']].map(([a, b]) => `<div><b>${a}</b><span>${b}</span></div>`).join('')}</div>
+    <p class="nlab">Between sessions</p><ul><li>The plan and every version of it, so a change is a decision with a date on it.</li><li>Standing rules the customer granted, revocable in one tap.</li><li>What was already suggested and declined, so Penny backs off instead of repeating itself.</li><li>Quiet hours, and a stop after two ignored messages.</li></ul>
+    <p class="nlab">Correctable by design</p><p>Memory is visible in You. Any fact can be forgotten, and any source disconnected — after which anything that depended on it is marked stale rather than quietly re-guessed.</p>`,
+  principles: () => `<h3>Design principles</h3><ul><li><b>One tap, one answer.</b> Every tap returns exactly one turn and offers the next step. Only the chips that open a tab navigate instead of answering.</li><li><b>Calm in the thread, depth in the tabs.</b> Penny carries one idea; Money, Plan and Activity carry the data.</li><li><b>Evidence on demand.</b> Who checked what is a question, not a banner.</li><li><b>Interactive where it teaches.</b> Sliders, tappable categories, what-if differences.</li><li><b>Hairlines, not boxes.</b></li></ul>
+    <p class="nlab">Coaching voice</p><ul><li>Ask before telling. After a suggestion, one question about how it feels.</li><li>Offer a choice where one exists: 5% now, 6% in January.</li><li>"I would suggest" and "your call". Never "you should".</li><li>Name the cost, including the part that gets worse.</li><li>No guarantees. Projections are labelled assumptions.</li><li>Silence is a feature.</li></ul>`,
+  guardrails: () => `<h3>What Penny will not do</h3><ul><li>Guidance yes; security selection, product ranking and individualized advice go to a licensed human with a brief the customer reads first.</li><li>The model never computes a customer number. Planner does.</li><li>Only Doer changes anything, after Allow. Every action is logged with who, when, and an undo.</li><li>Only real deadlines trigger a message. Quiet hours and a back-off after two ignores, both stated in You.</li><li>Memory is visible, cited, and can be forgotten or disconnected at the source.</li></ul>
+    <p class="nlab">Checked, not promised</p><p>A free-text reply from the model is scanned before it is shown. Guarantee language, a named product or ticker, or any number the calculators did not produce holds the reply, falls back to the scripted answer, and is logged in Activity. In production that same check runs as an eval suite on every prompt change.</p>`,
+  metrics: () => `<h3>North star</h3><p>Outcome-improving actions completed per active customer per quarter, counted only if the projection improves and the action is not reversed within 30 days. Activity counts it live, off the same log a compliance reviewer reads.</p>
+    <p class="nlab">Guards</p><p>30-day reversal rate, escalation rate, complaint rate. A number that only goes up is a number nobody is checking.</p>
+    <p class="nlab">By stage</p><p>Moment open rate; documents linked; feelings answered; decision to action; adherence at 90 days.</p>
+    <p class="nlab">First 90 days</p><ul><li><b>Weeks 1–3:</b> the loop for real on one workplace plan; calculators reviewed with compliance; Doer wired to contribution changes only.</li><li><b>Weeks 4–8:</b> two cohorts of 200, unenrolled and under-contributing. Measure decision-to-action and 30-day reversals.</li><li><b>Weeks 9–12:</b> savings and autopay through bank rails; the advisor handoff rated by the advisors who receive it.</li></ul>
+    <p class="nlab">The day-90 decision</p><p>Does a permissioned coach collect more match per participant than the best nudge campaign? If not, stop.</p>`,
 };
 function renderNotes() {
   const el = document.getElementById('notes'); if (!el.classList.contains('open')) { el.innerHTML = ''; return; }
-  const tabs = [['moment', S && S.tab !== 'penny' ? 'This tab' : 'This moment'], ['voice', 'Voice'], ['design', 'Design'], ['problem', 'Problem'], ['bet', 'Bet'], ['team', 'Team'], ['metrics', 'Metrics'], ['guardrails', 'Guardrails'], ['ninety', '90 days']];
-  const cur = S ? S.notesTab : notesFallback;
+  const tabs = [['journey', S && S.tab !== 'penny' ? 'This tab' : 'Journey'], ['vision', 'Vision'], ['personas', 'Personas'], ['agents', 'AI architecture'], ['memory', 'Memory'], ['principles', 'Principles'], ['guardrails', 'Guardrails'], ['metrics', 'Metrics']];
+  const cur = NOTES[S ? S.notesTab : notesFallback] ? (S ? S.notesTab : notesFallback) : 'vision';
   el.innerHTML = `<div class="card"><div class="notes-tabs">${tabs.map(([id, l]) => `<button class="${cur === id ? 'on' : ''}" data-note="${id}">${l}</button>`).join('')}</div><div class="note-body">${NOTES[cur]()}</div></div>
-    ${S ? `<div class="card"><span class="xs">Team, right now</span>${Object.entries(S.team).map(([n, s]) => `<div class="team-row"><span>${n}</span><span class="st ${s === 'working' ? 'busy' : ''}">${esc(s)}</span></div>`).join('')}</div>
-    <div class="card"><span class="xs">Guided path</span><p class="sm">${S.persona === 'jordan' ? 'Show me → Fine, Tight, or Not sure → Do this → Allow → Next → Allow → Sept 16 → answer → a raise → Allow → an offer → your read → Oct 2027 → Possibly → Keep it ready → Jan 2028 → Allow → 2032 → Read the brief → Book. Or type anything, or drag the Plan sliders.' : 'Read my documents → Looks right → 1,000 → What would you suggest → Fine, Tight, or Not sure → Do this → Allow → Next → Allow → Skip ahead → May → June → Allow → a car repair → a refinance letter → summer.'}</p><p class="xs">Free-text replies: ${sampleFn === undefined ? 'checking' : sampleFn && S.liveOn !== false ? 'live' : 'scripted'}, labelled either way.</p></div>` : ''}`;
+    ${S ? `<div class="card"><span class="xs">The agents, right now</span>${Object.entries(S.team).map(([n, s]) => `<div class="team-row"><span>${n}</span><span class="st ${s === 'working' ? 'busy' : ''}">${esc(s)}</span></div>`).join('')}</div>
+    <div class="card"><span class="xs">Try this</span><p class="sm">${S.persona === 'jordan' ? 'Tap <b>Show me</b>, then say how the cost feels. Allow both actions and keep skipping ahead — Jordan\'s story runs to 2032, through a raise, a card offer and a job wobble. Or ignore the path: ask Penny anything, or drag the sliders in Plan.' : 'Tap <b>Read my documents</b>, confirm what Penny found, then say how it feels. Allow both actions and keep skipping ahead — Maya\'s story runs to 2028, through a car repair and a refinance letter. Or ask Penny anything instead.'}</p><p class="xs">Free-text replies: ${sampleFn === undefined ? 'checking' : sampleFn && S.liveOn !== false ? 'live' : 'scripted'}, labelled either way.</p></div>` : ''}`;
   el.querySelectorAll('[data-note]').forEach(b => b.onclick = () => { if (S) S.notesTab = b.dataset.note; else notesFallback = b.dataset.note; renderNotes(); });
 }
-let notesFallback = 'voice';
+let notesFallback = 'vision';
+/* On a wide screen the thinking is worth showing without a hunt for the button. */
+if (window.innerWidth >= 1180) document.getElementById('notes').classList.add('open');
 let startTimer = null;
 function choose(pid) { clearTimeout(startTimer); S = fresh(pid); S.ph = null; renderAll(); startTimer = setTimeout(() => { if (S && !S.thread.length) startMoment(); }, 350); }
 function renderAll() {
