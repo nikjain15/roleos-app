@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive, sans-serif; color: #1c1c1c; background: #f6f5f1; }
+    a { color: #2f5fc4; } a:hover { color: #1f45a0; }
+    .box { border: 1.5px solid #2a2a2a; border-radius: 4px; background: #fff; }
+    .dash { border: 1.5px dashed #6b6b6b; border-radius: 4px; background: #fff; }
+    .img { background: #e6e4dc; border: 1.5px solid #2a2a2a; border-radius: 4px; background-image: linear-gradient(to top right, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)), linear-gradient(to top left, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)); }
+    .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
+    .h1 { font-size: 24px; line-height: 1.15; margin: 0; }
+    .h2 { font-size: 18px; line-height: 1.2; margin: 0; }
+    .p { font-size: 15px; line-height: 1.35; margin: 0; }
+    .sm { font-size: 13px; line-height: 1.3; color: #555; margin: 0; }
+    .btn { min-height: 48px; display: flex; align-items: center; justify-content: center; border: 2px solid #1c1c1c; border-radius: 6px; font-size: 16px; background: #fff; padding: 0 16px; }
+    .btn-primary { background: #1c1c1c; color: #fff; }
+    .btn-accent { background: #fff; border-color: #2f5fc4; color: #2f5fc4; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .col { display: flex; flex-direction: column; gap: 10px; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; margin: 0; }
+    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
+    .chip-on { background: #1c1c1c; color: #fff; }
+    .chip-ai { border-color: #2f5fc4; color: #2f5fc4; }
+    .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
+    .fill { height: 100%; background: #2a2a2a; }
+    .screen { width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
+    .body { flex: 1; padding: 16px 16px 12px; display: flex; flex-direction: column; gap: 12px; }
+    .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 6px; text-align: left; vertical-align: top; }
+    .tbl th { background: #ecebe4; font-weight: 400; color: #444; }
+    .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+    .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
+    .on { background: #2a2a2a; }
+    .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
+    .topnav { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1.5px solid #2a2a2a; background: #fff; }
+    .segs { display: flex; gap: 0; border: 1.5px solid #2a2a2a; border-radius: 999px; overflow: hidden; }
+    .segs div { min-height: 34px; padding: 0 14px; display: flex; align-items: center; font-size: 14px; }
+    .segs .on { background: #1c1c1c; color: #fff; }
+    .kmark { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #2f5fc4; color: #2f5fc4; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: #fff; }
+    .coach { display: flex; gap: 8px; align-items: flex-start; }
+    .coach .box { padding: 12px; border-color: #2f5fc4; flex: 1; }
+    .user { align-self: flex-end; max-width: 85%; padding: 10px 12px; background: #ecebe4; border: 1.5px solid #2a2a2a; border-radius: 4px; }
+    .trace { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #f0f3fa; border: 1.5px dashed #2f5fc4; border-radius: 4px; }
+    .trace .sm { color: #2f4f8f; }
+    .inputbar { display: flex; align-items: center; gap: 10px; padding: 10px 16px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .inputbar .dash { flex: 1; min-height: 46px; display: flex; align-items: center; padding: 0 12px; color: #777; }
+    .ico { width: 20px; height: 20px; flex-shrink: 0; }
+    .approve { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .approve div { min-height: 44px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #2a2a2a; border-radius: 6px; font-size: 14px; background: #fff; }
+    .toggle { width: 40px; height: 22px; border: 1.5px solid #2a2a2a; border-radius: 999px; position: relative; background: #fff; flex-shrink: 0; }
+    .toggle::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #2a2a2a; }
+    .toggle.is-on { background: #1c1c1c; }
+    .toggle.is-on::after { left: 21px; background: #fff; }
+    .jgrid { display: grid; grid-template-columns: 170px repeat(6, minmax(0, 1fr)); gap: 8px; font-size: 13.5px; }
+    .jgrid .cell { padding: 9px 10px; line-height: 1.3; }
+    .jgrid .rlbl { align-self: start; padding-top: 9px; }
+    .jgrid .stage { background: #fff; }
+    .jgrid .status { background: #f2f0ea; border-color: #b8b5aa; color: #555; }
+    .jgrid .keel { background: #f0f3fa; border-color: #2f5fc4; }
+    .jgrid .prim { color: #2f5fc4; }
+    .quote { font-style: italic; }
+  </style>
+</helmet>
+<div style="width: 1760px; min-height: 1300px; padding: 28px; box-sizing: border-box; background: #f6f5f1; display: flex; flex-direction: column; gap: 16px;">
+  <div class="row" style="justify-content: space-between; align-items: flex-end;">
+    <div class="col" style="gap: 4px;">
+      <div class="lbl">Journey · mid career</div>
+      <h1 class="h1" style="font-size: 28px;">Jordan, 34: "Make the right calls for me and get them done, without me running a spreadsheet."</h1>
+    </div>
+    <span class="chip">Returning user, linked last year</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px;">
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">The numbers</div><p class="sm">Product manager, 128k. Take-home 7,400 a month. Essentials 4,600. 401(k) 41k, contributing 3%; employer matches 100% up to 6%. Credit card 6,800 at 24.99%, up 1,400 in 90 days, minimum 210. Emergency savings 9,000 at 0.5% (2 months). Home fund 14,500 at 4.2%, target 60,000 in 4 years. Free cash about 650 a month that disappears.</p></div>
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">Money story</div><p class="sm">Competent and busy. Optimizes everything at work and nothing at home. Has a spreadsheet from January he has not opened since. Vaguely knows "take the match". Believes the card "will get handled after the trip". It has not.</p></div>
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">Anxieties</div><p class="sm">"Am I making a dumb mistake I will regret at 45?"<br>"I do not want another app nagging me."<br>"Is the house still realistic?"<br>He would rather not know how much the card costs a year. It is 1,700.</p></div>
+    <div class="box" style="padding: 10px 12px;"><div class="lbl">Tried and abandoned</div><p class="sm">The spreadsheet. A robo-advisor account with 2,000 in it. Reading one long article about the match every benefits season and then closing the tab.</p></div>
+    <div class="box" style="padding: 10px 12px; border-color: #2f5fc4;"><div class="lbl" style="color: #2f5fc4;">Trust threshold and success</div><p class="sm">Trusts reasoning, not cheerleading. Wants control over what is automated. Zero tolerance for product pushing. Success in 12 months: full match captured, card gone by month 16, home fund back on a timeline he believes.</p></div>
+  </div>
+
+  <div class="jgrid">
+    <div class="lbl rlbl">Stage</div>
+    <div class="box cell stage"><div class="lbl">1 · Moment</div><b>Benefits window opens: 9 days.</b> Card balance is up 1,400 in 90 days. Three things compete for 650 a month.</div>
+    <div class="box cell stage"><div class="lbl">2 · Understand</div><b>Returning.</b> Accounts linked last year. Memory holds one hard constraint.</div>
+    <div class="box cell stage"><div class="lbl">3 · Plan</div><b>Three goals on one timeline.</b> The card is the quiet problem.</div>
+    <div class="box cell stage"><div class="lbl">4 · Decide</div><b>650 a month: match, card, or house?</b></div>
+    <div class="box cell stage"><div class="lbl">5 · Act</div><b>Three actions, in order.</b> The third waits 16 months and re-asks.</div>
+    <div class="box cell stage"><div class="lbl">6 · Keep going</div><b>Week 2: verified. Month 16: card gone. Year 3: the purchase.</b></div>
+
+    <div class="lbl rlbl">He thinks</div>
+    <div class="dash cell quote">"I will deal with the card after the trip. The match thing... I think I am fine?"</div>
+    <div class="dash cell quote">"Do not make me re-explain myself."</div>
+    <div class="dash cell quote">"I am good at this at work. Why is it a mess at home?"</div>
+    <div class="dash cell quote">"Give me the reasoning, not a pep talk. And what if I would rather buy sooner?"</div>
+    <div class="dash cell quote">"Do it. But show me exactly what changes on Sept 15."</div>
+    <div class="dash cell quote">"It stayed out of my way and kept its word."</div>
+
+    <div class="lbl rlbl">Without Mo</div>
+    <div class="box cell status">The window closes. Another year at 3%. The card reaches 9,000 by spring.</div>
+    <div class="box cell status">Every tool starts from zero. He does not have the patience to start again.</div>
+    <div class="box cell status">The January spreadsheet, never updated. The home date drifts and nobody notices.</div>
+    <div class="box cell status">A blog post says "always take the match". He half-remembers it in March.</div>
+    <div class="box cell status">Changes the 401(k) in the portal, maybe. Card autopay stays at the minimum, 55 months to payoff.</div>
+    <div class="box cell status">The card is paid eventually. There is no plan for what the freed money does next.</div>
+
+    <div class="lbl rlbl">Mo does</div>
+    <div class="box cell keel">Notices the window, the eligibility, the unclaimed 3%, and the card trend together. Sends one message with a real deadline: "Three things are competing for 650 a month. Nine days to fix one of them for free."</div>
+    <div class="box cell keel">Recalls "home fund is off-limits (you, Sept 2025)" and asks whether it still holds instead of assuming. Refreshes the card APR from the latest statement. Re-derives essentials from 90 days. Notes the January spreadsheet he uploaded.</div>
+    <div class="box cell keel">Plan v3: the card costs 1,700 a year; the home goal slips about a year if nothing changes. What-if answered in place: "pay the card over 3 years and buy sooner" shows the interest cost and the new date.</div>
+    <div class="box cell keel">Proposal with a reasoning trace: read the match formula (SPD p.12), the APR (Aug statement), the constraint; ruled out pausing the home fund; compared three orders; recommends match → card → house. Confidence high. What would change it: a job change within 6 months (vesting) or a balance transfer under 5%. On challenge, revises and shows the cost of buying in 2029.</div>
+    <div class="box cell keel">Three approval cards with the exact payroll effect (240 less take-home from Sept 15). Executes through the plan provider and the bank. Offers an autonomy setting, "raise 401(k) 1% a year on its own", and respects that he leaves it off. Schedules a verification.</div>
+    <div class="box cell keel">Verifies the change landed. Reports in one line. At payoff, asks for one tap to redirect 510 to the home fund. In year 3, proposes a licensed advisor for the purchase, with a brief already written.</div>
+
+    <div class="lbl rlbl">Interface moment</div>
+    <div class="box cell">A notification opens the thread. Mo's first turn: the number, the deadline, the evidence, three replies.</div>
+    <div class="box cell">In the thread: Mo quotes what it remembers, with source and date, and asks "still true?" before using it.</div>
+    <div class="box cell">Plan v3 as an artifact with a change log. What-if typed as a message; the diff comes back as a turn with the calculator step visible.</div>
+    <div class="box cell">An agent turn with its thinking open, the trade-off table inline, the recommendation, and what would change it. Challenge by typing.</div>
+    <div class="box cell">Permission prompts per action, with an "always allow up to 1% a year" option he declines. Tool results with receipts.</div>
+    <div class="box cell">Away-turns: verified, cleared, then at payoff a permission prompt. In year 3, a "book advisor" tool call with the brief as an artifact.</div>
+
+    <div class="lbl rlbl">AI-native primitive</div>
+    <div class="cell prim">Multi-signal trigger with a real deadline. Never manufactured urgency.</div>
+    <div class="cell prim">Durable memory with provenance. Confirmation, not assumption.</div>
+    <div class="cell prim">Agent-maintained plan. What-if as a first-class input.</div>
+    <div class="cell prim">Explainable proposal. Challenge loop that revises with numbers.</div>
+    <div class="cell prim">Human-gated execution. Autonomy dial with caps. Deferred action that re-asks.</div>
+    <div class="cell prim">Continuous observation. Human handoff with a prepared brief.</div>
+
+    <div class="lbl rlbl">Outcome and metric</div>
+    <div class="cell sm">Opens it. <b>Moment open rate · deadline actions completed before the window closes.</b></div>
+    <div class="cell sm">Nothing re-entered. <b>Memory confirmations · correction rate (a correction is a win, not a failure).</b></div>
+    <div class="cell sm">Sees the real home date. <b>What-if runs per user.</b></div>
+    <div class="cell sm">Decides in one sitting. <b>Decision-to-action rate · challenge rate.</b></div>
+    <div class="cell sm">Match captured, card on a 16-month path. <b>North star: outcome-improving actions completed. Guard: 30-day reversal rate.</b></div>
+    <div class="cell sm">Card gone month 16, home fund back on track. <b>Plan adherence at 90 days · advisor-rated handoff quality.</b></div>
+
+    <div class="lbl rlbl">Risk and guardrail</div>
+    <div class="cell sm">Urgency theater. Only real deadlines (benefits window, statement date) may trigger a moment.</div>
+    <div class="cell sm">Stale memory. Facts older than a year are re-asked. Memory is visible and editable as a document in the thread.</div>
+    <div class="cell sm">Assumptions visible. The purchase itself (mortgage, advisor) is flagged for a human early.</div>
+    <div class="cell sm">No fund picking. Confidence stated. A balance-transfer offer is evaluated, never sold.</div>
+    <div class="cell sm">Every money movement confirmed. 30-day easy undo. Autonomy is opt-in with caps, off by default.</div>
+    <div class="cell sm">The deferred action re-asks; nothing fires on a stale instruction. The advisor takes the individualized decisions.</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

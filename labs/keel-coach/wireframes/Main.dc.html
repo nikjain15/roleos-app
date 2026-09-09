@@ -24,17 +24,14 @@
     .btn-accent { background: #fff; border-color: #2f5fc4; color: #2f5fc4; }
     .row { display: flex; align-items: center; gap: 10px; }
     .col { display: flex; flex-direction: column; gap: 10px; }
-    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; margin: 0; }
     .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
     .chip-on { background: #1c1c1c; color: #fff; }
+    .chip-ai { border-color: #2f5fc4; color: #2f5fc4; }
     .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
     .fill { height: 100%; background: #2a2a2a; }
-    .tabbar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 1.5px solid #2a2a2a; background: #fff; }
-    .tab { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; color: #555; }
-    .tab-on { color: #1c1c1c; font-weight: 700; }
-    .ico { width: 20px; height: 20px; border: 1.5px solid currentColor; border-radius: 4px; }
     .screen { width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
-    .body { flex: 1; padding: 20px 16px; display: flex; flex-direction: column; gap: 14px; }
+    .body { flex: 1; padding: 16px 16px 12px; display: flex; flex-direction: column; gap: 12px; }
     .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
     .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
     .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 6px; text-align: left; vertical-align: top; }
@@ -43,78 +40,94 @@
     .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
     .on { background: #2a2a2a; }
     .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
-    .arrow { color: #2f5fc4; font-size: 18px; }
+    .topnav { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1.5px solid #2a2a2a; background: #fff; }
+    .segs { display: flex; gap: 0; border: 1.5px solid #2a2a2a; border-radius: 999px; overflow: hidden; }
+    .segs div { min-height: 34px; padding: 0 14px; display: flex; align-items: center; font-size: 14px; }
+    .segs .on { background: #1c1c1c; color: #fff; }
+    .kmark { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #2f5fc4; color: #2f5fc4; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: #fff; }
+    .coach { display: flex; gap: 8px; align-items: flex-start; }
+    .coach .box { padding: 12px; border-color: #2f5fc4; flex: 1; }
+    .user { align-self: flex-end; max-width: 85%; padding: 10px 12px; background: #ecebe4; border: 1.5px solid #2a2a2a; border-radius: 4px; }
+    .trace { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; background: #f0f3fa; border: 1.5px dashed #2f5fc4; border-radius: 4px; }
+    .trace .sm { color: #2f4f8f; }
+    .inputbar { display: flex; align-items: center; gap: 10px; padding: 10px 16px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .inputbar .dash { flex: 1; min-height: 46px; display: flex; align-items: center; padding: 0 12px; color: #777; }
+    .ico { width: 20px; height: 20px; flex-shrink: 0; }
+    .approve { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .approve div { min-height: 44px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #2a2a2a; border-radius: 6px; font-size: 14px; background: #fff; }
+    .toggle { width: 40px; height: 22px; border: 1.5px solid #2a2a2a; border-radius: 999px; position: relative; background: #fff; flex-shrink: 0; }
+    .toggle::after { content: ""; position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #2a2a2a; }
+    .toggle.is-on { background: #1c1c1c; }
+    .toggle.is-on::after { left: 21px; background: #fff; }
+    .jgrid { display: grid; grid-template-columns: 170px repeat(6, minmax(0, 1fr)); gap: 8px; font-size: 13.5px; }
+    .jgrid .cell { padding: 9px 10px; line-height: 1.3; }
+    .jgrid .rlbl { align-self: start; padding-top: 9px; }
+    .jgrid .stage { background: #fff; }
+    .jgrid .status { background: #f2f0ea; border-color: #b8b5aa; color: #555; }
+    .jgrid .keel { background: #f0f3fa; border-color: #2f5fc4; }
+    .jgrid .prim { color: #2f5fc4; }
+    .quote { font-style: italic; }
   </style>
 </helmet>
-<div style="width: 1720px; min-height: 780px; padding: 28px; box-sizing: border-box; background: #f6f5f1; display: flex; flex-direction: column; gap: 16px;">
-  <div class="row" style="justify-content: space-between; align-items: flex-end;">
-    <div class="col" style="gap: 4px;">
-      <div class="lbl">User journey · low fidelity · v0.1</div>
-      <h1 class="h1" style="font-size: 30px;">Keel: an AI-native financial coach that helps people plan, decide, and act</h1>
-      <p class="p" style="color: #555;">Two personas, one loop. The unit of value is a completed action that improves an outcome, not a conversation.</p>
-    </div>
-    <div class="row" style="gap: 8px;">
-      <span class="chip">Maya, 26 · early career</span>
-      <span class="chip">Jordan, 34 · mid career</span>
-    </div>
+<div style="width: 1760px; min-height: 1040px; padding: 28px; box-sizing: border-box; background: #f6f5f1; display: flex; flex-direction: column; gap: 18px;">
+  <div class="col" style="gap: 4px;">
+    <div class="lbl">Mo · the thinking on one page · v0.2</div>
+    <h1 class="h1" style="font-size: 30px;">People do not fail to improve their finances for lack of information. They fail between knowing and doing.</h1>
+    <p class="p" style="color: #555; max-width: 1100px;">Mo is a coach that closes that gap: it finds the moment, frames one decision in your numbers, and gets the action done with you. The unit of value is a completed action that improves an outcome. A conversation is a means, never the product.</p>
   </div>
 
-  <div style="display: grid; grid-template-columns: 150px repeat(6, minmax(0, 1fr)); gap: 8px; font-size: 14px;">
-    <div class="lbl" style="align-self: end; padding-bottom: 6px;">Stage</div>
-    <div class="box" style="padding: 10px;"><div class="lbl">1 · Moment</div><p class="p"><b>Something changes</b><br>A trigger, not a login.</p></div>
-    <div class="box" style="padding: 10px;"><div class="lbl">2 · Connect</div><p class="p"><b>Understand the full picture</b><br>Accounts, plan docs, three questions.</p></div>
-    <div class="box" style="padding: 10px;"><div class="lbl">3 · Plan</div><p class="p"><b>See the path</b><br>Goals, timeline, with vs. without.</p></div>
-    <div class="box" style="padding: 10px;"><div class="lbl">4 · Decide</div><p class="p"><b>One trade-off in their own numbers</b><br>Why, confidence, what would change it.</p></div>
-    <div class="box" style="padding: 10px;"><div class="lbl">5 · Act</div><p class="p"><b>Propose, confirm, execute</b><br>Reversible. Logged.</p></div>
-    <div class="box" style="padding: 10px;"><div class="lbl">6 · Follow through</div><p class="p"><b>One thing a week</b><br>Re-plan on life events. Hand off when needed.</p></div>
+  <div style="display: grid; grid-template-columns: 1fr 640px; gap: 24px; align-items: start;">
+    <div class="col" style="gap: 10px;">
+      <div class="lbl">AI-native, not AI-added</div>
+      <table class="tbl" style="font-size: 13.5px;">
+        <tr><th style="width: 16%;">Dimension</th><th style="width: 36%;">AI added to a finance app</th><th>AI-native (Mo)</th></tr>
+        <tr><td>Entry</td><td>An app you remember to open. A chatbot in the corner.</td><td>A moment that finds you, from your data, with a real deadline. The message is the entry point.</td></tr>
+        <tr><td>Understanding</td><td>Forms. You type what the system needs.</td><td>It reads your paystub and plan document, cites the page, and asks only what it cannot read.</td></tr>
+        <tr><td>Plan</td><td>A dashboard that is true the day you set it up.</td><td>A living plan the agent maintains, versioned, with a change log that says why it changed.</td></tr>
+        <tr><td>Decision</td><td>A list of tips. "Consider increasing your contribution."</td><td>One proposal in your numbers, with a reasoning trace, a confidence, what would change its mind, and a way to challenge it.</td></tr>
+        <tr><td>Action</td><td>A deep link to a portal. You do the work.</td><td>Approval cards. The agent prepares the exact change; you confirm; it executes and verifies.</td></tr>
+        <tr><td>Memory</td><td>None. Every session starts from zero.</td><td>Visible, editable, cited facts: what it knows, who said it, when. Stale facts are re-asked, never assumed.</td></tr>
+        <tr><td>Between sessions</td><td>Nothing happens.</td><td>The agent works: monitors accounts, verifies actions landed, prepares the next proposal, stays quiet otherwise.</td></tr>
+        <tr><td>Trust</td><td>Disclaimers.</td><td>Provenance on every number, undo on every action, an audit log, and an honest handoff to a licensed human.</td></tr>
+        <tr><td>Control</td><td>A settings page.</td><td>An autonomy dial with caps: what Mo may draft, what it may do alone, what always needs you.</td></tr>
+        <tr><td>Math</td><td>The model writes numbers into prose.</td><td>Deterministic calculators produce every number. The model explains, frames, drafts, asks. It never computes a customer figure.</td></tr>
+      </table>
+      <div class="dash" style="padding: 10px 12px;">
+        <p class="sm"><b>What Mo is not:</b> a chatbot with account access · a budgeting app with categories · a robo-advisor that picks funds · a notification engine. Each of those exists. None closes the knowing-doing gap.</p>
+      </div>
+    </div>
 
-    <div class="lbl" style="align-self: start; padding-top: 10px;">Maya<br><span style="text-transform: none; letter-spacing: 0; color: #444;">26, analyst, first job. 72k. Not enrolled in 401(k). 28.4k student loans at 5.5%. 1.2k savings.</span></div>
-    <div class="dash" style="padding: 10px;">Ignored the benefits email. Sees "you are leaving 2,880 a year on the table" on her pay-day notification.</div>
-    <div class="dash" style="padding: 10px;">Links checking, savings, loan servicer. Coach reads the plan's match formula. Answers: buffer she needs in checking, one goal.</div>
-    <div class="dash" style="padding: 10px;">Sees she is 0.4 months from empty. Goal set: 3-month fund (9k) and start retirement. Path with coach: fund done in about 34 months.</div>
-    <div class="dash" style="padding: 10px;">"Enroll at 4% now or build the fund first?" Coach: both. The match is a 100% instant return; the fund still lands in 34 months at 230 a month.</div>
-    <div class="dash" style="padding: 10px;">Confirms: enroll at 4% (190 a month take-home), auto-move 230 a month to a 4.2% savings account. Loans stay at minimum.</div>
-    <div class="dash" style="padding: 10px;">Month 8: "Your fund hit one month." Month 9: raise. Coach re-plans: 60% of the raise to the fund, rest untouched.</div>
-
-    <div class="lbl" style="align-self: start; padding-top: 10px;">Jordan<br><span style="text-transform: none; letter-spacing: 0; color: #444;">34, PM. 128k. 401(k) at 3%, match to 6%. 6.8k card at 24.99%. 9k savings. First-home goal in 4 years.</span></div>
-    <div class="dash" style="padding: 10px;">Benefits window opens. Card balance is up 1.4k in 90 days. Coach: "Three things are competing for 650 a month. Want to see them side by side?"</div>
-    <div class="dash" style="padding: 10px;">Already linked. Coach recalls last year's note: "Do not touch the home fund." Confirms the constraint still holds.</div>
-    <div class="dash" style="padding: 10px;">Sees three goals on one timeline. Card is silently costing 1,700 a year. Home goal slips about a year if nothing changes.</div>
-    <div class="dash" style="padding: 10px;">"650 a month: match, card, or house?" Coach ranks: match first (3,840 a year free), then card (24.99%), house after payoff. Shows the math.</div>
-    <div class="dash" style="padding: 10px;">Confirms: 401(k) 3% to 6% effective next payroll. 300 a month extra to the card, payoff in 16 months instead of 55. Undo window: 30 days.</div>
-    <div class="dash" style="padding: 10px;">Month 16: card paid. Coach asks for a one-tap confirm, then redirects the 510 to the home fund. Asks about a licensed advisor for the home purchase.</div>
-
-    <div class="lbl" style="align-self: start; padding-top: 10px;">Coach does</div>
-    <div class="box" style="padding: 10px; background: #ecebe4;">Detects a moment of intent from data, not a schedule. Opens with the customer's number.</div>
-    <div class="box" style="padding: 10px; background: #ecebe4;">Builds context: balances, APRs, match formula, essentials from 90 days of spend. Stores preferences as memory.</div>
-    <div class="box" style="padding: 10px; background: #ecebe4;">Runs a deterministic projection. Model narrates; calculators compute. Assumptions are visible and editable.</div>
-    <div class="box" style="padding: 10px; background: #ecebe4;">Frames one decision as a trade-off table. Explains inputs, rules, confidence. Escalates if it crosses into individualized investment advice.</div>
-    <div class="box" style="padding: 10px; background: #ecebe4;">Turns the decision into typed actions. Nothing moves without a confirm. Writes an audit entry with before and after.</div>
-    <div class="box" style="padding: 10px; background: #ecebe4;">Watches for drift and life events. Surfaces one thing a week. Hands off to a human with a prepared brief.</div>
-
-    <div class="lbl" style="align-self: start; padding-top: 10px;">AI-native primitive</div>
-    <div class="note" style="padding: 6px 10px;">Proactive trigger</div>
-    <div class="note" style="padding: 6px 10px;">Context + memory</div>
-    <div class="note" style="padding: 6px 10px;">Deterministic math, generated explanation</div>
-    <div class="note" style="padding: 6px 10px;">Explainability + guardrail</div>
-    <div class="note" style="padding: 6px 10px;">Human-gated action + audit</div>
-    <div class="note" style="padding: 6px 10px;">Continuous re-planning + handoff</div>
-
-    <div class="lbl" style="align-self: start; padding-top: 10px;">Feeling</div>
-    <div class="sm" style="padding: 6px 10px;">"Wait, how much?"</div>
-    <div class="sm" style="padding: 6px 10px;">"It actually knows my situation."</div>
-    <div class="sm" style="padding: 6px 10px;">"I can see where this goes."</div>
-    <div class="sm" style="padding: 6px 10px;">"That makes sense. I get why."</div>
-    <div class="sm" style="padding: 6px 10px;">"Done. And I can undo it."</div>
-    <div class="sm" style="padding: 6px 10px;">"It kept its word."</div>
-
-    <div class="lbl" style="align-self: start; padding-top: 10px;">Metric</div>
-    <div class="sm" style="padding: 6px 10px;">Trigger open rate</div>
-    <div class="sm" style="padding: 6px 10px;">Accounts linked per user</div>
-    <div class="sm" style="padding: 6px 10px;">Plan viewed within 24h</div>
-    <div class="sm" style="padding: 6px 10px;">Decision to action rate</div>
-    <div class="sm" style="padding: 6px 10px;"><b>North star: outcome-improving actions completed per active customer per quarter</b>. Guard: 30-day reversal rate.</div>
-    <div class="sm" style="padding: 6px 10px;">Plan adherence at 90 days · advisor handoff quality</div>
+    <div class="col" style="gap: 12px;">
+      <div class="lbl">The system under the loop</div>
+      <div class="box" style="padding: 16px; display: flex; flex-direction: column; gap: 12px;">
+        <svg viewBox="0 0 600 150" width="100%" height="150" role="img" aria-label="Plan, decide, act loop with observe closing it">
+          <rect x="0" y="0" width="600" height="150" fill="#fff"></rect>
+          <rect x="20" y="40" width="140" height="56" rx="6" fill="#fff" stroke="#2a2a2a" stroke-width="1.5"></rect>
+          <text x="90" y="74" font-size="18" text-anchor="middle" fill="#1c1c1c">Plan</text>
+          <rect x="230" y="40" width="140" height="56" rx="6" fill="#fff" stroke="#2a2a2a" stroke-width="1.5"></rect>
+          <text x="300" y="74" font-size="18" text-anchor="middle" fill="#1c1c1c">Decide</text>
+          <rect x="440" y="40" width="140" height="56" rx="6" fill="#1c1c1c" stroke="#2a2a2a" stroke-width="1.5"></rect>
+          <text x="510" y="74" font-size="18" text-anchor="middle" fill="#fff">Act</text>
+          <path d="M160 68 L228 68" stroke="#2a2a2a" stroke-width="1.5" fill="none"></path>
+          <path d="M370 68 L438 68" stroke="#2a2a2a" stroke-width="1.5" fill="none"></path>
+          <path d="M510 96 L510 125 L90 125 L90 98" stroke="#2f5fc4" stroke-width="1.5" fill="none" stroke-dasharray="5 4"></path>
+          <text x="300" y="142" font-size="13" text-anchor="middle" fill="#2f5fc4">observe: verify it landed, watch for drift, find the next moment</text>
+          <polygon points="222,63 230,68 222,73" fill="#2a2a2a"></polygon>
+          <polygon points="432,63 440,68 432,73" fill="#2a2a2a"></polygon>
+          <polygon points="85,106 90,98 95,106" fill="#2f5fc4"></polygon>
+        </svg>
+        <div class="col" style="gap: 6px;">
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Context layer</b> · linked accounts, plan documents, paystubs, statements, and memory with provenance.</p></div>
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Calculators</b> · deterministic: match capture, payoff schedules, runway months, projections, paycheck effect. Unit-tested. The only source of customer numbers.</p></div>
+          <div class="box" style="padding: 8px 10px; border-color: #2f5fc4;"><p class="p"><b>Reasoning (model)</b> · finds the moment, frames the trade-off, writes the explanation, asks the clarifying question, revises on challenge. Reads calculator output; never replaces it.</p></div>
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Typed actions</b> · a small vocabulary: change contribution, set autopay, open or move to savings, schedule a follow-up, book an advisor. Each has a schema, a confirm, an undo.</p></div>
+          <div class="box" style="padding: 8px 10px;"><p class="p"><b>Audit and evals</b> · every action logged with before, after, who, when. An eval suite runs on every prompt change: numbers match calculators, scope rules hold, escalations fire.</p></div>
+        </div>
+      </div>
+      <div class="dash" style="padding: 10px 12px; border-color: #2f5fc4;">
+        <p class="sm"><b>Scope rule:</b> education and guidance, yes. Security selection and individualized investment advice, no. Those route to a licensed advisor with a brief Mo prepared, so the human call starts at minute one.</p>
+      </div>
+    </div>
   </div>
 </div>
 </x-dc>

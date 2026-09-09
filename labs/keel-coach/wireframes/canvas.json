@@ -1,21 +1,29 @@
 {
+  "pages": [
+    { "id": "page-thinking", "name": "Thinking and journeys" },
+    { "id": "page-wireframes", "name": "Thread wireframes" }
+  ],
   "artboards": [
-    { "file": "Main.dc.html", "title": "User journey", "x": 0, "y": 0, "w": 1720, "h": 780 },
-    { "file": "Connect.dc.html", "title": "1 Connect", "x": 0, "y": 960, "w": 390, "h": 844 },
-    { "file": "Today.dc.html", "title": "2 Today", "x": 470, "y": 960, "w": 390, "h": 844 },
-    { "file": "Plan.dc.html", "title": "3 Plan", "x": 940, "y": 960, "w": 390, "h": 844 },
-    { "file": "Decide.dc.html", "title": "4 Decide", "x": 1410, "y": 960, "w": 390, "h": 844 },
-    { "file": "Act.dc.html", "title": "5 Act · confirm", "x": 1880, "y": 960, "w": 390, "h": 844 },
-    { "file": "Audit.dc.html", "title": "6 Act · record", "x": 2350, "y": 960, "w": 390, "h": 844 },
-    { "file": "Coach.dc.html", "title": "7 Coach · guardrails", "x": 2820, "y": 960, "w": 390, "h": 844 },
-    { "file": "DemoLayout.dc.html", "title": "Desktop demo layout for the CEO", "x": 0, "y": 1960, "w": 1440, "h": 900 }
+    { "file": "Main.dc.html", "title": "The thinking on one page", "page": "page-thinking", "x": 0, "y": 0, "w": 1760, "h": 1040 },
+    { "file": "MayaJourney.dc.html", "title": "Journey · Maya, 26, early career", "page": "page-thinking", "x": 0, "y": 1180, "w": 1760, "h": 1300 },
+    { "file": "JordanJourney.dc.html", "title": "Journey · Jordan, 34, mid career", "page": "page-thinking", "x": 0, "y": 2620, "w": 1760, "h": 1300 },
+    { "file": "T1Moment.dc.html", "title": "1 Moment", "page": "page-wireframes", "x": 0, "y": 0, "w": 390, "h": 1000 },
+    { "file": "T2Understand.dc.html", "title": "2 Understand", "page": "page-wireframes", "x": 470, "y": 0, "w": 390, "h": 1120 },
+    { "file": "T3Plan.dc.html", "title": "3 Plan", "page": "page-wireframes", "x": 940, "y": 0, "w": 390, "h": 1120 },
+    { "file": "T4Decide.dc.html", "title": "4 Decide", "page": "page-wireframes", "x": 1410, "y": 0, "w": 390, "h": 1160 },
+    { "file": "T5Act.dc.html", "title": "5 Act", "page": "page-wireframes", "x": 1880, "y": 0, "w": 390, "h": 1160 },
+    { "file": "T6Away.dc.html", "title": "6 Between sessions", "page": "page-wireframes", "x": 2350, "y": 0, "w": 390, "h": 1120 },
+    { "file": "T7Memory.dc.html", "title": "7 Memory and permissions", "page": "page-wireframes", "x": 2820, "y": 0, "w": 390, "h": 1000 },
+    { "file": "DemoLayout.dc.html", "title": "Desktop demo layout for the CEO", "page": "page-wireframes", "x": 0, "y": 1320, "w": 1440, "h": 900 }
   ],
   "annotations": [
-    { "id": "thesis", "x": 1800, "y": 0, "w": 300, "text": "Thesis\nThe unit of value is a completed action that improves an outcome, not a conversation. Everything on this canvas serves the loop: plan, decide, act, repeat." },
-    { "id": "math-rule", "x": 1800, "y": 230, "w": 300, "text": "Rule\nThe model explains. The calculators compute. No number reaches the customer that a deterministic function did not produce first." },
-    { "id": "trust-rule", "x": 1800, "y": 430, "w": 300, "text": "Rule\nNothing moves money without a confirm. Every action has before, after, who, when, and undo. Individualized investment advice escalates to a licensed human." },
-    { "id": "open-questions", "x": 1800, "y": 640, "w": 300, "text": "Open questions for you\n1. Visual system: you asked for joinkiro.com's. I could not reach the site from here. Paste a screenshot or the brand colors and fonts.\n2. Keep both personas in the demo, or lead with one?\n3. Should the coach ever act inside limits without a confirm?" },
-    { "id": "flow-note", "x": 3300, "y": 960, "w": 260, "text": "Flow\nConnect → Today → Plan → Decide → Act → record. Coach is a side door, reachable from any tab. Read left to right." }
+    { "id": "thesis", "page": "page-thinking", "x": 1840, "y": 0, "w": 300, "text": "Thesis\nThe unit of value is a completed action that improves an outcome, not a conversation. Everything here serves the loop: plan, decide, act, observe, repeat." },
+    { "id": "math-rule", "page": "page-thinking", "x": 1840, "y": 220, "w": 300, "text": "Rule\nThe model explains. The calculators compute. No number reaches the customer that a deterministic function did not produce first." },
+    { "id": "trust-rule", "page": "page-thinking", "x": 1840, "y": 420, "w": 300, "text": "Rule\nNothing moves money without a confirm. Every action has before, after, who, when, and undo. Individualized investment advice escalates to a licensed human." },
+    { "id": "why-two-personas", "page": "page-thinking", "x": 1840, "y": 1180, "w": 300, "text": "Why these two personas\nMaya has never acted; the product must remove fear and friction. Jordan acts but does not sustain; the product must reason and stay out of the way. If the loop works for both, it generalizes." },
+    { "id": "name-note", "page": "page-thinking", "x": 1840, "y": 1460, "w": 300, "text": "Working name\n\"Mo\" is a placeholder while the name is chosen. Options are in the chat." },
+    { "id": "flow-note", "page": "page-wireframes", "x": 3300, "y": 0, "w": 280, "text": "One thread\nThere are no screens. These seven frames are seven stretches of the same conversation, in order. Plan, Proposal, Record, and Memory are artifacts that open beside the thread." },
+    { "id": "ai-native-note", "page": "page-wireframes", "x": 3300, "y": 300, "w": 280, "text": "Borrowed from how Claude works\nVisible tool calls under every claim. Collapsible thinking. Artifacts in a side panel. A permission prompt before any action, with allow once, always allow within a cap, deny. Memory as a document you can edit. Work done between sessions, posted as turns." }
   ],
-  "launch": { "view": "canvas" }
+  "launch": { "view": "canvas", "page": "page-wireframes" }
 }

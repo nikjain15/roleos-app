@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive, sans-serif; color: #1c1c1c; background: #f6f5f1; }
+    a { color: #2f5fc4; } a:hover { color: #1f45a0; }
+    .box { border: 1.5px solid #2a2a2a; border-radius: 4px; background: #fff; }
+    .dash { border: 1.5px dashed #6b6b6b; border-radius: 4px; background: #fff; }
+    .img { background: #e6e4dc; border: 1.5px solid #2a2a2a; border-radius: 4px; background-image: linear-gradient(to top right, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)), linear-gradient(to top left, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)); }
+    .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
+    .h1 { font-size: 22px; line-height: 1.15; margin: 0; }
+    .h2 { font-size: 17px; line-height: 1.2; margin: 0; }
+    .p { font-size: 15px; line-height: 1.35; margin: 0; }
+    .sm { font-size: 13px; line-height: 1.3; color: #555; margin: 0; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .col { display: flex; flex-direction: column; gap: 10px; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; margin: 0; }
+    .chip { display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
+    .chip-on { background: #1c1c1c; color: #fff; }
+    .chip-ai { border-color: #2f5fc4; color: #2f5fc4; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 5px 6px; text-align: left; vertical-align: top; }
+    .tbl th { background: #ecebe4; font-weight: 400; color: #444; }
+    .ico { width: 18px; height: 18px; flex-shrink: 0; }
+    .screen { width: 390px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
+    .thread { flex: 1; padding: 14px 14px 10px; display: flex; flex-direction: column; gap: 14px; }
+    .head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1.5px solid #2a2a2a; background: #fff; }
+    .kmark { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #2f5fc4; color: #2f5fc4; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: #fff; }
+    .turn { display: flex; flex-direction: column; gap: 8px; }
+    .turn .who { display: flex; align-items: center; gap: 8px; }
+    .turn .who .sm { color: #6b6b6b; }
+    .agent .p, .agent .h2 { max-width: 100%; }
+    .user { align-self: flex-end; max-width: 82%; padding: 10px 12px; background: #ecebe4; border: 1.5px solid #2a2a2a; border-radius: 12px 12px 2px 12px; }
+    .tool { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1.5px solid #b9c4de; border-radius: 6px; background: #f0f3fa; font-size: 13px; color: #2f4f8f; }
+    .tool .name { font-weight: 700; }
+    .tool.running .ico { border: 1.5px dashed #2f5fc4; border-radius: 50%; }
+    .think { padding: 8px 10px; border-left: 3px solid #b9c4de; background: #f7f8fc; display: flex; flex-direction: column; gap: 4px; }
+    .think .sm { color: #4a5a7a; }
+    .artifact { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 2px solid #2a2a2a; border-radius: 8px; background: #fff; }
+    .artifact .doc { width: 34px; height: 42px; border: 1.5px solid #2a2a2a; border-radius: 3px; background: repeating-linear-gradient(to bottom, transparent 0 6px, #cfcdc4 6px 7px); flex-shrink: 0; }
+    .perm { border: 2px solid #2f5fc4; border-radius: 8px; background: #fff; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .perm .opts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .perm .opts div { min-height: 44px; display: flex; align-items: center; justify-content: center; text-align: center; border: 1.5px solid #2a2a2a; border-radius: 6px; font-size: 13px; padding: 0 4px; background: #fff; }
+    .perm .opts .on { background: #1c1c1c; color: #fff; }
+    .result { padding: 8px 10px; border: 1.5px solid #2a2a2a; border-radius: 6px; background: #fff; display: flex; flex-direction: column; gap: 4px; }
+    .divider { display: flex; align-items: center; gap: 10px; color: #6b6b6b; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .divider::before, .divider::after { content: ""; flex: 1; border-top: 1.5px dashed #b8b5aa; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .composer { display: flex; align-items: center; gap: 10px; padding: 10px 14px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .composer .dash { flex: 1; min-height: 46px; display: flex; align-items: center; padding: 0 12px; color: #777; }
+    .notif { border: 1.5px solid #2a2a2a; border-radius: 12px; background: #fff; padding: 12px; display: flex; gap: 10px; align-items: flex-start; }
+  </style>
+</helmet>
+<div class="screen" style="min-height: 1120px;">
+  <div class="head">
+    <div class="row" style="gap: 8px;"><div class="kmark">M</div><span class="h2">Mo</span><span class="sm">· your money coach</span></div>
+    <div class="row" style="gap: 6px;"><span class="chip" style="min-height: 30px;">Plan v3</span><span class="chip" style="min-height: 30px;">Memory</span></div>
+  </div>
+  <div class="thread">
+    <div class="lbl">Thread 3 · Plan · an artifact Mo maintains, what-if is a message</div>
+    <div class="turn agent">
+      <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">Sept 9 · 8:06</span></div>
+      <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Run projection</span> · 10 years, 6% return, 4.2% savings, no raises</span></div>
+      <p class="p">I built your plan. Three goals on one timeline. The quiet problem is the card: it costs about 1,700 a year, and the home date slips about a year if nothing changes.</p>
+      <div class="artifact"><div class="doc"></div><div class="col" style="gap: 2px; flex: 1;"><p class="p"><b>Plan v3</b></p><p class="sm">Order of operations · timeline · assumptions · change log</p></div><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 5l5 5-5 5"></path></svg></div>
+      <p class="sm">v3 replaces v2 (Jan 14) because the card balance rose. Assumptions are editable inside the plan.</p>
+    </div>
+    <div class="user"><p class="p">What if I pay the card over 3 years and buy sooner?</p></div>
+    <div class="turn agent">
+      <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">8:07</span></div>
+      <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Run payoff schedule</span> · 6,800 at 24.99%, 36 months</span></div>
+      <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Run projection</span> · with 425 a month to the home fund from October</span></div>
+      <p class="p">Home date moves from 2031 to 2030. The card costs about 2,900 more in interest over those three years. Your call. I would not, and here is the diff:</p>
+      <table class="tbl">
+        <tr><th></th><th>v3</th><th>your what-if</th></tr>
+        <tr><td>Card paid off</td><td>early 2028</td><td>late 2029</td></tr>
+        <tr><td>Interest paid</td><td>1,300</td><td>4,200</td></tr>
+        <tr><td>Home fund at 60k</td><td>2031</td><td>2030</td></tr>
+      </table>
+      <div class="perm">
+        <p class="p"><b>Save this as Plan v4?</b></p>
+        <div class="opts"><div>Save as v4</div><div class="on">Keep v3</div><div>Ask me later</div></div>
+      </div>
+    </div>
+    <div class="chips"><span class="chip">What if: a raise</span><span class="chip">What if: job loss</span><span class="chip">What if: a baby</span></div>
+    <p class="note">Note: the plan lives as an artifact in the panel, like a document Claude keeps updating. What-if never opens a calculator page; it is a sentence, and the answer is a diff with the tool calls visible.</p>
+  </div>
+  <div class="composer"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 8l-6 6a3 3 0 0 1-4-4l7-7a2 2 0 0 1 3 3l-7 7a1 1 0 0 1-1.5-1.5L11 6"></path></svg><div class="dash">Message Mo, or ask what if</div><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="7" y="2" width="6" height="10" rx="3"></rect><path d="M4 9a6 6 0 0 0 12 0M10 15v3"></path></svg></div>
+</div>
+</x-dc>
+</body>
+</html>

@@ -15,71 +15,102 @@
     .dash { border: 1.5px dashed #6b6b6b; border-radius: 4px; background: #fff; }
     .img { background: #e6e4dc; border: 1.5px solid #2a2a2a; border-radius: 4px; background-image: linear-gradient(to top right, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)), linear-gradient(to top left, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)); }
     .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
-    .h1 { font-size: 24px; line-height: 1.15; margin: 0; }
-    .h2 { font-size: 18px; line-height: 1.2; margin: 0; }
+    .h1 { font-size: 22px; line-height: 1.15; margin: 0; }
+    .h2 { font-size: 17px; line-height: 1.2; margin: 0; }
     .p { font-size: 15px; line-height: 1.35; margin: 0; }
     .sm { font-size: 13px; line-height: 1.3; color: #555; margin: 0; }
-    .btn { min-height: 48px; display: flex; align-items: center; justify-content: center; border: 2px solid #1c1c1c; border-radius: 6px; font-size: 16px; background: #fff; padding: 0 16px; }
-    .btn-primary { background: #1c1c1c; color: #fff; }
-    .btn-accent { background: #fff; border-color: #2f5fc4; color: #2f5fc4; }
     .row { display: flex; align-items: center; gap: 10px; }
     .col { display: flex; flex-direction: column; gap: 10px; }
-    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; }
-    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; margin: 0; }
+    .chip { display: inline-flex; align-items: center; min-height: 34px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
     .chip-on { background: #1c1c1c; color: #fff; }
-    .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
-    .fill { height: 100%; background: #2a2a2a; }
-    .tabbar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 1.5px solid #2a2a2a; background: #fff; }
-    .tab { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; color: #555; }
-    .tab-on { color: #1c1c1c; font-weight: 700; }
-    .ico { width: 20px; height: 20px; border: 1.5px solid currentColor; border-radius: 4px; }
-    .screen { width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
-    .body { flex: 1; padding: 20px 16px; display: flex; flex-direction: column; gap: 14px; }
-    .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .chip-ai { border-color: #2f5fc4; color: #2f5fc4; }
     .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
-    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 6px; text-align: left; vertical-align: top; }
+    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 5px 6px; text-align: left; vertical-align: top; }
     .tbl th { background: #ecebe4; font-weight: 400; color: #444; }
-    .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
-    .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
-    .on { background: #2a2a2a; }
-    .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
-    .arrow { color: #2f5fc4; font-size: 18px; }
+    .ico { width: 18px; height: 18px; flex-shrink: 0; }
+    .screen { width: 390px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
+    .thread { flex: 1; padding: 14px 14px 10px; display: flex; flex-direction: column; gap: 14px; }
+    .head { display: flex; align-items: center; justify-content: space-between; padding: 12px 14px; border-bottom: 1.5px solid #2a2a2a; background: #fff; }
+    .kmark { width: 26px; height: 26px; border-radius: 50%; border: 1.5px solid #2f5fc4; color: #2f5fc4; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: #fff; }
+    .turn { display: flex; flex-direction: column; gap: 8px; }
+    .turn .who { display: flex; align-items: center; gap: 8px; }
+    .turn .who .sm { color: #6b6b6b; }
+    .agent .p, .agent .h2 { max-width: 100%; }
+    .user { align-self: flex-end; max-width: 82%; padding: 10px 12px; background: #ecebe4; border: 1.5px solid #2a2a2a; border-radius: 12px 12px 2px 12px; }
+    .tool { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1.5px solid #b9c4de; border-radius: 6px; background: #f0f3fa; font-size: 13px; color: #2f4f8f; }
+    .tool .name { font-weight: 700; }
+    .tool.running .ico { border: 1.5px dashed #2f5fc4; border-radius: 50%; }
+    .think { padding: 8px 10px; border-left: 3px solid #b9c4de; background: #f7f8fc; display: flex; flex-direction: column; gap: 4px; }
+    .think .sm { color: #4a5a7a; }
+    .artifact { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 2px solid #2a2a2a; border-radius: 8px; background: #fff; }
+    .artifact .doc { width: 34px; height: 42px; border: 1.5px solid #2a2a2a; border-radius: 3px; background: repeating-linear-gradient(to bottom, transparent 0 6px, #cfcdc4 6px 7px); flex-shrink: 0; }
+    .perm { border: 2px solid #2f5fc4; border-radius: 8px; background: #fff; padding: 12px; display: flex; flex-direction: column; gap: 8px; }
+    .perm .opts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+    .perm .opts div { min-height: 44px; display: flex; align-items: center; justify-content: center; text-align: center; border: 1.5px solid #2a2a2a; border-radius: 6px; font-size: 13px; padding: 0 4px; background: #fff; }
+    .perm .opts .on { background: #1c1c1c; color: #fff; }
+    .result { padding: 8px 10px; border: 1.5px solid #2a2a2a; border-radius: 6px; background: #fff; display: flex; flex-direction: column; gap: 4px; }
+    .divider { display: flex; align-items: center; gap: 10px; color: #6b6b6b; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+    .divider::before, .divider::after { content: ""; flex: 1; border-top: 1.5px dashed #b8b5aa; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .composer { display: flex; align-items: center; gap: 10px; padding: 10px 14px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .composer .dash { flex: 1; min-height: 46px; display: flex; align-items: center; padding: 0 12px; color: #777; }
+    .notif { border: 1.5px solid #2a2a2a; border-radius: 12px; background: #fff; padding: 12px; display: flex; gap: 10px; align-items: flex-start; }
   </style>
 </helmet>
 <div style="width: 1440px; min-height: 900px; box-sizing: border-box; background: #f6f5f1; display: flex; flex-direction: column;">
-  <div class="row" style="justify-content: space-between; padding: 16px 32px; border-bottom: 1.5px solid #2a2a2a; background: #fff;">
-    <div class="row" style="gap: 12px;"><div class="ico" style="width: 28px; height: 28px;"></div><span class="h2">Keel</span><span class="sm">A working prototype for Fidelity Labs · concept, not a Fidelity product</span></div>
+  <div class="row" style="justify-content: space-between; padding: 14px 28px; border-bottom: 1.5px solid #2a2a2a; background: #fff;">
+    <div class="row" style="gap: 10px;"><div class="kmark">M</div><span class="h2">Mo</span><span class="sm">· a working prototype for Fidelity Labs · concept, not a Fidelity product</span></div>
     <div class="row" style="gap: 8px;"><span class="chip chip-on">Jordan · mid career</span><span class="chip">Maya · early career</span><span class="chip">Reset demo</span></div>
   </div>
-  <div style="flex: 1; display: grid; grid-template-columns: 1fr 460px; gap: 0;">
-    <div style="display: flex; align-items: flex-start; justify-content: center; padding: 40px;">
-      <div class="col" style="gap: 12px; align-items: center;">
-        <div class="lbl">The app · phone frame · all 5 tabs work</div>
-        <div class="img" style="width: 390px; height: 700px; border-radius: 28px; border-width: 3px;"></div>
-        <p class="sm">Same product on a phone: the frame drops away and the notes become a drawer.</p>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 420px 380px; gap: 0;">
+    <div style="display: flex; flex-direction: column; border-right: 1.5px solid #2a2a2a;">
+      <div class="thread" style="max-width: 640px; width: 100%; margin: 0 auto; box-sizing: border-box;">
+        <div class="lbl">The thread · the only surface the user operates</div>
+        <div class="user"><p class="p">Ok, lay it out. Where should the 650 go?</p></div>
+        <div class="turn agent">
+          <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">8:09</span></div>
+          <div class="row" style="gap: 6px;"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 5l5 5-5 5"></path></svg><span class="sm">Thought for 6 seconds</span></div>
+          <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Run match calculator</span> · 3% → 6% adds 3,840 a year</span></div>
+          <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Run payoff schedule</span> · 510 a month clears the card in 16 months</span></div>
+          <p class="p"><b>A, then B, then C.</b> Take-home drops 240 from Sept 15. The card is gone in 16 months. Then the 510 flows to the house.</p>
+          <div class="artifact"><div class="doc"></div><div class="col" style="gap: 2px; flex: 1;"><p class="p"><b>Proposal · where the 650 goes</b></p><p class="sm">Trade-off table · confidence · what would change my mind</p></div><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 5l5 5-5 5"></path></svg></div>
+          <div class="chips"><span class="chip chip-on">Turn into actions</span><span class="chip chip-ai">Challenge this</span></div>
+        </div>
+        <div class="perm">
+          <p class="sm">Mo wants to</p>
+          <p class="p"><b>Change your 401(k) contribution from 3% to 6%</b></p>
+          <div class="opts"><div class="on">Allow once</div><div>Always allow up to 1% a year</div><div>Deny</div></div>
+        </div>
       </div>
+        <div class="composer"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 8l-6 6a3 3 0 0 1-4-4l7-7a2 2 0 0 1 3 3l-7 7a1 1 0 0 1-1.5-1.5L11 6"></path></svg><div class="dash">Message Mo, or ask what if</div><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="7" y="2" width="6" height="10" rx="3"></rect><path d="M4 9a6 6 0 0 0 12 0M10 15v3"></path></svg></div>
     </div>
-    <div style="border-left: 1.5px solid #2a2a2a; background: #fff; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
-      <div class="lbl">Product notes · follows the screen you are on</div>
-      <div class="row" style="flex-wrap: wrap; gap: 6px;">
-        <span class="chip chip-on">This screen</span><span class="chip">Problem</span><span class="chip">Bet</span><span class="chip">Metrics</span><span class="chip">Guardrails</span><span class="chip">Architecture</span><span class="chip">90 days</span><span class="chip">What I'd cut</span>
+    <div style="border-right: 1.5px solid #2a2a2a; background: #fff; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+      <div class="lbl">Artifacts · what Mo has made for you</div>
+      <div class="row" style="gap: 6px; flex-wrap: wrap;"><span class="chip chip-on">Proposal</span><span class="chip">Plan v3</span><span class="chip">Record</span><span class="chip">Memory</span></div>
+      <div class="box" style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+        <p class="p"><b>Where the 650 goes</b></p>
+        <table class="tbl">
+          <tr><th>Option</th><th>Return</th><th>Worth</th></tr>
+          <tr><td>A 401(k) → 6%</td><td>100%</td><td>50k / 10 yrs</td></tr>
+          <tr><td>B card +300</td><td>24.99%</td><td>3.4k saved</td></tr>
+          <tr><td>C house</td><td>4.2%</td><td>51k / 4 yrs</td></tr>
+        </table>
+        <p class="sm">Confidence high · changes if: job change in 6 months, balance transfer under 5%</p>
+        <p class="sm">Inputs: SPD p.12 · Aug statement · 90-day cash flow · memory (2 facts)</p>
       </div>
-      <div class="box card">
-        <div class="lbl">This screen · Decide</div>
-        <p class="p">Why one trade-off, not a dashboard: people do not fail to act because they lack data. They fail because the choice is never framed in their own numbers with a clear order.</p>
-        <p class="p">Hypothesis: a ranked trade-off table with the "why" expanded doubles decision-to-action versus a generic tips feed. Baseline measured in the first cohort.</p>
-        <p class="p">Risk: over-confidence. Mitigation: confidence label, "what would change my mind", advisor escalation for anything individualized.</p>
+      <p class="note">Note: artifacts open beside the thread, like Claude's panel. The thread stays the spine.</p>
+    </div>
+    <div style="background: #fff; padding: 20px; display: flex; flex-direction: column; gap: 12px;">
+      <div class="lbl">Product notes · for the CEO · follows the thread</div>
+      <div class="row" style="flex-wrap: wrap; gap: 6px;"><span class="chip chip-on">This moment</span><span class="chip">Problem</span><span class="chip">Bet</span><span class="chip">AI-native</span><span class="chip">Metrics</span><span class="chip">Guardrails</span><span class="chip">System</span><span class="chip">90 days</span></div>
+      <div class="box" style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+        <div class="lbl">This moment · Decide</div>
+        <p class="p">Why a proposal in a thread, not a dashboard: people fail between knowing and doing. The proposal is framed in their numbers, shows its work, and can be argued with.</p>
+        <p class="p">Hypothesis: shown thinking plus a challengeable proposal doubles decision-to-action versus a tips feed. Baseline measured in the first cohort.</p>
+        <p class="p">Guardrail: every number came from a calculator call above it. Fund choice is escalated.</p>
       </div>
-      <div class="dash card">
-        <div class="lbl">Metrics</div>
-        <p class="sm"><b>North star:</b> outcome-improving actions completed per active customer per quarter.</p>
-        <p class="sm"><b>Guards:</b> 30-day reversal rate · advisor escalation rate · complaint rate · projected-outcome delta.</p>
-      </div>
-      <div class="dash card">
-        <div class="lbl">Architecture in one line</div>
-        <p class="sm">Context layer (accounts, plan docs, memory) → deterministic calculators → model explains and drafts → typed actions behind human confirm → audit log → evals on every prompt change.</p>
-      </div>
-      <p class="note">Note: the CEO reads the right column while clicking the left. The two stay in sync.</p>
+      <div class="dash" style="padding: 10px 12px;"><p class="sm"><b>North star:</b> outcome-improving actions completed per active customer per quarter. <b>Guards:</b> 30-day reversal rate, escalation rate, complaint rate.</p></div>
     </div>
   </div>
 </div>
