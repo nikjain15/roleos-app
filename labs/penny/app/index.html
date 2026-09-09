@@ -86,9 +86,11 @@
   .facts div:last-child { border-bottom: 0; }
   .facts .src { color: var(--muted); font-size: 12px; white-space: nowrap; }
   .means { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--ink-2); padding-left: 12px; border-left: 2px solid var(--line); }
-  .cta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding-top: 2px; }
+  .cta { display: flex; align-items: center; gap: 10px 14px; flex-wrap: wrap; padding-top: 2px; }
   .btn { min-height: 46px; padding: 0 20px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; }
   .btn.lime { background: var(--lime); color: var(--lime-ink); }
+  .pill { min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font-size: 14px; font-weight: 500; color: var(--ink); }
+  .pill:hover { border-color: var(--ink); }
   .cta.used { display: none; }
   .more { display: flex; flex-direction: column; gap: 8px; }
   .more > button { font-size: 13.5px; color: var(--accent); font-weight: 500; }
@@ -267,182 +269,135 @@ let sampleFn; (async () => { try { sampleFn = window.claude && window.claude.use
 const T = {
   say: html => ({ t: 'say', html }),
   big: (n, l) => ({ t: 'big', n, l }),
-  checks: rows => ({ t: 'checks', rows, open: false }),               // rows: [who, what, running?]
+  checks: (rows, open) => ({ t: 'checks', rows, open: !!open }),               // rows: [who, what, running?]
   facts: rows => ({ t: 'facts', rows }),
   means: lines => ({ t: 'means', lines }),
   cta: (primary, act, links) => ({ t: 'cta', primary, act, links: links || [] }), // links: [{label, act}]
-  more: (label, kind, body) => ({ t: 'more', label, kind, body, open: false }),   // kind: table | think
+  more: (label, kind, body, open) => ({ t: 'more', label, kind, body, open: !!open }),   // kind: table | think
+  choices: items => ({ t: 'choices', items }),
   perm: (id, title, rows, rule) => ({ t: 'perm', id, title, rows, rule, decided: null }),
   result: (text, undoId) => ({ t: 'result', text, undoId }),
   note: text => ({ t: 'note', text }),
 };
 const agent = (time, blocks, x) => ({ type: 'agent', time, blocks, ...(x || {}) });
 function push(turn) { S.thread.push(turn); save(); renderPhone(); scrollBottom(); }
-function busy(names, ms) { names.forEach(n => S.team[n] = 'working'); renderNotes(); setTimeout(() => { names.forEach(n => S.team[n] = n === 'Watcher' ? 'next check 7:40 tomorrow' : 'idle'); renderNotes(); }, ms || 1400); }
-function settle(turn, ms) { setTimeout(() => { turn.blocks.forEach(b => { if (b.t === 'checks') b.rows.forEach(r => r[2] = false); }); save(); renderPhone(false); }, ms || 1400); }
+function busy(names, ms) { if (!S) return; names.forEach(n => S.team[n] = 'working'); renderNotes(); setTimeout(() => { if (!S) return; names.forEach(n => S.team[n] = n === 'Watcher' ? 'next check 7:40 tomorrow' : 'idle'); renderNotes(); }, ms || 1400); }
+function settle(turn, ms) { setTimeout(() => { if (!S) return; turn.blocks.forEach(b => { if (b.t === 'checks') b.rows.forEach(r => r[2] = false); }); save(); renderPhone(false); }, ms || 1400); }
 
-/* ---- scenario: Jordan ---- */
+/* ---- scenarios: every tap returns one thing and offers the next step ---- */
+const nextAfter = { a1: ['Next: the card', 'perm_a2'], a2: ['Skip ahead to Sept 16', 'jump1'], a3: ['Skip ahead to 2029', 'jump3'], m1: ['Next: savings', 'perm_m2'], m2: ['Skip ahead to Oct 1', 'jump1'], m3: ['See what happened', 'openactivity'] };
 function startMoment() {
   const p = P(), d = D(); S.stage = 'moment';
-  if (p.id === 'jordan') {
-    push(agent('Today, 8:02', [
-      T.big(fmt(d.matchGain), 'a year of employer match you are not collecting'),
-      T.say('Your benefits window closes <b>Sept 17</b>. Raising your 401(k) from 3% to 6% claims it. I can show you the trade-off in your own numbers.'),
-      T.checks([['Watcher', 'benefits window opened Sept 8, closes Sept 17'], ['Reader', 'plan matches 100% up to 6% · p.12'], ['Reader', 'you contribute 3% · Aug paystub'], ['Guardian', 'a real deadline, first message this month']]),
-      T.cta('Show me', 'layout', [{ label: 'Not now', act: 'notnow' }]),
-    ]));
-  } else {
-    push(agent('Today, 8:02', [
-      T.big(fmt(d.matchGain), 'a year your employer will add to your 401(k), if you enroll'),
-      T.say('You are eligible and not enrolled. No forms: send me your paystub and the benefits PDF and I will show you the whole picture.'),
-      T.checks([['Reader', 'eligible since July 2025, not enrolled'], ['Reader', 'plan matches 100% up to 4% · p.9'], ['Guardian', 'first message this month']]),
-      T.cta('Read my documents', 'attach', [{ label: 'Not now', act: 'notnow' }]),
-    ]));
-  }
+  if (p.id === 'jordan') push(agent('Today, 8:02', [T.big(fmt(d.matchGain), 'a year of employer match you are not collecting'), T.say('Your benefits window closes <b>Sept 17</b>. Raising your 401(k) from 3% to 6% claims it.'), T.cta('Show me what to do', 'layout', [{ label: 'Not now', act: 'notnow' }])]));
+  else push(agent('Today, 8:02', [T.big(fmt(d.matchGain), 'a year your employer will add to your 401(k), if you enroll'), T.say('You are eligible and not enrolled. No forms. Send me your paystub and the benefits PDF and I will read them.'), T.cta('Read my documents', 'attach', [{ label: 'Not now', act: 'notnow' }])]));
 }
+function questions() {
+  const p = P();
+  push(agent('now', [T.choices([{ label: 'Why this order?', act: 'why' }, { label: 'Compare the options', act: 'compare' }, { label: 'Who checked this?', act: 'who' }, ...(p.id === 'maya' ? [{ label: 'What if I need the money?', act: 'worried' }] : []), { label: 'Something else', act: 'else' }])]));
+}
+const again = () => T.cta('Do this', 'actions', [{ label: 'Another question', act: 'questions' }]);
 function chip(act, turnIdx, label) {
-  const turn = S.thread[turnIdx]; if (turn) turn.blocks.forEach(b => { if (b.t === 'cta') b.used = true; });
-  if (label) S.thread.push({ type: 'user', text: label });
-  const p = P(), d = D();
+  const turn = S.thread[turnIdx]; if (turn) turn.blocks.forEach(b => { if (b.t === 'cta' || b.t === 'choices') b.used = true; });
+  if (label && act !== 'else') S.thread.push({ type: 'user', text: label });
+  const p = P(), d = D(), j = p.id === 'jordan';
   switch (act) {
-    case 'notnow': push(agent('now', [T.say(p.id === 'jordan' ? 'Okay. I will bring it back on Sept 15, two days before the window closes, and then leave it alone.' : 'Okay. I will check once more on the next pay-day, then leave it alone.'), T.checks([['Guardian', 'one ignore · quiet until then']]), T.cta(p.id === 'jordan' ? 'Actually, show me' : 'Actually, read them', p.id === 'jordan' ? 'layout' : 'attach')])); break;
-    case 'why': push(agent('now', [T.say('Three things lined up: a real deadline, money you are entitled to, and a balance moving the wrong way. One message at a time, only for real deadlines, and I back off after two ignores.')])); break;
-    case 'layout': jordanDecide(); break;
-    case 'changed': S.memory = S.memory.map(m => m[0] === 'Home fund is off-limits' ? ['Home fund may be used if needed', 'you · Sept 2026'] : m); push(agent('now', [T.say('Noted. Nothing in this plan needs it, so the recommendation stands.'), T.checks([['Penny', 'remembered: home fund may be used if needed']])])); break;
-    case 'actions': p.id === 'jordan' ? jordanActions() : mayaActions(); break;
-    case 'else': focusComposer(p.id === 'jordan' ? 'Tell me what you would rather do' : 'Tell me what worries you'); break;
-    case 'advisor': push(agent('now', [T.perm('adv', 'Book a licensed advisor', [['When', 'Thursday, 4:30pm'], ['They get', 'your plan, your numbers, this record'], ['Cost', 'included in your plan']], null)])); break;
-    case 'jump1': p.id === 'jordan' ? jordanAway1() : mayaAway1(); break;
-    case 'jump2': p.id === 'jordan' ? jordanAway2() : mayaAway2(); break;
-    case 'jump3': jordanAway3(); break;
+    case 'notnow': push(agent('now', [T.say(j ? 'Okay. I will bring it back on Sept 15, two days before the window closes.' : 'Okay. I will check once more on the next pay-day.'), T.cta(j ? 'Actually, show me' : 'Actually, read them', j ? 'layout' : 'attach')])); break;
+    case 'layout': S.stage = 'decide'; busy(['Planner', 'Guardian'], 1200); push(agent('8:04', [T.say('<b>Raise your 401(k) to 6%, then send 300 more a month to the card.</b>'), T.means([`Take-home down ${fmt(d.takeHome)} from Sept 15`, `Card gone in ${d.fast.months} months, not ${d.slow.months}`, 'Home in about 5 years instead of 4']), T.cta('Do this', 'actions', [{ label: 'Questions?', act: 'questions' }])])); break;
+    case 'questions': questions(); break;
+    case 'why': push(agent('now', [T.say(j ? 'Guaranteed returns first. The match pays 100% the day it lands. The card costs 24.99% a year. Savings earn 4.2%. So match, then card, then house.' : 'The match is a 100% return the day it lands, so it comes first. Your loans at 5.5% earn less than the fund and the match, so they stay at minimum.'), again()])); break;
+    case 'compare': push(agent('now', [T.more('', 'table', j ? { head: ['Option', 'Return', 'Worth'], rows: [['<b>A</b> 401(k) to 6%', '100%', `${fmt(d.matchGain)} a year from your employer`], ['<b>B</b> 300 more to the card', '24.99%', `${fmtK(d.saved)} interest avoided`], ['<b>C</b> All 650 to the house', '4.2%', `about ${fmtK(d.houseAll)} by year 4, short of 60k`]] } : { head: ['Option', 'Fund done', 'Cost'], rows: [['<b>A</b> Enroll now, save 230', `${d.fundMonths} months`, `${fmt(d.takeHome)} a month of take-home`], ['<b>B</b> Fund first, enroll later', `${d.fundFast} months`, `${fmtK(d.lost3y)} of match gone over three years`]] }, true), again()])); break;
+    case 'who': push(agent('now', [T.checks(j ? [['Reader', 'plan matches 100% up to 6% · p.12'], ['Reader', 'you contribute 3% · Aug paystub'], ['Planner', `match adds ${fmt(d.matchGain)} a year`], ['Planner', `510 a month clears the card in ${d.fast.months} months`], ['Guardian', 'your 1,000 buffer holds · home fund untouched, as you asked']] : [['Reader', 'match 100% up to 4% · p.9'], ['Planner', `4% costs ${fmt(d.takeHome)} a month · employer adds ${fmt(d.matchGain)} a year`], ['Planner', `230 a month reaches 9,000 in ${d.fundMonths} months`], ['Guardian', 'your buffer holds · the fund default is the plan\'s choice, not ours']], true), again()])); break;
+    case 'worried': push(agent('now', [T.say(`Your 1,200 stays where it is. The 230 a month goes to savings you can pull from the same day. Only the ${fmt(d.takeHome)} a month goes somewhere slow, and the plan lets you borrow against it (p.22).`), again()])); break;
+    case 'else': focusComposer(j ? 'Tell me what you would rather do' : 'Tell me what worries you'); break;
     case 'attach': mayaAttach(); break;
-    case 'buffer': S.memory[0] = [`Keep ${label} in checking`, 'you · Sept 2026']; mayaPlan(label); break;
-    case 'worried': mayaWorried(); break;
-    case 'v4': S.plan.version = 4; S.plan.homeMonthly = 1150; S.plan.cardPayment = 210; push(agent('now', [T.say('Plan v4 is built around 2029. The interest cost is written into the plan so future-you knows it was a choice.'), T.checks([['Planner', 'rebuilt plan · house by 2029, card at minimum']])])); break;
-    case 'keep': push(agent('now', [T.say('Keeping v3. The 2029 numbers will still be here if it comes back up.')])); break;
+    case 'looksright': push(agent('now', [T.say('One thing nobody can read: how much should always stay in checking?'), T.choices([{ label: '500', act: 'buffer' }, { label: '1,000', act: 'buffer' }, { label: '2,000', act: 'buffer' }])])); break;
+    case 'wrong': focusComposer('Tell me which fact is wrong'); break;
+    case 'buffer': S.memory[0] = [`Keep ${label} in checking`, 'you · Sept 2026']; S.plan.version = 1; push(agent('now', [T.big(d.runway.toFixed(1), 'months your savings would cover if income stopped'), T.say('That is the thing to fix, and it is fixable.'), T.cta('What should I do?', 'mayaplan')])); break;
+    case 'mayaplan': S.stage = 'decide'; busy(['Planner', 'Guardian'], 1200); push(agent('8:05', [T.say('<b>Enroll at 4% now, and move 230 a month into savings.</b> Your buffer never moves.'), T.means([`Take-home down about ${fmt(d.takeHome)} a month`, `Employer adds ${fmt(d.matchGain)} a year`, `Three-month fund in ${d.fundMonths} months`]), T.cta('Do this', 'actions', [{ label: 'Questions?', act: 'questions' }])])); break;
+    case 'actions': j ? jordanActions() : mayaActions(); break;
+    case 'perm_a2': push(agent('now', [T.perm('a2', 'Card autopay from 210 to 510 a month', [['Starts', 'Oct 1, from checking'], ['Pause', 'any time'], ['Card gone', `in ${d.fast.months} months`]], 'Doer may adjust autopay within this plan without asking')])); break;
+    case 'perm_m2': push(agent('now', [T.perm('m2', 'Open a 4.2% savings account, move 230 a month into it', [['First transfer', 'Oct 1'], ['Access', 'same day, any time'], ['Fund done', `in ${d.fundMonths} months`]], 'Doer may adjust autosave within this plan without asking')])); break;
+    case 'advisor': push(agent('now', [T.perm('adv', 'Book a licensed advisor', [['When', 'Thursday, 4:30pm'], ['They get', 'your plan, your numbers, this record'], ['Cost', 'included in your plan']], null)])); break;
+    case 'notyet': push(agent('now', [T.say('Okay. The brief stays in Activity. I will not ask again until the fund is within six months of the target.')])); break;
+    case 'jump1': j ? jordanAway1() : mayaAway1(); break;
+    case 'jump2': j ? jordanAway2() : mayaAway2(); break;
+    case 'jump3': j ? jordanAway3() : mayaAway3(); break;
+    case 'v4': S.plan.version = 4; S.plan.homeMonthly = 1150; S.plan.cardPayment = 210; push(agent('now', [T.say('Plan v4 is built around 2029. The interest cost is written into the plan so future-you knows it was a choice.'), T.cta('See the plan', 'openplan')])); break;
+    case 'keep': push(agent('now', [T.say('Keeping v3.')])); break;
     case 'openplan': switchTab('plan'); break;
     case 'openactivity': switchTab('activity'); break;
   }
   save(); renderPhone();
 }
-function jordanDecide() {
-  const p = P(), d = D(); S.stage = 'decide'; busy(['Penny', 'Planner', 'Guardian'], 1800);
-  const turn = agent('8:04', [
-    T.say(`<b>Raise your 401(k) to 6%, then send 300 more a month to the card.</b> The house waits 16 months and still lands.`),
-    T.means([`Take-home down ${fmt(d.takeHome)} from Sept 15`, `Card gone in ${d.fast.months} months, not ${d.slow.months}`, `Home in about 5 years instead of 4`]),
-    T.checks([['Planner', `match adds ${fmt(d.matchGain)} a year · about ${fmtK(d.match10y)} in 10 years`, true], ['Planner', `510 a month clears the card in ${d.fast.months} months`, true], ['Guardian', `your 1,000 buffer holds · home fund untouched, as you asked`, true], ['Penny', 'assumes the home fund stays off-limits · say if that changed']]),
-    T.cta('Do this', 'actions', [{ label: 'Something else', act: 'else' }]),
-    T.more('Compare the three options', 'table', { head: ['Option', 'Return', 'Worth'], rows: [
-      ['<b>A</b> 401(k) to 6%', '100%, day one', `${fmt(d.matchGain)} a year from your employer`],
-      ['<b>B</b> 300 more to the card', '24.99%', `${fmtK(d.saved)} interest avoided`],
-      ['<b>C</b> All 650 to the house', '4.2%', `about ${fmtK(d.houseAll)} by year 4, still short of 60k`] ] }),
-    T.more('How I got here', 'think', ['Three uses of the same 650. Your constraint: the home fund is not touched.', 'Guaranteed returns first: 100% on the match, then 24.99% on the card, then 4.2% savings.', 'Checked the buffer holds. Checked nothing here is fund selection; that stays with a licensed advisor.', 'What would change my mind: a job change in 6 months, or a balance transfer under 5%.']),
-  ]);
-  push(turn); settle(turn, 1600);
-}
 function jordanActions() {
   const d = D(); S.stage = 'act';
-  S.actions.push({ id: 'a1', title: 'Raise 401(k) to 6%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'a2', title: 'Card autopay 210 to 510', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'a3', title: 'Then 510 a month to the home fund', status: 'waiting', when: 'about early 2028', log: ['Queued by Penny · will ask again'] });
-  push(agent('8:05', [T.say('Two things to allow, one at a time. Nothing moves until you say so.'), T.perm('a1', 'Raise your 401(k) to 6%', [['Effective', 'Sept 15, next payroll'], ['Take-home', `about ${fmt(d.takeHome)} a month less`], ['Undo', 'any payroll']], 'Doer may raise your 401(k) up to 1% a year without asking')]));
-}
-function afterPerm(id) {
-  const p = P(), d = D();
-  if (id === 'a1') push(agent('8:06', [T.perm('a2', 'Card autopay from 210 to 510 a month', [['Starts', 'Oct 1, from checking'], ['Pause', 'any time'], ['Card gone', `in ${d.fast.months} months`]], 'Doer may adjust autopay within this plan without asking')]));
-  else if (id === 'a2') push(agent('8:07', [T.say('That is everything for today. On Sept 16 I will check your paystub and tell you in one line whether it landed.'), T.note('The third step, moving the 510 to the home fund when the card hits zero, waits about 16 months. I will ask again then.'), T.cta('Skip ahead to Sept 16', 'jump1', [{ label: 'See the plan', act: 'openplan' }])], { skipKind: true }));
-  else if (id === 'a3') { S.plan.redirect = true; push(agent('Jan 9, 2028', [T.say('Done. From Feb 1 the 510 goes to the home fund. You reach 60k around mid 2031.'), T.cta('Skip ahead to 2029', 'jump3')])); }
-  else if (id === 'adv') push(agent('now', [T.result('Booked for Thursday, 4:30pm. The advisor has your plan and this record.')]));
-  else if (id === 'm1') push(agent('8:06', [T.perm('m2', 'Open a 4.2% savings account, move 230 a month into it', [['First transfer', 'Oct 1'], ['Access', 'same-day, any time'], ['Fund done', `in ${d.fundMonths} months`]], 'Doer may adjust autosave within this plan without asking')]));
-  else if (id === 'm2') push(agent('8:07', [T.say('That is everything for today. On Oct 1 I will check your paystub and tell you in one line whether the enrollment landed.'), T.cta('Skip ahead to month 8', 'jump1', [{ label: 'See the plan', act: 'openplan' }])]));
-  else if (id === 'm3') { S.plan.autosave = 530; push(agent('June 2027', [T.say('Done. 530 a month from July. The fund lands next spring instead of the year after. The rest of the raise is yours; I will not mention it again.'), T.cta('See what happened', 'openactivity')])); }
-}
-function jordanAway1() {
-  S.stage = 'away'; S.date = 'Dec 4, 2026';
-  const a = S.actions.find(x => x.id === 'a1'); if (a && a.status === 'applied') a.log.push('Verified by Watcher, Sept 16');
-  S.thread.push({ type: 'divider', text: 'While you were away' });
-  push(agent('Sept 16', [T.say('It landed. You are at 6% and your employer added 320. Take-home was 238 lower, close to the 240 I estimated.'), T.checks([['Watcher', 'read the Sept 15 paystub']])]));
-  setTimeout(() => { S.live.card = 6410; push(agent('Oct 2', [T.say('First 510 cleared. Card at 6,410.'), T.checks([['Watcher', 'read the card statement']])])); }, 900);
-  setTimeout(() => { S.thread.push({ type: 'divider', text: 'October to December: nothing worth a message' }); push(agent('Dec 4', [T.cta('Skip ahead to Jan 2028', 'jump2', [{ label: 'See what happened', act: 'openactivity' }])])); }, 1800);
-}
-function jordanAway2() {
-  S.date = 'Jan 9, 2028'; S.live.card = 0; S.live.cash = 13800; S.live.homeFund = 15800;
-  const a = S.actions.find(x => x.id === 'a2'); if (a) { a.status = 'applied'; a.log.push('Card at zero, Jan 2028 · verified by Watcher'); }
-  S.thread.push({ type: 'divider', text: 'Jan 2028' });
-  push(agent('Jan 9', [T.say('The card is at zero. Sixteen months, as planned. You said the 510 should go to the home fund next. Still what you want?'), T.checks([['Watcher', 'card statement: balance 0']]), T.perm('a3', 'Move the 510 autopay to your home fund', [['From', 'Feb 1, same account'], ['Pause', 'any time'], ['60k reached', 'around mid 2031']], null)]));
-}
-function jordanAway3() {
-  S.date = 'Mar 2029'; S.live.homeFund = 26900;
-  S.actions.push({ id: 'adv', title: 'Advisor brief prepared', status: 'scheduled', when: 'Mar 2029', log: ['Prepared by Advisor desk'] });
-  push(agent('Mar 2029', [T.say('You are about 14 months from 60k. Buying a home is where I stop and a licensed advisor starts. There is a brief ready so the call starts at minute one.'), T.checks([['Advisor desk', 'brief: your plan, your numbers, this record']]), T.cta('Book an advisor', 'advisor', [{ label: 'Not yet', act: 'notyet' }])]));
-}
-
-/* ---- scenario: Maya ---- */
-function mayaAttach() {
-  S.stage = 'understand'; S.thread.push({ type: 'user', text: 'Summary_Plan_Description.pdf · paystub_Aug31.pdf', att: true });
-  busy(['Reader', 'Analyst', 'Guardian'], 2200);
-  const turn = agent('reading', [
-    T.say('Here is what I found. Tap anything that is wrong.'),
-    T.facts([['Match: 100% of what you put in, up to 4%', 'p.9'], ['Loans and hardship withdrawals allowed', 'p.22'], ['You contribute 0%', 'paystub'], ['Essentials about 3,000 a month', '90 days']]),
-    T.checks([['Reader', '31 pages read', true], ['Analyst', 'paystub cross-checked', true], ['Guardian', 'facts checked before use', true]]),
-    T.say('One thing nobody can read: how much should always stay in checking?'),
-    T.cta('1,000', 'buffer', [{ label: '500', act: 'buffer' }, { label: '2,000', act: 'buffer' }]),
-  ]);
-  push(turn); settle(turn, 2000);
-}
-function mayaPlan(buffer) {
-  const p = P(), d = D(); S.stage = 'decide'; S.plan.version = 1; busy(['Planner', 'Guardian'], 1600);
-  const turn = agent('8:05', [
-    T.big(d.runway.toFixed(1), 'months your savings would cover if income stopped'),
-    T.say('That is the thing to fix, and it is fixable. <b>Enroll at 4% now, and move 230 a month into savings.</b> Your buffer never moves.'),
-    T.means([`Take-home down about ${fmt(d.takeHome)} a month`, `Employer adds ${fmt(d.matchGain)} a year`, `Three-month fund in ${d.fundMonths} months`]),
-    T.checks([['Planner', `4% costs ${fmt(d.takeHome)} a month of take-home · employer adds ${fmt(d.matchGain)} a year`, true], ['Planner', `230 a month at 4.2% reaches 9,000 in ${d.fundMonths} months`, true], ['Guardian', `${buffer} buffer holds · the fund's default investment is the plan's choice, not ours`, true], ['Penny', `remembered: keep ${buffer} in checking`]]),
-    T.cta('Do this', 'actions', [{ label: 'I am worried about locking money away', act: 'worried' }]),
-    T.more('Why not the fund first?', 'table', { head: ['Option', 'Fund done', 'Cost'], rows: [['<b>A</b> Enroll now and save 230', `${d.fundMonths} months`, `${fmt(d.takeHome)} a month of take-home`], ['<b>B</b> Fund first, enroll later', `${d.fundFast} months`, `${fmtK(d.lost3y)} of match gone if later is three years. It usually is.`]] }),
-    T.more('How I got here', 'think', ['Her fear is liquidity. The buffer stays in checking either way, and the 230 goes to a savings account she can pull from the same day.', 'Only the 4% goes somewhere slow, and even that can be borrowed against under the plan (p.22).', 'Match first: it is a 100% return on day one. Loans at 5.5% stay at minimum until the fund is done.']),
-  ]);
-  push(turn); settle(turn, 1500);
-}
-function mayaWorried() {
-  const d = D();
-  push(agent('8:07', [T.say(`Fair. Your 1,200 stays where it is. The 230 a month goes to savings you can pull from the same day. Only the ${fmt(d.takeHome)} a month goes somewhere slow, and the plan lets you borrow against it.`), T.say('If it feels better, start at 2% and step up in three months. That costs about 120 a month of match while you wait.'), T.checks([['Reader', 'loans up to 50% of balance, hardship withdrawals · p.22']]), T.cta('Okay, 4% now', 'actions', [{ label: 'Something else', act: 'else' }])]));
+  if (!S.actions.length) S.actions.push({ id: 'a1', title: 'Raise 401(k) to 6%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'a2', title: 'Card autopay 210 to 510', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'a3', title: 'Then 510 a month to the home fund', status: 'waiting', when: 'about early 2028', log: ['Queued by Penny · will ask again'] });
+  push(agent('8:05', [T.perm('a1', 'Raise your 401(k) to 6%', [['Effective', 'Sept 15, next payroll'], ['Take-home', `about ${fmt(d.takeHome)} a month less`], ['Undo', 'any payroll']], 'Doer may raise your 401(k) up to 1% a year without asking')]));
 }
 function mayaActions() {
   const d = D(); S.stage = 'act';
-  S.actions.push({ id: 'm1', title: 'Enroll in the 401(k) at 4%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'm2', title: 'Auto-save 230 a month at 4.2%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] });
-  push(agent('8:08', [T.say('Two things to allow, one at a time. Nothing moves until you say so.'), T.perm('m1', 'Enroll you in the 401(k) at 4%', [['Effective', 'Sept 30, next payroll'], ['Take-home', `about ${fmt(d.takeHome)} a month less`], ['Undo', 'any payroll']], 'Doer may raise your 401(k) up to 1% a year without asking')]));
+  if (!S.actions.length) S.actions.push({ id: 'm1', title: 'Enroll in the 401(k) at 4%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'm2', title: 'Auto-save 230 a month at 4.2%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] });
+  push(agent('8:08', [T.perm('m1', 'Enroll you in the 401(k) at 4%', [['Effective', 'Sept 30, next payroll'], ['Take-home', `about ${fmt(d.takeHome)} a month less`], ['Undo', 'any payroll']], 'Doer may raise your 401(k) up to 1% a year without asking')]));
+}
+function mayaAttach() {
+  S.stage = 'understand'; S.thread.push({ type: 'user', text: 'Summary_Plan_Description.pdf · paystub_Aug31.pdf', att: true }); busy(['Reader', 'Analyst'], 1800);
+  push(agent('reading', [T.say('Here is what I found.'), T.facts([['Match: 100% of what you put in, up to 4%', 'p.9'], ['Loans and hardship withdrawals allowed', 'p.22'], ['You contribute 0%', 'paystub'], ['Essentials about 3,000 a month', '90 days']]), T.cta('Looks right', 'looksright', [{ label: 'Something is wrong', act: 'wrong' }])]));
+}
+function jordanAway1() {
+  S.stage = 'away'; S.date = 'Sept 16, 2026'; const a = S.actions.find(x => x.id === 'a1'); if (a && a.status === 'applied') a.log.push('Verified by Watcher, Sept 16');
+  S.thread.push({ type: 'divider', text: 'While you were away' });
+  push(agent('Sept 16', [T.say('It landed. You are at 6% and your employer added 320. Take-home was 238 lower, close to the 240 I estimated.'), T.cta('Skip ahead to Jan 2028', 'jump2', [{ label: 'See what happened', act: 'openactivity' }])]));
+}
+function jordanAway2() {
+  S.date = 'Jan 9, 2028'; S.live.card = 0; S.live.cash = 13800; S.live.homeFund = 15800; const a = S.actions.find(x => x.id === 'a2'); if (a) { a.status = 'applied'; a.log.push('Card at zero, Jan 2028 · verified by Watcher'); }
+  S.thread.push({ type: 'divider', text: 'Sixteen payments. Nothing worth a message.' });
+  push(agent('Jan 9, 2028', [T.say('The card is at zero. You said the 510 should go to the home fund next. Still what you want?'), T.perm('a3', 'Move the 510 autopay to your home fund', [['From', 'Feb 1, same account'], ['Pause', 'any time'], ['60k reached', 'around mid 2031']], null)]));
+}
+function jordanAway3() {
+  S.date = 'Mar 2029'; S.live.homeFund = 26900; S.actions.push({ id: 'adv', title: 'Advisor brief prepared', status: 'scheduled', when: 'Mar 2029', log: ['Prepared by Advisor desk'] });
+  S.thread.push({ type: 'divider', text: 'Fourteen months. Nothing worth a message.' });
+  push(agent('Mar 2029', [T.say('You are about 14 months from 60k. Buying a home is where I stop and a licensed advisor starts. A brief is ready so the call starts at minute one.'), T.cta('Book an advisor', 'advisor', [{ label: 'Not yet', act: 'notyet' }])]));
 }
 function mayaAway1() {
-  S.stage = 'away'; S.date = 'May 2027'; S.live.cash = 3040; S.live.k401 = 3900; S.live.contribPct = 4;
-  const a = S.actions.find(x => x.id === 'm1'); if (a && a.status === 'applied') a.log.push('Verified by Watcher, Oct 1');
+  S.stage = 'away'; S.date = 'Oct 1, 2026'; S.live.contribPct = 4; const a = S.actions.find(x => x.id === 'm1'); if (a && a.status === 'applied') a.log.push('Verified by Watcher, Oct 1');
   S.thread.push({ type: 'divider', text: 'While you were away' });
-  push(agent('Oct 1, 2026', [T.say('It landed. You are in at 4% and your employer added 240. Take-home was 188 lower, close to the 190 I estimated.'), T.checks([['Watcher', 'read the Sept 30 paystub']])]));
-  setTimeout(() => { S.thread.push({ type: 'divider', text: 'November to April: nothing worth a message' }); push(agent('May 3, 2027', [T.big('1', 'month of essentials in your fund, up from 12 days'), T.say('Nothing to do. I thought you would want to know.'), T.cta('Skip ahead to June', 'jump2', [{ label: 'See what happened', act: 'openactivity' }])])); }, 1400);
+  push(agent('Oct 1', [T.say('It landed. You are in at 4% and your employer added 240. Take-home was 188 lower, close to the 190 I estimated.'), T.cta('Skip ahead to May', 'jump2', [{ label: 'See what happened', act: 'openactivity' }])]));
 }
 function mayaAway2() {
-  S.date = 'June 2027';
-  S.actions.push({ id: 'm3', title: 'Raise autosave 230 to 530', status: 'proposed', when: 'June 2027', log: ['Raise noticed by Watcher', 'Proposed by Penny'] });
-  push(agent('June 2', [T.say('You got a raise. Before it disappears into everyday spending, one idea: send 60% of it to the fund and keep the rest.'), T.checks([['Watcher', 'gross up 500 a month on the June paystub'], ['Planner', '530 a month finishes the fund in about 11 months']]), T.perm('m3', 'Raise your autosave from 230 to 530', [['From', 'July 1'], ['Fund done', 'about 11 months'], ['Pause', 'any time']], null)]));
+  S.date = 'May 3, 2027'; S.live.cash = 3040; S.live.k401 = 3900;
+  S.thread.push({ type: 'divider', text: 'Seven months. Nothing worth a message.' });
+  push(agent('May 3, 2027', [T.big('1', 'month of essentials in your fund, up from 12 days'), T.say('Nothing to do. I thought you would want to know.'), T.cta('Skip ahead to June', 'jump3')]));
+}
+function mayaAway3() {
+  S.date = 'June 2027'; S.actions.push({ id: 'm3', title: 'Raise autosave 230 to 530', status: 'proposed', when: 'June 2027', log: ['Raise noticed by Watcher', 'Proposed by Penny'] });
+  push(agent('June 2', [T.say('You got a raise. Before it disappears into everyday spending: send 60% of it to the fund and keep the rest?'), T.perm('m3', 'Raise your autosave from 230 to 530', [['From', 'July 1'], ['Fund done', 'about 11 months'], ['Pause', 'any time']], null)]));
+}
+function afterPerm(id) {
+  if (id === 'a3') { S.plan.redirect = true; }
+  if (id === 'm3') { S.plan.autosave = 530; }
 }
 
 /* ---- permissions ---- */
 function decide(id, choice, turnIdx) {
   const turn = S.thread[turnIdx]; const perm = turn.blocks.find(b => b.t === 'perm' && b.id === id); if (!perm || perm.decided) return;
   perm.decided = choice; const act = S.actions.find(a => a.id === id);
-  if (choice === 'Not now') { if (act) act.log.push(`Not now · ${S.date}`); push(agent('now', [T.say('Okay. It stays in Activity as a proposal, and I will not nag you about it.'), T.cta('Actually, allow it', id === 'a1' || id === 'm1' ? 'actions' : 'openactivity')])); return; }
+  if (choice === 'Not now') { if (act) act.log.push(`Not now · ${S.date}`); push(agent('now', [T.say('Okay. It stays in Activity as a proposal.'), T.cta('Actually, allow it', id === 'a1' || id === 'm1' ? 'actions' : id === 'a2' ? 'perm_a2' : id === 'm2' ? 'perm_m2' : 'openactivity')])); return; }
   if (choice === 'Always') S.rules.push(perm.rule);
-  busy(['Doer'], 1200);
+  busy(['Doer'], 1000);
   const conf = { a1: 'plan provider 4F7K2', m1: 'plan provider 9Q2LM', adv: 'booked' }[id] || 'bank confirmation';
   if (act) { act.status = id === 'a2' || id === 'm2' || id === 'm3' ? 'scheduled' : 'applied'; act.log.push(`Allowed by you · ${S.date}`, `Done by Doer · ${conf}`); }
   if (id === 'a1') { S.plan.contribPct = 6; S.live.contribPct = 6; } if (id === 'a2') S.plan.cardPayment = 510; if (id === 'a3') S.plan.redirect = true;
   if (id === 'm1') { S.plan.contribPct = 4; S.live.contribPct = 4; } if (id === 'm2') { S.plan.autosave = 230; S.plan.hysa = true; }
-  const text = { a1: 'Done. Effective Sept 15.', a2: 'Scheduled. First payment Oct 1.', a3: 'Done. From Feb 1.', m1: 'Done. Effective Sept 30.', m2: 'Scheduled. First transfer Oct 1.', m3: 'Done. From July 1.' }[id];
-  if (text) push(agent('now', [T.result(text, id)])); else { save(); renderPhone(); }
-  setTimeout(() => afterPerm(id), 700);
+  const text = { a1: 'Done. Effective Sept 15.', a2: 'Scheduled. First payment Oct 1.', a3: 'Done. From Feb 1, the 510 goes to the home fund.', m1: 'Done. Effective Sept 30.', m2: 'Scheduled. First transfer Oct 1.', m3: 'Done. From July 1.', adv: 'Booked for Thursday, 4:30pm. The advisor has your plan and this record.' }[id];
+  const next = nextAfter[id];
+  push(agent('now', [T.result(text, id), ...(next ? [T.cta(next[0], next[1])] : [])]));
+  afterPerm(id);
 }
 function undo(id) {
   const act = S.actions.find(a => a.id === id); if (!act || act.status === 'undone') return;
   act.status = 'undone'; act.log.push(`Undone by you · ${S.date}`, 'Reverted by Doer');
   if (id === 'a1') { S.plan.contribPct = 3; S.live.contribPct = 3; } if (id === 'a2') S.plan.cardPayment = 210; if (id === 'm1') { S.plan.contribPct = 0; S.live.contribPct = 0; } if (id === 'm2') { S.plan.autosave = 0; S.plan.hysa = false; }
-  push(agent('now', [T.say('Undone. Nothing else changed. The proposal stays in Activity if you want it back.')]));
+  push(agent('now', [T.say('Undone. Nothing else changed.')]));
 }
 
 /* ---- free text ---- */
@@ -525,6 +480,7 @@ function renderPhone(scroll) {
 function renderThread() {
   return S.thread.map((turn, i) => {
     if (turn.type === 'divider') return `<div class="divider">${esc(turn.text)}</div>`;
+    if (turn.type === 'agent' && turn.blocks.length && turn.blocks.every(b => b.t === 'choices' && b.used)) return '';
     if (turn.type === 'user') return `<div class="user in">${turn.att ? '<span class="xs">Attached · </span>' : ''}${esc(turn.text)}</div>`;
     return `<div class="turn in" data-turn="${i}"><div class="t">Penny · ${esc(turn.time)}${turn.live ? '<span class="live">live</span>' : turn.demo ? '<span class="demo">scripted</span>' : ''}</div>${turn.blocks.map((b, j) => block(b, i, j)).join('')}</div>`;
   }).join('');
@@ -537,10 +493,11 @@ function block(b, i, j) {
     case 'facts': return `<div class="facts">${b.rows.map(r => `<div><span>${esc(r[0])}</span><span class="src">${esc(r[1])}</span></div>`).join('')}</div>`;
     case 'checks': { const who = [...new Set(b.rows.map(r => r[0]))].join(', '); const running = b.rows.some(r => r[2]); return `<div class="checks ${b.open ? 'open' : ''}" data-checks="${i}:${j}"><button>${I.chev}<span>${running ? 'Checking' : 'Checked by'} ${esc(who)}</span></button><div class="list">${b.rows.map(r => `<div class="row ${r[2] ? 'running' : ''}"><span class="who">${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('')}</div></div>`; }
     case 'cta': return `<div class="cta ${b.used ? 'used' : ''}"><button class="btn ${b.act.startsWith('jump') ? 'lime' : ''}" data-act="${b.act}" data-turn="${i}" data-label="${esc(b.primary)}" ${b.used ? 'disabled' : ''}>${esc(b.primary)}</button>${b.links.map(l => `<button class="link" data-act="${l.act}" data-turn="${i}" data-label="${esc(l.label)}">${esc(l.label)}</button>`).join('')}</div>`;
-    case 'more': { const body = b.kind === 'table' ? `<table class="tbl"><tr>${b.body.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr>${b.body.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table>` : `<div class="think">${b.body.map(l => `<span>${esc(l)}</span>`).join('')}</div>`; return `<div class="more ${b.open ? 'open' : ''}" data-more="${i}:${j}"><button>${b.open ? 'Hide' : esc(b.label)}</button><div class="body">${body}</div></div>`; }
+    case 'more': { const body = b.kind === 'table' ? `<table class="tbl"><tr>${b.body.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr>${b.body.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table>` : `<div class="think">${b.body.map(l => `<span>${esc(l)}</span>`).join('')}</div>`; return b.label ? `<div class="more ${b.open ? 'open' : ''}" data-more="${i}:${j}"><button>${b.open ? 'Hide' : esc(b.label)}</button><div class="body">${body}</div></div>` : `<div class="more open"><div class="body">${body}</div></div>`; }
     case 'perm': return `<div class="perm ${b.decided ? 'done' : ''}"><h3>${esc(b.title)}</h3><div class="rows">${b.rows.map(r => `<div><span>${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('')}</div>${b.decided ? `<div class="decided">${I.check}<span>${b.decided === 'Not now' ? 'Left as a proposal' : b.decided === 'Always' ? 'Allowed, with a standing rule' : 'Allowed'}</span></div>` : `<div class="acts"><button class="btn" data-perm="${b.id}" data-choice="Allow" data-turn="${i}">Allow</button><button class="link" data-perm="${b.id}" data-choice="Not now" data-turn="${i}">Not now</button></div>${b.rule ? `<div class="rule">Or <button data-perm="${b.id}" data-choice="Always" data-turn="${i}">set a standing rule</button>: ${esc(b.rule)}.</div>` : ''}`}</div>`;
     case 'result': return `<div class="result">${I.check}<span>${esc(b.text)}</span>${b.undoId && b.undoId !== 'adv' ? `<button class="link u" data-undo="${b.undoId}">Undo</button>` : ''}</div>`;
     case 'note': return `<p class="note">${esc(b.text)}</p>`;
+    case 'choices': return b.used ? '' : `<div class="cta">${b.items.map(c => `<button class="pill" data-act="${c.act}" data-turn="${i}" data-label="${esc(c.label)}">${esc(c.label)}</button>`).join('')}</div>`;
     default: return '';
   }
 }
@@ -614,7 +571,7 @@ const NOTES = {
     const m = {
       moment: ['One number, one sentence, one button', 'There is no home screen. The first thing the customer sees is the one figure that matters to them today and the deadline attached to it. Who checked what sits under it, folded, for the people who want to look.', ['Why: people fail between knowing and doing, not for lack of data.', 'Guard: only real deadlines, one message at a time, back off after two ignores.']],
       understand: ['Documents, not forms', 'Reader does the work and cites the page. The customer corrects, they do not type. One question, because it is the one thing nobody can read.', ['Metric: documents linked per user; corrections are a win.']],
-      decide: ['A recommendation, not a menu', 'The proposal is one bold sentence and three plain consequences. The comparison table and the reasoning exist, but only open when asked. One primary button.', ['Hypothesis: a single framed recommendation with evidence on demand beats a dashboard on decision-to-action.', 'Guard: every number came from Planner; fund choice is escalated.']],
+      decide: ['A recommendation, not a menu', 'The proposal is one bold sentence and three plain consequences, then one button. Why, the comparison, and who checked it are each one tap away and each returns one answer.', ['Hypothesis: a single framed recommendation with evidence on demand beats a dashboard on decision-to-action.', 'Guard: every number came from Planner; fund choice is escalated.']],
       act: ['Permission as a calm sheet', 'Title, three rows, Allow or Not now. The standing-rule option is a small link so the default is the safe one. The result is one line and an undo.', ['North star: actions completed that improve an outcome. Guard: 30-day reversals.']],
       away: ['Restraint', 'Between visits the team works and says almost nothing. Months with nothing to say collapse to a single line. Deferred actions ask again.', ['Metric: adherence at 90 days.']],
     };
@@ -622,7 +579,7 @@ const NOTES = {
     const [h, body, bullets] = S && S.tab !== 'penny' ? tab[S.tab] : m[S ? S.stage : 'moment'] || m.moment;
     return `<h3>${h}</h3><p>${body}</p>${bullets.length ? `<ul>${bullets.map(x => `<li>${x}</li>`).join('')}</ul>` : ''}`;
   },
-  design: () => `<h3>Design principles</h3><ul><li><b>One turn, one idea.</b> One or two sentences. Where a number matters it is the largest thing on screen, and there is only one.</li><li><b>Evidence on demand.</b> Who checked what folds into one quiet line. Tables and reasoning open only when asked.</li><li><b>One primary action.</b> A single button per turn, at most one text link beside it.</li><li><b>Permission as a calm sheet.</b> Title, three rows, Allow or Not now. Standing rules are a link, not a third button.</li><li><b>Product first.</b> These notes and the team panel are hidden until a reviewer asks.</li><li><b>Hairlines, not boxes.</b> Whitespace does the grouping.</li></ul>`,
+  design: () => `<h3>Design principles</h3><ul><li><b>One tap, one answer.</b> Every tap returns exactly one thing and offers the next step. Questions are a menu you open; each returns one answer.</li><li><b>One turn, one idea.</b> One or two sentences. Where a number matters it is the largest thing on screen, and there is only one.</li><li><b>Evidence on demand.</b> Who checked what folds into one quiet line. Tables and reasoning open only when asked.</li><li><b>One primary action.</b> A single button per turn, at most one text link beside it.</li><li><b>Permission as a calm sheet.</b> Title, three rows, Allow or Not now. Standing rules are a link, not a third button.</li><li><b>Product first.</b> These notes and the team panel are hidden until a reviewer asks.</li><li><b>Hairlines, not boxes.</b> Whitespace does the grouping.</li></ul>`,
   problem: () => `<h3>The problem</h3><p>Most people know what would improve their finances. Most do not do it. The gap is not information. The decision is never framed in their own numbers, the action lives in a portal they dread, and nobody follows through. Advice serves the top of the market; the rest get content.</p><p><b>The unit of value is a completed action that improves an outcome.</b> A conversation is a means, never the product.</p>`,
   bet: () => `<h3>The bet</h3><p>An AI-native coach closes the gap if it does four things a chatbot cannot: find the moment, frame one decision in the customer's numbers, get the action done with them, and keep its word between sessions.</p><ul><li>Not a chatbot with account access: every number comes from a calculator, every action from a permissioned tool.</li><li>Not a budgeting app: no categories, no streaks. One move at a time.</li><li>Not a robo-advisor: Penny never picks funds. That stays with a licensed human.</li></ul>`,
   team: () => `<h3>The team, and why it is visible</h3><p>One model that reads, computes, judges, and acts is hard to audit and easy to distrust. The work is split into specialists, and the customer can see who did what by opening the checks under any message. It is never in their face.</p><ul><li><b>Penny</b> talks and explains. Never computes, never acts.</li><li><b>Reader, Analyst, Watcher</b> observe and cite.</li><li><b>Planner</b> is deterministic code. The only source of numbers.</li><li><b>Guardian</b> checks scope before every message and decides when silence is right.</li><li><b>Doer</b> is the only agent that changes anything, after permission.</li><li><b>Advisor desk</b> hands off to a licensed human with a brief.</li></ul>`,
@@ -637,7 +594,7 @@ function renderNotes() {
   const cur = S ? S.notesTab : notesFallback;
   el.innerHTML = `<div class="card"><div class="notes-tabs">${tabs.map(([id, l]) => `<button class="${cur === id ? 'on' : ''}" data-note="${id}">${l}</button>`).join('')}</div><div class="note-body">${NOTES[cur]()}</div></div>
     ${S ? `<div class="card"><span class="xs">Team, right now</span>${Object.entries(S.team).map(([n, s]) => `<div class="team-row"><span>${n}</span><span class="st ${s === 'working' ? 'busy' : ''}">${esc(s)}</span></div>`).join('')}</div>
-    <div class="card"><span class="xs">Guided path</span><p class="sm">${S.persona === 'jordan' ? 'Show me → Do this → Allow, Allow → Skip ahead → Skip ahead → Allow → Skip ahead → Book an advisor. Or type anything.' : 'Read my documents → 1,000 → Do this → Allow, Allow → Skip ahead → Skip ahead → Allow. Or type anything.'}</p><p class="xs">Free-text replies: ${sampleFn === undefined ? 'checking' : sampleFn && S.liveOn !== false ? 'live' : 'scripted'}, labelled either way.</p></div>` : ''}`;
+    <div class="card"><span class="xs">Guided path</span><p class="sm">${S.persona === 'jordan' ? 'Show me what to do → Do this → Allow → Next → Allow → Skip ahead → Skip ahead → Allow → Skip ahead → Book an advisor. Every tap returns one thing.' : 'Read my documents → Looks right → 1,000 → What should I do? → Do this → Allow → Next → Allow → Skip ahead → Skip ahead → Skip ahead → Allow. Every tap returns one thing.'}</p><p class="xs">Free-text replies: ${sampleFn === undefined ? 'checking' : sampleFn && S.liveOn !== false ? 'live' : 'scripted'}, labelled either way.</p></div>` : ''}`;
   el.querySelectorAll('[data-note]').forEach(b => b.onclick = () => { if (S) S.notesTab = b.dataset.note; else notesFallback = b.dataset.note; renderNotes(); });
 }
 let notesFallback = 'design';
