@@ -36,11 +36,11 @@
     .turn { display: flex; flex-direction: column; gap: 8px; }
     .turn .who { display: flex; align-items: center; gap: 8px; }
     .turn .who .sm { color: #6b6b6b; }
-    .agent .p, .agent .h2 { max-width: 100%; }
     .user { align-self: flex-end; max-width: 82%; padding: 10px 12px; background: #ecebe4; border: 1.5px solid #2a2a2a; border-radius: 12px 12px 2px 12px; }
     .tool { display: flex; align-items: center; gap: 8px; padding: 6px 10px; border: 1.5px solid #b9c4de; border-radius: 6px; background: #f0f3fa; font-size: 13px; color: #2f4f8f; }
     .tool .name { font-weight: 700; }
     .tool.running .ico { border: 1.5px dashed #2f5fc4; border-radius: 50%; }
+    .tag { display: inline-flex; align-items: center; min-height: 20px; padding: 0 7px; border: 1.5px solid #2f5fc4; border-radius: 4px; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #2f5fc4; background: #fff; flex-shrink: 0; }
     .think { padding: 8px 10px; border-left: 3px solid #b9c4de; background: #f7f8fc; display: flex; flex-direction: column; gap: 4px; }
     .think .sm { color: #4a5a7a; }
     .artifact { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 2px solid #2a2a2a; border-radius: 8px; background: #fff; }
@@ -53,55 +53,63 @@
     .divider { display: flex; align-items: center; gap: 10px; color: #6b6b6b; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
     .divider::before, .divider::after { content: ""; flex: 1; border-top: 1.5px dashed #b8b5aa; }
     .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-    .composer { display: flex; align-items: center; gap: 10px; padding: 10px 14px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .composer { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border-top: 1.5px solid #2a2a2a; background: #fff; }
     .composer .dash { flex: 1; min-height: 46px; display: flex; align-items: center; padding: 0 12px; color: #777; }
     .notif { border: 1.5px solid #2a2a2a; border-radius: 12px; background: #fff; padding: 12px; display: flex; gap: 10px; align-items: flex-start; }
+    .tabbar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .tab { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 12px; color: #6b6b6b; }
+    .tab .tico { width: 20px; height: 20px; border: 1.5px solid currentColor; border-radius: 5px; }
+    .tab-on { color: #1c1c1c; font-weight: 700; }
+    .tab-on .tico { background: #1c1c1c; border-color: #1c1c1c; }
+    .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+    .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
+    .on { background: #2a2a2a; }
+    .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
+    .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
+    .fill { height: 100%; background: #2a2a2a; }
+    .team { display: grid; grid-template-columns: 96px 1fr; gap: 6px 10px; align-items: start; font-size: 13px; }
   </style>
 </helmet>
-<div class="screen" style="min-height: 1120px;">
+<div class="screen" style="min-height: 1060px;">
   <div class="head">
-    <div class="row" style="gap: 8px;"><div class="kmark">M</div><span class="h2">Mo</span><span class="sm">· your money coach</span></div>
-    <div class="row" style="gap: 6px;"><span class="chip" style="min-height: 30px;">Plan v3</span><span class="chip" style="min-height: 30px;">Memory</span></div>
+    <div class="row" style="gap: 8px;"><div class="kmark">P</div><span class="h2">Penny</span><span class="sm">· your money coach</span></div>
+    <span class="chip" style="min-height: 30px;">Team</span>
   </div>
   <div class="thread">
-    <div class="lbl">Thread 6 · Between sessions · the agent works and shows it</div>
-    <div class="divider">Mo worked while you were away</div>
-    <div class="turn agent">
-      <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">Sept 16 · 7:40</span></div>
-      <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Read paystub</span> · Sept 15</span></div>
-      <p class="p">It landed. Your contribution is 6% and your employer put in 320. Take-home was 238 lower, close to the 240 I estimated.</p>
+    <div class="lbl">Actions tab · everything Doer did, and what is scheduled</div>
+    <div class="box card" style="border-color: #2f5fc4;">
+      <div class="row" style="justify-content: space-between;"><span class="p"><b>401(k) raised to 6%</b></span><span class="chip chip-on" style="min-height: 30px;">Applied</span></div>
+      <div class="row" style="gap: 8px;"><span class="tag">Doer</span><span class="sm">Sept 9, 8:13 · you allowed once · plan provider 4F7K2 · effective Sept 15</span></div>
+      <div class="row" style="gap: 8px;"><span class="tag">Watcher</span><span class="sm">Verified Sept 16: landed, take-home 238 lower</span></div>
+      <div class="row" style="gap: 8px;"><span class="chip">Undo</span><span class="chip">Receipt</span></div>
     </div>
-    <div class="turn agent">
-      <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">Oct 2 · 7:40</span></div>
-      <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Read card statement</span> · payment 510 posted Oct 1</span></div>
-      <p class="p">First 510 cleared. Card at 6,410. On track for early 2028.</p>
+    <div class="box card">
+      <div class="row" style="justify-content: space-between;"><span class="p"><b>Card autopay 210 → 510</b></span><span class="chip chip-on" style="min-height: 30px;">Scheduled</span></div>
+      <div class="row" style="gap: 8px;"><span class="tag">Doer</span><span class="sm">Sept 9, 8:14 · you allowed once · first run Oct 1</span></div>
+      <div class="row" style="gap: 8px;"><span class="chip">Pause</span><span class="chip">Receipt</span></div>
     </div>
-    <div class="turn agent">
-      <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">Dec 4 · 7:40</span></div>
-      <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Checked 4 accounts</span> · nothing unusual</span></div>
-      <p class="sm">No message sent. Nothing to say.</p>
+    <div class="dash card">
+      <div class="row" style="justify-content: space-between;"><span class="p">Redirect 510 to the home fund</span><span class="chip" style="min-height: 30px;">Waits</span></div>
+      <div class="row" style="gap: 8px;"><span class="tag">Doer</span><span class="sm">Fires when the card hits 0, about early 2028. Will ask again.</span></div>
     </div>
-    <div class="divider">Jan 2028</div>
-    <div class="turn agent">
-      <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">Jan 9, 2028 · 7:40</span></div>
-      <div class="tool"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 10l4 4 8-8"></path></svg><span><span class="name">Read card statement</span> · balance 0</span></div>
-      <p class="p">The card is at zero. Sixteen months, as planned. You said in 2026 that the 510 should go to the home fund next. Still what you want?</p>
-      <div class="perm">
-        <p class="sm">Mo wants to</p>
-        <p class="p"><b>Move the 510 autopay to your home fund</b></p>
-        <p class="sm">Same date, same account, new destination · pause any time</p>
-        <div class="opts"><div class="on">Allow</div><div>Change amount</div><div>Not now</div></div>
-      </div>
+    <div class="box card">
+      <div class="lbl">Scheduled checks</div>
+      <div class="row" style="gap: 8px;"><span class="tag">Watcher</span><span class="sm">Oct 2: confirm the first 510 cleared</span></div>
+      <div class="row" style="gap: 8px;"><span class="tag">Watcher</span><span class="sm">Monthly: card balance against the schedule</span></div>
     </div>
-    <div class="turn agent">
-      <div class="who"><div class="kmark">M</div><span class="p"><b>Mo</b></span><span class="sm">Mar 2029</span></div>
-      <p class="p">You are about 14 months from 60k. Buying a home is where I stop and a licensed advisor starts. I can book one and hand over a brief so the call starts at minute one.</p>
-      <div class="artifact"><div class="doc"></div><div class="col" style="gap: 2px; flex: 1;"><p class="p"><b>Advisor brief</b></p><p class="sm">Your plan, your numbers, this record, your questions</p></div><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 5l5 5-5 5"></path></svg></div>
-      <div class="chips"><span class="chip chip-on">Book an advisor</span><span class="chip">Not yet</span></div>
+    <div class="dash card" style="border-color: #2f5fc4;">
+      <div class="row" style="gap: 8px;"><span class="tag">Advisor desk</span><span class="sm">No handoff yet. Ready when the home purchase gets close.</span></div>
     </div>
-    <p class="note">Note: the quiet turn ("nothing to say") is deliberate. Restraint is a feature. The deferred action re-asks; nothing fires on a stale instruction.</p>
+    <p class="note">Note: this is the audit log in user language. Every entry has who asked, who allowed, who did it, who verified it, and a way back. A compliance reviewer sees this same view.</p>
   </div>
-  <div class="composer"><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 8l-6 6a3 3 0 0 1-4-4l7-7a2 2 0 0 1 3 3l-7 7a1 1 0 0 1-1.5-1.5L11 6"></path></svg><div class="dash">Message Mo, or ask what if</div><svg class="ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="7" y="2" width="6" height="10" rx="3"></rect><path d="M4 9a6 6 0 0 0 12 0M10 15v3"></path></svg></div>
+  <div class="tabbar">
+    <div class="tab "><div class="tico"></div>Penny</div>
+    <div class="tab "><div class="tico"></div>Overview</div>
+    <div class="tab "><div class="tico"></div>Plan</div>
+    <div class="tab tab-on"><div class="tico"></div>Actions</div>
+    <div class="tab "><div class="tico"></div>You</div>
+  </div>
 </div>
 </x-dc>
 </body>

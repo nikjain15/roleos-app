@@ -1,4 +1,4 @@
-# Keel: AI-native financial coaching prototype (Fidelity Labs concept)
+# Penny: AI-native financial coaching prototype (Fidelity Labs concept)
 
 A working prototype and its design artifacts for a Head of Product application:
 an AI-native coach that helps early- and mid-career customers plan, decide, and act.
