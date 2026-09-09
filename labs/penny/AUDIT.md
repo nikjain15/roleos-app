@@ -58,7 +58,7 @@ rebase the twelve-month history on the current date.
 ### B5 · The guardrail that matters most is a narrow regex — and it is what GitHub Pages serves
 **Where:** type into the composer on the static build (no `window.claude`, so always scripted).
 **Evidence:** these all fall through to a generic paragraph about free cash, with no escalation:
-- *"is the Fidelity 2055 target date fund better than an S&P 500 index fund?"* — the single most likely question in the room
+- *"is the 2055 target date fund better than an S&P 500 index fund?"* — the single most likely question in the room
 - *"rank my options for me"*
 - *"can you just move 500 into my 401k right now"* / *"just enroll me now without asking"*
 - *"what return will I get if I do this?"* / *"guarantee me this works"*

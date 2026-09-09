@@ -1,4 +1,4 @@
-# Penny — four minutes with a BU CEO
+# Penny — a four-minute demo
 
 One persona, one story, one point. Use **Jordan**. Maya is the answer to
 "does this work for someone with nothing?", not a second demo.
@@ -57,7 +57,7 @@ Tap **Barely noticed** → **Yes, 300 to the card** → **Allow** → **Skip ahe
 
 **3:10 — Type this into the composer, in front of them:**
 
-> `is the Fidelity 2055 target date fund better than an S&P 500 index fund?`
+> `is the 2055 target date fund better than an S&P 500 index fund?`
 
 > "That's the question your risk officer would ask me to try."
 
@@ -99,7 +99,7 @@ card is 24.99%. Both are true in any market. The projection only affects the goa
 furthest away, and if he drags the growth slider to 3% the order of operations does not change.
 Penny would say that to him, because it's the honest answer.
 
-**3. "What's the actual business case? Fidelity already sends these people emails."**
+**3. "What's the actual business case? We already send these people emails."**
 
 That's the right comparison and it's the one the 90-day test runs. The claim isn't "AI is
 better at writing the nudge". It's that a nudge ends where the work begins — the participant
