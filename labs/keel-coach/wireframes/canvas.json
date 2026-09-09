@@ -1,0 +1,21 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "title": "User journey", "x": 0, "y": 0, "w": 1720, "h": 780 },
+    { "file": "Connect.dc.html", "title": "1 Connect", "x": 0, "y": 960, "w": 390, "h": 844 },
+    { "file": "Today.dc.html", "title": "2 Today", "x": 470, "y": 960, "w": 390, "h": 844 },
+    { "file": "Plan.dc.html", "title": "3 Plan", "x": 940, "y": 960, "w": 390, "h": 844 },
+    { "file": "Decide.dc.html", "title": "4 Decide", "x": 1410, "y": 960, "w": 390, "h": 844 },
+    { "file": "Act.dc.html", "title": "5 Act · confirm", "x": 1880, "y": 960, "w": 390, "h": 844 },
+    { "file": "Audit.dc.html", "title": "6 Act · record", "x": 2350, "y": 960, "w": 390, "h": 844 },
+    { "file": "Coach.dc.html", "title": "7 Coach · guardrails", "x": 2820, "y": 960, "w": 390, "h": 844 },
+    { "file": "DemoLayout.dc.html", "title": "Desktop demo layout for the CEO", "x": 0, "y": 1960, "w": 1440, "h": 900 }
+  ],
+  "annotations": [
+    { "id": "thesis", "x": 1800, "y": 0, "w": 300, "text": "Thesis\nThe unit of value is a completed action that improves an outcome, not a conversation. Everything on this canvas serves the loop: plan, decide, act, repeat." },
+    { "id": "math-rule", "x": 1800, "y": 230, "w": 300, "text": "Rule\nThe model explains. The calculators compute. No number reaches the customer that a deterministic function did not produce first." },
+    { "id": "trust-rule", "x": 1800, "y": 430, "w": 300, "text": "Rule\nNothing moves money without a confirm. Every action has before, after, who, when, and undo. Individualized investment advice escalates to a licensed human." },
+    { "id": "open-questions", "x": 1800, "y": 640, "w": 300, "text": "Open questions for you\n1. Kiro design system: I could not reach joinkiro.com from here. Paste a screenshot or the brand colors and fonts.\n2. Keep both personas in the demo, or lead with one?\n3. Should the coach ever act inside limits without a confirm?" },
+    { "id": "flow-note", "x": 3300, "y": 960, "w": 260, "text": "Flow\nConnect → Today → Decide → Act → record. Plan and Coach are side doors, reachable from any tab. Read left to right." }
+  ],
+  "launch": { "view": "canvas" }
+}

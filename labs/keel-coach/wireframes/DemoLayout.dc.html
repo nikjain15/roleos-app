@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive, sans-serif; color: #1c1c1c; background: #f6f5f1; }
+    a { color: #2f5fc4; } a:hover { color: #1f45a0; }
+    .box { border: 1.5px solid #2a2a2a; border-radius: 4px; background: #fff; }
+    .dash { border: 1.5px dashed #6b6b6b; border-radius: 4px; background: #fff; }
+    .img { background: #e6e4dc; border: 1.5px solid #2a2a2a; border-radius: 4px; background-image: linear-gradient(to top right, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)), linear-gradient(to top left, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)); }
+    .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
+    .h1 { font-size: 24px; line-height: 1.15; margin: 0; }
+    .h2 { font-size: 18px; line-height: 1.2; margin: 0; }
+    .p { font-size: 15px; line-height: 1.35; margin: 0; }
+    .sm { font-size: 13px; line-height: 1.3; color: #555; margin: 0; }
+    .btn { min-height: 48px; display: flex; align-items: center; justify-content: center; border: 2px solid #1c1c1c; border-radius: 6px; font-size: 16px; background: #fff; padding: 0 16px; }
+    .btn-primary { background: #1c1c1c; color: #fff; }
+    .btn-accent { background: #fff; border-color: #2f5fc4; color: #2f5fc4; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .col { display: flex; flex-direction: column; gap: 10px; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; }
+    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
+    .chip-on { background: #1c1c1c; color: #fff; }
+    .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
+    .fill { height: 100%; background: #2a2a2a; }
+    .tabbar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .tab { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; color: #555; }
+    .tab-on { color: #1c1c1c; font-weight: 700; }
+    .ico { width: 20px; height: 20px; border: 1.5px solid currentColor; border-radius: 4px; }
+    .screen { width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
+    .body { flex: 1; padding: 20px 16px; display: flex; flex-direction: column; gap: 14px; }
+    .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 6px; text-align: left; vertical-align: top; }
+    .tbl th { background: #ecebe4; font-weight: 400; color: #444; }
+    .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+    .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
+    .on { background: #2a2a2a; }
+    .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
+    .arrow { color: #2f5fc4; font-size: 18px; }
+  </style>
+</helmet>
+<div style="width: 1440px; min-height: 900px; box-sizing: border-box; background: #f6f5f1; display: flex; flex-direction: column;">
+  <div class="row" style="justify-content: space-between; padding: 16px 32px; border-bottom: 1.5px solid #2a2a2a; background: #fff;">
+    <div class="row" style="gap: 12px;"><div class="ico" style="width: 28px; height: 28px;"></div><span class="h2">Keel</span><span class="sm">A working prototype for Fidelity Labs · concept, not a Fidelity product</span></div>
+    <div class="row" style="gap: 8px;"><span class="chip chip-on">Jordan · mid career</span><span class="chip">Maya · early career</span><span class="chip">Reset demo</span></div>
+  </div>
+  <div style="flex: 1; display: grid; grid-template-columns: 1fr 460px; gap: 0;">
+    <div style="display: flex; align-items: flex-start; justify-content: center; padding: 40px;">
+      <div class="col" style="gap: 12px; align-items: center;">
+        <div class="lbl">The app · phone frame · all 5 tabs work</div>
+        <div class="img" style="width: 390px; height: 700px; border-radius: 28px; border-width: 3px;"></div>
+        <p class="sm">Same product on a phone: the frame drops away and the notes become a drawer.</p>
+      </div>
+    </div>
+    <div style="border-left: 1.5px solid #2a2a2a; background: #fff; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+      <div class="lbl">Product notes · follows the screen you are on</div>
+      <div class="row" style="flex-wrap: wrap; gap: 6px;">
+        <span class="chip chip-on">This screen</span><span class="chip">Problem</span><span class="chip">Bet</span><span class="chip">Metrics</span><span class="chip">Guardrails</span><span class="chip">Architecture</span><span class="chip">90 days</span><span class="chip">What I'd cut</span>
+      </div>
+      <div class="box card">
+        <div class="lbl">This screen · Decide</div>
+        <p class="p">Why one trade-off, not a dashboard: people do not fail to act because they lack data. They fail because the choice is never framed in their own numbers with a clear order.</p>
+        <p class="p">Hypothesis: showing the ranked table with the "why" expanded lifts decision-to-action from ~15% to 40%+.</p>
+        <p class="p">Risk: over-confidence. Mitigation: confidence label, "what would change my mind", advisor escalation for anything individualized.</p>
+      </div>
+      <div class="dash card">
+        <div class="lbl">Metrics</div>
+        <p class="sm"><b>North star:</b> outcome-improving actions completed per active customer per quarter.</p>
+        <p class="sm"><b>Guards:</b> 30-day reversal rate · advisor escalation rate · complaint rate · projected-outcome delta.</p>
+      </div>
+      <div class="dash card">
+        <div class="lbl">Architecture in one line</div>
+        <p class="sm">Context layer (accounts, plan docs, memory) → deterministic calculators → model explains and drafts → typed actions behind human confirm → audit log → evals on every prompt change.</p>
+      </div>
+      <p class="note">Note: the CEO reads the right column while clicking the left. The two stay in sync.</p>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

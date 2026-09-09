@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Patrick+Hand&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: "Patrick Hand", "Segoe Print", "Comic Sans MS", cursive, sans-serif; color: #1c1c1c; background: #f6f5f1; }
+    a { color: #2f5fc4; } a:hover { color: #1f45a0; }
+    .box { border: 1.5px solid #2a2a2a; border-radius: 4px; background: #fff; }
+    .dash { border: 1.5px dashed #6b6b6b; border-radius: 4px; background: #fff; }
+    .img { background: #e6e4dc; border: 1.5px solid #2a2a2a; border-radius: 4px; background-image: linear-gradient(to top right, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)), linear-gradient(to top left, transparent calc(50% - 1px), #9a978c, transparent calc(50% + 1px)); }
+    .lbl { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b6b6b; }
+    .h1 { font-size: 24px; line-height: 1.15; margin: 0; }
+    .h2 { font-size: 18px; line-height: 1.2; margin: 0; }
+    .p { font-size: 15px; line-height: 1.35; margin: 0; }
+    .sm { font-size: 13px; line-height: 1.3; color: #555; margin: 0; }
+    .btn { min-height: 48px; display: flex; align-items: center; justify-content: center; border: 2px solid #1c1c1c; border-radius: 6px; font-size: 16px; background: #fff; padding: 0 16px; }
+    .btn-primary { background: #1c1c1c; color: #fff; }
+    .btn-accent { background: #fff; border-color: #2f5fc4; color: #2f5fc4; }
+    .row { display: flex; align-items: center; gap: 10px; }
+    .col { display: flex; flex-direction: column; gap: 10px; }
+    .note { color: #2f5fc4; font-size: 14px; line-height: 1.25; }
+    .chip { display: inline-flex; align-items: center; min-height: 32px; padding: 0 12px; border: 1.5px solid #2a2a2a; border-radius: 999px; font-size: 14px; background: #fff; }
+    .chip-on { background: #1c1c1c; color: #fff; }
+    .bar { height: 10px; border: 1.5px solid #2a2a2a; border-radius: 999px; background: #fff; overflow: hidden; }
+    .fill { height: 100%; background: #2a2a2a; }
+    .tabbar { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; border-top: 1.5px solid #2a2a2a; background: #fff; }
+    .tab { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 12px; color: #555; }
+    .tab-on { color: #1c1c1c; font-weight: 700; }
+    .ico { width: 20px; height: 20px; border: 1.5px solid currentColor; border-radius: 4px; }
+    .screen { width: 390px; min-height: 844px; display: flex; flex-direction: column; background: #f6f5f1; box-sizing: border-box; }
+    .body { flex: 1; padding: 20px 16px; display: flex; flex-direction: column; gap: 14px; }
+    .card { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .tbl th, .tbl td { border: 1px solid #8c8a80; padding: 6px; text-align: left; vertical-align: top; }
+    .tbl th { background: #ecebe4; font-weight: 400; color: #444; }
+    .seg { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; }
+    .seg div { height: 12px; border: 1.5px solid #2a2a2a; border-radius: 3px; }
+    .on { background: #2a2a2a; }
+    .half { background: linear-gradient(to right, #2a2a2a 50%, #fff 50%); }
+    .arrow { color: #2f5fc4; font-size: 18px; }
+  </style>
+</helmet>
+<div class="screen">
+  <div class="body">
+    <div class="row" style="justify-content: space-between;">
+      <div class="lbl">Screen 3 · Plan</div>
+      <span class="chip">Maya</span>
+    </div>
+    <h1 class="h1">Where this goes.</h1>
+    <div class="box card">
+      <div class="lbl">Goals</div>
+      <div class="col" style="gap: 4px;"><div class="row" style="justify-content: space-between;"><span class="p">Emergency fund · 3 months</span><span class="sm">1,200 / 9,000</span></div><div class="bar"><div class="fill" style="width: 13%;"></div></div><span class="sm">With plan: 30 months. Without: never.</span></div>
+      <div class="col" style="gap: 4px;"><div class="row" style="justify-content: space-between;"><span class="p">Retirement · capture full match</span><span class="sm">0 of 4%</span></div><div class="bar"><div class="fill" style="width: 0%;"></div></div><span class="sm">With plan: 2,880 a year from employer.</span></div>
+      <div class="col" style="gap: 4px;"><div class="row" style="justify-content: space-between;"><span class="p">Student loans · 28,400 at 5.5%</span><span class="sm">min 310 / mo</span></div><div class="bar"><div class="fill" style="width: 8%;"></div></div><span class="sm">Stay at minimum. Below the line where extra payments beat the match.</span></div>
+    </div>
+    <div class="box card">
+      <div class="row" style="justify-content: space-between;"><span class="lbl">Net worth, 10 years</span><span class="sm">with vs. without</span></div>
+      <svg viewBox="0 0 340 150" width="100%" height="150" role="img" aria-label="Two-line projection sketch">
+        <rect x="0" y="0" width="340" height="150" fill="#fff"></rect>
+        <line x1="30" y1="130" x2="330" y2="130" stroke="#2a2a2a" stroke-width="1.5"></line>
+        <line x1="30" y1="10" x2="30" y2="130" stroke="#2a2a2a" stroke-width="1.5"></line>
+        <polyline points="30,120 90,118 150,112 210,104 270,95 330,86" fill="none" stroke="#8c8a80" stroke-width="2" stroke-dasharray="5 4"></polyline>
+        <polyline points="30,120 90,110 150,92 210,70 270,46 330,20" fill="none" stroke="#2f5fc4" stroke-width="2.5"></polyline>
+        <text x="236" y="40" font-size="12" fill="#2f5fc4">with Keel plan</text>
+        <text x="236" y="112" font-size="12" fill="#6b6b6b">if nothing changes</text>
+        <text x="30" y="145" font-size="11" fill="#6b6b6b">now</text>
+        <text x="300" y="145" font-size="11" fill="#6b6b6b">10 yrs</text>
+      </svg>
+      <div class="row" style="justify-content: space-between;"><span class="sm">Assumptions: 6% return, 4.2% savings APY, no raises</span><span class="chip">Edit</span></div>
+    </div>
+    <div class="row" style="gap: 8px;">
+      <div class="btn" style="flex: 1;">Something changed</div>
+      <div class="btn btn-accent" style="flex: 1;">Decide next</div>
+    </div>
+    <p class="note">Note: chart is computed, never generated. "Something changed" re-plans for a raise, job loss, or a baby.</p>
+  </div>
+  <div class="tabbar">
+    <div class="tab "><div class="ico"></div>Today</div>
+    <div class="tab tab-on"><div class="ico"></div>Plan</div>
+    <div class="tab "><div class="ico"></div>Decide</div>
+    <div class="tab "><div class="ico"></div>Act</div>
+    <div class="tab "><div class="ico"></div>Coach</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
