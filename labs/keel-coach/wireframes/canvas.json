@@ -14,8 +14,8 @@
     { "id": "thesis", "x": 1800, "y": 0, "w": 300, "text": "Thesis\nThe unit of value is a completed action that improves an outcome, not a conversation. Everything on this canvas serves the loop: plan, decide, act, repeat." },
     { "id": "math-rule", "x": 1800, "y": 230, "w": 300, "text": "Rule\nThe model explains. The calculators compute. No number reaches the customer that a deterministic function did not produce first." },
     { "id": "trust-rule", "x": 1800, "y": 430, "w": 300, "text": "Rule\nNothing moves money without a confirm. Every action has before, after, who, when, and undo. Individualized investment advice escalates to a licensed human." },
-    { "id": "open-questions", "x": 1800, "y": 640, "w": 300, "text": "Open questions for you\n1. Kiro design system: I could not reach joinkiro.com from here. Paste a screenshot or the brand colors and fonts.\n2. Keep both personas in the demo, or lead with one?\n3. Should the coach ever act inside limits without a confirm?" },
-    { "id": "flow-note", "x": 3300, "y": 960, "w": 260, "text": "Flow\nConnect → Today → Decide → Act → record. Plan and Coach are side doors, reachable from any tab. Read left to right." }
+    { "id": "open-questions", "x": 1800, "y": 640, "w": 300, "text": "Open questions for you\n1. Visual system: you asked for joinkiro.com's. I could not reach the site from here. Paste a screenshot or the brand colors and fonts.\n2. Keep both personas in the demo, or lead with one?\n3. Should the coach ever act inside limits without a confirm?" },
+    { "id": "flow-note", "x": 3300, "y": 960, "w": 260, "text": "Flow\nConnect → Today → Plan → Decide → Act → record. Coach is a side door, reachable from any tab. Read left to right." }
   ],
   "launch": { "view": "canvas" }
 }
