@@ -1,241 +1,216 @@
 <title>Penny</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap">
 <style>
   :root {
     color-scheme: light;
-    --ground: #F5F5FA; --surface: #FFFFFF; --surface-2: #F0F0F8; --ink: #17182B; --ink-2: #4B4F66; --muted: #7A7E94; --line: #E4E5EF; --line-2: #CFD1E2;
-    --primary: #5046E4; --primary-ink: #FFFFFF; --primary-soft: #ECEBFC; --primary-line: #C5C1F5;
-    --lime: #D6F26B; --lime-ink: #2B3A00;
-    --good: #1E9E63; --good-soft: #E3F5EC; --warn: #C98213; --warn-soft: #FBF1DC; --bad: #D64545; --bad-soft: #FBE5E5;
-    --series-1: #5046E4; --series-2: #D9782E;
-    --r-card: 16px; --r-btn: 12px; --shadow: 0 8px 30px rgba(23,24,43,0.08);
-    --font-display: "Sora", "Avenir Next", "Segoe UI", system-ui, sans-serif;
-    --font-body: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --ground: #F7F7F9; --surface: #FFFFFF; --ink: #1A1B2E; --ink-2: #4E526B; --muted: #8A8EA3; --line: #ECEDF2; --line-2: #D9DBE6;
+    --accent: #4F46E5; --accent-soft: #EEEDFC; --lime: #E3F58A; --lime-ink: #2B3A00; --good: #1E9E63; --good-soft: #E8F6EE;
+    --series-1: #4F46E5; --series-2: #D9782E;
+    --display: "Sora", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+    --body: "Plus Jakarta Sans", "Avenir Next", "Segoe UI", system-ui, sans-serif;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.45; -webkit-font-smoothing: antialiased; }
-  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
-  button:focus-visible, [tabindex]:focus-visible, input:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
-  h1, h2, h3 { font-family: var(--font-display); margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+  html, body { margin: 0; background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 15.5px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; }
+  button:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+  h1, h2, h3 { font-family: var(--display); font-weight: 600; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
   p { margin: 0; }
   .num { font-variant-numeric: tabular-nums; }
-  .eyebrow { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .muted { color: var(--muted); }
   .sm { font-size: 13px; color: var(--ink-2); }
   .xs { font-size: 12px; color: var(--muted); }
+  .link { color: var(--accent); font-weight: 500; }
+  .link:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-  /* ---------- shell ---------- */
-  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; border-bottom: 1px solid var(--line); background: var(--surface); position: sticky; top: 0; z-index: 5; }
+  /* shell */
+  .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; }
   .brand { display: flex; align-items: center; gap: 10px; }
-  .brand .mark { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 14px; }
-  .brand h1 { font-size: 17px; }
+  .brand .mark { width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; font-family: var(--display); font-weight: 600; font-size: 13px; }
+  .brand b { font-family: var(--display); font-weight: 600; }
   .brand .tagline { font-size: 12px; color: var(--muted); }
-  @media (max-width: 640px) { .brand .tagline { display: none; } .top { padding: 10px 14px; } }
-  .top .right { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
-  .pill { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font-size: 13px; font-weight: 500; color: var(--ink-2); }
-  .pill.on { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .pill.ghost { border-style: dashed; }
-  .shell { display: grid; grid-template-columns: 430px minmax(300px, 1fr) 400px; gap: 0; min-height: calc(100vh - 57px); }
-  .col-app { padding: 24px 20px; display: flex; justify-content: center; align-items: flex-start; }
-  .col-team { padding: 24px 20px; border-left: 1px solid var(--line); display: flex; flex-direction: column; gap: 16px; }
-  .col-notes { padding: 24px 20px; border-left: 1px solid var(--line); background: var(--surface); display: flex; flex-direction: column; gap: 14px; }
-  @media (max-width: 1180px) {
-    .shell { grid-template-columns: 1fr; }
-    .col-team, .col-notes { border-left: 0; border-top: 1px solid var(--line); }
-    .col-notes { display: none; }
-    .col-notes.open { display: flex; }
-    .notes-fab { display: inline-flex; }
-  }
-  .notes-fab { display: none; position: fixed; right: 16px; bottom: 16px; z-index: 6; background: var(--ink); color: #fff; border-radius: 999px; padding: 10px 16px; font-weight: 600; box-shadow: var(--shadow); }
+  .right { display: flex; align-items: center; gap: 8px; }
+  .segs { display: inline-flex; border: 1px solid var(--line-2); border-radius: 999px; padding: 2px; background: var(--surface); }
+  .segs button { min-height: 30px; padding: 0 12px; border-radius: 999px; font-size: 13px; color: var(--ink-2); font-weight: 500; }
+  .segs button.on { background: var(--ink); color: #fff; }
+  .ghost { min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font-size: 13px; color: var(--ink-2); font-weight: 500; }
+  .ghost.on { border-color: var(--ink); color: var(--ink); }
+  .stage { display: flex; justify-content: center; align-items: flex-start; padding: 16px 20px 40px; gap: 24px; }
+  .notes { width: 400px; flex-shrink: 0; display: none; flex-direction: column; gap: 14px; }
+  .notes.open { display: flex; }
+  @media (max-width: 900px) { .stage { flex-direction: column; align-items: center; } .notes { width: 100%; max-width: 560px; } .brand .tagline { display: none; } }
 
-  /* ---------- phone ---------- */
-  .phone { width: 390px; height: 800px; border-radius: 34px; border: 1px solid var(--line-2); background: var(--ground); box-shadow: var(--shadow); overflow: hidden; display: flex; flex-direction: column; position: relative; }
-  @media (max-width: 480px) { .col-app { padding: 0; } .phone { width: 100%; height: calc(100vh - 57px); border-radius: 0; border: 0; box-shadow: none; } }
-  .appbar { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 10px; background: var(--ground); }
-  .appbar .who { display: flex; align-items: center; gap: 8px; }
-  .appbar .mark { width: 28px; height: 28px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 13px; }
-  .appbar h2 { font-size: 16px; }
-  .appbar .sub { font-size: 12px; color: var(--muted); }
-  .view { flex: 1; overflow-y: auto; padding: 4px 14px 16px; display: flex; flex-direction: column; gap: 12px; scroll-behavior: smooth; }
-  @media (prefers-reduced-motion: reduce) { .view { scroll-behavior: auto; } .rise { animation: none !important; } }
-  .tabs { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid var(--line); background: var(--surface); }
-  .tabs button { min-height: 58px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; font-size: 11px; font-weight: 600; color: var(--muted); }
+  /* phone */
+  .phone { width: 390px; height: 800px; border-radius: 36px; background: var(--surface); border: 1px solid var(--line-2); box-shadow: 0 20px 60px rgba(26,27,46,0.10); overflow: hidden; display: flex; flex-direction: column; position: relative; }
+  @media (max-width: 480px) { .top { padding: 10px 14px; } .stage { padding: 0; } .phone { width: 100%; height: calc(100vh - 54px); border-radius: 0; border: 0; box-shadow: none; } }
+  .appbar { display: flex; align-items: center; justify-content: space-between; padding: 18px 22px 8px; }
+  .appbar h1 { font-size: 17px; }
+  .appbar .date { font-size: 12px; color: var(--muted); }
+  .view { flex: 1; overflow-y: auto; padding: 8px 22px 24px; display: flex; flex-direction: column; gap: 22px; scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { .view { scroll-behavior: auto; } .in { animation: none !important; } }
+  .tabs { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--line); background: var(--surface); }
+  .tabs button { min-height: 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; font-size: 11px; font-weight: 500; color: var(--muted); }
   .tabs button svg { width: 22px; height: 22px; }
-  .tabs button.on { color: var(--primary); }
-  .composer { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--surface); border-top: 1px solid var(--line); }
-  .composer input { flex: 1; min-height: 44px; border: 1px solid var(--line-2); border-radius: 999px; padding: 0 14px; font: inherit; background: var(--surface-2); color: var(--ink); }
+  .tabs button.on { color: var(--ink); }
+  .composer { display: flex; align-items: center; gap: 8px; padding: 8px 14px 10px; background: var(--surface); }
+  .composer input { flex: 1; min-height: 44px; border: 1px solid var(--line-2); border-radius: 999px; padding: 0 16px; font: inherit; background: var(--surface); color: var(--ink); }
   .composer input::placeholder { color: var(--muted); }
-  .composer button { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: var(--ink-2); }
-  .composer button.send { background: var(--primary); color: #fff; }
-  .composer button svg { width: 20px; height: 20px; }
+  .composer button { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: var(--muted); }
+  .composer button.send { background: var(--ink); color: #fff; }
+  .composer button svg { width: 18px; height: 18px; }
 
-  /* ---------- thread pieces ---------- */
-  .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-card); padding: 14px; display: flex; flex-direction: column; gap: 10px; }
-  .card.soft { background: var(--surface-2); border-color: transparent; }
-  .notif { display: flex; gap: 10px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 12px 14px; box-shadow: var(--shadow); }
-  .notif .mark { width: 30px; height: 30px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 13px; flex-shrink: 0; }
-  .turn { display: flex; flex-direction: column; gap: 8px; }
-  .turn .who { display: flex; align-items: center; gap: 8px; }
-  .turn .who .mark { width: 24px; height: 24px; border-radius: 50%; background: var(--primary); color: #fff; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 11px; }
-  .turn .who b { font-family: var(--font-display); font-weight: 600; font-size: 14px; }
-  .turn .who .t { font-size: 12px; color: var(--muted); }
-  .turn .live { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--lime); color: var(--lime-ink); }
-  .turn .demo { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 999px; background: var(--surface-2); color: var(--muted); }
-  .agent-text { font-size: 15px; }
-  .agent-text b { font-weight: 700; }
-  .user { align-self: flex-end; max-width: 84%; background: var(--ink); color: #fff; border-radius: 18px 18px 4px 18px; padding: 10px 14px; }
-  .user.att { display: flex; align-items: center; gap: 8px; }
-  .user svg { width: 18px; height: 18px; }
-  .tool { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 10px; background: var(--primary-soft); border: 1px solid var(--primary-line); font-size: 13px; color: #2D2A7A; }
-  .tool .ok { width: 16px; height: 16px; flex-shrink: 0; color: var(--primary); }
-  .tool .spin { width: 14px; height: 14px; border: 2px solid var(--primary-line); border-top-color: var(--primary); border-radius: 50%; animation: spin 0.9s linear infinite; flex-shrink: 0; }
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .tool .name { font-weight: 700; }
-  .tool .res { color: #4B4F8A; }
-  .tag { display: inline-flex; align-items: center; min-height: 20px; padding: 0 7px; border-radius: 6px; border: 1px solid var(--primary-line); background: var(--surface); color: var(--primary); font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; }
-  .think { border-left: 3px solid var(--primary-line); background: var(--surface-2); border-radius: 0 10px 10px 0; padding: 8px 10px; display: flex; flex-direction: column; gap: 6px; }
-  .think .toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--ink-2); font-weight: 600; }
-  .think .toggle svg { width: 16px; height: 16px; transition: transform 0.2s; }
-  .think.open .toggle svg { transform: rotate(90deg); }
-  .think .lines { display: none; flex-direction: column; gap: 5px; font-size: 13px; color: var(--ink-2); }
-  .think.open .lines { display: flex; }
-  .tbl { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .tbl th, .tbl td { text-align: left; vertical-align: top; padding: 7px 8px; border-bottom: 1px solid var(--line); }
+  /* thread */
+  .in { animation: in 0.35s ease both; }
+  @keyframes in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .turn { display: flex; flex-direction: column; gap: 10px; }
+  .turn .t { font-size: 12px; color: var(--muted); }
+  .turn .t .live { color: var(--lime-ink); background: var(--lime); padding: 1px 7px; border-radius: 999px; font-weight: 600; margin-left: 6px; }
+  .turn .t .demo { color: var(--muted); background: var(--ground); padding: 1px 7px; border-radius: 999px; font-weight: 600; margin-left: 6px; }
+  .say { font-size: 16px; line-height: 1.5; }
+  .say b { font-weight: 600; }
+  .big { display: flex; flex-direction: column; gap: 2px; padding: 6px 0 2px; }
+  .big .n { font-family: var(--display); font-size: 44px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.05; }
+  .big .l { font-size: 14px; color: var(--ink-2); }
+  .user { align-self: flex-end; max-width: 80%; background: var(--ground); border-radius: 18px 18px 4px 18px; padding: 10px 14px; font-size: 15px; }
+  .checks { display: flex; flex-direction: column; gap: 6px; }
+  .checks > button { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); }
+  .checks > button svg { width: 14px; height: 14px; transition: transform 0.2s; }
+  .checks.open > button svg { transform: rotate(90deg); }
+  .checks .list { display: none; flex-direction: column; gap: 6px; padding: 6px 0 2px 12px; border-left: 2px solid var(--line); }
+  .checks.open .list { display: flex; }
+  .checks .row { display: grid; grid-template-columns: 78px 1fr; gap: 8px; font-size: 13px; color: var(--ink-2); }
+  .checks .row .who { color: var(--muted); }
+  .checks .row.running .who::after { content: " ·"; animation: blink 1s steps(2) infinite; }
+  @keyframes blink { to { opacity: 0.2; } }
+  .facts { display: flex; flex-direction: column; }
+  .facts div { display: flex; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; }
+  .facts div:last-child { border-bottom: 0; }
+  .facts .src { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .means { display: flex; flex-direction: column; gap: 4px; font-size: 14px; color: var(--ink-2); padding-left: 12px; border-left: 2px solid var(--line); }
+  .cta { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; padding-top: 2px; }
+  .btn { min-height: 46px; padding: 0 20px; border-radius: 999px; background: var(--ink); color: #fff; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; justify-content: center; }
+  .btn.lime { background: var(--lime); color: var(--lime-ink); }
+  .cta.used { display: none; }
+  .more { display: flex; flex-direction: column; gap: 8px; }
+  .more > button { font-size: 13.5px; color: var(--accent); font-weight: 500; }
+  .more .body { display: none; }
+  .more.open .body { display: block; }
+  .tbl { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .tbl th, .tbl td { text-align: left; vertical-align: top; padding: 8px 6px 8px 0; border-bottom: 1px solid var(--line); }
   .tbl th { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
   .tbl tr:last-child td { border-bottom: 0; }
-  .tbl td b { font-family: var(--font-display); font-weight: 600; }
-  .artifact { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 14px; border: 1px solid var(--line-2); background: var(--surface); text-align: left; width: 100%; }
-  .artifact .doc { width: 34px; height: 42px; border-radius: 6px; background: linear-gradient(135deg, var(--primary), #8A82F0); flex-shrink: 0; }
-  .artifact .go { margin-left: auto; color: var(--muted); }
-  .artifact .go svg { width: 18px; height: 18px; }
-  .perm { border: 2px solid var(--primary); border-radius: 14px; background: var(--surface); padding: 12px; display: flex; flex-direction: column; gap: 8px; }
-  .perm .opts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
-  .perm .opts button { min-height: 44px; border-radius: 10px; border: 1px solid var(--line-2); font-size: 12.5px; font-weight: 600; padding: 0 6px; text-align: center; line-height: 1.2; background: var(--surface); }
-  .perm .opts button.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
-  .perm.done { border-color: var(--line); opacity: 0.85; }
-  .perm .decided { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); }
-  .result { border: 1px solid var(--line); border-radius: 12px; background: var(--good-soft); padding: 10px 12px; display: flex; flex-direction: column; gap: 4px; }
-  .result .h { display: flex; align-items: center; gap: 8px; font-weight: 600; color: #145C3B; }
-  .result .h svg { width: 16px; height: 16px; }
-  .result .links { display: flex; gap: 8px; }
-  .result .links button, .linkbtn { font-size: 12.5px; font-weight: 600; color: var(--primary); text-decoration: underline; text-underline-offset: 2px; }
-  .divider { display: flex; align-items: center; gap: 10px; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
-  .divider::before, .divider::after { content: ""; flex: 1; border-top: 1px dashed var(--line-2); }
-  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
-  .chip { min-height: 36px; padding: 0 13px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
-  .chip.primary { background: var(--primary); border-color: var(--primary); color: #fff; }
-  .chip.accent { border-color: var(--primary); color: var(--primary); }
-  .chip.lime { background: var(--lime); border-color: var(--lime); color: var(--lime-ink); }
-  .chip:disabled { opacity: 0.45; cursor: default; }
-  .rise { animation: rise 0.35s ease both; }
-  @keyframes rise { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
-  .waiting { display: flex; flex-direction: column; gap: 6px; padding: 10px 12px; border: 1px dashed var(--line-2); border-radius: 12px; background: var(--surface); }
+  .think { font-size: 13.5px; color: var(--ink-2); display: flex; flex-direction: column; gap: 6px; padding-left: 12px; border-left: 2px solid var(--line); }
+  .perm { border: 1px solid var(--line-2); border-radius: 18px; padding: 18px; display: flex; flex-direction: column; gap: 12px; background: var(--surface); }
+  .perm h3 { font-size: 17px; }
+  .perm .rows { display: flex; flex-direction: column; }
+  .perm .rows div { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .perm .rows div:last-child { border-bottom: 0; }
+  .perm .rows span:first-child { color: var(--muted); }
+  .perm .acts { display: flex; align-items: center; gap: 16px; }
+  .perm .rule { font-size: 12.5px; color: var(--muted); }
+  .perm .rule button { color: var(--accent); font-weight: 500; }
+  .perm.done { border-color: var(--line); }
+  .perm .decided { font-size: 13.5px; color: var(--ink-2); display: flex; align-items: center; gap: 8px; }
+  .perm .decided svg { width: 16px; height: 16px; color: var(--good); }
+  .result { display: flex; align-items: center; gap: 10px; font-size: 15px; }
+  .result svg { width: 18px; height: 18px; color: var(--good); flex-shrink: 0; }
+  .result .u { margin-left: auto; }
+  .divider { font-size: 12px; color: var(--muted); text-align: center; padding: 4px 0; }
+  .note { font-size: 13.5px; color: var(--ink-2); }
 
-  /* ---------- tab views ---------- */
+  /* tabs content */
+  .h { font-family: var(--display); font-size: 22px; font-weight: 600; }
+  .sec { display: flex; flex-direction: column; gap: 10px; }
+  .sec .cap { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+  .goal { display: flex; flex-direction: column; gap: 6px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .goal:last-child { border-bottom: 0; }
+  .goal .r { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .goal .r b { font-weight: 600; }
+  .bar { height: 6px; border-radius: 999px; background: var(--line); overflow: hidden; }
+  .bar i { display: block; height: 100%; background: var(--ink); border-radius: 999px; }
   .stat { display: flex; align-items: baseline; justify-content: space-between; }
-  .stat .v { font-family: var(--font-display); font-size: 26px; font-weight: 600; }
-  .seg { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; }
-  .seg div { height: 10px; border-radius: 4px; background: var(--surface-2); border: 1px solid var(--line); }
-  .seg div.on { background: var(--primary); border-color: var(--primary); }
-  .seg div.half { background: linear-gradient(to right, var(--primary) 50%, var(--surface-2) 50%); }
-  .bar { height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
-  .bar i { display: block; height: 100%; background: var(--primary); border-radius: 999px; }
-  .goal { display: flex; flex-direction: column; gap: 5px; }
-  .goal .r { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-  .status { font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 999px; letter-spacing: 0.04em; text-transform: uppercase; }
-  .status.applied { background: var(--good-soft); color: #145C3B; }
-  .status.scheduled { background: var(--primary-soft); color: var(--primary); }
-  .status.waiting { background: var(--surface-2); color: var(--muted); }
-  .status.proposed { background: var(--warn-soft); color: #7A4E07; }
-  .status.undone { background: var(--bad-soft); color: #8A2323; }
-  .who-row { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; color: var(--ink-2); }
-  .steps { display: flex; flex-direction: column; gap: 8px; }
-  .step { display: flex; align-items: center; gap: 10px; }
+  .stat .v { font-family: var(--display); font-size: 30px; font-weight: 600; }
+  .steps { display: flex; flex-direction: column; }
+  .step { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .step:last-child { border-bottom: 0; }
   .step .dot { width: 20px; height: 20px; border-radius: 50%; border: 1.5px solid var(--line-2); display: grid; place-items: center; flex-shrink: 0; }
-  .step.done .dot { background: var(--good); border-color: var(--good); color: #fff; }
+  .step.done .dot { background: var(--ink); border-color: var(--ink); color: #fff; }
   .step .dot svg { width: 12px; height: 12px; }
-  .assump { display: flex; align-items: center; gap: 10px; font-size: 13px; }
-  .assump input[type=range] { flex: 1; accent-color: var(--primary); }
-  .team-grid { display: grid; grid-template-columns: auto 1fr; gap: 8px 10px; align-items: start; font-size: 13px; color: var(--ink-2); }
-  .fact { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
-  .fact .src { font-size: 12px; color: var(--muted); white-space: nowrap; }
-  .chart-wrap { position: relative; }
-  .chart-tip { position: absolute; pointer-events: none; background: var(--ink); color: #fff; font-size: 12px; padding: 6px 8px; border-radius: 8px; transform: translate(-50%, -110%); white-space: nowrap; display: none; }
+  .assump { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-2); }
+  .assump input[type=range] { flex: 1; accent-color: var(--ink); }
   .legend { display: flex; gap: 14px; font-size: 12px; color: var(--ink-2); }
   .legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; vertical-align: middle; margin-right: 6px; }
+  .chart-wrap { position: relative; }
+  .chart-tip { position: absolute; pointer-events: none; background: var(--ink); color: #fff; font-size: 12px; padding: 6px 8px; border-radius: 8px; transform: translate(-50%, 0); white-space: nowrap; display: none; }
+  .act { display: flex; flex-direction: column; gap: 4px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .act:last-child { border-bottom: 0; }
+  .act .r { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+  .act .st { font-size: 12px; color: var(--muted); }
+  .act .st.applied { color: var(--good); }
+  .fact { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .fact:last-child { border-bottom: 0; }
+  .fact .src { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .team { display: flex; flex-direction: column; }
+  .team div { display: grid; grid-template-columns: 96px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; color: var(--ink-2); }
+  .team div:last-child { border-bottom: 0; }
+  .team div b { color: var(--ink); font-weight: 600; }
+  .rules div { display: grid; grid-template-columns: 96px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; color: var(--ink-2); }
+  .rules div:last-child { border-bottom: 0; }
+  .rules span:first-child { color: var(--muted); }
 
-  /* ---------- picker ---------- */
-  .picker { position: absolute; inset: 0; background: var(--ground); z-index: 4; display: flex; flex-direction: column; gap: 14px; padding: 28px 20px; overflow-y: auto; }
-  .picker h2 { font-size: 24px; }
-  .persona { text-align: left; background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-card); padding: 14px; display: flex; flex-direction: column; gap: 6px; }
-  .persona:hover { border-color: var(--primary); }
-  .persona .n { font-family: var(--font-display); font-weight: 600; font-size: 16px; }
+  /* picker */
+  .picker { position: absolute; inset: 0; background: var(--surface); z-index: 4; display: flex; flex-direction: column; gap: 18px; padding: 40px 26px; }
+  .picker h2 { font-size: 26px; line-height: 1.2; }
+  .persona { border: 1px solid var(--line-2); border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 4px; }
+  .persona:hover { border-color: var(--ink); }
+  .persona b { font-family: var(--display); font-weight: 600; font-size: 16px; }
 
-  /* ---------- team + notes columns ---------- */
-  .team-row { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--ink-2); }
-  .team-row .st { margin-left: auto; font-size: 12px; color: var(--muted); }
-  .team-row .st.busy { color: var(--primary); font-weight: 600; }
+  /* notes panel */
+  .notes .card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 10px; }
   .notes-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
-  .notes-tabs button { min-height: 30px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 12.5px; font-weight: 600; color: var(--ink-2); }
+  .notes-tabs button { min-height: 28px; padding: 0 10px; border-radius: 999px; border: 1px solid var(--line-2); font-size: 12.5px; font-weight: 500; color: var(--ink-2); background: var(--surface); }
   .notes-tabs button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
-  .note-body { display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: var(--ink); max-width: 62ch; }
+  .note-body { display: flex; flex-direction: column; gap: 10px; font-size: 14px; max-width: 60ch; }
   .note-body h3 { font-size: 15px; }
   .note-body ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; }
-  .note-body .callout { background: var(--primary-soft); border-radius: 12px; padding: 10px 12px; font-size: 13.5px; }
-  .sheet { position: absolute; inset: 0; background: rgba(23,24,43,0.35); z-index: 3; display: flex; align-items: flex-end; }
-  .sheet .panel { background: var(--surface); border-radius: 22px 22px 0 0; padding: 14px 16px 20px; width: 100%; max-height: 82%; overflow-y: auto; display: flex; flex-direction: column; gap: 10px; }
-  .sheet .handle { width: 40px; height: 4px; border-radius: 2px; background: var(--line-2); align-self: center; }
-  .btn { min-height: 46px; border-radius: var(--r-btn); display: flex; align-items: center; justify-content: center; font-weight: 600; border: 1px solid var(--line-2); background: var(--surface); }
-  .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .team-row { display: flex; align-items: center; justify-content: space-between; font-size: 13px; color: var(--ink-2); padding: 4px 0; }
+  .team-row .st { color: var(--muted); font-size: 12px; }
+  .team-row .st.busy { color: var(--accent); font-weight: 600; }
 </style>
 
 <div class="top">
-  <div class="brand"><div class="mark">P</div><div><h1>Penny</h1><div class="tagline">A working prototype for Fidelity Labs · concept, not a Fidelity product · synthetic data</div></div></div>
+  <div class="brand"><div class="mark">P</div><div><b>Penny</b><div class="tagline">A working prototype for Fidelity Labs · concept, not a Fidelity product · synthetic data</div></div></div>
   <div class="right" id="topRight"></div>
 </div>
-<div class="shell">
-  <div class="col-app"><div class="phone" id="phone"></div></div>
-  <div class="col-team" id="teamCol"></div>
-  <div class="col-notes" id="notesCol"></div>
+<div class="stage">
+  <div class="phone" id="phone"></div>
+  <div class="notes" id="notes"></div>
 </div>
-<button class="notes-fab" id="notesFab">Product notes</button>
 
 <script>
-/* =========================================================
-   Penny · AI money coach prototype
-   Rules encoded here: Penny (the model) never computes a customer number.
-   Every figure comes from the calculators below (Planner) and is shown as a tool call.
-   Only Doer changes anything, only after a permission prompt. Everything is logged.
-   ========================================================= */
-const ICON = {
+/* Penny · minimalist build.
+   Rules in code: Penny never computes a customer number (Planner does; each is a check the user can open).
+   Only Doer changes anything, only after the customer allows it. Everything is logged. */
+const I = {
   check: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M4 10.5l4 4 8-9"/></svg>',
   chev: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 5l5 5-5 5"/></svg>',
-  doc: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 2h7l4 4v12H5z"/><path d="M12 2v4h4M8 10h5M8 13h5"/></svg>',
-  mic: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="7" y="2" width="6" height="10" rx="3"/><path d="M4 9a6 6 0 0 0 12 0M10 15v3"/></svg>',
   send: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 10h13M11 5l5 5-5 5"/></svg>',
   clip: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 8l-6 6a3 3 0 0 1-4-4l7-7a2 2 0 0 1 3 3l-7 7a1 1 0 0 1-1.5-1.5L11 6"/></svg>',
-  tabPenny: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>',
-  tabOverview: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>',
-  tabPlan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 18l5-6 4 3 7-9"/><path d="M4 21h16"/></svg>',
-  tabActions: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg>',
-  tabYou: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
+  penny: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>',
+  plan: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M4 18l5-6 4 3 7-9"/><path d="M4 21h16"/></svg>',
+  activity: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 12l4 4L19 6"/></svg>',
+  you: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>',
 };
 const fmt = n => Math.round(n).toLocaleString('en-US');
-const fmtK = n => (Math.abs(n) >= 1000 ? (n/1000).toFixed(n >= 100000 ? 0 : 1).replace(/\.0$/, '') + 'k' : fmt(n));
-const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmtK = n => (Math.abs(n) >= 1000 ? (n / 1000).toFixed(n >= 100000 ? 0 : 1).replace(/\.0$/, '') + 'k' : fmt(n));
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-/* ---------- Planner: deterministic calculators ---------- */
+/* Planner: deterministic calculators */
 const Planner = {
-  matchGain(income, fromPct, toPct, capPct) { const a = Math.min(fromPct, capPct), b = Math.min(toPct, capPct); return income * (b - a) / 100; },
-  takeHomeCost(income, deltaPct, taxRate) { return income * deltaPct / 100 / 12 * (1 - taxRate); },
-  payoff(balance, apr, payment) {
-    const r = apr / 12; if (payment <= balance * r) return { months: Infinity, interest: Infinity };
-    const n = -Math.log(1 - r * balance / payment) / Math.log(1 + r);
-    return { months: Math.ceil(n), interest: payment * n - balance };
-  },
-  fvAnnuity(annual, rate, years) { return annual * ((Math.pow(1 + rate, years) - 1) / rate); },
-  fundMonths(target, current, monthly, apy) { let b = current, m = 0; while (b < target && m < 600) { b = b * (1 + apy / 12) + monthly; m++; } return m; },
-  runway(cash, essentials) { return cash / essentials; },
+  matchGain: (income, from, to, cap) => income * (Math.min(to, cap) - Math.min(from, cap)) / 100,
+  takeHome: (income, dPct, tax) => income * dPct / 100 / 12 * (1 - tax),
+  payoff(bal, apr, pay) { const r = apr / 12; if (pay <= bal * r) return { months: Infinity, interest: Infinity }; const n = -Math.log(1 - r * bal / pay) / Math.log(1 + r); return { months: Math.ceil(n), interest: pay * n - bal }; },
+  fv: (annual, rate, years) => annual * ((Math.pow(1 + rate, years) - 1) / rate),
+  fundMonths(target, cur, monthly, apy) { let b = cur, m = 0; while (b < target && m < 600) { b = b * (1 + apy / 12) + monthly; m++; } return m; },
   simulate(p, plan, years, ret, apy) {
     let cash = p.savings, retire = p.k401, card = p.card, loan = p.loan, home = p.homeFund, out = [];
     const matchPct = Math.min(plan.contribPct, p.matchCap);
@@ -243,850 +218,430 @@ const Planner = {
       if (m % 12 === 0) out.push(cash + retire + home - card - loan);
       retire = retire * (1 + ret / 12) + p.income / 12 * (plan.contribPct + matchPct) / 100;
       let extra = 0;
-      if (card > 0) { card = card * (1 + p.cardApr / 12) - plan.cardPayment; if (card < 0) { extra = -card; card = 0; } }
-      else if (plan.redirect) extra = plan.cardPayment;
+      if (card > 0) { card = card * (1 + p.cardApr / 12) - plan.cardPayment; if (card < 0) { extra = -card; card = 0; } } else if (plan.redirect) extra = plan.cardPayment;
       home = home * (1 + apy / 12) + extra + plan.homeMonthly;
       cash = cash * (1 + (plan.hysa ? apy : 0.005) / 12) + plan.autosave;
-      if (loan > 0) { loan = loan * (1 + p.loanApr / 12) - p.loanMin; if (loan < 0) loan = 0; }
+      if (loan > 0) { loan = Math.max(0, loan * (1 + p.loanApr / 12) - p.loanMin); }
     }
     return out;
   },
 };
 
-/* ---------- personas (synthetic) ---------- */
+/* personas, synthetic */
 const PERSONAS = {
-  jordan: {
-    id: 'jordan', name: 'Jordan', age: 34, role: 'Product manager', segment: 'Mid career', returning: true,
-    story: 'Competent and busy. Optimizes everything at work and nothing at home. Has a spreadsheet from January he has not opened since.',
-    income: 128000, taxRate: 0.25, essentials: 4600, checkingBuffer: 1000, freeCash: 650,
-    savings: 9000, k401: 41000, contribPct: 3, matchCap: 6, card: 6800, cardApr: 0.2499, cardMin: 210, loan: 0, loanApr: 0, loanMin: 0, homeFund: 14500, homeTarget: 60000, homeYears: 4,
-    memory: [
-      { fact: 'Keep 1,000 in checking', src: 'you · Sept 9, 2026' },
-      { fact: 'Home fund is off-limits', src: 'you · Sept 2025 · reconfirmed Sept 2026' },
-      { fact: 'Match: 100% up to 6%', src: 'Reader · SPD p.12' },
-      { fact: 'Essentials about 4,600 a month', src: 'Analyst · 90 days' },
-      { fact: 'Prefers reasoning over encouragement', src: 'inferred', inferred: true },
-    ],
-  },
-  maya: {
-    id: 'maya', name: 'Maya', age: 26, role: 'Data analyst, first job', segment: 'Early career', returning: false,
-    story: 'Knows she "should invest" and is afraid of locking money away and of picking wrong. The benefits enrollment felt like a tax form, so she closed it.',
-    income: 72000, taxRate: 0.21, essentials: 3000, checkingBuffer: 1000, freeCash: 420,
-    savings: 1200, k401: 0, contribPct: 0, matchCap: 4, card: 0, cardApr: 0, cardMin: 0, loan: 28400, loanApr: 0.055, loanMin: 310, homeFund: 0, homeTarget: 0, homeYears: 0,
-    fundTarget: 9000, autosave: 230,
-    memory: [
-      { fact: 'Keep 1,000 in checking', src: 'you · Sept 9, 2026' },
-      { fact: 'Safety net is the goal this year', src: 'you · Sept 9, 2026' },
-      { fact: 'Match: 100% up to 4%', src: 'Reader · SPD p.9' },
-      { fact: 'Essentials about 3,000 a month', src: 'Analyst · 90 days' },
-      { fact: 'Worried about locking money away', src: 'inferred', inferred: true },
-    ],
-  },
+  jordan: { id: 'jordan', name: 'Jordan', age: 34, role: 'Product manager', segment: 'Mid career', income: 128000, tax: 0.25, essentials: 4600, buffer: 1000, free: 650, savings: 9000, k401: 41000, contribPct: 3, matchCap: 6, card: 6800, cardApr: 0.2499, cardMin: 210, loan: 0, loanApr: 0, loanMin: 0, homeFund: 14500, homeTarget: 60000,
+    story: 'Contributes 3% with a 6% match available. Card at 24.99%. Saving for a first home. Acts, but does not sustain.',
+    memory: [['Keep 1,000 in checking', 'you · Sept 2026'], ['Home fund is off-limits', 'you · Sept 2025'], ['Match: 100% up to 6%', 'plan document, p.12'], ['Essentials about 4,600 a month', '90 days of spending']] },
+  maya: { id: 'maya', name: 'Maya', age: 26, role: 'Data analyst, first job', segment: 'Early career', income: 72000, tax: 0.21, essentials: 3000, buffer: 1000, free: 420, savings: 1200, k401: 0, contribPct: 0, matchCap: 4, card: 0, cardApr: 0, cardMin: 0, loan: 28400, loanApr: 0.055, loanMin: 310, homeFund: 0, homeTarget: 0, fundTarget: 9000, autosave: 230,
+    story: 'Not enrolled in the 401(k). 1,200 in savings. Student loans. Has never acted; afraid of locking money away.',
+    memory: [['Keep 1,000 in checking', 'you · Sept 2026'], ['Safety net is the goal this year', 'you · Sept 2026'], ['Match: 100% up to 4%', 'plan document, p.9'], ['Essentials about 3,000 a month', '90 days of spending']] },
 };
-
-/* ---------- derived numbers per persona (Planner runs once, reused everywhere) ---------- */
 function derive(p) {
   const d = {};
   if (p.id === 'jordan') {
-    d.matchGain = Planner.matchGain(p.income, p.contribPct, p.matchCap, p.matchCap);            // 3,840
-    d.takeHome = Planner.takeHomeCost(p.income, p.matchCap - p.contribPct, p.taxRate);           // 240
-    d.matchMonthly = p.income * (p.matchCap - p.contribPct) / 100 / 12;                         // 320
-    d.match10y = Planner.fvAnnuity(d.matchGain, 0.06, 10);                                      // ~50.6k
-    d.payFast = Planner.payoff(p.card, p.cardApr, p.cardMin + 300);                             // 16 mo
-    d.paySlow = Planner.payoff(p.card, p.cardApr, p.cardMin);                                   // 55 mo
-    d.interestSaved = d.paySlow.interest - d.payFast.interest;                                  // ~3.4k
-    d.cardCostYear = p.card * p.cardApr;                                                        // ~1,700
-    d.houseAll = p.homeFund * Math.pow(1 + 0.042, 4) + Planner.fvAnnuity(p.freeCash * 12, 0.042, 4); // ~51k
-    d.runway = Planner.runway(p.savings, p.essentials);                                         // 1.96
-    d.sooner = Planner.payoff(p.card, p.cardApr, p.cardMin);
+    d.matchGain = Planner.matchGain(p.income, p.contribPct, p.matchCap, p.matchCap); d.takeHome = Planner.takeHome(p.income, p.matchCap - p.contribPct, p.tax);
+    d.match10y = Planner.fv(d.matchGain, 0.06, 10); d.fast = Planner.payoff(p.card, p.cardApr, p.cardMin + 300); d.slow = Planner.payoff(p.card, p.cardApr, p.cardMin);
+    d.saved = d.slow.interest - d.fast.interest; d.cardYear = p.card * p.cardApr; d.houseAll = p.homeFund * Math.pow(1.042, 4) + Planner.fv(p.free * 12, 0.042, 4); d.runway = p.savings / p.essentials;
   } else {
-    d.matchGain = Planner.matchGain(p.income, 0, p.matchCap, p.matchCap);                       // 2,880
-    d.takeHome = Planner.takeHomeCost(p.income, p.matchCap, p.taxRate);                         // ~190
-    d.match10y = Planner.fvAnnuity(d.matchGain, 0.06, 10);                                      // ~38k
-    d.fundMonths = Planner.fundMonths(p.fundTarget, p.savings, p.autosave, 0.042);              // ~33-34
-    d.fundMonthsNoMatch = Planner.fundMonths(p.fundTarget, p.savings, p.autosave + d.takeHome, 0.042); // if she skipped the match
-    d.runway = Planner.runway(p.savings, p.essentials);                                         // 0.4
-    d.lostMatch3y = Planner.fvAnnuity(d.matchGain, 0.06, 3);
+    d.matchGain = Planner.matchGain(p.income, 0, p.matchCap, p.matchCap); d.takeHome = Planner.takeHome(p.income, p.matchCap, p.tax); d.match10y = Planner.fv(d.matchGain, 0.06, 10);
+    d.fundMonths = Planner.fundMonths(p.fundTarget, p.savings, p.autosave, 0.042); d.fundFast = Planner.fundMonths(p.fundTarget, p.savings, p.autosave + d.takeHome, 0.042); d.lost3y = Planner.fv(d.matchGain, 0.06, 3); d.runway = p.savings / p.essentials;
   }
   return d;
 }
 
-/* ---------- state ---------- */
+/* state */
 let S = null;
-const DEFAULT_ASSUMP = { ret: 0.06, apy: 0.042 };
-function freshState(pid) {
+function fresh(pid) {
   const p = PERSONAS[pid];
-  return {
-    persona: pid, tab: 'penny', notesTab: 'moment', stage: 'moment', date: 'Sept 9, 2026',
-    thread: [], actions: [], allow: [], memory: p.memory.map(m => ({ ...m })),
-    plan: { version: p.id === 'jordan' ? 3 : 0, contribPct: p.contribPct, cardPayment: p.cardMin, autosave: 0, hysa: false, redirect: false, homeMonthly: 0,
-      log: p.id === 'jordan' ? [
-        { v: 3, when: 'Sept 9, 2026', by: 'Planner', what: 'Card balance rose 1,400; payoff moved to 510 a month; home date to 2031.' },
-        { v: 2, when: 'Jan 14, 2026', by: 'Reader', what: 'You uploaded a spreadsheet; goals and amounts imported.' },
-        { v: 1, when: 'Sept 2025', by: 'Planner', what: 'First plan from linked accounts and the plan document.' } ] : [] },
-    assump: { ...DEFAULT_ASSUMP },
-    live: { cash: p.savings, card: p.card, k401: p.k401, homeFund: p.homeFund, contribPct: p.contribPct, income: p.income },
-    team: { Penny: 'idle', Reader: 'idle', Analyst: 'idle', Planner: 'idle', Guardian: 'idle', Doer: 'idle', Watcher: 'next check 7:40 tomorrow', 'Advisor desk': 'idle' },
-    flags: {}, quiet: 0,
-  };
+  return { persona: pid, tab: 'penny', notesTab: 'moment', stage: 'moment', date: 'Sept 9, 2026', thread: [], actions: [], rules: [], memory: p.memory.map(m => m.slice()),
+    plan: { version: pid === 'jordan' ? 3 : 0, contribPct: p.contribPct, cardPayment: p.cardMin, autosave: 0, hysa: false, redirect: false, homeMonthly: 0 },
+    assump: { ret: 0.06, apy: 0.042 }, live: { cash: p.savings, card: p.card, k401: p.k401, homeFund: p.homeFund, contribPct: p.contribPct, income: p.income },
+    team: { Penny: 'idle', Reader: 'idle', Analyst: 'idle', Planner: 'idle', Guardian: 'idle', Doer: 'idle', Watcher: 'next check 7:40 tomorrow', 'Advisor desk': 'idle' } };
 }
-function save() { try { localStorage.setItem('penny.v1', JSON.stringify(S)); } catch (e) {} }
-function load() { try { const s = JSON.parse(localStorage.getItem('penny.v1')); if (s && s.persona && PERSONAS[s.persona]) return s; } catch (e) {} return null; }
-function P() { return PERSONAS[S.persona]; }
-function D() { return derive(P()); }
+function save() { try { localStorage.setItem('penny.v2', JSON.stringify(S)); } catch (e) {} }
+function load() { try { const s = JSON.parse(localStorage.getItem('penny.v2')); if (s && PERSONAS[s.persona]) return s; } catch (e) {} return null; }
+const P = () => PERSONAS[S.persona], D = () => derive(P());
+let sampleFn; (async () => { try { sampleFn = window.claude && window.claude.use ? await window.claude.use('sample') : null; } catch (e) { sampleFn = null; } renderTop(); })();
 
-/* ---------- sample (live Penny) ---------- */
-let sampleFn = undefined; // undefined = not resolved yet, null = unavailable
-(async () => { try { sampleFn = window.claude && window.claude.use ? await window.claude.use('sample') : null; } catch (e) { sampleFn = null; } renderTop(); })();
-
-/* =========================================================
-   Thread engine
-   ========================================================= */
-function push(turn) { S.thread.push(turn); save(); renderPhone(); renderTeam(); scrollBottom(); }
-function agentTurn(time, blocks, extra) { return { type: 'agent', time, blocks, ...(extra || {}) }; }
+/* thread primitives */
 const T = {
-  text: html => ({ t: 'text', html }),
-  tool: (agent, name, res, running) => ({ t: 'tool', agent, name, res, running: !!running }),
-  think: (lines, open) => ({ t: 'think', lines, open: !!open }),
-  table: (head, rows) => ({ t: 'table', head, rows }),
-  artifact: (title, sub, tab) => ({ t: 'artifact', title, sub, tab }),
-  perm: (id, agent, title, sub, opts) => ({ t: 'perm', id, agent, title, sub, opts, decided: null }),
-  result: (title, sub, links) => ({ t: 'result', title, sub, links: links || [] }),
-  chips: items => ({ t: 'chips', items }),
-  waiting: (title, sub) => ({ t: 'waiting', title, sub }),
+  say: html => ({ t: 'say', html }),
+  big: (n, l) => ({ t: 'big', n, l }),
+  checks: rows => ({ t: 'checks', rows, open: false }),               // rows: [who, what, running?]
+  facts: rows => ({ t: 'facts', rows }),
+  means: lines => ({ t: 'means', lines }),
+  cta: (primary, act, links) => ({ t: 'cta', primary, act, links: links || [] }), // links: [{label, act}]
+  more: (label, kind, body) => ({ t: 'more', label, kind, body, open: false }),   // kind: table | think
+  perm: (id, title, rows, rule) => ({ t: 'perm', id, title, rows, rule, decided: null }),
+  result: (text, undoId) => ({ t: 'result', text, undoId }),
+  note: text => ({ t: 'note', text }),
 };
-function setTeam(patch) { Object.assign(S.team, patch); renderTeam(); }
-function busy(names, ms) { const patch = {}; names.forEach(n => patch[n] = 'working'); setTeam(patch); setTimeout(() => { const back = {}; names.forEach(n => back[n] = n === 'Watcher' ? 'next check 7:40 tomorrow' : 'idle'); setTeam(back); }, ms || 1400); }
+const agent = (time, blocks, x) => ({ type: 'agent', time, blocks, ...(x || {}) });
+function push(turn) { S.thread.push(turn); save(); renderPhone(); scrollBottom(); }
+function busy(names, ms) { names.forEach(n => S.team[n] = 'working'); renderNotes(); setTimeout(() => { names.forEach(n => S.team[n] = n === 'Watcher' ? 'next check 7:40 tomorrow' : 'idle'); renderNotes(); }, ms || 1400); }
+function settle(turn, ms) { setTimeout(() => { turn.blocks.forEach(b => { if (b.t === 'checks') b.rows.forEach(r => r[2] = false); }); save(); renderPhone(false); }, ms || 1400); }
 
-/* resolve running tools after a delay (shows the team working in parallel) */
-function settleTools(turn, delay) {
-  setTimeout(() => { turn.blocks.forEach(b => { if (b.t === 'tool') b.running = false; }); save(); renderPhone(); }, delay || 1400);
-}
-
-/* ---------- scenario: opening moment ---------- */
+/* ---- scenario: Jordan ---- */
 function startMoment() {
-  const p = P(), d = D();
-  S.stage = 'moment';
+  const p = P(), d = D(); S.stage = 'moment';
   if (p.id === 'jordan') {
-    S.thread.push({ type: 'notif', text: 'Three things are competing for 650 a month. Nine days to fix one of them for free.' });
-    S.thread.push({ type: 'divider', text: 'tap opens the thread' });
-    push(agentTurn('Sept 9 · 8:02', [
-      T.text(`Your benefits window opened yesterday and closes <b>Sept 17</b>. Your plan matches 100% up to 6%; you contribute 3%. That is <b>${fmt(d.matchGain)} a year</b> you are not collecting. Here is who checked what:`),
-      T.tool('Watcher', 'Noticed', 'benefits window opened Sept 8, closes Sept 17'),
-      T.tool('Reader', 'Read Summary Plan Description', 'match 100% to 6%, p.12'),
-      T.tool('Reader', 'Read paystub', 'contribution 3%, Aug 31'),
-      T.tool('Analyst', 'Cash flow, 90 days', `about ${fmt(p.freeCash)} free after essentials and your ${fmt(p.checkingBuffer)} buffer`),
-      T.tool('Guardian', 'Checked', 'a real deadline, first moment this month, outside quiet hours'),
-      T.text('Watcher also saw the card is up 1,400 since June. I can lay out the three options side by side, or leave it until you ask.'),
-      T.chips([{ label: 'Lay it out', kind: 'primary', act: 'layout' }, { label: 'Not now', act: 'notnow' }, { label: 'Why are you telling me this?', kind: 'accent', act: 'why' }]),
+    push(agent('Today, 8:02', [
+      T.big(fmt(d.matchGain), 'a year of employer match you are not collecting'),
+      T.say('Your benefits window closes <b>Sept 17</b>. Raising your 401(k) from 3% to 6% claims it. I can show you the trade-off in your own numbers.'),
+      T.checks([['Watcher', 'benefits window opened Sept 8, closes Sept 17'], ['Reader', 'plan matches 100% up to 6% · p.12'], ['Reader', 'you contribute 3% · Aug paystub'], ['Guardian', 'a real deadline, first message this month']]),
+      T.cta('Show me', 'layout', [{ label: 'Not now', act: 'notnow' }]),
     ]));
   } else {
-    S.thread.push({ type: 'notif', text: 'You are leaving 240 a month of free money on the table. Want the 90-second version?' });
-    S.thread.push({ type: 'divider', text: 'tap opens the thread' });
-    push(agentTurn('Sept 9 · 8:02', [
-      T.text(`Hi Maya. Pay-day. Your employer will match 100% of what you put into the 401(k), up to 4% of pay. You are enrolled at 0%, so that is <b>${fmt(d.matchGain)} a year</b> nobody is collecting. Here is who checked what:`),
-      T.tool('Reader', 'Read payroll record', 'eligible since July 2025, not enrolled'),
-      T.tool('Reader', 'Read Summary Plan Description', 'match 100% to 4%, p.9'),
-      T.tool('Analyst', 'Cash flow, 90 days', `about ${fmt(p.freeCash)} free after essentials of ${fmt(p.essentials)}`),
-      T.tool('Guardian', 'Checked', 'first moment this month, outside quiet hours, no product mentioned'),
-      T.text('No forms. If you have your paystub and the benefits PDF, I can read them and show you the whole picture in about three minutes.'),
-      T.chips([{ label: 'Show me', kind: 'primary', act: 'showme' }, { label: 'Not now', act: 'notnow' }, { label: 'Why are you telling me this?', kind: 'accent', act: 'why' }]),
+    push(agent('Today, 8:02', [
+      T.big(fmt(d.matchGain), 'a year your employer will add to your 401(k), if you enroll'),
+      T.say('You are eligible and not enrolled. No forms: send me your paystub and the benefits PDF and I will show you the whole picture.'),
+      T.checks([['Reader', 'eligible since July 2025, not enrolled'], ['Reader', 'plan matches 100% up to 4% · p.9'], ['Guardian', 'first message this month']]),
+      T.cta('Read my documents', 'attach', [{ label: 'Not now', act: 'notnow' }]),
     ]));
   }
 }
-
-/* ---------- chip actions ---------- */
-function chipAct(act, turnIdx, label) {
-  // disable chips in that turn
-  const turn = S.thread[turnIdx]; if (turn) turn.blocks.forEach(b => { if (b.t === 'chips') b.used = label; });
+function chip(act, turnIdx, label) {
+  const turn = S.thread[turnIdx]; if (turn) turn.blocks.forEach(b => { if (b.t === 'cta') b.used = true; });
   if (label) S.thread.push({ type: 'user', text: label });
   const p = P(), d = D();
   switch (act) {
-    case 'why':
-      push(agentTurn('now', [
-        T.text('Because three signals lined up, and Guardian agreed it was worth your attention: a real deadline, money you are entitled to, and a balance moving the wrong way.'),
-        T.text('The rules I work under: one moment at a time. Only real deadlines can trigger one. If you ignore two in a row, I back off. Quiet hours are yours, 9pm to 8am.'),
-        T.chips(p.id === 'jordan' ? [{ label: 'Okay, lay it out', kind: 'primary', act: 'layout' }, { label: 'Not now', act: 'notnow' }] : [{ label: 'Okay, show me', kind: 'primary', act: 'showme' }, { label: 'Not now', act: 'notnow' }]),
-      ])); break;
-    case 'notnow':
-      push(agentTurn('now', [
-        T.tool('Guardian', 'Noted', 'one ignore · will not raise this again before Sept 15'),
-        T.text(p.id === 'jordan' ? 'Okay. I will bring it back on Sept 15, two days before the window closes, and then leave it alone.' : 'Okay. I will check in once more on the next pay-day, and then leave it alone.'),
-        T.chips(p.id === 'jordan' ? [{ label: 'Actually, lay it out', kind: 'accent', act: 'layout' }] : [{ label: 'Actually, show me', kind: 'accent', act: 'showme' }]),
-      ])); break;
-    case 'layout': jordanMemoryCheck(); break;
-    case 'stilltrue': S.flags.homeOff = true; jordanDecide(); break;
-    case 'changed': S.flags.homeOff = false; S.memory = S.memory.map(m => m.fact === 'Home fund is off-limits' ? { fact: 'Home fund may be used if needed', src: 'you · Sept 9, 2026' } : m); jordanDecide(true); break;
-    case 'showme': mayaUnderstand(); break;
-    case 'attach': mayaAttach(); break;
-    case 'buffer': S.flags.buffer = label; S.memory[0] = { fact: `Keep ${label} in checking`, src: 'you · Sept 9, 2026' }; mayaRemember(label); break;
-    case 'mayaplan': mayaPlan(); break;
-    case 'mayadecide': mayaDecide(); break;
-    case 'worried': mayaWorried(); break;
+    case 'notnow': push(agent('now', [T.say(p.id === 'jordan' ? 'Okay. I will bring it back on Sept 15, two days before the window closes, and then leave it alone.' : 'Okay. I will check once more on the next pay-day, then leave it alone.'), T.checks([['Guardian', 'one ignore · quiet until then']]), T.cta(p.id === 'jordan' ? 'Actually, show me' : 'Actually, read them', p.id === 'jordan' ? 'layout' : 'attach')])); break;
+    case 'why': push(agent('now', [T.say('Three things lined up: a real deadline, money you are entitled to, and a balance moving the wrong way. One message at a time, only for real deadlines, and I back off after two ignores.')])); break;
+    case 'layout': jordanDecide(); break;
+    case 'changed': S.memory = S.memory.map(m => m[0] === 'Home fund is off-limits' ? ['Home fund may be used if needed', 'you · Sept 2026'] : m); push(agent('now', [T.say('Noted. Nothing in this plan needs it, so the recommendation stands.'), T.checks([['Penny', 'remembered: home fund may be used if needed']])])); break;
     case 'actions': p.id === 'jordan' ? jordanActions() : mayaActions(); break;
-    case 'challenge': focusComposer(p.id === 'jordan' ? 'e.g. What if I would rather buy in 2029?' : 'e.g. What if I skip the 401(k) for a year?'); break;
-    case 'advisor': bookAdvisor(); break;
+    case 'else': focusComposer(p.id === 'jordan' ? 'Tell me what you would rather do' : 'Tell me what worries you'); break;
+    case 'advisor': push(agent('now', [T.perm('adv', 'Book a licensed advisor', [['When', 'Thursday, 4:30pm'], ['They get', 'your plan, your numbers, this record'], ['Cost', 'included in your plan']], null)])); break;
     case 'jump1': p.id === 'jordan' ? jordanAway1() : mayaAway1(); break;
     case 'jump2': p.id === 'jordan' ? jordanAway2() : mayaAway2(); break;
     case 'jump3': jordanAway3(); break;
-    case 'notyet': push(agentTurn('now', [T.text('Okay. The brief stays in Actions, and I will not ask again until the fund is within six months of the target.')])); break;
+    case 'attach': mayaAttach(); break;
+    case 'buffer': S.memory[0] = [`Keep ${label} in checking`, 'you · Sept 2026']; mayaPlan(label); break;
+    case 'worried': mayaWorried(); break;
+    case 'v4': S.plan.version = 4; S.plan.homeMonthly = 1150; S.plan.cardPayment = 210; push(agent('now', [T.say('Plan v4 is built around 2029. The interest cost is written into the plan so future-you knows it was a choice.'), T.checks([['Planner', 'rebuilt plan · house by 2029, card at minimum']])])); break;
+    case 'keep': push(agent('now', [T.say('Keeping v3. The 2029 numbers will still be here if it comes back up.')])); break;
     case 'openplan': switchTab('plan'); break;
-    case 'openactions': switchTab('actions'); break;
-    default: break;
+    case 'openactivity': switchTab('activity'); break;
   }
   save(); renderPhone();
 }
-
-/* ---------- Jordan ---------- */
-function jordanMemoryCheck() {
-  S.stage = 'memory';
-  push(agentTurn('8:04', [
-    T.tool('Penny', 'Recalled', '"home fund is off-limits" · you, Sept 2025'),
-    T.text('One question before I lay it out. Last September you said the home fund is off-limits, whatever we do. Still true?'),
-    T.chips([{ label: 'Still true', kind: 'primary', act: 'stilltrue' }, { label: 'Things changed', act: 'changed' }]),
-  ]));
-}
-function jordanDecide(homeAvailable) {
-  const p = P(), d = D();
-  S.stage = 'decide';
-  busy(['Penny', 'Planner', 'Guardian'], 1800);
-  const turn = agentTurn('8:09', [
-    T.think([
-      `Three uses of the same ${fmt(p.freeCash)}: match, card, house. ${homeAvailable ? 'The home fund may be used, but nothing here needs it.' : 'Constraint from memory: the home fund is not touched, so option C means new money only.'}`,
-      'Ask Planner for the match value and the payoff schedule. Guaranteed returns rank first.',
-      `Check with Guardian: does raising to ${p.matchCap}% break the ${fmt(p.checkingBuffer)} buffer? Is any of this fund selection?`,
-    ], true),
-    T.tool('Planner', 'Run match calculator', `3% → 6% adds ${fmt(d.matchGain)} a year from employer`, true),
-    T.tool('Planner', 'Run payoff schedule', `${fmt(p.cardMin + 300)} a month clears the card in ${d.payFast.months} months, not ${d.paySlow.months}`, true),
-    T.tool('Guardian', 'Checked', `buffer holds (take-home down ${fmt(d.takeHome)}, free cash ${fmt(p.freeCash)}) · no fund selection involved`, true),
-    T.table(['Option', 'Return', 'What it is worth'], [
-      ['<b>A</b> 401(k) 3% → 6%', '100%, day one', `${fmt(d.matchGain)} a year from your employer. About ${fmtK(d.match10y)} in 10 years.`],
-      ['<b>B</b> 300 more to the card', '24.99%, guaranteed', `${fmtK(d.interestSaved)} interest avoided. Gone in ${d.payFast.months} months.`],
-      ['<b>C</b> All 650 to the house', '4.2%', `About ${fmtK(d.houseAll)} by year 4, still short of 60k, and the card keeps costing ${fmt(d.cardCostYear)} a year.`],
-    ]),
-    T.text(`<b>A, then B, then C.</b> Take-home drops ${fmt(d.takeHome)} from Sept 15. The card is gone in ${d.payFast.months} months. Then the ${fmt(p.cardMin + 300)} flows to the house. Home lands in about 5 years, not 4; the card is why.`),
-    T.text('<span class="sm">Confidence: high. What would change my mind: a job change in the next 6 months, or a balance transfer under 5%. Which funds to hold is a licensed advisor\'s call; Advisor desk can book one with a brief.</span>'),
-    T.chips([{ label: 'Turn into actions', kind: 'primary', act: 'actions' }, { label: 'Challenge this', kind: 'accent', act: 'challenge' }, { label: 'Book an advisor', act: 'advisor' }]),
+function jordanDecide() {
+  const p = P(), d = D(); S.stage = 'decide'; busy(['Penny', 'Planner', 'Guardian'], 1800);
+  const turn = agent('8:04', [
+    T.say(`<b>Raise your 401(k) to 6%, then send 300 more a month to the card.</b> The house waits 16 months and still lands.`),
+    T.means([`Take-home down ${fmt(d.takeHome)} from Sept 15`, `Card gone in ${d.fast.months} months, not ${d.slow.months}`, `Home in about 5 years instead of 4`]),
+    T.checks([['Planner', `match adds ${fmt(d.matchGain)} a year · about ${fmtK(d.match10y)} in 10 years`, true], ['Planner', `510 a month clears the card in ${d.fast.months} months`, true], ['Guardian', `your 1,000 buffer holds · home fund untouched, as you asked`, true], ['Penny', 'assumes the home fund stays off-limits · say if that changed']]),
+    T.cta('Do this', 'actions', [{ label: 'Something else', act: 'else' }]),
+    T.more('Compare the three options', 'table', { head: ['Option', 'Return', 'Worth'], rows: [
+      ['<b>A</b> 401(k) to 6%', '100%, day one', `${fmt(d.matchGain)} a year from your employer`],
+      ['<b>B</b> 300 more to the card', '24.99%', `${fmtK(d.saved)} interest avoided`],
+      ['<b>C</b> All 650 to the house', '4.2%', `about ${fmtK(d.houseAll)} by year 4, still short of 60k`] ] }),
+    T.more('How I got here', 'think', ['Three uses of the same 650. Your constraint: the home fund is not touched.', 'Guaranteed returns first: 100% on the match, then 24.99% on the card, then 4.2% savings.', 'Checked the buffer holds. Checked nothing here is fund selection; that stays with a licensed advisor.', 'What would change my mind: a job change in 6 months, or a balance transfer under 5%.']),
   ]);
-  push(turn); settleTools(turn, 1600);
+  push(turn); settle(turn, 1600);
 }
 function jordanActions() {
-  const p = P(), d = D();
-  S.stage = 'act';
-  S.actions.push(
-    { id: 'a1', title: 'Raise 401(k) contribution to 6%', status: 'proposed', by: 'Doer', detail: `Via your plan provider · effective Sept 15 · take-home about ${fmt(d.takeHome)} less · undo any payroll`, log: [{ who: 'Penny', what: 'Proposed Sept 9, 8:12' }] },
-    { id: 'a2', title: 'Card autopay 210 → 510 a month', status: 'proposed', by: 'Doer', detail: 'From your checking, starting Oct 1 · pause any time', log: [{ who: 'Penny', what: 'Proposed Sept 9, 8:12' }] },
-    { id: 'a3', title: 'Redirect 510 to the home fund', status: 'waiting', by: 'Doer', detail: 'Fires when the card hits 0, about 16 months from now. Doer will ask again then.', log: [{ who: 'Penny', what: 'Queued Sept 9, 8:12' }] },
-  );
-  push(agentTurn('8:12', [
-    T.text('Three actions, in order. Doer will carry them out, and I will ask you before each one.'),
-    T.perm('a1', 'Doer', 'Change your 401(k) contribution from 3% to 6%', `Via your plan provider · effective Sept 15 · take-home about ${fmt(d.takeHome)} less · undo any payroll`,
-      [{ label: 'Allow once', kind: 'once', primary: true }, { label: 'Always allow up to 1% a year', kind: 'always', cap: 'Doer may raise your 401(k) up to 1% a year' }, { label: 'Deny', kind: 'deny' }]),
-  ]));
+  const d = D(); S.stage = 'act';
+  S.actions.push({ id: 'a1', title: 'Raise 401(k) to 6%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'a2', title: 'Card autopay 210 to 510', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'a3', title: 'Then 510 a month to the home fund', status: 'waiting', when: 'about early 2028', log: ['Queued by Penny · will ask again'] });
+  push(agent('8:05', [T.say('Two things to allow, one at a time. Nothing moves until you say so.'), T.perm('a1', 'Raise your 401(k) to 6%', [['Effective', 'Sept 15, next payroll'], ['Take-home', `about ${fmt(d.takeHome)} a month less`], ['Undo', 'any payroll']], 'Doer may raise your 401(k) up to 1% a year without asking')]));
 }
-function jordanAfterPerm(id) {
+function afterPerm(id) {
   const p = P(), d = D();
-  if (id === 'a1') {
-    push(agentTurn('8:13', [
-      T.perm('a2', 'Doer', 'Raise your card autopay from 210 to 510 a month', 'From your checking, starting Oct 1 · pause any time',
-        [{ label: 'Allow once', kind: 'once', primary: true }, { label: 'Always allow within plan', kind: 'always', cap: 'Doer may adjust autopay amounts within the current plan' }, { label: 'Deny', kind: 'deny' }]),
-    ]));
-  } else if (id === 'a2') {
-    push(agentTurn('8:14', [
-      T.waiting('3. Redirect 510 to the home fund · waits', 'Fires when the card hits 0, about 16 months from now. Doer will ask again then, not act on today\'s answer.'),
-      T.text('That is everything for today. Watcher will read your Sept 15 paystub and tell you in one line whether the change landed.'),
-      T.chips([{ label: 'Jump ahead to Sept 16', kind: 'lime', act: 'jump1' }, { label: 'See the plan', act: 'openplan' }]),
-    ]));
-  } else if (id === 'a3') {
-    S.live.homeFund += 0; S.plan.redirect = true; S.plan.homeMonthly = 510;
-    push(agentTurn('Jan 9, 2028', [
-      T.text('Done. From Feb 1 the 510 goes to the home fund. At 4.2% you reach 60k around mid 2031.'),
-      T.chips([{ label: 'Jump ahead to March 2029', kind: 'lime', act: 'jump3' }]),
-    ]));
-  } else if (id === 'adv') {
-    push(agentTurn('now', [
-      T.tool('Advisor desk', 'Booked', 'Thursday 4:30pm · licensed advisor · brief attached'),
-      T.text('Booked for Thursday at 4:30. The advisor has your plan, your numbers, and this record. Nothing about fund choice or the mortgage is mine to decide; it is theirs, and you.'),
-    ]));
-  }
+  if (id === 'a1') push(agent('8:06', [T.perm('a2', 'Card autopay from 210 to 510 a month', [['Starts', 'Oct 1, from checking'], ['Pause', 'any time'], ['Card gone', `in ${d.fast.months} months`]], 'Doer may adjust autopay within this plan without asking')]));
+  else if (id === 'a2') push(agent('8:07', [T.say('That is everything for today. On Sept 16 I will check your paystub and tell you in one line whether it landed.'), T.note('The third step, moving the 510 to the home fund when the card hits zero, waits about 16 months. I will ask again then.'), T.cta('Skip ahead to Sept 16', 'jump1', [{ label: 'See the plan', act: 'openplan' }])], { skipKind: true }));
+  else if (id === 'a3') { S.plan.redirect = true; push(agent('Jan 9, 2028', [T.say('Done. From Feb 1 the 510 goes to the home fund. You reach 60k around mid 2031.'), T.cta('Skip ahead to 2029', 'jump3')])); }
+  else if (id === 'adv') push(agent('now', [T.result('Booked for Thursday, 4:30pm. The advisor has your plan and this record.')]));
+  else if (id === 'm1') push(agent('8:06', [T.perm('m2', 'Open a 4.2% savings account, move 230 a month into it', [['First transfer', 'Oct 1'], ['Access', 'same-day, any time'], ['Fund done', `in ${d.fundMonths} months`]], 'Doer may adjust autosave within this plan without asking')]));
+  else if (id === 'm2') push(agent('8:07', [T.say('That is everything for today. On Oct 1 I will check your paystub and tell you in one line whether the enrollment landed.'), T.cta('Skip ahead to month 8', 'jump1', [{ label: 'See the plan', act: 'openplan' }])]));
+  else if (id === 'm3') { S.plan.autosave = 530; push(agent('June 2027', [T.say('Done. 530 a month from July. The fund lands next spring instead of the year after. The rest of the raise is yours; I will not mention it again.'), T.cta('See what happened', 'openactivity')])); }
 }
 function jordanAway1() {
   S.stage = 'away'; S.date = 'Dec 4, 2026';
-  S.thread.push({ type: 'divider', text: "Penny's team worked while you were away" });
-  const a1 = S.actions.find(a => a.id === 'a1'); if (a1 && a1.status === 'applied') a1.log.push({ who: 'Watcher', what: 'Verified Sept 16: landed, take-home 238 lower' });
-  push(agentTurn('Sept 16 · 7:40', [T.tool('Watcher', 'Read paystub', 'Sept 15'), T.text('It landed. Your contribution is 6% and your employer put in 320. Take-home was 238 lower, close to the 240 Planner estimated.')]));
-  setTimeout(() => {
-    S.live.card = 6410;
-    push(agentTurn('Oct 2 · 7:40', [T.tool('Watcher', 'Read card statement', 'payment 510 posted Oct 1'), T.text('First 510 cleared. Card at 6,410. On track for early 2028.')]));
-  }, 900);
-  setTimeout(() => {
-    S.quiet = 2;
-    push(agentTurn('Dec 4 · 7:40', [T.tool('Watcher', 'Checked 4 accounts', 'nothing unusual'), T.tool('Guardian', 'Decided', 'nothing worth a message'), T.text('<span class="sm">No message sent.</span>'), T.chips([{ label: 'Jump ahead to Jan 2028', kind: 'lime', act: 'jump2' }, { label: 'See what the team did', act: 'openactions' }])]));
-  }, 1800);
+  const a = S.actions.find(x => x.id === 'a1'); if (a && a.status === 'applied') a.log.push('Verified by Watcher, Sept 16');
+  S.thread.push({ type: 'divider', text: 'While you were away' });
+  push(agent('Sept 16', [T.say('It landed. You are at 6% and your employer added 320. Take-home was 238 lower, close to the 240 I estimated.'), T.checks([['Watcher', 'read the Sept 15 paystub']])]));
+  setTimeout(() => { S.live.card = 6410; push(agent('Oct 2', [T.say('First 510 cleared. Card at 6,410.'), T.checks([['Watcher', 'read the card statement']])])); }, 900);
+  setTimeout(() => { S.thread.push({ type: 'divider', text: 'October to December: nothing worth a message' }); push(agent('Dec 4', [T.cta('Skip ahead to Jan 2028', 'jump2', [{ label: 'See what happened', act: 'openactivity' }])])); }, 1800);
 }
 function jordanAway2() {
   S.date = 'Jan 9, 2028'; S.live.card = 0; S.live.cash = 13800; S.live.homeFund = 15800;
-  const a2 = S.actions.find(a => a.id === 'a2'); if (a2) { a2.status = 'applied'; a2.log.push({ who: 'Watcher', what: 'Verified Jan 9, 2028: card at 0 after 16 payments' }); }
+  const a = S.actions.find(x => x.id === 'a2'); if (a) { a.status = 'applied'; a.log.push('Card at zero, Jan 2028 · verified by Watcher'); }
   S.thread.push({ type: 'divider', text: 'Jan 2028' });
-  push(agentTurn('Jan 9, 2028 · 7:40', [
-    T.tool('Watcher', 'Read card statement', 'balance 0'),
-    T.text('The card is at zero. Sixteen months, as planned. You said in 2026 that the 510 should go to the home fund next. Still what you want?'),
-    T.perm('a3', 'Doer', 'Move the 510 autopay to your home fund', 'Same date, same account, new destination · pause any time',
-      [{ label: 'Allow', kind: 'once', primary: true }, { label: 'Change amount', kind: 'deny' }, { label: 'Not now', kind: 'deny' }]),
-  ]));
+  push(agent('Jan 9', [T.say('The card is at zero. Sixteen months, as planned. You said the 510 should go to the home fund next. Still what you want?'), T.checks([['Watcher', 'card statement: balance 0']]), T.perm('a3', 'Move the 510 autopay to your home fund', [['From', 'Feb 1, same account'], ['Pause', 'any time'], ['60k reached', 'around mid 2031']], null)]));
 }
 function jordanAway3() {
   S.date = 'Mar 2029'; S.live.homeFund = 26900;
-  S.actions.push({ id: 'adv', title: 'Advisor brief prepared', status: 'scheduled', by: 'Advisor desk', detail: 'Your plan, your numbers, this record, your questions. You can edit it before it goes.', log: [{ who: 'Advisor desk', what: 'Prepared Mar 2029' }] });
-  push(agentTurn('Mar 2029', [
-    T.tool('Advisor desk', 'Prepared a brief', 'your plan, your numbers, this record, your questions'),
-    T.text('You are about 14 months from 60k. Buying a home is where I stop and a licensed advisor starts. Advisor desk has a brief ready so the call starts at minute one.'),
-    T.artifact('Advisor brief', 'Prepared by Advisor desk · you can edit it first', 'actions'),
-    T.chips([{ label: 'Book an advisor', kind: 'primary', act: 'advisor' }, { label: 'Not yet', act: 'notyet' }]),
-  ]));
-}
-function bookAdvisor() {
-  push(agentTurn('now', [
-    T.perm('adv', 'Advisor desk', 'Book a licensed advisor and send the brief', 'Thursday 4:30pm · the brief includes your plan, numbers, and this record',
-      [{ label: 'Book it', kind: 'once', primary: true }, { label: 'Edit the brief first', kind: 'deny' }, { label: 'Not now', kind: 'deny' }]),
-  ]));
+  S.actions.push({ id: 'adv', title: 'Advisor brief prepared', status: 'scheduled', when: 'Mar 2029', log: ['Prepared by Advisor desk'] });
+  push(agent('Mar 2029', [T.say('You are about 14 months from 60k. Buying a home is where I stop and a licensed advisor starts. There is a brief ready so the call starts at minute one.'), T.checks([['Advisor desk', 'brief: your plan, your numbers, this record']]), T.cta('Book an advisor', 'advisor', [{ label: 'Not yet', act: 'notyet' }])]));
 }
 
-/* ---------- Maya ---------- */
-function mayaUnderstand() {
-  S.stage = 'understand';
-  push(agentTurn('8:03', [
-    T.text('Drop your paystub and the benefits PDF here. Reader will go through them and I will show you what we found, with page numbers. You will not type a single number.'),
-    T.chips([{ label: 'Attach paystub + plan PDF', kind: 'primary', act: 'attach' }]),
-  ]));
-}
+/* ---- scenario: Maya ---- */
 function mayaAttach() {
-  S.thread.push({ type: 'user', text: 'Summary_Plan_Description.pdf', att: true });
-  S.thread.push({ type: 'user', text: 'paystub_Aug31.pdf', att: true });
+  S.stage = 'understand'; S.thread.push({ type: 'user', text: 'Summary_Plan_Description.pdf · paystub_Aug31.pdf', att: true });
   busy(['Reader', 'Analyst', 'Guardian'], 2200);
-  const turn = agentTurn('working', [
-    T.tool('Reader', 'Read document', '31 pages', true),
-    T.tool('Reader', 'Extract plan terms', 'match, vesting, loans, default investment', true),
-    T.tool('Analyst', 'Cross-check with paystub', 'gross 6,000 a month, no contribution', true),
-    T.tool('Guardian', 'Checked the facts', 'before I use them', true),
-    T.text('Here is what Reader found. Tap anything that is wrong and I will fix it.'),
-    T.table(['Fact', 'Source'], [
-      ['Match: 100% of your contribution, up to 4% of pay', 'SPD p.9'],
-      ['Vesting: immediate on the match', 'SPD p.11'],
-      ['Loans and hardship withdrawals allowed', 'SPD p.22'],
-      ['Default investment: target-date fund, set by the plan', 'SPD p.16'],
-      ['You contribute 0%', 'paystub Aug 31'],
-      ['Essentials about 3,000 a month', 'Analyst · 90 days'],
-    ]),
-    T.text('One thing nobody can read: how much do you want to stay in checking, no matter what?'),
-    T.chips([{ label: '500', act: 'buffer' }, { label: '1,000', kind: 'primary', act: 'buffer' }, { label: '1,500', act: 'buffer' }]),
+  const turn = agent('reading', [
+    T.say('Here is what I found. Tap anything that is wrong.'),
+    T.facts([['Match: 100% of what you put in, up to 4%', 'p.9'], ['Loans and hardship withdrawals allowed', 'p.22'], ['You contribute 0%', 'paystub'], ['Essentials about 3,000 a month', '90 days']]),
+    T.checks([['Reader', '31 pages read', true], ['Analyst', 'paystub cross-checked', true], ['Guardian', 'facts checked before use', true]]),
+    T.say('One thing nobody can read: how much should always stay in checking?'),
+    T.cta('1,000', 'buffer', [{ label: '500', act: 'buffer' }, { label: '2,000', act: 'buffer' }]),
   ]);
-  push(turn); settleTools(turn, 2000);
+  push(turn); settle(turn, 2000);
 }
-function mayaRemember(label) {
-  push(agentTurn('just now', [
-    T.tool('Penny', 'Remembered', `keep ${label} in checking · safety net is the goal · you, Sept 9`),
-    T.text('Noted. I will quote that back to you any time the team relies on it. Ready to see the whole picture?'),
-    T.chips([{ label: 'Show me the plan', kind: 'primary', act: 'mayaplan' }]),
-  ]));
-}
-function mayaPlan() {
-  const p = P(), d = D();
-  S.stage = 'plan'; S.plan.version = 1; S.plan.log.unshift({ v: 1, when: 'Sept 9, 2026', by: 'Planner', what: 'First plan from two documents and three linked accounts.' });
-  busy(['Planner', 'Guardian'], 1500);
-  const turn = agentTurn('8:06', [
-    T.tool('Planner', 'Run projection', '10 years, 6% return, 4.2% savings, no raises', true),
-    T.tool('Planner', 'Runway', `${d.runway.toFixed(1)} months of essentials in savings`, true),
-    T.tool('Guardian', 'Checked', 'assumptions stated, no product named, no fund named', true),
-    T.text(`Planner built your first plan. The honest number first: your savings cover <b>${d.runway.toFixed(1)} months</b> of essentials. That is the thing to fix, and it is fixable. The order: keep your buffer, take the match, build a three-month fund, keep the loans at minimum.`),
-    T.artifact('Plan v1', 'Order of operations · timeline · assumptions', 'plan'),
-    T.text('There is one decision in it that is really yours: enroll at 4% now, or build the fund first?'),
-    T.chips([{ label: 'Lay it out', kind: 'primary', act: 'mayadecide' }]),
+function mayaPlan(buffer) {
+  const p = P(), d = D(); S.stage = 'decide'; S.plan.version = 1; busy(['Planner', 'Guardian'], 1600);
+  const turn = agent('8:05', [
+    T.big(d.runway.toFixed(1), 'months your savings would cover if income stopped'),
+    T.say('That is the thing to fix, and it is fixable. <b>Enroll at 4% now, and move 230 a month into savings.</b> Your buffer never moves.'),
+    T.means([`Take-home down about ${fmt(d.takeHome)} a month`, `Employer adds ${fmt(d.matchGain)} a year`, `Three-month fund in ${d.fundMonths} months`]),
+    T.checks([['Planner', `4% costs ${fmt(d.takeHome)} a month of take-home · employer adds ${fmt(d.matchGain)} a year`, true], ['Planner', `230 a month at 4.2% reaches 9,000 in ${d.fundMonths} months`, true], ['Guardian', `${buffer} buffer holds · the fund's default investment is the plan's choice, not ours`, true], ['Penny', `remembered: keep ${buffer} in checking`]]),
+    T.cta('Do this', 'actions', [{ label: 'I am worried about locking money away', act: 'worried' }]),
+    T.more('Why not the fund first?', 'table', { head: ['Option', 'Fund done', 'Cost'], rows: [['<b>A</b> Enroll now and save 230', `${d.fundMonths} months`, `${fmt(d.takeHome)} a month of take-home`], ['<b>B</b> Fund first, enroll later', `${d.fundFast} months`, `${fmtK(d.lost3y)} of match gone if later is three years. It usually is.`]] }),
+    T.more('How I got here', 'think', ['Her fear is liquidity. The buffer stays in checking either way, and the 230 goes to a savings account she can pull from the same day.', 'Only the 4% goes somewhere slow, and even that can be borrowed against under the plan (p.22).', 'Match first: it is a 100% return on day one. Loans at 5.5% stay at minimum until the fund is done.']),
   ]);
-  push(turn); settleTools(turn, 1300);
-}
-function mayaDecide() {
-  const p = P(), d = D();
-  S.stage = 'decide';
-  busy(['Penny', 'Planner', 'Guardian'], 1800);
-  const turn = agentTurn('8:08', [
-    T.think([
-      'Her fear is liquidity: locking money away and then needing it. The buffer stays in checking either way.',
-      'Ask Planner: what does the match cost her in take-home, and how long does the fund take with and without it?',
-      'Ask Guardian: does enrolling break the buffer? Is a target-date default a fund pick on my part? No, it is the plan\'s default, not mine.',
-    ], true),
-    T.tool('Planner', 'Run match calculator', `0% → 4% adds ${fmt(d.matchGain)} a year from employer · take-home down about ${fmt(d.takeHome)} a month`, true),
-    T.tool('Planner', 'Run fund schedule', `${fmt(p.autosave)} a month at 4.2% reaches ${fmt(p.fundTarget)} in ${d.fundMonths} months`, true),
-    T.tool('Planner', 'Run fund schedule', `skip the match, save ${fmt(p.autosave + d.takeHome)} instead: ${d.fundMonthsNoMatch} months, and ${fmtK(d.lostMatch3y)} of match lost over 3 years`, true),
-    T.tool('Guardian', 'Checked', `buffer holds (${fmt(p.savings)} in savings, ${fmt(p.freeCash)} free, ${fmt(d.takeHome + p.autosave)} committed) · default investment is the plan's, not ours`, true),
-    T.table(['Option', 'Fund done', 'What it costs'], [
-      ['<b>A</b> Enroll at 4% now and save 230', `${d.fundMonths} months`, `${fmt(d.takeHome)} a month of take-home. You get ${fmt(d.matchGain)} a year back from your employer.`],
-      ['<b>B</b> Fund first, enroll later', `${d.fundMonthsNoMatch} months`, `${fmtK(d.lostMatch3y)} of match gone if "later" is three years. It usually is.`],
-    ]),
-    T.text(`<b>Both, now.</b> Fund-first gets you there ${d.fundMonths - d.fundMonthsNoMatch} months sooner, and it costs ${fmt(d.matchGain)} of employer money for every year you wait. Your ${fmt(p.savings)} buffer never moves either way. If you ever need the 401(k) money, the plan allows loans and hardship withdrawals (p.22).`),
-    T.text('<span class="sm">Confidence: high. What would change my mind: a job change before the fund reaches one month, or your essentials rising above 3,300. Which fund to hold inside the 401(k) is the plan\'s default choice; changing it is a licensed advisor\'s call.</span>'),
-    T.chips([{ label: 'Turn into actions', kind: 'primary', act: 'actions' }, { label: 'I am worried about locking money away', kind: 'accent', act: 'worried' }, { label: 'Challenge this', act: 'challenge' }]),
-  ]);
-  push(turn); settleTools(turn, 1700);
+  push(turn); settle(turn, 1500);
 }
 function mayaWorried() {
-  const p = P(), d = D();
-  push(agentTurn('8:10', [
-    T.tool('Reader', 'Read Summary Plan Description', 'loans up to 50% of balance, hardship withdrawals, p.22'),
-    T.text(`That worry is the right one to have, so here is exactly what stays reachable. Your ${fmt(p.savings)} buffer stays in checking and savings. The 230 a month goes to a savings account you can pull from the same day. Only the ${fmt(d.takeHome)} a month goes somewhere slow, and even that can be borrowed against under your plan's rules.`),
-    T.text('If you would rather start at 2% and step up in three months, that works too. It costs about 120 a month of match while you wait.'),
-    T.chips([{ label: 'Okay, 4% now', kind: 'primary', act: 'actions' }, { label: 'Challenge this', act: 'challenge' }]),
-  ]));
+  const d = D();
+  push(agent('8:07', [T.say(`Fair. Your 1,200 stays where it is. The 230 a month goes to savings you can pull from the same day. Only the ${fmt(d.takeHome)} a month goes somewhere slow, and the plan lets you borrow against it.`), T.say('If it feels better, start at 2% and step up in three months. That costs about 120 a month of match while you wait.'), T.checks([['Reader', 'loans up to 50% of balance, hardship withdrawals · p.22']]), T.cta('Okay, 4% now', 'actions', [{ label: 'Something else', act: 'else' }])]));
 }
 function mayaActions() {
-  const p = P(), d = D();
-  S.stage = 'act';
-  S.actions.push(
-    { id: 'm1', title: 'Enroll in the 401(k) at 4%', status: 'proposed', by: 'Doer', detail: `Via your plan provider · next payroll Sept 30 · take-home about ${fmt(d.takeHome)} less · the plan's default target-date fund · undo any payroll`, log: [{ who: 'Penny', what: 'Proposed Sept 9, 8:12' }] },
-    { id: 'm2', title: 'Auto-move 230 a month to a 4.2% savings account', status: 'proposed', by: 'Doer', detail: 'Opens a savings account in your name · first transfer Oct 1 · pause any time', log: [{ who: 'Penny', what: 'Proposed Sept 9, 8:12' }] },
-  );
-  push(agentTurn('8:12', [
-    T.text('Two actions. Doer will carry them out, and I will ask you before each one.'),
-    T.perm('m1', 'Doer', 'Enroll you in the 401(k) at 4%', `Via your plan provider · next payroll Sept 30 · take-home about ${fmt(d.takeHome)} less · the plan's default fund · undo any payroll`,
-      [{ label: 'Allow once', kind: 'once', primary: true }, { label: 'Always allow up to 1% a year', kind: 'always', cap: 'Doer may raise your 401(k) up to 1% a year' }, { label: 'Deny', kind: 'deny' }]),
-  ]));
-}
-function mayaAfterPerm(id) {
-  if (id === 'm1') {
-    push(agentTurn('8:13', [
-      T.perm('m2', 'Doer', 'Open a 4.2% savings account and move 230 a month into it', 'In your name · first transfer Oct 1 · you can pull money out the same day',
-        [{ label: 'Allow once', kind: 'once', primary: true }, { label: 'Always allow within plan', kind: 'always', cap: 'Doer may adjust autosave amounts within the current plan' }, { label: 'Deny', kind: 'deny' }]),
-    ]));
-  } else if (id === 'm2') {
-    push(agentTurn('8:14', [
-      T.text('That is everything for today. Watcher will read your Sept 30 paystub and tell you in one line whether the enrollment landed. After that, you will hear from me when something is worth it, and not otherwise.'),
-      T.chips([{ label: 'Jump ahead to month 8', kind: 'lime', act: 'jump1' }, { label: 'See the plan', act: 'openplan' }]),
-    ]));
-  } else if (id === 'm3') {
-    S.plan.autosave = 530; S.live.income = 78000;
-    push(agentTurn('June 2027', [T.text('Done. 530 a month from July. The fund now lands in about 11 months instead of 25. The other 40% of the raise is yours; I will not mention it again.'), T.chips([{ label: 'See what the team did', act: 'openactions' }])]));
-  }
+  const d = D(); S.stage = 'act';
+  S.actions.push({ id: 'm1', title: 'Enroll in the 401(k) at 4%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] }, { id: 'm2', title: 'Auto-save 230 a month at 4.2%', status: 'proposed', when: S.date, log: ['Proposed by Penny'] });
+  push(agent('8:08', [T.say('Two things to allow, one at a time. Nothing moves until you say so.'), T.perm('m1', 'Enroll you in the 401(k) at 4%', [['Effective', 'Sept 30, next payroll'], ['Take-home', `about ${fmt(d.takeHome)} a month less`], ['Undo', 'any payroll']], 'Doer may raise your 401(k) up to 1% a year without asking')]));
 }
 function mayaAway1() {
   S.stage = 'away'; S.date = 'May 2027'; S.live.cash = 3040; S.live.k401 = 3900; S.live.contribPct = 4;
-  const m1 = S.actions.find(a => a.id === 'm1'); if (m1 && m1.status === 'applied') m1.log.push({ who: 'Watcher', what: 'Verified Oct 1, 2026: enrolled at 4%, take-home 188 lower' });
-  S.thread.push({ type: 'divider', text: "Penny's team worked while you were away" });
-  push(agentTurn('Oct 1, 2026 · 7:40', [T.tool('Watcher', 'Read paystub', 'Sept 30'), T.text('It landed. You are in at 4% and your employer added 240. Take-home was 188 lower, close to the 190 Planner estimated.')]));
-  setTimeout(() => push(agentTurn('Jan 8, 2027 · 7:40', [T.tool('Watcher', 'Checked 3 accounts', 'nothing unusual'), T.tool('Guardian', 'Decided', 'nothing worth a message'), T.text('<span class="sm">No message sent.</span>')])), 900);
-  setTimeout(() => push(agentTurn('May 3, 2027 · 7:40', [T.tool('Watcher', 'Read savings balance', '3,040'), T.text('Your fund just passed <b>one month</b> of essentials. Eight months ago it covered twelve days. Nothing to do; I just thought you would want to know.'), T.chips([{ label: 'Jump ahead to June 2027', kind: 'lime', act: 'jump2' }, { label: 'See what the team did', act: 'openactions' }])])), 1800);
+  const a = S.actions.find(x => x.id === 'm1'); if (a && a.status === 'applied') a.log.push('Verified by Watcher, Oct 1');
+  S.thread.push({ type: 'divider', text: 'While you were away' });
+  push(agent('Oct 1, 2026', [T.say('It landed. You are in at 4% and your employer added 240. Take-home was 188 lower, close to the 190 I estimated.'), T.checks([['Watcher', 'read the Sept 30 paystub']])]));
+  setTimeout(() => { S.thread.push({ type: 'divider', text: 'November to April: nothing worth a message' }); push(agent('May 3, 2027', [T.big('1', 'month of essentials in your fund, up from 12 days'), T.say('Nothing to do. I thought you would want to know.'), T.cta('Skip ahead to June', 'jump2', [{ label: 'See what happened', act: 'openactivity' }])])); }, 1400);
 }
 function mayaAway2() {
   S.date = 'June 2027';
-  S.actions.push({ id: 'm3', title: 'Raise autosave 230 → 530 a month', status: 'proposed', by: 'Doer', detail: '60% of your raise, after tax · the rest stays yours', log: [{ who: 'Watcher', what: 'Raise detected June 2027' }, { who: 'Penny', what: 'Proposed June 2027' }] });
-  push(agentTurn('June 2, 2027 · 7:40', [
-    T.tool('Watcher', 'Read paystub', 'gross up 500 a month · a raise'),
-    T.tool('Planner', 'Run fund schedule', '530 a month reaches 9,000 in about 11 months'),
-    T.text('Congratulations on the raise. Before it disappears into everyday spending, one proposal: send 60% of it to the fund and keep the rest. The fund would be done next spring instead of the year after.'),
-    T.perm('m3', 'Doer', 'Raise your autosave from 230 to 530 a month', 'From July 1 · pause any time',
-      [{ label: 'Allow once', kind: 'once', primary: true }, { label: 'Change amount', kind: 'deny' }, { label: 'Not now', kind: 'deny' }]),
-  ]));
+  S.actions.push({ id: 'm3', title: 'Raise autosave 230 to 530', status: 'proposed', when: 'June 2027', log: ['Raise noticed by Watcher', 'Proposed by Penny'] });
+  push(agent('June 2', [T.say('You got a raise. Before it disappears into everyday spending, one idea: send 60% of it to the fund and keep the rest.'), T.checks([['Watcher', 'gross up 500 a month on the June paystub'], ['Planner', '530 a month finishes the fund in about 11 months']]), T.perm('m3', 'Raise your autosave from 230 to 530', [['From', 'July 1'], ['Fund done', 'about 11 months'], ['Pause', 'any time']], null)]));
 }
 
-/* ---------- permissions ---------- */
-function decide(permId, optIdx, turnIdx) {
-  const turn = S.thread[turnIdx]; const perm = turn.blocks.find(b => b.t === 'perm' && b.id === permId); if (!perm || perm.decided) return;
-  const opt = perm.opts[optIdx]; perm.decided = opt.label;
-  const act = S.actions.find(a => a.id === permId);
-  if (opt.kind === 'deny') {
-    if (act) { act.status = 'proposed'; act.log.push({ who: 'you', what: `${opt.label} · ${S.date}` }); }
-    push(agentTurn('now', [T.tool('Doer', 'Stood down', `${opt.label.toLowerCase()} · nothing changed`), T.text('Okay. It stays in Actions as a proposal, and I will not nag you about it.'), T.chips(permId === 'a1' ? [{ label: 'Actually, allow it', kind: 'accent', act: 'actions' }] : [])]));
-    save(); renderPhone(); return;
-  }
-  if (opt.kind === 'always' && opt.cap) S.allow.push({ cap: opt.cap, since: S.date });
+/* ---- permissions ---- */
+function decide(id, choice, turnIdx) {
+  const turn = S.thread[turnIdx]; const perm = turn.blocks.find(b => b.t === 'perm' && b.id === id); if (!perm || perm.decided) return;
+  perm.decided = choice; const act = S.actions.find(a => a.id === id);
+  if (choice === 'Not now') { if (act) act.log.push(`Not now · ${S.date}`); push(agent('now', [T.say('Okay. It stays in Activity as a proposal, and I will not nag you about it.'), T.cta('Actually, allow it', id === 'a1' || id === 'm1' ? 'actions' : 'openactivity')])); return; }
+  if (choice === 'Always') S.rules.push(perm.rule);
   busy(['Doer'], 1200);
-  if (act) { act.status = permId === 'a2' || permId === 'm2' || permId === 'm3' ? 'scheduled' : 'applied'; act.log.push({ who: 'you', what: `${opt.label} · ${S.date}` }, { who: 'Doer', what: `Executed · ${permId === 'a1' ? 'plan provider confirmation 4F7K2' : permId === 'm1' ? 'plan provider confirmation 9Q2LM' : permId === 'adv' ? 'booked Thursday 4:30pm' : 'bank confirmation'}` }); }
-  if (permId === 'a1') { S.plan.contribPct = 6; S.live.contribPct = 6; }
-  if (permId === 'a2') { S.plan.cardPayment = 510; }
-  if (permId === 'a3') { S.plan.redirect = true; }
-  if (permId === 'm1') { S.plan.contribPct = 4; S.live.contribPct = 4; }
-  if (permId === 'm2') { S.plan.autosave = 230; S.plan.hysa = true; }
-  const resultBlocks = {
-    a1: [T.tool('Doer', 'Changed contribution', '3% → 6% · plan provider confirmation 4F7K2'), T.result('Done · effective Sept 15', `${S.date}, 8:13 · Watcher will read the Sept 15 paystub and tell you in one line whether it landed.`, ['Undo', 'Receipt'])],
-    a2: [T.tool('Doer', 'Set autopay', '510 a month from Oct 1 · bank confirmation'), T.result('Scheduled · first run Oct 1', `${S.date}, 8:14 · pause any time.`, ['Pause', 'Receipt'])],
-    a3: [T.tool('Doer', 'Moved autopay destination', 'home fund · from Feb 1'), T.result('Done · 510 a month to the home fund', 'Jan 9, 2028 · pause any time.', ['Undo', 'Receipt'])],
-    m1: [T.tool('Doer', 'Enrolled', '4% pre-tax · plan default fund · confirmation 9Q2LM'), T.result('Done · effective Sept 30', `${S.date}, 8:13 · Watcher will read the Sept 30 paystub and confirm.`, ['Undo', 'Receipt'])],
-    m2: [T.tool('Doer', 'Opened savings account', '4.2% APY · 230 a month from Oct 1'), T.result('Scheduled · first transfer Oct 1', `${S.date}, 8:14 · pull money out any time.`, ['Pause', 'Receipt'])],
-    m3: [T.tool('Doer', 'Changed autosave', '230 → 530 from July 1'), T.result('Done', 'June 2027 · pause any time.', ['Undo', 'Receipt'])],
-    adv: [],
-  }[permId] || [];
-  if (resultBlocks.length) push(agentTurn('now', resultBlocks)); else { save(); renderPhone(); }
-  setTimeout(() => { if (P().id === 'jordan') jordanAfterPerm(permId); else mayaAfterPerm(permId); }, 700);
+  const conf = { a1: 'plan provider 4F7K2', m1: 'plan provider 9Q2LM', adv: 'booked' }[id] || 'bank confirmation';
+  if (act) { act.status = id === 'a2' || id === 'm2' || id === 'm3' ? 'scheduled' : 'applied'; act.log.push(`Allowed by you · ${S.date}`, `Done by Doer · ${conf}`); }
+  if (id === 'a1') { S.plan.contribPct = 6; S.live.contribPct = 6; } if (id === 'a2') S.plan.cardPayment = 510; if (id === 'a3') S.plan.redirect = true;
+  if (id === 'm1') { S.plan.contribPct = 4; S.live.contribPct = 4; } if (id === 'm2') { S.plan.autosave = 230; S.plan.hysa = true; }
+  const text = { a1: 'Done. Effective Sept 15.', a2: 'Scheduled. First payment Oct 1.', a3: 'Done. From Feb 1.', m1: 'Done. Effective Sept 30.', m2: 'Scheduled. First transfer Oct 1.', m3: 'Done. From July 1.' }[id];
+  if (text) push(agent('now', [T.result(text, id)])); else { save(); renderPhone(); }
+  setTimeout(() => afterPerm(id), 700);
 }
-function undo(actId) {
-  const act = S.actions.find(a => a.id === actId); if (!act || act.status === 'undone') return;
-  act.status = 'undone'; act.log.push({ who: 'you', what: `Undone · ${S.date}` }, { who: 'Doer', what: 'Reverted · confirmation sent' });
-  if (actId === 'a1') { S.plan.contribPct = 3; S.live.contribPct = 3; }
-  if (actId === 'a2') { S.plan.cardPayment = 210; }
-  if (actId === 'm1') { S.plan.contribPct = 0; S.live.contribPct = 0; }
-  if (actId === 'm2') { S.plan.autosave = 0; S.plan.hysa = false; }
-  push(agentTurn('now', [T.tool('Doer', 'Reverted', act.title), T.text('Undone. Nothing else changed, and the proposal stays in Actions if you want it back.')]));
+function undo(id) {
+  const act = S.actions.find(a => a.id === id); if (!act || act.status === 'undone') return;
+  act.status = 'undone'; act.log.push(`Undone by you · ${S.date}`, 'Reverted by Doer');
+  if (id === 'a1') { S.plan.contribPct = 3; S.live.contribPct = 3; } if (id === 'a2') S.plan.cardPayment = 210; if (id === 'm1') { S.plan.contribPct = 0; S.live.contribPct = 0; } if (id === 'm2') { S.plan.autosave = 0; S.plan.hysa = false; }
+  push(agent('now', [T.say('Undone. Nothing else changed. The proposal stays in Activity if you want it back.')]));
 }
 
-/* ---------- free text: live Penny or scripted ---------- */
-function contextForModel() {
+/* ---- free text ---- */
+function facts() {
   const p = P(), d = D(), s = S;
-  const facts = p.id === 'jordan' ? {
-    income: p.income, essentials_per_month: p.essentials, checking_buffer: p.checkingBuffer, free_cash_per_month: p.freeCash,
-    savings: s.live.cash, k401_balance: s.live.k401, contribution_pct: s.live.contribPct, employer_match: '100% up to 6%',
-    card_balance: s.live.card, card_apr: '24.99%', card_min_payment: 210, home_fund: s.live.homeFund, home_target: 60000, home_target_years: 4,
-    planner_match_gain_per_year: Math.round(d.matchGain), planner_take_home_cost_per_month: Math.round(d.takeHome), planner_match_value_10y: Math.round(d.match10y),
-    planner_card_payoff_at_510: `${d.payFast.months} months`, planner_card_payoff_at_210: `${d.paySlow.months} months`, planner_interest_saved: Math.round(d.interestSaved), planner_card_cost_per_year: Math.round(d.cardCostYear),
-    planner_house_if_all_650: Math.round(d.houseAll), runway_months: d.runway.toFixed(1), memory: s.memory.map(m => m.fact), current_plan_version: s.plan.version, date: s.date,
-  } : {
-    income: s.live.income, essentials_per_month: p.essentials, checking_buffer: p.checkingBuffer, free_cash_per_month: p.freeCash, savings: s.live.cash, k401_balance: s.live.k401, contribution_pct: s.live.contribPct, employer_match: '100% up to 4%',
-    student_loans: p.loan, loan_apr: '5.5%', loan_min_payment: p.loanMin, fund_target: p.fundTarget,
-    planner_match_gain_per_year: Math.round(d.matchGain), planner_take_home_cost_per_month: Math.round(d.takeHome), planner_fund_months_at_230: d.fundMonths, planner_fund_months_if_skipping_match: d.fundMonthsNoMatch, planner_match_lost_3y: Math.round(d.lostMatch3y),
-    runway_months: d.runway.toFixed(1), plan_loans_allowed: 'yes, SPD p.22', memory: s.memory.map(m => m.fact), date: s.date,
-  };
-  return facts;
+  return p.id === 'jordan' ? { income: p.income, essentials_per_month: p.essentials, checking_buffer: p.buffer, free_cash_per_month: p.free, savings: s.live.cash, k401_balance: s.live.k401, contribution_pct: s.live.contribPct, employer_match: '100% up to 6%', card_balance: s.live.card, card_apr: '24.99%', card_min_payment: 210, home_fund: s.live.homeFund, home_target: 60000, planner_match_gain_per_year: Math.round(d.matchGain), planner_take_home_cost_per_month: Math.round(d.takeHome), planner_match_value_10y: Math.round(d.match10y), planner_card_payoff_at_510: `${d.fast.months} months`, planner_card_payoff_at_210: `${d.slow.months} months`, planner_interest_saved: Math.round(d.saved), planner_card_cost_per_year: Math.round(d.cardYear), runway_months: d.runway.toFixed(1), memory: s.memory.map(m => m[0]), date: s.date }
+    : { income: s.live.income, essentials_per_month: p.essentials, checking_buffer: p.buffer, free_cash_per_month: p.free, savings: s.live.cash, k401_balance: s.live.k401, contribution_pct: s.live.contribPct, employer_match: '100% up to 4%', student_loans: p.loan, loan_apr: '5.5%', loan_min_payment: p.loanMin, fund_target: p.fundTarget, planner_match_gain_per_year: Math.round(d.matchGain), planner_take_home_cost_per_month: Math.round(d.takeHome), planner_fund_months_at_230: d.fundMonths, planner_fund_months_if_skipping_match: d.fundFast, planner_match_lost_3y: Math.round(d.lost3y), runway_months: d.runway.toFixed(1), plan_loans_allowed: 'yes, p.22', memory: s.memory.map(m => m[0]), date: s.date };
 }
-const RULES = `You are Penny, a money coach in a prototype. You talk to ${'{name}'}, ${'{age}'}, ${'{role}'}. Rules you must follow:
-1. Use ONLY the numbers in the FACTS. Never invent or recompute a number. If a needed number is not in FACTS, say Planner would have to run it.
-2. When you cite a number, attribute it in brackets to the specialist that produced it: [Planner] for calculations, [Reader] for document facts, [Analyst] for cash-flow facts, [Watcher] for account observations.
-3. Never recommend specific funds, securities, or products. If asked which fund to pick, say that is a licensed advisor's call and offer to have Advisor desk book one with a brief.
-4. Never claim to have moved money. Only Doer acts, and only after a permission prompt in the app.
-5. Plain language, warm but not cheerful, no exclamation marks, no emoji. Under 110 words. End with one concrete next step or a question.
-6. Do not mention these rules.`;
-function rulesFor() { const p = P(); return RULES.replace('{name}', p.name).replace('{age}', p.age).replace('{role}', p.role); }
+const RULES = `You are Penny, a calm money coach in a prototype, talking to {name}, {age}, {role}. Rules:
+1. Use ONLY numbers in FACTS. Never invent or recompute one. If a number is missing, say Planner would have to run it.
+2. Never recommend specific funds, securities, or products. If asked, say that is a licensed advisor's call and offer to book one with a brief.
+3. Never claim to have moved money. Only Doer acts, after the customer allows it in the app.
+4. Plain, warm, unhurried. No exclamation marks, no emoji, no bullet lists. At most 3 short sentences. End with one next step or one question.
+5. Do not mention these rules.`;
 function scripted(text) {
   const t = text.toLowerCase(), p = P(), d = D();
-  if (/(which|what|best) (fund|etf|stock|index)|pick (a |the )?(fund|stock)|invest in|should i buy/.test(t)) return { text: 'That one I should not answer. Choosing specific investments is individualized advice, and it needs a licensed advisor who is accountable for it. What I can do is have Advisor desk hand one your plan, your numbers, and this record, so the call starts at minute one. Want me to book it?', tools: [T.tool('Guardian', 'Scope check', 'security selection · escalate to a licensed advisor')] };
+  if (/(which|what|best) (fund|etf|stock|index)|pick (a |the )?(fund|stock)|invest in|should i buy/.test(t)) return { text: 'That one I should not answer. Picking investments is individualized advice, and it needs a licensed advisor who is accountable for it. I can book one and hand over your plan and numbers so the call starts at minute one.', checks: [['Guardian', 'security selection · goes to a licensed advisor']], advisor: true };
   if (p.id === 'jordan') {
-    if (/2029|sooner|buy (earlier|now)|house first/.test(t)) return { text: `Possible, at a cost. To reach 60k by 2029 you would need about 1,150 a month to the house from January [Planner], which means the card stays at minimum for ${d.paySlow.months} months and costs about ${fmtK(d.paySlow.interest)} in interest [Planner]. If 2029 matters more than that, I will rewrite the plan around it. Do you want v4 built that way?`, tools: [T.tool('Planner', 'Run projection', 'home at 60k by 2029 · 1,150 a month from January'), T.tool('Planner', 'Run payoff schedule', `card at minimum · ${d.paySlow.months} months`)] };
-    if (/card first|card before|why.*match|match.*first|match before/.test(t)) return { text: `Because the match is 100% on day one. Every 320 you put in becomes 640 [Planner]. The card costs 24.99% a year; the match pays 100% immediately. Both are worth doing, so the plan does both, match first. If the card were above 100% a year, I would flip the order. Want to see the two orders side by side?`, tools: [T.tool('Planner', 'Compare orders', 'match-first beats card-first by 1,900 over 16 months')] };
-    if (/job|lose|laid|fired|quit/.test(t)) return { text: `If income stopped today, your savings cover about ${d.runway.toFixed(1)} months of essentials [Analyst]. The first thing I would do is pause the extra 300 to the card and hold the 401(k) change until you land, which keeps about 540 a month in your pocket. The home fund stays untouched, as you asked. Want me to prepare that as a standing "if my job ends" plan you approve once?`, tools: [T.tool('Analyst', 'Runway', `${d.runway.toFixed(1)} months`)] };
-    if (/raise|bonus|more money/.test(t)) return { text: 'When a raise shows up on a paystub, Watcher will notice it and I will propose one thing: send a fixed share of it to the card until the card is gone, then to the house. The rest stays yours. Nothing happens without your permission. Want me to set the share now, or wait until it happens?', tools: [] };
-    return { text: `Here is how I would think about it. Your free cash is about ${fmt(p.freeCash)} a month [Analyst], the match is worth ${fmt(d.matchGain)} a year [Planner], and the card costs ${fmt(d.cardCostYear)} a year [Planner]. Anything that captures the match and shrinks the card beats anything that does not. Tell me the constraint I am missing and I will re-run it.`, tools: [] };
+    if (/2029|sooner|buy (earlier|now)|house first/.test(t)) return { text: `Possible, at a cost. To reach 60k by 2029 you would need about 1,150 a month to the house from January, which leaves the card at minimum for ${d.slow.months} months and about ${fmtK(d.slow.interest)} in interest. If 2029 matters more than that, I will rebuild the plan around it.`, checks: [['Planner', 'house by 2029 · 1,150 a month from January'], ['Planner', `card at minimum · ${d.slow.months} months`]], v4: true };
+    if (/card first|card before|why.*match|match.*first|match before/.test(t)) return { text: 'Because the match is 100% on day one: every 320 you put in becomes 640. The card costs 24.99% a year. Both are worth doing, so the plan does both, match first.', checks: [['Planner', 'match-first beats card-first by about 1,900 over 16 months']] };
+    if (/job|lose|laid|fired|quit/.test(t)) return { text: `If income stopped today, your savings cover about ${d.runway.toFixed(1)} months. I would pause the extra 300 to the card the same day and hold the 401(k) change until you land. The home fund stays untouched. Want me to keep that ready as a standing plan you approve once?`, checks: [['Analyst', `runway ${d.runway.toFixed(1)} months`]] };
+    return { text: `Your free cash is about ${fmt(p.free)} a month. The match is worth ${fmt(d.matchGain)} a year and the card costs ${fmt(d.cardYear)} a year. Anything that captures the match and shrinks the card beats anything that does not. Tell me the constraint I am missing and I will re-run it.`, checks: [] };
   }
-  if (/skip|wait|later|next year|hold off/.test(t)) return { text: `You can. The cost is real, though: skipping the match for a year is ${fmt(d.matchGain)} you do not get [Planner], and the fund only finishes about ${d.fundMonths - d.fundMonthsNoMatch} months sooner [Planner]. If the worry is access, the plan allows loans and hardship withdrawals [Reader]. Would starting at 2% now and stepping up in three months feel better?`, tools: [T.tool('Planner', 'Run fund schedule', 'with and without the match')] };
-  if (/loan|student|debt|pay off/.test(t)) return { text: `Your loans are at 5.5% [Reader], below what the match and a 4.2% savings account earn, so extra payments wait until the fund is done. Keep the 310 minimum [Reader]. If a refinance offer comes along, that is a licensed advisor's call and Advisor desk can arrange it. Want me to set a reminder to revisit the loans when the fund hits three months?`, tools: [T.tool('Reader', 'Loan terms', '28,400 at 5.5%, minimum 310')] };
-  if (/job|lose|laid|fired|quit/.test(t)) return { text: `Right now your savings cover about ${d.runway.toFixed(1)} months of essentials [Analyst], which is exactly why the fund comes first. If income stopped, I would pause the 401(k) contribution and the autosave the same day, with your permission, and your ${fmt(p.savings)} buffer stays put. Building to three months is what makes that scenario survivable. Shall we get the two actions done?`, tools: [T.tool('Analyst', 'Runway', `${d.runway.toFixed(1)} months`)] };
-  return { text: `Here is how I would think about it. Your free cash is about ${fmt(p.freeCash)} a month [Analyst]. The match is worth ${fmt(d.matchGain)} a year and costs about ${fmt(d.takeHome)} a month of take-home [Planner]. The fund reaches ${fmt(p.fundTarget)} in ${d.fundMonths} months at 230 a month [Planner]. Tell me what worries you about that and I will show the numbers for it.`, tools: [] };
+  if (/skip|wait|later|next year|hold off/.test(t)) return { text: `You can. Skipping the match for a year is ${fmt(d.matchGain)} you do not get, and the fund only finishes ${d.fundMonths - d.fundFast} months sooner. If access is the worry, the plan allows loans. Would starting at 2% and stepping up in three months feel better?`, checks: [['Planner', 'fund schedule with and without the match']] };
+  if (/loan|student|debt|pay off/.test(t)) return { text: 'Your loans are at 5.5%, below what the match and a 4.2% savings account earn, so extra payments wait until the fund is done. Keep the 310 minimum. Want a reminder to revisit the loans when the fund hits three months?', checks: [['Reader', '28,400 at 5.5%, minimum 310']] };
+  if (/job|lose|laid|fired|quit/.test(t)) return { text: `Right now your savings cover about ${d.runway.toFixed(1)} months, which is exactly why the fund comes first. If income stopped, I would pause both contributions the same day, with your permission, and your 1,200 stays put. Shall we get the two actions done?`, checks: [['Analyst', `runway ${d.runway.toFixed(1)} months`]] };
+  return { text: `Your free cash is about ${fmt(p.free)} a month. The match costs about ${fmt(d.takeHome)} a month of take-home and returns ${fmt(d.matchGain)} a year. The fund reaches 9,000 in ${d.fundMonths} months at 230 a month. Tell me what worries you and I will show the numbers for it.`, checks: [] };
 }
-async function askPenny(text) {
+async function ask(text) {
   if (!text.trim()) return;
   S.thread.push({ type: 'user', text });
-  const turnIdx = S.thread.length;
-  const turn = agentTurn('now', [T.text('<span class="muted">Thinking…</span>')], { pending: true });
-  push(turn);
-  setTeam({ Penny: 'working' });
+  const turn = agent('now', [T.say('<span class="muted">…</span>')], { pending: true }); push(turn); S.team.Penny = 'working'; renderNotes();
   const useLive = sampleFn && S.liveOn !== false;
   if (useLive) {
     try {
       turn.live = true;
-      const prompt = `${rulesFor()}\n\nFACTS (JSON):\n${JSON.stringify(contextForModel())}\n\nSTAGE: ${S.stage}\n\nThe customer says: "${text.replace(/"/g, "'")}"\n\nReply as Penny.`;
-      const ctl = new AbortController(); S._ctl = ctl;
-      const { text: out } = await sampleFn(prompt, { modelTier: 'quick', cache: false, signal: ctl.signal, onText: ({ text: t }) => { turn.blocks[0] = T.text(esc(t).replace(/\[(Planner|Reader|Analyst|Watcher|Guardian|Doer)\]/g, '<span class="tag">$1</span>')); renderPhone(false); } });
-      turn.blocks[0] = T.text(esc(out).replace(/\[(Planner|Reader|Analyst|Watcher|Guardian|Doer)\]/g, '<span class="tag">$1</span>'));
-      if (/advisor/i.test(out)) turn.blocks.push(T.chips([{ label: 'Book an advisor', kind: 'primary', act: 'advisor' }]));
-      turn.pending = false; setTeam({ Penny: 'idle' }); save(); renderPhone(); return;
-    } catch (e) {
-      if (e && e.code === 'not_granted') S.liveOn = false;
-      turn.live = false;
-    }
+      const prompt = `${RULES.replace('{name}', P().name).replace('{age}', P().age).replace('{role}', P().role)}\n\nFACTS (JSON):\n${JSON.stringify(facts())}\n\nSTAGE: ${S.stage}\n\nThe customer says: "${text.replace(/"/g, "'")}"\n\nReply as Penny.`;
+      const { text: out } = await sampleFn(prompt, { modelTier: 'quick', cache: false, onText: ({ text: t }) => { turn.blocks[0] = T.say(esc(t)); renderPhone(false); } });
+      turn.blocks = [T.say(esc(out))]; if (/advisor/i.test(out)) turn.blocks.push(T.cta('Book an advisor', 'advisor'));
+      turn.pending = false; S.team.Penny = 'idle'; save(); renderPhone(); renderNotes(); return;
+    } catch (e) { if (e && e.code === 'not_granted') S.liveOn = false; turn.live = false; }
   }
-  const sc = scripted(text);
-  await new Promise(r => setTimeout(r, 700));
-  turn.blocks = [...sc.tools, T.text(esc(sc.text).replace(/\[(Planner|Reader|Analyst|Watcher|Guardian|Doer)\]/g, '<span class="tag">$1</span>'))];
-  if (/advisor/i.test(sc.text)) turn.blocks.push(T.chips([{ label: 'Book an advisor', kind: 'primary', act: 'advisor' }]));
-  if (/v4 built/i.test(sc.text)) turn.blocks.push(T.chips([{ label: 'Build v4 around 2029', act: 'v4' }, { label: 'Keep v3', kind: 'primary', act: 'keep' }]));
-  turn.pending = false; turn.demo = true; setTeam({ Penny: 'idle' }); save(); renderPhone();
+  const sc = scripted(text); await new Promise(r => setTimeout(r, 700));
+  turn.blocks = [T.say(esc(sc.text))]; if (sc.checks.length) turn.blocks.push(T.checks(sc.checks));
+  if (sc.advisor) turn.blocks.push(T.cta('Book an advisor', 'advisor')); if (sc.v4) turn.blocks.push(T.cta('Keep v3', 'keep', [{ label: 'Rebuild around 2029', act: 'v4' }]));
+  turn.pending = false; turn.demo = true; S.team.Penny = 'idle'; save(); renderPhone(); renderNotes();
 }
 
-/* =========================================================
-   Rendering
-   ========================================================= */
+/* ---- rendering ---- */
 const phone = document.getElementById('phone');
 function scrollBottom() { const v = phone.querySelector('.view'); if (v) requestAnimationFrame(() => { v.scrollTop = v.scrollHeight; }); }
-function switchTab(tab) { S.tab = tab; S.notesTab = 'moment'; save(); renderPhone(); renderNotes(); }
-function focusComposer(ph) { S.tab = 'penny'; renderPhone(); const i = phone.querySelector('.composer input'); if (i) { i.placeholder = ph; i.focus(); } }
-
+function switchTab(tab) { S.tab = tab; save(); renderPhone(); renderNotes(); }
+function focusComposer(ph) { S.tab = 'penny'; renderPhone(); const i = phone.querySelector('#msg'); if (i) { i.placeholder = ph; i.focus(); } }
 function renderTop() {
   const el = document.getElementById('topRight');
-  if (!S) { el.innerHTML = ''; return; }
-  const liveState = sampleFn === undefined ? 'checking' : (sampleFn && S.liveOn !== false ? 'live' : 'demo');
-  el.innerHTML = `
-    <button class="pill ${S.persona === 'jordan' ? 'on' : ''}" data-persona="jordan">Jordan · mid career</button>
-    <button class="pill ${S.persona === 'maya' ? 'on' : ''}" data-persona="maya">Maya · early career</button>
-    <span class="pill ghost" title="Free-text replies: live Claude responses when available, scripted otherwise">Penny replies: ${liveState === 'live' ? 'live' : liveState === 'demo' ? 'scripted' : 'checking'}</span>
-    <button class="pill" id="resetBtn">Reset demo</button>`;
-  el.querySelectorAll('[data-persona]').forEach(b => b.onclick = () => choosePersona(b.dataset.persona));
-  el.querySelector('#resetBtn').onclick = () => { try { localStorage.removeItem('penny.v1'); } catch (e) {} S = null; renderAll(); };
+  const notesOpen = document.getElementById('notes').classList.contains('open');
+  el.innerHTML = S ? `<div class="segs"><button class="${S.persona === 'jordan' ? 'on' : ''}" data-persona="jordan">Jordan</button><button class="${S.persona === 'maya' ? 'on' : ''}" data-persona="maya">Maya</button></div><button class="ghost" id="resetBtn">Reset</button><button class="ghost ${notesOpen ? 'on' : ''}" id="notesBtn">Reviewer notes</button>` : `<button class="ghost ${notesOpen ? 'on' : ''}" id="notesBtn">Reviewer notes</button>`;
+  el.querySelectorAll('[data-persona]').forEach(b => b.onclick = () => choose(b.dataset.persona));
+  const r = el.querySelector('#resetBtn'); if (r) r.onclick = () => { try { localStorage.removeItem('penny.v2'); } catch (e) {} S = null; renderAll(); };
+  el.querySelector('#notesBtn').onclick = () => { document.getElementById('notes').classList.toggle('open'); renderTop(); renderNotes(); };
 }
-
 function renderPhone(scroll) {
   if (!S) {
-    phone.innerHTML = `<div class="picker">
-      <div class="eyebrow">Choose who you are today</div>
-      <h2>Penny works the same loop for two very different people.</h2>
-      <p class="sm">Plan, decide, act. The numbers are synthetic. Pick one to open their thread.</p>
-      <button class="persona" data-p="jordan"><span class="n">Jordan, 34 · mid career</span><span class="sm">Product manager, 128k. Contributes 3% with a 6% match available. Card at 24.99%. Saving for a first home. Acts, but does not sustain.</span></button>
-      <button class="persona" data-p="maya"><span class="n">Maya, 26 · early career</span><span class="sm">Data analyst, 72k, first job. Not enrolled in the 401(k). 1,200 in savings. Student loans. Has never acted; afraid of locking money away.</span></button>
-      <p class="xs">Concept for Fidelity Labs. Not a Fidelity product. No real accounts, no real advice.</p>
-    </div>`;
-    phone.querySelectorAll('[data-p]').forEach(b => b.onclick = () => choosePersona(b.dataset.p));
-    return;
+    phone.innerHTML = `<div class="picker"><div class="xs">Choose who you are today</div><h2>Penny does one thing at a time.</h2>
+      <button class="persona" data-p="jordan"><b>Jordan, 34</b><span class="sm">${PERSONAS.jordan.story}</span></button>
+      <button class="persona" data-p="maya"><b>Maya, 26</b><span class="sm">${PERSONAS.maya.story}</span></button>
+      <p class="xs">Synthetic data. Not a Fidelity product. No real advice.</p></div>`;
+    phone.querySelectorAll('[data-p]').forEach(b => b.onclick = () => choose(b.dataset.p)); return;
   }
-  const p = P();
-  const tabs = [['penny', 'Penny', ICON.tabPenny], ['overview', 'Overview', ICON.tabOverview], ['plan', 'Plan', ICON.tabPlan], ['actions', 'Actions', ICON.tabActions], ['you', 'You', ICON.tabYou]];
-  let body = '';
-  if (S.tab === 'penny') body = renderThread();
-  else if (S.tab === 'overview') body = renderOverview();
-  else if (S.tab === 'plan') body = renderPlan();
-  else if (S.tab === 'actions') body = renderActions();
-  else body = renderYou();
-  phone.innerHTML = `
-    <div class="appbar"><div class="who"><div class="mark">P</div><div><h2>Penny</h2><div class="sub">${S.tab === 'penny' ? 'your money coach · ' + esc(S.date) : esc(p.name) + ' · ' + esc(S.date)}</div></div></div><button class="pill" id="teamBtn">Team</button></div>
-    <div class="view" id="view">${body}</div>
-    ${S.tab === 'penny' ? `<form class="composer" id="composer"><button type="button" aria-label="Attach">${ICON.clip}</button><input id="msg" placeholder="Message Penny, or ask what if" autocomplete="off"><button type="submit" class="send" aria-label="Send">${ICON.send}</button></form>` : ''}
-    <div class="tabs">${tabs.map(([id, label, ico]) => `<button class="${S.tab === id ? 'on' : ''}" data-tab="${id}">${ico}${label}</button>`).join('')}</div>`;
+  const tabs = [['penny', 'Penny', I.penny], ['plan', 'Plan', I.plan], ['activity', 'Activity', I.activity], ['you', 'You', I.you]];
+  const body = S.tab === 'penny' ? renderThread() : S.tab === 'plan' ? renderPlan() : S.tab === 'activity' ? renderActivity() : renderYou();
+  phone.innerHTML = `<div class="appbar"><h1>${S.tab === 'penny' ? 'Penny' : { plan: 'Plan', activity: 'Activity', you: 'You' }[S.tab]}</h1><span class="date">${esc(S.date)}</span></div>
+    <div class="view">${body}</div>
+    ${S.tab === 'penny' ? `<form class="composer" id="composer"><button type="button" aria-label="Attach">${I.clip}</button><input id="msg" placeholder="Ask Penny anything" autocomplete="off"><button type="submit" class="send" aria-label="Send">${I.send}</button></form>` : ''}
+    <div class="tabs">${tabs.map(([id, l, ico]) => `<button class="${S.tab === id ? 'on' : ''}" data-tab="${id}">${ico}${l}</button>`).join('')}</div>`;
   phone.querySelectorAll('[data-tab]').forEach(b => b.onclick = () => switchTab(b.dataset.tab));
-  phone.querySelector('#teamBtn').onclick = () => openTeamSheet();
-  const form = phone.querySelector('#composer');
-  if (form) form.onsubmit = e => { e.preventDefault(); const i = form.querySelector('#msg'); const v = i.value; i.value = ''; askPenny(v); };
-  bindThread();
-  if (scroll !== false && S.tab === 'penny') scrollBottom();
-  renderNotes();
+  const f = phone.querySelector('#composer'); if (f) f.onsubmit = e => { e.preventDefault(); const i = f.querySelector('#msg'); const v = i.value; i.value = ''; ask(v); };
+  bind(); if (scroll !== false && S.tab === 'penny') scrollBottom();
 }
-
 function renderThread() {
   return S.thread.map((turn, i) => {
-    if (turn.type === 'notif') return `<div class="notif rise"><div class="mark">P</div><div><div class="sm"><b>Penny</b> · now</div><p>${esc(turn.text)}</p></div></div>`;
     if (turn.type === 'divider') return `<div class="divider">${esc(turn.text)}</div>`;
-    if (turn.type === 'user') return `<div class="user ${turn.att ? 'att' : ''} rise">${turn.att ? ICON.doc : ''}<span>${esc(turn.text)}</span></div>`;
-    const blocks = turn.blocks.map((b, j) => renderBlock(b, i, j)).join('');
-    return `<div class="turn rise" data-turn="${i}"><div class="who"><div class="mark">P</div><b>Penny</b><span class="t">${esc(turn.time)}</span>${turn.live ? '<span class="live">live</span>' : turn.demo ? '<span class="demo">scripted</span>' : ''}</div>${blocks}</div>`;
+    if (turn.type === 'user') return `<div class="user in">${turn.att ? '<span class="xs">Attached · </span>' : ''}${esc(turn.text)}</div>`;
+    return `<div class="turn in" data-turn="${i}"><div class="t">Penny · ${esc(turn.time)}${turn.live ? '<span class="live">live</span>' : turn.demo ? '<span class="demo">scripted</span>' : ''}</div>${turn.blocks.map((b, j) => block(b, i, j)).join('')}</div>`;
   }).join('');
 }
-function renderBlock(b, i, j) {
+function block(b, i, j) {
   switch (b.t) {
-    case 'text': return `<div class="agent-text">${b.html}</div>`;
-    case 'tool': return `<div class="tool">${b.running ? '<span class="spin"></span>' : `<span class="ok">${ICON.check}</span>`}<span class="tag">${esc(b.agent)}</span><span><span class="name">${esc(b.name)}</span> <span class="res">· ${esc(b.res)}</span></span></div>`;
-    case 'think': return `<div class="think ${b.open ? 'open' : ''}" data-think="${i}:${j}"><button class="toggle">${ICON.chev}Penny thought for a few seconds</button><div class="lines">${b.lines.map(l => `<div>${esc(l)}</div>`).join('')}</div></div>`;
-    case 'table': return `<div class="card" style="padding:6px 4px"><table class="tbl"><tr>${b.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr>${b.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table></div>`;
-    case 'artifact': return `<button class="artifact" data-open="${b.tab}"><div class="doc"></div><div><div><b>${esc(b.title)}</b></div><div class="sm">${esc(b.sub)}</div></div><span class="go">${ICON.chev}</span></button>`;
-    case 'perm': return `<div class="perm ${b.decided ? 'done' : ''}"><div class="who-row"><span class="tag">${esc(b.agent)}</span><span>wants to</span></div><div><b>${esc(b.title)}</b></div><div class="sm">${esc(b.sub)}</div>${b.decided ? `<div class="decided"><span class="ok" style="color:var(--good);width:16px;height:16px;display:inline-flex">${ICON.check}</span>You chose: ${esc(b.decided)}</div>` : `<div class="opts">${b.opts.map((o, k) => `<button class="${o.primary ? 'primary' : ''}" data-perm="${b.id}" data-opt="${k}" data-turn="${i}">${esc(o.label)}</button>`).join('')}</div>`}</div>`;
-    case 'result': return `<div class="result"><div class="h">${ICON.check}<span>${esc(b.title)}</span></div><div class="sm">${esc(b.sub)}</div>${b.links.length ? `<div class="links">${b.links.map(l => `<button data-link="${esc(l)}" data-turn="${i}">${esc(l)}</button>`).join('')}</div>` : ''}</div>`;
-    case 'waiting': return `<div class="waiting"><b>${esc(b.title)}</b><div class="sm">${esc(b.sub)}</div></div>`;
-    case 'chips': return `<div class="chips">${b.items.map(c => `<button class="chip ${c.kind || ''}" data-act="${c.act}" data-turn="${i}" data-label="${esc(c.label)}" ${b.used ? 'disabled' : ''}>${esc(c.label)}</button>`).join('')}</div>`;
+    case 'say': return `<p class="say">${b.html}</p>`;
+    case 'big': return `<div class="big"><span class="n num">${esc(b.n)}</span><span class="l">${esc(b.l)}</span></div>`;
+    case 'means': return `<div class="means">${b.lines.map(l => `<span>${esc(l)}</span>`).join('')}</div>`;
+    case 'facts': return `<div class="facts">${b.rows.map(r => `<div><span>${esc(r[0])}</span><span class="src">${esc(r[1])}</span></div>`).join('')}</div>`;
+    case 'checks': { const who = [...new Set(b.rows.map(r => r[0]))].join(', '); const running = b.rows.some(r => r[2]); return `<div class="checks ${b.open ? 'open' : ''}" data-checks="${i}:${j}"><button>${I.chev}<span>${running ? 'Checking' : 'Checked by'} ${esc(who)}</span></button><div class="list">${b.rows.map(r => `<div class="row ${r[2] ? 'running' : ''}"><span class="who">${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('')}</div></div>`; }
+    case 'cta': return `<div class="cta ${b.used ? 'used' : ''}"><button class="btn ${b.act.startsWith('jump') ? 'lime' : ''}" data-act="${b.act}" data-turn="${i}" data-label="${esc(b.primary)}" ${b.used ? 'disabled' : ''}>${esc(b.primary)}</button>${b.links.map(l => `<button class="link" data-act="${l.act}" data-turn="${i}" data-label="${esc(l.label)}">${esc(l.label)}</button>`).join('')}</div>`;
+    case 'more': { const body = b.kind === 'table' ? `<table class="tbl"><tr>${b.body.head.map(h => `<th>${esc(h)}</th>`).join('')}</tr>${b.body.rows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join('')}</tr>`).join('')}</table>` : `<div class="think">${b.body.map(l => `<span>${esc(l)}</span>`).join('')}</div>`; return `<div class="more ${b.open ? 'open' : ''}" data-more="${i}:${j}"><button>${b.open ? 'Hide' : esc(b.label)}</button><div class="body">${body}</div></div>`; }
+    case 'perm': return `<div class="perm ${b.decided ? 'done' : ''}"><h3>${esc(b.title)}</h3><div class="rows">${b.rows.map(r => `<div><span>${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('')}</div>${b.decided ? `<div class="decided">${I.check}<span>${b.decided === 'Not now' ? 'Left as a proposal' : b.decided === 'Always' ? 'Allowed, with a standing rule' : 'Allowed'}</span></div>` : `<div class="acts"><button class="btn" data-perm="${b.id}" data-choice="Allow" data-turn="${i}">Allow</button><button class="link" data-perm="${b.id}" data-choice="Not now" data-turn="${i}">Not now</button></div>${b.rule ? `<div class="rule">Or <button data-perm="${b.id}" data-choice="Always" data-turn="${i}">set a standing rule</button>: ${esc(b.rule)}.</div>` : ''}`}</div>`;
+    case 'result': return `<div class="result">${I.check}<span>${esc(b.text)}</span>${b.undoId && b.undoId !== 'adv' ? `<button class="link u" data-undo="${b.undoId}">Undo</button>` : ''}</div>`;
+    case 'note': return `<p class="note">${esc(b.text)}</p>`;
     default: return '';
   }
 }
-function bindThread() {
-  phone.querySelectorAll('[data-act]').forEach(b => b.onclick = () => {
-    const act = b.dataset.act;
-    if (act === 'v4') { S.thread[+b.dataset.turn].blocks.forEach(x => { if (x.t === 'chips') x.used = 'v4'; }); S.thread.push({ type: 'user', text: b.dataset.label }); S.plan.version = 4; S.plan.log.unshift({ v: 4, when: S.date, by: 'Planner', what: 'You chose the house by 2029; card stays at minimum; 1,150 a month to the home fund from January.' }); push(agentTurn('now', [T.tool('Planner', 'Rebuilt plan', 'v4 · house by 2029'), T.text('Plan v4 is built around 2029. I have written the interest cost into the change log so future-you knows it was a choice, not an accident.'), T.artifact('Plan v4', 'House by 2029 · card at minimum · assumptions', 'plan')])); return; }
-    if (act === 'keep') { S.thread[+b.dataset.turn].blocks.forEach(x => { if (x.t === 'chips') x.used = 'keep'; }); S.thread.push({ type: 'user', text: b.dataset.label }); push(agentTurn('now', [T.text('Keeping v3. If 2029 comes back up, the numbers will still be here.')])); return; }
-    chipAct(act, +b.dataset.turn, b.dataset.label);
-  });
-  phone.querySelectorAll('[data-perm]').forEach(b => b.onclick = () => decide(b.dataset.perm, +b.dataset.opt, +b.dataset.turn));
-  phone.querySelectorAll('[data-open]').forEach(b => b.onclick = () => switchTab(b.dataset.open));
-  phone.querySelectorAll('[data-think]').forEach(el => el.querySelector('.toggle').onclick = () => { const [i, j] = el.dataset.think.split(':').map(Number); S.thread[i].blocks[j].open = !S.thread[i].blocks[j].open; save(); renderPhone(false); });
-  phone.querySelectorAll('[data-link]').forEach(b => b.onclick = () => {
-    const l = b.dataset.link;
-    if (l === 'Undo') { const turnIdx = +b.dataset.turn; const prior = S.thread.slice(0, turnIdx).reverse().find(t => t.type === 'agent' && t.blocks.some(x => x.t === 'perm' && x.decided)); const perm = prior && prior.blocks.find(x => x.t === 'perm' && x.decided); if (perm) undo(perm.id); }
-    else if (l === 'Pause') push(agentTurn('now', [T.tool('Doer', 'Paused', 'autopay · resumes when you say'), T.text('Paused. Nothing moves until you say so. The plan date slips by a month for each month paused; I will show that in Plan.')]));
-    else switchTab('actions');
-  });
+function bind() {
+  phone.querySelectorAll('[data-act]').forEach(b => b.onclick = () => chip(b.dataset.act, +b.dataset.turn, b.dataset.label));
+  phone.querySelectorAll('[data-perm]').forEach(b => b.onclick = () => decide(b.dataset.perm, b.dataset.choice, +b.dataset.turn));
+  phone.querySelectorAll('[data-checks]').forEach(el => el.querySelector('button').onclick = () => { const [i, j] = el.dataset.checks.split(':').map(Number); S.thread[i].blocks[j].open = !S.thread[i].blocks[j].open; save(); renderPhone(false); });
+  phone.querySelectorAll('[data-more]').forEach(el => el.querySelector('button').onclick = () => { const [i, j] = el.dataset.more.split(':').map(Number); S.thread[i].blocks[j].open = !S.thread[i].blocks[j].open; save(); renderPhone(false); });
   phone.querySelectorAll('[data-undo]').forEach(b => b.onclick = () => undo(b.dataset.undo));
   phone.querySelectorAll('[data-ret]').forEach(r => r.oninput = () => { S.assump.ret = +r.value / 100; save(); renderPhone(false); });
   phone.querySelectorAll('[data-forget]').forEach(b => b.onclick = () => { S.memory.splice(+b.dataset.forget, 1); save(); renderPhone(false); });
-  phone.querySelectorAll('[data-revoke]').forEach(b => b.onclick = () => { S.allow.splice(+b.dataset.revoke, 1); save(); renderPhone(false); });
+  phone.querySelectorAll('[data-revoke]').forEach(b => b.onclick = () => { S.rules.splice(+b.dataset.revoke, 1); save(); renderPhone(false); });
   phone.querySelectorAll('[data-goto]').forEach(b => b.onclick = () => switchTab(b.dataset.goto));
   bindChart();
 }
 
-/* ---------- Overview ---------- */
-function renderOverview() {
-  const p = P(), d = D();
-  const runway = Planner.runway(S.live.cash, p.essentials);
-  const segs = [0, 1, 2, 3].map(i => `<div class="${runway >= i + 1 ? 'on' : runway > i ? 'half' : ''}"></div>`).join('');
-  const goals = p.id === 'jordan' ? [
-    ['Full employer match', `${S.live.contribPct} of 6%`, S.live.contribPct / 6],
-    ['Card to zero', S.live.card > 0 ? `${fmt(S.live.card)} left · ${S.plan.cardPayment >= 510 ? 'early 2028' : '55 months'}` : 'done · Jan 2028', 1 - S.live.card / p.card],
-    ['Home fund', `${fmt(S.live.homeFund)} of ${fmt(p.homeTarget)} · ${S.plan.version >= 4 ? '2029' : '2031'}`, S.live.homeFund / p.homeTarget],
-  ] : [
-    ['Three-month safety net', `${fmt(S.live.cash)} of ${fmt(p.fundTarget)}`, S.live.cash / p.fundTarget],
-    ['Full employer match', `${S.live.contribPct} of 4%`, S.live.contribPct / 4],
-    ['Student loans', `${fmt(p.loan)} at 5.5% · minimum only, by design`, 0.08],
-  ];
-  const move = S.stage === 'moment' ? (p.id === 'jordan' ? 'Capture the match before the window closes Sept 17.' : 'Read the two documents and see the whole picture.') : S.stage === 'decide' ? 'One decision is waiting in Penny.' : S.stage === 'act' ? 'Actions are waiting for your permission in Penny.' : 'Nothing to do. The team is watching.';
-  const week = S.stage === 'away' ? (p.id === 'jordan' ? [['Watcher', 'Checked 4 accounts daily. One change: card down 510.'], ['Doer', 'Verified the 401(k) change landed Sept 15.'], ['Guardian', 'Held back 2 possible messages as not worth your time.']] : [['Watcher', 'Checked 3 accounts daily. Savings up 230 on the 1st.'], ['Doer', 'Verified the enrollment landed Sept 30.'], ['Guardian', 'Held back 1 possible message as not worth your time.']]) : [['Watcher', 'Checked accounts this morning. Nothing unusual.'], ['Guardian', 'One moment allowed this month.']];
-  return `
-    <div class="eyebrow">Overview · a view of what the thread decided</div>
-    <div class="card"><div class="stat"><span class="eyebrow">Runway</span><span class="v num">${runway.toFixed(1)} <span class="sm">months</span></span></div><div class="seg">${segs}</div><div class="sm">Savings that cover essentials if income stopped. Target 3.</div></div>
-    <div class="card"><div class="eyebrow">Goals</div>${goals.map(([n, s, f]) => `<div class="goal"><div class="r"><span>${n}</span><span class="xs num">${s}</span></div><div class="bar"><i style="width:${Math.max(2, Math.min(100, f * 100))}%"></i></div></div>`).join('')}</div>
-    <div class="card" style="border-color:var(--primary-line);background:var(--primary-soft)"><div class="eyebrow" style="color:var(--primary)">This week's move</div><p>${move}</p><button class="linkbtn" data-goto="penny" style="align-self:flex-start">Open in Penny</button></div>
-    <div class="card"><div class="eyebrow">What the team did this week</div>${week.map(([a, w]) => `<div class="who-row"><span class="tag">${a}</span><span>${w}</span></div>`).join('')}</div>
-    <p class="xs">The dashboard is downstream of the thread. It never proposes anything; every card links back to the conversation that decided it.</p>`;
-}
-
-/* ---------- Plan ---------- */
+/* Plan */
 function renderPlan() {
   const p = P();
-  if (S.plan.version === 0) return `<div class="eyebrow">Plan</div><div class="card"><p>No plan yet. Penny builds it in the thread once Reader has your documents.</p><button class="linkbtn" data-goto="penny" style="align-self:flex-start">Open in Penny</button></div>`;
-  const steps = p.id === 'jordan' ? [
-    ['Keep 1,000 in checking', true],
-    [`Capture the full match (3% → 6%)${S.live.contribPct >= 6 ? ' · done Sept 15' : ''}`, S.live.contribPct >= 6],
-    [`Clear the card: ${S.plan.cardPayment >= 510 ? '16 months at 510' : 'currently minimum only, 55 months'}`, S.live.card === 0],
-    [S.plan.version >= 4 ? '1,150 a month to the home fund from January' : 'Then 510 a month to the home fund', S.plan.redirect],
-  ] : [
-    ['Keep your buffer in checking', true],
-    [`Capture the full match (0% → 4%)${S.live.contribPct >= 4 ? ' · done' : ''}`, S.live.contribPct >= 4],
-    [`Three-month fund: ${S.plan.autosave || 230} a month at 4.2%`, S.live.cash >= p.fundTarget],
-    ['Student loans stay at minimum until the fund is done', false],
-  ];
-  const baseline = { contribPct: p.contribPct, cardPayment: p.cardMin, autosave: 0, hysa: false, redirect: false, homeMonthly: 0 };
-  const coached = p.id === 'jordan' ? { contribPct: 6, cardPayment: 510, autosave: 0, hysa: false, redirect: S.plan.version < 4, homeMonthly: S.plan.version >= 4 ? 1150 : 0 } : { contribPct: 4, cardPayment: 0, autosave: S.plan.autosave || 230, hysa: true, redirect: false, homeMonthly: 0 };
-  const a = Planner.simulate(p, baseline, 10, S.assump.ret, S.assump.apy), b = Planner.simulate(p, coached, 10, S.assump.ret, S.assump.apy);
-  return `
-    <div class="eyebrow">Plan · the artifact, full size</div>
-    <div class="stat"><h2 style="font-size:22px">Plan v${S.plan.version}</h2><button class="pill" data-goto="penny">Ask a what-if</button></div>
-    <div class="card"><div class="eyebrow">Order of operations</div><div class="steps">${steps.map(([s, done]) => `<div class="step ${done ? 'done' : ''}"><span class="dot">${done ? ICON.check : ''}</span><span>${s}</span></div>`).join('')}</div></div>
-    <div class="card"><div class="stat"><span class="eyebrow">Net worth, 10 years</span><span class="xs">with vs. without</span></div>${renderChart(a, b)}<div class="legend"><span><i style="background:var(--series-1)"></i>with plan v${S.plan.version}</span><span><i style="background:var(--series-2)"></i>if nothing changes</span></div>
-      <div class="assump"><span class="xs">Return</span><input type="range" min="3" max="9" step="0.5" value="${(S.assump.ret * 100).toFixed(1)}" data-ret aria-label="Assumed annual return"><span class="xs num">${(S.assump.ret * 100).toFixed(1)}%</span></div>
-      <div class="xs">Assumptions: ${(S.assump.ret * 100).toFixed(1)}% return · 4.2% savings APY · no raises. Every point comes from Planner's simulation, not from Penny.</div></div>
-    <div class="card"><div class="eyebrow">Change log</div>${S.plan.log.map(l => `<div class="who-row"><span class="tag">${esc(l.by)}</span><span><b>v${l.v} · ${esc(l.when)}.</b> ${esc(l.what)}</span></div>`).join('')}</div>
-    <p class="xs">The Plan tab is read and edit. Changing it happens in the thread, where Planner runs and Penny explains.</p>`;
+  if (S.plan.version === 0) return `<p class="say">No plan yet. It appears here once Penny has read your documents.</p><button class="link" data-goto="penny">Back to Penny</button>`;
+  const runway = S.live.cash / p.essentials;
+  const goals = p.id === 'jordan' ? [['Employer match', `${S.live.contribPct} of 6%`, S.live.contribPct / 6], ['Card to zero', S.live.card > 0 ? `${fmt(S.live.card)} left` : 'done', 1 - S.live.card / p.card], ['Home fund', `${fmtK(S.live.homeFund)} of 60k`, S.live.homeFund / p.homeTarget]]
+    : [['Three-month fund', `${fmt(S.live.cash)} of 9,000`, S.live.cash / p.fundTarget], ['Employer match', `${S.live.contribPct} of 4%`, S.live.contribPct / 4]];
+  const steps = p.id === 'jordan' ? [['Keep 1,000 in checking', true], ['Capture the full match', S.live.contribPct >= 6], [S.plan.cardPayment >= 510 ? 'Clear the card, 16 months' : 'Clear the card', S.live.card === 0], [S.plan.version >= 4 ? '1,150 a month to the home fund' : 'Then 510 a month to the home fund', S.plan.redirect]]
+    : [['Keep your buffer in checking', true], ['Capture the full match', S.live.contribPct >= 4], ['Three-month fund, 230 a month', S.live.cash >= p.fundTarget], ['Loans stay at minimum until then', false]];
+  const base = { contribPct: p.contribPct, cardPayment: p.cardMin, autosave: 0, hysa: false, redirect: false, homeMonthly: 0 };
+  const coached = p.id === 'jordan' ? { contribPct: 6, cardPayment: S.plan.version >= 4 ? 210 : 510, autosave: 0, hysa: false, redirect: S.plan.version < 4, homeMonthly: S.plan.version >= 4 ? 1150 : 0 } : { contribPct: 4, cardPayment: 0, autosave: S.plan.autosave || 230, hysa: true, redirect: false, homeMonthly: 0 };
+  const a = Planner.simulate(p, base, 10, S.assump.ret, S.assump.apy), b = Planner.simulate(p, coached, 10, S.assump.ret, S.assump.apy);
+  return `<div class="stat"><span class="sm">Runway</span><span class="v num">${runway.toFixed(1)} <span class="sm">months</span></span></div>
+    <div class="sec">${goals.map(([n, s, f]) => `<div class="goal"><div class="r"><b>${n}</b><span class="sm num">${s}</span></div><div class="bar"><i style="width:${Math.max(2, Math.min(100, f * 100))}%"></i></div></div>`).join('')}</div>
+    <div class="sec"><span class="cap">Plan v${S.plan.version} · in order</span><div class="steps">${steps.map(([s, d]) => `<div class="step ${d ? 'done' : ''}"><span class="dot">${d ? I.check : ''}</span><span>${s}</span></div>`).join('')}</div></div>
+    <div class="sec"><span class="cap">Ten years</span>${chart(a, b)}<div class="legend"><span><i style="background:var(--series-1)"></i>with the plan</span><span><i style="background:var(--series-2)"></i>if nothing changes</span></div><div class="assump"><span>Return</span><input type="range" min="3" max="9" step="0.5" value="${(S.assump.ret * 100).toFixed(1)}" data-ret aria-label="Assumed return"><span class="num">${(S.assump.ret * 100).toFixed(1)}%</span></div></div>
+    <button class="link" data-goto="penny">Ask a what-if</button>`;
 }
-function renderChart(a, b) {
-  const W = 340, H = 170, L = 40, R = 12, Tt = 12, B = 26;
-  const all = a.concat(b), max = Math.max(...all), min = Math.min(0, ...all);
+function chart(a, b) {
+  const W = 340, H = 160, L = 40, R = 12, Tt = 10, B = 24, all = a.concat(b), max = Math.max(...all), min = Math.min(0, ...all);
   const nice = v => { const p = Math.pow(10, Math.floor(Math.log10(Math.max(1, Math.abs(v))))); return Math.ceil(v / p) * p; };
-  const yMax = nice(max), yMin = min < 0 ? -nice(-min) : 0;
-  const x = i => L + (W - L - R) * i / 10, y = v => Tt + (H - Tt - B) * (1 - (v - yMin) / (yMax - yMin));
+  const yMax = nice(max), yMin = min < 0 ? -nice(-min) : 0, x = i => L + (W - L - R) * i / 10, y = v => Tt + (H - Tt - B) * (1 - (v - yMin) / (yMax - yMin));
   const path = arr => arr.map((v, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(v).toFixed(1)}`).join(' ');
-  const ticks = [yMin, (yMin + yMax) / 2, yMax];
-  window._chart = { a, b, x, y, L, R, W };
-  return `<div class="chart-wrap"><svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Projected net worth over ten years, with the plan versus if nothing changes" id="chart">
-    ${ticks.map(t => `<line x1="${L}" x2="${W - R}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" stroke="#E4E5EF" stroke-width="1"/><text x="${L - 6}" y="${(y(t) + 4).toFixed(1)}" font-size="10" text-anchor="end" fill="#7A7E94">${fmtK(t)}</text>`).join('')}
-    ${[0, 5, 10].map(i => `<text x="${x(i).toFixed(1)}" y="${H - 8}" font-size="10" text-anchor="${i === 0 ? 'start' : i === 10 ? 'end' : 'middle'}" fill="#7A7E94">${i === 0 ? 'now' : i + ' yrs'}</text>`).join('')}
-    <path d="${path(b)}" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round"/>
-    <path d="${path(a)}" fill="none" stroke="var(--series-2)" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"/>
-    <circle cx="${x(10).toFixed(1)}" cy="${y(b[10]).toFixed(1)}" r="4" fill="var(--series-1)" stroke="#fff" stroke-width="2"/>
-    <circle cx="${x(10).toFixed(1)}" cy="${y(a[10]).toFixed(1)}" r="4" fill="var(--series-2)" stroke="#fff" stroke-width="2"/>
-    <line id="xhair" x1="0" x2="0" y1="${Tt}" y2="${H - B}" stroke="#17182B" stroke-width="1" stroke-dasharray="2 3" style="display:none"/>
-  </svg><div class="chart-tip" id="tip"></div></div>`;
+  window._c = { a, b, x, y, L, R, W };
+  return `<div class="chart-wrap"><svg viewBox="0 0 ${W} ${H}" width="100%" height="${H}" role="img" aria-label="Net worth over ten years, with the plan versus if nothing changes" id="chart">
+    ${[yMin, (yMin + yMax) / 2, yMax].map(t => `<line x1="${L}" x2="${W - R}" y1="${y(t).toFixed(1)}" y2="${y(t).toFixed(1)}" stroke="#ECEDF2"/><text x="${L - 6}" y="${(y(t) + 4).toFixed(1)}" font-size="10" text-anchor="end" fill="#8A8EA3">${fmtK(t)}</text>`).join('')}
+    ${[0, 5, 10].map(i => `<text x="${x(i).toFixed(1)}" y="${H - 6}" font-size="10" text-anchor="${i === 0 ? 'start' : i === 10 ? 'end' : 'middle'}" fill="#8A8EA3">${i === 0 ? 'now' : i + ' yrs'}</text>`).join('')}
+    <path d="${path(b)}" fill="none" stroke="var(--series-1)" stroke-width="2" stroke-linejoin="round"/><path d="${path(a)}" fill="none" stroke="var(--series-2)" stroke-width="2" stroke-dasharray="5 4" stroke-linejoin="round"/>
+    <circle cx="${x(10).toFixed(1)}" cy="${y(b[10]).toFixed(1)}" r="4" fill="var(--series-1)" stroke="#fff" stroke-width="2"/><circle cx="${x(10).toFixed(1)}" cy="${y(a[10]).toFixed(1)}" r="4" fill="var(--series-2)" stroke="#fff" stroke-width="2"/>
+    <line id="xh" x1="0" x2="0" y1="${Tt}" y2="${H - B}" stroke="#1A1B2E" stroke-dasharray="2 3" style="display:none"/></svg><div class="chart-tip" id="tip"></div></div>`;
 }
 function bindChart() {
-  const svg = phone.querySelector('#chart'); if (!svg || !window._chart) return;
-  const tip = phone.querySelector('#tip'), xh = svg.querySelector('#xhair'), c = window._chart;
-  const move = ev => {
-    const rect = svg.getBoundingClientRect(); const px = (ev.clientX - rect.left) / rect.width * c.W;
-    const i = Math.max(0, Math.min(10, Math.round((px - c.L) / (c.W - c.L - c.R) * 10)));
-    xh.setAttribute('x1', c.x(i)); xh.setAttribute('x2', c.x(i)); xh.style.display = '';
-    tip.style.display = 'block'; tip.style.left = (c.x(i) / c.W * 100) + '%'; tip.style.top = '8px';
-    tip.innerHTML = `<b>${i === 0 ? 'now' : 'year ' + i}</b> · with plan ${fmtK(c.b[i])} · without ${fmtK(c.a[i])}`;
-  };
-  svg.addEventListener('mousemove', move); svg.addEventListener('touchmove', e => move(e.touches[0]), { passive: true });
-  svg.addEventListener('mouseleave', () => { tip.style.display = 'none'; xh.style.display = 'none'; });
+  const svg = phone.querySelector('#chart'); if (!svg || !window._c) return; const tip = phone.querySelector('#tip'), xh = svg.querySelector('#xh'), c = window._c;
+  const move = ev => { const r = svg.getBoundingClientRect(); const px = (ev.clientX - r.left) / r.width * c.W; const i = Math.max(0, Math.min(10, Math.round((px - c.L) / (c.W - c.L - c.R) * 10))); xh.setAttribute('x1', c.x(i)); xh.setAttribute('x2', c.x(i)); xh.style.display = ''; tip.style.display = 'block'; tip.style.left = (c.x(i) / c.W * 100) + '%'; tip.style.top = '4px'; tip.innerHTML = `<b>${i === 0 ? 'now' : 'year ' + i}</b> · plan ${fmtK(c.b[i])} · nothing ${fmtK(c.a[i])}`; };
+  svg.addEventListener('mousemove', move); svg.addEventListener('touchmove', e => move(e.touches[0]), { passive: true }); svg.addEventListener('mouseleave', () => { tip.style.display = 'none'; xh.style.display = 'none'; });
 }
-
-/* ---------- Actions ---------- */
-function renderActions() {
-  if (!S.actions.length) return `<div class="eyebrow">Actions</div><div class="card"><p>Nothing yet. Actions appear here the moment Penny proposes one, and stay here with who asked, who allowed, who did it, and who verified it.</p><button class="linkbtn" data-goto="penny" style="align-self:flex-start">Open in Penny</button></div>`;
-  return `<div class="eyebrow">Actions · everything Doer did, and what is scheduled</div>` + S.actions.map(a => `
-    <div class="card" ${a.status === 'applied' ? 'style="border-color:var(--primary-line)"' : ''}>
-      <div class="stat"><b>${esc(a.title)}</b><span class="status ${a.status}">${a.status}</span></div>
-      <div class="sm">${esc(a.detail)}</div>
-      ${a.log.map(l => `<div class="who-row"><span class="tag">${esc(l.who)}</span><span>${esc(l.what)}</span></div>`).join('')}
-      ${a.status === 'applied' || a.status === 'scheduled' ? `<div class="chips"><button class="chip" data-undo="${a.id}">${a.status === 'scheduled' ? 'Cancel' : 'Undo'}</button><button class="chip" data-goto="penny">Receipt</button></div>` : ''}
-    </div>`).join('') + `
-    <div class="card"><div class="eyebrow">Scheduled checks</div><div class="who-row"><span class="tag">Watcher</span><span>${P().id === 'jordan' ? 'Monthly: card balance against the schedule' : 'Monthly: savings balance against the schedule'}</span></div><div class="who-row"><span class="tag">Watcher</span><span>Every paystub: contribution and any pay change</span></div></div>
-    <p class="xs">This is the audit log in user language. A compliance reviewer sees this same view.</p>`;
+/* Activity */
+function renderActivity() {
+  if (!S.actions.length) return `<p class="say">Nothing yet. Everything Penny proposes and Doer does will be listed here, with who allowed it and a way back.</p><button class="link" data-goto="penny">Back to Penny</button>`;
+  return `<div class="sec">${S.actions.map(a => `<div class="act"><div class="r"><b>${esc(a.title)}</b><span class="st ${a.status}">${a.status}</span></div><span class="sm">${a.log.map(esc).join(' · ')}</span>${a.status === 'applied' || a.status === 'scheduled' ? `<button class="link" data-undo="${a.id}" style="font-size:13px">${a.status === 'scheduled' ? 'Cancel' : 'Undo'}</button>` : ''}</div>`).join('')}</div>
+    <p class="xs">Who asked, who allowed, who did it, who checked it. A compliance reviewer sees this same list.</p>`;
 }
-
-/* ---------- You ---------- */
+/* You */
 function renderYou() {
-  const team = [
-    ['Penny', 'The coach you talk to. Frames decisions, explains, asks, remembers. Never computes a number, never moves money.'],
-    ['Reader', 'Reads documents and accounts. Cites the page. Cannot act.'],
-    ['Analyst', 'Turns 90 days of transactions into essentials, free cash, runway. Cannot act.'],
-    ['Planner', 'Runs the calculators: projections, payoff, match, paycheck effect. Deterministic. Cannot act.'],
-    ['Guardian', 'Checks scope and suitability before every proposal and moment. Holds back what is not worth your time. Escalates fund questions.'],
-    ['Doer', 'The only one that can change anything, and only after you allow it. Gets receipts. Keeps the undo.'],
-    ['Watcher', 'Looks at your accounts between sessions. Verifies actions landed. Finds moments. Cannot act.'],
-    ['Advisor desk', 'Prepares a brief and books a licensed human when a question is theirs, not ours.'],
-  ];
-  return `
-    <div class="eyebrow">You · memory, the team, permissions</div>
-    <div class="card"><div class="stat"><b>What Penny knows about you</b></div>${S.memory.map((m, i) => `<div class="fact"><span>${esc(m.fact)}${m.inferred ? ' <span class="xs">(inferred)</span>' : ''}</span><span class="src">${esc(m.src)} · <button class="linkbtn" data-forget="${i}">forget</button></span></div>`).join('')}</div>
-    <div class="card"><b>Meet the team</b><div class="sm">Specialists Penny calls. Their name is on every step.</div><div class="team-grid">${team.map(([n, d]) => `<span class="tag">${n}</span><span>${d}</span>`).join('')}</div></div>
-    <div class="card"><b>What the team may do</b><table class="tbl">
-      <tr><th style="width:34%">Always allowed</th><td>Reader, Analyst, Watcher: read linked accounts and documents · Planner: run calculators · Penny: prepare proposals, find moments (quiet 9pm to 8am)</td></tr>
-      <tr><th>Ask every time</th><td>Doer: change a contribution · change an autopay · open or move savings · Advisor desk: book an advisor</td></tr>
-      <tr><th>Allowed within a cap</th><td>${S.allow.length ? S.allow.map((a, i) => `${esc(a.cap)} <span class="xs">(since ${esc(a.since)})</span> · <button class="linkbtn" data-revoke="${i}">revoke</button>`).join('<br>') : 'none yet'}</td></tr>
-      <tr><th>Never, by design</th><td>Move money without asking · pick funds or securities · give individualized investment advice · sell a product · hide a fee</td></tr></table></div>
-    <div class="card soft"><div class="sm"><b>Data the team can see:</b> ${P().id === 'jordan' ? '4 accounts · 2 documents' : '3 accounts · 2 documents'} · 90 days of transactions. <button class="linkbtn">Disconnect</button> · <button class="linkbtn">Export</button> · <button class="linkbtn">Delete everything</button></div></div>
-    <p class="xs">Memory, the team roster, and the allowlist live together because they answer the one question that matters for trust: who knows what, and who may do what.</p>`;
+  const team = [['Penny', 'talks with you, explains, remembers. Never computes a number, never moves money.'], ['Reader', 'reads your documents and cites the page.'], ['Analyst', 'turns 90 days of spending into essentials and runway.'], ['Planner', 'runs the calculators. Every number you see comes from here.'], ['Guardian', 'checks scope before anything reaches you, and decides when silence is right.'], ['Doer', 'the only one that can change anything, and only after you allow it.'], ['Watcher', 'checks your accounts between visits and verifies that actions landed.'], ['Advisor desk', 'books a licensed human when a question is theirs.']];
+  return `<div class="sec"><span class="cap">What Penny knows</span><div>${S.memory.map((m, i) => `<div class="fact"><span>${esc(m[0])}</span><span class="src">${esc(m[1])} · <button class="link" data-forget="${i}">forget</button></span></div>`).join('')}</div></div>
+    <div class="sec"><span class="cap">Rules</span><div class="rules"><div><span>Always</span><span>read your accounts and documents, run the numbers, prepare proposals</span></div><div><span>Ask first</span><span>change a contribution, change an autopay, open or move savings, book an advisor</span></div><div><span>Standing rules</span><span>${S.rules.length ? S.rules.map((r, i) => `${esc(r)} · <button class="link" data-revoke="${i}">revoke</button>`).join('<br>') : 'none'}</span></div><div><span>Never</span><span>move money without asking, pick funds, give investment advice, sell you anything</span></div></div></div>
+    <div class="sec"><span class="cap">Who works on your money</span><div class="team">${team.map(([n, d]) => `<div><b>${n}</b><span>${d}</span></div>`).join('')}</div></div>
+    <p class="xs">Your data: ${P().id === 'jordan' ? '4 accounts, 2 documents' : '3 accounts, 2 documents'}, 90 days of transactions. <button class="link">Export</button> · <button class="link">Delete everything</button></p>`;
 }
 
-/* ---------- team sheet (phone) and team column (desktop) ---------- */
-function openTeamSheet() {
-  const sheet = document.createElement('div'); sheet.className = 'sheet';
-  sheet.innerHTML = `<div class="panel"><div class="handle"></div><b>Team · who is working right now</b>${teamRows()}<button class="btn" id="closeSheet">Close</button></div>`;
-  phone.appendChild(sheet);
-  sheet.querySelector('#closeSheet').onclick = () => sheet.remove();
-  sheet.addEventListener('click', e => { if (e.target === sheet) sheet.remove(); });
-}
-function teamRows() { return Object.entries(S.team).map(([n, s]) => `<div class="team-row"><span class="tag">${n}</span><span class="st ${s === 'working' ? 'busy' : ''}">${esc(s)}</span></div>`).join(''); }
-function renderTeam() {
-  const el = document.getElementById('teamCol');
-  if (!S) { el.innerHTML = `<div class="eyebrow">Team</div><p class="sm">Pick a persona to see who is working.</p>`; return; }
-  const p = P();
-  el.innerHTML = `<div class="eyebrow">Team · who is working right now</div><div class="card">${teamRows()}</div>
-    <div class="eyebrow">Persona</div><div class="card"><b>${p.name}, ${p.age} · ${p.segment}</b><div class="sm">${esc(p.story)}</div><div class="xs">All figures synthetic. ${p.returning ? 'Returning user: accounts linked last year, memory holds one hard constraint.' : 'First session: nothing linked, nothing remembered yet.'}</div></div>
-    <div class="eyebrow">Guided path</div><div class="card"><div class="sm">${p.id === 'jordan' ? 'Lay it out → Still true → Turn into actions → Allow once, twice → Jump ahead → Allow → Jump ahead → Book an advisor.' : 'Show me → Attach → 1,000 → Show me the plan → Lay it out → Turn into actions → Allow once, twice → Jump ahead → Jump ahead → Allow once.'}</div><div class="xs">Or type anything into the composer at any point. Free-text replies are live when Claude access is available, scripted otherwise, and labelled either way.</div></div>`;
-}
-
-/* ---------- product notes ---------- */
+/* Reviewer notes (hidden by default) */
 const NOTES = {
   moment: () => {
-    const map = {
-      moment: ['The moment', 'People do not fail to improve their finances for lack of information. They fail between knowing and doing. So the product does not start with a dashboard or a login. It starts with a message, timed to a real deadline, in the customer\'s own number, with the evidence attached.', ['Hypothesis: a moment with a real deadline and a visible reason opens at 3x the rate of a generic nudge.', 'Guardrail: one moment at a time, only real deadlines, back off after two ignores, quiet hours.', 'Metric: moment open rate, time to first plan.']],
-      memory: ['Memory as a visible step', 'A returning customer should never re-explain themselves, and should never be surprised by what the coach assumed. So memory is quoted back with its source and date, and stale facts are re-asked rather than used.', ['Hypothesis: confirmations and corrections raise trust; a correction is a win, not a failure.', 'Guardrail: facts older than a year are re-asked. Memory is editable in the You tab.']],
-      understand: ['Documents, not forms', 'The benefits portal loses people at screen three. Penny asks for the PDF and the paystub, and Reader does the work with page citations. The customer answers only what nobody can read: the buffer they need to feel safe.', ['Hypothesis: document-first onboarding completes at 2x the rate of form-first.', 'Guardrail: every extracted fact shows its source and can be corrected in place.', 'Metric: documents and accounts linked per user.']],
-      plan: ['A living plan', 'The plan is an artifact Planner maintains and Penny explains. It has a version and a change log that says why it changed. What-if is a sentence typed into the thread, and the answer is a diff, not a calculator page.', ['Hypothesis: what-if runs are the engagement signal that predicts action, not sessions.', 'Guardrail: assumptions are visible and editable. No number is generated by the model.']],
-      decide: ['One proposal, shown working', 'A tips feed puts the burden on the customer. Penny frames one trade-off in their numbers, shows its thinking, names which specialist produced each figure, states confidence, and says what would change its mind. Challenging it is typing a sentence.', ['Hypothesis: a challengeable proposal with visible reasoning doubles decision-to-action versus a tips feed. Baseline measured in the first cohort.', 'Guardrail: Guardian runs before every proposal. Fund selection escalates to a licensed advisor.', 'Metric: decision-to-action rate; challenge rate (healthy at 20 to 40%).']],
-      act: ['Permission before action', 'This is the Claude Code permission prompt applied to money. Doer is the only specialist that can change anything, and it asks first: allow once, always allow within a cap, or deny. Every result has a receipt and an undo. Caps are visible in the You tab and revocable.', ['Hypothesis: named, visible division of labor raises acceptance and lowers reversals versus an unnamed assistant.', 'Guardrail: nothing moves money without a confirm. 30-day easy undo.', 'Metric: north star, outcome-improving actions completed per active customer per quarter. Guard: 30-day reversal rate.']],
-      away: ['Work between sessions', 'The team keeps working when the customer is not there, and shows it as timestamped turns: verified the change landed, confirmed the payment cleared, and, deliberately, "nothing worth a message". Restraint is a feature. Deferred actions re-ask; nothing fires on a stale instruction.', ['Hypothesis: a quiet coach that speaks only when it matters retains at 90 days where a chatty one churns.', 'Guardrail: frequency cap, and a licensed human for anything individualized, with a brief already written.', 'Metric: plan adherence at 90 days; advisor-rated handoff quality.']],
+    const m = {
+      moment: ['One number, one sentence, one button', 'There is no home screen. The first thing the customer sees is the one figure that matters to them today and the deadline attached to it. Who checked what sits under it, folded, for the people who want to look.', ['Why: people fail between knowing and doing, not for lack of data.', 'Guard: only real deadlines, one message at a time, back off after two ignores.']],
+      understand: ['Documents, not forms', 'Reader does the work and cites the page. The customer corrects, they do not type. One question, because it is the one thing nobody can read.', ['Metric: documents linked per user; corrections are a win.']],
+      decide: ['A recommendation, not a menu', 'The proposal is one bold sentence and three plain consequences. The comparison table and the reasoning exist, but only open when asked. One primary button.', ['Hypothesis: a single framed recommendation with evidence on demand beats a dashboard on decision-to-action.', 'Guard: every number came from Planner; fund choice is escalated.']],
+      act: ['Permission as a calm sheet', 'Title, three rows, Allow or Not now. The standing-rule option is a small link so the default is the safe one. The result is one line and an undo.', ['North star: actions completed that improve an outcome. Guard: 30-day reversals.']],
+      away: ['Restraint', 'Between visits the team works and says almost nothing. Months with nothing to say collapse to a single line. Deferred actions ask again.', ['Metric: adherence at 90 days.']],
     };
-    const tabMap = { overview: ['The dashboard is downstream', 'The Overview never proposes anything. It shows what the thread decided and what the team did this week, and every card links back to the conversation. Putting the dashboard second is the point: the product is the loop, not the report.', ['What I would cut: any card here that cannot be traced to a thread decision.']], plan: ['The plan tab is the artifact, full size', 'Read and edit here; change it in the thread. The chart is Planner\'s simulation, and the return slider proves it: move it and every point recomputes deterministically.', ['Guardrail: two series, direct labels, one axis. Assumptions stated on the chart.']], actions: ['The audit log in user language', 'Who asked, who allowed, who did it, who verified it, and a way back. The compliance reviewer sees this same view. That is the whole point of typed actions.', ['Metric: 30-day reversal rate, the guard on the north star.']], you: ['Who knows what, and who may do what', 'Memory, the team roster, and the allowlist live together because together they answer the only trust question that matters. Inferred facts are marked inferred and can be forgotten.', ['Guardrail: "never, by design" is enforced in code, not in copy.']] };
-    const [h, body, bullets] = S && S.tab !== 'penny' ? tabMap[S.tab] : map[S ? S.stage : 'moment'] || map.moment;
-    return `<h3>${h}</h3><p>${body}</p><ul>${bullets.map(b => `<li>${b}</li>`).join('')}</ul>`;
+    const tab = { plan: ['The plan is downstream', 'Progress, the order of operations, one chart. Nothing here proposes anything; changing the plan happens in the thread.', []], activity: ['The record', 'Who asked, who allowed, who did it, who checked it. Also the compliance view.', []], you: ['Who knows what, who may do what', 'Memory, rules, and the team in one place. Inferred facts can be forgotten.', []] };
+    const [h, body, bullets] = S && S.tab !== 'penny' ? tab[S.tab] : m[S ? S.stage : 'moment'] || m.moment;
+    return `<h3>${h}</h3><p>${body}</p>${bullets.length ? `<ul>${bullets.map(x => `<li>${x}</li>`).join('')}</ul>` : ''}`;
   },
-  problem: () => `<h3>The problem</h3><p>Most people know what would improve their finances: take the match, clear the expensive debt, hold three months of essentials. Most do not do it. The gap is not information. It is that the decision is never framed in their own numbers, the action lives in a portal they dread, and nobody follows through.</p><p>Advice serves the top of the market. The rest get content. Fidelity's workplace footprint reaches tens of millions of participants, most of whom will never sit with an advisor. That is the population Penny is built for.</p><div class="callout">The unit of value is a completed action that improves an outcome. A conversation is a means, never the product.</div>`,
-  bet: () => `<h3>The bet</h3><p>An AI-native coach can close the knowing-doing gap if it does four things a chatbot cannot: find the moment, frame one decision in the customer's numbers, get the action done with them, and keep its word between sessions.</p><ul><li><b>Not a chatbot with account access.</b> The thread is the spine, but every number comes from a calculator and every action from a typed, permissioned tool.</li><li><b>Not a budgeting app.</b> No categories, no streaks. One move a week.</li><li><b>Not a robo-advisor.</b> Penny never picks funds. That stays with a licensed human, reached with a brief already written.</li></ul><p>What I would build first: the two journeys in this prototype, end to end, for real participants, with the workplace plan as the first data source because it is the one Fidelity already holds.</p>`,
-  team: () => `<h3>Why a visible team</h3><p>One model that reads, computes, judges, and acts is impossible to audit and easy to distrust. Splitting the work into specialists makes each step checkable, and showing the specialist's name on every step turns architecture into trust.</p><ul><li><b>Penny</b> talks, frames, explains, remembers. Never computes, never acts.</li><li><b>Reader, Analyst, Watcher</b> observe and cite. Cannot act.</li><li><b>Planner</b> is deterministic code with unit tests. The only source of customer numbers.</li><li><b>Guardian</b> runs scope and suitability checks before every proposal and every moment, and decides when silence is the right answer.</li><li><b>Doer</b> is the only agent that can change anything, and only after a permission prompt.</li><li><b>Advisor desk</b> prepares the handoff to a licensed human.</li></ul><p>Borrowed deliberately from how Claude Code shows subagents and permission prompts, because that pattern already earns trust with people who are careful about what runs on their machine. Money deserves at least that.</p>`,
-  metrics: () => `<h3>Metrics</h3><p><b>North star:</b> outcome-improving actions completed per active customer per quarter. An action counts only if Planner's projection improves and it is not reversed within 30 days.</p><p><b>Guards:</b> 30-day reversal rate · advisor escalation rate · complaint rate · projected-outcome delta.</p><p><b>Leading indicators by stage:</b></p><ul><li>Moment open rate; time to first plan</li><li>Documents and accounts linked per user; correction rate on extracted facts</li><li>Plan viewed within 24 hours; what-if runs per user</li><li>Decision-to-action rate; challenge rate (healthy at 20 to 40%)</li><li>Plan adherence at 90 days; advisor-rated handoff quality</li></ul><p><b>What I would not measure:</b> sessions, minutes in app, messages sent. A quiet coach that gets three actions done a year beats a chatty one.</p>`,
-  guardrails: () => `<h3>Guardrails</h3><ul><li><b>Scope.</b> Education and guidance, yes. Security selection and individualized investment advice, no. Those route to a licensed advisor through Advisor desk, with a brief.</li><li><b>Math.</b> The model never computes a customer number. Planner does, deterministically, and the number appears as a tool call the customer can see.</li><li><b>Action.</b> Only Doer changes anything, only after a permission prompt: allow once, always allow within a cap, deny. Every action logged with before, after, who, when, undo.</li><li><b>Moments.</b> Only real deadlines. One at a time. Back off after two ignores. Quiet hours.</li><li><b>Memory.</b> Visible, cited, editable. Inferred facts marked inferred. Stale facts re-asked.</li><li><b>Evals.</b> A suite runs on every prompt change: numbers match calculators, scope rules hold, escalations fire, tone stays plain.</li></ul>`,
-  system: () => `<h3>The system under the loop</h3><ul><li><b>Context layer:</b> linked accounts, plan documents, paystubs, statements, memory with provenance.</li><li><b>Calculators (Planner):</b> match capture, payoff schedules, runway, projections, paycheck effect. Unit-tested. In this prototype they run in the page; every figure you see came from them.</li><li><b>Reasoning (Penny):</b> a model that finds the moment, frames the trade-off, writes the explanation, asks the clarifying question, revises on challenge. Reads calculator output; never replaces it.</li><li><b>Typed actions (Doer):</b> a small vocabulary with schemas, a confirm, and an undo, executed through the plan provider and the bank.</li><li><b>Audit and evals (Guardian):</b> every action logged; every prompt change evaluated.</li></ul><p>In this prototype, free-text replies use live Claude access when the viewer has it, under the same rules, with a scripted fallback so the demo never stalls. Both are labelled.</p>`,
-  ninety: () => `<h3>First 90 days</h3><ul><li><b>Weeks 1 to 3: the loop, for real.</b> One workplace plan as the data source, Reader on real plan documents, Planner's calculators reviewed by a compliance partner, Doer wired to contribution changes only.</li><li><b>Weeks 4 to 8: two cohorts.</b> 200 unenrolled participants (Maya) and 200 under-contributing participants (Jordan). Measure decision-to-action and 30-day reversal.</li><li><b>Weeks 9 to 12: the second action.</b> Autopay and savings moves through the bank rails. Advisor handoff with a brief, rated by the advisors who receive it.</li></ul><p><b>Decision at day 90:</b> does a permissioned agent get more match captured, per participant, than the best nudge campaign Fidelity has run? If not, the thesis is wrong and we stop.</p>`,
-  cut: () => `<h3>What I would cut</h3><ul><li><b>The general chatbot.</b> Free-text is a side door here, not the product. A coach that answers anything invites the questions it must not answer.</li><li><b>Budget categories and streaks.</b> They measure attention, not outcomes.</li><li><b>Investment selection.</b> Ever. That is what advisors are for, and the handoff is the feature.</li><li><b>A home screen with widgets.</b> The Overview exists because people expect it, and it is deliberately downstream.</li><li><b>Notifications that are not moments.</b> If Guardian would not let it through, it does not exist.</li></ul>`,
+  design: () => `<h3>Design principles</h3><ul><li><b>One turn, one idea.</b> One or two sentences. Where a number matters it is the largest thing on screen, and there is only one.</li><li><b>Evidence on demand.</b> Who checked what folds into one quiet line. Tables and reasoning open only when asked.</li><li><b>One primary action.</b> A single button per turn, at most one text link beside it.</li><li><b>Permission as a calm sheet.</b> Title, three rows, Allow or Not now. Standing rules are a link, not a third button.</li><li><b>Product first.</b> These notes and the team panel are hidden until a reviewer asks.</li><li><b>Hairlines, not boxes.</b> Whitespace does the grouping.</li></ul>`,
+  problem: () => `<h3>The problem</h3><p>Most people know what would improve their finances. Most do not do it. The gap is not information. The decision is never framed in their own numbers, the action lives in a portal they dread, and nobody follows through. Advice serves the top of the market; the rest get content.</p><p><b>The unit of value is a completed action that improves an outcome.</b> A conversation is a means, never the product.</p>`,
+  bet: () => `<h3>The bet</h3><p>An AI-native coach closes the gap if it does four things a chatbot cannot: find the moment, frame one decision in the customer's numbers, get the action done with them, and keep its word between sessions.</p><ul><li>Not a chatbot with account access: every number comes from a calculator, every action from a permissioned tool.</li><li>Not a budgeting app: no categories, no streaks. One move at a time.</li><li>Not a robo-advisor: Penny never picks funds. That stays with a licensed human.</li></ul>`,
+  team: () => `<h3>The team, and why it is visible</h3><p>One model that reads, computes, judges, and acts is hard to audit and easy to distrust. The work is split into specialists, and the customer can see who did what by opening the checks under any message. It is never in their face.</p><ul><li><b>Penny</b> talks and explains. Never computes, never acts.</li><li><b>Reader, Analyst, Watcher</b> observe and cite.</li><li><b>Planner</b> is deterministic code. The only source of numbers.</li><li><b>Guardian</b> checks scope before every message and decides when silence is right.</li><li><b>Doer</b> is the only agent that changes anything, after permission.</li><li><b>Advisor desk</b> hands off to a licensed human with a brief.</li></ul>`,
+  metrics: () => `<h3>Metrics</h3><p><b>North star:</b> outcome-improving actions completed per active customer per quarter, counted only if Planner's projection improves and the action is not reversed within 30 days.</p><p><b>Guards:</b> 30-day reversal rate, advisor escalation rate, complaint rate.</p><p><b>By stage:</b> moment open rate; documents linked; decision-to-action; adherence at 90 days.</p><p><b>Not measured:</b> sessions, minutes, messages. A quiet coach that gets three actions done a year beats a chatty one.</p>`,
+  guardrails: () => `<h3>Guardrails</h3><ul><li>Guidance yes; security selection and individualized advice no. Those go to a licensed advisor with a brief.</li><li>The model never computes a customer number. Planner does, and it is shown as a check.</li><li>Only Doer changes anything, after Allow. Every action logged with who, when, before, after, undo.</li><li>Only real deadlines trigger a message. One at a time. Quiet hours.</li><li>Memory is visible, cited, editable. Stale facts are re-asked.</li><li>An eval suite runs on every prompt change: numbers match, scope holds, escalations fire.</li></ul>`,
+  ninety: () => `<h3>First 90 days</h3><ul><li><b>Weeks 1 to 3:</b> the loop for real, one workplace plan, Reader on real plan documents, calculators reviewed with compliance, Doer wired to contribution changes only.</li><li><b>Weeks 4 to 8:</b> two cohorts of 200: unenrolled and under-contributing participants. Measure decision-to-action and 30-day reversals.</li><li><b>Weeks 9 to 12:</b> the second action through bank rails, and the advisor handoff rated by the advisors who receive it.</li></ul><p><b>Day 90 decision:</b> does a permissioned coach capture more match per participant than the best nudge campaign Fidelity has run? If not, stop.</p>`,
+  cut: () => `<h3>What I would cut</h3><ul><li>The general chatbot. Free text is a side door, not the product.</li><li>Budget categories and streaks. They measure attention, not outcomes.</li><li>Investment selection, ever.</li><li>Any dashboard card that cannot be traced to a decision in the thread.</li><li>Any notification Guardian would not let through.</li></ul>`,
 };
 function renderNotes() {
-  const el = document.getElementById('notesCol');
-  const tabs = [['moment', S && S.tab !== 'penny' ? 'This tab' : 'This moment'], ['problem', 'Problem'], ['bet', 'Bet'], ['team', 'The team'], ['metrics', 'Metrics'], ['guardrails', 'Guardrails'], ['system', 'System'], ['ninety', '90 days'], ['cut', "What I'd cut"]];
-  const cur = S ? S.notesTab : 'problem';
-  el.innerHTML = `<div class="eyebrow">Product notes · for the reader, follows the thread</div><div class="notes-tabs">${tabs.map(([id, l]) => `<button class="${cur === id ? 'on' : ''}" data-note="${id}">${l}</button>`).join('')}</div><div class="note-body">${NOTES[cur]()}</div>`;
+  const el = document.getElementById('notes'); if (!el.classList.contains('open')) { el.innerHTML = ''; return; }
+  const tabs = [['moment', S && S.tab !== 'penny' ? 'This tab' : 'This moment'], ['design', 'Design'], ['problem', 'Problem'], ['bet', 'Bet'], ['team', 'Team'], ['metrics', 'Metrics'], ['guardrails', 'Guardrails'], ['ninety', '90 days'], ['cut', 'Cut']];
+  const cur = S ? S.notesTab : notesFallback;
+  el.innerHTML = `<div class="card"><div class="notes-tabs">${tabs.map(([id, l]) => `<button class="${cur === id ? 'on' : ''}" data-note="${id}">${l}</button>`).join('')}</div><div class="note-body">${NOTES[cur]()}</div></div>
+    ${S ? `<div class="card"><span class="xs">Team, right now</span>${Object.entries(S.team).map(([n, s]) => `<div class="team-row"><span>${n}</span><span class="st ${s === 'working' ? 'busy' : ''}">${esc(s)}</span></div>`).join('')}</div>
+    <div class="card"><span class="xs">Guided path</span><p class="sm">${S.persona === 'jordan' ? 'Show me → Do this → Allow, Allow → Skip ahead → Skip ahead → Allow → Skip ahead → Book an advisor. Or type anything.' : 'Read my documents → 1,000 → Do this → Allow, Allow → Skip ahead → Skip ahead → Allow. Or type anything.'}</p><p class="xs">Free-text replies: ${sampleFn === undefined ? 'checking' : sampleFn && S.liveOn !== false ? 'live' : 'scripted'}, labelled either way.</p></div>` : ''}`;
   el.querySelectorAll('[data-note]').forEach(b => b.onclick = () => { if (S) S.notesTab = b.dataset.note; else notesFallback = b.dataset.note; renderNotes(); });
 }
-let notesFallback = 'problem';
-
-function choosePersona(pid) {
-  S = freshState(pid);
-  renderAll();
-  setTimeout(startMoment, 350);
-}
-function renderAll() { renderTop(); renderPhone(); renderTeam(); renderNotes(); }
-document.getElementById('notesFab').onclick = () => document.getElementById('notesCol').classList.toggle('open');
-
-/* boot */
-S = load();
-renderAll();
+let notesFallback = 'design';
+function choose(pid) { S = fresh(pid); renderAll(); setTimeout(startMoment, 350); }
+function renderAll() { renderTop(); renderPhone(); renderNotes(); }
+S = load(); renderAll();
 </script>
