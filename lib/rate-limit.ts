@@ -31,6 +31,7 @@ export const LIMITS: Record<string, RateLimit> = {
   tailor: { max: 12, windowMin: 60 }, // authed, per user — drafting is pricey
   cover: { max: 12, windowMin: 60 }, // authed, per user — same model-heavy draft path
   rematch: { max: 6, windowMin: 60 }, // authed, per user — full pipeline run
+  role_add: { max: 10, windowMin: 60 }, // authed, per user — one extract call per add
 };
 
 /** Best client IP on Workers/proxies; "unknown" still gets limited as one bucket. */
