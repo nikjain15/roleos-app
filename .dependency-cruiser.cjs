@@ -21,9 +21,10 @@ module.exports = {
           "postmark",
           "mailgun",
           "twilio",
-          "node:net",
-          "node:http$",
-          "node:https$",
+          // dependency-cruiser resolves "node:https" to "https", so a "node:"
+          // prefix never matches; anchor on the bare core-module name instead.
+          "^(node:)?(net|tls|dgram|http|https|http2)$",
+          "(^|node_modules/)(undici|axios|got|node-fetch|ky)(/|$)",
           "^lib/email",
         ],
       },
